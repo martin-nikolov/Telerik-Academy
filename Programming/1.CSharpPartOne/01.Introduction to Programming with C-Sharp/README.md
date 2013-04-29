@@ -1,4 +1,4 @@
-## 01.Introduction to Programming
+## Introduction to Programming
 
 1. Familiarize yourself with:
     * Microsoft Visual Studio

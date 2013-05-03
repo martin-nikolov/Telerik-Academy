@@ -1,199 +1,282 @@
-using System;
-using System.Collections.Generic;
-
-static class ListExtensions
+#include <string.h>
+#include <stdio.h>
+#define bool int
+#define false 0
+#define true 1
+ 
+// operators
+// precedence   operators       associativity
+// 4            !               right to left
+// 3            * / %           left to right
+// 2            + -             left to right
+// 1            =               right to left
+int op_preced(const char c)
 {
-    public static void Print(this List<string> list)
-    {
-        Console.WriteLine(String.Join(" ", list));
+    switch(c)    {
+        case '!':
+            return 4;
+        case '*':  case '/': case '%':
+            return 3;
+        case '+': case '-':
+            return 2;
+        case '=':
+            return 1;
     }
-
-    public static void Print(this List<Tuple<string, string>> list)
-    {
-        foreach (var item in list)
-            Console.Write(item.Item1 + " ");
-
-        Console.WriteLine();
-    }
+    return 0;
 }
-
-class Program
+ 
+bool op_left_assoc(const char c)
 {
-    static Dictionary<string, Tuple<int, bool>> precedence = new Dictionary<string, Tuple<int, bool>>() {
-        { "~",
-            new Tuple<int, bool>(5 , true)},
-        { "pow",
-            new Tuple<int, bool>(4 , true)},
-        { "^",
-            new Tuple<int, bool>(4 , true)},
-        { "sqrt",
-            new Tuple<int, bool>(4 , false)},
-        { "ln",
-            new Tuple<int, bool>(4 , false)},
-        { "sin",
-            new Tuple<int, bool>(4, false)},
-        { "cos",
-            new Tuple<int, bool>(4, false)},
-        { "tan",
-            new Tuple<int, bool>(4, false)},
-        { "*",
-            new Tuple<int, bool>(3 , false)},
-        { "/",
-            new Tuple<int, bool>(3 , false)},
-        { "+",
-            new Tuple<int, bool>(2 , false)},
-        { "-",
-            new Tuple<int, bool>(2 , false)},
-        { "(",
-            new Tuple<int, bool>(0 , false)},
-        { ")",
-            new Tuple<int, bool>(999 , false)}
-    };
-
-    // Tokenize a string: "(1 + 2) * 3" -> "(", "1", "+", "2", ")", "*", "3"
-    static List<Tuple<string, string>> Tokenize(string s)
-    {
-        var tokens = new List<Tuple<string, string>>(); // Value, type
-
-        Tuple<string, string> previous = null;
-
-        for (int i = 0; i < s.Length; i++)
-        {
-            string value = String.Empty, type = null;
-
-            // White space
-            if (s[i] == ' ') continue;
-
-            // Number: 1, 123, -123
-            else if (Char.IsDigit(s[i]))
-            {
-                type = "number";
-
-                for (; i < s.Length && (Char.IsDigit(s[i]) || s[i] == '.' || s[i] == '-'); i++) value += s[i];
-                i--;
-            }
-
-            // Function: pow, sqrt, ln, sin, cos, tan
-            else if (Char.IsLetter(s[i]))
-            {
-                type = "function";
-
-                for (; i < s.Length && Char.IsLetter(s[i]); i++) value += s[i];
-                i--;
-            }
-
-            // Function separator: ,
-            else if (s[i] == ',')
-            {
-                type = "separator";
-
-                value += s[i];
-            }
-
-            // Operator: +, -, *, ^, /, (, )
-            else
-            {
-                type = "operator";
-
-                value += s[i];
-
-                if (value == "-" && (previous == null || previous.Item1 == "(" || (previous.Item2 == "operator" && previous.Item1 != ")")))
-                    value = "~";
-            }
-
-            previous = new Tuple<string, string>(value, type);
-            tokens.Add(previous);
-        }
-
-        tokens.Print();
-
-        return tokens;
+    switch(c)    {
+        // left to right
+        case '*': case '/': case '%': case '+': case '-':
+            return true;
+        // right to left
+        case '=': case '!':
+            return false;
     }
-
-    // Parse an infix expression to postfix: "(", "1", "+", "2", ")", "*", "3" -> "1" "2" "+" "3" "*"
-    static List<string> Parse(List<Tuple<string, string>> infix)
-    {
-        var postfix = new List<string>();
-        var operators = new Stack<string>();
-
-        foreach (var token in infix)
-        {
-            string value = token.Item1, type = token.Item2;
-
-            if (type == "number")
-                postfix.Add(value);
-
-            else if (type == "function") operators.Push(value);
-
-            else if (type == "separator")
-                while (operators.Peek() != "(") postfix.Add(operators.Pop());
-
-            else if (value == "(")
-                operators.Push(value);
-
-            else if (value == ")")
-                while ((value = operators.Pop()) != "(")
-                    postfix.Add(value); // Match left paren
-
-            else if (type == "operator")
-            {
-                while (operators.Count != 0)
-                {
-                    if (precedence[value].Item2 && (precedence[value].Item1 < precedence[operators.Peek()].Item1))
-                        postfix.Add(operators.Pop());
-
-                    else if (precedence[value].Item1 <= precedence[operators.Peek()].Item1)
-                        postfix.Add(operators.Pop());
-
-                    else break;
+    return false;
+}
+ 
+unsigned int op_arg_count(const char c)
+{
+    switch(c)  {
+        case '*': case '/': case '%': case '+': case '-': case '=':
+            return 2;
+        case '!':
+            return 1;
+        default:
+            return c - 'A';
+    }
+    return 0;
+}
+ 
+#define is_operator(c)  (c == '+' || c == '-' || c == '/' || c == '*' || c == '!' || c == '%' || c == '=')
+#define is_function(c)  (c >= 'A' && c <= 'Z')
+#define is_ident(c)     ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z'))
+ 
+bool shunting_yard(const char *input, char *output)
+{
+    const char *strpos = input, *strend = input + strlen(input);
+    char c, *outpos = output;
+ 
+    char stack[32];       // operator stack
+    unsigned int sl = 0;  // stack length
+    char     sc;          // used for record stack element
+ 
+    while(strpos < strend)   {
+        // read one token from the input stream
+        c = *strpos;
+        if(c != ' ')    {
+            // If the token is a number (identifier), then add it to the output queue.
+            if(is_ident(c))  {
+                *outpos = c; ++outpos;
+            }
+            // If the token is a function token, then push it onto the stack.
+            else if(is_function(c))   {
+                stack[sl] = c;
+                ++sl;
+            }
+            // If the token is a function argument separator (e.g., a comma):
+            else if(c == ',')   {
+                bool pe = false;
+                while(sl > 0)   {
+                    sc = stack[sl - 1];
+                    if(sc == '(')  {
+                        pe = true;
+                        break;
+                    }
+                    else  {
+                        // Until the token at the top of the stack is a left parenthesis,
+                        // pop operators off the stack onto the output queue.
+                        *outpos = sc; 
+                        ++outpos;
+                        sl--;
+                    }
                 }
-
-                operators.Push(value);
+                // If no left parentheses are encountered, either the separator was misplaced
+                // or parentheses were mismatched.
+                if(!pe)   {
+                    printf("Error: separator or parentheses mismatched\n");
+                    return false;
+                }
+            }
+            // If the token is an operator, op1, then:
+            else if(is_operator(c))  {
+                while(sl > 0)    {
+                    sc = stack[sl - 1];
+                    // While there is an operator token, op2, at the top of the stack
+                    // op1 is left-associative and its precedence is less than or equal to that of op2,
+                    // or op1 has precedence less than that of op2,
+                    // Let + and ^ be right associative.
+                    // Correct transformation from 1^2+3 is 12^3+
+                    // The differing operator priority decides pop / push
+                    // If 2 operators have equal priority then associativity decides.
+                    if(is_operator(sc) &&
+                        ((op_left_assoc(c) && (op_preced(c) <= op_preced(sc))) ||
+                           (op_preced(c) < op_preced(sc))))   {
+                        // Pop op2 off the stack, onto the output queue;
+                        *outpos = sc; 
+                        ++outpos;
+                        sl--;
+                    }
+                    else   {
+                        break;
+                    }
+                }
+                // push op1 onto the stack.
+                stack[sl] = c;
+                ++sl;
+            }
+            // If the token is a left parenthesis, then push it onto the stack.
+            else if(c == '(')   {
+                stack[sl] = c;
+                ++sl;
+            }
+            // If the token is a right parenthesis:
+            else if(c == ')')    {
+                bool pe = false;
+                // Until the token at the top of the stack is a left parenthesis,
+                // pop operators off the stack onto the output queue
+                while(sl > 0)     {
+                    sc = stack[sl - 1];
+                    if(sc == '(')    {
+                        pe = true;
+                        break;
+                    }
+                    else  {
+                        *outpos = sc; 
+                        ++outpos;
+                        sl--;
+                    }
+                }
+                // If the stack runs out without finding a left parenthesis, then there are mismatched parentheses.
+                if(!pe)  {
+                    printf("Error: parentheses mismatched\n");
+                    return false;
+                }
+                // Pop the left parenthesis from the stack, but not onto the output queue.
+                sl--;
+                // If the token at the top of the stack is a function token, pop it onto the output queue.
+                if(sl > 0)   {
+                    sc = stack[sl - 1];
+                    if(is_function(sc))   {
+                        *outpos = sc; 
+                        ++outpos;
+                        sl--;
+                    }
+                }
+            }
+            else  {
+                printf("Unknown token %c\n", c);
+                return false; // Unknown token
             }
         }
-
-        while (operators.Count != 0)
-            postfix.Add(operators.Pop());
-
-        postfix.Print();
-
-        return postfix;
+        ++strpos;
     }
-
-    // Evaluate a postfix expression - "1" "2" "+" "3" "*" -> 9
-    static double Evaluate(List<string> postfix)
-    {
-        var stack = new Stack<double>();
-
-        foreach (var token in postfix)
-            if (token == "+") stack.Push(stack.Pop() + stack.Pop());
-            else if (token == "-") stack.Push(-stack.Pop() + stack.Pop());
-            else if (token == "~") stack.Push(-stack.Pop());
-            else if (token == "*") stack.Push(stack.Pop() * stack.Pop());
-            else if (token == "/") stack.Push(1 / stack.Pop() * stack.Pop());
-            else if (token == "ln") stack.Push(Math.Log(stack.Pop(), Math.E));
-            else if (token == "sin") stack.Push(Math.Sin(stack.Pop()));
-            else if (token == "cos") stack.Push(Math.Cos(stack.Pop()));
-            else if (token == "tan") stack.Push(Math.Tan(stack.Pop()));
-            else if (token == "sqrt") stack.Push(Math.Sqrt(stack.Pop()));
-            else if (token == "^" || token == "pow") stack.Push(Math.Pow(y: stack.Pop(), x: stack.Pop())); // x ^ y
-            else stack.Push(double.Parse(token));
-
-        return stack.Pop();
+    // When there are no more tokens to read:
+    // While there are still operator tokens in the stack:
+    while(sl > 0)  {
+        sc = stack[sl - 1];
+        if(sc == '(' || sc == ')')   {
+            printf("Error: parentheses mismatched\n");
+            return false;
+        }
+        *outpos = sc; 
+        ++outpos;
+        --sl;
     }
-
-    static void Calculate(string expression)
-    {
-        Console.WriteLine(Evaluate(Parse(Tokenize(expression))));
-
-        Console.WriteLine();
+    *outpos = 0; // Null terminator
+    return true;
+}
+ 
+bool execution_order(const char *input) {
+    printf("order:\n");
+    const char *strpos = input, *strend = input + strlen(input);
+    char c, res[4];
+    unsigned int sl = 0, sc, stack[32], rn = 0;
+        // While there are input tokens left
+    while(strpos < strend)  {
+                // Read the next token from input.
+        c = *strpos;
+                // If the token is a value or identifier
+        if(is_ident(c))    {
+                        // Push it onto the stack.
+            stack[sl] = c;
+            ++sl;
+        }
+                // Otherwise, the token is an operator  (operator here includes both operators, and functions).
+        else if(is_operator(c) || is_function(c))    {
+            sprintf(res, "_%02d", rn);
+            printf("%s = ", res);
+            ++rn;
+            // It is known a priori that the operator takes n arguments.
+            unsigned int nargs = op_arg_count(c);
+            // If there are fewer than n values on the stack
+            if(sl < nargs) {
+                // (Error) The user has not input sufficient values in the expression.
+                return false;
+            }
+            // Else, Pop the top n values from the stack.
+            // Evaluate the operator, with the values as arguments.
+            if(is_function(c)) {
+                printf("%c(", c);
+                while(nargs > 0){
+                    sc = stack[sl - nargs]; // to remove reverse order of arguments
+                    if(nargs > 1)       {
+                        printf("%s, ", &sc);
+                    }
+                    else {
+                        printf("%s)\n", &sc);
+                    }
+                    --nargs;
+                }
+                sl-=op_arg_count(c);
+            }
+            else {
+                if(nargs == 1) {
+                    sc = stack[sl - 1];
+                    sl--;
+                    printf("%c %s;\n", c, &sc);
+                }
+                else {
+                    sc = stack[sl - 2];
+                    printf("%s %c ", &sc, c);
+                    sc = stack[sl - 1];
+                    sl--;sl--;
+                    printf("%s;\n",&sc);
+                }
+            }
+            // Push the returned results, if any, back onto the stack.
+            stack[sl] = *(unsigned int*)res;
+            ++sl;
+        }
+        ++strpos;
     }
-
-    static void Main()
-    {
-        Calculate("(3 + 5.3) * 2.7 - ln(22) / 2.2 ^ -1.7");
-        Calculate("pow(2, 3.14) * (3 - (3 * sqrt(2) - 3.2) + 1.5 * 0.3)");
-        Calculate("(1 - -1) * pow(pow(1 + 1, pow(ln(2.71), 1 - 1)), 10)");
-        Calculate("-(-1 + -2)");
+    // If there is only one value in the stack
+    // That value is the result of the calculation.
+    if(sl == 1) {
+        sc = stack[sl - 1];
+        sl--;
+        printf("%s is a result\n", &sc);
+        return true;
     }
+    // If there are more values in the stack
+    // (Error) The user input has too many values.
+    return false;
+}
+ 
+int main() {
+    // functions: A() B(a) C(a, b), D(a, b, c) ...
+    // identifiers: 0 1 2 3 ... and a b c d e ...
+    // operators: = - + / * % !
+    const char *input = "a = D(f - b * c + d, !e, g)";
+    char output[128];
+    printf("input: %s\n", input);
+    if(shunting_yard(input, output))    {
+        printf("output: %s\n", output);
+        if(!execution_order(output))
+            printf("\nInvalid input\n");
+    }
+    return 0;
 }

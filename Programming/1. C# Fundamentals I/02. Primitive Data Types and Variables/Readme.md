@@ -11,7 +11,7 @@
 
     > The "use" of quotations causes difficulties.
 
-    Do the above in two different ways: with and without using quoted strings.
+    Do the above in two different ways: with and without using quoted strings. <
 * Write a program that prints an isosceles triangle of 9 copyright symbols `©`. Use Windows Character Map to find the Unicode code of the `©` symbol. Note: the `©` symbol may be displayed incorrectly.
 * A marketing firm wants to keep record of its employees. Each record would have the following characteristics – first name, family name, age, gender (m or f), ID number, unique employee number (27560000 to 27569999). Declare the variables needed to keep the information for a single employee using appropriate data types and descriptive names.
 * Declare two integer variables and assign them with **5** and **10** and after that exchange their values.

@@ -1,0 +1,1 @@
+D:\5. Programs\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\ConsoleApplication

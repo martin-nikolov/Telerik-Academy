@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>attribute</Title>
+			<Shortcut>Attribute</Shortcut>
+			<Description>Code snippet for attribute using recommended pattern</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>The name of the attribute</ToolTip>
+					<Default>My</Default>
+				</Literal>
+				<Literal>
+					<ID>target</ID>
+					<Default>All</Default>
+				</Literal>
+				<Literal>
+					<ID>inherited</ID>
+					<Default>false</Default>
+				</Literal>
+				<Literal>
+					<ID>allowmultiple</ID>
+					<Default>true</Default>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemAttribute</ID>
+					<Function>SimpleTypeName(global::System.Attribute)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemAttributeUsage</ID>
+					<Function>SimpleTypeName(global::System.AttributeUsage)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemAttributeTargets</ID>
+					<Function>SimpleTypeName(global::System.AttributeTargets)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>Exception</ID>
+					<Function>SimpleTypeName(global::System.NotImplementedException)</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[$SystemAttributeUsage$($SystemAttributeTargets$.$target$, Inherited = $inherited$, AllowMultiple = $allowmultiple$)]
+sealed class $name$Attribute : $SystemAttribute$
+{
+    // See the attribute guidelines at 
+    //  http://go.microsoft.com/fwlink/?LinkId=85236
+    readonly string positionalString;
+    
+   // This is a positional argument
+   public $name$Attribute (string positionalString) 
+   { 
+        this.positionalString = positionalString;
+        
+       // TODO: Implement code here
+       $end$throw new $Exception$();       
+   }
+   
+    public string PositionalString
+    {
+        get { return positionalString; }
+    }
+   
+   // This is a named argument
+   public int NamedInt { get; set; } 
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

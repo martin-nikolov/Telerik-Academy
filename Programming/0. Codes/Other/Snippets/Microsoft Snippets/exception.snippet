@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>exception</Title>
+			<Shortcut>Exception</Shortcut>
+			<Description>Code snippet for exception</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>newException</ID>
+					<ToolTip>Name of your exception</ToolTip>
+					<Default>My</Default>
+				</Literal>
+				<Literal>
+					<ID>baseException</ID>
+					<ToolTip>Base type</ToolTip>
+					<Function>SimpleTypeName(global::System.Exception)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemException</ID>
+					<Function>SimpleTypeName(global::System.Exception)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemSerializable</ID>
+					<Function>SimpleTypeName(global::System.Serializable)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemRuntimeSerializationSerializationInfo</ID>
+					<Function>SimpleTypeName(global::System.Runtime.Serialization.SerializationInfo)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemRuntimeSerializationStreamingContext</ID>
+					<Function>SimpleTypeName(global::System.Runtime.Serialization.StreamingContext)</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[$SystemSerializable$]
+public class $newException$Exception : $baseException$
+{
+  public $newException$Exception() { }
+  public $newException$Exception( string message ) : base( message ) { }
+  public $newException$Exception( string message, $SystemException$ inner ) : base( message, inner ) { }
+  protected $newException$Exception( 
+	$SystemRuntimeSerializationSerializationInfo$ info, 
+	$SystemRuntimeSerializationStreamingContext$ context ) : base( info, context ) { }
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

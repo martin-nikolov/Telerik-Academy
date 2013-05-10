@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>equals</Title>
+			<Shortcut>equals</Shortcut>
+			<Description>Code snippet for implementing Equals() according to guidelines</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>Exception</ID>
+					<Function>SimpleTypeName(global::System.NotImplementedException)</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[// override object.Equals
+    public override bool Equals (object obj)
+    {
+        //       
+        // See the full list of guidelines at
+        //   http://go.microsoft.com/fwlink/?LinkID=85237  
+        // and also the guidance for operator== at
+        //   http://go.microsoft.com/fwlink/?LinkId=85238
+        //
+
+        if (obj == null || GetType() != obj.GetType()) 
+        {
+            return false;
+        }
+        
+        // TODO: write your implementation of Equals() here
+        throw new $Exception$();
+        return base.Equals (obj);$end$ 
+    }
+    
+    // override object.GetHashCode
+    public override int GetHashCode()
+    {
+        // TODO: write your implementation of GetHashCode() here
+        throw new $Exception$();
+        return base.GetHashCode();
+    }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

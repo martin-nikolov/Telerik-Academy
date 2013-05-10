@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>iterindex</Title>
+			<Shortcut>iterindex</Shortcut>
+			<Description>Code snippet for 'named' iterator/indexer pair using a nested class</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<Default>ElementType</Default>
+					<ToolTip>Type to return from iterator/indexer</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<Default>MyView</Default>
+					<ToolTip>Name of the iterator/indexer pair</ToolTip>
+				</Literal>
+				<Literal Editable="false">
+					<ID>outer</ID>
+					<Default>MyOuterClass</Default>
+					<Function>ClassName()</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemCollectionsGenericIEnumeratorG</ID>
+					<Default>System.Collections.Generic.IEnumerator</Default>
+				</Literal>
+				<Literal Editable="false">
+					<ID>Exception</ID>
+					<Function>SimpleTypeName(global::System.NotImplementedException)</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[public $name$Iterator $name$
+        {
+            get
+            {
+                return new $name$Iterator(this);
+            }
+        }
+
+        public class $name$Iterator
+        {
+            readonly $outer$ outer;
+
+            internal $name$Iterator($outer$ outer)
+            {
+                this.outer = outer;
+            }
+
+            // TODO: provide an appropriate implementation here
+            public int Length { get { return 1; } }
+
+            public $type$ this[int index]
+            {
+                get
+                {
+                    //
+                    // TODO: implement indexer here
+                    //
+                    // you have full access to $outer$ privates
+                    //
+                    $end$throw new $Exception$();
+                    return default($type$);
+                }
+            }
+
+            public $SystemCollectionsGenericIEnumeratorG$<$type$> GetEnumerator()
+            {
+                for (int i = 0; i < this.Length; i++)
+                {				 
+                    yield return this[i];
+                }
+            }
+        }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

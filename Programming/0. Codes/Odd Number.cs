@@ -1,6 +1,6 @@
 using System;
 
-class OddNumber
+class Program
 {
     static void Main()
     {

@@ -2,9 +2,9 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>cr</Title>
-			<Shortcut>cr</Shortcut>
-			<Description>Code snippet for Console.ReadLine</Description>
+			<Title>uipp</Title>
+			<Shortcut>uipp</Shortcut>
+			<Description>Code snippet for uint.Parse(Console.ReadLine())</Description>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
 			</SnippetTypes>
@@ -15,8 +15,16 @@
 					<ID>SystemConsole</ID>
 					<Function>SimpleTypeName(global::System.Console)</Function>
 				</Literal>
+				<Literal Editable="false">
+					<ID>type</ID>
+					<Default>uint.</Default>
+				</Literal>
+				<Literal Editable="false">
+					<ID>Parse</ID>
+					<Default>Parse</Default>
+				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[$SystemConsole$.ReadLine();$end$]]>
+			<Code Language="csharp"><![CDATA[$type$ $Parse$($SystemConsole$.ReadLine());$end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

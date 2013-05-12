@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>arr</Title>
+			<Shortcut>arr</Shortcut>
+			<Description>Code snippet for type[] myVar = new type[...]</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>SystemConsole</ID>
+					<Function>SimpleTypeName(global::System.Console)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>new</ID>
+					<Default>int[]]</Default>
+				</Literal>
+				<Literal>
+					<ID>int</ID>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>[]</ID>
+				</Literal>
+				<Literal>
+					<ID>myVar</ID>
+					<Default>myVar</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$int$[] $myVar$ = new $int$[$[]$];$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

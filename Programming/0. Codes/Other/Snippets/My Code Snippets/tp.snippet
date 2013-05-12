@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>tp</Title>
+			<Shortcut>tp</Shortcut>
+			<Description>Code snippet for type.Parse(Console.ReadLine())</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>SystemConsole</ID>
+					<Function>SimpleTypeName(global::System.Console)</Function>
+				</Literal>
+				<Literal>
+					<ID>type</ID>
+					<Default>int </Default>
+				</Literal>
+				<Literal Editable="false">
+					<ID>Parse</ID>
+					<Default>Parse</Default>
+				</Literal>
+			<Literal>
+					<ID>myVar</ID>
+					<Default>myVar</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$type$ $myVar$ = $type$.$Parse$($SystemConsole$.ReadLine());$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

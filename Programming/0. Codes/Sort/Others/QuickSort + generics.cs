@@ -13,16 +13,19 @@ class QuickSortAlgorithm
     static void TestRunner()
     {
         int[] unsortedNumbers = { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
+
         PrintElements(unsortedNumbers); Console.Write(" -> ");
         QuickSort(unsortedNumbers, 0, unsortedNumbers.Length - 1);
         PrintElements(unsortedNumbers); Console.Write("\n");
 
         string[] unsortedSymbols = new string[] { "b", "d", "c", "a", "f", "w", "z" };
+
         PrintElements(unsortedSymbols); Console.Write(" -> ");
         QuickSort(unsortedSymbols, 0, unsortedSymbols.Length - 1);
         PrintElements(unsortedSymbols); Console.Write("\n");
 
         char[] unsortedLetters = { 'z', 'b', 'd', 'c', 'w', 'a', 'f' };
+        
         PrintElements(unsortedLetters); Console.Write(" -> ");
         QuickSort(unsortedLetters, 0, unsortedLetters.Length - 1);
         PrintElements(unsortedLetters); Console.Write("\n");

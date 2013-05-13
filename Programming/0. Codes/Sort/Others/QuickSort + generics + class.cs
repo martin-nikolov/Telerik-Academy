@@ -1,6 +1,3 @@
-// Quick sorting (sorting by partitions)
-// The program below apply classical recursive implementation of the method QuickSort
-
 using System;
 
 class QuickSortAlgorithm
@@ -8,26 +5,34 @@ class QuickSortAlgorithm
     static void Main()
     {
         TestRunner();
+        
     }
 
     static void TestRunner()
     {
-        int[] unsortedNumbers = { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
-        PrintElements(unsortedNumbers); Console.Write(" -> ");
-        QuickSort(unsortedNumbers, 0, unsortedNumbers.Length - 1);
-        PrintElements(unsortedNumbers); Console.Write("\n");
+        Array<int> numbers = new Array<int>(1, -2, 3, -4, 5, -6, 7, -8, 9, -10);
+        Array<string> symbols = new Array<string>("b", "d", "c", "a", "f", "w", "z");
+        Array<char> letters = new Array<char>('z', 'b', 'd', 'c', 'w', 'a', 'f');
+        Array<byte> empty = new Array<byte>();
 
-        string[] unsortedSymbols = new string[] { "b", "d", "c", "a", "f", "w", "z" };
-        PrintElements(unsortedSymbols); Console.Write(" -> ");
-        QuickSort(unsortedSymbols, 0, unsortedSymbols.Length - 1);
-        PrintElements(unsortedSymbols); Console.Write("\n");
+        numbers.Sort();
+        symbols.Sort();
+        letters.Sort();
+        empty.Sort();
 
-        char[] unsortedLetters = { 'z', 'b', 'd', 'c', 'w', 'a', 'f' };
-        PrintElements(unsortedLetters); Console.Write(" -> ");
-        QuickSort(unsortedLetters, 0, unsortedLetters.Length - 1);
-        PrintElements(unsortedLetters); Console.Write("\n");
+        numbers.PrintElementsByDescending();
+        numbers.PrintElementsByAscending();
+
+        symbols.PrintElementsByDescending();
+        symbols.PrintElementsByAscending();
+
+        letters.PrintElementsByDescending();
+        letters.PrintElementsByAscending();
+
+        empty.PrintElementsByDescending();
+        empty.PrintElementsByAscending();
     }
-    
+
     static void QuickSort<T>(T[] sortArray, int leftIndex, int rightIndex) where T : IComparable<T>
     {
         /* QUICKSORT(A,p,r)
@@ -85,11 +90,51 @@ class QuickSortAlgorithm
         // 9. The algorithm returns when all sub arrays are sorted.
     }
 
-    static void PrintElements<T>(T[] unsortedArr)
+    public class Array<T> where T : IComparable<T>
     {
-        foreach (var item in unsortedArr)
+        private readonly T[] array;
+
+        public Array(params T[] array)
         {
-            Console.Write(item + " ");
+            this.array = array;
+        }
+
+        public void Sort()
+        { 
+            T[] temp = new T[array.Length];
+            QuickSort(array, 0, array.Length - 1);     
+        }
+
+        public void PrintElementsByDescending()
+        {
+            if (array.Length == 0)
+            {
+                Console.WriteLine("No items in array for sorting!");
+                return;
+            }
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+
+            Console.WriteLine();
+        }
+
+        public void PrintElementsByAscending()
+        {
+            if (array.Length == 0)
+            {
+                Console.WriteLine("No items in array for sorting!");
+                return;
+            }
+
+            for (int i = array.Length - 1; i >= 0; i--)
+            {
+                Console.Write(array[i] + " ");
+            }
+
+            Console.WriteLine();
         }
     }
 }

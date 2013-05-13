@@ -2,9 +2,9 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>arr</Title>
-			<Shortcut>arr</Shortcut>
-			<Description>Code snippet for type[] myArray = new type[...]</Description>
+			<Title>arrt</Title>
+			<Shortcut>arrt</Shortcut>
+			<Description>Code snippet for type[] myArray = { ... }</Description>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
 			</SnippetTypes>
@@ -15,23 +15,19 @@
 					<ID>SystemConsole</ID>
 					<Function>SimpleTypeName(global::System.Console)</Function>
 				</Literal>
-				<Literal Editable="false">
-					<ID>new</ID>
-					<Default>int[]]</Default>
-				</Literal>
 				<Literal>
 					<ID>int</ID>
 					<Default>int</Default>
 				</Literal>
 				<Literal>
-					<ID>[]</ID>
+					<ID>elements</ID>
 				</Literal>
 				<Literal>
 					<ID>myArray</ID>
 					<Default>myArray</Default>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[$int$[] $myArray$ = new $int$[$[]$];$end$]]>
+			<Code Language="csharp"><![CDATA[$int$[] $myArray$ = { $elements$ };$end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

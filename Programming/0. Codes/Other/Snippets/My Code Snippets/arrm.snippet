@@ -2,9 +2,9 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>arr</Title>
-			<Shortcut>arr</Shortcut>
-			<Description>Code snippet for type[] myArray = new type[...]</Description>
+			<Title>arrm</Title>
+			<Shortcut>arrm</Shortcut>
+			<Description>Code snippet for type[,] myArray = new type[...,...]</Description>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
 			</SnippetTypes>
@@ -27,11 +27,14 @@
 					<ID>rows</ID>
 				</Literal>
 				<Literal>
+					<ID>colls</ID>
+				</Literal>
+				<Literal>
 					<ID>myArray</ID>
 					<Default>myArray</Default>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[$int$[] $myArray$ = new $int$[$rows$];$end$]]>
+			<Code Language="csharp"><![CDATA[$int$[,] $myArray$ = new $int$[$rows$,$colls$];$end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

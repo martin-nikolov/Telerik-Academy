@@ -26,7 +26,7 @@ class QuadraticEquation
 
             if (discriminant == 0)
             {
-                Console.WriteLine("\nx[1] = x[2] = {0}\n", -b / 2 * a);
+                Console.WriteLine("\nx[1] = x[2] = {0}\n", -b / (2 * a));
             }
             else if (discriminant < 0)
             {
@@ -34,8 +34,8 @@ class QuadraticEquation
             }
             else if (discriminant > 0)
             {
-                Console.WriteLine("\nx[1] = {0}", (-b + Math.Sqrt(discriminant)) / 2 * a);
-                Console.WriteLine("x[2] = {0}\n", (-b - Math.Sqrt(discriminant)) / 2 * a);
+                Console.WriteLine("\nx[1] = {0}", (-b + Math.Sqrt(discriminant)) / (2 * a));
+                Console.WriteLine("x[2] = {0}\n", (-b - Math.Sqrt(discriminant)) / (2 * a));
             }
         }
     }

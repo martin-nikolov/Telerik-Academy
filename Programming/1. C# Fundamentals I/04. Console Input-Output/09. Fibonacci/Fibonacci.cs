@@ -17,9 +17,9 @@ class Fibonacci
         BigInteger third = 0;
 
         Console.WriteLine("Fibonacci sequence: \n");
-        for (int i = 0; i <= 100; i++)
+        for (int i = 0; i < 100; i++)
         {
-            Console.Write(third + (i < 100 ? ", " : ""));
+            Console.Write(third + (i < 99 ? ", " : "\n\n"));
 
             first = second;
             second = third;

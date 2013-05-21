@@ -12,7 +12,7 @@ body {
 
 .container {
   width: 90%;
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -63,8 +63,8 @@ header h1:before {
 }
 
 header h2 {
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 300;
   color: #666;
 }
 

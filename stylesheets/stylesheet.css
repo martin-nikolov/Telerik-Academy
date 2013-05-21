@@ -11,8 +11,8 @@ body {
 /* General & 'Reset' Stuff */
 
 .container {
-  width: 70%;
-  max-width: 400px;
+  width: 90%;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -64,7 +64,7 @@ header h1:before {
 
 header h2 {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 500;
   color: #666;
 }
 

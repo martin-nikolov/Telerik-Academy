@@ -1,4 +1,5 @@
-//Other way with sorting colunms
+// -> Other way with sorting columns
+
 using System;
 
 class FallDown

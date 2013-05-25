@@ -166,6 +166,12 @@ class AngryBirds
                 matrix[row, col] = number % 2;
                 number /= 2;
             }
+
+            // Another way:
+            //for (int iCol = 0; iCol < 16; iCol++)
+            //{
+            //   matrix[i, 15 - iCol] = (number >> iCol) & 1;
+            //}
         }
     }
 

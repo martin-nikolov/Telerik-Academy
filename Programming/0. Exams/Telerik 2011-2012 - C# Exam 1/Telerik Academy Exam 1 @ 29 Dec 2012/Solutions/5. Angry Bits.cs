@@ -46,7 +46,7 @@ class AngryBits
                         if (IsPiggy(_row, _col, ref col, ref row, 1)) break;
      
                         // We reach the right or bottom side of the field
-                        // so we didn't find some pig and remove current bird
+                        // so we didn't find some pig and remove current bit (bird)
                         if (_row == 7 || _col == 15)
                         {
                             matrix[row, col] = 0;
@@ -82,7 +82,7 @@ class AngryBits
                 totalSteps++;
                 FindAndRemoveAllPigs(_row + direction, _col + 1, currentSteps);
 
-                matrix[row, col] = 0; // Remove current bird
+                matrix[row, col] = 0; // Remove current bit (bird)
 
                 if (col > 0) // Go to next column
                 {

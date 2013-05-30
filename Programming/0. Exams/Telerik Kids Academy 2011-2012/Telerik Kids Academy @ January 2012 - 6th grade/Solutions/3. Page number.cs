@@ -17,7 +17,7 @@ class PageNumbers
 
         DateTime now = DateTime.Now;
 
-        int correntPages = 0;
+        int correctPages = 0;
         int middleIndex = inscription.Length / 2 - 1;
 
         if (IsOutOfRange(middleIndex)) // OutOfRange
@@ -64,10 +64,10 @@ class PageNumbers
                 }
 
                 if (!isLeftGreater)
-                    correntPages--;
+                    correctPages--;
             }
 
-            correntPages++;
+            correctPages++;
 
             while (left[indexLeft - 1] == '0')
                 indexLeft--;
@@ -75,7 +75,7 @@ class PageNumbers
             indexLeft--;
         }
 
-        Console.WriteLine(correntPages);
+        Console.WriteLine(correctPages);
         //Console.WriteLine(DateTime.Now - now);
     }
 

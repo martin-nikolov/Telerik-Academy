@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-class AngryBirds
+class AngryBits
 {
     static int[,] matrix = new int[8, 16];
     static int pigs = 0;

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>tok</Title>
+			<Shortcut>tok</Shortcut>
+			<Description>Code snippet for  string[] tokens = var.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>SystemConsole</ID>
+					<Function>SimpleTypeName(global::System.Console)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>new</ID>
+					<Default>int[]]</Default>
+				</Literal>
+				<Literal>
+					<ID>string</ID>
+					<Default>string</Default>
+				</Literal>
+				<Literal>
+					<ID>rows</ID>
+				</Literal>
+				<Literal>
+					<ID>tokens</ID>
+					<Default>tokens</Default>
+				</Literal>
+				<Literal>
+					<ID>lineReader</ID>
+					<Default>lineReader</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$string$[] $tokens$ = $lineReader$.Split(new char[]{' '}, StringSplitOptions.RemoveEmptyEntries);$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -5,7 +5,7 @@ class Parking
 {
     static readonly string[][,] engagedPlaces = new string[5][,]
     {
-        // 4 free spaces
+        // 4 free places
         new string[1, 4]
         {
             { ".", ".", ".", "." },

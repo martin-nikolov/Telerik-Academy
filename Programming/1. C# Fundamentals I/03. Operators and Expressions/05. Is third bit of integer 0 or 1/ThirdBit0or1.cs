@@ -13,6 +13,6 @@ class ThirdBit0or1
         Console.Write("Enter a number: ");
         int number = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Third bit of {0} is {1}", number, number & 8 >> 3);
+        Console.WriteLine("Third bit of {0} is {1}", number, (number >> 3) & 1);
     }
 }

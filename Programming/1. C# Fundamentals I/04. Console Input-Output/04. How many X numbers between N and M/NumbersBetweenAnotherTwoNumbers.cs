@@ -15,19 +15,19 @@ class NumbersBetweenAnotherTwoNumbers
         Console.Write("   First: "); int first = int.Parse(Console.ReadLine());
         Console.Write("   Second: "); int second = int.Parse(Console.ReadLine());
 
-        if (first > second)
+        if (first == second || (first < 5 && second < 5))
+        {
+            Console.WriteLine("\nNo numbers divisible by 5 between {0} and {1}...\n", first, second);
+            return;
+        }
+        else if (first > second)
         {
             int swap = first;
             first = second;
             second = swap;
         }
-        else if (first == second)
-        {
-            Console.WriteLine("\nNo numbers divisible by 5 between {0} and {1}...\n", first, second);
-            return;
-        }
         
-        Console.Write("\nNumbers divisible by 5 between {0} and {1}: ", first, second);
+        Console.Write("\nNumbers divisible by 5 in interval [{0};{1}]: ", first, second);
         
         for (int i = first; i <= second; i++)
         {

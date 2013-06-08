@@ -6,7 +6,7 @@
 using System;
 using System.Linq;
 
-class Program
+class GreaterNumber
 {
     static void Main()
     {

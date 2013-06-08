@@ -25,13 +25,13 @@ class BitExchange
 
         return number;
     }
-
+    
     static void Main(string[] args)
     {
-        uint number = 1073709056; 
-        
-        Console.WriteLine("Old number {0,-10} to binary -> {1}", number, Convert.ToString(number, 2));
+        uint number = 1073709056;
+
+        Console.WriteLine("Old number {0,-10} to binary -> {1}", number, Convert.ToString(number, 2).PadLeft(32, '0'));
         number = ExchangeBits(number);
-        Console.WriteLine("New number {0,-10} to binary -> {1}", number, Convert.ToString(number, 2));
+        Console.WriteLine("New number {0,-10} to binary -> {1}", number, Convert.ToString(number, 2).PadLeft(32, '0'));
     }
 }

@@ -21,12 +21,14 @@ class Parking
         },
 
         // Places for two cars
-        new string[4, 4]
+        new string[6, 4]
         {
             { "X", "X", ".", "." },
             { ".", ".", "X", "X" },
             { "X", ".", "X", "." },
-            { ".", "X", ".", "X" }
+            { ".", "X", ".", "X" },
+            { ".", "X", "X", "." },
+            { "X", ".", ".", "X" },
         },
 
         // Places for three cars

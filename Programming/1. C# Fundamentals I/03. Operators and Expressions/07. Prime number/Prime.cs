@@ -14,7 +14,7 @@ class Prime
         int number = int.Parse(Console.ReadLine());
 
         bool isPrime = true;
-        for (int i = 2; i < Math.Sqrt(number); i++)
+        for (int i = 2; i <= Math.Sqrt(number); i++)
         {
             if (number % i == 0)
             {

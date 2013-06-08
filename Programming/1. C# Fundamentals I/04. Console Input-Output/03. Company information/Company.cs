@@ -1,50 +1,5 @@
-﻿/*
-* 3. A company has name, address, phone number, fax number, web site and manager.
-* The manager has first name, last name, age and a phone number.
-* Write a program that reads the information about a company and
-* its manager and prints them on the console.
-*/
-
-using System;
+﻿using System;
 using System.Linq;
-
-class CompanyInformation
-{
-    static void Main()
-    {
-        Company Telerik = new Company()
-        {
-            Name = "Telerik",
-            Address = "Sofia",
-            PhoneNumber = "052/123456",
-            FaxNumber = "0700/123456",
-            WebSite = "htpp://telerik.com"
-        };
-
-        Telerik.Manager = new Company.CManager
-        {
-            FirstName = "Svetlin",
-            LastName = "Nakov",
-            Age = 34,
-            PhoneNumber = "0888 123 456"
-        };
-
-        // Print information
-        Telerik.PrintInformation();
-        Telerik.Manager.PrintInformation();
-
-        // NEW COMPANY ->
-        Company userCompany = new Company(); // Declaration
-        userCompany.InputData(); // Initialization
-
-        userCompany.Manager = new Company.CManager(); // Declaration
-        userCompany.Manager.InputData(); // Initialization
-
-        // Print information
-        userCompany.PrintInformation();
-        userCompany.Manager.PrintInformation();
-    }
-}
 
 class Company
 {
@@ -60,19 +15,19 @@ class Company
     {
     }
 
-    public Company(string name) : this(name,null)
+    public Company(string name) : this(name, null)
     {
     }
 
-    public Company(string name, string address) : this(name, address,null)
+    public Company(string name, string address) : this(name, address, null)
     {
     }
 
-    public Company(string name, string address, string phoneNumber) : this(name, address,phoneNumber,null)
+    public Company(string name, string address, string phoneNumber) : this(name, address, phoneNumber, null)
     {
     }
 
-    public Company(string name, string address, string phoneNumber, string faxNumber) : this(name, address, phoneNumber,faxNumber,null)
+    public Company(string name, string address, string phoneNumber, string faxNumber) : this(name, address, phoneNumber, faxNumber, null)
     {
     }
 
@@ -170,15 +125,15 @@ class Company
         {
         }
 
-        public CManager(string firstName) : this(firstName,null)
+        public CManager(string firstName) : this(firstName, null)
         {
         }
 
-        public CManager(string firstName, string lastName) : this(firstName,lastName,0)
+        public CManager(string firstName, string lastName) : this(firstName, lastName, 0)
         {
         }
 
-        public CManager(string firstName, string lastName, byte age) : this(firstName, lastName, 0,null)
+        public CManager(string firstName, string lastName, byte age) : this(firstName, lastName, 0, null)
         {
         }
 

@@ -16,7 +16,7 @@ class Fibonacci
         BigInteger second = 1;
         BigInteger third = 0;
 
-        Console.WriteLine("Fibonacci sequence: \n");
+        Console.WriteLine("Fibonacci sequence (first 100 members): \n");
         for (int i = 0; i < 100; i++)
         {
             Console.Write(third + (i < 99 ? ", " : "\n\n"));

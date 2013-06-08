@@ -65,11 +65,13 @@ class FallingRocks
 
                 if (userKey.Key == ConsoleKey.LeftArrow && player.y > 1)
                 {
-                    player = new PlayerPosition(player.x, player.y - (playerMoveSteps == 2 && player.y >= 1 ? playerMoveSteps - 1 : playerMoveSteps));
+                    player = new PlayerPosition(player.x, player.y -
+                                                          (playerMoveSteps == 2 && player.y >= 1 ? playerMoveSteps - 1 : playerMoveSteps));
                 }
                 else if (userKey.Key == ConsoleKey.RightArrow && player.y + 4 < Console.WindowWidth)
                 {
-                    player = new PlayerPosition(player.x, player.y + (playerMoveSteps == 2 && player.y + 6 < Console.WindowWidth ? playerMoveSteps - 1 : playerMoveSteps));
+                    player = new PlayerPosition(player.x, player.y +
+                                                          (playerMoveSteps == 2 && player.y + 6 < Console.WindowWidth ? playerMoveSteps - 1 : playerMoveSteps));
                 }
                 else if (userKey.Key == ConsoleKey.W) // CHEAT - Key 'W'
                 {

@@ -30,44 +30,28 @@ class SpiralMatrix
             if (direction == "right")
             {
                 if (matrix[row, ++col] == 0) matrix[row, col] = i;
-
-                if (col + 1 >= n || matrix[row, col + 1] != 0)
-                {
-                    direction = "down";
-                }
+                if (col + 1 >= n || matrix[row, col + 1] != 0) direction = "down";
             }
             else if (direction == "down")
             {
                 if (matrix[++row, col] == 0) matrix[row, col] = i;
-
-                if (row + 1 >= n || matrix[row + 1, col] != 0)
-                {
-                    direction = "left";
-                }
+                if (row + 1 >= n || matrix[row + 1, col] != 0) direction = "left";
             }
             else if (direction == "left")
             {
                 if (matrix[row, --col] == 0) matrix[row, col] = i;
-
-                if (col - 1 < 0 || matrix[row, col - 1] != 0)
-                {
-                    direction = "up";
-                }
+                if (col - 1 < 0 || matrix[row, col - 1] != 0) direction = "up";
             }
             else if (direction == "up")
             {
                 if (matrix[--row, col] == 0) matrix[row, col] = i;
-
-                if (row - 1 < 0 || matrix[row - 1, col] != 0)
-                {
-                    direction = "right";
-                }
+                if (row - 1 < 0 || matrix[row - 1, col] != 0) direction = "right";
             }
         }
 
         PrintMatrix(matrix);
     }
-  
+
     private static void PrintMatrix(int[,] matrix)
     {
         for (int row = 0; row < matrix.GetLongLength(0); row++)

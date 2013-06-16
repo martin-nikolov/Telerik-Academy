@@ -1,49 +1,50 @@
 using System;
-using System.Linq;
 
-public class Carpets
+class Carpets
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        int n = int.Parse(Console.ReadLine());
+        int h = int.Parse(Console.ReadLine());
 
-        char leftSide = '/';
-        char rightSide = '\\';
+        int middle = h / 2 - 1;
+        int points = h / 2 - 1;
+        int whiteSpaces = 0;
 
-        int rombStart = n / 2 - 1;
-        int rombEnd = n / 2;
+        char left = '/';
+        char right = '\\';
 
-        for (int row = 0; row < n; row++)
+        for (int i = 0; i < h; i++)
         {
-            if(row == n/2)
-            {
-                leftSide = '\\';
-                rightSide = '/';
+            Console.Write(new string('.', points));
+            Console.Write(left);
 
-                rombStart = 0;
-                rombEnd = n - 1;
-            }
-
-            Console.Write(new string('.', rombStart));
-            int rombCells = n - (2 * rombStart);
-            for (int col = 0; col < rombCells; col++)
+            for (int j = 0; j < whiteSpaces; j++)
             {
-                if (col < rombCells / 2)
-                    Console.Write(col % 2 == 0 ? leftSide : ' ');
+                if (j < whiteSpaces / 2)
+                    Console.Write((j & 1) != 0 ? left : ' ');
                 else
-                    Console.Write(col % 2 != 0 ? rightSide : ' ');
+                    Console.Write((j & 1) == 0 ? right : ' ');           
             }
-            Console.WriteLine(new string('.', rombStart));
 
-            if (row < n / 2)
+            Console.Write(right);
+            Console.Write(new string('.', points));
+
+            Console.WriteLine();
+
+            if (i < middle)
             {
-                rombStart--;
-                rombEnd++;
+                --points;
+                whiteSpaces += 2;
             }
-            else
+            else if (i == middle)
             {
-                rombStart++;
-                rombEnd--;
+                left = '\\';
+                right = '/';
+            }
+            else if (i > middle)
+            {
+                ++points;
+                whiteSpaces -= 2;
             }
         }
     }

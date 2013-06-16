@@ -1,48 +1,54 @@
 using System;
-using System.Linq;
 
-class FormulaBitOne
+class FormulaBit1
 {
-    static byte[,] matrix = new byte[8, 8];
-    static int direction = 0, length = 0, turns = 0;
-    static int[,] directions = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, 1 } };
-    static byte[] numbers = new byte[8];
+    static readonly int[,] directions = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, 1 } };
+    static readonly int[] numbers = new int[8];
+    static int dir = 0, steps = 0, turns = 0;
 
     static void Main()
     {
-        for (int row = 0; row < 8; row++) numbers[row] = byte.Parse(Console.ReadLine());
+        for (int i = 0; i < numbers.Length; i++)
+            numbers[i] = int.Parse(Console.ReadLine());
 
         DFS(0, 0);
     }
 
-    private static bool IsTraversable(int row, int col)
+    static bool IsTraversable(int row, int col)
     {
-        return 0 <= row && row < numbers.Length && 0 <= col && col < numbers.Length && ((numbers[row] >> col) & 1) == 0;
+        return row >= 0 && row <= 7 && col >= 0 && col <= 7 &&
+               ((numbers[row] >> col) & 1) == 0;
     }
 
     static void DFS(int row, int col)
     {
-        length++;
+        steps++;
 
-        if (row == 7 && col == 7) Console.WriteLine("{0} {1}", length, turns); // Final
-        else if (!IsTraversable(row, col)) Console.WriteLine("No {0}", length - 1); // Out of range
-        else
+        if (!IsTraversable(row, col))
         {
-            // Next coords
-            int _row = row + directions[direction, 0];
-            int _col = col + directions[direction, 1];
-
-            if (!IsTraversable(_row, _col)) // if next coords are not traversable -> change direction
-            {
-                turns++;
-                direction = (int)(++direction % directions.GetLongLength(0)); // Always we will be in the interval
-
-                // Next coords with new direction
-                _row = row + directions[direction, 0];
-                _col = col + directions[direction, 1];
-            }
-
-            DFS(_row, _col);
+            Console.WriteLine("No {0}", steps - 1);
+            return;
         }
+
+        if (row == 7 && col == 7)
+        {
+            Console.WriteLine("{0} {1}", steps, turns);
+            return;
+        }
+
+        int _row = row + directions[dir, 0];
+        int _col = col + directions[dir, 1];
+
+        // If only the new coords are not traversable -> change directions
+        if (!IsTraversable(_row, _col))
+        {
+            dir = ++dir % 4;
+            ++turns;
+
+            _row = row + directions[dir, 0];
+            _col = col + directions[dir, 1];
+        }
+
+        DFS(_row, _col);
     }
 }

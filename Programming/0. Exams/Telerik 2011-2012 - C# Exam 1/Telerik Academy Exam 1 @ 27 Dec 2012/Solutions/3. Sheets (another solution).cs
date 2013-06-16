@@ -17,6 +17,15 @@ class Sheets
             N >>= 1;
         }
 
+   /*-----------------------------------------------------------------------*/       
+
+       /* int n = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i <= 10; i++, n >>= 1)
+            if ((n & 1) == 0) Console.WriteLine("A{0}", 10 - i);     */
+
+   /*-----------------------------------------------------------------------*/       
+
         // Another solution without using bitwise operators
         // The answer will be sorted from the biggest paper size to the smallest
         //for (int i = 10; i >= 0; i--)

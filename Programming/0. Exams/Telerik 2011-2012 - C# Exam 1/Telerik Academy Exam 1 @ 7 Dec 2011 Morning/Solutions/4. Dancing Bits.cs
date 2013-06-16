@@ -9,39 +9,39 @@ class DancingBits
     {
         int k = int.Parse(Console.ReadLine());
         int n = int.Parse(Console.ReadLine());
-
-        int dancingBitsCount = 0;
         StringBuilder bin = new StringBuilder();
+        int dancingCouples = 0;
 
         for (int i = 0; i < n; i++)
-        {
-            int number = int.Parse(Console.ReadLine());
-            bin.Append(Convert.ToString(number, 2)); // Convert numbers to Binary and Concate its values
-        }
+            bin.Append(Convert.ToString(int.Parse(Console.ReadLine()), 2));
 
         for (int i = 0; i < bin.Length - k + 1; i++)
         {
             List<char> sequence = new List<char>();
 
-            for (int j = i; j < (i + k) && j < bin.Length; j++)
-                sequence.Add(bin[j]);
+            for (int j = 0; j < k; j++)
+                sequence.Add(bin[j + i]);
 
-            sequence = sequence.Distinct().ToList(); // Remove all similar elements
+            // Remove all similar elements
+            sequence = sequence.Distinct().ToList();
 
-            if (sequence.Count == 1) // We have similar elements -> check neighbours
+            // We have similar elements -> check neighbours
+            if (sequence.Count == 1) 
             {
-                if (i > 0 && bin[i - 1] == sequence[0]) // Check left neightbour for same value
+                // Check left neightbour for same value
+                if (i > 0 && bin[i - 1] == sequence[0]) 
                     continue;
 
-                if (i + k < bin.Length && bin[i + k] == sequence[0]) // Check right neightbour for same value
+                // Check right neightbour for same value
+                if (i + k < bin.Length && bin[i + k] == sequence[0]) 
                     continue;
 
                 // Increasing 'dancingBitsCount' only if left and right
                 // neightbours have different value than sequence value
-                dancingBitsCount++; 
+                dancingCouples++;
             }
         }
 
-        Console.WriteLine(dancingBitsCount);
+        Console.WriteLine(dancingCouples);
     }
 }

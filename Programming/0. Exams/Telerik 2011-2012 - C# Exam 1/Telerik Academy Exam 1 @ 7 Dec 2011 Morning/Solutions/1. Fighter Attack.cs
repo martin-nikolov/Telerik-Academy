@@ -1,8 +1,9 @@
 using System;
+using System.Linq;
 
 class FighterAttack
 {
-    public static void Main()
+    static void Main()
     {
         int px1 = int.Parse(Console.ReadLine());
         int py1 = int.Parse(Console.ReadLine());
@@ -17,31 +18,32 @@ class FighterAttack
         int maxX = Math.Max(px1, px2);
         int maxY = Math.Max(py1, py2);
 
-        int dotsX = fx + d;
+        int dotX = fx + d;
         int dotCenterY = fy; // 100%
         int dotUpY = fy + 1; // 50%
         int dotDownY = fy - 1; // 50%
-        int dotRightY = fy; // x = dotsX - 1; ->= 75%
+        int dotRightY = fy; // x = dotsX + 1; -> 75%
 
         int damage = 0;
 
-        if (maxX >= dotsX && minX <= dotsX && maxY >= dotCenterY && minY <= dotCenterY)
+        if (dotX >= minX && dotX <= maxX)
         {
-            damage += 100;
-        }
-        if (maxX >= dotsX + 1 && minX <= dotsX + 1 && maxY >= dotRightY && minY <= dotRightY)
-        {
-            damage += 75;
-        }
-        if (maxX >= dotsX && minX <= dotsX && maxY >= dotUpY && minY <= dotUpY)
-        {
-            damage += 50;
-        }
-        if (maxX >= dotsX && minX <= dotsX && maxY >= dotDownY && minY <= dotDownY)
-        {
-            damage += 50;
+            if (dotCenterY >= minY && dotCenterY <= maxY)
+                damage += 100;
+
+            if (dotUpY >= minY && dotUpY <= maxY)
+                damage += 50;
+
+            if (dotDownY >= minY && dotDownY <= maxY)
+                damage += 50;
         }
 
-        Console.WriteLine("{0}%", damage);
+        if (dotX + 1 >= minX && dotX + 1 <= maxX)
+        {
+            if (dotRightY >= minY && dotRightY <= maxY)
+                damage += 75;
+        }
+
+        Console.WriteLine(damage + "%");
     }
 }

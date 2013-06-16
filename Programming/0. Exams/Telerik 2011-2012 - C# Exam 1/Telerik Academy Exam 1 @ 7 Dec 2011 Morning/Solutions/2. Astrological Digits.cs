@@ -18,6 +18,7 @@ class AstrologicalDigits
         while (m > 9)
         {
             BigInteger sum = 0;
+            
             while (m != 0)
             {
                 sum += m % 10;

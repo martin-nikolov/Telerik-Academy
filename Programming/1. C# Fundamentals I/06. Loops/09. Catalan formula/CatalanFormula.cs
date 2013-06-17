@@ -18,7 +18,7 @@ class CatalanFormula
         Console.Write("Enter a number: ");
         uint n = uint.Parse(Console.ReadLine());
 
-        Console.WriteLine("\nC({0}) = {1}\n", n, Fact(2 * n) / Fact(n + 1) * Fact(n));
+        Console.WriteLine("\nC({0}) = {1}\n", n, Fact(2 * n) / (Fact(n + 1) * Fact(n)));
     }
 
     // Calculate factorial

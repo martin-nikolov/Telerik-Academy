@@ -18,3 +18,6 @@
 * [Console Input/Output](https://github.com/flextry/Telerik-Academy/tree/master/Programming/1.%20C%23%20Fundamentals%20I/04.%20Console%20Input-Output) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming/1.%20C%23%20Fundamentals%20I/04.%20Console%20Input-Output/Readme.md)) - 16.05.2013
 * [Conditional Statements](https://github.com/flextry/Telerik-Academy/tree/master/Programming/1.%20C%23%20Fundamentals%20I/05.%20Conditional%20Statements) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming/1.%20C%23%20Fundamentals%20I/05.%20Conditional%20Statements/Readme.md)) - 17.05.2013
 * [Loops](https://github.com/flextry/Telerik-Academy/tree/master/Programming/1.%20C%23%20Fundamentals%20I/06.%20Loops) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming/1.%20C%23%20Fundamentals%20I/06.%20Loops/Readme.md)) - 21.05.2013
+
+## C# - Part II
+1. [Arrays](https://github.com/flextry/Telerik-Academy/tree/master/Programming/2.%20C%23%20Fundamentals%20II/01.%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming/2.%20C%23%20Fundamentals%20II/01.%20Arrays/Readme.md)) - 01.07.2013

@@ -24,4 +24,4 @@
 * [Telerik Kids Academy 2011/2012](https://github.com/flextry/Telerik-Academy/tree/master/Programming/0.%20Exams/Telerik%20Kids%20Academy%202011-2012) - 20x3 exercises
 * [Telerik Kids Academy 2012/2013](https://github.com/flextry/Telerik-Academy/tree/master/Programming/0.%20Exams/Telerik%20Kids%20Academy%202012-2013) - 18x3 exercises
 
---
+----

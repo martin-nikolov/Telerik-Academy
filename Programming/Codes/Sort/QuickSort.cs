@@ -35,8 +35,8 @@ class QuickSortAlgorithm
         2      then q  PARTITION(A,p,r)
         3           QUICKSORT(A,p,q)
         4           QUICKSORT(A,q + 1,r)*/
-        if (leftIndex >= rightIndex)
-            return;
+
+        if (leftIndex >= rightIndex) return;
 
         T frontier;
         int leftPointer = leftIndex;
@@ -66,8 +66,7 @@ class QuickSortAlgorithm
                 sortArray[leftPointer] = sortArray[rightPointer];
                 sortArray[rightPointer] = swap;
 
-                leftPointer++;
-                rightPointer--;
+                leftPointer++; rightPointer--;
             }
         }
 
@@ -82,14 +81,13 @@ class QuickSortAlgorithm
         //    to the right of the pivot (if exists).
         if (leftPointer < rightIndex)
             QuickSort(sortArray, leftPointer, rightIndex);
+
         // 9. The algorithm returns when all sub arrays are sorted.
     }
 
     static void PrintElements<T>(T[] unsortedArr)
     {
         foreach (var item in unsortedArr)
-        {
             Console.Write(item + " ");
-        }
     }
 }

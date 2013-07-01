@@ -7,6 +7,7 @@ class MersennePrimeNumbers
         bool[] prime = new bool[550000];
 
         // Finding all prime numbers to N
+        // Sieve of Eratosthenes
         for (int i = 2; i <= Math.Sqrt(prime.Length); i++)
         {
             if (prime[i] == false)
@@ -23,7 +24,7 @@ class MersennePrimeNumbers
             {
                 long index = (int)(Math.Pow(2, i) - 1);
 
-                if(index >= prime.Length) return;
+                if (index >= prime.Length) return;
                 else if (prime[index] == false) Console.WriteLine(i + " -> " + index);
             }
         }

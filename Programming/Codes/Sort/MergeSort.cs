@@ -37,7 +37,7 @@ class MergeSortAlgorithm
         if (left >= right)
             return;
 
-        // Define middle of the array
+        // Define a middle of the array
         int middle = left + (right - left) / 2;
 
         MergeSort(unsortedArr, tempArr, left, middle);

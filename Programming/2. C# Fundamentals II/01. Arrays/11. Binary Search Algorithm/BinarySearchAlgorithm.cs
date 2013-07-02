@@ -27,7 +27,7 @@ class BinarySearchAlgorithm
 
         Array.Sort(numbers);
 
-        int index = IndexOf(numbers, searchedNumber, 0, numbers.Length);
+        int index = BinarySearch(numbers, searchedNumber, 0, numbers.Length);
 
         if (index != -1)
             Console.WriteLine("\nNumber {0} found at index: {1}\n", searchedNumber, index);
@@ -38,7 +38,7 @@ class BinarySearchAlgorithm
     // Searches for the specified object and returns the index of the first
     // occurrence within the range of elements in the one-dimensional System.Array
     // that starts at the specified index and contains the specified number of elements.
-    static int IndexOf(int[] numbers, int value, int startIndex, int endIndex)
+    static int BinarySearch(int[] numbers, int value, int startIndex, int endIndex)
     {
         if (!numbers.Contains(value))
             return -1;
@@ -51,11 +51,11 @@ class BinarySearchAlgorithm
         }
         else if (numbers[middleIndex] > value)
         {
-            return IndexOf(numbers, value, 0, middleIndex - 1);
+            return BinarySearch(numbers, value, 0, middleIndex - 1);
         }
         else
         {
-            return IndexOf(numbers, value, middleIndex + 1, numbers.Length - 1);
+            return BinarySearch(numbers, value, middleIndex + 1, numbers.Length - 1);
         }
     }
 }

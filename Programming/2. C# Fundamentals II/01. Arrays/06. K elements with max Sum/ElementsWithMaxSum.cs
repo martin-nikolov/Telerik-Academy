@@ -10,8 +10,6 @@ using System.Linq;
 
 class ElementsWithMaxSum
 {
-    // This program finds between all subsets that subset which has maximal sum.
-
     // EASE OF USE: The program contains test method that show us how the program work on diffent inputs
     // The method that tests the program is called "TestRunner"
 
@@ -22,6 +20,12 @@ class ElementsWithMaxSum
 
         Console.Write("Enter a number K (elements in subset): ");
         int k = int.Parse(Console.ReadLine());
+
+        if (n < k)
+        {
+            Console.WriteLine("\n-> K must be smaller or equal to N...\n");
+            return;
+        }
 
         int[] numbers = new int[n];
         Console.WriteLine("\nEnter a {0} number(s) to array: ", n);
@@ -37,51 +41,18 @@ class ElementsWithMaxSum
 
         //TestRunner(); // <- TEST METHOD
     }
-  
-    // Find all subsets using BITWISE REPRESENTATION
+
     static List<int> FindSubsetsWithMaxSum(int[] numbers, int k)
     {
-        // Total subsets = 2^n - 1
-        int totalSubsets = (int)(Math.Pow(2, numbers.Length) - 1);
-        int maximalSum = 0;
-
         List<int> subsetWithMaxSum = new List<int>();
-       
-        for (int i = 1; i <= totalSubsets; i++)
-        {
-            if (ElementsInSubset(i) == k)
-            {
-                List<int> currentSubsequence = new List<int>();
+        Array.Sort(numbers);
 
-                for (int j = 0; j < numbers.Length; j++)
-                    if (((i >> j) & 1) == 1)
-                        currentSubsequence.Add(numbers[j]);
-
-                if (currentSubsequence.Sum() > maximalSum)
-                {
-                    maximalSum = currentSubsequence.Sum();
-                    subsetWithMaxSum = new List<int>(currentSubsequence);
-                }
-            }
-        }
+        for (int i = numbers.Length - 1; i >= 0 && k != 0; i--,k--)
+            subsetWithMaxSum.Add(numbers[i]);
 
         return subsetWithMaxSum;
     }
-  
-    // Can be modified to find all subsets with maximal sum
-    static int ElementsInSubset(int currentNumber)
-    {
-        int elementsInSubset = 0;
 
-        while (currentNumber != 0)
-        {
-            elementsInSubset += currentNumber & 1;
-            currentNumber >>= 1;
-        }
-
-        return elementsInSubset;
-    }
-  
     static void PrintSubsetWithMaxSum(int[] numbers, List<int> bestSubsequence)
     {
         Console.WriteLine("\nArray's elements: {0} ", string.Join(" ", numbers));

@@ -37,9 +37,11 @@ class Combinations
                     c = 0;
                     break;
                 }
-
-                elem[i] = 1;
-                c = 1;
+                else
+                {
+                    elem[i] = 1;
+                    c = 1;
+                }
             }
         }
         while (c != 1);
@@ -49,7 +51,8 @@ class Combinations
     {
         for (int i = 0; i < arr.Length; i++)
             for (int j = i + 1; j < arr.Length; j++)
-                if (arr[i] <= arr[j]) return false;
+                if (arr[i] <= arr[j])
+                    return false;
 
         return true;
     }

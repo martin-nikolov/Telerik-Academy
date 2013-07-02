@@ -32,10 +32,14 @@ class Variations
 
                 if (elem[i] <= n)
                 {
-                    c = 0; break;   
+                    c = 0;
+                    break;   
                 }
-
-                elem[i] = 1; c = 1;
+                else
+                {
+                    elem[i] = 1;
+                    c = 1;
+                }
             }
         }
         while (c != 1);

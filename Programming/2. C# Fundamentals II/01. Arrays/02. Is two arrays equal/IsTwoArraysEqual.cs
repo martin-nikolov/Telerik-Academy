@@ -23,6 +23,7 @@ class IsTwoArraysEqual
 
     static void InitializeArray(int[] array, int size)
     {
+        Console.WriteLine("\nEnter a {0} number(s) to array: ", size);
         for (int i = 0; i < size; i++)
         {
             Console.Write("   {0}: ", i + 1);

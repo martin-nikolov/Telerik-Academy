@@ -11,6 +11,7 @@
 
 ## C# - Part II
 1. [Arrays](https://github.com/flextry/Telerik-Academy/tree/master/Programming/2.%20C%23%20Fundamentals%20II/01.%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming/2.%20C%23%20Fundamentals%20II/01.%20Arrays/Readme.md)) - 01.07.2013
+* [Multidimensional Arrays](https://github.com/flextry/Telerik-Academy/tree/master/Programming/2.%20C%23%20Fundamentals%20II/02.%20Multidimensional%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming/2.%20C%23%20Fundamentals%20II/02.%20Multidimensional%20Arrays/Readme.md)) - 03.07.2013
 
 ---
 

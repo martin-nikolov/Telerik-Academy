@@ -1,4 +1,4 @@
-<p align="center">#Telerik Academy 2013/2014</p>
+<p align="center"># Telerik Academy 2013/2014</p>
 
 ---
 

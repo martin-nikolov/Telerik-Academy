@@ -1,4 +1,4 @@
-# <span style="font-size: 25;"><b>Telerik Academy 2013/2014</b></div>
+# <span style="font-size: 25;">Telerik Academy 2013/2014</div>
 <p align="center">
   <a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming/Codes/Other/Telerik.png" /></a>
 </p>

@@ -1,4 +1,6 @@
-# <p align="center"># Telerik Academy 2013/2014</p>
+<p align="center">
+  <img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming/Codes/Other/Telerik.png" />
+</p>
 
 ---
 

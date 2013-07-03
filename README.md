@@ -1,4 +1,4 @@
--> [Telerik Academy 2013/2014] <-
+#<p align="center">Telerik Academy 2013/2014</p>
 
 ---
 

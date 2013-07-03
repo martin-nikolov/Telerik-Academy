@@ -1,4 +1,4 @@
-# <p align="center"># Telerik Academy 2013/2014</p>
+<p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming/Codes/Other/Telerik.png" /></a></p>
 
 ---
 
@@ -16,6 +16,10 @@
 ## C# - Part II
 1. [Arrays](https://github.com/flextry/Telerik-Academy/tree/master/Programming/2.%20C%23%20Fundamentals%20II/01.%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming/2.%20C%23%20Fundamentals%20II/01.%20Arrays/Readme.md)) - 01.07.2013
 * [Multidimensional Arrays](https://github.com/flextry/Telerik-Academy/tree/master/Programming/2.%20C%23%20Fundamentals%20II/02.%20Multidimensional%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming/2.%20C%23%20Fundamentals%20II/02.%20Multidimensional%20Arrays/Readme.md)) - 03.07.2013
+
+<br/>
+
+---
 
 ## Exams
 1. [Telerik 2011/2012 - C# Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Programming/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%201) - 7x5 exercises

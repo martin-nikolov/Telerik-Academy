@@ -1,4 +1,4 @@
-# -> Telerik Academy 2013/2014 <-
+-> Telerik Academy 2013/2014 <-
 
 ---
 

@@ -1,14 +1,6 @@
 <span style="font-size: xx-large;"><p align="center">Telerik Academy 2013/2014</p></div>
 <p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming/Codes/Other/Telerik.png" /></a></p>
 
-<div id="bigtext">
-    <div>BIGTEXT</div>
-    <div>Makes Text Big</div>
-</div>
-<script>
-$('#bigtext').bigtext();
-</script>
-
 ---
 
 # Programming with C# 

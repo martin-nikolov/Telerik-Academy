@@ -13,7 +13,7 @@
 1. [Arrays](https://github.com/flextry/Telerik-Academy/tree/master/Programming/2.%20C%23%20Fundamentals%20II/01.%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming/2.%20C%23%20Fundamentals%20II/01.%20Arrays/Readme.md)) - 01.07.2013
 * [Multidimensional Arrays](https://github.com/flextry/Telerik-Academy/tree/master/Programming/2.%20C%23%20Fundamentals%20II/02.%20Multidimensional%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming/2.%20C%23%20Fundamentals%20II/02.%20Multidimensional%20Arrays/Readme.md)) - 03.07.2013
 
-## Exams
+## C# - Exams
 1. [Telerik 2011/2012 - C# Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Programming/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%201) - 7x5 exercises
 * [Telerik 2011/2012 - C# Exam 2](https://github.com/flextry/Telerik-Academy/tree/master/Programming/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%202) - 5x5 exercises
 * [Telerik 2012/2013 - C# Exam 2](https://github.com/flextry/Telerik-Academy/tree/master/Programming/0.%20Exams/Telerik%202012-2013%20-%20C%23%20Exam%202) - 3x5 exercises

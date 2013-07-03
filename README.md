@@ -1,3 +1,4 @@
+<div style="text-align: center;"><span style="font-size: xx-large;"><b>Telerik Academy 2013/2014</b></span></div>
 <p align="center">
   <a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming/Codes/Other/Telerik.png" /></a>
 </p>

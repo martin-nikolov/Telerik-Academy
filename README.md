@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming/Codes/Other/Telerik.png" />
+  <a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming/Codes/Other/Telerik.png" /></a>
 </p>
 
 ---

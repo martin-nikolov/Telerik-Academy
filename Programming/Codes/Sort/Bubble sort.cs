@@ -1,16 +1,13 @@
 using System;
 
-class Program
+class BubbleSort
 {
-    static void Main(string[] args)
+    static void Main()
     {
         int[] array = { 9, 8, 6, 1, 7, 2, 0, 3, 5, 4 };
 
-        //Sorting array
         for (int i = 0; i < array.Length - 1; i++)
         {
-            int min = array[i];
-
             for (int j = 0; j < array.Length - i - 1; j++)
             {
                 if (array[j] > array[j + 1])
@@ -22,10 +19,6 @@ class Program
             }
         }
 
-        //Printing the sorted array
-        for (int i = 0; i < array.Length; i++)
-        {
-            Console.Write(array[i] + " ");
-        }
+        Console.WriteLine(string.Join(" ", array));
     }
 }

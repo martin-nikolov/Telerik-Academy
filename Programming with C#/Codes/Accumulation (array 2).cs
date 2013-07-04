@@ -6,11 +6,20 @@ class Accumulation
 {
     static void Main()
     {
+        Console.Write("Enter first number:  ");
+        string first = Console.ReadLine();
+
+        Console.Write("Enter second number: ");
+        string second = Console.ReadLine();
+
+        List<int> result = AccumulateTwoNumbers(first, second);
+
+        Console.Write("\nResult: {0} + {1} = ", first, second);
+        PrintResult(result);
     }
 
     static List<int> AccumulateTwoNumbers(string first, string second)
     {
-        // Convert string to int[] Array
         var a = first.Select(ch => ch - '0').ToArray();
         var b = second.Select(ch => ch - '0').ToArray();
 
@@ -28,8 +37,17 @@ class Accumulation
             result.Add(num % 10);
         }
 
-        if (carry > 0) result.Add(carry);
+        if (carry > 0)
+            result.Add(carry);
 
         return result;
+    }
+
+    static void PrintResult(List<int> result)
+    {
+        for (int i = result.Count - 1; i >= 0; i--)
+            Console.Write(result[i]);
+
+        Console.WriteLine("\n");
     }
 }

@@ -29,7 +29,8 @@ class Accumulation
             carry = number / 10;
         }
 
-        if (carry > 0) result.Add(carry);
+        if (carry > 0)
+            result.Add(carry);
 
         return result;
     }

@@ -19,7 +19,7 @@ class IndexOfLettersInWord
         string word = Console.ReadLine();
 
         for (int i = 0; i < word.Length; i++)
-            Console.WriteLine("Letter '{0}' -> index: {1}", word[i],
-                Array.IndexOf(letters, char.ToUpperInvariant(word[i])));
+            Console.WriteLine("Letter '{0}' -> index: {1} / ASCII Index: {2}", word[i],
+                Array.IndexOf(letters, char.ToUpperInvariant(word[i])), (int)word[i]);
     }
 }

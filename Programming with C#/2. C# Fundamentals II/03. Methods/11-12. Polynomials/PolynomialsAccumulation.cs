@@ -1,3 +1,11 @@
+Ôªø/*
+* 11. Write a method that adds two polynomials. Represent them as
+* arrays of their coefficients as in the example below:
+* x2 + 5 = 1x2 + 0x + 5 -> |5| |0| |1|
+* 
+* 12. Extend the program to support also subtraction and multiplication of polynomials.
+*/
+
 using System;
 using System.Linq;
 
@@ -15,7 +23,7 @@ class PolynomialsAccumulation
         Console.Write("Polynomial in normal form:");
         PrintPolynomial(secondPolynomial);
 
-        ¿ccumulation(firstPolynomial, secondPolynomial);
+        –êccumulation(firstPolynomial, secondPolynomial);
         Subtraction(firstPolynomial, secondPolynomial);
         Multiplication(firstPolynomial, secondPolynomial);
     }
@@ -36,7 +44,7 @@ class PolynomialsAccumulation
         return polynomial;
     }
 
-    static void ¿ccumulation(decimal[] first, decimal[] second)
+    static void –êccumulation(decimal[] first, decimal[] second)
     {
         Console.WriteLine("\n" + new string('-', 40) + "\n");
         PrintPolynomial(first);

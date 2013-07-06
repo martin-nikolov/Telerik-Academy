@@ -7,7 +7,7 @@ class Secrets
     {
         string number = Console.ReadLine();
 
-        // If theres is '-' (minus) -> removing it
+        // If theres is '-' (minus) -> programs removes it
         if (number.Contains('-'))
             number = number.Remove(number.IndexOf('-'), 1);
 

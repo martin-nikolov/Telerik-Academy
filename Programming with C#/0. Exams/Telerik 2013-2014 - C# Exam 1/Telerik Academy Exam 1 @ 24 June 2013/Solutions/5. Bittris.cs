@@ -23,14 +23,13 @@ class Bittris
             {
                 char direction = char.Parse(Console.ReadLine());
 
-                if (canMoveDown)
+                if (!canMoveDown) continue;
+
+                switch (direction)
                 {
-                    switch (direction)
-                    {
-                        case 'L':
-                        case 'R': MoveLeftRight(row, number, direction); break;
-                        case 'D': MoveDown(row, number); break;
-                    }
+                    case 'L':
+                    case 'R': MoveLeftRight(row, number, direction); break;
+                    case 'D': MoveDown(row, number); break;
                 }
             }
         }

@@ -4,21 +4,25 @@ class BubbleSort
 {
     static void Main()
     {
-        int[] array = { 9, 8, 6, 1, 7, 2, 0, 3, 5, 4 };
+        int[] numbers = { 9, 8, 6, 1, 7, 2, 0, 3, 5, 4 };
+        bool flag = false; // Optimization
 
-        for (int i = 0; i < array.Length - 1; i++)
+        for (int i = 0; i < numbers.Length - 1; i++)
         {
-            for (int j = 0; j < array.Length - i - 1; j++)
+            for (int j = 0; j < numbers.Length - i - 1; j++)
             {
-                if (array[j] > array[j + 1])
+                if (numbers[j] > numbers[j + 1])
                 {
-                    int swap = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = swap;
+                    int swap = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = swap;
+                    flag = true;
                 }
             }
+
+            if (!flag) break;
         }
 
-        Console.WriteLine(string.Join(" ", array));
+        Console.WriteLine(string.Join(" ", numbers));
     }
 }

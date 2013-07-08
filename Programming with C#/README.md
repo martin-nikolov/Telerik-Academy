@@ -19,10 +19,6 @@
 * [Methods](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/03.%20Methods) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/03.%20Methods/Readme.md)) - 04.07.2013
 * [Numeral Systems](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/04.%20Numeral%20Systems) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/04.%20Numeral%20Systems/Readme.md)) - 08.07.2013
 
-<br/>
-
----
-
 ## C# - Exams
 1. [Telerik 2011/2012 - C# Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%201) - 7x5 exercises
 * [Telerik 2011/2012 - C# Exam 2](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%202) - 5x5 exercises

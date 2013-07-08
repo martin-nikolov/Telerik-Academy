@@ -17,7 +17,7 @@
 1. [Arrays](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/01.%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/01.%20Arrays/Readme.md)) - 01.07.2013
 * [Multidimensional Arrays](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/02.%20Multidimensional%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/02.%20Multidimensional%20Arrays/Readme.md)) - 03.07.2013
 * [Methods](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/03.%20Methods) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/03.%20Methods/Readme.md)) - 04.07.2013
-* [Numberal Systems](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/04.%20Numeral%20Systems) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/04.%20Numeral%20Systems/Readme.md)) - 08.07.2013
+* [Numeral Systems](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/04.%20Numeral%20Systems) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/04.%20Numeral%20Systems/Readme.md)) - 08.07.2013
 
 <br/>
 

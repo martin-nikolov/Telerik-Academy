@@ -43,6 +43,9 @@ class IsTwoArraysEqual
         }
         else
         {
+            Array.Sort(firstArray);
+            Array.Sort(secondArray);
+
             Console.WriteLine("\nResult: ");
             Console.WriteLine("1) The two arrays have equals sizes.");
 

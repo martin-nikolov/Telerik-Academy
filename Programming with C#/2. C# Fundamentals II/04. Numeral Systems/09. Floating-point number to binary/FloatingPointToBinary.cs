@@ -8,6 +8,8 @@ using System;
 
 class FloatingPointToBinary
 {
+    // There is online decimal <-> binary calculator: http://babbage.cs.qc.cuny.edu/IEEE-754/
+
     static string FloatNumberToBinary(float number)
     {
         int dec = BitConverter.ToInt32(BitConverter.GetBytes(number), 0);
@@ -34,6 +36,9 @@ class FloatingPointToBinary
         number = Math.Abs(number);
 
         string binary = FloatNumberToBinary(number);
+
+        // 0.1 (Exponent: 01111011) \ 1.1 (Exponent: 01111111) \ 2.2 (Exponent: 10000000)
+        if ((int)number == 0 || (int)number == 1) binary = "0" + binary; 
 
         Console.WriteLine("\nSign: {0} {1}", sign, sign == 1 ? "(minus)" : "(plus)");
         Console.WriteLine("Exponent: {0}", GetExponent(binary));

@@ -37,7 +37,7 @@ class WorkDays
         futureDay = new DateTime(2013, 3, 16);
 
         //First check which is the best day, then to go Method GetNumberOfWorkDays
-        Console.Write("Total work days (the same, but spawed days): ");
+        Console.Write("Total work days (the same, but swaped days): ");
         GetBetterDay(ref futureDay, ref dateNow);
     }
 

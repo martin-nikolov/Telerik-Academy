@@ -14,7 +14,7 @@ class ReadFileContent
     static void Main()
     {
         string path = "C:\\WINDOWS\\win.ini";
-        
+
         try
         {
             Console.WriteLine("> Trying to read file content...\n");
@@ -49,6 +49,10 @@ class ReadFileContent
         catch (PathTooLongException ptle)
         {
             PrintErrorMessage(ptle);
+        }
+        catch (UnauthorizedAccessException ua)
+        {
+            PrintErrorMessage(ua);
         }
     }
 

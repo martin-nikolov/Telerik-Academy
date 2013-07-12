@@ -1,0 +1,9 @@
+first odd line
+first even line
+second odd line
+second even line
+this is odd line
+this is not odd line
+this is not even line
+even line
+odd line

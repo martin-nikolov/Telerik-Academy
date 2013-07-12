@@ -1,0 +1,2 @@
+What Is a Stream?
+A stream is an ordered sequence of bytes, which is send from one application or input device to another application or output device.

@@ -1,0 +1,7 @@
+Same line
+Different Line
+Different line
+same Line
+this is same line
+NOT same line
+of course this is different line

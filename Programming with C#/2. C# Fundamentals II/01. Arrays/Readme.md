@@ -13,7 +13,7 @@
 * Write a program that finds the index of given element in a sorted array of integers by using the **Binary search** algorithm.
 * Write a program that creates an array containing all letters from the alphabet (A-Z). Read a word from the console and print the index of each of its letters in the array.
 * \*Write a program that sorts an array of integers using the **Merge sort** algorithm.
-* Write a program that sorts an array of strings using the **Quick sort** algorithm.
+* \*Write a program that sorts an array of strings using the **Quick sort** algorithm.
 * Write a program that finds all prime numbers in the range [1...10 000 000]. Use the **Sieve of Eratosthenes** algorithm.
 * \* We are given an array of integers and a number `S`. Write a program to find if there exists a subset of the elements of the array that has a sum S. Example: {2, 1, 2, 4, 3, 5, 2, 6}, S=14 -> yes (1+2+5+6)
 * \* Write a program that reads three integer numbers `N`, `K` and `S` and an array of N elements from the console. Find in the array a subset of K elements that have sum S or indicate about its absence.

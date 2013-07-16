@@ -35,14 +35,12 @@ class ComparingCharArrays
         {
             if (firstArray[i] < secondArray[i])
             {
-                Console.WriteLine(
-                    "\nResult -> The first array is lexicographically before the second one.\n");
+                Console.WriteLine("\nResult -> The first array is lexicographically before the second one.\n");
                 return;
             }
             else if (firstArray[i] > secondArray[i])
             {
-                Console.WriteLine(
-                    "\nResult -> The second array is lexicographically before the first one.\n");
+                Console.WriteLine("\nResult -> The second array is lexicographically before the first one.\n");
                 return;
             }
             else if (i == smallerSize - 1 && firstArray.Length != secondArray.Length)
@@ -55,6 +53,7 @@ class ComparingCharArrays
             }
         }
 
+        // Out of for-loop => equal elements
         Console.WriteLine("\nResult -> The arrays have equal element!\n");
     }
 
@@ -63,8 +62,7 @@ class ComparingCharArrays
     {
         if (firstWord.CompareTo(secondWord) == -1)
         {
-            Console.WriteLine(
-                "Result -> The first array is lexicographically before the second one.\n");
+            Console.WriteLine("Result -> The first array is lexicographically before the second one.\n");
         }
         else if (firstWord.CompareTo(secondWord) == 0)
         {
@@ -72,8 +70,7 @@ class ComparingCharArrays
         }
         else
         {
-            Console.WriteLine(
-                "Result -> The second array is lexicographically before the first one.\n");
+            Console.WriteLine( "Result -> The second array is lexicographically before the first one.\n");
         }
     }
 }

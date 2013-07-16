@@ -12,19 +12,19 @@ class IsTwoArraysEqual
     {
         Console.Write("Enter size of first array: ");
         int[] firstArray = new int[int.Parse(Console.ReadLine())];
-        InitializeArray(firstArray, firstArray.Length);
+        InitializeArray(firstArray);
 
         Console.Write("\nEnter size of second array: ");
         int[] secondArray = new int[int.Parse(Console.ReadLine())];
-        InitializeArray(secondArray, secondArray.Length);
+        InitializeArray(secondArray);
 
         CompareTwoArrays(firstArray, secondArray);
     }
 
-    static void InitializeArray(int[] array, int size)
+    static void InitializeArray(int[] array)
     {
-        Console.WriteLine("\nEnter a {0} number(s) to array: ", size);
-        for (int i = 0; i < size; i++)
+        Console.WriteLine("\nEnter a {0} number(s) to array: ", array.Length);
+        for (int i = 0; i < array.Length; i++)
         {
             Console.Write("   {0}: ", i + 1);
             array[i] = int.Parse(Console.ReadLine());

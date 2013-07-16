@@ -16,17 +16,23 @@ class SubsetsOfKElementsWithGivenSum
 
     static void Main()
     {
-        Console.Write("Enter a number N (size of array): ");
-        int n = int.Parse(Console.ReadLine());
+        Console.Write("Enter a size of array: ");
+        int size = int.Parse(Console.ReadLine());
 
-        Console.Write("Enter a number K (elements in subset): ");
-        int k = int.Parse(Console.ReadLine());
+        Console.Write("Enter a number of elements in subset: ");
+        int elements = int.Parse(Console.ReadLine());
+
+        if (size < elements)
+        {
+            Console.WriteLine("\n-> Number of elements must be smaller or equal to Size of array...\n");
+            return;
+        }
 
         Console.Write("Enter a searcher Sum: ");
         int sum = int.Parse(Console.ReadLine());
 
-        int[] numbers = new int[n];
-        Console.WriteLine("\nEnter a {0} number(s) to array: ", n);
+        int[] numbers = new int[size];
+        Console.WriteLine("\nEnter a {0} number(s) to array: ", size);
         for (int i = 0; i < numbers.Length; i++)
         {
             Console.Write("   {0}: ", i + 1);
@@ -34,22 +40,22 @@ class SubsetsOfKElementsWithGivenSum
         }
 
         PrintElementOfArray(numbers);
-        Console.WriteLine("\nSubsets with {0} elements and Sum {1}: ", k, sum);
-        FindAndPrintSubsetsWithMaxSum(numbers, k, sum);
-        Console.WriteLine();
+        FindAndPrintSubsetsWithMaxSum(numbers, elements, sum);
 
         //TestRunner(); // <- TEST METHOD
     }
 
     // Find all subsets using BITWISE REPRESENTATION
-    static void FindAndPrintSubsetsWithMaxSum(int[] numbers, int k, int sum)
+    static void FindAndPrintSubsetsWithMaxSum(int[] numbers, int elements, int sum)
     {
+        Console.WriteLine("\nSubsets with {0} elements and Sum {1}: ", elements, sum);
+
         int totalSubsets = (int)(Math.Pow(2, numbers.Length) - 1); // Total subsets = 2^n - 1
         bool isFoundSubset = false;
 
         for (int i = 1; i <= totalSubsets; i++)
         {
-            if (ElementsInSubset(i) == k)
+            if (ElementsInSubset(i) == elements)
             {
                 List<int> currentSubset = new List<int>();
 
@@ -66,8 +72,9 @@ class SubsetsOfKElementsWithGivenSum
         }
 
         if (!isFoundSubset)
-            Console.WriteLine("- There are no subsets with {0} elements and Sum {1}...", k, sum);
+            Console.WriteLine("- There are no subsets with {0} elements and Sum {1}...", elements, sum);
     }
+
 
     static int ElementsInSubset(int currentNumber)
     {
@@ -94,37 +101,25 @@ class SubsetsOfKElementsWithGivenSum
 
     static void TestRunner()
     {
-        Console.WriteLine(new string('-', 40));
+        Console.WriteLine("\n" + new string('-', 40));
 
         int[] test0 = { 2, 1, 2, 4, 3, 5, 2, 6 };
         PrintElementOfArray(test0);
-
-        Console.WriteLine("\nSubsets with {0} elements and Sum {1}: ", 4, 14);
         FindAndPrintSubsetsWithMaxSum(test0, 4, 14);
-
-        Console.WriteLine("\nSubsets with {0} elements and Sum {1}: ", 3, 6);
         FindAndPrintSubsetsWithMaxSum(test0, 3, 6);
 
         Console.WriteLine("\n" + new string('-', 40));
 
         int[] test1 = { 1, -1, 2, -3, 4, -5 };
         PrintElementOfArray(test1);
-
-        Console.WriteLine("\nSubsets with {0} elements and Sum {1}: ", 2, 3);
         FindAndPrintSubsetsWithMaxSum(test1, 2, 3);
-
-        Console.WriteLine("\nSubsets with {0} elements and Sum {1}: ", 3, 2);
         FindAndPrintSubsetsWithMaxSum(test1, 3, 2);
 
         Console.WriteLine("\n" + new string('-', 40));
 
         int[] test2 = { 9, 1, 7, 5, -9, 3, 1, 9, -8, -4, 2, 4 };
         PrintElementOfArray(test2);
-
-        Console.WriteLine("\nSubsets with {0} elements and Sum {1}: ", 2, 2);
         FindAndPrintSubsetsWithMaxSum(test2, 2, 2);
-
-        Console.WriteLine("\nSubsets with {0} elements and Sum {1}: ", 3, 3);
         FindAndPrintSubsetsWithMaxSum(test2, 3, 3);
 
         Console.WriteLine("\n" + new string('-', 40) + "\n");

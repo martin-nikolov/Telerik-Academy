@@ -40,19 +40,19 @@ class QuickSortAlgorithm
         int leftPointer = left, rightPointer = right;
 
         // 1. Pick a pivot value somewhere in the middle.
-        string frontier = elements[(left + right) / 2];
+        string pivot = elements[(left + right) / 2];
 
         // 2. Loop until pointers meet on the pivot.
         while (leftPointer <= rightPointer)
         {
             // 3. Find a larger value to the right of the pivot.
             //    If there is non we end up at the pivot.
-            while (elements[leftPointer].CompareTo(frontier) < 0) 
+            while (elements[leftPointer].CompareTo(pivot) < 0) 
                 leftPointer++;
 
             // 4. Find a smaller value to the left of the pivot.
             //    If there is non we end up at the pivot.
-            while (elements[rightPointer].CompareTo(frontier) > 0) 
+            while (elements[rightPointer].CompareTo(pivot) > 0) 
                 rightPointer--;
 
             // 5. Check if both pointers are not on the pivot.
@@ -76,6 +76,7 @@ class QuickSortAlgorithm
         // 8. Recursively call the algorithm on the unsorted array
         //    to the right of the pivot (if exists).
         if (leftPointer < right) QuickSort(elements, leftPointer, right);
+
         // 9. The algorithm returns when all sub arrays are sorted.
     }
 

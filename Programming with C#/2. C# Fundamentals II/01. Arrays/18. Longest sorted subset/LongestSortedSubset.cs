@@ -43,26 +43,25 @@ class LongestSortedSubset
     {
         Console.WriteLine("\nArray's elements: {0}", string.Join(" ", numbers));
 
-        Console.WriteLine("Longest subsets with increasing elements: ");
-        for (int i = 0; i < index; i++)
-            Console.WriteLine(string.Join(" ", allBestSubsets[i]));
+        Console.WriteLine("Longest subset(s) with increasing elements: ");
+        for (int i = 0; i < index; i++) Console.WriteLine(string.Join(" ", allBestSubsets[i]));
     }
 
     // Find all subsets using BITWISE REPRESENTATION
     static void FindAllSubsetsWithGivenSum(int[] numbers)
     {
         allBestSubsets = new List<int>[40]; // this line is necessary only for TestRunner
+
         List<int> subset = new List<int>();
         long bestLength = 0;
-        long totalSubsets = (long)(Math.Pow(2, numbers.Length) - 1);
+        long totalSubsets = (long)(Math.Pow(2, numbers.Length) - 1); // Number of subsets
 
         //for (int i = 1; i <= totalSubsets; i++)
         for (long i = totalSubsets; i >= 1; i--)
         {
             long elementInSubset = ElementsInSubset(i);
 
-            if (elementInSubset < bestLength)
-                continue;
+            if (elementInSubset < bestLength) continue;
 
             subset.Clear();
 
@@ -85,6 +84,7 @@ class LongestSortedSubset
         }
     }
 
+    // Optimization method
     static long ElementsInSubset(long currentNumber)
     {
         long elementsInSubset = 0;

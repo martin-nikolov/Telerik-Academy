@@ -13,7 +13,6 @@ class FindSubsetWithGivenSum
 {
     // EASE OF USE: The program contains test method that show us how the program work on diffent inputs
     // The method that tests the program is called "TestRunner"
-
     static bool isFoundSubset = false;
 
     static void Main()
@@ -31,10 +30,8 @@ class FindSubsetWithGivenSum
             Console.Write("   {0}: ", i + 1);
             numbers[i] = int.Parse(Console.ReadLine());
         }
-
-        Console.WriteLine("\nAll subsets with sum = {0}", sum);
+        
         PrintAllSubsetsWithGivenSum(numbers, sum);
-        Console.WriteLine(!isFoundSubset ? "- There are no subsets with Sum " + sum + "\n" : "");
 
         //TestRunner(); // <- TEST METHOD
     }
@@ -42,7 +39,9 @@ class FindSubsetWithGivenSum
     // Find and print all subsets using BITWISE REPRESENTATION
     static void PrintAllSubsetsWithGivenSum(int[] numbers, int searchedSum)
     {
-        int subsetsCount = (int)(Math.Pow(2, numbers.Length) - 1);
+        Console.WriteLine("\nAll subsets with sum = {0}", searchedSum);
+
+        int subsetsCount = (int)(Math.Pow(2, numbers.Length) - 1); // Number of subsets
         List<int> subset = new List<int>();
 
         for (int i = 1; i <= subsetsCount; i++)
@@ -56,32 +55,27 @@ class FindSubsetWithGivenSum
             if (subset.Sum() == searchedSum)
             {
                 isFoundSubset = true;
-
-                // Prints current subset
-                foreach (var number in subset)
-                    Console.Write(number + " ");
-
-                Console.WriteLine();
+                Console.WriteLine(string.Join(" ", subset)); // Print subset
             }
         }
+
+        Console.WriteLine(!isFoundSubset ? "- There are no subsets with Sum " + searchedSum + "\n" : "");
     }
 
     static void TestRunner()
     {
         Console.WriteLine(new string('-', 40) + "\n");
 
-        Console.WriteLine("Array's elements: {0}\n", string.Join(" ", new int[] { 2, 1, 2, 4, 3, 5, 2, 6 }));
-        Console.WriteLine("All subsets with sum = {0}\n", 14);
-        PrintAllSubsetsWithGivenSum(new int[] { 2, 1, 2, 4, 3, 5, 2, 6 }, searchedSum: 14);
-        Console.WriteLine(!isFoundSubset ? "- There are no subsets with Sum " + 14 + "\n" : "");
+        int[] test0 = new int[] { 2, 1, 2, 4, 3, 5, 2, 6 };
+        Console.WriteLine("Array's elements: {0}", string.Join(" ", test0));
+        PrintAllSubsetsWithGivenSum(test0, searchedSum: 14);
 
         Console.WriteLine(new string('-', 40) + "\n");
 
-        Console.WriteLine("Array's elements: {0}\n", string.Join(" ", new int[] { 6, 4, -1, 2, -4, -5, -7, 1, 2, 3 }));
-        Console.WriteLine("All subsets with sum = {0}\n", 6);
-        PrintAllSubsetsWithGivenSum(new int[] { 6, 4, -1, 2, -4, -5, -7, 1, 2, 3 }, searchedSum: 6);
-        Console.WriteLine(!isFoundSubset ? "- There are no subsets with Sum " + 6 + "\n" : "");
-
+        int[] test1 = new int[] { 6, 4, -1, 2, -4, -5, -7, 1, 2, 3 };
+        Console.WriteLine("Array's elements: {0}", string.Join(" ", test1));
+        PrintAllSubsetsWithGivenSum(test1, searchedSum: 6);
+        
         Console.WriteLine(new string('-', 40) + "\n");
     }
 }

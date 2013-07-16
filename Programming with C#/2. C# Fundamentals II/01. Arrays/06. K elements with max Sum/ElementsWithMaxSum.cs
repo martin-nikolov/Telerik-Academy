@@ -15,28 +15,27 @@ class ElementsWithMaxSum
 
     static void Main()
     {
-        Console.Write("Enter a number N (size of array): ");
-        int n = int.Parse(Console.ReadLine());
+        Console.Write("Enter a size of array: ");
+        int size = int.Parse(Console.ReadLine());
 
-        Console.Write("Enter a number K (elements in subset): ");
-        int k = int.Parse(Console.ReadLine());
+        Console.Write("Enter a number of elements in subset: ");
+        int elements = int.Parse(Console.ReadLine());
 
-        if (n < k)
+        if (size < elements)
         {
-            Console.WriteLine("\n-> K must be smaller or equal to N...\n");
+            Console.WriteLine("\n-> Number of elements must be smaller or equal to Size of array...\n");
             return;
         }
 
-        int[] numbers = new int[n];
-        Console.WriteLine("\nEnter a {0} number(s) to array: ", n);
+        int[] numbers = new int[size];
+        Console.WriteLine("\nEnter a {0} number(s) to array: ", size);
         for (int i = 0; i < numbers.Length; i++)
         {
             Console.Write("   {0}: ", i + 1);
             numbers[i] = int.Parse(Console.ReadLine());
         }
 
-        List<int> subsetWithMaxSum = FindSubsetsWithMaxSum(numbers, k);
-        PrintSubsetWithMaxSum(numbers, subsetWithMaxSum);
+        PrintSubsetWithMaxSum(numbers, FindSubsetsWithMaxSum(numbers, elements));
         Console.WriteLine();
 
         //TestRunner(); // <- TEST METHOD

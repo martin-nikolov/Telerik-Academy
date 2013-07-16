@@ -22,11 +22,11 @@ class MergeSortAlgorithm
             numbers[i] = int.Parse(Console.ReadLine());
         }
 
-        int[] temp = new int[numbers.Length];
+        int[] tmp = new int[n];
 
         Console.WriteLine("\nBefore sorting: {0}", string.Join(" ", numbers)); 
 
-        MergeSort(numbers, temp, 0, numbers.Length - 1);
+        MergeSort(numbers, tmp, 0, numbers.Length - 1);
 
         Console.WriteLine("After sorting: {0}\n", string.Join(" ", numbers)); 
     }

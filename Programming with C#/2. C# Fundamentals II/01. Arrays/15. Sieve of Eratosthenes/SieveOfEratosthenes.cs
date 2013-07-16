@@ -10,8 +10,7 @@ class SieveOfEratosthenes
 {
     static void Main()
     {
-        //bool[] primes = new bool[10000000];
-        bool[] primes = new bool[2000];
+        bool[] primes = new bool[2000]; // new bool[10000000];
 
         // Find all prime numbers to N
         for (int i = 2; i < Math.Sqrt(primes.Length); i++)
@@ -26,7 +25,6 @@ class SieveOfEratosthenes
 
         // Print all prime numbers to N
         for (int i = 2; i < primes.Length; i++)
-            if (!primes[i])
-                Console.Write(i + " ");
+            if (!primes[i]) Console.Write(i + " ");
     }
 }

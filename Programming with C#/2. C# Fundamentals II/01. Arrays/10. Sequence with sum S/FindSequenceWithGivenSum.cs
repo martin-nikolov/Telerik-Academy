@@ -31,16 +31,16 @@ class FindSequenceWithGivenSum
             numbers[i] = int.Parse(Console.ReadLine());
         }
 
-        Console.WriteLine("\nArray's elements: {0}", string.Join(" ", numbers));
-        Console.WriteLine("\nSequences with searched sum: ");
         FindAndPrintSequences(numbers, searchedSum);
-        Console.WriteLine(!isFoundSequence ? "- There are no sequences with sum " + searchedSum + "\n" : "");
-
+       
         //TestRunner(); // <- TEST METHOD
     }
   
     static void FindAndPrintSequences(int[] numbers, int searchedSum)
     {
+        Console.WriteLine("\nArray's elements: {0}", string.Join(" ", numbers));
+        Console.WriteLine("Sequences with searched sum {0}: ", searchedSum);
+
         isFoundSequence = false;
 
         for (int i = 0; i < numbers.Length; i++)
@@ -58,48 +58,32 @@ class FindSequenceWithGivenSum
                 }
             }
         }
+
+        Console.Write(!isFoundSequence ? "- There are no sequences with sum " + searchedSum + "\n" : "");
     }
 
     static void TestRunner()
     {
-        Console.WriteLine(new string('-', 40));
+        Console.WriteLine("\n" + new string('-', 40));
 
         int[] test0 = { 4, 3, 1, 4, 2, 5, 8 };
-        Console.WriteLine("\nArray's elements: {0}", string.Join(" ", test0));
-        Console.WriteLine("Sequences with searched sum 11: ");
         FindAndPrintSequences(test0, searchedSum: 11);
-        Console.WriteLine(!isFoundSequence ? "- There are no sequences with sum " + 11 + "" : "");
 
         int[] test1 = { 5, 2, 3, 4, 1, 3, 1, 2, -1, 6, };
-        Console.WriteLine("Array's elements: {0}", string.Join(" ", test1));
-        Console.WriteLine("Sequences with searched sum 5: ");
         FindAndPrintSequences(test1, searchedSum: 5);
-        Console.WriteLine(!isFoundSequence ? "- There are no sequences with sum " + 5 + "" : "");
 
         int[] test2 = { 5, 5, 5, 5, 5 };
-        Console.WriteLine("Array's elements: {0}", string.Join(" ", test2));
-        Console.WriteLine("Sequences with searched sum 5: ");
         FindAndPrintSequences(test2, searchedSum: 5);
-        Console.WriteLine(!isFoundSequence ? "- There are no sequences with sum " + 5 + "" : "");
 
         int[] test3 = { 1, -1, 2, -2, 3, -3, 4, -4, 5, -5 };
-        Console.WriteLine("Array's elements: {0}", string.Join(" ", test3));
-        Console.WriteLine("Sequences with searched sum 0: ");
         FindAndPrintSequences(test3, searchedSum: 0);
-        Console.WriteLine(!isFoundSequence ? "- There are no sequences with sum " + 0 + "\n" : "");
 
         int[] test4 = { 4, 5, 5 };
-        Console.WriteLine("Array's elements: {0}", string.Join(" ", test4));
-        Console.WriteLine("Sequences with searched sum 4: ");
         FindAndPrintSequences(test4, searchedSum: 4);
-        Console.WriteLine(!isFoundSequence ? "- There are no sequences with sum " + 4 + "\n" : "");
 
         int[] test5 = { 4, 4, 5 };
-        Console.WriteLine("Array's elements: {0}", string.Join(" ", test5));
-        Console.WriteLine("Sequences with searched sum 5: ");
         FindAndPrintSequences(test5, searchedSum: 5);
-        Console.WriteLine(!isFoundSequence ? "- There are no sequences with sum " + 5 + "\n" : "");
 
-        Console.WriteLine(new string('-', 40));
+        Console.WriteLine("\n" + new string('-', 40));
     }
 }

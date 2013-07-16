@@ -22,13 +22,12 @@ class MostFrequentNumberInArray
             numbers[i] = int.Parse(Console.ReadLine());
         }
         
+        // Adds numbers to dictionary
         Dictionary<int, int> frequents = new Dictionary<int, int>();
         for (int i = 0; i < numbers.Length; i++)
         {
-            if (!frequents.ContainsKey(numbers[i]))
-                frequents.Add(numbers[i], 1);
-            else
-                frequents[numbers[i]]++;
+            if (!frequents.ContainsKey(numbers[i])) frequents.Add(numbers[i], 1);
+            else frequents[numbers[i]]++;
         }
 
         // Get the key of the highest value
@@ -37,6 +36,7 @@ class MostFrequentNumberInArray
         // Print all array elements
         Console.WriteLine("\nArray's elements: {0}", string.Join(" ", numbers));
 
+        // Print all keys (numbers) with the highest value
         Console.WriteLine("\nMost frequent numbers: ");
         foreach (KeyValuePair<int, int> item in frequents)
             if (item.Value == frequents[max])

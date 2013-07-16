@@ -17,6 +17,7 @@ class Variations
         Console.Write("Enter a number K: ");
         int k = int.Parse(Console.ReadLine());
 
+        // Initialize the array with ones 'k' times 
         int[] elem = Enumerable.Repeat(1, k).ToArray();
 
         int c;
@@ -32,13 +33,11 @@ class Variations
 
                 if (elem[i] <= n)
                 {
-                    c = 0;
-                    break;   
+                    c = 0; break;   
                 }
                 else
                 {
-                    elem[i] = 1;
-                    c = 1;
+                    elem[i] = c = 1;
                 }
             }
         }

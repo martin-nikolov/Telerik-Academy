@@ -33,14 +33,13 @@ class MaxIncreasingSequence
 
     static List<int> FindMaxIncreasingSequence(int[] numbers)
     {
+        if (numbers.Length == 1) return new List<int>() { numbers[0] };
+
         List<int> maxIncreasingSequence = new List<int>() { numbers[0] };
         List<int> bestSequence = new List<int>();
 
         int currentElement = numbers[0];
-
-        if (numbers.Length == 1)
-            return new List<int>() { numbers[0] };
-
+  
         for (int i = 1; i < numbers.Length; i++)
         {
             if (numbers[i] > currentElement)

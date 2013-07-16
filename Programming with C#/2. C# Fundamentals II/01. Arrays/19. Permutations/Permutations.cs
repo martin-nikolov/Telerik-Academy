@@ -15,6 +15,7 @@ class Permutations
         int n = int.Parse(Console.ReadLine());
         int k = n;
 
+        // Initialize the array with ones 'k' times 
         int[] elem = Enumerable.Repeat(1, k).ToArray();
 
         int c;
@@ -23,8 +24,7 @@ class Permutations
         {
             c = 1;
 
-            if (ContainsDifferentElements(elem)) 
-                PrintElements(elem);
+            if (ContainsDifferentElements(elem)) PrintElements(elem);
 
             for (int i = 0; i < k; i++)
             {
@@ -32,13 +32,11 @@ class Permutations
 
                 if (elem[i] <= n)
                 {
-                    c = 0;
-                    break;
+                    c = 0; break;
                 }
                 else
                 {
-                    elem[i] = 1;
-                    c = 1;
+                    elem[i] = c = 1;
                 }
             }
         }

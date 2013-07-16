@@ -29,10 +29,8 @@ class BinarySearchAlgorithm
 
         int index = BinarySearch(numbers, searchedNumber, 0, numbers.Length);
 
-        if (index != -1)
-            Console.WriteLine("\nNumber {0} found at index: {1}\n", searchedNumber, index);
-        else
-            Console.WriteLine("\nNumber {0} not found!\n", searchedNumber);
+        if (index != -1) Console.WriteLine("\nNumber {0} found at index: {1}\n", searchedNumber, index);
+        else Console.WriteLine("\nNumber {0} not found!\n", searchedNumber);
     }
 
     // Searches for the specified object and returns the index of the first
@@ -40,8 +38,7 @@ class BinarySearchAlgorithm
     // that starts at the specified index and contains the specified number of elements.
     static int BinarySearch(int[] numbers, int value, int startIndex, int endIndex)
     {
-        if (!numbers.Contains(value))
-            return -1;
+        if (!numbers.Contains(value)) return -1; // Not found
 
         int middleIndex = (startIndex + endIndex) / 2;
 

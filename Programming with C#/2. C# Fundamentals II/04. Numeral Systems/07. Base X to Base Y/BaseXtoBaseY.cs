@@ -11,32 +11,13 @@ class BaseXtoBaseY
     static void Main()
     {
         Console.Write("Number's base X: ");
-        int baseX = int.Parse(Console.ReadLine());
-
-        if (baseX < 2 || baseX > 16)
-        {
-            // Invalid numberal system
-            throw new ArgumentOutOfRangeException();
-        }
+        int baseX = IntParse();
 
         Console.Write("\nEnter a non-negative integer number [base {0}]: ", baseX);
-        string number = Console.ReadLine();
-        number = MakeAllLettersLarge(number);
-
-        if (number.Contains('-') || number.Contains('.'))
-        {
-            // Entered negative or real number
-            throw new ArgumentException();
-        }
+        string number = StringParse();
 
         Console.Write("\nConvert to base Y: ");
-        int baseY = int.Parse(Console.ReadLine());
-
-        if (baseY < 2 || baseY > 16)
-        {
-            // Invalid numberal system
-            throw new ArgumentOutOfRangeException();
-        }
+        int baseY = IntParse();
 
         string result = ConvertFromDecimalToBaseY(ConvertToDecimal(number.ToArray(), baseX), baseY);
 
@@ -50,9 +31,37 @@ class BaseXtoBaseY
         }
     }
 
+    static int IntParse()
+    {
+        int baseOfNumeralSystem = int.Parse(Console.ReadLine());
+
+        // Invalid base of numeral system
+        if (baseOfNumeralSystem < 2 || baseOfNumeralSystem > 16) 
+            throw new ArgumentOutOfRangeException();
+
+        return baseOfNumeralSystem;
+    }
+
+    static string StringParse()
+    {
+        string number = Console.ReadLine();
+
+        for (int i = 0; i < number.Length; i++)
+            if(number[i] < 'A' && number[i] > 'Z' && number[i] < 'a' && number[i] > 'z' && number[i] < '0' && number[i] > '9')
+                throw new ArgumentException();
+
+        number = MakeAllLettersLarge(number);
+
+        return number;
+    }
+
     // aff == AFF => valid input number
     static string MakeAllLettersLarge(string number)
     {
+        // Entered negative or real number
+        if (number.Contains('-') || number.Contains('.') || number.Contains(',')) 
+            throw new ArgumentException();
+
         char[] digits = number.ToArray();
 
         for (int i = 0; i < digits.Length; i++)
@@ -60,6 +69,8 @@ class BaseXtoBaseY
 
         return string.Join("", digits);
     }
+
+    #region [Essential Part - Conversion]
 
     // Convert number [base X] to number [base 10]
     static int ConvertToDecimal(char[] number, int baseX)
@@ -89,6 +100,9 @@ class BaseXtoBaseY
         return result;
     }
 
+    #endregion
+
+    // Convert the result from BaseY to baseX and compare the new result with the old result (baseX to baseY)
     static bool IsValidInput(string number, string result, int baseX, int baseY)
     {
         return string.Compare(ConvertFromDecimalToBaseY(ConvertToDecimal(result.ToArray(), baseY), baseX), number) == 0 ? true : false;

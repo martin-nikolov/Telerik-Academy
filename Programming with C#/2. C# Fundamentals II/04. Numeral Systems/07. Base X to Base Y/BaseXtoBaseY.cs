@@ -8,16 +8,20 @@ using System.Linq;
 
 class BaseXtoBaseY
 {
+    // Number System Conversion Calculator: http://www.cleavebooks.co.uk/scol/calnumba.htm
+
     static void Main()
     {
         Console.Write("Number's base X: ");
-        int baseX = IntParse();
+        int baseX = int.Parse(Console.ReadLine());
+        if (baseX < 2) throw new ArgumentOutOfRangeException();
 
         Console.Write("\nEnter a non-negative integer number [base {0}]: ", baseX);
         string number = StringParse();
 
         Console.Write("\nConvert to base Y: ");
-        int baseY = IntParse();
+        int baseY = int.Parse(Console.ReadLine());
+        if (baseY < 2 || baseY > 16) throw new ArgumentOutOfRangeException();
 
         string result = ConvertFromDecimalToBaseY(ConvertToDecimal(number.ToArray(), baseX), baseY);
 
@@ -31,23 +35,13 @@ class BaseXtoBaseY
         }
     }
 
-    static int IntParse()
-    {
-        int baseOfNumeralSystem = int.Parse(Console.ReadLine());
-
-        // Invalid base of numeral system
-        if (baseOfNumeralSystem < 2 || baseOfNumeralSystem > 16) 
-            throw new ArgumentOutOfRangeException();
-
-        return baseOfNumeralSystem;
-    }
-
     static string StringParse()
     {
         string number = Console.ReadLine();
 
+        // Check for incorrect number
         for (int i = 0; i < number.Length; i++)
-            if(number[i] < 'A' && number[i] > 'Z' && number[i] < 'a' && number[i] > 'z' && number[i] < '0' && number[i] > '9')
+            if (number[i] < 'A' && number[i] > 'Z' && number[i] < 'a' && number[i] > 'z' && number[i] < '0' && number[i] > '9')
                 throw new ArgumentException();
 
         number = MakeAllLettersLarge(number);
@@ -58,10 +52,6 @@ class BaseXtoBaseY
     // aff == AFF => valid input number
     static string MakeAllLettersLarge(string number)
     {
-        // Entered negative or real number
-        if (number.Contains('-') || number.Contains('.') || number.Contains(',')) 
-            throw new ArgumentException();
-
         char[] digits = number.ToArray();
 
         for (int i = 0; i < digits.Length; i++)

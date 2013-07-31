@@ -9,56 +9,26 @@ using System.Text;
 
 class BinarySignedShortInteger
 {
-    // Program works for both positive and negative numbers.
-
-    // Algorithm finds binary representation of negative numbers by "two's complement"
-    // *This is number in reversed order to which is added (with addition) one.
-
     static void Main()
     {
         Console.Write("Enter a number in interval [{0}; {1}]: ", short.MinValue, short.MaxValue);
         short number = short.Parse(Console.ReadLine());
 
-        Console.WriteLine("\n{0} to binary => {1}\n", number, ConvertToBinary(number));
+        Console.WriteLine("\n{0} to binary =>{1}\n", number, ConvertToBinary(number));
     }
 
     static string ConvertToBinary(int number)
     {
-        StringBuilder binary = new StringBuilder();
+        string binary = string.Empty;
 
-        bool negative = number < 0;
-
-        if (negative) number = ~number;
-
-        // Convert to binary
-        while (number > 0)
+        for (int i = 15; i >= 0; i--)
         {
-            binary.Append(number % 2);
-            number /= 2;
+            binary = ((number % 2) & 1) + binary;
+            number >>= 1;
+
+            if (i % 4 == 0) binary = " " + binary;
         }
 
-        if (negative) InverseBits(binary);
-
-        Reverse(binary);
-
-        return binary.Length == 0 ? "0" : binary.ToString(); 
-    }
-
-    static void InverseBits(StringBuilder binary)
-    {
-        binary.Append(new string('0', 16 - binary.Length));
-
-        for (int i = 0; i < binary.Length; i++)
-            binary[i] = (binary[i] == '0') ? '1' : '0';
-    }
-
-    static void Reverse(StringBuilder binary)
-    {
-        for (int i = 0; i < binary.Length / 2; i++)
-        {
-            char swap = binary[i];
-            binary[i] = binary[binary.Length - i - 1];
-            binary[binary.Length - i - 1] = swap;
-        }
+        return binary.ToString();
     }
 }

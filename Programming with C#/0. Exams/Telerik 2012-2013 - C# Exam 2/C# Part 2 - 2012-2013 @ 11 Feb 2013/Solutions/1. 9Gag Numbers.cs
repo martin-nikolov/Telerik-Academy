@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
-class DurankulakNumbers
+class NineGagNumber
 {
     static void Main()
-    {
+    {        
         List<string> numbers = new List<string>();
         AddNumbersToList(numbers);
 
@@ -20,7 +19,7 @@ class DurankulakNumbers
             {
                 if (number.StartsWith(numbers[i]))
                 {
-                    result = result * 168 + (ulong)i;
+                    result = result * 9 + (ulong)i;
                     number = number.Remove(0, numbers[i].Length);
                 }
             }
@@ -29,13 +28,16 @@ class DurankulakNumbers
         Console.WriteLine(result);
     }
 
-    static void AddNumbersToList(List<string> digits)
+    static void AddNumbersToList(List<string> numbers)
     {
-        for (char i = 'A'; i <= 'Z'; i++)
-            digits.Add(i.ToString());
-
-        for (char i = 'a'; i <= 'f'; i++)
-            for (char j = 'A'; j <= 'Z'; j++)
-                digits.Add(i.ToString() + j.ToString());
+        numbers.Add("-!");
+        numbers.Add("**");
+        numbers.Add("!!!");
+        numbers.Add("&&");
+        numbers.Add("&-");
+        numbers.Add("!-");
+        numbers.Add("*!!!");
+        numbers.Add("&*!");
+        numbers.Add("!!**!-");
     }
 }

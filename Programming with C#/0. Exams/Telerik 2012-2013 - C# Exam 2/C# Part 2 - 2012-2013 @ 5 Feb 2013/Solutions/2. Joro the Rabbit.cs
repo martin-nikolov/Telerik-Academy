@@ -24,7 +24,7 @@ class JoroTheRabbit
                 int next = (index + step) % numbers.Length;
                 int currentLength = 1;
 
-                while (next != startIndex && numbers[index] < numbers[next])
+                while (numbers[index] < numbers[next])
                 {
                     index = next;
                     next = (index + step) % numbers.Length;

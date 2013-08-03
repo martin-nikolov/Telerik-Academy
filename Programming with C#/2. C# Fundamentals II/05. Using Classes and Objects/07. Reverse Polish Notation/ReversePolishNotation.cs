@@ -4,6 +4,18 @@ using System.Collections.Generic;
 
 namespace RPN
 {
+    // REVERSE POLISH NOTATION (Contains 30 unit tests)
+    //
+    // THIS PROGRAM WORKS FOR:
+    // - integers
+    // - floating-points numbers
+    // - positive numbers
+    // - negative numbers
+    //
+    // If you want the program to works correctly, separate the operators with spaces...
+    // For example -> Incorrect: (9-3*4) is equal to (9 -3*4) -> the program does not know that '-' is Operator (subtraction) or Indicator for negative number
+    //                Correct: (9 - 3 * 4) == (9 - 3*4) or (9 + -3 * 4) == (9- 3*4) => -3
+
     public class ReversePolishNotation
     {
         static List<char> operators = new List<char>() { '+', '-', '*', '/' };
@@ -121,7 +133,7 @@ namespace RPN
             return result.Replace("  ", " ");
         }
 
-        public static double Parse(string result)
+        public static string Parse(string result)
         {
             Stack<double> resh = new Stack<double>();
             string con = string.Empty;
@@ -142,7 +154,14 @@ namespace RPN
                 {
                     if (result[i] == ' ')
                     {
-                        if (con.Length > 0) resh.Push(double.Parse(con));
+                        if (con.Length > 0)
+                        {
+                            double currentResult = 0;
+                            if (!double.TryParse(con, out currentResult)) return "Incorrect expression!";
+
+                            resh.Push(currentResult);
+                        }
+
                         con = string.Empty;
                     }
                     else
@@ -174,7 +193,8 @@ namespace RPN
                 }
             }
 
-            return resh.Peek();
+            if (resh.Count > 1) return "Incorrect expression!";
+            else return resh.Peek().ToString();
         }
 
         static string RenameFunctionNames(string expression)

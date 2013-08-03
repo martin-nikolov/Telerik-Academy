@@ -35,7 +35,7 @@ namespace RPN
         {
             Console.WriteLine(expression);
             Console.WriteLine(Tokenize(expression));
-            Console.WriteLine(Parse(Tokenize(expression)) + "\n"");
+            Console.WriteLine(Parse(Tokenize(expression)) + "\n");
         }
 
         public static string Tokenize(string expression)

@@ -33,9 +33,9 @@ namespace RPN
 
         static void Calculate(string expression)
         {
-            Console.WriteLine("{0, -25}", expression);
-            Console.WriteLine("{0, -25}", Tokenize(expression));
-            Console.WriteLine("{0, -25}\n", Parse(Tokenize(expression)));
+            Console.WriteLine(expression);
+            Console.WriteLine(Tokenize(expression));
+            Console.WriteLine(Parse(Tokenize(expression)) + "\n"");
         }
 
         public static string Tokenize(string expression)

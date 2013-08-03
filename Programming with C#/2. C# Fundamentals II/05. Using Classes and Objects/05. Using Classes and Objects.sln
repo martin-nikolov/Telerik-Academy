@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20617.1 PREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Is year leap", "01. Is year leap\01. Is year leap.csproj", "{80460456-2569-4F1E-BBAB-43D665CF33B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Random number generator", "02. Random number generator\02. Random number generator.csproj", "{FFC0EAB7-43EB-4F46-808F-9B379EAA3A36}"
@@ -12,6 +14,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Workdays", "05. Workdays\05. Workdays.csproj", "{50C0C692-056C-4B5F-A37F-12D2A71FEF5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Sum of numbers in text", "06. Sum of numbers in text\06. Sum of numbers in text.csproj", "{6C9DC533-F854-49C7-A338-77831100A5FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Reverse Polish Notation", "07. Reverse Polish Notation\07. Reverse Polish Notation.csproj", "{0F017413-C94B-4B8E-BC09-BBE78B42BE69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. RPN - Tests", "07. RPN - Tests\07. RPN - Tests.csproj", "{959DD4B4-BE2D-4D16-AE60-AEEB3672ECFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +49,14 @@ Global
 		{6C9DC533-F854-49C7-A338-77831100A5FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C9DC533-F854-49C7-A338-77831100A5FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C9DC533-F854-49C7-A338-77831100A5FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F017413-C94B-4B8E-BC09-BBE78B42BE69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F017413-C94B-4B8E-BC09-BBE78B42BE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F017413-C94B-4B8E-BC09-BBE78B42BE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F017413-C94B-4B8E-BC09-BBE78B42BE69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{959DD4B4-BE2D-4D16-AE60-AEEB3672ECFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{959DD4B4-BE2D-4D16-AE60-AEEB3672ECFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{959DD4B4-BE2D-4D16-AE60-AEEB3672ECFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{959DD4B4-BE2D-4D16-AE60-AEEB3672ECFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

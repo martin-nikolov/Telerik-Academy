@@ -8,8 +8,7 @@ class Secrets
         string number = Console.ReadLine();
 
         // If theres is '-' (minus) -> programs removes it
-        if (number.Contains('-'))
-            number = number.Remove(number.IndexOf('-'), 1);
+        if (number.Contains('-')) number = number.Remove(number.IndexOf('-'), 1);
 
         int sumOfDigits = 0;
 

@@ -28,14 +28,11 @@ class MaxElementInPortionOfArray
         Console.Write("Enter end index: ");
         int end = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("\nMax element in interval [{0}, {1}] -> {2}", start, end,
-            FindMaxElementInInterval(numbers, start, end));
+        Console.WriteLine("\nMax element in interval [{0}, {1}] -> {2}", start, end, FindMaxElementInInterval(numbers, start, end));
 
-        Console.WriteLine("\nNumbers in Ascending order: {0}",
-            string.Join(" ", SortAscending(numbers)));
+        Console.WriteLine("\nNumbers in Ascending order: {0}", string.Join(" ", SortAscending(numbers)));
 
-        Console.WriteLine("Numbers in Descending order: {0}\n",
-            string.Join(" ", SortDescending(numbers)));
+        Console.WriteLine("Numbers in Descending order: {0}\n", string.Join(" ", SortDescending(numbers)));
     }
 
     static int FindMaxElementInInterval(int[] numbers, int start, int end, int swapIndex = 0)

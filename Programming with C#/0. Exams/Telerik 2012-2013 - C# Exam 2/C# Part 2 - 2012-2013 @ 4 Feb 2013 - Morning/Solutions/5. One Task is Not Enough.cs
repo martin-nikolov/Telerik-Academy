@@ -66,9 +66,7 @@ class OneTaskIsNotEnough
             }
         }
 
-        if (row == 0 && col == 0)
-            return "bounded";
-        else
-            return "unbounded";
+        if (row == 0 && col == 0) return "bounded";
+        else return "unbounded";
     }
 }

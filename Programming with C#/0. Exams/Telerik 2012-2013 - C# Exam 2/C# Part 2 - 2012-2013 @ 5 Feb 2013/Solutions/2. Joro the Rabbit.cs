@@ -16,18 +16,22 @@ class JoroTheRabbit
 
     static void FindBestLength(int[] numbers)
     {
+        bool[,] visited = new bool[numbers.Length, numbers.Length];
+
         for (int startIndex = 0; startIndex < numbers.Length; startIndex++)
         {
-            for (int step = 1; step <= numbers.Length - 1; step++)
+            for (int step = 1; step < numbers.Length; step++)
             {
-                int index = startIndex;
-                int next = (index + step) % numbers.Length;
-                int currentLength = 1;
+                if (visited[startIndex, step]) continue;
 
-                while (numbers[index] < numbers[next])
+                int index = startIndex, next = 0, currentLength = 1;
+
+                while (next != startIndex)
                 {
-                    index = next;
                     next = (index + step) % numbers.Length;
+                    if (numbers[index] >= numbers[next]) break;
+                    visited[index, step] = true;
+                    index = next;
                     currentLength++;
                 }
 

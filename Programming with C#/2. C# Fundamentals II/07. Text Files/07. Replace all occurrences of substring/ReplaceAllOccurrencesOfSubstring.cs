@@ -24,8 +24,7 @@ class ReplaceAllOccurrencesOfSubstring
         {
             using (StreamReader reader = new StreamReader(pathText))
             {
-                while (!reader.EndOfStream)
-                    result.WriteLine(reader.ReadLine().Replace("start", "finish"));
+                while (!reader.EndOfStream) result.WriteLine(reader.ReadLine().Replace("start", "finish"));
             }
         }
     }

@@ -1,33 +1,26 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
-class KaspichanNumber
+class KaspichanNumbers
 {
     static void Main()
     {
         List<string> numbers = new List<string>();
 
-        ulong number = ulong.Parse(Console.ReadLine());
+        for (char i = 'A'; i <= 'Z'; i++) numbers.Add(i.ToString());
 
-        for (char i = 'A'; i <= 'Z'; i++)
-            numbers.Add(i.ToString());
-
-        for (char i = 'a'; i <= 'i'; i++)
+        for (char i = 'a'; i <= 'z'; i++)
             for (char j = 'A'; j <= 'Z'; j++)
-                numbers.Add(i.ToString() + j.ToString());
+                numbers.Add(string.Format("{0}{1}", i.ToString(), j.ToString()));
 
+        ulong number = ulong.Parse(Console.ReadLine());
         string result = string.Empty;
 
-        if (number == 0)
-        {
-            Console.WriteLine("A");
-            return;
-        }
+        if (number == 0) Console.WriteLine("A");
 
-        while (number != 0)
+        while (number > 0)
         {
-            result = numbers[(int)(number % 256)] + "" + result;
+            result = numbers[(int)(number % 256)] + result;
             number /= 256;
         }
 

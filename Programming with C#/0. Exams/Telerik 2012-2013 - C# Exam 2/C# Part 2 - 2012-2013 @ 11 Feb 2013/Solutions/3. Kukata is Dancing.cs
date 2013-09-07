@@ -1,60 +1,43 @@
 using System;
-using System.Linq;
 
 class KukataIsDancing
 {
-    static int[,] directions = 
-    {
-        { -1, 0 },
-        { 0, 1 },
-        { 1, 0 },
-        { 0, -1 }
-    };
+    static int[] dirRow = { -1, 0, 1, 0 };
+    static int[] dirCol = { 0, -1, 0, 1 };
 
     static void Main()
     {
-        int n = int.Parse(Console.ReadLine());
+        int lines = int.Parse(Console.ReadLine());
 
-        for (int i = 0; i < n; i++)
-        {
-            string path = Console.ReadLine();
-
-            ShowColorAfterDancing(path);
-        }
+        for (int i = 0; i < lines; i++)
+            Console.WriteLine(EvaluateSteps(Console.ReadLine()));
     }
 
-    static void ShowColorAfterDancing(string path)
+    static string EvaluateSteps(string directions)
     {
-        int dir = 0, row = 1, col = 1;
+        string color = string.Empty;
+        int row = 1, col = 1, nextIndex = 0;
 
-        for (int i = 0; i < path.Length; i++)
+        for (int i = 0; i < directions.Length; i++)
         {
-            switch (path[i])
+            switch (directions[i])
             {
-                case 'R': dir = (dir + 1) % 4; break;
-                case 'L': dir = (dir + 3) % 4; break;
-                case 'W': row += directions[dir, 0];
-                    col += directions[dir, 1]; break;
+                case 'L': nextIndex = (nextIndex + 1) % dirRow.Length; break;
+                case 'R': nextIndex = (nextIndex + 3) % dirRow.Length; break;
+                case 'W':
+                    row = row + dirRow[nextIndex];
+                    col = col + dirCol[nextIndex];
+                    break;
             }
 
-            if (row < 0) row = 2;
-            else if (row > 2) row = 0;
-
-            if (col < 0) col = 2;
-            else if (col > 2) col = 0;
+            row = (row < 0) ? 2 : (row > 2) ? 0 : row;
+            col = (col < 0) ? 2 : (col > 2) ? 0 : col;
         }
 
-        if (row == 1 && col == 1)
-        {
-            Console.WriteLine("GREEN");
-        }
-        else if (row == col || (row == 2 && col == 0) || (row == 0 && col == 2))
-        {
-            Console.WriteLine("RED");
-        }
-        else
-        {
-            Console.WriteLine("BLUE");
-        }
+        if (row == 1 && col == 1) color = "GREEN";
+        else if (row == col || (row == 2 && col == 0) || (row == 0 && col == 2)) color = "RED";
+        else color = "BLUE";
+
+        return color;
     }
 }

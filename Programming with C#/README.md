@@ -25,7 +25,7 @@
 * [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - 01.09.2013
 
 ## C# - Object-Oriented Programming
-1. [Defining classes - Part I](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/01.%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/01.%20Arrays/Readme.md)) - 21.09.2013
+1. [Defining classes - Part I](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/01.%20Defining%20classes%20-%20Part%20I) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/01.%20Defining%20classes%20-%20Part%20I/Readme.md)) - 21.09.2013
 
 ## C# - Exams
 1. [Telerik 2011/2012 - C# Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%201) - 7x5 exercises

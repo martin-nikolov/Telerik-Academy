@@ -22,6 +22,10 @@
 * [Exception Handling](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/06.%20Exception%20Handling) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/06.%20Exception%20Handling/Readme.md)) - 11.07.2013
 * [Text Files](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/07.%20Text%20Files) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/07.%20Text%20Files/Readme.md)) - 12.07.2013
 * [Strings and Text Processing](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/08.%20Strings%20and%20Text%20Processing) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/08.%20Strings%20and%20Text%20Processing/Readme.md)) - 14.07.2013
+* [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - 01.09.2013
+
+## C# - Object-Oriented Programming
+1. [Defining classes - Part I](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/01.%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/01.%20Arrays/Readme.md)) - 21.09.2013
 
 ## C# - Exams
 1. [Telerik 2011/2012 - C# Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%201) - 7x5 exercises

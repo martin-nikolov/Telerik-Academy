@@ -1,84 +1,105 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 
-class ThreeInOne
+class FTML
 {
+    static string code = string.Empty;
+
+    static string openUpperTag = "<upper>";
+    static string openLowerTag = "<lower>";
+    static string openRevTag = "<rev>";
+    static string openToggleTag = "<toggle>";
+    static string openDelTag = "<del>";
+
+    static string closedUpperTag = "</upper>";
+    static string closedLowerTag = "</lower>";
+    static string closedRevTag = "</rev>";
+    static string closedToggleTag = "</toggle>";
+    static string closedDelTag = "</del>";
+
     static void Main()
     {
-        int n = int.Parse(Console.ReadLine());
-
-        StringBuilder text = new StringBuilder();
-
-        for (int i = 0; i < n; i++)
-            text.Append(Console.ReadLine() + "\n");
-
-        string result = RemoveTags(text.ToString());
-
-        Console.Write(result);
+        code = Initialize();
+        RemoveTags();
+        Console.WriteLine(code);
     }
 
-    static string RemoveTags(string line)
+    static void RemoveTags()
     {
-        StringBuilder formatted = new StringBuilder(line);
+        StringBuilder formatted = new StringBuilder(code);
+        formatted.Remove(formatted.Length - 1, 1);
 
-        int startClosedTag = line.IndexOf("</");
-        int endClosedTag = line.IndexOf(">", startClosedTag + 1);
-        int closedTagLength = endClosedTag - startClosedTag + 1;
+        int indexClosedTag = code.IndexOf("</");
+        int indexOpenTag = code.LastIndexOf("<", indexClosedTag - 1);
 
-        int endOpenTag = line.LastIndexOf(">", startClosedTag);
-
-        while (startClosedTag != -1)
+        while (indexClosedTag != -1)
         {
-            //  string formatted[startClosedTag + 2].ToString() = line.Substring(startClosedTag, closedTagLength);
+            string currentTag = GetTag(indexOpenTag);
 
-            int j = startClosedTag - 1;
-
-            for (int i = endOpenTag + 1; i <= j; i++)
+            if (currentTag.StartsWith(openUpperTag))
             {
-                if (formatted[startClosedTag + 2] == 'd') break;
+                for (int i = indexOpenTag + openUpperTag.Length; i < indexClosedTag; i++)
+                    formatted[i] = char.ToUpper(formatted[i]);
 
-                if (formatted[startClosedTag + 2] == 'r')
-                {
-                    char swap = formatted[i];
-                    formatted[i] = formatted[j];
-                    formatted[j] = swap;
-                    j--;
-                }
-                else if (formatted[startClosedTag + 2] == 't')
+                formatted.Remove(indexClosedTag, closedUpperTag.Length);
+                formatted.Remove(indexOpenTag, openUpperTag.Length);
+            }
+            else if (currentTag.StartsWith(openLowerTag))
+            {
+                for (int i = indexOpenTag + openLowerTag.Length; i < indexClosedTag; i++)
+                    formatted[i] = char.ToLower(formatted[i]);
+
+                formatted.Remove(indexClosedTag, closedLowerTag.Length);
+                formatted.Remove(indexOpenTag, openLowerTag.Length);
+            }
+            else if (currentTag.StartsWith(openToggleTag))
+            {
+                for (int i = indexOpenTag + openToggleTag.Length; i < indexClosedTag; i++)
                 {
                     if (char.IsLower(formatted[i])) formatted[i] = char.ToUpper(formatted[i]);
-                    else formatted[i] = char.ToLower(formatted[i]);
+                    else if (char.IsUpper(formatted[i])) formatted[i] = char.ToLower(formatted[i]);
                 }
-                else
-                {
-                    if (formatted[startClosedTag + 2] == 'u') formatted[i] = char.ToUpper(formatted[i]);
-                    else formatted[i] = char.ToLower(formatted[i]);
-                }
-            }
 
-            if (formatted[startClosedTag + 2] == 'd')
+                formatted.Remove(indexClosedTag, closedToggleTag.Length);
+                formatted.Remove(indexOpenTag, openToggleTag.Length);
+            }
+            else if (currentTag.StartsWith(openRevTag))
             {
-                formatted.Remove(endOpenTag - (closedTagLength - 2), endClosedTag - endOpenTag + closedTagLength - 1);
+                StringBuilder codeBetweenRevTags = new StringBuilder();
+
+                for (int i = indexClosedTag - 1; i >= indexOpenTag + openRevTag.Length; i--)
+                    codeBetweenRevTags.Append(formatted[i]);
+
+                for (int i = indexOpenTag + openRevTag.Length, count = 0; i < indexClosedTag; i++)
+                    formatted[i] = codeBetweenRevTags[count++];
+
+                formatted.Remove(indexClosedTag, closedRevTag.Length);
+                formatted.Remove(indexOpenTag, openRevTag.Length);
             }
-            else
+            else if (currentTag.StartsWith(openDelTag))
             {
-                formatted.Remove(startClosedTag, endClosedTag - startClosedTag + 1);
-                formatted.Remove(endOpenTag - (closedTagLength - 2), closedTagLength - 1);
+                formatted.Remove(indexOpenTag, indexClosedTag - indexOpenTag + closedDelTag.Length);
             }
 
-            line = formatted.ToString();
-
-            startClosedTag = line.IndexOf("</");
-            endClosedTag = line.IndexOf(">", startClosedTag + 1);
-            closedTagLength = endClosedTag - startClosedTag + 1;
-
-            if (startClosedTag != -1) endOpenTag = line.LastIndexOf(">", startClosedTag);
+            code = formatted.ToString();
+            indexClosedTag = code.IndexOf("</");
+            if (indexClosedTag != -1) indexOpenTag = code.LastIndexOf("<", indexClosedTag - 1);
         }
+    }
 
-        return line;
+    static string GetTag(int index)
+    {
+        return code.Substring(index, 8);
+    }
+
+    static string Initialize()
+    {
+        StringBuilder code = new StringBuilder();
+        int lines = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < lines; i++)
+            code.Append(Console.ReadLine() + "\n");
+
+        return code.ToString();
     }
 }

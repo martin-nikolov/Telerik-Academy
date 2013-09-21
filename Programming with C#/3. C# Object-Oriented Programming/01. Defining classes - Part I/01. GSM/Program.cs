@@ -31,7 +31,7 @@ class Program
 {
     static void Main()
     {
-        //GSM_Test.TestRunner();
+        GSM_Test.TestRunner();
         Console.WriteLine(new string('-', 80) + "\n");
         CallHistory_Test.TestRunner();
     }

@@ -41,13 +41,9 @@ namespace MobilePhone
             set 
             {
                 if (value == null)
-                {
                     throw new ArgumentNullException("Date and time cannot be null!");
-                }
-                else
-                {
-                    this.date = value; 
-                }
+               
+                this.date = value; 
             }
         }
 
@@ -56,14 +52,10 @@ namespace MobilePhone
             get { return this.dialedNumber; }
             set 
             {
-                if (value == null)
-                {
+                if (string.IsNullOrEmpty(value))
                     throw new ArgumentNullException("Dialed number cannot be null!");
-                }
-                else
-                {
-                    this.dialedNumber = value; 
-                }
+                
+                this.dialedNumber = value; 
             }
         }
 
@@ -73,13 +65,9 @@ namespace MobilePhone
             set 
             { 
                 if (value == TimeSpan.Zero)
-                {
                     throw new ArgumentNullException("Duration time cannot be null!");
-                }
-                else
-                {
-                    this.duration = value; 
-                }
+                
+                this.duration = value; 
             }
         }
 

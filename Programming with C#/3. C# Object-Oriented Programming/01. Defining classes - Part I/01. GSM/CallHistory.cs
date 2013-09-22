@@ -28,7 +28,8 @@ namespace MobilePhone
 
         public void RemoveAllLongestCalls()
         {
-            TimeSpan longestCall = this.GetLongestCall().Duration;
+            TimeSpan? longestCall = performedCalls.Count > 0 ? this.GetLongestCall().Duration : TimeSpan.Zero;
+            
             this.performedCalls.RemoveAll(ch => ch.Duration.Equals(longestCall));
         }
         
@@ -60,9 +61,7 @@ namespace MobilePhone
         public override string ToString()
         {
             if (performedCalls.Count == 0)
-            {
                 return "- No calls available!\n";
-            }
 
             StringBuilder callHistoryInfo = new StringBuilder();
 

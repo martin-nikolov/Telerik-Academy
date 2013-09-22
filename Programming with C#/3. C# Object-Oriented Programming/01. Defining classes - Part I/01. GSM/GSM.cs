@@ -46,14 +46,10 @@ namespace MobilePhone
             get { return this.model; }
             set
             {
-                if (value == null)
-                {
+                if (string.IsNullOrEmpty(value))
                     throw new ArgumentNullException("Model cannot be null!");
-                }
-                else
-                {
-                    this.model = value;
-                }
+
+                this.model = value;
             }
         }
 
@@ -62,14 +58,10 @@ namespace MobilePhone
             get { return this.manufacturer; }
             set
             {
-                if (value == null)
-                {
+                if (string.IsNullOrEmpty(value))
                     throw new ArgumentNullException("Manufacturer cannot be null!");
-                }
-                else
-                {
-                    this.manufacturer = value;
-                }
+
+                this.manufacturer = value;
             }
         }
 
@@ -82,16 +74,12 @@ namespace MobilePhone
         public decimal? Price
         {
             get { return this.price; }
-            set 
+            set
             {
                 if (value.HasValue && (value < 0 || value > MaxPriceValue))
-                {
                     throw new ArgumentOutOfRangeException("Price value is too big or less than zero!");
-                }
-                else
-                {
-                    this.price = value;
-                }
+
+                this.price = value;
             }
         }
 
@@ -100,7 +88,7 @@ namespace MobilePhone
             get { return this.display; }
             set { this.display = value; }
         }
-        
+
         public Battery Battery
         {
             get { return this.battery; }
@@ -131,7 +119,7 @@ namespace MobilePhone
 
             if (this.display != null)
                 mobileInfo.AppendLine(Environment.NewLine + display.ToString());
-            
+
             if (this.battery != null)
                 mobileInfo.AppendLine((display != null ? "" : Environment.NewLine) + battery.ToString());
 

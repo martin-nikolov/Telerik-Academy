@@ -13,7 +13,7 @@ namespace MobilePhone
         // Private Fields
         private decimal? sizeInches = null;
         private ulong? numberOfColors = null;
-        
+
         // Constructors
         public Display(decimal? sizeInches = null, ulong? numberOfColors = null)
         {
@@ -26,31 +26,23 @@ namespace MobilePhone
         {
             get { return this.sizeInches; }
             set
-            { 
+            {
                 if (value.HasValue && (value < MinSizeInches || value > MaxSizeInches))
-                {
                     throw new ArgumentOutOfRangeException("Display size's value is not in range!");
-                }
-                else
-                {
-                    this.sizeInches = value;
-                }
+
+                this.sizeInches = value;
             }
         }
-        
+
         public ulong? NumberOfColors
         {
             get { return this.numberOfColors; }
-            set 
+            set
             {
                 if (value.HasValue && value > MaxNumberOfColors)
-                {
                     throw new ArgumentOutOfRangeException("Number of colors has too big value!");
-                }
-                else
-                {
-                    this.numberOfColors = value;
-                }
+                
+                this.numberOfColors = value;
             }
         }
 
@@ -60,7 +52,7 @@ namespace MobilePhone
             StringBuilder displayInfo = new StringBuilder();
 
             displayInfo.AppendLine("--> DISPLAY <--");
-            
+
             if (this.sizeInches.HasValue)
                 displayInfo.AppendLine(string.Format("Size: {0}-inch", sizeInches));
 

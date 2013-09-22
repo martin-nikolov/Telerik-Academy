@@ -31,3 +31,10 @@
 * [Telerik 2013/2014 - C# Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20C%23%20Exam%201) - 2x5 exercises
 * [Telerik Kids Academy 2011/2012](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%20Kids%20Academy%202011-2012) - 20x3 exercises
 * [Telerik Kids Academy 2012/2013](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%20Kids%20Academy%202012-2013) - 18x3 exercises
+
+<br>
+
+---
+
+## PHP Web-development
+1. [Creating an address book](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book/Readme.md)) - 22.09.2013

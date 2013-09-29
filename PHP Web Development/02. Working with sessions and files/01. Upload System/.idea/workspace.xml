@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be35b67d-764d-4fd2-b88a-3c8f43a88aad" name="Default" comment="" />
-    <ignored path="02. Upload System.iws" />
+    <ignored path="01. Upload System.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +19,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="02. Upload System" />
+    <favorites_list name="01. Upload System" />
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -76,17 +76,17 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="02. Upload System" />
+              <option name="myItemId" value="01. Upload System" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="02. Upload System" />
+              <option name="myItemId" value="01. Upload System" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="02. Upload System" />
+              <option name="myItemId" value="01. Upload System" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -105,7 +105,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\02. Upload System" />
+      <recent name="C:\xampp\htdocs\01. Upload System" />
     </key>
   </component>
   <component name="RunManager">

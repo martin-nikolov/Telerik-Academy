@@ -1,0 +1,2 @@
+user ~ qwerty
+telerik ~ telerik

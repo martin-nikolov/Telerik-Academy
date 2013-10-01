@@ -1,5 +1,5 @@
 <?php
-$title = "Login page";
+$title = "Upload a file";
 include "functions.php";
 include "includes" . DIR_SEPARATOR . "header.php";
 
@@ -11,7 +11,7 @@ if (!isset($_SESSION['is_logged']))
     exit;
 }
 
-$allowedFileTypes = array('txt', 'zip', 'rar', 'png', 'jpeg', 'jpg', 'gif', 'bmp', 'pdf', 'doc', 'docx', 'rtf', 'xls', 'ppt');
+$allowedFileTypes = array('txt', 'png', 'jpeg', 'jpg', 'gif', 'bmp', 'pdf', 'doc', 'docx', 'rtf', 'xls', 'ppt');
 $username = $_SESSION['username'];
 
 $mime_types = array(
@@ -34,7 +34,7 @@ $mime_types = array(
     <!-- Главно меню -->
     <div>
         <div style="float: left;">
-            <a href="files.php">File Storage</a> | <b>Upload file</b> | <a href="logout.php">Log Out</a>
+            <a href="files.php">File Storage</a> | <b>Upload a file</b> | <a href="logout.php">Log Out</a>
         </div>
         <div style="float: right;">
             Hello, <?php echo $username . '!'; ?>

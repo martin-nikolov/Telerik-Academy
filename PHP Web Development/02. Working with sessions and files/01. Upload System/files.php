@@ -17,7 +17,7 @@ $username = $_SESSION['username'];
 
     <div>
         <div style="float: left;">
-            <b>File Storage</b> | <a href="upload.php">Upload file</a> | <a href="logout.php">Log Out</a>
+            <b>File Storage</b> | <a href="upload.php">Upload a file</a> | <a href="logout.php">Log Out</a>
         </div>
         <div style="float: right;">
             Hello, <?php echo $username . '!'; ?>
@@ -57,7 +57,7 @@ if ($files)
             echo '<td align="center">' . $file[$i] . '</td>';
 
         echo '<td align="center"><a href="?del=' . ($columnsNumber - 2) . '">';
-        echo '<img src="http://wiki.domo.com/confluence/download/attachments/27689741/dash_remove_icon.png"/></a></td>';
+        echo '<img src="includes' . DIR_SEPARATOR . 'remove.png"/></a></td>';
         echo '</tr>';
     }
 

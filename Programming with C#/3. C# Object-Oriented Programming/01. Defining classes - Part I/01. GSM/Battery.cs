@@ -38,13 +38,9 @@ namespace MobilePhone
             set
             {
                 if (value.GetValueOrDefault() > MaxIdleHours)
-                {
                     throw new ArgumentOutOfRangeException("Max idle hours's value is too big!");
-                }
-                else
-                {
-                    this.hoursIdle = value; 
-                }
+                    
+                this.hoursIdle = value; 
             }
         }
 
@@ -54,13 +50,9 @@ namespace MobilePhone
             set
             {
                 if (value.GetValueOrDefault() > MaxTalkHours)
-                {
                     throw new ArgumentOutOfRangeException("Max talk hours's value is too big!");
-                }
-                else
-                {
-                    this.hoursTalk = value;
-                }
+            
+                this.hoursTalk = value;
             }
         }
 

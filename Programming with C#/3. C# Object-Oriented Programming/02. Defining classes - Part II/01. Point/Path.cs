@@ -64,7 +64,7 @@ namespace CoordinateSystem
         // Override method
         public override string ToString()
         {
-            return string.Join(Separator, points);
+            return string.Join(Separator, this.points);
         }
     }
 }

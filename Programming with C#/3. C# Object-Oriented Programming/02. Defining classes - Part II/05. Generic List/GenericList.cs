@@ -31,8 +31,8 @@ namespace Generic
         {
             get
             {
-                if (index < 0 || index >= Count)
-                    throw new IndexOutOfRangeException("Index is not in range!");
+                if (index < 0 || index >= this.Count)
+                    throw new IndexOutOfRangeException("Index is out of range!");
 
                 return this.elements[index];
             }
@@ -46,7 +46,7 @@ namespace Generic
         public void Add(T element)
         {
             this.Count++;
-            Resize(this.Count);
+            this.Resize(this.Count);
             this.elements[this.Count - 1] = element;
         }
 
@@ -56,32 +56,43 @@ namespace Generic
                 throw new IndexOutOfRangeException("Index is not in range!");
 
             this.Count++;
-            Resize(this.Count);
+            this.Resize(this.Count);
 
-            Array.Copy(elements, index, elements, index + 1, Count - index - 1);
+            Array.Copy(this.elements, index, this.elements, index + 1, this.Count - index - 1);
 
-            elements[index] = element;
+            this.elements[index] = element;
         }
 
         public T Min()
         {
-            return MinMax(false);
+            return this.MinMax(false);
         }
 
         public T Max()
         {
-            return MinMax(true);
+            return this.MinMax(true);
+        }
+
+        private T MinMax(bool value)
+        {
+            T best = this.elements[0];
+
+            for (int i = 1; i < this.Count; i++)
+                if (value ? (best < (dynamic)this.elements[i]) : (best > (dynamic)this.elements[i]))
+                    best = this.elements[i];
+
+            return best;
         }
 
         public void RemoveAt(int index)
         {
             if (index < 0 || index >= this.Count)
-                throw new IndexOutOfRangeException("Index is not in range!");
+                throw new IndexOutOfRangeException("Index is out of range!");
 
             this.Count--;
-            Resize(this.Count);
+            this.Resize(this.Count);
 
-            Array.Copy(elements, index + 1, elements, index, Count - index);
+            Array.Copy(this.elements, index + 1, this.elements, index, this.Count - index);
 
             this.elements[this.Count] = default(T);
         }
@@ -101,7 +112,7 @@ namespace Generic
             this.Count = 0;
             this.Capacity = CapacityByDefault;
 
-            this.elements = new T[Capacity];
+            this.elements = new T[this.Capacity];
         }
 
         public override string ToString()
@@ -114,7 +125,7 @@ namespace Generic
 
             for (int i = 0; i < this.Count; i++)
             {
-                result.AppendFormat("{0}", elements[i].ToString());
+                result.AppendFormat("{0}", this.elements[i].ToString());
                
                 if (i + 1 < this.Count) 
                     result.Append(Separator);
@@ -131,19 +142,6 @@ namespace Generic
                 this.Capacity *= 2;
                 Array.Resize(ref this.elements, this.Capacity);
             }
-        }
-
-        private T MinMax(bool value)
-        {
-            T best = elements[0];
-
-            for (int i = 1; i < this.Count; i++)
-            {
-                if (value ? (best < (dynamic)this.elements[i]) : (best > (dynamic)this.elements[i]))
-                    best = this.elements[i];
-            }
-
-            return best;
         }
     }
 }

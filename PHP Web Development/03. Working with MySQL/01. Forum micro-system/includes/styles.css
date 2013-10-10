@@ -1,0 +1,27 @@
+fieldset {
+    max-width: 600px;
+    border: 1px solid black;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+legend {
+    text-align: left;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.field {
+    font-weight: bold;
+}
+
+.centered {
+    float: right
+}

@@ -20,10 +20,14 @@
 * [Strings and Text Processing](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/08.%20Strings%20and%20Text%20Processing) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/08.%20Strings%20and%20Text%20Processing/Readme.md)) - 14.07.2013
 * [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - 01.09.2013
 
+# Programming with C# 
+
 ## C# - Object-Oriented Programming
 1. [Defining classes - Part I](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/01.%20Defining%20classes%20-%20Part%20I) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/01.%20Defining%20classes%20-%20Part%20I/Readme.md)) - 21.09.2013
 * [Defining classes - Part II](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/02.%20Defining%20classes%20-%20Part%20II) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/02.%20Defining%20classes%20-%20Part%20II/Readme.md)) - 28.09.2013
-
+* [Extension Methods, Lambda Expressions and LINQ](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/03.%20Extension%20Methods%2C%20Lambda%20Expressions%20and%20LINQ) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/03.%20Extension%20Methods%2C%20Lambda%20Expressions%20and%20LINQ/Readme.md)) - 04.10.2013
+* [OOP Fundamental Principles – Part I](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/04.%20OOP%20Fundamental%20Principles%20%E2%80%93%20Part%20I) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/04.%20OOP%20Fundamental%20Principles%20%E2%80%93%20Part%20I/Readme.md)) - 08.10.2013
+* [OOP Fundamental Principles – Part II](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/05.%20OOP%20Fundamental%20Principles%20%E2%80%93%20Part%20II) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/05.%20OOP%20Fundamental%20Principles%20%E2%80%93%20Part%20II/Readme.md)) - 11.10.2013
 
 ## C# - Exams
 1. [Telerik 2011/2012 - C# Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%201) - 7x5 exercises

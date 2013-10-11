@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Surface Calculator", "01. Surface Calculator\01. Surface Calculator.csproj", "{58C6F0A7-1BCC-4DF6-BEA0-8F609E7C32AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Bank", "02. Bank\02. Bank.csproj", "{4EF73E88-ED10-4953-A644-453AB8E72955}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. InvalidRangeException", "03. InvalidRangeException\03. InvalidRangeException.csproj", "{05BD488A-421B-447D-B89F-743A8AECEA6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58C6F0A7-1BCC-4DF6-BEA0-8F609E7C32AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58C6F0A7-1BCC-4DF6-BEA0-8F609E7C32AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58C6F0A7-1BCC-4DF6-BEA0-8F609E7C32AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58C6F0A7-1BCC-4DF6-BEA0-8F609E7C32AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EF73E88-ED10-4953-A644-453AB8E72955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF73E88-ED10-4953-A644-453AB8E72955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF73E88-ED10-4953-A644-453AB8E72955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF73E88-ED10-4953-A644-453AB8E72955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05BD488A-421B-447D-B89F-743A8AECEA6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05BD488A-421B-447D-B89F-743A8AECEA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05BD488A-421B-447D-B89F-743A8AECEA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05BD488A-421B-447D-B89F-743A8AECEA6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

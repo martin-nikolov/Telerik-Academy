@@ -63,11 +63,11 @@ class Program
 
         /* -------------- */
 
-        Console.WriteLine("\nTest TreeNode<T> class:");
+        Console.WriteLine("\nTest TreeNode<T> internal class:");
 
-        TreeNode<int> treeNode = new TreeNode<int>(25);
-        treeNode.LeftChild = new TreeNode<int>(23);
-        treeNode.RightChild = new TreeNode<int>(28);
+        var treeNode = new BinarySearchTree<int>.TreeNode<int>(25);
+        treeNode.LeftChild = new BinarySearchTree<int>.TreeNode<int>(23);
+        treeNode.RightChild = new BinarySearchTree<int>.TreeNode<int>(28);
 
         Console.WriteLine("- Root value: {0}", treeNode.Value);
         Console.WriteLine("- LeftChild: {0}", treeNode.LeftChild);

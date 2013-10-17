@@ -74,10 +74,7 @@ if (isset($_POST['new-book']))
             $query = mysqli_query($CONNECTION, $sql);
             if (HasErrorWithDataBase($query)) exit; // Проверка за грешки
 
-            // Извличаме максималното book_id, което служи за връзка -> автор - книга
-            $sql = 'SELECT MAX(book_id) as max_id FROM books';
-            $query = mysqli_query($CONNECTION, $sql);
-            $book_id = $query->fetch_assoc()['max_id'];
+            $book_id = mysqli_insert_id($CONNECTION);
 
             // Ако не са добавени автори -> създаваме книга без автор
             if ($isExistAuthors)

@@ -3,17 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class BinarySearchTree<T> : ICloneable, IEnumerable<T>
+public partial class BinarySearchTree<T> : ICloneable, IEnumerable<T>
     where T : IComparable<T>
 {
     private TreeNode<T> root;
 
-    public BinarySearchTree(TreeNode<T> root = null)
+    public BinarySearchTree()
     {
         this.Root = root;
     }
 
-    public TreeNode<T> Root
+    internal TreeNode<T> Root
     {
         get { return this.root; }
         private set { this.root = value; }
@@ -26,41 +26,44 @@ public class BinarySearchTree<T> : ICloneable, IEnumerable<T>
         if (this.Root == null)
         {
             this.Root = newNode;
+            return;
         }
-        else
+        
+        TreeNode<T> current = this.Root;
+        TreeNode<T> parent;
+
+        while (true)
         {
-            TreeNode<T> current = this.Root;
-            TreeNode<T> parent;
+            parent = current; // by reference
 
-            while (true)
+            if (value.CompareTo(current.Value) < 0)
             {
-                parent = current;
+                current = current.LeftChild;
 
-                if (value.CompareTo(current.Value) < 0)
+                if (current == null)
                 {
-                    current = current.LeftChild;
-
-                    if (current == null)
-                    {
-                        parent.LeftChild = newNode;
-                        break;
-                    }
+                    parent.LeftChild = newNode;
+                    break;
                 }
-                else
+            }
+            else if (value.CompareTo(current.Value) > 0)
+            {
+                current = current.RightChild;
+
+                if (current == null)
                 {
-                    current = current.RightChild;
-
-                    if (current == null)
-                    {
-                        parent.RightChild = newNode;
-                        break;
-                    }
+                    parent.RightChild = newNode;
+                    break;
                 }
+            }
+            else
+            {
+                break;
             }
         }
     }
 
-    public TreeNode<T> Search(T key)
+    internal TreeNode<T> Search(T key)
     {
         TreeNode<T> current = this.root;
 
@@ -68,9 +71,12 @@ public class BinarySearchTree<T> : ICloneable, IEnumerable<T>
         {
             int compareTo = key.CompareTo(current.Value);
 
-            if (compareTo < 0) current = current.LeftChild;
-            else if (compareTo > 0) current = current.RightChild;
-            else break;
+            if (compareTo < 0)
+                current = current.LeftChild;
+            else if (compareTo > 0)
+                current = current.RightChild;
+            else
+                break;
         }
 
         return current;

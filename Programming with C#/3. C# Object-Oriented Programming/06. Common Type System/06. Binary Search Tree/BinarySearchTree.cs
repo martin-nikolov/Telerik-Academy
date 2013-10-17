@@ -64,12 +64,13 @@ public class BinarySearchTree<T> : ICloneable, IEnumerable<T>
     {
         TreeNode<T> current = this.root;
 
-        while (current.Value.CompareTo(key) != 0)
+        while (current != null)
         {
-            current = (key.CompareTo(current.Value) < 0) ? current.LeftChild : current.RightChild;
+            int compareTo = key.CompareTo(current.Value);
 
-            if (current == null)
-                return null;
+            if (compareTo < 0) current = current.LeftChild;
+            else if (compareTo > 0) current = current.RightChild;
+            else break;
         }
 
         return current;

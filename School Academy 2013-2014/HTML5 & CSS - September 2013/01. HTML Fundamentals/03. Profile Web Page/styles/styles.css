@@ -1,0 +1,41 @@
+﻿body { 
+    background: #cceeff;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+hr {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+a:visited {
+    color: #808080;
+}
+
+ul, li {
+    padding: 0px;
+    padding-right: 100px;
+    margin: 0px;
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+nav li {
+    float: left;
+}
+
+section .italic {
+    padding-left: 20px;
+    font-style: italic;
+}

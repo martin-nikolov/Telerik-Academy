@@ -1,0 +1,262 @@
+.clearfix, body header div#header-container, body header nav, body header nav ul, body header nav ul li ul.sub-nav-list, body section, body aside {
+    zoom: 1;
+}
+
+    .clearfix:after, body header div#header-container:after, body header nav:after, body header nav ul:after, body header nav ul li ul.sub-nav-list:after, body section:after, body aside:after, .clearfix:before, body header div#header-container:before, body header nav:before, body header nav ul:before, body header nav ul li ul.sub-nav-list:before, body section:before, body aside:before {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .clearfix:after, body header div#header-container:after, body header nav:after, body header nav ul:after, body header nav ul li ul.sub-nav-list:after, body section:after, body aside:after {
+        clear: both;
+    }
+
+body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+div, h1, h3, h4, h5, h6, header, footer, body, section, nav, article, aside {
+    display: block;
+}
+
+body {
+    font: 14px normal Arial;
+    color: white;
+}
+
+    body header {
+        padding-top: 25px;
+        padding-bottom: 5px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+        body header div#header-container div#logo-container {
+            float: left;
+            position: relative;
+        }
+
+        body header div#header-container div#reg-form-container {
+            float: right;
+            position: relative;
+            right: 5%;
+            top: 50%;
+        }
+
+            body header div#header-container div#reg-form-container div {
+                text-align: right;
+            }
+
+                body header div#header-container div#reg-form-container div label {
+                    width: 50px;
+                    margin: 5px;
+                }
+
+                body header div#header-container div#reg-form-container div input {
+                    width: 130px;
+                    border: 1px solid #603382;
+                    border-radius: 10px;
+                    padding: 2px 5px;
+                    margin: 5px;
+                }
+
+            body header div#header-container div#reg-form-container button {
+                margin-left: auto;
+                margin-right: auto;
+                font-weight: bold;
+                border: 1px solid #603382;
+                border-style: outset;
+                border-radius: 10px;
+                padding: 5px 8px;
+            }
+
+                body header div#header-container div#reg-form-container button:hover {
+                    background-color: #8949b9;
+                    border-style: inset;
+                }
+
+        body header nav {
+            display: inline-block;
+            width: 75%;
+            margin: 20px 20px 20px 20px;
+            padding: 12px;
+            border: 2px solid #000;
+        }
+
+            body header nav ul.nav-list {
+                list-style-type: none;
+            }
+
+            body header nav ul li {
+                float: left;
+                margin: 0;
+            }
+
+                body header nav ul li a {
+                    text-decoration: none;
+                    padding: 0 10px 0 10px;
+                    color: white;
+                    font: 1.4em normal Arial;
+                }
+
+                    body header nav ul li a.selected {
+                        font-weight: bold;
+                    }
+
+                body header nav ul li:hover > a {
+                    text-decoration: underline;
+                    color: #a8a8a8;
+                }
+
+                    body header nav ul li:hover > a + ul {
+                        display: block;
+                    }
+
+                body header nav ul li ul.sub-nav-list {
+                    position: absolute;
+                    display: none;
+                    background-color: rgba(179, 94, 243, 0.9);
+                    border-radius: 5px;
+                }
+
+                body header nav ul li ul li {
+                    float: none;
+                    margin: 0 15px;
+                    padding: 10px 0;
+                    border-bottom: 1px solid black;
+                }
+
+                    body header nav ul li ul li:last-of-type {
+                        border-bottom: none;
+                    }
+
+                    body header nav ul li ul li > a {
+                        font-size: 1.2em;
+                        color: #fff;
+                    }
+
+    body section {
+        width: 75%;
+        float: left;
+        color: black;
+    }
+
+        body section article {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+            body section article header {
+                background: none;
+                padding: 5px;
+            }
+
+                body section article header h1 {
+                    font-size: 1.4em;
+                    padding: 0;
+                }
+
+            body section article footer {
+                padding: 5px;
+            }
+
+                body section article footer p {
+                    font-size: 16px;
+                    text-align: right;
+                    font-weight: normal;
+                }
+
+                    body section article footer p time {
+                        font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+                    }
+
+                    body section article footer p a {
+                        text-decoration: none;
+                    }
+
+                        body section article footer p a:hover {
+                            text-decoration: underline;
+                        }
+
+    body aside {
+        float: left;
+        width: 20%;
+        margin: 20px;
+    }
+
+        body aside > ul {
+            list-style-type: none;
+        }
+
+            body aside > ul > li {
+                margin: 15px 0;
+                padding: 15px;
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+
+                body aside > ul > li h2 {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                }
+
+                body aside > ul > li p {
+                    margin-top: 10px;
+                    margin-right: 5px;
+                    margin-bottom: 10px;
+                    margin-left: 5px;
+                    font-size: 14px;
+                }
+
+                    body aside > ul > li p a {
+                        color: #aaaaaa;
+                        text-decoration: none;
+                    }
+
+                    body aside > ul > li p strong {
+                        color: #cccccc;
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+
+                    body aside > ul > li p em {
+                        color: #cccccc;
+                        font-weight: normal;
+                        font-style: italic;
+                    }
+
+                body aside > ul > li ul {
+                    list-style-type: none;
+                    margin-top: 10px;
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                    margin-left: 0px;
+                }
+
+                    body aside > ul > li ul li {
+                        margin-top: 5px;
+                        margin-left: 10px;
+                        margin-bottom: 0px;
+                        margin-right: 0px;
+                        background: url(images/li-dot.png) no-repeat;
+                        background-position: 0 50%;
+                        padding-left: 25px;
+                    }
+
+    body footer {
+        clear: both;
+        padding-top: 15px;
+        padding-bottom: 25px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+        body footer p {
+            font-size: 1.2em;
+            font-weight: bold;
+        }

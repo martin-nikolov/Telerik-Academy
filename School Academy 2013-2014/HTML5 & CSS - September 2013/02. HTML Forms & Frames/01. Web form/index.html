@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Web Form</title>
+
+        <link rel="stylesheet" href="styles/styles.css" type="text/css" />
+    </head>
+
+    <body>
+        <form action="index.php" method="post">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="right">
+                            <label for="last_name">Last Name</label>
+                        </td>
+                        <td colspan="3">
+                            <input type="text" class="span1" id="last_name" placeholder="Nakov" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="right">
+                            <label for="last_name">Last Name</label>
+                        </td>
+                        <td colspan="3">
+                            <input type="text" class="span1" id="first_name" placeholder="Svetlin" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="right">
+                            <label for="address">Address</label>
+                        </td>
+                        <td colspan="3">
+                            <textarea name="address" cols="30" rows="5" placeholder="Some address here"></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="right">
+                            <label for="city">City</label>
+                        </td>
+                        <td>
+                            <input type="text" id="city" placeholder="Sofia" />
+                        </td>
+
+                        <td >
+                            <label for=" state">State</label>
+                            <input type="text" id="state" size="3" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="right">
+                            <label for="postal_code">Zip/Postal Code</label>
+                        </td>
+                        <td colspan="3">
+                            <input type="text" id="postal_code" size="10" placeholder="9325" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="right">
+                            <label for="country">Country</label>
+                        </td>
+                        <td colspan="3">
+                            <select>
+                                <option value="bulgaria">Bulgaria</option>
+                                <option value="usa">United State</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="right">
+                            <label for="phone">Phone (country code, area code, number)</label>
+                        </td>
+                        <td colspan="3">
+                            <div>
+                                +(<input type="text" name="country_code" size="3" placeholder="359" />)
+                                <input type="text" name="area_code" size="5" placeholder="88" />
+                                <input type="text" name="number" placeholder="8334343" />
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="right">
+                            <label for="email">E-mail</label>
+                        </td>
+                        <td colspan="3">
+                            <input type="email" name="email" placeholder="example@mail.com" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="right">
+                            <label for="birthdate">Birth date</label>
+                        </td>
+                        <td colspan="3">
+                            <div>
+                                Month<input type="text" name="month" size="2" maxlength="2" placeholder="06" />
+                                Day<input type="text" name="day" size="2" maxlength="2" placeholder="14" />
+                                Year (4 digit)<input type="text" name="year" size="4" maxlength="4" placeholder="1980" />
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="right">
+                            <label for="gender">Gender</label>
+                        </td>
+                        <td colspan="3">
+                            <select>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="right">
+                            <label for="starting_date">Starting date</label>
+                        </td>
+                        <td colspan="3">
+                            <div>
+                                <input type="radio" name="starting" /> Spring 2006
+                                <input type="radio" name="starting"/> Summer 2006
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="right">
+                            <label for="comments">Comments/Questions</label>
+                        </td>
+                        <td colspan="3">
+                            <textarea name="comments" cols="30" rows="5" placeholder="Please send me more information obout the logging."></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="blue">
+                            <input type="submit" name="submit" value="Submit" />
+                            <input type="reset" name="reset" value="Clear This Form" />
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </body>
+</html>

@@ -12,7 +12,7 @@ else header('Location: index.php');
 $sql = 'SELECT content, date_added, comments.book_id, comments.comment_id, books.book_title, users.username FROM comments
 INNER JOIN users.users ON users.user_id = comments.user_id
 INNER JOIN books.books ON books.book_id = comments.book_id
-WHERE users.user_id = ' . $USER_ID;
+WHERE users.user_id = ' . $USER_ID . ' ORDER BY date_added DESC';
 
 $query = mysqli_query($CONNECTION_COMMENTS, $sql);
 

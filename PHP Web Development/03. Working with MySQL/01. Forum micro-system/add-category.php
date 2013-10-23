@@ -47,7 +47,7 @@ if (isset($_POST['created']))
 
     if (!$error)
     {
-        $category = strtolower(mysqli_real_escape_string($CONNECTION, trim($_POST['category'])));
+        $category = strtolower(htmlspecialchars(mysqli_real_escape_string($CONNECTION, trim($_POST['category']))));
         $category = ucfirst($category); // Прави първата буква главна
 
         // Извличане на името

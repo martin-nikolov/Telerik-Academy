@@ -57,7 +57,7 @@ if (isset($_POST['new-book']))
 
     if (!$error)
     {
-        $book_title = mysqli_real_escape_string($CONNECTION_BOOKS, $book_title);
+        $book_title = htmlspecialchars(mysqli_real_escape_string($CONNECTION_BOOKS, $book_title));
 
         // Извличане на името на книгата
         $query = mysqli_query($CONNECTION_BOOKS, 'SELECT book_title FROM books WHERE book_title = "' . $book_title . '"');

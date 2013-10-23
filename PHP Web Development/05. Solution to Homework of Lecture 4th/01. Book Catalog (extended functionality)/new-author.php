@@ -64,7 +64,7 @@ if (isset($_POST['new-author']))
 
     if (!$error)
     {
-        $author = mysqli_real_escape_string($CONNECTION_BOOKS, $author);
+        $author = htmlspecialchars(mysqli_real_escape_string($CONNECTION_BOOKS, $author));
 
         // Извличане на името на автора
         $query = mysqli_query($CONNECTION_BOOKS, 'SELECT author_name FROM authors WHERE author_name = "' . $author . '"');

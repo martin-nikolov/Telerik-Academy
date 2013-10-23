@@ -126,7 +126,7 @@ if (isset($_POST['posted']))
     // Ако няма грешки -> добавя съобщението в базата данни
     if (!$error)
     {
-        $message = mysqli_real_escape_string($CONNECTION_COMMENTS, $_POST['message']);
+        $message = htmlspecialchars(mysqli_real_escape_string($CONNECTION_COMMENTS, $_POST['message']));
 
         // Добавяме коментара в базата данни - comments
         $sql = 'INSERT INTO comments (content, book_id, user_id)

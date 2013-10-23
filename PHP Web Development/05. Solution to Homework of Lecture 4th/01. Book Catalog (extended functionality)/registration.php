@@ -31,13 +31,13 @@ if (isset($_POST['register']))
     $error = FALSE;
 
     // Валидация на данните
-    if (!CheckForValidData($username))
+    if (!CheckForValidData(strtolower($username)))
     {
         echo '<div class="error">- You have entered an invalid name!</div>';
         $error = TRUE;
     }
 
-    if (!CheckForValidData($password))
+    if (!CheckForValidData(strtolower($password)))
     {
         echo '<div class="error">- You have entered an invalid password!</div>';
         $error = TRUE;

@@ -76,8 +76,8 @@ if (isset($_POST['posted']))
     // Ако няма грешки -> добавя съобщението в базата данни
     if (!$error)
     {
-        $subject = mysqli_real_escape_string($CONNECTION, $_POST['subject']);
-        $message = mysqli_real_escape_string($CONNECTION, $_POST['message']);
+        $subject = htmlspecialchars(mysqli_real_escape_string($CONNECTION, $_POST['subject']));
+        $message = htmlspecialchars(mysqli_real_escape_string($CONNECTION, $_POST['message']));
 
         $sql = 'INSERT INTO posts (subject, message, author, category)
         VALUES ("' . $subject . '","' . $message . '","' . $username . '","' . $categories[$category] . '")';

@@ -11,7 +11,7 @@ $sql = 'SELECT books.book_id, books.book_title, books.comments_count, authors.au
 
 if (isset($_GET['author'])) // Задали сме филтър по автор
 {
-    $author = mysqli_real_escape_string($CONNECTION_BOOKS, $_GET['author']);
+    $author = htmlspecialchars(mysqli_real_escape_string($CONNECTION_BOOKS, $_GET['author']));
     $sql .= ' WHERE books.book_title
               IN (SELECT books.book_title
               FROM books

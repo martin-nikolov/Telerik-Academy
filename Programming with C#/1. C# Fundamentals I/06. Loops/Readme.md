@@ -10,7 +10,7 @@
 * Write a program that calculates the **greatest common divisor** (GCD) of given two numbers. Use the Euclidean algorithm (find it in Internet).
 * In the combinatorial mathematics, the **Catalan numbers** are calculated by the following formula:
 
-    ![Screenshot](https://raw.github.com/flextry/Telerik-Academy/master/Programming/1.%20C%23%20Fundamentals%20I/06.%20Loops/09.%20Catalan%20formula/example.png)
+    ![Screenshot](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/06.%20Loops/09.%20Catalan%20formula/example.png?raw=true)
 * Write a program to calculate the Nth Catalan number by given `N`.
 * Write a program that prints all possible cards from a standard deck of 52 cards (without jokers). The cards should be printed with their English names. Use nested for loops and switch-case.
 * Write a program that reads from the console a positive integer `N` (N < 20) and outputs a matrix like the following:

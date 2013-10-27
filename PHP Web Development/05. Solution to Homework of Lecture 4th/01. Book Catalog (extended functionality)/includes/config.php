@@ -30,11 +30,6 @@ function CheckForValidData($value, $minLength = 5)
     return TRUE;
 }
 
-function GetBooksComments()
-{
-    $sql;
-}
-
 function ShowHelloScreen()
 {
     echo 'Hello, ';

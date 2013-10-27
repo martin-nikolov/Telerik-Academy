@@ -1,0 +1,66 @@
+body {
+    margin: 0 auto;
+    width: 950px;
+}
+
+nav ul {
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 0;
+    display: table;
+    list-style-type: none;
+}
+
+nav li {
+    padding-right: 15px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+nav a {
+    font-size: 1.5em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #04B6F7;
+}
+
+article, section {
+    border: 1px solid #808080;
+}
+
+article {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 300px 0 0;
+}
+
+article section {
+    float: left;
+    margin: 10px 0 10px 10px;
+    padding: 10px 20px;
+    width: 265px;
+}
+
+article h2 {
+    font-size: 1.5em;
+    float: left;
+    margin-top: -1.0em;
+    padding: 0 7px;
+    background: #fff;
+}
+
+article ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+aside {
+    position: absolute;
+    top: 135px;
+    right: 10px;
+    bottom: 10px;
+    width: 300px;
+    text-align: center;
+}

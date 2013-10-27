@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Sublists</title>
+        <style>
+            ul {
+                overflow: hidden;
+                list-style-type: none;
+                padding-left: 10px;
+            }
+
+            li > ul {
+                display: none;
+                color: #808080;
+            }
+
+            li:hover > ul {
+                display: block;
+                text-decoration: none;
+            }
+
+            ul a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            ul a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <a href="#">List item</a>
+                <ul>
+                    <li>Sublist item</li>
+                    <li>Sublist item</li>
+                    <li>Sublist item</li>
+                    <li>
+                        <a href="#">Sublist item</a>
+                        <ul>
+                            <li>Sub-sublist item</li>
+                            <li>Sub-sublist item</li>
+                            <li>Sub-sublist item</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>
+                <a href="#">List item</a>
+                <ul>
+                    <li>Sublist item</li>
+                    <li>Sublist item</li>
+                    <li>Sublist item</li>
+                    <li>Sublist item</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

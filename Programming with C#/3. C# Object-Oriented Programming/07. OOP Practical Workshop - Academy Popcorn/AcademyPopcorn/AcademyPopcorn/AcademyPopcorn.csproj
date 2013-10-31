@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D50F4786-9751-4526-8D31-BB09B73CCC59}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AcademyPopcorn</RootNamespace>
+    <AssemblyName>AcademyPopcorn</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Added classes\Bullet.cs" />
+    <Compile Include="Added classes\Explode.cs" />
+    <Compile Include="Added classes\ExplodingBlock.cs" />
+    <Compile Include="Added classes\Gift.cs" />
+    <Compile Include="Added classes\GiftBlock.cs" />
+    <Compile Include="Added classes\RandomBlock.cs" />
+    <Compile Include="Added classes\ShootingRacket.cs" />
+    <Compile Include="Added classes\UnpassableBlock.cs" />
+    <Compile Include="Added classes\UnstoppableBall.cs" />
+    <Compile Include="Ball.cs" />
+    <Compile Include="Block.cs" />
+    <Compile Include="CollisionData.cs" />
+    <Compile Include="CollisionDispatcher.cs" />
+    <Compile Include="ConsoleInterface.cs" />
+    <Compile Include="ConsoleRenderer.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="Added classes\EngineForShootingRacket.cs" />
+    <Compile Include="Interfaces\ICollidable.cs" />
+    <Compile Include="IndestructibleBlock.cs" />
+    <Compile Include="Interfaces\IObjectProducer.cs" />
+    <Compile Include="Interfaces\IRenderable.cs" />
+    <Compile Include="Interfaces\IUserInterface.cs" />
+    <Compile Include="KeyboardInterface.cs" />
+    <Compile Include="MatrixCoords.cs" />
+    <Compile Include="GameObject.cs" />
+    <Compile Include="Interfaces\IRenderer.cs" />
+    <Compile Include="Added classes\MeteoriteBall.cs" />
+    <Compile Include="MovingObject.cs" />
+    <Compile Include="AcademyPopcornMain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Racket.cs" />
+    <Compile Include="Added classes\TrailObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Added classes\Diagram.cd" />
+    <None Include="App.config" />
+    <None Include="PopcornDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

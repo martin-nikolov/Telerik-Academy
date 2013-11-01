@@ -1,6 +1,6 @@
 <?php
 
-include 'library/functions.php';
+require_once 'library/functions.php';
 
 if ($_POST)
 {
@@ -40,6 +40,7 @@ if ($_POST)
         }
     }
 }
+
 $authors = GetAuthors($CONNECTION);
 
 if ($authors === FALSE)
@@ -48,7 +49,7 @@ if ($authors === FALSE)
 $data = array(
     'title'   => 'Автор',
     'authors' => $authors,
-    'content' => 'templates/authors_public.php',
+    'content' => 'authors_public',
 );
 
-RenderLayoutContent($data, 'templates/layouts/normal_layout.php');
+RenderLayoutContent($data, 'normal_layout');

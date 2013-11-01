@@ -8,18 +8,20 @@
     <file path="/book-list_public.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382867454603" ignored="false" />
     <file path="/config.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382870313082" ignored="false" />
     <file path="/header.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382860002794" ignored="false" />
-    <file path="/index.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382873693334" ignored="false" />
+    <file path="/index.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1383312649857" ignored="false" />
     <file path="/a.dummy" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382862987374" ignored="false" />
     <file path="/author.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382870388871" ignored="false" />
-    <file path="/authors.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382871967089" ignored="false" />
-    <file path="/authors_public.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382871682605" ignored="false" />
-    <file path="/add_book.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382871938700" ignored="false" />
+    <file path="/authors.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1383312535370" ignored="false" />
+    <file path="/authors_public.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1383310960155" ignored="false" />
+    <file path="/add_book.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1383311999660" ignored="false" />
     <file path="/add-book_public.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382864933014" ignored="false" />
     <file path="/booklist.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382872220826" ignored="false" />
     <file path="/booklist_public.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382873868047" ignored="false" />
-    <file path="/normal_layout.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382869168966" ignored="false" />
-    <file path="/add_book_public.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382871822583" ignored="false" />
-    <file path="/functions.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1382873703492" ignored="false" />
+    <file path="/normal_layout.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1383311049033" ignored="false" />
+    <file path="/add_book_public.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1383310962580" ignored="false" />
+    <file path="/functions.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1383296055167" ignored="false" />
+    <file path="/book_list_public.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1383311570547" ignored="false" />
+    <file path="/book_list.php" changelist="53902c44-e670-4445-9f62-01bedf4d2ccc" time="1383311525516" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +47,9 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="authors.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authors.php">
+        <entry file="file://$PROJECT_DIR$/resources/authors.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="23" selection-start="978" selection-end="978" vertical-scroll-proportion="-28.76923">
+            <state line="2" column="14" selection-start="21" selection-end="29" vertical-scroll-proportion="17.538462">
               <folding />
             </state>
           </provider>
@@ -56,7 +58,7 @@
       <file leaf-file-name="add_book_public.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/add_book_public.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="269" selection-end="269" vertical-scroll-proportion="-5.230769">
+            <state line="17" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="-11.115385">
               <folding />
             </state>
           </provider>
@@ -65,7 +67,16 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="7" selection-start="845" selection-end="857" vertical-scroll-proportion="0.8660377">
+            <state line="0" column="0" selection-start="0" selection-end="581" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="book_list.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/book_list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="37" selection-start="44" selection-end="44" vertical-scroll-proportion="-1.3076923">
               <folding />
             </state>
           </provider>
@@ -74,7 +85,7 @@
       <file leaf-file-name="normal_layout.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/layouts/normal_layout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="7" selection-start="179" selection-end="179" vertical-scroll-proportion="-5.8846154">
+            <state line="7" column="13" selection-start="131" selection-end="131" vertical-scroll-proportion="-4.576923">
               <folding />
             </state>
           </provider>
@@ -83,16 +94,16 @@
       <file leaf-file-name="authors_public.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/authors_public.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="22" selection-start="274" selection-end="274" vertical-scroll-proportion="-7.8461537">
+            <state line="5" column="28" selection-start="121" selection-end="121" vertical-scroll-proportion="-3.2692308">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="add_book.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add_book.php">
+        <entry file="file://$PROJECT_DIR$/resources/add_book.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="23" selection-start="1495" selection-end="1495" vertical-scroll-proportion="-15.038462">
+            <state line="67" column="18" selection-start="1553" selection-end="1553" vertical-scroll-proportion="-43.807693">
               <folding />
             </state>
           </provider>
@@ -101,16 +112,16 @@
       <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="1" selection-start="976" selection-end="976" vertical-scroll-proportion="-17.115385">
+            <state line="11" column="0" selection-start="365" selection-end="395" vertical-scroll-proportion="-7.1923075">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booklist_public.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/booklist_public.php">
+      <file leaf-file-name="book_list_public.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/book_list_public.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="6" selection-start="317" selection-end="317" vertical-scroll-proportion="-11.769231">
+            <state line="1" column="40" selection-start="84" selection-end="84" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -126,22 +137,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/library/template_functions.php" />
-        <option value="$PROJECT_DIR$/resources/library/basic_functions.php" />
-        <option value="$PROJECT_DIR$/resources/templates/layouts/normal_layout.php" />
         <option value="$PROJECT_DIR$/resources/booklist.php" />
         <option value="$PROJECT_DIR$/resources/library/functions.php" />
         <option value="$PROJECT_DIR$/resources/authors.php" />
         <option value="$PROJECT_DIR$/resources/add_book.php" />
         <option value="$PROJECT_DIR$/booklist.php" />
+        <option value="$PROJECT_DIR$/templates/booklist_public.php" />
+        <option value="$PROJECT_DIR$/templates/layouts/normal_layout.php" />
+        <option value="$PROJECT_DIR$/templates/book_list_public.php" />
+        <option value="$PROJECT_DIR$/book_list.php" />
         <option value="$PROJECT_DIR$/add_book.php" />
         <option value="$PROJECT_DIR$/authors.php" />
-        <option value="$PROJECT_DIR$/templates/authors_public.php" />
-        <option value="$PROJECT_DIR$/templates/booklist_public.php" />
-        <option value="$PROJECT_DIR$/templates/add_book_public.php" />
+        <option value="$PROJECT_DIR$/resources/book_list.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/templates/authors_public.php" />
+        <option value="$PROJECT_DIR$/templates/add_book_public.php" />
         <option value="$PROJECT_DIR$/library/functions.php" />
-        <option value="$PROJECT_DIR$/templates/layouts/normal_layout.php" />
       </list>
     </option>
   </component>
@@ -178,6 +189,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -196,55 +208,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="01. Views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="01. Views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="01. Views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="01. Views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="01. Views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="01. Views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,11 +222,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\01. Views\resources" />
       <recent name="C:\wamp\www\01. Separation of Business Logic" />
       <recent name="C:\wamp\www\01. Separation of Business Logic\resources\templates" />
       <recent name="C:\wamp\www\01. Separation of Business Logic\resources\library" />
       <recent name="C:\wamp\www\01. Separation of Business Logic\resources\templates\layouts" />
-      <recent name="C:\xampp\htdocs\01. Separation of Business Logic\resources" />
     </key>
   </component>
   <component name="RunManager">
@@ -292,13 +257,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="420" y="30" width="946" height="738" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19735391" sideWeight="0.6701031" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19184123" sideWeight="0.6701031" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -374,6 +339,13 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/book_list_public.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="6" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="9" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
@@ -381,7 +353,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_book.php">
+    <entry file="file://$PROJECT_DIR$/resources/add_book.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="45" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.0">
           <folding />
@@ -402,7 +374,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/booklist_public.php">
+    <entry file="file://$PROJECT_DIR$/templates/book_list_public.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="28" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
           <folding />
@@ -416,58 +388,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="23" selection-start="978" selection-end="978" vertical-scroll-proportion="-28.76923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="1" selection-start="976" selection-end="976" vertical-scroll-proportion="-17.115385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/layouts/normal_layout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="179" selection-end="179" vertical-scroll-proportion="-5.8846154">
+        <state line="7" column="13" selection-start="131" selection-end="131" vertical-scroll-proportion="-4.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/book_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="37" selection-start="44" selection-end="44" vertical-scroll-proportion="-1.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/authors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="14" selection-start="21" selection-end="29" vertical-scroll-proportion="17.538462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/add_book.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="18" selection-start="1553" selection-end="1553" vertical-scroll-proportion="-43.807693">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/add_book_public.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="269" selection-end="269" vertical-scroll-proportion="-5.230769">
+        <state line="17" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="-11.115385">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/authors_public.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="274" selection-end="274" vertical-scroll-proportion="-7.8461537">
+        <state line="5" column="28" selection-start="121" selection-end="121" vertical-scroll-proportion="-3.2692308">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/booklist_public.php">
+    <entry file="file://$PROJECT_DIR$/templates/book_list_public.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="6" selection-start="317" selection-end="317" vertical-scroll-proportion="-11.769231">
+        <state line="1" column="40" selection-start="84" selection-end="84" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_book.php">
+    <entry file="file://$PROJECT_DIR$/library/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="23" selection-start="1495" selection-end="1495" vertical-scroll-proportion="-15.038462">
+        <state line="11" column="0" selection-start="365" selection-end="395" vertical-scroll-proportion="-7.1923075">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="7" selection-start="845" selection-end="857" vertical-scroll-proportion="0.8660377">
+        <state line="0" column="0" selection-start="0" selection-end="581" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

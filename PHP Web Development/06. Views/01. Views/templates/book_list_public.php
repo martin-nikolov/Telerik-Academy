@@ -1,5 +1,5 @@
-<a href="authors.php">Автори</a>
-<a href="add_book.php">Нова Книга</a>
+<a href="index.php?page=authors">Автори</a>
+<a href="index.php?page=add_book">Нова книга</a>
 
 <br/><br/>
 

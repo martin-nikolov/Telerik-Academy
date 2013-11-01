@@ -1,4 +1,9 @@
 <?php
+
+defined('LAYOUT_PATH') or define('LAYOUT_PATH', 'templates/layouts/');
+defined('TEMPLATE_PATH') or define('TEMPLATE_PATH', 'templates/');
+defined('RESOURCE_PATH') or define('RESOURCE_PATH', 'resources/');
+
 $CONNECTION = mysqli_connect('localhost', 'root', '', 'books');
 
 if (HasErrorWithDataBase($CONNECTION)) exit;
@@ -41,7 +46,10 @@ function IsAuthorIdExists($CONNECTION, $ids)
     return FALSE;
 }
 
-function RenderLayoutContent($data, $content)
+function RenderLayoutContent($data, $layout)
 {
-    require $content;
+    $data['content'] = TEMPLATE_PATH . $data['content'] . '.php';
+    $layout = LAYOUT_PATH . $layout . '.php';
+
+    require $layout;
 }

@@ -1,9 +1,9 @@
 <a href="index.php">Списък</a>
-<a href="add_book.php">Нова книга</a>
+<a href="index.php?page=add_book">Нова книга</a>
 
 <br/><br/>
 
-<form method="post" action="authors.php">
+<form method="post" action="">
     Име: <input type="text" name="author_name"/>
     <input type="submit" value="Добави"/>
 </form>

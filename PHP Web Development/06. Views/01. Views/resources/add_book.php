@@ -1,6 +1,6 @@
 <?php
 
-include 'library/functions.php';
+require_once 'library/functions.php';
 
 if ($_POST)
 {
@@ -65,7 +65,7 @@ if ($authors === FALSE)
 $data = array(
     'title'   => 'Нова Книга',
     'authors' => $authors,
-    'content' => 'templates/add_book_public.php',
+    'content' => 'add_book_public',
 );
 
-RenderLayoutContent($data, 'templates/layouts/normal_layout.php');
+RenderLayoutContent($data, 'normal_layout');

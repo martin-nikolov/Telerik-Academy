@@ -1,6 +1,6 @@
 <?php
 
-require 'library/functions.php';
+require_once 'library/functions.php';
 
 $author_id = isset($_GET['author_id']) ?
     (int)$_GET['author_id'] : 'ba.author_id';
@@ -22,7 +22,7 @@ while ($row = mysqli_fetch_assoc($query))
 $data = array(
     'title'   => 'Книги',
     'data'    => $result,
-    'content' => 'templates/booklist_public.php',
+    'content' => 'book_list_public',
 );
 
-RenderLayoutContent($data, 'templates/layouts/normal_layout.php');
+RenderLayoutContent($data, 'normal_layout');

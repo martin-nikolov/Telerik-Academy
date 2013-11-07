@@ -1,6 +1,0 @@
-Document added: readme.txt
-Document added: readme.txt
-Document added: readme.txt
-TextDocument[name=readme.txt]
-TextDocument[name=readme.txt]
-TextDocument[name=readme.txt]

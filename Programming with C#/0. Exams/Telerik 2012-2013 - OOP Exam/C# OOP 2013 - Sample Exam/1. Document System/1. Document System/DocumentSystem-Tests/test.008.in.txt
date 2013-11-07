@@ -1,2 +1,0 @@
-AddVideoDocument[name=demo.mpg;framerate=24;length=87312;size=87245212]
-

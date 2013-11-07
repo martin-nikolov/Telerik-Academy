@@ -1,4 +1,0 @@
-Document added: academy.avi
-VideoDocument[name=academy.avi]
-Document does not support encryption: academy.avi
-VideoDocument[name=academy.avi]

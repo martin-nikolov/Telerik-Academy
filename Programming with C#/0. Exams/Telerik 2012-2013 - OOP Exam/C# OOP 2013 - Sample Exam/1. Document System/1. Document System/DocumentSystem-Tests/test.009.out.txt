@@ -1,2 +1,0 @@
-Document added: example.txt
-TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]

@@ -1,3 +1,0 @@
-AddTextDocument[name=exam.txt;content=old content]
-ChangeContent[persons.xlsx;new content]
-

@@ -1,5 +1,0 @@
-AddPDFDocument[name=academy.pdf]
-ListDocuments[]
-EncryptDocument[academy.docx]
-ListDocuments[]
-

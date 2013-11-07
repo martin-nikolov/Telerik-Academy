@@ -1,0 +1,32 @@
+Document added: example.txt
+Document added: readme.txt
+Document has no name
+No encryptable documents found
+Document added: academy.pdf
+Document added: exam.docx
+Document added: exam.docx
+Document added: academy.xls
+Document added: ring.mp3
+Document added: demo.mpg
+Document encrypted: academy.pdf
+Document does not support encryption: ring.mp3
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document not found: invalid.doc
+Document content changed: example.txt
+Document is not editable: demo.mpg
+Document not found: invalid.doc
+All documents encrypted
+Document decrypted: academy.pdf
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document does not support decryption: ring.mp3
+Document not found: invalid.doc
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]

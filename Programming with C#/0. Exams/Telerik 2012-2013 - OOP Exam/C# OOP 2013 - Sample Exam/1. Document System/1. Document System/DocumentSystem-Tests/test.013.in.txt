@@ -1,0 +1,3 @@
+AddPDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+EncryptAllDocuments[]
+

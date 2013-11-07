@@ -1,0 +1,7 @@
+AddTextDocument[name=demo;content=old content]
+AddVideoDocument[name=demo;content=old content]
+AddWordDocument[name=demo;content=old content]
+ListDocuments[]
+ChangeContent[demo;new content]
+ListDocuments[]
+

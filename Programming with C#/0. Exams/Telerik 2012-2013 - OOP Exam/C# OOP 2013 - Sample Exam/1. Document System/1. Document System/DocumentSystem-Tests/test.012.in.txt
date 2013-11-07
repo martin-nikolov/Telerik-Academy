@@ -1,0 +1,3 @@
+AddVideoDocument[name=demo.mpg;framerate=24;length=87312]
+EncryptAllDocuments[]
+

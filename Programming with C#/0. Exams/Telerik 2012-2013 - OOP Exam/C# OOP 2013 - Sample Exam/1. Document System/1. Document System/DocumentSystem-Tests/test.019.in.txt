@@ -1,0 +1,6 @@
+AddWordDocument[name=exam.docx;chars=12218;version=2012;size=36881]
+EncryptDocument[exam.docx]
+ListDocuments[]
+DecryptDocument[exam.docx]
+ListDocuments[]
+

@@ -1,0 +1,5 @@
+AddVideoDocument[name=demo.mp4;content=old content]
+ListDocuments[]
+ChangeContent[demo.mp4;new content]
+ListDocuments[]
+

@@ -1,0 +1,3 @@
+AddTextDocument[name=example.txt;charset=utf-8;content=Telerik Academy Exam]
+ListDocuments[]
+

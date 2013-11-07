@@ -1,0 +1,2 @@
+ChangeContent[demo;new content]
+

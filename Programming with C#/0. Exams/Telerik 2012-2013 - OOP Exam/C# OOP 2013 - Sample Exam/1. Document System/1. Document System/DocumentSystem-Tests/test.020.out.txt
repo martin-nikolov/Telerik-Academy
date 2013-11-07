@@ -1,0 +1,9 @@
+Document added: exam.docx
+Document encrypted: exam.docx
+Document added: exam.docx
+WordDocument[encrypted]
+WordDocument[name=exam.docx]
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]

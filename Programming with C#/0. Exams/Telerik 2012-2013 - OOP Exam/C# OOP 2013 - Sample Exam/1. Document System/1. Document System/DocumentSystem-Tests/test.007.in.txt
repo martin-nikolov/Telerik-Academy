@@ -1,0 +1,2 @@
+AddAudioDocument[size=9834733;name=ring.mp3;samplerate=44100;length=368800]
+

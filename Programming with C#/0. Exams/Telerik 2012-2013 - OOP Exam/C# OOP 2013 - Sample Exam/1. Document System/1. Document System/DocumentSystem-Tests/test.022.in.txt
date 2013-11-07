@@ -1,0 +1,4 @@
+AddTextDocument[name=exam.txt]
+AddTextDocument[name=exam.txt]
+DecryptDocument[exam.txt]
+

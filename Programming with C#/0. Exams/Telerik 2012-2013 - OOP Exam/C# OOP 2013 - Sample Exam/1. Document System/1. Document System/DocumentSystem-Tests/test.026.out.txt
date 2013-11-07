@@ -1,0 +1,12 @@
+Document added: demo
+Document added: demo
+Document added: demo
+TextDocument[content=old content;name=demo]
+VideoDocument[content=old content;name=demo]
+WordDocument[content=old content;name=demo]
+Document content changed: demo
+Document is not editable: demo
+Document content changed: demo
+TextDocument[content=new content;name=demo]
+VideoDocument[content=old content;name=demo]
+WordDocument[content=new content;name=demo]

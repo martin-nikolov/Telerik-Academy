@@ -1,0 +1,15 @@
+Document added: test
+Document added: test
+Document added: test
+Document added: test
+Document added: test
+Document encrypted: test
+Document encrypted: test
+Document does not support encryption: test
+Document encrypted: test
+Document encrypted: test
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]

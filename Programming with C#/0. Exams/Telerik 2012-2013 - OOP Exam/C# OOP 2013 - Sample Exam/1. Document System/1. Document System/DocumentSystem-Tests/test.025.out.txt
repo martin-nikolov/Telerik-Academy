@@ -1,0 +1,4 @@
+Document added: demo.mp4
+VideoDocument[content=old content;name=demo.mp4]
+Document is not editable: demo.mp4
+VideoDocument[content=old content;name=demo.mp4]

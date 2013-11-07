@@ -1,0 +1,8 @@
+AddPDFDocument[name=test]
+AddWordDocument[name=test]
+AddTextDocument[name=test]
+AddExcelDocument[name=test]
+AddWordDocument[name=test]
+EncryptDocument[test]
+ListDocuments[]
+

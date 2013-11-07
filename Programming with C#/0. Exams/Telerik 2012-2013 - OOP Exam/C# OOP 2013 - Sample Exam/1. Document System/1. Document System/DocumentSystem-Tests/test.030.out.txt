@@ -1,0 +1,950 @@
+No documents found
+No encryptable documents found
+Document not found: test.txt
+Document not found: exam.txt
+Document not found: academy.pdf
+Document added: example.txt
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+Document added: readme.txt
+Document has no name
+Document added: academy.pdf
+Document added: exam.docx
+Document added: academy.xls
+Document added: ring.mp3
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[cols=3;name=academy.xls;rows=12;size=9430;version=97]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+Document added: demo.mpg
+Document added: example.txt
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[cols=3;name=academy.xls;rows=12;size=9430;version=97]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[cols=3;name=academy.xls;rows=12;size=9430;version=97]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+Document added: readme.txt
+Document added: readme.txt
+Document added: readme.txt
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[cols=3;name=academy.xls;rows=12;size=9430;version=97]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+Document added: demo.mpg
+All documents encrypted
+Document added: academy.pdf
+All documents encrypted
+Document added: academy.pdf
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+All documents encrypted
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+Document added: academy.pdf
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+Document added: academy.pdf
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+Document not found: academy.docx
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+Document added: academy.avi
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+Document does not support encryption: academy.avi
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+Document added: test
+Document added: test
+Document added: test
+Document added: test
+Document added: test
+Document encrypted: test
+Document encrypted: test
+Document does not support encryption: test
+Document encrypted: test
+Document encrypted: test
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+Document added: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document added: exam.docx
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[name=exam.docx]
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document added: exam.txt
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+TextDocument[name=exam.txt]
+Document added: exam.txt
+Document does not support decryption: exam.txt
+Document does not support decryption: exam.txt
+Document added: exam.txt
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+TextDocument[name=exam.txt]
+TextDocument[name=exam.txt]
+TextDocument[content=old content;name=exam.txt]
+Document content changed: exam.txt
+Document content changed: exam.txt
+Document content changed: exam.txt
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+Document added: exam.txt
+Document not found: persons.xlsx
+Document added: demo.mp4
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=old content;name=exam.txt]
+VideoDocument[content=old content;name=demo.mp4]
+Document is not editable: demo.mp4
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=old content;name=exam.txt]
+VideoDocument[content=old content;name=demo.mp4]
+Document added: demo
+Document added: demo
+Document added: demo
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=old content;name=exam.txt]
+VideoDocument[content=old content;name=demo.mp4]
+TextDocument[content=old content;name=demo]
+VideoDocument[content=old content;name=demo]
+WordDocument[content=old content;name=demo]
+Document content changed: demo
+Document is not editable: demo
+Document content changed: demo
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=old content;name=exam.txt]
+VideoDocument[content=old content;name=demo.mp4]
+TextDocument[content=new content;name=demo]
+VideoDocument[content=old content;name=demo]
+WordDocument[content=new content;name=demo]
+Document content changed: demo
+Document is not editable: demo
+Document content changed: demo
+Document added: example.txt
+Document added: readme.txt
+Document has no name
+All documents encrypted
+Document added: academy.pdf
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=old content;name=exam.txt]
+VideoDocument[content=old content;name=demo.mp4]
+TextDocument[content=new content;name=demo]
+VideoDocument[content=old content;name=demo]
+WordDocument[encrypted]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+Document added: exam.docx
+Document added: exam.docx
+Document added: academy.xls
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=old content;name=exam.txt]
+VideoDocument[content=old content;name=demo.mp4]
+TextDocument[content=new content;name=demo]
+VideoDocument[content=old content;name=demo]
+WordDocument[encrypted]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+ExcelDocument[cols=3;name=academy.xls;rows=12;size=9430;version=97]
+Document added: ring.mp3
+Document added: demo.mpg
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document does not support encryption: ring.mp3
+Document does not support encryption: ring.mp3
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document not found: invalid.doc
+Document content changed: example.txt
+Document content changed: example.txt
+Document content changed: example.txt
+Document is not editable: demo.mpg
+Document is not editable: demo.mpg
+Document is not editable: demo.mpg
+Document not found: invalid.doc
+All documents encrypted
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document does not support decryption: ring.mp3
+Document does not support decryption: ring.mp3
+Document not found: invalid.doc
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=old content;name=exam.txt]
+VideoDocument[content=old content;name=demo.mp4]
+TextDocument[content=new content;name=demo]
+VideoDocument[content=old content;name=demo]
+WordDocument[encrypted]
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+Document added: example.txt
+Document added: readme.txt
+Document has no name
+All documents encrypted
+Document added: academy.pdf
+Document added: exam.docx
+Document added: exam.docx
+Document added: academy.xls
+Document added: ring.mp3
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+PDFDocument[encrypted]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=old content;name=exam.txt]
+VideoDocument[content=old content;name=demo.mp4]
+TextDocument[content=new content;name=demo]
+VideoDocument[content=old content;name=demo]
+WordDocument[encrypted]
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[encrypted]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=Telerik Academy Exam;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+ExcelDocument[cols=3;name=academy.xls;rows=12;size=9430;version=97]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+Document added: demo.mpg
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document does not support encryption: ring.mp3
+Document does not support encryption: ring.mp3
+Document does not support encryption: ring.mp3
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document not found: invalid.doc
+Document content changed: example.txt
+Document content changed: example.txt
+Document content changed: example.txt
+Document content changed: example.txt
+Document is not editable: demo.mpg
+Document is not editable: demo.mpg
+Document is not editable: demo.mpg
+Document is not editable: demo.mpg
+Document not found: invalid.doc
+All documents encrypted
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document does not support decryption: ring.mp3
+Document does not support decryption: ring.mp3
+Document does not support decryption: ring.mp3
+Document not found: invalid.doc
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=old content;name=exam.txt]
+VideoDocument[content=old content;name=demo.mp4]
+TextDocument[content=new content;name=demo]
+VideoDocument[content=old content;name=demo]
+WordDocument[encrypted]
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+Document added: example.txt
+Document added: readme.txt
+Document has no name
+All documents encrypted
+Document added: academy.pdf
+Document added: exam.docx
+Document added: exam.docx
+Document added: academy.xls
+Document added: ring.mp3
+Document added: demo.mpg
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document encrypted: academy.pdf
+Document does not support encryption: ring.mp3
+Document does not support encryption: ring.mp3
+Document does not support encryption: ring.mp3
+Document does not support encryption: ring.mp3
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document encrypted: exam.docx
+Document not found: invalid.doc
+Document content changed: example.txt
+Document content changed: example.txt
+Document content changed: example.txt
+Document content changed: example.txt
+Document content changed: example.txt
+Document is not editable: demo.mpg
+Document is not editable: demo.mpg
+Document is not editable: demo.mpg
+Document is not editable: demo.mpg
+Document is not editable: demo.mpg
+Document not found: invalid.doc
+All documents encrypted
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: academy.pdf
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document decrypted: exam.docx
+Document does not support decryption: ring.mp3
+Document does not support decryption: ring.mp3
+Document does not support decryption: ring.mp3
+Document does not support decryption: ring.mp3
+Document not found: invalid.doc
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+TextDocument[name=readme.txt]
+VideoDocument[framerate=24;length=87312;name=demo.mpg]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+PDFDocument[name=academy.pdf]
+VideoDocument[name=academy.avi]
+PDFDocument[encrypted]
+WordDocument[encrypted]
+TextDocument[name=test]
+ExcelDocument[encrypted]
+WordDocument[encrypted]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=new content;name=exam.txt]
+TextDocument[content=old content;name=exam.txt]
+VideoDocument[content=old content;name=demo.mp4]
+TextDocument[content=new content;name=demo]
+VideoDocument[content=old content;name=demo]
+WordDocument[encrypted]
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]
+TextDocument[charset=utf-8;content=new content;name=example.txt]
+TextDocument[name=readme.txt]
+PDFDocument[content=6A7E889CF3A8D2;name=academy.pdf;pages=2;size=38217]
+WordDocument[chars=12218;name=exam.docx;size=36881;version=2012]
+WordDocument[name=exam.docx]
+ExcelDocument[encrypted]
+AudioDocument[length=368800;name=ring.mp3;samplerate=44100;size=9834733]
+VideoDocument[framerate=24;length=87312;name=demo.mpg;size=87245212]

@@ -1,0 +1,5 @@
+AddTextDocument[name=exam.txt;content=old content]
+ListDocuments[]
+ChangeContent[exam.txt;new content]
+ListDocuments[]
+

@@ -1,0 +1,2 @@
+AddWordDocument[name=exam.docx;chars=12218;version=2012;size=36881]
+

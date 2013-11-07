@@ -1,0 +1,5 @@
+AddVideoDocument[name=academy.avi]
+ListDocuments[]
+EncryptDocument[academy.avi]
+ListDocuments[]
+

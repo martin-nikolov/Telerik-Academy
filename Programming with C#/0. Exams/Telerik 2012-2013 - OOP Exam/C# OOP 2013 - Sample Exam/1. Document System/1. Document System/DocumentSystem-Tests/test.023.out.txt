@@ -1,0 +1,4 @@
+Document added: exam.txt
+TextDocument[content=old content;name=exam.txt]
+Document content changed: exam.txt
+TextDocument[content=new content;name=exam.txt]

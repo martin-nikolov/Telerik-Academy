@@ -9,22 +9,7 @@ namespace AcademyPopcorn
         public const string CollisionGroupString = "object";
 
         protected MatrixCoords topLeft;
-        public MatrixCoords TopLeft
-        {
-            get
-            {
-                return new MatrixCoords(topLeft.Row, topLeft.Col);
-            }
-
-            protected set
-            {
-                this.topLeft = new MatrixCoords(value.Row, value.Col);
-            }
-        }
-
         protected char[,] body;
-
-        public bool IsDestroyed { get; protected set; }
 
         protected GameObject(MatrixCoords topLeft, char[,] body)
         {
@@ -37,6 +22,15 @@ namespace AcademyPopcorn
 
             this.IsDestroyed = false;
         }
+
+        public MatrixCoords TopLeft
+        {
+            get { return new MatrixCoords(this.topLeft.Row, this.topLeft.Col); }
+
+            protected set { this.topLeft = new MatrixCoords(value.Row, value.Col); }
+        }
+
+        public bool IsDestroyed { get; protected set; }
 
         public abstract void Update();
 
@@ -72,6 +66,21 @@ namespace AcademyPopcorn
             return GameObject.CollisionGroupString;
         }
 
+        public virtual MatrixCoords GetTopLeft()
+        {
+            return this.TopLeft;
+        }
+
+        public virtual char[,] GetImage()
+        {
+            return this.CopyBodyMatrix(this.body);
+        }
+
+        public virtual IEnumerable<GameObject> ProduceObjects()
+        {
+            return new List<GameObject>();
+        }
+
         char[,] CopyBodyMatrix(char[,] matrixToCopy)
         {
             int rows = matrixToCopy.GetLength(0);
@@ -88,21 +97,6 @@ namespace AcademyPopcorn
             }
 
             return result;
-        }
-
-        public virtual MatrixCoords GetTopLeft()
-        {
-            return this.TopLeft;
-        }
-
-        public virtual char[,] GetImage()
-        {
-            return this.CopyBodyMatrix(this.body);
-        }
-
-        public virtual IEnumerable<GameObject> ProduceObjects()
-        {
-            return new List<GameObject>();
         }
     }
 }

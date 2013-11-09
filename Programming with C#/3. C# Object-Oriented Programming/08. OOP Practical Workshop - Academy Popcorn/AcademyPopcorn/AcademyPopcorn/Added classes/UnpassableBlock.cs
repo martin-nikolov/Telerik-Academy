@@ -1,27 +1,23 @@
 ﻿using System;
 using System.Linq;
+using AcademyPopcorn;
 
-namespace AcademyPopcorn
+/// <summary>
+/// Task 8
+/// </summary>
+class UnpassableBlock : IndestructibleBlock
 {
-    class UnpassableBlock : Block
+    public const char Symbol = 'X';
+    public new const string CollisionGroupString = "unpassableBlock";
+
+    public UnpassableBlock(MatrixCoords upperLeft)
+        : base(upperLeft)
     {
-        /* Exercise: 8 */
-        public const char Symbol = 'X';
-        public new const string CollisionGroupString = "unpassableBlock";
+        this.body[0, 0] = UnpassableBlock.Symbol;
+    }
 
-        public UnpassableBlock(MatrixCoords topLeft)
-            : base(topLeft)
-        {
-            this.body[0, 0] = UnpassableBlock.Symbol;
-        }
-
-        public override string GetCollisionGroupString()
-        {
-            return UnpassableBlock.CollisionGroupString;
-        }
-
-        public override void RespondToCollision(CollisionData collisionData)
-        {
-        }
+    public override string GetCollisionGroupString()
+    {
+        return IndestructibleBlock.CollisionGroupString;
     }
 }

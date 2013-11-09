@@ -1,54 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using AcademyPopcorn;
 
-namespace AcademyPopcorn
+/// <summary>
+/// Task 10
+/// </summary>
+class ExplodingBlock : Block
 {
-    class ExplodingBlock : Block
+    public const char Symbol = '%';
+    public new const string CollisionGroupString = "explodingBlock";
+    private bool isHit = false;
+
+    public ExplodingBlock(MatrixCoords topLeft)
+        : base(topLeft)
     {
-        /* Exercise: 10 */
-        public const char Symbol = '%';
-        public new const string CollisionGroupString = "explodingBlock";
-        private bool isHit = false;
+        this.body[0, 0] = ExplodingBlock.Symbol;
+    }
 
-        public ExplodingBlock(MatrixCoords topLeft)
-            : base(topLeft)
-        {
-            this.body[0, 0] = ExplodingBlock.Symbol;
-        }
+    public override string GetCollisionGroupString()
+    {
+        return ExplodingBlock.CollisionGroupString;
+    }
 
-        public override string GetCollisionGroupString()
-        {
-            return ExplodingBlock.CollisionGroupString;
-        }
+    public override bool CanCollideWith(string otherCollisionGroupString)
+    {
+        return true;
+    }
 
-        public override bool CanCollideWith(string otherCollisionGroupString)
-        {
-            return true;
-        }
+    public override void RespondToCollision(CollisionData collisionData)
+    {
+        this.isHit = true;
+        this.IsDestroyed = true;
+    }
 
-        public override void RespondToCollision(CollisionData collisionData)
+    public override System.Collections.Generic.IEnumerable<GameObject> ProduceObjects()
+    {
+        if (this.isHit)
         {
-            this.IsDestroyed = true;
-            this.isHit = true;
-        }
-
-        public override IEnumerable<GameObject> ProduceObjects()
-        {
-            if (this.isHit)
+            return new List<Explode>()
             {
-                List<GameObject> explosions = new List<GameObject>()
-                {
-                    new Explode(this.TopLeft, new MatrixCoords(-1, 0)),
-                    new Explode(this.TopLeft, new MatrixCoords(0, -1)),
-                    new Explode(this.TopLeft, new MatrixCoords(1, 0)),
-                    new Explode(this.TopLeft, new MatrixCoords(0, 1))
-                };
-
-                return explosions;
-            }
-
-            return new List<GameObject>();
+                new Explode(this.TopLeft, new MatrixCoords(-1, 0)),
+                new Explode(this.TopLeft, new MatrixCoords(0, -1)),
+                new Explode(this.TopLeft, new MatrixCoords(1, 0)),
+                new Explode(this.TopLeft, new MatrixCoords(0, 1))
+            };
         }
+
+        return base.ProduceObjects();
     }
 }

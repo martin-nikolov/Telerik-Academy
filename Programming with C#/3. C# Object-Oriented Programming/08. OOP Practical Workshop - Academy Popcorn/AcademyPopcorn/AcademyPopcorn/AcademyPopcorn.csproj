@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,12 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Added classes\Bullet.cs" />
+    <Compile Include="Added classes\EngineForShootingRacket.cs" />
     <Compile Include="Added classes\Explode.cs" />
     <Compile Include="Added classes\ExplodingBlock.cs" />
     <Compile Include="Added classes\Gift.cs" />
     <Compile Include="Added classes\GiftBlock.cs" />
+    <Compile Include="Added classes\MeteoriteBall.cs" />
     <Compile Include="Added classes\RandomBlock.cs" />
     <Compile Include="Added classes\ShootingRacket.cs" />
+    <Compile Include="Added classes\TrailObject.cs" />
     <Compile Include="Added classes\UnpassableBlock.cs" />
     <Compile Include="Added classes\UnstoppableBall.cs" />
     <Compile Include="Ball.cs" />
@@ -58,7 +60,6 @@
     <Compile Include="ConsoleInterface.cs" />
     <Compile Include="ConsoleRenderer.cs" />
     <Compile Include="Engine.cs" />
-    <Compile Include="Added classes\EngineForShootingRacket.cs" />
     <Compile Include="Interfaces\ICollidable.cs" />
     <Compile Include="IndestructibleBlock.cs" />
     <Compile Include="Interfaces\IObjectProducer.cs" />
@@ -68,18 +69,17 @@
     <Compile Include="MatrixCoords.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="Interfaces\IRenderer.cs" />
-    <Compile Include="Added classes\MeteoriteBall.cs" />
     <Compile Include="MovingObject.cs" />
     <Compile Include="AcademyPopcornMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Racket.cs" />
-    <Compile Include="Added classes\TrailObject.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Added classes\Diagram.cd" />
+    <None Include="Added classes\AcademyPopcornDiagram.cd" />
     <None Include="App.config" />
     <None Include="PopcornDiagram.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

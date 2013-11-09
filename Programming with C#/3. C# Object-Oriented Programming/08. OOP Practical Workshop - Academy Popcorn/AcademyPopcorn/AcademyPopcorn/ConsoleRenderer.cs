@@ -12,10 +12,10 @@ namespace AcademyPopcorn
 
         public ConsoleRenderer(int visibleConsoleRows, int visibleConsoleCols)
         {
-            renderContextMatrix = new char[visibleConsoleRows, visibleConsoleCols];
+            this.renderContextMatrix = new char[visibleConsoleRows, visibleConsoleCols];
 
-            this.renderContextMatrixRows = renderContextMatrix.GetLength(0);
-            this.renderContextMatrixCols = renderContextMatrix.GetLength(1);
+            this.renderContextMatrixRows = this.renderContextMatrix.GetLength(0);
+            this.renderContextMatrixCols = this.renderContextMatrix.GetLength(1);
 
             this.ClearQueue();
         }
@@ -36,10 +36,10 @@ namespace AcademyPopcorn
             {
                 for (int col = obj.GetTopLeft().Col; col < lastCol; col++)
                 {
-                    if (row >= 0 && row < renderContextMatrixRows &&
-                        col >= 0 && col < renderContextMatrixCols)
+                    if (row >= 0 && row < this.renderContextMatrixRows &&
+                        col >= 0 && col < this.renderContextMatrixCols)
                     {
-                        renderContextMatrix[row, col] = objImage[row - obj.GetTopLeft().Row, col - obj.GetTopLeft().Col];
+                        this.renderContextMatrix[row, col] = objImage[row - obj.GetTopLeft().Row, col - obj.GetTopLeft().Col];
                     }
                 }
             }

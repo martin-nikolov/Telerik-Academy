@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Linq;
+using AcademyPopcorn;
 
-namespace AcademyPopcorn
+/// <summary>
+/// Task 6
+/// </summary>
+class MeteoriteBall : Ball
 {
-    class MeteoriteBall : Ball
+    public const char Symbol = 'O';
+
+    public MeteoriteBall(MatrixCoords topLeft, MatrixCoords speed)
+        : base(topLeft, speed)
     {
-        /* Exercise: 6 */
-        static Random rnd = new Random();
+        this.body[0, 0] = MeteoriteBall.Symbol;
+    }
 
-        public MeteoriteBall(MatrixCoords topLeft, MatrixCoords speed)
-            : base(topLeft, speed)
-        {
-        }
-
-        public override System.Collections.Generic.IEnumerable<GameObject> ProduceObjects()
-        {
-            return new GameObject[1] { new TrailObject(this.TopLeft, 3) };
-        }
+    public override System.Collections.Generic.IEnumerable<GameObject> ProduceObjects()
+    {
+        return new GameObject[] { new TrailObject(this.TopLeft, 3) };
     }
 }

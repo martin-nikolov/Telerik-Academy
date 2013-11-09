@@ -12,24 +12,33 @@ namespace AcademyPopcorn
         List<MovingObject> movingObjects;
         List<GameObject> staticObjects;
         Racket playerRacket;
-        ushort sleepTime; /* Exercise: 2 */
+        int sleepTime;
 
-        public Engine(IRenderer renderer, IUserInterface userInterface)
-            : this(renderer, userInterface, 500)
-        {
-        }
-
-        /* Exercise: 2 */
-        public Engine(IRenderer renderer, IUserInterface userInterface, ushort sleepTime)
+        public Engine(IRenderer renderer, IUserInterface userInterface, int sleepTime = 500)
         {
             this.renderer = renderer;
             this.userInterface = userInterface;
             this.allObjects = new List<GameObject>();
             this.movingObjects = new List<MovingObject>();
             this.staticObjects = new List<GameObject>();
-            this.sleepTime = sleepTime;
+            this.SleepTime = sleepTime;
         }
-        
+
+        /// <summary>
+        /// Task 2
+        /// </summary>
+        public int SleepTime
+        {
+            get { return this.sleepTime; }
+            private set
+            {
+                if (this.sleepTime < 0)
+                    throw new ArgumentException();
+                
+                this.sleepTime = value;
+            }
+        }
+
         public virtual void AddObject(GameObject obj)
         {
             if (obj is MovingObject)
@@ -65,7 +74,7 @@ namespace AcademyPopcorn
             {
                 this.renderer.RenderAll();
 
-                System.Threading.Thread.Sleep(this.sleepTime); /* Exercise: 2 */
+                System.Threading.Thread.Sleep(this.SleepTime);
 
                 this.userInterface.ProcessInput();
 
@@ -108,12 +117,14 @@ namespace AcademyPopcorn
             this.movingObjects.Add(obj);
             this.allObjects.Add(obj);
         }
-        
+
+        /// <summary>
+        /// Task 3
+        /// </summary>
         private void AddRacket(GameObject obj)
-        { 
-            /* Exercise: 3 */
-            this.staticObjects.RemoveAll(x => x is Racket);
-            this.allObjects.RemoveAll(x => x is Racket);
+        {
+            this.staticObjects.RemoveAll(item => item is Racket);
+            this.allObjects.RemoveAll(item => item is Racket);
 
             this.playerRacket = obj as Racket;
             this.AddStaticObject(obj);

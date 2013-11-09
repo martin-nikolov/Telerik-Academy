@@ -1,38 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using AcademyPopcorn;
 
-namespace AcademyPopcorn
+/// <summary>
+/// Task 12
+/// </summary>
+class GiftBlock : Block
 {
-    class GiftBlock : Block
+    public const char Symbol = '\u25A0';
+
+    public GiftBlock(MatrixCoords topLeft)
+        : base(topLeft)
     {
-        /* Exercise: 12 */
-        public const char Symbol = '\u25A0';
+        this.body[0, 0] = GiftBlock.Symbol;
+    }
 
-        public GiftBlock(MatrixCoords topLeft)
-            : base(topLeft)
-        {
-            this.body[0, 0] = Symbol;
-        }
+    public override System.Collections.Generic.IEnumerable<GameObject> ProduceObjects()
+    {
+        if (this.IsDestroyed)
+            return new GameObject[] { new Gift(this.TopLeft) };
 
-        public override bool CanCollideWith(string otherCollisionGroupString)
-        {
-            return true;
-        }
-
-        public override void RespondToCollision(CollisionData collisionData)
-        {
-            this.IsDestroyed = true;
-        }
-
-        public override System.Collections.Generic.IEnumerable<GameObject> ProduceObjects()
-        {
-            if (this.IsDestroyed)
-            {
-                return new GameObject[1] { new Gift(this.TopLeft) };
-            }
-
-            return new List<GameObject>();
-        }
+        return base.ProduceObjects();
     }
 }

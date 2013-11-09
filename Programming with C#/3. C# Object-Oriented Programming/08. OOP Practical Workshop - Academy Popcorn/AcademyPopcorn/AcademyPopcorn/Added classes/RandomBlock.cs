@@ -15,7 +15,7 @@ public static class RandomBlock
             case 1:
             case 2:
             case 3: return new Block(coords);
-            case 4: 
+            case 4:
             case 5:
             case 6: return new ExplodingBlock(coords);
             case 7:

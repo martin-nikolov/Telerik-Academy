@@ -1,25 +1,27 @@
 ﻿using System;
 using System.Linq;
+using AcademyPopcorn;
 
-namespace AcademyPopcorn
+/// <summary>
+/// Task 5
+/// </summary>
+class TrailObject : GameObject
 {
-    class TrailObject : GameObject
+    public const char Symbol = '*';
+
+    public TrailObject(MatrixCoords topLeft, uint lifeTime)
+        : base(topLeft, new char[,] { { TrailObject.Symbol } })
     {
-        /* Exercise: 5 */
-        public TrailObject(MatrixCoords topLeft, int lifeTime)
-            : base(topLeft, new char[,] { { '*' } })
-        {
-            this.LifeTime = lifeTime;
-        }
+        this.LifeTime = lifeTime;
+    }
 
-        public int LifeTime { get; private set; }
+    public uint LifeTime { get; private set; }
 
-        public override void Update()
+    public override void Update()
+    {
+        if (--this.LifeTime <= 0)
         {
-            if (this.LifeTime-- <= 0)
-            {
-                this.IsDestroyed = true;
-            }
+            this.IsDestroyed = true;
         }
     }
 }

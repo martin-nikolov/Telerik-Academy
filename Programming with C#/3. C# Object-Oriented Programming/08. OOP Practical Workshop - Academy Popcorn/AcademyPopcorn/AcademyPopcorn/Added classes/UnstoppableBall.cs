@@ -1,41 +1,29 @@
 ﻿using System;
 using System.Linq;
+using AcademyPopcorn;
 
-namespace AcademyPopcorn
+/// <summary>
+/// Task 8
+/// </summary>
+class UnstoppableBall : Ball
 {
-    class UnstoppableBall : Ball
+    public const char Symbol = '@';
+    public new const string CollisionGroupString = "unstoppableBall";
+
+    public UnstoppableBall(MatrixCoords topLeft, MatrixCoords speed)
+        : base(topLeft, speed)
     {
-        /* Exercise: 8 */
-        public const char Symbol = 'X';
-        public new const string CollisionGroupString = "unstoppableBall";
+        this.body[0, 0] = UnstoppableBall.Symbol;
+    }
 
-        public UnstoppableBall(MatrixCoords topLeft, MatrixCoords speed)
-            : base(topLeft, speed)
-        {
-            this.body[0, 0] = '@';
-        }
+    public override bool CanCollideWith(string otherCollisionGroupString)
+    {
+        return otherCollisionGroupString == "racket" ||
+               otherCollisionGroupString == "block" || otherCollisionGroupString == "unpassableBlock";
+    }
 
-        public override string GetCollisionGroupString()
-        {
-            return UnstoppableBall.CollisionGroupString;
-        }
-
-        public override bool CanCollideWith(string otherCollisionGroupString)
-        {
-            return otherCollisionGroupString == "racket" || otherCollisionGroupString == "block" ||
-                   otherCollisionGroupString == "unpassableBlock";
-        }
-
-        public override void RespondToCollision(CollisionData collisionData)
-        {
-            foreach (var obj in collisionData.hitObjectsCollisionGroupStrings)
-            {
-                if (obj.Equals(UnpassableBlock.CollisionGroupString) ||
-                    obj.Equals(Racket.CollisionGroupString) || obj.Equals(IndestructibleBlock.CollisionGroupString))
-                {
-                    base.RespondToCollision(collisionData);
-                }
-            }
-        }
+    public override string GetCollisionGroupString()
+    {
+        return UnstoppableBall.CollisionGroupString;
     }
 }

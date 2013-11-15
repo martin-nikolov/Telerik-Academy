@@ -1,5 +1,6 @@
 ﻿/*
-* Enter discription of the problem...
+* 3. Write a program that finds the biggest 
+* of three integers using nested `if` statements.
 */
 
 using System;

@@ -1,5 +1,5 @@
 /*
-* 4. Sort 3 real values in descending order using nested if statements.
+* 04. Sort 3 real values in descending order using nested if statements.
 */
 
 function SortDescendingThreeRealValues (first, second, third) {

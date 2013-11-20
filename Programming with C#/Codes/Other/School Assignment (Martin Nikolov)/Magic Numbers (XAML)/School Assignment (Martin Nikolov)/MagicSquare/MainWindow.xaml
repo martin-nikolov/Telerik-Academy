@@ -1,0 +1,380 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MagicSquare"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"  x:Class="MagicSquare.MainWindow"
+        Title="MAGIC SQUARE ® MARTIN NIKOLOV " 
+        Height="400" 
+        Width="500" 
+        WindowStyle="None"
+        MouseLeftButtonDown="DragWindowOnMouseDown"
+        ResizeMode="NoResize">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <WrapPanel>
+                            <Border BorderBrush="Red" BorderThickness="2" VerticalAlignment="Top">
+                                <AdornedElementPlaceholder  />
+                            </Border>
+                        </WrapPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid x:Name="MainGrid" d:IsLocked="True">
+
+        <Canvas Name="WindowButtons"
+                Margin="460,0,50,380" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" d:IsLocked="True">
+
+            <Image x:Name="CloseImage" 
+                   Height="30" 
+                   Source="Resources/Close.png"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" 
+                   MouseLeftButtonDown="CloseImage_MouseLeftButtonDown" d:IsLocked="True"/>
+
+            <Image x:Name="MinimizeImage" 
+                   Canvas.Left="-30"
+                   Canvas.Top="1"
+                   Height="30" 
+                   Source="Resources/Minimize.png"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" 
+                   MouseLeftButtonDown="MinimizeImage_MouseLeftButtonDown" d:IsLocked="True"/>
+        </Canvas>
+
+        <Grid x:Name="TextBoxGrid"
+              Margin="100,75,100,125" 
+              LayoutUpdated="Grid_LayoutUpdated" d:IsLocked="True">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="R0_C0"
+                     Grid.Row="0" 
+                     Grid.Column="0"
+                     TextAlignment="Center"
+                     MaxLength="1"
+                     MaxLines="1"
+                     Margin="20, 10, 20, 10" 
+                     FontSize="25"
+                     GotFocus="TextBox_GotFocus" 
+                     GotMouseCapture="TextBox_GotFocus" d:IsLocked="True">
+
+                <Binding Path="Number1" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NumberValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+
+            </TextBox>
+
+            <TextBox x:Name="R0_C1"   
+                     Grid.Row="0" 
+                     Grid.Column="1"
+                     TextAlignment="Center"
+                     MaxLength="1"
+                     MaxLines="1"
+                     Margin="20, 10, 20, 10" 
+                     FontSize="25"
+                     GotFocus="TextBox_GotFocus" 
+                     GotMouseCapture="TextBox_GotFocus" d:IsLocked="True">
+
+                <Binding Path="Number2" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NumberValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+
+            </TextBox>
+
+            <TextBox x:Name="R0_C2"
+                     Grid.Row="0" 
+                     Grid.Column="2"
+                     TextAlignment="Center"
+                     MaxLength="1"
+                     MaxLines="1"
+                     Margin="20, 10, 20, 10" 
+                     FontSize="25"
+                     GotFocus="TextBox_GotFocus"
+                     GotMouseCapture="TextBox_GotFocus" d:IsLocked="True">
+
+                <Binding Path="Number3" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NumberValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+
+            </TextBox>
+
+            <TextBox x:Name="R1_C0"
+                     Grid.Row="1" 
+                     Grid.Column="0"
+                     TextAlignment="Center"
+                     MaxLength="1"
+                     MaxLines="1"
+                     Margin="20, 10, 20, 10" 
+                     FontSize="25"
+                     GotFocus="TextBox_GotFocus"
+                     GotMouseCapture="TextBox_GotFocus" d:IsLocked="True">
+
+                <Binding Path="Number4" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NumberValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+
+            </TextBox>
+
+            <TextBox x:Name="R1_C1"
+                     Grid.Row="1" 
+                     Grid.Column="1"
+                     TextAlignment="Center"
+                     MaxLength="1"
+                     MaxLines="1"
+                     Margin="20, 10, 20, 10" 
+                     FontSize="25"
+                     GotFocus="TextBox_GotFocus"
+                     GotMouseCapture="TextBox_GotFocus" d:IsLocked="True">
+
+                <Binding Path="Number5" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NumberValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+
+            </TextBox>
+
+            <TextBox x:Name="R1_C2"
+                     Grid.Row="1" 
+                     Grid.Column="2"
+                     TextAlignment="Center"
+                     MaxLength="1"
+                     MaxLines="1"
+                     Margin="20, 10, 20, 10" 
+                     FontSize="25"
+                     GotFocus="TextBox_GotFocus"
+                     GotMouseCapture="TextBox_GotFocus" d:IsLocked="True">
+
+                <Binding Path="Number6" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NumberValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+
+            </TextBox>
+
+            <TextBox x:Name="R2_C0"
+                     Grid.Row="2" 
+                     Grid.Column="0"
+                     TextAlignment="Center"
+                     MaxLength="1"
+                     MaxLines="1"
+                     Margin="20, 10, 20, 10" 
+                     FontSize="25"
+                     GotFocus="TextBox_GotFocus"
+                     GotMouseCapture="TextBox_GotFocus" d:IsLocked="True">
+
+                <Binding Path="Number7" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NumberValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+
+            </TextBox>
+
+            <TextBox x:Name="R2_C1"
+                     Grid.Row="2" 
+                     Grid.Column="1"
+                     TextAlignment="Center"
+                     MaxLength="1"
+                     MaxLines="1"
+                     Margin="20, 10, 20, 10" 
+                     FontSize="25"
+                     GotFocus="TextBox_GotFocus"
+                     GotMouseCapture="TextBox_GotFocus" d:IsLocked="True">
+
+                <Binding Path="Number8" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NumberValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+
+            </TextBox>
+
+            <TextBox x:Name="R2_C2"
+                     Grid.Row="2" 
+                     Grid.Column="2"
+                     TextAlignment="Center"
+                     MaxLength="1"
+                     MaxLines="1"
+                     Margin="20, 10, 20, 10" 
+                     FontSize="25"
+                     GotFocus="TextBox_GotFocus"
+                     GotMouseCapture="TextBox_GotFocus" d:IsLocked="True">
+
+                <Binding Path="Number9" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NumberValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+
+            </TextBox>
+        </Grid>
+
+        <Grid x:Name="ResultGridRows" 
+              Margin="399,75,45,125" d:IsLocked="True">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock x:Name="FirstRowSum" 
+                       Grid.Row="0"
+                       FontSize="20"
+                       TextAlignment="Center"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" d:IsLocked="True"/>
+
+            <TextBlock x:Name="SecondRowSum" 
+                       Grid.Row="1"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" d:IsLocked="True"/>
+
+            <TextBlock x:Name="ThirdRowSum"
+                       Grid.Row="2" 
+                       FontSize="20" 
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" d:IsLocked="True"/>
+        </Grid>
+
+        <Grid x:Name="ResultGridCols"
+              Margin="5,19,5,301" d:IsLocked="True">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock x:Name="LeftDownDiagonalSum" 
+                       Grid.Column="0" 
+                       TextAlignment="Left"
+                       FontSize="20"
+                       Padding="18.5"
+                       FontWeight="Bold" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Right" d:IsLocked="True"/>
+
+            <TextBlock x:Name="FirstColSum" 
+                       Grid.Column="1"
+                       TextAlignment="Center"
+                       FontSize="20"
+                       FontWeight="Bold" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" d:IsLocked="True"/>
+
+            <TextBlock x:Name="SecondColSum" 
+                       Grid.Column="2"
+                       TextAlignment="Center"
+                       FontSize="20" 
+                       FontWeight="Bold" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Center" d:IsLocked="True"/>
+
+            <TextBlock x:Name="ThirdColSum" 
+                       Grid.Column="3" 
+                       TextAlignment="Center"
+                       FontSize="20" 
+                       FontWeight="Bold" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Center" d:IsLocked="True"/>
+
+            <TextBlock x:Name="RightDownDiagonalSum" 
+                       Grid.Column="4" 
+                       TextAlignment="Left"
+                       FontSize="20" 
+                       Padding="18.5"
+                       FontWeight="Bold" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Left" d:IsLocked="True"/>
+
+        </Grid>
+
+        <Grid x:Name="ButtonGrid"
+              Margin="100,280,100,21" d:IsLocked="True">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button Content="Submit" 
+                    IsDefault="True"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Width="120" 
+                    Height="40"
+                    Click="OnSubmitButtonClick" 
+                    IsTabStop="False" d:IsLocked="True"/>
+
+            <Button Content="Reset" 
+                    Grid.Column="1"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Width="120" 
+                    Height="40"
+                    Click="OnResetButtonClick" 
+                    IsTabStop="False" 
+                    d:IsLocked="True"/>
+
+        </Grid>
+
+        <Canvas Name="AboutCanvas"
+                Height="20" 
+                Margin="417,370,10,10" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" d:IsLocked="True">
+
+            <TextBlock Name="AboutTextBlock"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" 
+                       Foreground="#FF0C39D4" 
+                       TextDecorations="Underline"
+                       MouseRightButtonDown="AboutTextBlock_MouseEnter" 
+                       d:IsLocked="True">About</TextBlock>
+        </Canvas>
+    </Grid>
+
+</Window>

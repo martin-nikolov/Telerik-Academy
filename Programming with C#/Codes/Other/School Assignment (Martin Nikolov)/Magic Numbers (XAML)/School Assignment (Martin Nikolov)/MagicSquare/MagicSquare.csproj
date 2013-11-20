@@ -99,10 +99,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Close.png" />
+    <Resource Include="Resources\Close.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Minimize.png" />
+    <Resource Include="Resources\Minimize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

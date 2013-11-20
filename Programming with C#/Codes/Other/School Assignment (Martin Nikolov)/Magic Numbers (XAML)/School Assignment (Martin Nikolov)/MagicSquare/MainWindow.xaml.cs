@@ -18,11 +18,6 @@ namespace MagicSquare
             this.DataContext = this.matrix;
         }
 
-        public void CloseButton_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            SystemCommands.CloseWindow(this);
-        }
-
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             (sender as TextBox).SelectAll();
@@ -124,7 +119,7 @@ namespace MagicSquare
             this.SetResultBoxValues();
         }
 
-        private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void DragWindowOnMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             this.DragMove();
         }
@@ -139,16 +134,9 @@ namespace MagicSquare
             SystemCommands.MinimizeWindow(this);
         }
 
-        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("MAGIC QUADRAT ® CREATED BY MARTIN NIKOLOV", "ABOUT", MessageBoxButton.OK);
-            return;
-        }
-
         private void AboutTextBlock_MouseEnter(object sender, MouseEventArgs e)
         {
             MessageBox.Show("MAGIC QUADRAT ® CREATED BY MARTIN NIKOLOV", "ABOUT", MessageBoxButton.OK);
-            return;
         }
     }
 }

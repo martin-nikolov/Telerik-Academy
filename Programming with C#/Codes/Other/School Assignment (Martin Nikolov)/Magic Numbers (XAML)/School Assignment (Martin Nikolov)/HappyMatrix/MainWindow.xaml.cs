@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace MagicSquare
@@ -15,6 +16,11 @@ namespace MagicSquare
             this.InitializeComponent();
             this.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             this.DataContext = this.matrix;
+        }
+
+        public void CloseButton_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            SystemCommands.CloseWindow(this);
         }
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -77,13 +83,13 @@ namespace MagicSquare
             FirstRowSum.Text = matrix.GetFirstRowSum() != 0 ? matrix.GetFirstRowSum().ToString() : string.Empty;
             SecondRowSum.Text = matrix.GetSecondRowSum() != 0 ? matrix.GetSecondRowSum().ToString() : string.Empty;
             ThirdRowSum.Text = matrix.GetThirdRowSum() != 0 ? matrix.GetThirdRowSum().ToString() : string.Empty;
-            RightDownDiagonalSum.Text = matrix.RightDownDiagonal() != 0 ? matrix.RightDownDiagonal().ToString() : string.Empty;
-            LeftDownDiagonalSum.Text = matrix.LeftDownDiagonal() != 0 ? matrix.LeftDownDiagonal().ToString() : string.Empty;
 
             // Change content of result boxex on COLS
             FirstColSum.Text = matrix.GetFirstColSum() != 0 ? matrix.GetFirstColSum().ToString() : string.Empty;
             SecondColSum.Text = matrix.GetSecondColSum() != 0 ? matrix.GetSecondColSum().ToString() : string.Empty;
             ThirdColSum.Text = matrix.GetThirdColSum() != 0 ? matrix.GetThirdColSum().ToString() : string.Empty;
+
+            // Change content of result boxex on DIAGONALS
             RightDownDiagonalSum.Text = matrix.RightDownDiagonal() != 0 ? matrix.RightDownDiagonal().ToString() : string.Empty;
             LeftDownDiagonalSum.Text = matrix.LeftDownDiagonal() != 0 ? matrix.LeftDownDiagonal().ToString() : string.Empty;
 
@@ -116,6 +122,33 @@ namespace MagicSquare
         {
             this.RefreshMatrixValues();
             this.SetResultBoxValues();
+        }
+
+        private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void CloseImage_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            SystemCommands.CloseWindow(this);
+        }
+
+        private void MinimizeImage_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
+        }
+
+        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("MAGIC QUADRAT ® CREATED BY MARTIN NIKOLOV", "ABOUT", MessageBoxButton.OK);
+            return;
+        }
+
+        private void AboutTextBlock_MouseEnter(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("MAGIC QUADRAT ® CREATED BY MARTIN NIKOLOV", "ABOUT", MessageBoxButton.OK);
+            return;
         }
     }
 }

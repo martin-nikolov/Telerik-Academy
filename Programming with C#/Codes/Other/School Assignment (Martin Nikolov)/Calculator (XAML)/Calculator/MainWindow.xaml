@@ -1,0 +1,98 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" x:Class="CalculatorXaml.MainWindow"
+    Title="Calculator" 
+    Height="325" 
+    Width="231"
+    Background="AliceBlue"
+    ResizeMode="NoResize">
+
+    <Grid x:Name="MainGrid" d:IsLocked="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="230" />
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="ResultHistory"
+                 Grid.Row="0"
+                 Grid.Column="0"
+                 FontSize="10"
+                 MaxLength="10"
+                 IsReadOnly="True"
+                 TextAlignment="Right" 
+                 VerticalContentAlignment="Center" 
+                 Margin="17,10,17,39"
+                 Panel.ZIndex="10"/>
+
+        <TextBox x:Name="InputValueBox"
+                 LayoutUpdated="InputValueBox_LayoutUpdated"
+                 Grid.Row="0"
+                 Grid.Column="0"
+                 FontSize="25"
+                 MaxLength="10"
+                 Margin="17, 10, 17, -5"
+                 TextAlignment="Right" 
+                 IsReadOnly="True"
+                 VerticalContentAlignment="Bottom">
+        </TextBox>
+
+        <Grid x:Name="ButtonsGrid"
+              Grid.Row="2"
+              Height="200"
+              Width="200">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button IsTabStop="False" Click="OnClearLastDigitClick" Grid.Row="0" Grid.Column="0" Margin="5" Content="◀--"/>
+            <Button IsTabStop="False" Click="OnClearButtonClick" Grid.Row="0" Grid.Column="1" Margin="5" Content="CE"/>
+            <Button IsTabStop="False" Click="OnClearAllResultClick" Grid.Row="0" Grid.Column="2" Margin="5" Content="C"/>
+            <Button IsTabStop="False" Click="OnChangeSignClick" Grid.Row="0" Grid.Column="3" Margin="5" Content="±"/>
+            <Button IsTabStop="False" Click="OnSqrtButtonClick" Grid.Row="0" Grid.Column="4" Margin="5" Content="√"/>
+
+            <Button IsTabStop="False" Click="OnDiviseOfXClick" Grid.Row="1" Grid.Column="3" Margin="5" Content="/"/>
+            <Button IsTabStop="False" IsEnabled="false" Grid.Row="1" Grid.Column="4" Margin="5" Content="%"/>
+            <Button IsTabStop="False" Click="OnMultiplyButtonClick" Grid.Row="2" Grid.Column="3" Margin="5" Content="*"/>
+            <Button IsTabStop="False" IsEnabled="False" Click="OnDiviseOfOneClick" Grid.Row="2" Grid.Column="4" Margin="5" Content="1/x"/>
+
+            <Button IsTabStop="False" Click="OnCommaClick" Grid.Row="4" Grid.Column="2" Margin="5" Content="."/>
+            <Button IsTabStop="False" Click="OnPlusButtonClick" Grid.Row="4" Grid.Column="3" Margin="5" Content="+"/>
+            <Button IsTabStop="False" Click="OnMinusButtonClick" Grid.Row="3" Grid.Column="3" Margin="5" Content="-"/>
+
+            <Grid Grid.Row="4" Grid.ColumnSpan="2">
+                <Button IsTabStop="False" Click="OnNumericButtonClick" Margin="5" Content="0"/>
+            </Grid>
+            <Button IsTabStop="False" Grid.Row="3" Grid.Column="0" Click="OnNumericButtonClick" Margin="5" Content="1"/>
+            <Button IsTabStop="False" Grid.Row="3" Grid.Column="1" Click="OnNumericButtonClick" Margin="5" Content="2"/>
+            <Button IsTabStop="False" Grid.Row="3" Grid.Column="2" Click="OnNumericButtonClick" Margin="5" Content="3"/>
+            <Button IsTabStop="False" Grid.Row="2" Grid.Column="0" Click="OnNumericButtonClick" Margin="5" Content="4"/>
+            <Button IsTabStop="False" Grid.Row="2" Grid.Column="1" Click="OnNumericButtonClick" Margin="5" Content="5"/>
+            <Button IsTabStop="False" Grid.Row="2" Grid.Column="2" Click="OnNumericButtonClick" Margin="5" Content="6"/>
+            <Button IsTabStop="False" Grid.Row="1" Grid.Column="0" Click="OnNumericButtonClick" Margin="5" Content="7"/>
+            <Button IsTabStop="False" Grid.Row="1" Grid.Column="1" Click="OnNumericButtonClick" Margin="5" Content="8"/>
+            <Button IsTabStop="False" Grid.Row="1" Grid.Column="2" Click="OnNumericButtonClick" Margin="5" Content="9"/>
+
+            <Grid Grid.Row="3" Grid.Column="4" Grid.RowSpan="2">
+                <Button Click="OnCalculateExpressionClick" IsTabStop="False" Grid.Row="3" Grid.Column="4" Margin="5" FontSize="20" 
+                        FontWeight="Bold" IsDefault="True" Content="="/>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>

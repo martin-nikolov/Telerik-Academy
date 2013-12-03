@@ -3,7 +3,8 @@ using System.Linq;
 
 class LoanAccount : Account, IDeposit<LoanAccount>
 {
-    public LoanAccount(CustomerType customerType, decimal balance, decimal interestRate) : base(customerType, balance, interestRate)
+    public LoanAccount(CustomerType customerType, decimal balance, decimal interestRate) 
+        : base(customerType, balance, interestRate)
     {
     }
 

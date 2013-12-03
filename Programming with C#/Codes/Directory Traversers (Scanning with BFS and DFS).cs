@@ -26,9 +26,9 @@ public static class DirectoryTraversers
     /// which should be traversed</param>
     public static void TraverseDirBFS(string directoryPath)
     {
-        Queue<DirectoryInfo> visitedDirsQueue =
-            new Queue<DirectoryInfo>();
+        Queue<DirectoryInfo> visitedDirsQueue = new Queue<DirectoryInfo>();
         visitedDirsQueue.Enqueue(new DirectoryInfo(directoryPath));
+
         while (visitedDirsQueue.Count > 0)
         {
             try
@@ -36,6 +36,7 @@ public static class DirectoryTraversers
                 DirectoryInfo currentDir = visitedDirsQueue.Dequeue();
                 Console.WriteLine(currentDir.FullName);
                 DirectoryInfo[] children = currentDir.GetDirectories();
+                
                 foreach (DirectoryInfo child in children)
                 {
                     visitedDirsQueue.Enqueue(child);

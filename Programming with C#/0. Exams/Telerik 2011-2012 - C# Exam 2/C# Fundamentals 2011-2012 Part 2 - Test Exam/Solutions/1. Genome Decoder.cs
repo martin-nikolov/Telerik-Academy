@@ -1,85 +1,97 @@
 using System;
-using System.Linq;
 using System.Collections.Generic;
-using System.Text;
 
 class GenomeDecoder
 {
-    public struct Elements
-    {
-        public int repeats;
-        public char letter;
-    }
+    static List<Letters> letters = new List<Letters>();
+    static List<string> result = new List<string>();
 
     static void Main()
     {
-        int[] tokens = Console.ReadLine().Split(' ').Select(ch => int.Parse(ch)).ToArray();
+        string[] tokens = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        int lettersPerLine = int.Parse(tokens[0]);
+        int group = int.Parse(tokens[1]);
 
-        int n = tokens[0], m = tokens[1];
-        string genome = Console.ReadLine();
+        string input = Console.ReadLine();
 
-        List<Elements> elements = new List<Elements>();
-        elements = AddLetterRepeatsToList(ref elements, genome);
+        SeparateLetters(input);
+        Decode(lettersPerLine, group);
+        AddLineIndicators();
 
-        int indexLetter = 0, indexLine = 1;
+        foreach (var item in result) Console.WriteLine(item);
+    }
 
-        List<StringBuilder> lines = new List<StringBuilder>();
+    static void AddLineIndicators()
+    {
+        int numberOfSpaces = (result.Count).ToString().Length - 1;
 
-        int letterOnLine = n;
-
-        while (indexLetter < elements.Count)
-        {
-            StringBuilder line = new StringBuilder();
-            line.Append(string.Format("{0} ", indexLine++));
-
-            for (int i = 1; i <= n; i++)
-            {
-                line.Append(elements[indexLetter].letter);
-
-                elements[indexLetter] =
-                    new Elements() { repeats = elements[indexLetter].repeats - 1, letter = elements[indexLetter].letter };
-
-                if (elements[indexLetter].repeats == 0) indexLetter++;
-
-                if (indexLetter >= elements.Count) break;
-
-                if (i % m == 0) line.Append(" ");
-            }
-
-            lines.Add(line);
-        }
-
-        int numberOfSpaces = (--indexLine).ToString().Length - 1;
-
-        for (int i = 0; i < lines.Count; i++)
+        for (int i = 0; i < result.Count; i++)
         {
             if (i == 9 || i == 99 || i == 999 || i == 9999 || i == 99999) numberOfSpaces--;
 
-            lines[i].Insert(0, new string(' ', numberOfSpaces));
-
-            if (lines[i][lines[i].Length - 1] == ' ') lines[i].Remove(lines[i].Length - 1, 1);
+            result[i] = result[i].Insert(0, new string(' ', numberOfSpaces) + (i + 1) + " ");
         }
-
-        foreach (var line in lines) Console.WriteLine(line);
     }
 
-    static List<Elements> AddLetterRepeatsToList(ref List<Elements> elements, string genomeEncoded)
+    static void Decode(int lettersPerLine, int group)
     {
-        int number = 0;
-        for (int i = 0; i < genomeEncoded.Length; i++)
+        string currentLine = string.Empty;
+        int lettersCurrentLine = 0;
+
+        for (int i = 0; i < letters.Count; i++)
         {
-            if (char.IsDigit(genomeEncoded[i]))
+            while (true)
             {
-                number = number * 10 + (genomeEncoded[i] - '0');
-            }
-            else
-            {
-                if (number == 0) number = 1;
-                elements.Add(new Elements() { letter = genomeEncoded[i], repeats = number });
-                number = 0;
+                currentLine += letters[i].letter;
+                letters[i] = new Letters(letters[i].letter, letters[i].count - 1);
+                lettersCurrentLine++;
+
+                if (lettersCurrentLine % group == 0)
+                    currentLine += " ";
+
+                if (lettersCurrentLine == lettersPerLine)
+                {
+                    result.Add(currentLine.Trim());
+                    lettersCurrentLine = 0;
+                    currentLine = string.Empty;
+                }
+
+                if (letters[i].count == 0) break;
             }
         }
 
-        return elements;
+        if (lettersCurrentLine > 0) result.Add(currentLine);
+    }
+
+    static void SeparateLetters(string input)
+    {
+        int count = 0;
+
+        for (int i = 0; i < input.Length; i++)
+        {
+            if (char.IsDigit(input[i]))
+            {
+                count = count * 10 + (input[i] - '0');
+            }
+            else if (char.IsLetter(input[i]))
+            {
+                if (count == 0) count = 1;
+
+                letters.Add(new Letters(input[i], count));
+                count = 0;
+            }
+        }
+    }
+
+    struct Letters
+    {
+        public char letter;
+        public int count;
+
+        public Letters(char letter, int count)
+        {
+            this.letter = letter;
+            this.count = count;
+        }
     }
 }

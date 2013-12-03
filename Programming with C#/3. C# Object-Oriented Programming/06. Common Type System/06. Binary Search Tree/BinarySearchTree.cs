@@ -71,12 +71,11 @@ public partial class BinarySearchTree<T> : ICloneable, IEnumerable<T>
         {
             int compareTo = key.CompareTo(current.Value);
 
-            if (compareTo < 0)
-                current = current.LeftChild;
-            else if (compareTo > 0)
-                current = current.RightChild;
-            else
-                break;
+            if (compareTo < 0) current = current.LeftChild;
+            
+            else if (compareTo > 0) current = current.RightChild;
+            
+            else break;
         }
 
         return current;

@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace DocumentSystem
+﻿namespace DocumentSystem
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     class WordDocument : OfficeDocument, IEditable
     {
-        public long? NumberOfCharacters { get; set; }
+        public long? NumberOfCharacters { get; private set; }
+
+        public void ChangeContent(string newContent)
+        {
+            this.Content = newContent;
+        }
 
         public override void LoadProperty(string key, string value)
         {
@@ -25,11 +30,6 @@ namespace DocumentSystem
             output.Add(new KeyValuePair<string, object>("chars", this.NumberOfCharacters));
 
             base.SaveAllProperties(output);
-        }
-
-        public void ChangeContent(string newContent)
-        {
-            this.Content = newContent;
         }
     }
 }

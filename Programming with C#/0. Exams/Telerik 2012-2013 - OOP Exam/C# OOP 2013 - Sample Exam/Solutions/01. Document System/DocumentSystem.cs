@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DocumentSystem
+﻿namespace DocumentSystem
 {
+    using System;
+    using System.Collections.Generic;
+
     public class DocumentSystem
     {
-        public static readonly IList<IDocument> documents = new List<IDocument>();
+        private static ICollection<IDocument> documents = new List<IDocument>();
 
         static void Main()
         {
@@ -46,6 +46,7 @@ namespace DocumentSystem
         {
             string[] cmdAttributes = parameters.Split(
                 new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+
             if (cmd == "AddTextDocument")
             {
                 AddTextDocument(cmdAttributes);
@@ -98,9 +99,9 @@ namespace DocumentSystem
 
         private static void AddDocument(IDocument document, string[] attributes)
         {
-            foreach (var attrib in attributes)
+            foreach (var attr in attributes)
             {
-                string[] args = attrib.Split('=');
+                string[] args = attr.Split('=');
                 document.LoadProperty(args[0], args[1]);
             }
 
@@ -119,7 +120,7 @@ namespace DocumentSystem
         {
             AddDocument(new TextDocument(), attributes);
         }
-       
+
         private static void AddPdfDocument(string[] attributes)
         {
             AddDocument(new PDFDocument(), attributes);
@@ -153,9 +154,9 @@ namespace DocumentSystem
             }
             else
             {
-                foreach (var doc in documents)
+                foreach (var document in documents)
                 {
-                    Console.WriteLine(doc);
+                    Console.WriteLine(document);
                 }
             }
         }
@@ -164,20 +165,22 @@ namespace DocumentSystem
         {
             bool found = false;
 
-            foreach (var doc in documents)
+            foreach (var document in documents)
             {
-                if (doc.Name.Equals(name))
+                var encryptableDocument = document as IEncryptable;
+
+                if (document.Name.Equals(name))
                 {
                     found = true;
 
-                    if (doc is EncryptableDocument)
+                    if (encryptableDocument != null)
                     {
-                        (doc as EncryptableDocument).Encrypt();
-                        Console.WriteLine("Document encrypted: " + name);
+                        encryptableDocument.Encrypt();
+                        Console.WriteLine("Document encrypted: " + document.Name);
                     }
                     else
                     {
-                        Console.WriteLine("Document does not support encryption: " + name);
+                        Console.WriteLine("Document does not support encryption: " + document.Name);
                     }
                 }
             }
@@ -192,20 +195,22 @@ namespace DocumentSystem
         {
             bool found = false;
 
-            foreach (var doc in documents)
+            foreach (var document in documents)
             {
-                if (doc.Name.Equals(name))
+                var decryptableDocument = document as IEncryptable;
+
+                if (document.Name.Equals(name))
                 {
                     found = true;
 
-                    if (doc is EncryptableDocument)
+                    if (decryptableDocument != null)
                     {
-                        (doc as EncryptableDocument).Decrypt();
-                        Console.WriteLine("Document decrypted: " + name);
+                        decryptableDocument.Decrypt();
+                        Console.WriteLine("Document decrypted: " + document.Name);
                     }
                     else
                     {
-                        Console.WriteLine("Document does not support decryption: " + name);
+                        Console.WriteLine("Document does not support decryption: " + document.Name);
                     }
                 }
             }
@@ -218,45 +223,42 @@ namespace DocumentSystem
 
         private static void EncryptAllDocuments()
         {
-            bool foundEncryptable = false;
+            bool fountEncryptable = false;
 
-            foreach (var doc in documents)
+            foreach (var document in documents)
             {
-                if (doc is EncryptableDocument)
+                var decryptableDocument = document as IEncryptable;
+
+                if (decryptableDocument != null)
                 {
-                    foundEncryptable = true;
-                    (doc as EncryptableDocument).Encrypt();
+                    fountEncryptable = true;
+                    decryptableDocument.Encrypt();
                 }
             }
 
-            if (foundEncryptable)
-            {
-                Console.WriteLine("All documents encrypted");
-            }
-            else
-            {
-                Console.WriteLine("No encryptable documents found");
-            }
+            Console.WriteLine(fountEncryptable ? "All documents encrypted" : "No encryptable documents found");
         }
 
         private static void ChangeContent(string name, string content)
         {
             bool found = false;
 
-            foreach (var doc in documents)
+            foreach (var document in documents)
             {
-                if (doc.Name.Equals(name))
-                { 
+                var editableDocument = document as IEditable;
+
+                if (document.Name.Equals(name))
+                {
                     found = true;
 
-                    if (doc is IEditable)
+                    if (editableDocument != null)
                     {
-                        (doc as IEditable).ChangeContent(content);
-                        Console.WriteLine("Document content changed: " + name);
+                        editableDocument.ChangeContent(content);
+                        Console.WriteLine("Document content changed: " + document.Name);
                     }
                     else
                     {
-                        Console.WriteLine("Document is not editable: " + name);
+                        Console.WriteLine("Document is not editable: " + document.Name);
                     }
                 }
             }

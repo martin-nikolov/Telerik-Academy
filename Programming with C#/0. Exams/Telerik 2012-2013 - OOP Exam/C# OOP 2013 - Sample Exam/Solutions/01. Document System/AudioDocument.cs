@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace DocumentSystem
+﻿namespace DocumentSystem
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     class AudioDocument : MultimediaDocument
     {
-        public long SampleRate { get; set; }
+        public long? SampleRate { get; private set; }
 
         public override void LoadProperty(string key, string value)
         {

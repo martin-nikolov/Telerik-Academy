@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D38D946D-40C1-4B14-9C25-F073CBE04007}</ProjectGuid>
+    <ProjectGuid>{5FAC45F6-185E-4806-8AFE-EFCE4894F9CA}</ProjectGuid>
     <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DocumentSystem</RootNamespace>
     <AssemblyName>DocumentSystem</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -33,26 +34,32 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AudioDocument.cs" />
     <Compile Include="BinaryDocument.cs" />
     <Compile Include="Document.cs" />
-    <Compile Include="DocumentSystem.cs" />
     <Compile Include="EncryptableDocument.cs" />
     <Compile Include="ExcelDocument.cs" />
     <Compile Include="IDocument.cs" />
     <Compile Include="IEditable.cs" />
     <Compile Include="IEncryptable.cs" />
+    <Compile Include="DocumentSystem.cs" />
     <Compile Include="MultimediaDocument.cs" />
     <Compile Include="OfficeDocument.cs" />
     <Compile Include="PDFDocument.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextDocument.cs" />
     <Compile Include="VideoDocument.cs" />
     <Compile Include="WordDocument.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="DocumentSystemDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

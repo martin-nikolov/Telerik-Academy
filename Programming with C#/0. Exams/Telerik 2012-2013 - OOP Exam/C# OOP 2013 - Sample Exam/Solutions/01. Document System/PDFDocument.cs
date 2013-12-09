@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace DocumentSystem
+﻿namespace DocumentSystem
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     class PDFDocument : EncryptableDocument
     {
-        public long? NumberOfPages { get; set; }
+        public long? NumberOfPages { get; private set; }
 
         public override void LoadProperty(string key, string value)
         {

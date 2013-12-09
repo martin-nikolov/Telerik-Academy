@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace DocumentSystem
+﻿namespace DocumentSystem
 {
-    public class VideoDocument : MultimediaDocument
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    abstract class OfficeDocument : EncryptableDocument
     {
-        public long? FrameRate { get; set; }
+        public string Version { get; protected set; }
 
         public override void LoadProperty(string key, string value)
         {
-            if (key.Equals("framerate"))
+            if (key.Equals("version"))
             {
-                this.FrameRate = long.Parse(value);
+                this.Version = value;
             }
             else
             {
@@ -22,7 +22,7 @@ namespace DocumentSystem
 
         public override void SaveAllProperties(IList<KeyValuePair<string, object>> output)
         {
-            output.Add(new KeyValuePair<string, object>("framerate", this.FrameRate));
+            output.Add(new KeyValuePair<string, object>("version", this.Version));
 
             base.SaveAllProperties(output);
         }

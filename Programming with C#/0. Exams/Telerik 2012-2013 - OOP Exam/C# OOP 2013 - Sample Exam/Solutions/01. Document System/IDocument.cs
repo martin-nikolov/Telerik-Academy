@@ -1,7 +1,7 @@
-using System.Collections.Generic;
-
 namespace DocumentSystem
 {
+    using System.Collections.Generic;
+
     public interface IDocument
     {
         string Name { get; }

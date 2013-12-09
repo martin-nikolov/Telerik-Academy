@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace DocumentSystem
+﻿namespace DocumentSystem
 {
-    public abstract class MultimediaDocument : BinaryDocument
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    abstract class BinaryDocument : Document
     {
-        public long? Length { get; protected set; }
+        public long? Size { get; protected set; }
 
         public override void LoadProperty(string key, string value)
         {
-            if (key.Equals("length"))
+            if (key.Equals("size"))
             {
-                this.Length = long.Parse(value);
+                this.Size = long.Parse(value);
             }
             else
             {
@@ -22,7 +22,7 @@ namespace DocumentSystem
 
         public override void SaveAllProperties(IList<KeyValuePair<string, object>> output)
         {
-            output.Add(new KeyValuePair<string, object>("length", this.Length));
+            output.Add(new KeyValuePair<string, object>("size", this.Size));
 
             base.SaveAllProperties(output);
         }

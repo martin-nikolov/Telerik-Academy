@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-
-namespace DocumentSystem
+﻿namespace DocumentSystem
 {
+    using System;
+    using System.Linq;
+
     abstract class EncryptableDocument : BinaryDocument, IEncryptable
     {
         public bool IsEncrypted { get; private set; }

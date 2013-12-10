@@ -1,0 +1,117 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    x:Class="ProgramDioptase.RentOptionScreen"
+    Title="Rent option screen"
+    Height="400"  
+    Width="600" 
+    Background="Lavender" 
+    WindowStyle="None"
+    ResizeMode="NoResize" 
+    WindowStartupLocation="CenterOwner"
+    MouseLeftButtonDown="MoveTheWindow" 
+    Topmost="True"
+    ShowInTaskbar="False">
+
+    <Grid>
+        <Border BorderBrush="Black" 
+                BorderThickness="1.5">
+            <Grid>
+                <Canvas>
+
+                    <Grid Canvas.Left="74" 
+                          Canvas.Top="72" 
+                          Height="229">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="29"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Canvas.Left="76" 
+                                   Grid.Row="0"
+                                   TextWrapping="Wrap" 
+                                   Text="Choose return date:" 
+                                   Canvas.Top="72"
+                                   TextAlignment="Center"
+                                   Height="29"
+                                   Width="212" FontSize="20"/>
+
+                        <Calendar x:Name="CalendarControl"
+                                  Grid.Row="1"
+                                  HorizontalAlignment="Left"
+                                  VerticalAlignment="Top"
+                                  DisplayMode="Month"
+                                  Canvas.Left="74" 
+                                  Canvas.Top="102"
+                                  SelectedDatesChanged="CalendarControl_SelectedDatesChanged">
+
+                            <Calendar.RenderTransform>
+                                <ScaleTransform ScaleX="1.2" 
+                                                ScaleY="1.2" />
+                            </Calendar.RenderTransform>
+                        </Calendar>
+                    </Grid>
+
+                    <Grid Canvas.Left="317" Canvas.Top="94" Height="198" Width="254">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock x:Name="PricePerDayTextBlock"
+                                   Grid.Row="0"
+                                   FontSize="18"
+                                   Text="Price per day: "
+                                   VerticalAlignment="Center"
+                                   Canvas.Left="331" 
+                                   Canvas.Top="124"/>
+
+                        <TextBlock x:Name="PeriodTextBlock"
+                                   Grid.Row="1"
+                                   FontSize="18"
+                                   Text="Period: "
+                                   Visibility="Hidden"
+                                   VerticalAlignment="Center"
+                                   Canvas.Left="331" 
+                                   Canvas.Top="172"/>
+
+                        <TextBlock x:Name="TotalPriceTextBlock"
+                                   Grid.Row="2"
+                                   FontSize="18"
+                                   Text="Total price: "
+                                   Visibility="Hidden"
+                                   VerticalAlignment="Center"
+                                   Canvas.Left="331"
+                                   Canvas.Top="224"/>
+                    </Grid>
+
+                </Canvas>
+
+                <Rectangle x:Name="TopLeftRectangle"
+
+                           Fill="Lavender"
+                           MouseMove="ToMainWindow_MouseMove"
+                           MouseLeave="ToMainWindow_MouseLeave"
+                           MouseLeftButtonDown="ToPreviousWindow_MouseLeftButtonDown"
+                           Margin="0,0,540,340"/>
+
+                <Image x:Name="ToMainWindow"
+                       Source="Resources\back-arrow.png" 
+                       MouseMove="ToMainWindow_MouseMove"
+                       MouseLeave="ToMainWindow_MouseLeave"
+                       MouseLeftButtonDown="ToPreviousWindow_MouseLeftButtonDown"
+                       Margin="0,5,538,342"/>
+
+                <Button x:Name="AddToBasketButton"
+                        Content="Add to Basket"
+                        IsEnabled="False"
+                        Click="OnAddToBasketButtonClick"
+                        Margin="228,339,228,0" 
+                        FontSize="20"
+                        VerticalAlignment="Top" Height="36"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

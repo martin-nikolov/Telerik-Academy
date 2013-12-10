@@ -1,0 +1,169 @@
+﻿<Window 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" 
+    x:Class="ProgramDioptase.MainWindow"
+    Title="Home" 
+    Height="600" 
+    Width="700" 
+    Background="Lavender" 
+    WindowStyle="None" 
+    ResizeMode="NoResize" 
+    WindowStartupLocation="CenterScreen"
+    MouseLeftButtonDown="MoveTheWindow" 
+    Closing="Window_Closing" 
+    AllowsTransparency="True"
+    IsVisibleChanged="Window_IsVisibleChanged"
+    Icon="Resources\TaskBar Icons\Book.png">
+
+    <Canvas x:Name="MainCanvas" d:IsLocked="False">
+
+        <Image x:Name="MinimazeButton" 
+               Source="Resources\Minimize.png"
+               Height="30" 
+               Canvas.Left="630" 
+               Canvas.Top="1"
+               MouseDown="MinimazeButton_MouseDown"/>
+
+        <Image x:Name="CloseButton" 
+               Source="Resources\Close.png"
+               Height="30"
+               Canvas.Left="660"
+               MouseDown="CloseButton_MouseDown"/>
+
+        <Rectangle x:Name="TopLine" 
+                   Height="100" 
+                   Width="700" 
+                   Fill="CornflowerBlue" 
+                   Canvas.Top="115" 
+                   MouseMove="MoviesLabel_MouseMove"
+                   MouseLeave="MoviesLabel_MouseLeave"
+                   MouseLeftButtonDown="MoviesLabel_MouseLeftButtonDown"/>
+
+        <Rectangle x:Name="MiddleLine"
+                   Height="100" 
+                   Width="700" 
+                   Fill="CornflowerBlue" 
+                   Canvas.Top="254" 
+                   MouseMove="GamesLabel_MouseMove" 
+                   MouseLeave="GamesLabel_MouseLeave"
+                   MouseLeftButtonDown="GamesLabel_MouseLeftButtonDown"/>
+
+        <Rectangle x:Name="BottomLine"
+                   Height="100"
+                   Width="700"
+                   Fill="CornflowerBlue"
+                   Canvas.Top="394" 
+                   MouseMove="MusicLabel_MouseMove"
+                   MouseLeave="MusicLabel_MouseLeave"
+                   MouseLeftButtonDown="MusicLabel_MouseLeftButtonDown"/>
+
+        <Rectangle x:Name="BoxContainer"
+                   Height="430"
+                   Width="300" 
+                   Fill="Gray" 
+                   Canvas.Left="312" 
+                   Canvas.Top="87"/>
+
+        <Rectangle x:Name="ClientsBox"
+                   Height="190"
+                   Width="280" 
+                   Fill="Lavender" 
+                   Canvas.Left="322" 
+                   Canvas.Top="102" 
+                   MouseMove="ClientsBox_MouseMove"
+                   MouseLeave="ClientsBox_MouseLeave"
+                   MouseLeftButtonDown="ClientsBox_MouseLeftButtonDown"/>
+
+        <Rectangle x:Name="StatisticsBox"
+                   Height="190"
+                   Width="280"
+                   Fill="Lavender"
+                   Canvas.Left="322"
+                   Canvas.Top="310" 
+                   MouseMove="StatisticsBox_MouseMove"
+                   MouseLeave="StatisticsBox_MouseLeave"
+                   MouseLeftButtonDown="StatisticsBox_MouseLeftButtonDown"/>
+
+        <Image x:Name="MoviesLabel"
+               Source="Resources\MainWindow\movies-label.png"
+               Height="100"
+               Width="307"
+               Canvas.Top="115" 
+               MouseMove="MoviesLabel_MouseMove"
+               MouseLeave="MoviesLabel_MouseLeave" 
+               MouseLeftButtonDown="MoviesLabel_MouseLeftButtonDown"/>
+
+        <Image x:Name="GamesLabel" 
+               Source="Resources\MainWindow\games-label.png"
+               Height="100"
+               Width="292" 
+               Canvas.Left="10" 
+               Canvas.Top="254" 
+               MouseMove="GamesLabel_MouseMove"
+               MouseLeave="GamesLabel_MouseLeave"
+               MouseLeftButtonDown="GamesLabel_MouseLeftButtonDown"/>
+
+        <Image x:Name="MusicLabel"
+               Source="Resources\MainWindow\music-label.png"
+               Height="100" 
+               Width="307"
+               Canvas.Top="394" 
+               MouseMove="MusicLabel_MouseMove" 
+               MouseLeave="MusicLabel_MouseLeave"
+               MouseLeftButtonDown="MusicLabel_MouseLeftButtonDown"/>
+
+        <Image x:Name="UserIcon"
+               Source="Resources\MainWindow\user-icon.png"
+               Canvas.Left="382" 
+               Canvas.Top="102"
+               Height="190"
+               Width="165" 
+               MouseMove="ClientsBox_MouseMove" 
+               MouseLeave="ClientsBox_MouseLeave"
+               MouseLeftButtonDown="ClientsBox_MouseLeftButtonDown"/>
+
+        <Image x:Name="StatisticsIcon" 
+               Source="Resources\MainWindow\statistics-icon.png"
+               Height="190" 
+               Width="280"
+               Canvas.Left="322" 
+               Canvas.Top="310" 
+               MouseMove="StatisticsBox_MouseMove"
+               MouseLeave="StatisticsBox_MouseLeave"
+               MouseLeftButtonDown="StatisticsBox_MouseLeftButtonDown"/>
+
+        <Image x:Name="GamesIcon" 
+               Source="Resources\MainWindow\games-icon.png"
+               Canvas.Left="612"
+               Canvas.Top="254"
+               Height="100"
+               Width="93" 
+               MouseMove="GamesLabel_MouseMove"
+               MouseLeave="GamesLabel_MouseLeave"
+               MouseLeftButtonDown="GamesLabel_MouseLeftButtonDown"/>
+
+        <Image x:Name="MoviesIcon" 
+               Source="Resources\MainWindow\video-icon.png" 
+               Height="100" 
+               Width="78"
+               Canvas.Left="617"
+               Canvas.Top="115" 
+               MouseMove="MoviesLabel_MouseMove"
+               MouseLeave="MoviesLabel_MouseLeave"
+               MouseLeftButtonDown="MoviesLabel_MouseLeftButtonDown"/>
+
+        <Image x:Name="MusicIcon"
+               Source="Resources\MainWindow\music-icon.png"
+               Canvas.Left="602"
+               Canvas.Top="394"
+               Height="97" 
+               Width="99" 
+               MouseMove="MusicLabel_MouseMove"
+               MouseLeave="MusicLabel_MouseLeave"
+               MouseLeftButtonDown="MusicLabel_MouseLeftButtonDown"/>
+
+    </Canvas>
+</Window>

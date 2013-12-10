@@ -1,0 +1,115 @@
+﻿<Window x:Class="ProgramDioptase.GamesLibrary"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Games"
+        Height="700" 
+        Width="900" 
+        Background="Lavender" 
+        WindowStyle="None" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="MoveTheWindow" 
+        Closing="Window_Closing" 
+        AllowsTransparency="True"
+        IsVisibleChanged="Window_IsVisibleChanged"
+        Icon="Resources\TaskBar Icons\games-icon.png">
+
+    <Grid>
+        <Expander x:Name="GenreExpander" 
+                  Header="Genres" 
+                  FontSize="15" 
+                  Margin="777,138,10,28">
+
+            <StackPanel x:Name="GenrePanel" 
+                        Margin="0,4,-2,0" 
+                        Background="Lavender">
+                <CheckBox Margin="3 2 0 0" Checked="OnCheckBoxSelection" Unchecked="OnCheckBoxSelection" Content="Action"/>
+                <CheckBox Margin="3 2 0 0" Checked="OnCheckBoxSelection" Unchecked="OnCheckBoxSelection" Content="Adventure" />
+                <CheckBox Margin="3 2 0 0" Checked="OnCheckBoxSelection" Unchecked="OnCheckBoxSelection" Content="Educational" />
+                <CheckBox Margin="3 2 0 0" Checked="OnCheckBoxSelection" Unchecked="OnCheckBoxSelection" Content="FPS" />
+                <CheckBox Margin="3 2 0 0" Checked="OnCheckBoxSelection" Unchecked="OnCheckBoxSelection" Content="Horror" />
+                <CheckBox Margin="3 2 0 0" Checked="OnCheckBoxSelection" Unchecked="OnCheckBoxSelection" Content="MMORPG" />
+                <CheckBox Margin="3 2 0 0" Checked="OnCheckBoxSelection" Unchecked="OnCheckBoxSelection" Content="Role-Playing" />
+                <CheckBox Margin="3 2 0 0" Checked="OnCheckBoxSelection" Unchecked="OnCheckBoxSelection" Content="Simulation" />
+                <CheckBox Margin="3 2 0 0" Checked="OnCheckBoxSelection" Unchecked="OnCheckBoxSelection" Content="Strategy" />
+                <CheckBox Margin="3 2 0 0" Checked="OnCheckBoxSelection" Unchecked="OnCheckBoxSelection" Content="Sport" />
+
+                <Button x:Name="ResetCheckBoxexButton"
+                        Content="Reset"
+                        Width="50"
+                        Height="20"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        HorizontalAlignment="Left"
+                        FontSize="12"
+                        Margin="4 5 0 0"
+                        Click="OnResetCheckBoxedGenresButtonClick"/>
+            </StackPanel>
+        </Expander>
+
+        <Rectangle x:Name="TopLeftRectangle"
+                   Margin="0,0,842,643" 
+                   Fill="Lavender"
+                   MouseMove="ToMainWindow_MouseMove"
+                   MouseLeave="ToMainWindow_MouseLeave"
+                   MouseLeftButtonDown="ToMainWindow_MouseLeftButtonDown"/>
+
+        <Image x:Name="ToMainWindow"
+               Source="Resources\back-arrow.png" 
+               Margin="0,2,840,644"
+               MouseMove="ToMainWindow_MouseMove"
+               MouseLeave="ToMainWindow_MouseLeave"
+               MouseLeftButtonDown="ToMainWindow_MouseLeftButtonDown"/>
+
+        <Rectangle x:Name="TopRightRectangle"
+                   Margin="779,0,0,580" 
+                   Fill="CornflowerBlue"/>
+
+        <Image x:Name="GameIcon"
+               Source="Resources\MainWindow\games-icon.png" 
+               Margin="779,2,0,580"/>
+
+        <ScrollViewer Margin="89,72,158,28" 
+                      VerticalScrollBarVisibility="Auto">
+
+            <ScrollViewer.Resources>
+                <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">5</sys:Double>
+            </ScrollViewer.Resources>
+
+            <WrapPanel Name="AllGamesPanel"/>
+
+        </ScrollViewer>
+
+        <Canvas Margin="89,24,540,656" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Height="20" 
+                Width="271">
+
+            <TextBox x:Name="SearchBox" 
+                     Margin="10 0 0 0"
+                     HorizontalAlignment="Center" 
+                     Height="20" 
+                     TextWrapping="Wrap" 
+                     Text="Search by name" 
+                     VerticalAlignment="Center"
+                     Width="164" 
+                     VerticalContentAlignment="Center" 
+                     MaxLength="50"
+                     MaxLines="1"
+                     GotFocus="OnSearchBoxGotFocus"
+                     LostFocus="OnSearchBoxLostFocus"/>
+
+            <Button  Grid.Column="1"
+                     Content="Search" 
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center" 
+                     Width="75"
+                     Click="OnSearchButtonClick" 
+                     IsDefault="True" 
+                     Canvas.Left="179"/>
+        </Canvas>
+
+    </Grid>
+</Window>

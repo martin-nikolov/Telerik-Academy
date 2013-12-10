@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProgramDioptase.DataManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAigBAAAAAABAAAIAAAAAAACAAggCAEAAAAAAIAAI=</HashCode>
+      <FileName>DataManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProgramDioptase.ElementRenderer" Collapsed="true">
+    <Position X="3.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAACgABQAgAAAAQAAIAAAAAAQAACQAUQAAAAAA=</HashCode>
+      <FileName>ElementRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.Resources" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAQAAEAAAABEAAIADAACAAgAAAAAAIAAAACAEAAEAA=</HashCode>
+      <FileName>Resources.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProgramDioptase.CatalogItems.Game" Collapsed="true">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>CatalogItems\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.CatalogItems.Movie" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>CatalogItems\Movie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.CatalogItems.Music" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>CatalogItems\Music.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.ClientDescription.Client" Collapsed="true">
+    <Position X="0.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAIAAIAAAAAAgAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClientDescription\Client.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProgramDioptase.ClientDescription.Person" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAQAAEAAAAQAAAAAAAACAAgAAAAAAAA=</HashCode>
+      <FileName>ClientDescription\Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProgramDioptase.ItemTypes.CatalogItem" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAMAAAQAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>ItemTypes\CatalogItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProgramDioptase.ItemTypes.RentableItem" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAACAAAAAAAAABAAAAAAIAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ItemTypes\RentableItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProgramDioptase.ItemTypes.SaleableItem" Collapsed="true">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ItemTypes\SaleableItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProgramDioptase.Basket" Collapsed="true">
+    <Position X="5.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAgAIAAIAAAAAAAAAAEAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Basket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.App" Collapsed="true">
+    <Position X="0.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.ClientsLibrary" Collapsed="true">
+    <Position X="2.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQEBEoBAAAAQAAABBAAAAGBQAAAEACAAAAgCAAAACA=</HashCode>
+      <FileName>ClientsLibrary.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.GamesLibrary" Collapsed="true">
+    <Position X="4.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQABEIBAAAAQAAAABAAAECAQAAAAACAAAAgAAAAAAA=</HashCode>
+      <FileName>GamesLibrary.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.InformationAboutCatalogItem" Collapsed="true">
+    <Position X="6" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAEAAAAAAQAAAAAAAAAAAQAAAAAAAQABAAAAAAAA=</HashCode>
+      <FileName>InfoAboutCatalogItem.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.MainWindow" Collapsed="true">
+    <Position X="0.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEIAQAgAYAIACBACAAAA0gAAAgCIABBgACEAAgA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.MoviesLibrary" Collapsed="true">
+    <Position X="2.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQABEIBAAAAQAAAABAAAECAQAAAAACAAAAgAAAAAAA=</HashCode>
+      <FileName>MoviesLibrary.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.MusicLibrary" Collapsed="true">
+    <Position X="4.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQABEIBAAAAQAAAABAAAECAQAAAAACAAAAgAAAAAAA=</HashCode>
+      <FileName>MusicLibrary.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.RentOptionScreen" Collapsed="true">
+    <Position X="6" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAEAAQAAAQQQAAAgAAAAEQAAAAAAAIAAAAAAAAEA=</HashCode>
+      <FileName>RentOptionScreen.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.WindowStatistics" Collapsed="true">
+    <Position X="4.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAEIAAAAAQAAAABAAAAAAQAAAAACAAAAgAAAAAAA=</HashCode>
+      <FileName>WindowStatistics.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.Properties.Resources" Collapsed="true">
+    <Position X="0.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramDioptase.Properties.Settings" Collapsed="true">
+    <Position X="2.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ProgramDioptase.Interfaces.DatabaseManager.ICatalogItemManager" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\DatabaseManager\ICatalogItemManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProgramDioptase.Interfaces.DatabaseManager.IClientManager" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\DatabaseManager\IClientManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProgramDioptase.Interfaces.DatabaseManager.IFileManager" Collapsed="true">
+    <Position X="8.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAABAAAIAAAAAAAAAAggAAEAAAAAAIAAA=</HashCode>
+      <FileName>Interfaces\DatabaseManager\IFileManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProgramDioptase.Interfaces.DatabaseManager.IStatisticManager" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Interfaces\DatabaseManager\IStatisticManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProgramDioptase.Interfaces.INotyfiable" Collapsed="true">
+    <Position X="10" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\INotyfiable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProgramDioptase.Interfaces.IRenter" Collapsed="true">
+    <Position X="11.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAIAAIAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IRenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProgramDioptase.Interfaces.ItemDescription.IDataInitializable" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ItemDescription\IDataInitializable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProgramDioptase.Interfaces.ItemDescription.IDescription" Collapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAMAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ItemDescription\IDescription.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProgramDioptase.Interfaces.ItemTypes.IRentable" Collapsed="true">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAACAAAAAAAAABAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ItemTypes\IRentable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProgramDioptase.Interfaces.ItemTypes.ISaleable" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ItemTypes\ISaleable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProgramDioptase.Interfaces.ItemTypes.IStockable" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ItemTypes\IStockable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

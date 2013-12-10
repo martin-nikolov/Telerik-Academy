@@ -1,0 +1,93 @@
+﻿<Window x:Class="ProgramDioptase.WindowStatistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Statistics"
+        Height="700" 
+        Width="900" 
+        Background="Lavender" 
+        WindowStyle="None" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="MoveTheWindow" 
+        Closing="Window_Closing" 
+        AllowsTransparency="True"
+        IsVisibleChanged="Window_IsVisibleChanged"
+        Icon="Resources\TaskBar Icons\Statistics-Icon.png">
+
+    <Grid>
+        <Rectangle x:Name="TopLeftRectangle"
+                   Margin="0,0,842,643" 
+                   Fill="Lavender"
+                   MouseMove="ToMainWindow_MouseMove"
+                   MouseLeave="ToMainWindow_MouseLeave"
+                   MouseLeftButtonDown="ToMainWindow_MouseLeftButtonDown"/>
+
+        <Image x:Name="ToMainWindow"
+               Source="Resources\back-arrow.png" 
+               Margin="0,2,840,644"
+               MouseMove="ToMainWindow_MouseMove"
+               MouseLeave="ToMainWindow_MouseLeave"
+               MouseLeftButtonDown="ToMainWindow_MouseLeftButtonDown"/>
+
+        <Image x:Name="MovieIcon"
+               Source="Resources\MainWindow\statistics-icon.png" 
+               Margin="737,2,-38,498"/>
+
+        <Image x:Name="MoneyIcon"
+               Source="Resources\Money.png" 
+               Margin="137,547,684,77"/>
+
+        <Image x:Name="TotalIncomeLabel"
+               Source="Resources\Window Statistics\total-income.png" Margin="221,555,276,77"/>
+
+        <Image x:Name="MoviesIcon"
+               Source="Resources\MainWindow\video-icon.png" Margin="10,99,770,498"/>
+
+        <Image x:Name="MoviesTotalRentalsLabel"
+               Source="Resources\Window Statistics\total-rentals.png" Margin="137,115,360,517"/>
+
+        <TextBlock x:Name="MoviesOrderCount" 
+                   HorizontalAlignment="Left" 
+                   Margin="545,115,0,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" 
+                   Height="68" Width="192"
+                   FontSize="40"/>
+
+        <Image x:Name="GamesIcon"
+               Source="Resources\MainWindow\Games-Icon.png" Margin="10,242,770,355"/>
+
+        <Image x:Name="GamesTotalRentalsLabel"
+               Source="Resources\Window Statistics\Total-Sales.png" Margin="137,258,360,377"/>
+
+        <TextBlock x:Name="GamesOrderCount" 
+                   HorizontalAlignment="Left" 
+                   Margin="545,258,0,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" 
+                   Height="68" Width="192"
+                   FontSize="40"/>
+
+        <Image x:Name="MusicIcon"
+               Source="Resources\MainWindow\Music-Icon.png" Margin="10,378,770,219"/>
+
+        <Image x:Name="MusicTotalRentalsLabel"
+               Source="Resources\Window Statistics\Total-Sales.png" Margin="137,391,360,241"/>
+
+        <TextBlock x:Name="MusicOrderCount" 
+                   HorizontalAlignment="Left" 
+                   Margin="545,391,0,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" 
+                   Height="68" Width="192"
+                   FontSize="40"/>
+
+        <TextBlock x:Name="TotalIncomeTextBlock" 
+                   HorizontalAlignment="Left" 
+                   Margin="629,555,0,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" 
+                   Height="68" Width="192"
+                   FontSize="40"/>
+    </Grid>
+</Window>

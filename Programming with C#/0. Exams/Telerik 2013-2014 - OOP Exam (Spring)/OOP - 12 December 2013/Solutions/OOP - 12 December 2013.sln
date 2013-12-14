@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. War Machines", "01. War Machines\01. War Machines.csproj", "{F1DC1B92-83AC-4CB3-868C-B9ACAEBEC743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Trade and Travel", "02. Trade and Travel\02. Trade and Travel.csproj", "{B98BC772-E06F-474A-8398-814C1565BE09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1DC1B92-83AC-4CB3-868C-B9ACAEBEC743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1DC1B92-83AC-4CB3-868C-B9ACAEBEC743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1DC1B92-83AC-4CB3-868C-B9ACAEBEC743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1DC1B92-83AC-4CB3-868C-B9ACAEBEC743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98BC772-E06F-474A-8398-814C1565BE09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98BC772-E06F-474A-8398-814C1565BE09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98BC772-E06F-474A-8398-814C1565BE09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98BC772-E06F-474A-8398-814C1565BE09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -11,7 +11,7 @@ body {
 /* General & 'Reset' Stuff */
 
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -79,6 +79,8 @@ header h2 {
 
 #main_content {
   width: 100%;
+  width: 800px;
+  margin-left: -50px;
   -webkit-font-smoothing: antialiased;
 }
 section img {

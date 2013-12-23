@@ -80,6 +80,7 @@ header h2 {
 #main_content {
   width: 100%;
   width: 800px;
+  margin-left: 10px;
   -webkit-font-smoothing: antialiased;
 }
 section img {

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>3. Simple Web-form</title>
+
+        <style>
+            .ReqText {
+                font-weight: bold;
+            }
+
+            input[type="image"] {
+                margin: 5px 0 0 0;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <form action="index.html" method="get">
+            <div>
+                <label for="Name">Member name:</label>
+                <input type="text" name="Name" id="Name" placeholder="Enter your name" required />
+                <span class="ReqText">*req</span>
+            </div>
+
+            <div>
+                <label for="Email">Email:</label>
+                <input type="email" name="Email" id="Email" placeholder="Enter your email" required />
+                <span class="ReqText">*req</span>
+            </div>
+
+            <div>
+                <label for="School">School:</label>
+                <input type="text" name="School" id="School" placeholder="Enter your school name" required />
+                <span class="ReqText">*req</span>
+            </div>
+
+            <input type="image" src="images/button.gif" alt="submit" />
+        </form>
+    </body>
+</html>
+    

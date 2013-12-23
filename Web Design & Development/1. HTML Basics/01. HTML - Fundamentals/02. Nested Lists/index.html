@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>2. Nested Lists</title>
+
+        <style>
+            .UpperRoman {
+                list-style: upper-roman;
+            }
+
+            .LowerLatin {
+                list-style: lower-latin;
+            }
+
+            .Decimal {
+                list-style: decimal;
+            }
+
+            .Circle {
+                list-style: circle;
+            }
+
+            .Square {
+                list-style: square;
+            }
+
+            .Disc {
+                list-style: disc;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h3>Nested lists - example:</h3>
+        </header>
+
+        <section>
+            <ol class="UpperRoman">
+                <li>
+                    List Item 1
+                    <ol class="LowerLatin">
+                        <li>Nested Item 1.1</li>
+                        <li>Nested Item 1.2</li>
+                    </ol>
+                </li>
+                <li>
+                    List Item 2
+                    <ol class="Decimal">
+                        <li>Nested Item 2.1</li>
+                        <li>
+                            Nested Item 2.2
+                            <ul class="Circle">
+                                <li>Nested Item 2.2.1</li>
+                                <li>
+                                    Nested Item 2.2.2
+                                    <ul class="Square">
+                                        <li>Nested Item 2.2.2.1</li>
+                                        <li>Nested Item 2.2.2.2</li>
+                                    </ul>
+                                </li>
+                                <li>Nested Item 2.2.3</li>
+                            </ul>
+                        </li>
+                        <li>Nested Item 2.3</li>
+                    </ol>
+                </li>
+                <li>
+                    List Item 3
+                    <ul class="Disc">
+                        <li>Nested Item 3.1</li>
+                        <li>Nested Item 3.2</li>
+                        <li>Nested Item 3.3</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </body>
+</html>
+    

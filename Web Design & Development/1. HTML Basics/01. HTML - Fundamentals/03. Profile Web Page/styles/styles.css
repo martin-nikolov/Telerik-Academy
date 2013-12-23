@@ -1,0 +1,42 @@
+﻿body {
+    background-color: #CCECFF;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+nav ul li {
+    float: left;
+    padding-right: 30px;
+}
+
+section h2 {
+    font-style: italic;
+    margin: 0px;
+    padding: 0px;
+}
+
+.ProfileInfoContainer {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.ProfileInfoContainer li {
+    margin: 0 0 5px 0;
+}
+
+.FriendsInfoContainer dt {
+    font-style: italic;
+}
+
+.ExtraInfoContainer {
+    font-style: italic;
+    list-style: none;
+    padding: 0 0 0 10px;
+}

@@ -1,44 +1,37 @@
-form
-{
+form {
     padding: 4px;
     width: 193px;
     border: 4px solid #808080;
 }
 
-form ul
-{
+form ul {
     overflow: hidden;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-form li
-{
+form li {
     float: left;
 }
 
-form input
-{
+form input {
     margin: 4px; 
     font-size: 18px;
 }
 
-input[type="text"] 
-{    
+input[type="text"] {    
     width: 165px;
     padding: 6px 7px 6px 7px;
     text-align: right;
 }
 
-input[type="button"] 
-{
+input[type="button"] {
     width: 40px;
     height: 40px;
     text-align: center;
 }
 
-input[value="0"] 
-{
+input[value="0"] {
     width: 88px;
 }

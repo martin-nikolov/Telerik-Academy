@@ -34,7 +34,8 @@ class Eggcelent
             dotsCount += dotsCount < 0 ? 2 : 0;
             starsCount = areaWidth - (dotsCount * 2 + 2);
 
-            verticeImages.Add(new string('.', dotsCount) + '*' + new string('.', starsCount) + '*' + new string('.', dotsCount));
+            verticeImages.Add(new string('.', dotsCount) + '*' +
+                              new string('.', starsCount) + '*' + new string('.', dotsCount));
         }
 
         return verticeImages;

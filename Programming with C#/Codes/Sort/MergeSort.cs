@@ -3,8 +3,7 @@ using System.Diagnostics;
 
 public class MergeSortAlgorithm
 {
-    static Random rnd = new Random();
-    static Stopwatch sw = new Stopwatch();
+    static Random randomGenerator = new Random();
 
     static void Main()
     {
@@ -79,15 +78,14 @@ public class MergeSortAlgorithm
 
     static void TestForPerformance(int capacity)
     {
+        Stopwatch sw = new Stopwatch();
         var numbers = new int[capacity];
-        var temp = new int[capacity];
 
         for (int i = 0; i < capacity; i++)
-            numbers[i] = rnd.Next(int.MaxValue);
+            numbers[i] = randomGenerator.Next(int.MaxValue);
 
-        sw.Reset();
         sw.Start();
-        MergeSort(numbers, temp, 0, capacity - 1);
+        MergeSort(numbers);
         sw.Stop();
 
         Console.WriteLine(sw.Elapsed + " -> " + capacity + " elements.");

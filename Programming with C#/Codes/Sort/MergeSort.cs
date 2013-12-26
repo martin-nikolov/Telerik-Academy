@@ -1,8 +1,8 @@
 using System;
 using System.Diagnostics;
 
-class MergeSortAlgorithm
-{ 
+public class MergeSortAlgorithm
+{
     static Random rnd = new Random();
     static Stopwatch sw = new Stopwatch();
 
@@ -12,6 +12,12 @@ class MergeSortAlgorithm
         TestForPerformance(300000);
         TestForPerformance(600000);
         TestForPerformance(1200000);
+    }
+
+    public static void MergeSort<T>(T[] elements) where T : IComparable<T>
+    {
+        var temp = new T[elements.Length];
+        MergeSort(elements, temp, 0, elements.Length - 1);
     }
 
     static void MergeSort<T>(T[] unsortedArr, T[] tempArr, int left, int right) where T : IComparable<T>
@@ -46,32 +52,28 @@ class MergeSortAlgorithm
 
     static void TestRunner()
     {
-        int[] unsortedNumbers = { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
-        int[] tempNums = new int[unsortedNumbers.Length];
+        var unsortedNumbers = new int[] { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
 
         Console.Write(string.Join(" ", unsortedNumbers) + " -> ");
-        MergeSort(unsortedNumbers, tempNums, 0, unsortedNumbers.Length - 1);
+        MergeSort(unsortedNumbers);
         Console.WriteLine(string.Join(" ", unsortedNumbers));
 
         var unsortedDoubleNumbers = new double[] { 1.1, -2.2, 3.3, -4.4, 5.5, -6.6, 7.7, -8.8, 9.9, -10.10 };
-        var tempDoubleNums = new double[unsortedDoubleNumbers.Length];
 
         Console.Write(string.Join(" ", unsortedDoubleNumbers) + " -> ");
-        MergeSort(unsortedDoubleNumbers, tempDoubleNums, 0, unsortedDoubleNumbers.Length - 1);
+        MergeSort(unsortedDoubleNumbers);
         Console.WriteLine(string.Join(" ", unsortedDoubleNumbers));
 
-        string[] unsortedSymbols = new string[] { "b", "d", "c", "a", "f", "w", "z" };
-        string[] tempSymb = new string[unsortedDoubleNumbers.Length];
+        var unsortedSymbols = new string[] { "b", "d", "c", "a", "f", "w", "z" };
 
         Console.Write(string.Join(" ", unsortedSymbols) + " -> ");
-        MergeSort(unsortedSymbols, tempSymb, 0, unsortedSymbols.Length - 1);
+        MergeSort(unsortedSymbols);
         Console.WriteLine(string.Join(" ", unsortedSymbols));
 
-        char[] unsortedLetters = { 'z', 'b', 'd', 'c', 'w', 'a', 'f' };
-        char[] tempLett = new char[unsortedDoubleNumbers.Length];
+        var unsortedLetters = new char[] { 'z', 'b', 'd', 'c', 'w', 'a', 'f' };
 
         Console.Write(string.Join(" ", unsortedLetters) + " -> ");
-        MergeSort(unsortedLetters, tempLett, 0, unsortedLetters.Length - 1);
+        MergeSort(unsortedLetters);
         Console.WriteLine(string.Join(" ", unsortedLetters));
     }
 
@@ -82,7 +84,7 @@ class MergeSortAlgorithm
 
         for (int i = 0; i < capacity; i++)
             numbers[i] = rnd.Next(int.MaxValue);
-            
+
         sw.Reset();
         sw.Start();
         MergeSort(numbers, temp, 0, capacity - 1);

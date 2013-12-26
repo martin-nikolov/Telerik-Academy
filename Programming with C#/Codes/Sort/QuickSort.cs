@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 public class QuickSortAlgorithm
 {
-    static Random rnd = new Random();
+    static Random randomGenerator = new Random();
 
     static void Main()
     {
@@ -100,7 +100,7 @@ public class QuickSortAlgorithm
         var numbers = new int[capacity];
 
         for (int i = 0; i < capacity; i++)
-            numbers[i] = rnd.Next(int.MaxValue);
+            numbers[i] = randomGenerator.Next(int.MaxValue);
 
         sw.Start();
         QuickSort(numbers);

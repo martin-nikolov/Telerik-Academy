@@ -10,24 +10,6 @@ class QuickSortAlgorithm
         TestRunner();
     }
 
-    static void TestRunner()
-    {
-        int[] unsortedNumbers = { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
-        Console.Write(string.Join(" ", unsortedNumbers) + " -> ");
-        QuickSort(unsortedNumbers, 0, unsortedNumbers.Length - 1);
-        Console.WriteLine(string.Join(" ", unsortedNumbers));
-
-        string[] unsortedSymbols = new string[] { "b", "d", "c", "a", "f", "w", "z" };
-        Console.Write(string.Join(" ", unsortedSymbols) + " -> ");
-        QuickSort(unsortedSymbols, 0, unsortedSymbols.Length - 1);
-        Console.WriteLine(string.Join(" ", unsortedSymbols));
-
-        char[] unsortedLetters = { 'z', 'b', 'd', 'c', 'w', 'a', 'f' };
-        Console.Write(string.Join(" ", unsortedLetters) + " -> ");
-        QuickSort(unsortedLetters, 0, unsortedLetters.Length - 1);
-        Console.WriteLine(string.Join(" ", unsortedLetters));
-    }
-
     static void QuickSort<T>(T[] sortArray, int leftIndex, int rightIndex) where T : IComparable<T>
     {
         /* QUICKSORT(A,p,r)
@@ -64,7 +46,8 @@ class QuickSortAlgorithm
                 sortArray[leftPointer] = sortArray[rightPointer];
                 sortArray[rightPointer] = swap;
 
-                leftPointer++; rightPointer--;
+                leftPointer++; 
+                rightPointer--;
             }
         }
 
@@ -79,5 +62,23 @@ class QuickSortAlgorithm
         if (leftPointer < rightIndex) QuickSort(sortArray, leftPointer, rightIndex);
 
         // 9. The algorithm returns when all sub arrays are sorted.
+    }
+
+    static void TestRunner()
+    {
+        int[] unsortedNumbers = { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
+        Console.Write(string.Join(" ", unsortedNumbers) + " -> ");
+        QuickSort(unsortedNumbers, 0, unsortedNumbers.Length - 1);
+        Console.WriteLine(string.Join(" ", unsortedNumbers));
+
+        string[] unsortedSymbols = new string[] { "b", "d", "c", "a", "f", "w", "z" };
+        Console.Write(string.Join(" ", unsortedSymbols) + " -> ");
+        QuickSort(unsortedSymbols, 0, unsortedSymbols.Length - 1);
+        Console.WriteLine(string.Join(" ", unsortedSymbols));
+
+        char[] unsortedLetters = { 'z', 'b', 'd', 'c', 'w', 'a', 'f' };
+        Console.Write(string.Join(" ", unsortedLetters) + " -> ");
+        QuickSort(unsortedLetters, 0, unsortedLetters.Length - 1);
+        Console.WriteLine(string.Join(" ", unsortedLetters));
     }
 }

@@ -7,6 +7,36 @@ class MergeSortAlgorithm
         TestRunner();
     }
 
+    static void MergeSort<T>(T[] unsortedArr, T[] tempArr, int left, int right) where T : IComparable<T>
+    {
+        // Array with 1 element
+        if (left >= right) return;
+
+        // Define a middle of the array
+        int middle = (left + right) / 2;
+
+        MergeSort(unsortedArr, tempArr, left, middle);
+        MergeSort(unsortedArr, tempArr, middle + 1, right);
+
+        CompareAndSort(unsortedArr, tempArr, left, middle, right);
+    }
+
+    static void CompareAndSort<T>(T[] arr, T[] tempArr, int left, int middle, int right) where T : IComparable<T>
+    {
+        int i = left; // 'temp' indexes
+        int l = left, m = middle + 1; // 'arr' indexes
+
+        while (l <= middle && m <= right)
+            if (arr[l].CompareTo(arr[m]) < 0) tempArr[i++] = arr[l++];
+            else tempArr[i++] = arr[m++];
+
+        while (l <= middle) tempArr[i++] = arr[l++];
+
+        while (m <= right) tempArr[i++] = arr[m++];
+
+        for (int index = left; index <= right; index++) arr[index] = tempArr[index];
+    }
+
     static void TestRunner()
     {
         int[] unsortedNumbers = { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
@@ -36,35 +66,5 @@ class MergeSortAlgorithm
         Console.Write(string.Join(" ", unsortedLetters) + " -> ");
         MergeSort(unsortedLetters, tempLett, 0, unsortedLetters.Length - 1);
         Console.WriteLine(string.Join(" ", unsortedLetters));
-    }
-
-    static void MergeSort<T>(T[] unsortedArr, T[] tempArr, int left, int right) where T : IComparable<T>
-    {
-        // Array with 1 element
-        if (left >= right) return;
-
-        // Define a middle of the array
-        int middle = (left + right) / 2;
-
-        MergeSort(unsortedArr, tempArr, left, middle);
-        MergeSort(unsortedArr, tempArr, middle + 1, right);
-
-        CompareAndSort(unsortedArr, tempArr, left, middle, right);
-    }
-
-    static void CompareAndSort<T>(T[] arr, T[] tempArr, int left, int middle, int right) where T : IComparable<T>
-    {
-        int i = left; // 'temp' indexes
-        int l = left, m = middle + 1; // 'arr' indexes
-
-        while (l <= middle && m <= right)
-            if (arr[l].CompareTo(arr[m]) < 0) tempArr[i++] = arr[l++];
-            else tempArr[i++] = arr[m++];
-
-        while (l <= middle) tempArr[i++] = arr[l++];
-        
-        while (m <= right) tempArr[i++] = arr[m++];
-
-        for (int index = left; index <= right; index++) arr[index] = tempArr[index];
     }
 }

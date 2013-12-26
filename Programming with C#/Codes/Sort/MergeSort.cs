@@ -41,7 +41,7 @@ class MergeSortAlgorithm
 
         while (m <= right) tempArr[i++] = arr[m++];
 
-        for (int index = left; index <= right; index++) arr[index] = tempArr[index];
+        Array.Copy(tempArr, left, arr, left, right - left + 1);
     }
 
     static void TestRunner()

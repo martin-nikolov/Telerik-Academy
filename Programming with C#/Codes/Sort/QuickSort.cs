@@ -1,10 +1,9 @@
 using System;
 using System.Diagnostics;
 
-class QuickSortAlgorithm
+public class QuickSortAlgorithm
 {
     static Random rnd = new Random();
-    static Stopwatch sw = new Stopwatch();
 
     static void Main()
     {
@@ -12,6 +11,11 @@ class QuickSortAlgorithm
         TestForPerformance(300000);
         TestForPerformance(600000);
         TestForPerformance(1200000);
+    }
+
+    public static void QuickSort<T>(T[] elements) where T : IComparable<T>
+    {
+        QuickSort(elements, 0, elements.Length - 1);
     }
 
     /// <summary>
@@ -54,7 +58,7 @@ class QuickSortAlgorithm
                 sortArray[leftPointer] = sortArray[rightPointer];
                 sortArray[rightPointer] = swap;
 
-                leftPointer++; 
+                leftPointer++;
                 rightPointer--;
             }
         }
@@ -74,32 +78,32 @@ class QuickSortAlgorithm
 
     static void TestRunner()
     {
-        int[] unsortedNumbers = { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
+        var unsortedNumbers = new int[] { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
         Console.Write(string.Join(" ", unsortedNumbers) + " -> ");
-        QuickSort(unsortedNumbers, 0, unsortedNumbers.Length - 1);
+        QuickSort(unsortedNumbers);
         Console.WriteLine(string.Join(" ", unsortedNumbers));
 
-        string[] unsortedSymbols = new string[] { "b", "d", "c", "a", "f", "w", "z" };
+        var unsortedSymbols = new string[] { "b", "d", "c", "a", "f", "w", "z" };
         Console.Write(string.Join(" ", unsortedSymbols) + " -> ");
-        QuickSort(unsortedSymbols, 0, unsortedSymbols.Length - 1);
+        QuickSort(unsortedSymbols);
         Console.WriteLine(string.Join(" ", unsortedSymbols));
 
-        char[] unsortedLetters = { 'z', 'b', 'd', 'c', 'w', 'a', 'f' };
+        var unsortedLetters = new char[] { 'z', 'b', 'd', 'c', 'w', 'a', 'f' };
         Console.Write(string.Join(" ", unsortedLetters) + " -> ");
-        QuickSort(unsortedLetters, 0, unsortedLetters.Length - 1);
+        QuickSort(unsortedLetters);
         Console.WriteLine(string.Join(" ", unsortedLetters));
     }
 
     static void TestForPerformance(int capacity)
     {
+        Stopwatch sw = new Stopwatch();
         var numbers = new int[capacity];
 
         for (int i = 0; i < capacity; i++)
             numbers[i] = rnd.Next(int.MaxValue);
-            
-        sw.Reset();
+
         sw.Start();
-        QuickSort(numbers, 0, capacity - 1);
+        QuickSort(numbers);
         sw.Stop();
 
         Console.WriteLine(sw.Elapsed + " -> " + capacity + " elements.");

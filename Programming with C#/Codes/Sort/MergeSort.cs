@@ -62,5 +62,4 @@ class MergeSortAlgorithm
 
         for (int index = left; index <= right; index++) arr[index] = tempArr[index];
     }
-
 }

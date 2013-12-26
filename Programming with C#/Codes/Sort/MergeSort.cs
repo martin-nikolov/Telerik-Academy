@@ -1,10 +1,17 @@
 using System;
+using System.Diagnostics;
 
 class MergeSortAlgorithm
-{
+{ 
+    static Random rnd = new Random();
+    static Stopwatch sw = new Stopwatch();
+
     static void Main()
     {
         TestRunner();
+        TestForPerformance(300000);
+        TestForPerformance(600000);
+        TestForPerformance(1200000);
     }
 
     static void MergeSort<T>(T[] unsortedArr, T[] tempArr, int left, int right) where T : IComparable<T>
@@ -66,5 +73,20 @@ class MergeSortAlgorithm
         Console.Write(string.Join(" ", unsortedLetters) + " -> ");
         MergeSort(unsortedLetters, tempLett, 0, unsortedLetters.Length - 1);
         Console.WriteLine(string.Join(" ", unsortedLetters));
+    }
+
+    static void TestForPerformance(int capacity)
+    {
+        var numbers = new int[capacity];
+        var temp = new int[capacity];
+
+        for (int i = 0; i < capacity; i++)
+            numbers[i] = rnd.Next(int.MaxValue);
+
+        sw.Start();
+        MergeSort(numbers, temp, 0, capacity - 1);
+        sw.Stop();
+
+        Console.WriteLine(sw.Elapsed + " -> " + capacity + " elements.");
     }
 }

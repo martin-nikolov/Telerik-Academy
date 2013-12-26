@@ -90,15 +90,16 @@ class QuickSortAlgorithm
         Console.WriteLine(string.Join(" ", unsortedLetters));
     }
 
-    static void TestForPerformance(int capacity = 300000)
+    static void TestForPerformance(int capacity)
     {
         var numbers = new int[capacity];
 
-        for (int i = 0; i < numbers.Length; i++)
+        for (int i = 0; i < capacity; i++)
             numbers[i] = rnd.Next(int.MaxValue);
-
+            
+        sw.Reset();
         sw.Start();
-        QuickSort(numbers, 0, numbers.Length - 1);
+        QuickSort(numbers, 0, capacity - 1);
         sw.Stop();
 
         Console.WriteLine(sw.Elapsed + " -> " + capacity + " elements.");

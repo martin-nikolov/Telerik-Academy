@@ -1,15 +1,23 @@
-// Quick sorting (sorting by partitions)
-// The program below apply classical recursive implementation of the method QuickSort
-
 using System;
+using System.Diagnostics;
 
 class QuickSortAlgorithm
 {
+    static Random rnd = new Random();
+    static Stopwatch sw = new Stopwatch();
+
     static void Main()
     {
         TestRunner();
+        TestForPerformance(300000);
+        TestForPerformance(600000);
+        TestForPerformance(1200000);
     }
 
+    /// <summary>
+    /// Quick sorting (sorting by partitions)
+    /// The program below apply classical recursive implementation of the method QuickSort
+    /// </summary>
     static void QuickSort<T>(T[] sortArray, int leftIndex, int rightIndex) where T : IComparable<T>
     {
         /* QUICKSORT(A,p,r)
@@ -80,5 +88,19 @@ class QuickSortAlgorithm
         Console.Write(string.Join(" ", unsortedLetters) + " -> ");
         QuickSort(unsortedLetters, 0, unsortedLetters.Length - 1);
         Console.WriteLine(string.Join(" ", unsortedLetters));
+    }
+
+    static void TestForPerformance(int capacity = 300000)
+    {
+        var numbers = new int[capacity];
+
+        for (int i = 0; i < numbers.Length; i++)
+            numbers[i] = rnd.Next(int.MaxValue);
+
+        sw.Start();
+        QuickSort(numbers, 0, numbers.Length - 1);
+        sw.Stop();
+
+        Console.WriteLine(sw.Elapsed + " -> " + capacity + " elements.");
     }
 }

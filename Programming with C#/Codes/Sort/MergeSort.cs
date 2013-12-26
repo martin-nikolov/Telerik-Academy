@@ -82,7 +82,8 @@ class MergeSortAlgorithm
 
         for (int i = 0; i < capacity; i++)
             numbers[i] = rnd.Next(int.MaxValue);
-
+            
+        sw.Reset();
         sw.Start();
         MergeSort(numbers, temp, 0, capacity - 1);
         sw.Stop();

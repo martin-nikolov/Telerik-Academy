@@ -25,12 +25,18 @@ class MatrixC
             for (int col = (row >= 0 ? 0 : -row), _row = (row >= 0 ? row : 0); col < (n - (row >= 0 ? row : 0));)
                 matrix[_row++, col++] = count++;
 
-        // Prints matrix
+        PrintMatrix(matrix);
+    }
+  
+    static void PrintMatrix(int[,] matrix)
+    {
         Console.WriteLine();
-        for (int row = 0; row < n; row++)
+
+        for (int row = 0; row < matrix.GetLongLength(0); row++)
         {
-            for (int col = 0; col < n; col++)
+            for (int col = 0; col < matrix.GetLongLength(1); col++)
                 Console.Write("{0,4} ", matrix[row, col]);
+
             Console.WriteLine("\n");
         }
     }

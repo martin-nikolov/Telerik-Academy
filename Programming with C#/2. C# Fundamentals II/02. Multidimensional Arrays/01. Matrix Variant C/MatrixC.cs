@@ -1,4 +1,4 @@
-﻿/*
+/*
 * 1. Write a program that fills and prints a matrix of size (n, n) as shown below:
 * (examples for n = 4)
 * 
@@ -19,10 +19,9 @@ class MatrixC
         Console.Write("Enter a number: ");
         int n = int.Parse(Console.ReadLine());
 
-        int[,] matrix = new int[n, n];
-        int count = 1;
+        var matrix = new int[n, n];
 
-        for (int row = n - 1; count <= n * n; row--)
+        for (int row = n - 1, count = 1; count <= n * n; row--)
             for (int col = (row >= 0 ? 0 : -row), _row = (row >= 0 ? row : 0); col < (n - (row >= 0 ? row : 0));)
                 matrix[_row++, col++] = count++;
 

@@ -16,10 +16,10 @@ public class MergeSortAlgorithm
     public static void MergeSort<T>(T[] elements) where T : IComparable<T>
     {
         var temp = new T[elements.Length];
-        MergeSort(elements, temp, 0, elements.Length - 1);
+        Partitioning(elements, temp, 0, elements.Length - 1);
     }
 
-    static void MergeSort<T>(T[] unsortedArr, T[] tempArr, int left, int right) where T : IComparable<T>
+    static void Partitioning<T>(T[] unsortedArr, T[] tempArr, int left, int right) where T : IComparable<T>
     {
         // Array with 1 element
         if (left >= right) return;
@@ -27,13 +27,13 @@ public class MergeSortAlgorithm
         // Define a middle of the array
         int middle = (left + right) / 2;
 
-        MergeSort(unsortedArr, tempArr, left, middle);
-        MergeSort(unsortedArr, tempArr, middle + 1, right);
+        Partitioning(unsortedArr, tempArr, left, middle);
+        Partitioning(unsortedArr, tempArr, middle + 1, right);
 
-        CompareAndSort(unsortedArr, tempArr, left, middle, right);
+        Merge(unsortedArr, tempArr, left, middle, right);
     }
 
-    static void CompareAndSort<T>(T[] arr, T[] tempArr, int left, int middle, int right) where T : IComparable<T>
+    static void Merge<T>(T[] arr, T[] tempArr, int left, int middle, int right) where T : IComparable<T>
     {
         int i = left; // 'temp' indexes
         int l = left, m = middle + 1; // 'arr' indexes

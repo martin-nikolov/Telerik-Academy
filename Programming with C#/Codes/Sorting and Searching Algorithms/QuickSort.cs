@@ -2,9 +2,9 @@ namespace Algorithms
 {
     using System;
 
-    public static class QuickSortAlgorithm<T> where T : IComparable<T>
+    public static class QuickSorter
     {
-        public static void Sort(T[] collection)
+        public static void Sort<T>(T[] collection) where T : IComparable<T>
         {
             QuickSort(collection, 0, collection.Length - 1);
         }
@@ -13,7 +13,7 @@ namespace Algorithms
         /// Quick sorting (sorting by partitions)
         /// The program below apply classical recursive implementation of the method QuickSort
         /// </summary>
-        private static void QuickSort(T[] collection, int leftIndex, int rightIndex) 
+        private static void QuickSort<T>(T[] collection, int leftIndex, int rightIndex) where T : IComparable<T>
         {
             /* QUICKSORT(A,p,r)
             1  if p < r
@@ -28,7 +28,7 @@ namespace Algorithms
             int rightPointer = rightIndex;
 
             // 1. Pick a pivot value somewhere in the middle.
-            frontier = collection[(leftIndex + rightIndex) / 2];
+            frontier = collection[leftIndex + (rightIndex - leftIndex >> 1)];
 
             // 2. Loop until pointers meet on the pivot.
             while (leftPointer <= rightPointer)
@@ -73,8 +73,9 @@ namespace Algorithms.Tests
 {
     using System;
     using System.Diagnostics;
+    using System.Linq;
 
-    static class QuickSortAlgorithmTest
+    static class QuickSortTest
     {
         static Random randomGenerator = new Random();
 
@@ -88,35 +89,49 @@ namespace Algorithms.Tests
 
         static void TestRunner()
         {
-            var unsortedNumbers = new int[] { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
-            Console.Write(string.Join(" ", unsortedNumbers) + " -> ");
-            QuickSortAlgorithm<int>.Sort(unsortedNumbers);
-            Console.WriteLine(string.Join(" ", unsortedNumbers));
+            SortAndPrintResult(new int[] { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 });
+           
+            SortAndPrintResult(new double[] { 1.1, -2.2, 3.3, -4.4, 5.5, -6.6, 7.7, -8.8, 9.9, -10.10 });
 
-            var unsortedSymbols = new string[] { "b", "d", "c", "a", "f", "w", "z" };
-            Console.Write(string.Join(" ", unsortedSymbols) + " -> ");
-            QuickSortAlgorithm<string>.Sort(unsortedSymbols);
-            Console.WriteLine(string.Join(" ", unsortedSymbols));
+            SortAndPrintResult(new string[] { "b", "d", "c", "a", "f", "w", "z" });
 
-            var unsortedLetters = new char[] { 'z', 'b', 'd', 'c', 'w', 'a', 'f' };
-            Console.Write(string.Join(" ", unsortedLetters) + " -> ");
-            QuickSortAlgorithm<char>.Sort(unsortedLetters);
-            Console.WriteLine(string.Join(" ", unsortedLetters));
+            SortAndPrintResult(new char[] { 'z', 'b', 'd', 'c', 'w', 'a', 'f' });
+        }
+
+        static void SortAndPrintResult<T>(T[] collection) where T : IComparable<T>
+        {
+            Console.Write(string.Join(" ", collection) + " -> ");
+            QuickSorter.Sort(collection);
+            Console.WriteLine(string.Join(" ", collection));
         }
 
         static void TestForPerformance(int capacity)
         {
             Stopwatch sw = new Stopwatch();
-            var numbers = new int[capacity];
+            var collection = new int[capacity];
 
             for (int i = 0; i < capacity; i++)
-                numbers[i] = randomGenerator.Next(int.MaxValue);
+                collection[i] = randomGenerator.Next(int.MaxValue);
 
             sw.Start();
-            QuickSortAlgorithm<int>.Sort(numbers);
+            QuickSorter.Sort(collection);
             sw.Stop();
 
+            IsSortedCollection(collection);
+
             Console.WriteLine(sw.Elapsed + " -> " + capacity + " elements.");
+        }
+
+        static void IsSortedCollection<T>(T[] collection) where T : IComparable<T>
+        {
+            var sortedCollection = new T[collection.Length];
+            Array.Copy(collection, sortedCollection, collection.Length);
+            Array.Sort(sortedCollection);
+
+            if (!sortedCollection.SequenceEqual(collection))
+            {
+                throw new InvalidOperationException();
+            }
         }
     }
 }

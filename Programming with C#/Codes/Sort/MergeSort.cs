@@ -1,93 +1,106 @@
-using System;
-using System.Diagnostics;
-
-public class MergeSortAlgorithm
+namespace Algorithms
 {
-    static Random randomGenerator = new Random();
+    using System;
 
-    static void Main()
+    public static class MergeSortAlgorithm<T> where T : IComparable<T>
     {
-        TestRunner();
-        TestForPerformance(300000);
-        TestForPerformance(600000);
-        TestForPerformance(1200000);
+        private static T[] temp;
+
+        public static void Sort(T[] collection)
+        {
+            temp = new T[collection.Length];
+            Partitioning(collection, 0, collection.Length - 1);
+        }
+
+        private static void Partitioning(T[] collection, int left, int right)
+        {
+            // Array with 1 element
+            if (left >= right) return;
+
+            // Define a middle of the array
+            int middle = (left + right) / 2;
+
+            Partitioning(collection, left, middle);
+            Partitioning(collection, middle + 1, right);
+
+            Merge(collection, left, middle, right);
+        }
+
+        private static void Merge(T[] collection, int left, int middle, int right) 
+        {
+            int i = left; // 'temp' indexes
+            int l = left, m = middle + 1; // 'arr' indexes
+
+            while (l <= middle && m <= right)
+                if (collection[l].CompareTo(collection[m]) < 0) temp[i++] = collection[l++];
+                else temp[i++] = collection[m++];
+
+            while (l <= middle) temp[i++] = collection[l++];
+
+            while (m <= right) temp[i++] = collection[m++];
+
+            Array.Copy(temp, left, collection, left, right - left + 1);
+        }
     }
+}
 
-    public static void MergeSort<T>(T[] elements) where T : IComparable<T>
+namespace Algorithms.Tests
+{
+    using System;
+    using System.Diagnostics;
+
+    static class MergeSortAlgorithmTest
     {
-        var temp = new T[elements.Length];
-        Partitioning(elements, temp, 0, elements.Length - 1);
-    }
+        static Random randomGenerator = new Random();
 
-    static void Partitioning<T>(T[] unsortedArr, T[] tempArr, int left, int right) where T : IComparable<T>
-    {
-        // Array with 1 element
-        if (left >= right) return;
+        static void Main()
+        {
+            TestRunner();
+            TestForPerformance(300000);
+            TestForPerformance(600000);
+            TestForPerformance(1200000);
+        }
 
-        // Define a middle of the array
-        int middle = (left + right) / 2;
+        static void TestRunner()
+        {
+            var unsortedNumbers = new int[] { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
 
-        Partitioning(unsortedArr, tempArr, left, middle);
-        Partitioning(unsortedArr, tempArr, middle + 1, right);
+            Console.Write(string.Join(" ", unsortedNumbers) + " -> ");
+            MergeSortAlgorithm<int>.Sort(unsortedNumbers);
+            Console.WriteLine(string.Join(" ", unsortedNumbers));
 
-        Merge(unsortedArr, tempArr, left, middle, right);
-    }
+            var unsortedDoubleNumbers = new double[] { 1.1, -2.2, 3.3, -4.4, 5.5, -6.6, 7.7, -8.8, 9.9, -10.10 };
 
-    static void Merge<T>(T[] arr, T[] tempArr, int left, int middle, int right) where T : IComparable<T>
-    {
-        int i = left; // 'temp' indexes
-        int l = left, m = middle + 1; // 'arr' indexes
+            Console.Write(string.Join(" ", unsortedDoubleNumbers) + " -> ");
+            MergeSortAlgorithm<double>.Sort(unsortedDoubleNumbers);
+            Console.WriteLine(string.Join(" ", unsortedDoubleNumbers));
 
-        while (l <= middle && m <= right)
-            if (arr[l].CompareTo(arr[m]) < 0) tempArr[i++] = arr[l++];
-            else tempArr[i++] = arr[m++];
+            var unsortedSymbols = new string[] { "b", "d", "c", "a", "f", "w", "z" };
 
-        while (l <= middle) tempArr[i++] = arr[l++];
+            Console.Write(string.Join(" ", unsortedSymbols) + " -> ");
+            MergeSortAlgorithm<string>.Sort(unsortedSymbols);
+            Console.WriteLine(string.Join(" ", unsortedSymbols));
 
-        while (m <= right) tempArr[i++] = arr[m++];
+            var unsortedLetters = new char[] { 'z', 'b', 'd', 'c', 'w', 'a', 'f' };
 
-        Array.Copy(tempArr, left, arr, left, right - left + 1);
-    }
+            Console.Write(string.Join(" ", unsortedLetters) + " -> ");
+            MergeSortAlgorithm<char>.Sort(unsortedLetters);
+            Console.WriteLine(string.Join(" ", unsortedLetters));
+        }
 
-    static void TestRunner()
-    {
-        var unsortedNumbers = new int[] { 1, -2, 3, -4, 5, -6, 7, -8, 9, -10 };
+        static void TestForPerformance(int capacity)
+        {
+            Stopwatch sw = new Stopwatch();
+            var numbers = new int[capacity];
 
-        Console.Write(string.Join(" ", unsortedNumbers) + " -> ");
-        MergeSort(unsortedNumbers);
-        Console.WriteLine(string.Join(" ", unsortedNumbers));
+            for (int i = 0; i < capacity; i++)
+                numbers[i] = randomGenerator.Next(int.MaxValue);
 
-        var unsortedDoubleNumbers = new double[] { 1.1, -2.2, 3.3, -4.4, 5.5, -6.6, 7.7, -8.8, 9.9, -10.10 };
+            sw.Start();
+            MergeSortAlgorithm<int>.Sort(numbers);
+            sw.Stop();
 
-        Console.Write(string.Join(" ", unsortedDoubleNumbers) + " -> ");
-        MergeSort(unsortedDoubleNumbers);
-        Console.WriteLine(string.Join(" ", unsortedDoubleNumbers));
-
-        var unsortedSymbols = new string[] { "b", "d", "c", "a", "f", "w", "z" };
-
-        Console.Write(string.Join(" ", unsortedSymbols) + " -> ");
-        MergeSort(unsortedSymbols);
-        Console.WriteLine(string.Join(" ", unsortedSymbols));
-
-        var unsortedLetters = new char[] { 'z', 'b', 'd', 'c', 'w', 'a', 'f' };
-
-        Console.Write(string.Join(" ", unsortedLetters) + " -> ");
-        MergeSort(unsortedLetters);
-        Console.WriteLine(string.Join(" ", unsortedLetters));
-    }
-
-    static void TestForPerformance(int capacity)
-    {
-        Stopwatch sw = new Stopwatch();
-        var numbers = new int[capacity];
-
-        for (int i = 0; i < capacity; i++)
-            numbers[i] = randomGenerator.Next(int.MaxValue);
-
-        sw.Start();
-        MergeSort(numbers);
-        sw.Stop();
-
-        Console.WriteLine(sw.Elapsed + " -> " + capacity + " elements.");
+            Console.WriteLine(sw.Elapsed + " -> " + capacity + " elements.");
+        }
     }
 }

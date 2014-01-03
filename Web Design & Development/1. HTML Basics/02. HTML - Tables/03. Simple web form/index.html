@@ -7,6 +7,7 @@
         <style>
             .ReqText {
                 font-weight: bold;
+                font-size: 14px;
             }
 
             input[type="image"] {
@@ -14,28 +15,40 @@
             }
         </style>
     </head>
-    
+
     <body>
         <form action="index.html" method="get">
-            <div>
-                <label for="Name">Member name:</label>
-                <input type="text" name="Name" id="Name" placeholder="Enter your name" required />
-                <span class="ReqText">*req</span>
-            </div>
+            <table>
+                <tr>
+                    <td><label for="Name">Name:</label></td>
+                    <td>
+                        <input type="text" name="Name" id="Name" placeholder="Enter your name" required />
+                        <span class="ReqText">*req</span>
+                    </td>
+                </tr>
 
-            <div>
-                <label for="Email">Email:</label>
-                <input type="email" name="Email" id="Email" placeholder="Enter your email" required />
-                <span class="ReqText">*req</span>
-            </div>
+                <tr>
+                    <td><label for="Email">Email:</label></td>
+                    <td>
+                        <input type="email" name="Email" id="Email" placeholder="Enter your email" required />
+                        <span class="ReqText">*req</span>
+                    </td>
+                </tr>
 
-            <div>
-                <label for="School">School:</label>
-                <input type="text" name="School" id="School" placeholder="Enter your school name" required />
-                <span class="ReqText">*req</span>
-            </div>
+                <tr>
+                    <td><label for="School">School:</label></td>
+                    <td>
+                        <input type="text" name="School" id="School" placeholder="Enter your school name" required />
+                        <span class="ReqText">*req</span>
+                    </td>
+                </tr>
 
-            <input type="image" src="images/button.gif" alt="submit" />
+                <tr>
+                    <td colspan="2">
+                        <input type="image" src="images/button.gif" alt="submit" />
+                    </td>
+                </tr>
+            </table>           
         </form>
     </body>
 </html>

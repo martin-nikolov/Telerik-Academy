@@ -1,0 +1,191 @@
+﻿body {
+    font-family: Arial;
+    font-size: 12px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 880px;
+}
+
+table, td {
+    border: 1px solid #D0D7E5;
+}
+
+table tr th {
+    border: 1px solid #A4ABB2; 
+    font-weight: normal;
+    text-align: left;
+    padding: 5px;
+}
+
+/* thead styles*/
+
+thead img {
+    padding: 2px 0 0 2px;
+    position: absolute;
+}
+
+thead tr th:last-child img {
+    margin-top: -3px;
+}
+
+@-moz-document url-prefix() {
+thead img {
+    padding: 0 0 0 2px;
+}
+
+thead tr th:last-child img {
+    margin-top: -1px;
+}
+}
+
+.tableHeaderTitleBarText {
+    background-color: #E7E9EB;
+    line-height: 15px;
+}
+
+.tableHeaderTitleBarText th {
+    padding-left: 7px;
+}
+
+.tableHeaderColumnContainer {
+    line-height: 15px;
+
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(top, #F2F2F4 0%, #DBDFE4 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #F2F2F4 0%, #DBDFE4 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #F2F2F4 0%, #DBDFE4 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F2F2F4), color-stop(1, #DBDFE4));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #F2F2F4 0%, #DBDFE4 100%);
+    
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: linear-gradient(to bottom, #F2F2F4 0%, #DBDFE4 100%);
+}
+
+.tableHeaderColumnContainer th {
+    padding-left: 7px;
+}
+
+.tableHeaderInputsColumns {
+    background-color: #DFE3E8;
+}
+
+.tableHeaderInputsColumns th {
+    height: 25px;
+    padding: 2px 0 3px 7px;
+    margin: 0;
+}
+
+.productIdColumnContainer {
+    width: 70px;
+}
+
+.productNameColumnContainer {
+    width: 248px;
+}
+
+.unitPriceColumnContainer {
+    width: 158px;
+}
+
+.quantityColumnContainer {
+    width: 151px; 
+}
+
+.unitsColumnContainer {
+    width: 165px;
+}
+
+input[name=product-id] {
+    width: 30px;
+}
+
+input[name=unit-price], input[name=quantity], input[name=units-in-stock] {
+    width: 80px;
+}
+
+/* tbody styles */
+
+tbody td {
+    line-height: 26px;
+    padding-left: 7px;
+}
+
+.priceSign:before {
+    content: "$";
+}
+
+/* tfoot styles */
+
+tfoot {
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(top, #E5E9ED 0%, #B9BEC3 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #E5E9ED 0%, #B9BEC3 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #E5E9ED 0%, #B9BEC3 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E5E9ED), color-stop(1, #B9BEC3));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #E5E9ED 0%, #B9BEC3 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: linear-gradient(to bottom, #E5E9ED 0%, #B9BEC3 100%);
+}
+
+tfoot tr td {
+    height: 30px; 
+    border: 0;
+    -webkit-box-shadow: 0px -1px 6px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 0px -1px 6px 0px rgba(50, 50, 50, 0.2);
+    box-shadow: 0px -1px 6px 0px rgba(50, 50, 50, 0.2);
+}
+
+tfoot ul, tfoot li {
+    list-style-type: none;
+    padding: 0 0 0 2px;
+    margin: 0;
+    display: inline; 
+}
+
+tfoot li a:not(.imageHref) {
+    padding: 0 4px 0 4px;
+    text-decoration: none; 
+    color: rgba(0, 0, 0, 0.75);
+}
+
+tfoot li a:not(.imageHref):hover {
+    padding: 3px;
+    border: 1px solid #C95C05;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+tfoot ul li img {
+    margin-bottom: -7px;
+}
+
+.pageSizeContainer {
+ 
+    margin-top: 4px;
+    margin-left: 10px; 
+}
+
+.itemsOfPagesTextContainer {
+    float: right;
+    margin: 4px;
+}

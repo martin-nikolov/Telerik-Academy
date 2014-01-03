@@ -10,8 +10,17 @@
             }
 
             table td {
-                padding: 5px 10px 5px 10px;
+                padding: 2px 10px 2px 10px;
                 text-align: center;
+            }
+
+            .left {
+                text-align: left;
+            }
+
+            .rightDown {
+                vertical-align: bottom;
+                text-align: right;
             }
         </style>
     </head>
@@ -20,19 +29,19 @@
             <tr>
                 <td colspan="3">Title goes here</td>
                 <td>A</td>
-                <td>B</td>
+                <td class="rightDown">B</td>
             </tr>
             <tr>
-                <td rowspan="3">C</td>
+                <td class="left" rowspan="3">C</td>
                 <td>D</td>
                 <td>E</td>
                 <td>F</td>
-                <td>G</td>
+                <td class="rightDown">G</td>
             </tr>
             <tr>
                 <td>H</td>
                 <td colspan="2">I</td>
-                <td rowspan="2">J</td>
+                <td class="rightDown" rowspan="2">J</td>
             </tr>
             <tr>
                 <td>K</td>
@@ -40,11 +49,10 @@
                 <td>M</td>
             </tr>
             <tr>
-                <td>N</td>
+                <td class="rightDown">N</td>
                 <td colspan="4">O</td>
             </tr>
         </table>
 
     </body>
 </html>
-    

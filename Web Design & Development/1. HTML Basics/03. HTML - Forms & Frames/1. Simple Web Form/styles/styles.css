@@ -1,0 +1,45 @@
+﻿table {
+    border-collapse: collapse;
+}
+
+table, td {
+    border: 1px solid #B5A6A6;
+}
+
+tr td:first-of-type {
+    width: 150px;            
+}
+
+tr td {
+    padding: 3px;
+}
+
+tfoot {
+    background-color: #D1EDE1;
+    text-align: center;
+}
+
+textarea {
+    width: 250px;
+    max-width: 300px;
+    height: 70px;
+    max-height: 100px;
+}
+
+input[name=last-name], input[name=first-name], input[name=year] {
+    width: 250px;
+}
+
+input[name=first-three], input[name=next-two], input[name=year], input[name=zip-code] {
+    width: 50px;
+}
+
+input[name=month], input[name=day] {
+    width: 25px;
+}
+
+.inputName {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5px;
+}

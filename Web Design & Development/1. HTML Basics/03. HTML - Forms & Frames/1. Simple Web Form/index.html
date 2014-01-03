@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>1. Simple Web Form</title>
+        <link href="styles/styles.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <form>         
+            <table>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" name="submitButton" value="Submit" />
+                            <input type="reset" name="clearButton" value="Reset This Form" />
+                        </td>
+                    </tr>
+                   
+                </tfoot>
+                
+                <tbody>
+                    <tr>
+                        <td class="inputName">Last Name</td>
+                        <td><input type="text" name="last-name" placeholder="Nakov" /></td>
+                    </tr>
+
+                    <tr>
+                        <td class="inputName">First Name</td>
+                        <td><input type="text" name="first-name" placeholder="Svetlin" /></td>
+                    </tr>
+
+                    <tr>
+                        <td class="inputName">Address</td>
+                        <td><textarea name="address" placeholder="17 Hristo Botev Str."></textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td class="inputName">City</td>
+                        <td><input type="text" name="city" placeholder="Kaspichan" />
+
+                        <span class="inputName">State</span>
+                            <input type="text" name="state" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="inputName">Zip/Postal Code</td>
+                       <td><input type="text" name="zip-code" placeholder="9325" pattern="\d{3,}" /></td>
+                    </tr>
+
+                    <tr>
+                        <td class="inputName">Country</td>
+                        <td>
+                            <select>
+                                <option selected>Bulgaria</option>
+                                <option>USA</option>
+                                <option>Russia</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="inputName">Phone (country code, area code, number)</td>
+                        <td>
+                            (+
+                            <input type="text" name="first-three" placeholder="359" maxlength="3" pattern="\d{3}" /> )
+                            <input type="text" name="next-two" placeholder="88" maxlength="2" pattern="\d{2}" /> -
+                            <input type="text" name="last-seven" placeholder="8334343" maxlength="7" pattern="\d{7}" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="inputName">E-mail</td>
+                        <td><input type="email" name="email" placeholder="example@mail.com" /></td>
+                    </tr>
+
+                    <tr>
+                        <td class="inputName">Birth date</td>
+                        <td>
+                            Month
+                            <input type="text" name="month" placeholder="06" maxlength="2" pattern="\d{1,}" />
+                            Day
+                            <input type="text" name="day" placeholder="14" maxlength="2" pattern="\d{1,}" />
+                            Year (4 digit)
+                            <input type="text" name="year" placeholder="1980" maxlength="4" pattern="\d{4}" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="inputName">Gender</td>
+                        <td>
+                            <select>
+                                <option selected>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="inputName">Starting date</td>
+                        <td>
+                            <input type="radio" id="spring" name="starting-date" />
+                            <label for="spring">Spring 2006</label>
+
+                            <input type="radio" id="summer" name="starting-date" />
+                            <label for="summer">Summer 2006</label>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="inputName">Comments/Questions</td>
+                        <td><textarea name="comments" placeholder="Please send me more infor about the logging."></textarea></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

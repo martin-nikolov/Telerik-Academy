@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>3. Styled Table of Products</title>
+        <link href="styles/styles.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <form>
+            <table>
+                <thead>
+                    <tr class="tableHeaderTitleBarText">
+                        <th colspan="6">Drag a column header and drop it here to group by that column</th>
+                    </tr>
+
+                    <tr class="tableHeaderColumnContainer">
+                        <th class="productIdColumnContainer">ProductID</th>
+                        <th class="productNameColumnContainer">Product name</th>
+                        <th class="unitPriceColumnContainer">Unit price</th>
+                        <th class="quantityColumnContainer">Quantity per unit</th>
+                        <th class="unitsColumnContainer">Unit in stock</th>
+                        <th>Discontinued</th>
+                    </tr>
+
+                    <tr class="tableHeaderInputsColumns">
+                        <th><input type="text" name="product-id" pattern="/d+" /></th>
+                        <th><input type="text" name="product-name" /></th>
+                        <th><input type="text" name="unit-price" pattern="/d+" /><a href="#"><img src="images/0.png" /></a></th>
+                        <th><input type="text" name="quantity" pattern="/d+" /></th>
+                        <th><input type="text" name="units-in-stock" pattern="/d+" /><a href="#"><img src="images/0.png" /></a></th>
+                        <th><input type="checkbox" disabled /><a href="#"><img src="images/0.png" /></a></th>
+                    </tr>
+                </thead>
+
+                <tfoot>                    
+                    <tr>
+                        <td colspan="7">
+                            <ul>
+                                <li><a href="#" class="imageHref"><img src="images/1.png" alt="First page" /></a></li>
+                                <li><a href="#" class="imageHref"><img src="images/2.png" alt="Previous page" /></a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li>...</li>
+                                <li><a href="#" class="imageHref"><img src="images/3.png" alt="Next page" /></a></li>
+                                <li><a href="#" class="imageHref"><img src="images/4.png" alt="Last page" /></a></li>
+                            </ul>
+
+                            <span class="pageSizeContainer">
+                                Page Size:
+                                <select>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                </select>
+                            </span>
+
+                            <span class="itemsOfPagesTextContainer">3351104 items of 33511 pages</span>
+                        </td>
+                    </tr>                    
+                </tfoot>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Chai</td>
+                        <td class="priceSign">18.00</td>
+                        <td>10 boxes x 20 bags</td>
+                        <td>39</td>
+                        <td><input type="checkbox" disabled /></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Chang</td>
+                        <td class="priceSign">19.00</td>
+                        <td>24 - 12 oz bottles</td>
+                        <td>17</td>
+                        <td><input type="checkbox" disabled /></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Aniseed Syrup</td>
+                        <td class="priceSign">10.00</td>
+                        <td>12 - 550 ml bottles</td>
+                        <td>13</td>
+                        <td><input type="checkbox" disabled /></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Chef Anton's Cajun Seasoning</td>
+                        <td class="priceSign">22.00</td>
+                        <td>48 - 6 oz jars</td>
+                        <td>53</td>
+                        <td><input type="checkbox" disabled /></td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Chef Anton's Gumbo Mix</td>
+                        <td class="priceSign">21.35</td>
+                        <td>10 boxes x 20 bags</td>
+                        <td>39</td>
+                        <td><input type="checkbox" disabled name="discontinued" checked /></td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>Chang</td>
+                        <td class="priceSign">19.00</td>
+                        <td>24 - 12 oz bottles</td>
+                        <td>17</td>
+                        <td><input type="checkbox" disabled /></td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>Chef Anton's Gumbo Mix</td>
+                        <td class="priceSign">21.35</td>
+                        <td>10 boxes x 20 bags</td>
+                        <td>39</td>
+                        <td><input type="checkbox" disabled name="discontinued" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>Chai</td>
+                        <td class="priceSign">18.00</td>
+                        <td>10 boxes x 20 bags</td>
+                        <td>39</td>
+                        <td><input type="checkbox" disabled /></td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>Chef Anton's Cajun Seasoning</td>
+                        <td class="priceSign">22.00</td>
+                        <td>48 - 6 oz jars</td>
+                        <td>53</td>
+                        <td><input type="checkbox" disabled checked /></td>
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td>Aniseed Syrup</td>
+                        <td class="priceSign">10.00</td>
+                        <td>12 - 550 ml bottles</td>
+                        <td>13</td>
+                        <td><input type="checkbox" disabled /></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </form>
+    </body>
+</html>

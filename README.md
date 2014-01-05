@@ -1,4 +1,8 @@
-# Telerik Academy 2013/2014
+<h1 align="center">Telerik Academy 2013/2014</h1>
+
+<p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming%20with%20C%23/Codes/Other/Telerik.png" /></a></p>
+
+# Programming with C# 
 
 ## C# - Part I
 
@@ -46,9 +50,16 @@
 * [Telerik Kids Academy 2012/2013](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%20Kids%20Academy%202012-2013) - 18x3 exercises
 * [Others](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Others) - 1 exercise
 
-<br>
+# Web Design & Development
 
----
+## HTML Basics
+
+1. [HTML - Fundamentals](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/1.%20HTML%20Basics/01.%20HTML%20-%20Fundamentals) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20&%20Development/1.%20HTML%20Basics/01.%20HTML%20-%20Fundamentals/Readme.md)) - 23.12.2013
+* [HTML - Tables](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/1.%20HTML%20Basics/02.%20HTML%20-%20Tables) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/1.%20HTML%20Basics/02.%20HTML%20-%20Tables/Readme.md)) - 23.12.2013
+* [HTML - Forms & Frames](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/1.%20HTML%20Basics/03.%20HTML%20-%20Forms%20%26%20Frames) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/1.%20HTML%20Basics/03.%20HTML%20-%20Forms%20%26%20Frames/Readme.md)) - 05.01.2014
+
+## CSS Styling
+1. [CSS - Overview](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/01.%20CSS%20-%20Overview) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/01.%20CSS%20-%20Overview/Readme.md)) - 05.01.2014
 
 ## PHP Web-development
 1. [Creating an address book](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book/Readme.md)) - 22.09.2013

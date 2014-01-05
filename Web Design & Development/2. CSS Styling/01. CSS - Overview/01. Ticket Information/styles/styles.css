@@ -1,0 +1,61 @@
+﻿body {
+    font-family: Arial;
+    background-color: #595959;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #9C9C9B;
+    margin: 0;
+    padding: 0 0 8px 3px;
+}
+
+section dl {
+    font-size: 13px;
+}
+
+section dt {
+    font-style: italic;
+    color: #E1E3E4;
+    padding-left: 5px;
+    margin-top: 20px;
+}
+
+section dd {
+    margin-top: -16px;
+    margin-left: 130px;
+}
+
+.nameContainer:before {
+    content: ' ';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    border-radius: 50%;
+    background-color: #71B47A;
+}
+
+.activeText {
+    color: #E5DDA9;
+}
+
+.supportMessage {
+    font-weight: bold;
+    color: #F3050C;
+    display: block;
+}
+
+.noActive {
+    color: #AAAAAA;
+}
+
+.statusMessage {
+    font-weight: bold;
+    color: #E66E23;
+}
+
+.hiddenField {
+    visibility: hidden;
+}

@@ -1,0 +1,65 @@
+﻿table {
+    font-family: Arial;
+    font-size: 13px;
+    border-collapse: collapse;
+    border-bottom: 1px solid #B6B497;
+}
+
+.col1 {
+    width: 135px;
+}
+
+.col2 {
+    width: 110px;
+}
+
+.col3 {
+    width: 115px;
+}
+
+.col4 {
+    width: 95px;
+}
+
+thead tr {
+    background-image: -ms-linear-gradient(top, #5EC306 0%, #4FB405 100%);
+    background-image: -moz-linear-gradient(top, #5EC306 0%, #4FB405 100%);
+    background-image: -o-linear-gradient(top, #5EC306 0%, #4FB405 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5EC306), color-stop(1, #4FB405));
+    background-image: -webkit-linear-gradient(top, #5EC306 0%, #4FB405 100%);
+    background-image: linear-gradient(to bottom, #5EC306 0%, #4FB405 100%);
+}
+
+thead th {
+    padding: 4px 4px 4px 6px;
+    border: 1px solid #3B8F0A;
+    text-align: left;
+    font-weight: normal;
+    color: #F5FEF7;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: #ECECD8;
+}
+
+tbody td {
+    padding: 4px 4px 4px 6px;
+    border-left: 1px solid #C5C3AB;
+    border-right: 1px solid #C5C3AB;
+}
+
+.gb-flag:before {
+    content: url('../images/gb.png');
+}
+
+.mx-flag:before {
+    content: url('../images/mx.png');
+}
+
+.uk-flag:before {
+    content: url('../images/uk.png');
+}
+
+.gb-flag:before, .mx-flag:before, .uk-flag:before {
+    padding-right: 4px;
+}

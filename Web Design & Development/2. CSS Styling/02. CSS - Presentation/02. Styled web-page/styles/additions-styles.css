@@ -1,0 +1,47 @@
+﻿html {
+    background: #d593ff;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d593ff), color-stop(50%, #9215f2), color-stop(100%, #9215f2)) fixed;
+    background: -webkit-linear-gradient(top, #d593ff 0%, #9215f2 50%, #9215f2 100%) fixed;
+    background: -o-linear-gradient(top, #d593ff 0%, #9215f2 50%, #9215f2 100%) fixed;
+    background: -ms-linear-gradient(top, #d593ff 0%, #9215f2 50%, #9215f2 100%) fixed;
+    background: linear-gradient(to bottom, #d593ff 0%, #9215f2 50%, #9215f2 100%) fixed;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d593ff', endColorstr='#9215f2',GradientType=0 ) fixed; 
+}
+
+body {
+    margin: 0 auto;
+    width: 1024px;
+}
+
+body header div#header-container div#reg-form-container div input {
+    background: #B35EF3;
+}
+
+body header div#header-container div#reg-form-container button {
+    color: #FFFFFC;
+    border-top: 1px solid #C5B8D1;
+    border-left: 1px solid #C5B8D1;
+    border-right: 1px solid #3C2051;
+    border-bottom: 1px solid #3C2051;
+    padding: 6px 14px;
+    background: bottom;
+}
+
+body header nav {
+    border: 1px solid #000;
+    border-radius: 16px;
+}
+
+body section article {
+    border-radius: 15px; 
+    color: #F9F9F9; 
+}
+
+body section article footer p a {
+    text-decoration: none;
+    color: #D4A3F8;
+}
+
+body footer p {
+    text-align: center;
+}

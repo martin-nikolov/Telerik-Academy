@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>2. Styled Table</title>
+        <link href="styles/styles.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <table>
+            <colgroup>
+                <col class="col1" />
+                <col class="col2" />
+                <col class="col3" />
+                <col class="col4" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Contact name</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Is Promoted</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maria Anders</td>
+                    <td>Berlin</td>
+                    <td class="gb-flag">Germany</td>
+                    <td><input type="checkbox" disabled /></td>
+                </tr>
+                <tr>
+                    <td>Ana Trujillo</td>
+                    <td>Mexico D.F.</td>
+                    <td class="mx-flag">Mexico</td>
+                    <td><input type="checkbox" disabled /></td>
+                </tr>
+                <tr>
+                    <td>Antonio Moreno</td>
+                    <td>Mexico D.F.</td>
+                    <td class="mx-flag">Mexico</td>
+                    <td><input type="checkbox" disabled checked /></td>
+                </tr>
+                <tr>
+                    <td>Thomas Hardy</td>
+                    <td>London</td>
+                    <td class="uk-flag">UK</td>
+                    <td><input type="checkbox" disabled /></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

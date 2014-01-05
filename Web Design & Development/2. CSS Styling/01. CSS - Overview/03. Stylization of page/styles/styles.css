@@ -1,0 +1,60 @@
+﻿body {
+    background-color: #A9A9A9;
+}
+
+body footer {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+body > header h1 {
+    text-align: center;
+    font-size: 2.7em; 
+}
+
+header h1 {
+    color: #FAFAD2;
+}
+
+header nav {
+    text-align: center;
+}
+
+nav ul, nav li, nav li a {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    padding: 0;
+    margin: 0; 
+    list-style-type: none;
+}
+
+.current {
+    background-color: #D3D3D3;
+}
+
+nav li a:hover {
+    background-color: #BCBCBC;
+}
+
+nav li:not(:last-child) a {
+    text-decoration: none;
+}
+
+article > header h1 {
+    font-size: 1.8em;
+}
+
+article p {
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+article footer {
+    font-size: 0.8em;
+}
+
+article footer a {
+    text-decoration: none;
+    color: black;
+}

@@ -7,7 +7,7 @@
 ## HTML Basics
 
 1. [HTML - Fundamentals](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/1.%20HTML%20Basics/01.%20HTML%20-%20Fundamentals) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20&%20Development/1.%20HTML%20Basics/01.%20HTML%20-%20Fundamentals/Readme.md)) - 23.12.2013
-* [HTML - Tables](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/1.%20HTML%20Basics/02.%20HTML%20-%20Tables) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/02.%20Primitive%20Data%20Types%20and%20Variables/Readme.md)) - 23.12.2013
+* [HTML - Tables](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/1.%20HTML%20Basics/02.%20HTML%20-%20Tables) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/1.%20HTML%20Basics/02.%20HTML%20-%20Tables/Readme.md)) - 23.12.2013
 * [HTML - Forms & Frames](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/1.%20HTML%20Basics/03.%20HTML%20-%20Forms%20%26%20Frames) - ([conditions](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20&%20Development/1.%20HTML%20Basics/03.%20HTML%20-%20Forms%20&%20Frames)) - 05.01.2014
 
 ## CSS Styling

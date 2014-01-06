@@ -1,0 +1,18 @@
+body {
+    width: 1024px;
+}
+
+span {
+    padding: 50px;
+}
+
+div {
+    padding-right: 3%;
+    border: 1px solid red;
+    border-radius: 60px;
+    background-color: black;
+}
+
+.lineSeparator ~ div, .lineSeparator ~ div div {
+    padding-right: 6%;
+}

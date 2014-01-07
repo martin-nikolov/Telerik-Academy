@@ -1,0 +1,87 @@
+body, body > header nav ul, body > header nav li {
+    margin: 0;
+    padding: 0;
+    font-family: Consolas; 
+}
+
+nav, nav ul, nav li, form, nav fieldset, h1 {
+    margin: 0;
+    padding: 0; 
+    display: inline; 
+    list-style-type: none;
+}
+
+body > header {
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #F4F4F4; 
+    box-shadow: 0 1px 4px #ccc;
+    -webkit-box-shadow: 0 1px 4px #ccc;
+    -moz-box-shadow: 0 1px 4px #ccc;
+}
+
+header nav h1, body > header a { 
+    display: inline;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body > header h1 {
+    padding-left: 10px;
+}
+
+body > header nav {
+    display: inline;
+    position: relative;
+    top: -3px;
+    padding-left: 70px;
+}
+
+body > header > nav > ul > li {
+    padding-right: 20px;
+}
+
+header nav ul {
+    margin-left: 50px;
+    padding-top: 10px;
+}
+
+header nav fieldset {
+    border: 0;
+}
+
+section {
+    margin: 8px;
+}
+
+form ul {
+    margin: 10px 0 10px 0;
+}
+
+form ul, form li {
+    list-style-type: none;
+    padding: 0 0 3px 5px;
+}
+
+.accesibility {
+    visibility: hidden;
+}
+
+.signIn {
+    padding: 0 0 0 50px;
+    font-size: 0.9em;
+}
+
+.requeredMessage {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.join {
+    width: 500px;
+}
+
+.search {
+    width: 500px;
+}

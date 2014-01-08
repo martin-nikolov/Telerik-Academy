@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 660px;
+    margin: 20px;
+    font-family: 'Segoe UI Symbol', Consolas;
+    background-color: #3C3C3C;
+    border: 1px solid #806850;
+    border-radius: 10px;
+}
+
+aside {
+    height: 45px;
+    max-height: 45px;
+    padding: 10px;
+
+    background: #3b3b3b;
+    background: -moz-linear-gradient(top, #3b3b3b 4%, #3b3b3b 55%, #2c2c2c 92%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #3b3b3b), color-stop(55%, #3b3b3b), color-stop(92%, #2c2c2c));
+    background: -webkit-linear-gradient(top, #3b3b3b 4%, #3b3b3b 55%, #2c2c2c 92%);
+    background: -o-linear-gradient(top, #3b3b3b 4%, #3b3b3b 55%, #2c2c2c 92%);
+    background: -ms-linear-gradient(top, #3b3b3b 4%, #3b3b3b 55%, #2c2c2c 92%);
+    background: linear-gradient(to bottom, #3b3b3b 4%, #3b3b3b 55%, #2c2c2c 92%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b3b3b', endColorstr='#2c2c2c',GradientType=0 );
+}
+
+aside div:not(.header), aside form {
+    display: inline-block;
+}
+
+section {
+    background-color: #3B3B3B;
+    padding: 15px 20px 20px 20px;
+}
+
+section header {
+    color: #FCD61B;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 0.9em;
+    color: #A1A1A1;
+}
+
+.logo {
+    margin-top: -5px;
+}
+
+.login-container {
+    margin-top: 10px;
+    margin-left: 60px;
+    position: absolute;
+}
+
+.login-message {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-right: 10px;
+    color: #FFFFFF;
+}
+
+input[type=text], input[type=email] {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.go-button {
+    padding: 4px 15px;
+    margin-left: 5px;
+    color: white;
+    border: 1px solid #FFFEFB;
+    border-radius: 10px;
+ 	
+    background-image: -ms-radial-gradient(center top, ellipse farthest-corner, #E7847F 0%, #D01F17 50%, #FC0D10 100%);
+    background-image: -moz-radial-gradient(center top, ellipse farthest-corner, #E7847F 0%, #D01F17 50%, #FC0D10 100%);
+    background-image: -o-radial-gradient(center top, ellipse farthest-corner, #E7847F 0%, #D01F17 50%, #FC0D10 100%);
+    background-image: -webkit-gradient(radial, center top, 0, center top, 479, color-stop(0, #E7847F), color-stop(0.5, #D01F17), color-stop(1, #FC0D10));
+    background-image: -webkit-radial-gradient(center top, ellipse farthest-corner, #E7847F 0%, #D01F17 50%, #FC0D10 100%);
+    background-image: radial-gradient(ellipse farthest-corner at center top, #E7847F 0%, #D01F17 50%, #FC0D10 100%)
+}
+
+.white {
+    color: #FFFFFF;
+}

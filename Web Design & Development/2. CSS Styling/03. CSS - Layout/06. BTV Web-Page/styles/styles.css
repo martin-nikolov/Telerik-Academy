@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px;
+    font: 12px/1.2 Tahoma, sans-serif;
+    background-color: #1e3741;
+}
+
+#main-container {
+    display: block;
+    width: 688px;
+    max-width: 688px;
+    padding: 20px 20px 10px 0px;
+    border: 1px solid #337d8f;
+    border-radius: 7px;
+}
+
+#main-container nav {
+    padding-left: 5px;
+    height: 40px;
+}
+
+#main-container nav ul {
+    list-style-type: none;
+}
+
+#main-container nav ul li {
+    margin-right: -2px;
+    display: inline-block;
+}
+
+#main-container nav ul li a {
+    padding: 8px 10px 8px 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #8ba5b1;
+    background-color: #4b5f67;
+}
+
+#main-container nav ul li a:hover {
+    text-decoration: underline;
+    color: #f0f8f3;
+    background-color: #1e3741;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+}
+
+#main-container nav ul li a.current {
+    color: #f0f8f3;
+    background-color: #1e3741;
+}
+
+#main-container section article:first-of-type img {
+    opacity: 1;
+}
+
+#main-container article:not(:last-child) header {
+    border-bottom: 1px solid #334952;
+}
+
+#main-container article.current-article header {
+    color: #f0f8f3;
+    background-color: #00968c;
+}
+
+#main-container article .article-content {
+    position: absolute;
+    top: 80px;
+    left: 330px;
+    float: right;
+    zoom: 1;
+
+    background-image: url('../images/play.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+#main-container article .article-content:after {
+    display: block;
+    content: "";
+    height: 0;
+    clear: both;
+}
+
+#main-container article .article-content img {
+    max-width: 390px;
+    opacity: 0;
+}
+
+#main-container article header {
+    display: inline-block;
+    width: 250px;
+    padding-right: 55px;
+    color: #8ba5b1;
+}
+
+#main-container article header:hover {
+    color: #f0f8f3;
+    background-color: #00968c;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+#main-container article header:hover ~ div > img {
+    opacity: 1;
+}
+
+#main-container article h1 {
+    width: 250px;
+    display: block;
+    margin: 12px 40px 12px 10px;
+    font: 12px/1.2 Tahoma, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}

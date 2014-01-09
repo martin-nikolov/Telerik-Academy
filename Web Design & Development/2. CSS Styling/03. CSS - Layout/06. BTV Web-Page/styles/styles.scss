@@ -1,0 +1,141 @@
+$font: 12px/1.2 Tahoma, sans-serif;
+
+$main-border-color: #337D8F;
+$container-bg-color: #1E3741;
+
+$link-color: #8BA5B1;
+$link-bg-color: #4B5F67;
+$link-current-color: #F0F8F3;
+$link-current-bg-color: #1E3741;
+
+$selected-article-bg-color: #00968C;
+
+@mixin clearfix {
+	zoom: 1;
+
+	&:after {
+		display: block;
+		content: ""; 
+		height: 0;
+		clear: both;
+	}
+}
+
+@mixin transition($time: 0.3s, $property: background-color) {
+	-webkit-transition: $property $time;
+	-moz-transition:  $property $time;
+	-o-transition: $property $time;
+	transition: $property $time;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 20px;
+	font: $font;
+	background-color: $container-bg-color;
+}
+
+#main-container {
+	height: 300px;
+	width: 688px;
+	max-width: 688px;
+	padding: 20px 20px 20px 0px;
+	border: 1px solid $main-border-color;
+	border-radius: 7px;
+
+	nav {
+		padding-left: 5px;
+		height: 40px;
+
+		ul {
+			list-style-type: none;
+
+			li {
+				margin-right:-2px;
+				display: inline-block;
+
+				a {
+					padding: 8px 10px 8px 10px;
+					font-weight: bold;
+					text-decoration: none;
+					color: $link-color;
+					background-color: $link-bg-color;
+
+
+					&:hover {
+						text-decoration: underline;
+						color: $link-current-color; 
+						background-color: $link-current-bg-color;
+						@include transition(0.2s);
+					}
+
+					&.current {					
+						color: $link-current-color; 
+						background-color: $link-current-bg-color;
+					}
+				}
+			}
+		}
+	}
+	
+	section article:first-of-type {	
+		img {
+		z-index: -1;
+			opacity: 1;
+		}
+	}
+
+	article {	
+		&:not(:last-child) header {
+			border-bottom: 1px solid #334952;
+		}
+
+		&.current-article header {
+			color: $link-current-color;
+			background-color: $selected-article-bg-color;
+		}			
+
+		.article-content {
+			position: absolute;
+			top: 80px;
+			left: 330px;
+			float: right;
+			@include clearfix;
+
+				img {
+					max-width: 390px;
+					opacity: 0;
+				}
+		}		
+
+	header {
+		display: inline-block;
+		width: 250px;
+		padding-right: 55px;
+		color: $link-color;						
+
+		&:hover {
+			color: $link-current-color;
+			background-color: $selected-article-bg-color;
+			@include transition;
+		}
+
+		&:hover ~ div > img {
+			opacity: 1;
+		}
+	}
+
+		h1 {
+			width: 250px;
+			display: block;
+			margin: 12px 40px 12px 10px;
+			font: $font;
+			font-weight: bold;
+			cursor: pointer;
+		}		
+	}		
+}

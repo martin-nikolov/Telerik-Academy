@@ -1,18 +1,4 @@
-﻿.clearfix, body header div#header-container, body header nav, body header nav ul, body header nav ul li ul.sub-nav-list, body section, body aside {
-    zoom: 1;
-}
-
-.clearfix:after, body header div#header-container:after, body header nav:after, body header nav ul:after, body header nav ul li ul.sub-nav-list:after, body section:after, body aside:after, .clearfix:before, body header div#header-container:before, body header nav:before, body header nav ul:before, body header nav ul li ul.sub-nav-list:before, body section:before, body aside:before {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-}
-
-.clearfix:after, body header div#header-container:after, body header nav:after, body header nav ul:after, body header nav ul li ul.sub-nav-list:after, body section:after, body aside:after {
-    clear: both;
-}
-
+/* RESET STYLES */
 body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em, img {
     margin: 0;
     padding: 0;
@@ -30,6 +16,26 @@ body {
 
 body header {
     padding: 25px 15px 5px 15px;
+}
+
+body header div#header-container {
+    zoom: 1;
+}
+
+body header div#header-container:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+body header div#header-container:before {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
 }
 
 body header div#header-container div#logo-container {
@@ -82,6 +88,43 @@ body header nav {
     margin: 20px 20px 20px 20px;
     padding: 12px;
     border: 2px solid #000;
+    zoom: 1;
+}
+
+body header nav:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+body header nav:before {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+body header nav ul {
+    zoom: 1;
+}
+
+body header nav ul:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+body header nav ul:before {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
 }
 
 body header nav ul.nav-list {
@@ -118,6 +161,23 @@ body header nav ul li ul.sub-nav-list {
     display: none;
     background-color: rgba(179, 94, 243, 0.9);
     border-radius: 5px;
+    zoom: 1;
+}
+
+body header nav ul li ul.sub-nav-list:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+body header nav ul li ul.sub-nav-list:before {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
 }
 
 body header nav ul li ul li {
@@ -133,13 +193,30 @@ body header nav ul li ul li:last-of-type {
 
 body header nav ul li ul li > a {
     font-size: 1.2em;
-    color: #fff;
+    color: white;
 }
 
 body section {
     width: 75%;
     float: left;
     color: black;
+    zoom: 1;
+}
+
+body section:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+body section:before {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
 }
 
 body section article {
@@ -169,7 +246,7 @@ body section article footer p {
 }
 
 body section article footer p time {
-    font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+    font-family: Consolas, "Lucida Console", "DejaVu Sans Mono", monospace;
 }
 
 body section article footer p a {
@@ -184,6 +261,23 @@ body aside {
     float: left;
     width: 20%;
     margin: 20px;
+    zoom: 1;
+}
+
+body aside:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+body aside:before {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
 }
 
 body aside > ul {
@@ -231,7 +325,7 @@ body aside > ul > li ul {
 
 body aside > ul > li ul li {
     margin: 5px 0 0 10px;
-    background: url('../images/li-dot.png') no-repeat;
+    background: url("../images/li-dot.png") no-repeat;
     background-position: 0 50%;
     padding-left: 25px;
 }

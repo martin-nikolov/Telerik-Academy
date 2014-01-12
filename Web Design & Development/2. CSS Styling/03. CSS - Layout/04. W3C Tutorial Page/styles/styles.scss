@@ -15,17 +15,6 @@ $main-width: 860px;
 $section-width: 510px;
 $aside-width: 170px;
 
-@mixin clearfix {
-	zoom: 1;
-
-	&:after {
-		content: "";
-		height: 0;
-		display: block;
-		clear: both;
-	}
-}
-
 @mixin transition($time: 0.3s, $property: background-color) {
 	-webkit-transition: $property $time;
 	-moz-transition:  $property $time;

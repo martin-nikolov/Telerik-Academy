@@ -1,0 +1,77 @@
+﻿@linear-gradient-from: #d593ff;
+@linear-gradient-to: #9215f2;
+
+@article-font-color: #F9F9F9;
+@footer-href-color: #D4A3F8;
+
+@input-bg-color: #B35EF3; 
+@button-font-color: #FFFFFC;
+@border-top-and-left-color: #C5B8D1;
+@border-right-and-bottom-color: #3C2051;
+
+.linear-gradient(@from, @to) {
+    background: @from;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @from), color-stop(50%, @to), color-stop(100%, @to)) fixed;
+    background: -webkit-linear-gradient(top, @from 0%, @to 50%, @to 100%) fixed;
+    background: -o-linear-gradient(top, @from 0%, @to 50%, @to 100%) fixed;
+    background: -ms-linear-gradient(top, @from 0%, @to 50%, @to 100%) fixed;
+    background: linear-gradient(to bottom, @from 0%, @to 50%, @to 100%) fixed;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{from}', endColorstr='@{to}',GradientType=0) fixed;
+}
+
+html {
+    .linear-gradient(@linear-gradient-from, @linear-gradient-to);
+}
+
+body {
+    margin: 0 auto;
+    width: 1024px;
+
+    header {
+
+        div {
+            &#header-container div#reg-form-container {
+                div input { 
+                    background: @input-bg-color;
+                }
+
+                button {
+                    color: @button-font-color;
+                    border-top: 1px solid @border-top-and-left-color;
+                    border-left: 1px solid @border-top-and-left-color;
+                    border-right: 1px solid @border-right-and-bottom-color;
+                    border-bottom: 1px solid @border-right-and-bottom-color;
+                    padding: 6px 14px;
+                    background: bottom;
+                }
+            }  
+        }
+
+        nav {
+            border: 1px solid #000;
+            border-radius: 16px;
+        }
+    }
+
+    section {
+        article {
+            border-radius: 15px;
+            color: @article-font-color;
+
+            footer {
+                p {
+                    a {
+                        text-decoration: none;
+                        color: @footer-href-color;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        p {
+            text-align: center;
+        }
+    }
+}

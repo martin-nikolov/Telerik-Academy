@@ -1,0 +1,180 @@
+# SASS
+
+## Exercise 1
+Implement the following using SASS:
+* Create the SASS easy to change (backgrounds, fonts)
+* Use mixins for clears, gradients
+
+![Screenshot](https://raw.github.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/04.%20SASS/01.%20Styled%20web-page%20with%20SASS/index.png)
+
+![Sample Logo](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/04.%20SASS/01.%20Styled%20web-page%20with%20SASS/images/Sample%20Logo.png?raw=true)
+
+![Li dot](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/04.%20SASS/01.%20Styled%20web-page%20with%20SASS/images/li-dot.png?raw=true)
+
+```html
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Styling</title>
+</head>
+<body>
+    <header>
+        <div id="header-container">
+            <div id="logo-container">
+                <h1>
+                    <a href="#">
+                        <img src="images/Sample%20Logo.png" />
+                    </a>
+                </h1>
+            </div>
+            <div id="reg-form-container">
+                <form>
+                    <div>
+                        <label for="tb-username">Username: </label>
+                        <input type="text" id="tb-username" name="tb-username"/><br />
+                        <label for="tb-password">Password: </label>
+                        <input type="password" id="tb-password" name="tb-password"/>
+                    </div>
+                    <button id="btn-register">Register</button>
+                </form>
+            </div>
+        </div>
+        <nav>
+            <ul id="main-nav-list"  class="nav-list">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Presentations</a>
+                    <ul class="nav-list sub-nav-list">
+                        <li class="selected">
+                            <a href="#">Intro CSS Styling Course</a>
+                        </li>
+                        <li>
+                            <a href="#">CSS Overview</a>
+                        </li>
+                        <li>
+                            <a href="#">CSS Presentation</a>
+                        </li>
+                        <li>
+                            <a href="#">CSS Display</a>
+                        </li>
+                        <li>
+                            <a href="#">CSS Layout</a>
+                        </li>
+                        <li>
+                            <a href="#">SASS</a>
+                        </li>
+                        <li>
+                            <a href="#">LESS</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Videos</a>
+                </li>
+                <li>
+                    <a href="#">Trainers</a>
+                </li>
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <header>
+                <h1>Lorem ipsum dolor sit amet</h1>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas, dui sed cursus placerat, felis metus sollicitudin nunc, nec venenatis augue tellus vitae nisl. Quisque ut venenatis est. Vestibulum non dolor nec sapien imperdiet semper nec quis massa. Phasellus ultrices vestibulum rutrum. Vestibulum auctor felis eget ipsum semper vulputate. Sed congue, metus sit amet tempus pretium, nunc sapien pellentesque elit, ut porttitor eros orci nec arcu. Nunc lobortis risus eget eros viverra dapibus.</p>
+            <footer>
+                <p>
+                    published by
+                    <a href="#">Doncho Minkov</a> on
+                    <time>08-jan-2013</time> at
+                    <time>14:51</time>
+                </p>
+            </footer>
+        </article>
+        <article>
+            <header>
+                <h1>Vestibulum ante ipsum primis</h1>
+            </header>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus eget tincidunt velit. Cras sed lectus mauris. Vivamus massa lacus, laoreet nec sollicitudin eu, pharetra sed elit. Aenean quis enim dui, sed mollis sapien. Duis vel eros sapien, sed blandit magna. Praesent a dolor leo, a gravida lectus. Fusce non aliquam nibh. Aenean nisl dui, faucibus consequat fermentum at, rutrum congue urna. Ut fringilla tempor risus dictum aliquam. Donec congue sapien et massa sagittis eget pharetra risus sollicitudin. Vestibulum urna nunc, feugiat sed tincidunt et, fringilla non nisi. Mauris neque tellus, lobortis a vehicula eget, volutpat id erat. Donec rutrum consectetur malesuada. Curabitur mollis orci at sapien tristique ac mattis nulla sollicitudin.</p>
+            <footer>
+                <p>
+                    published by
+                    <a href="#">Doncho Minkov</a> on
+                    <time>08-jan-2013</time> at
+                    <time>14:51</time>
+                </p>
+            </footer>
+        </article>
+        <article>
+            <header>
+                <h1>Nullam ullamcorper dolor sed enim venenatis aliquet</h1>
+            </header>
+            <p>Nullam ullamcorper dolor sed enim venenatis aliquet. Aenean magna magna, consectetur vel gravida at, gravida ac eros. Donec tincidunt iaculis diam, sit amet aliquam libero fermentum non. Donec at lectus at eros interdum lobortis nec sed massa. Sed nec hendrerit magna. Nunc nec vestibulum lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque rutrum neque orci, quis dapibus justo. Sed id turpis a purus luctus dictum eget vitae tortor. Maecenas eu nunc in nisi interdum eleifend non sed ante. Integer sit amet rutrum magna. Maecenas sed blandit quam.    </p>
+            <footer>
+                <p>
+                    published by
+                    <a href="#">Doncho Minkov</a> on
+                    <time>08-jan-2013</time> at
+                    <time>14:51</time>
+                </p>
+            </footer>
+        </article>
+    </section>
+
+    <aside>
+        <ul>
+            <li>
+                <h2>Widget</h2>
+                <p>
+                    Duis vel eros sapien, sed blandit magna.
+                    <a href="#">Praesent</a> a dolor leo, a gravida <strong>lectus</strong>. Fusce non aliquam nibh. Aenean nisl dui, faucibus consequat fermentum at, rutrum congue urna.
+                </p>
+            </li>
+            <li>
+                <h2>Widget</h2>
+                <ul>
+                    <li>
+                        Widget Item
+                    </li>
+                    <li>
+                        Widget Item
+                    </li>
+                    <li>
+                        Widget Item
+                    </li>
+                    <li>
+                        Widget Item
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>Widget</h2>
+                <p>
+                    Duis vel eros sapien, sed blandit magna.
+                    <a href="#">Praesent</a> a dolor leo, a gravida <strong>lectus</strong>. Fusce non aliquam nibh. <em>Aenean nisl dui</em>, faucibus consequat fermentum at, rutrum congue urna.
+                </p>
+            </li>
+        </ul>
+    </aside>
+    <footer>
+        <p>
+            Telerik Software Academy
+        </p>
+    </footer>
+</body>
+</html>
+```
+
+## Exercise 2
+Create a web gallery:
+* Use only HTML, SASS and CSS
+* List images
+* When a image is selected, show it zoomed
+
+![Screenshot](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/04.%20SASS/02.%20Animal%20Gallery/index.png?raw=true)

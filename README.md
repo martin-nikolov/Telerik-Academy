@@ -61,6 +61,10 @@
 
 ## CSS Styling
 1. [CSS - Overview](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/01.%20CSS%20-%20Overview) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/01.%20CSS%20-%20Overview/Readme.md)) - 05.01.2014
+* [CSS - Presentation](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/Readme.md)) - 05.01.2014
+* [CSS - Layout](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/03.%20CSS%20-%20Layout) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/03.%20CSS%20-%20Layout/Readme.md)) - 10.01.2014
+* [SASS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/04.%20SASS) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/04.%20SASS/Readme.md)) - 11.01.2014
+* [LESS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/05.%20LESS) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/05.%20LESS/Readme.md)) - 12.01.2014
 
 ## PHP Web-development
 1. [Creating an address book](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book/Readme.md)) - 22.09.2013

@@ -5,11 +5,11 @@ Implement the following using LESS:
 * Create the LESS easy to change (backgrounds, fonts)
 * Use mixins for clears, gradients
 
-![Screenshot](https://raw.github.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/04.%20SASS/01.%20Styled%20web-page%20with%20SASS/index.png)
+![Screenshot](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/05.%20LESS/01.%20Styled%20web-page%20with%20LESS/index.png?raw=true)
 
-![Sample Logo](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/04.%20SASS/01.%20Styled%20web-page%20with%20SASS/images/Sample%20Logo.png?raw=true)
+![Sample Logo](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/05.%20LESS/01.%20Styled%20web-page%20with%20LESS/images/Sample%20Logo.png?raw=true)
 
-![Li dot](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/04.%20SASS/01.%20Styled%20web-page%20with%20SASS/images/li-dot.png?raw=true)
+![Li dot](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/05.%20LESS/01.%20Styled%20web-page%20with%20LESS/images/li-dot.png?raw=true)
 
 ```html
 <!DOCTYPE html>

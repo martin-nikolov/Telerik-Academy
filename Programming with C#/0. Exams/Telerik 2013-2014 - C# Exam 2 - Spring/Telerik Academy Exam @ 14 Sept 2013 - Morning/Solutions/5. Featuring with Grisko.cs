@@ -1,84 +1,71 @@
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
-  
-class Program
+using System.Linq;
+
+class FeaturingWithGrisko
 {
-    static StringBuilder result;
-    static char[] letters;
-    static HashSet<string> answers = new HashSet<string>();
-  
-    static void Check(int[] arr)
-    {
-        for (int i = 0; i < arr.Length; i++)
-        {
-            if (i > 0 && i + 1 < letters.Length)
-            {
-                if (letters[arr[i - 1]] == letters[arr[i]] || letters[arr[i + 1]] == letters[arr[i]])
-                    return;
-            }
-            else if (i == 0 && i + 1 < letters.Length)
-            {
-                if (letters[arr[i]] == letters[arr[i + 1]])
-                    return;
-            }
-            else if (i == letters.Length - 1 && i > 0)
-            {
-                if (letters[arr[i]] == letters[arr[i - 1]])
-                    return;
-            }
-        }
-  
-        for (int i = 0; i < letters.Length; i++) result[i] = letters[arr[i]];
-  
-        answers.Add(result.ToString());
-    }
-  
-    static void Permutation(int[] arr, bool[] used, int i)
-    {
-        if (i == arr.Length)
-        {
-            Check(arr);
-            return;
-        }
-  
-        for (int j = 0; j < arr.Length; j++)
-        {
-            if (used[j]) continue;
-  
-            arr[i] = j;
-  
-            used[j] = true;
-            Permutation(arr, used, i + 1);
-            used[j] = false;
-        }
-    }
-  
+    static readonly long[] FirstEleventhFactorials = { 0, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800 };
+    static readonly int[] LettersDictionary = new int[26];
+
+    static long numberOfValidWords = 0;
+
     static void Main()
     {
         string input = Console.ReadLine();
-        letters = new char[input.Length];
-        for (int i = 0; i < input.Length; i++)
+
+        InitializeLetterOccurs(input, LettersDictionary);
+
+        bool containsUniqueElements = !LettersDictionary.Any(key => key > 1); // or ... = LetterOccurs.All(key => key == 1 || key == 0);
+
+        if (containsUniqueElements)
         {
-            letters[i] = input[i];
-            answers.Add(letters[i].ToString());
+            numberOfValidWords = FirstEleventhFactorials[input.Length];
         }
-  
-        if(answers.Count > input.Length)
+        else
         {
-            Console.WriteLine(0);
+            var generatedWord = new char[input.Length];
+            GeneratePermutations(generatedWord, 0);
+        }
+
+        Console.WriteLine(numberOfValidWords);
+    }
+  
+    static void InitializeLetterOccurs(string input, int[] collection)
+    {
+        foreach (var letter in input)
+        {
+            collection[letter - 'a']++;
+        }
+    }
+
+    static bool IsValidWord(char[] letters)
+    {
+        for (int i = 0; i < letters.Length - 1; i++)
+            if (letters[i] == letters[i + 1])
+                return false;
+
+        return true;
+    }
+
+    static void GeneratePermutations(char[] generatedWord, int index)
+    {
+        if (index == generatedWord.Length)
+        {
+            if (IsValidWord(generatedWord))
+                numberOfValidWords++;
+
             return;
         }
-  
-        answers.Clear();
-  
-        int[] arr = new int[input.Length];
-        result = new StringBuilder();
-        result.Append(new string('-', input.Length));
-  
-        bool[] used = new bool[arr.Length];
-        Permutation(arr, used, 0);
-        Console.WriteLine(answers.Count);
+
+        for (int i = 0; i < LettersDictionary.Length; i++)
+        {
+            if (LettersDictionary[i] != 0)
+            {
+                generatedWord[index] = (char)(i + 'a');
+
+                LettersDictionary[i]--;
+                GeneratePermutations(generatedWord, index + 1); 
+                LettersDictionary[i]++;
+            }
+        }
     }
 }

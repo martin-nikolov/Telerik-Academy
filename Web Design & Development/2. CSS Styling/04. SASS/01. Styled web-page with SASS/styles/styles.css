@@ -9,6 +9,14 @@ div, h1, h3, h4, h5, h6, header, footer, body, section, nav, article, aside {
     display: block;
 }
 
+.clearfix, body header div#header-container:after, body header div#header-container:before, body header nav:after, body header nav:before, body header nav ul:after, body header nav ul:before, body header nav ul li ul.sub-nav-list:after, body header nav ul li ul.sub-nav-list:before, body section:after, body section:before, body aside:after, body aside:before {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
 body {
     font: 14px normal Arial;
     color: white;
@@ -20,22 +28,6 @@ body header {
 
 body header div#header-container {
     zoom: 1;
-}
-
-body header div#header-container:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-}
-
-body header div#header-container:before {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
 }
 
 body header div#header-container div#logo-container {
@@ -91,40 +83,8 @@ body header nav {
     zoom: 1;
 }
 
-body header nav:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-}
-
-body header nav:before {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-}
-
 body header nav ul {
     zoom: 1;
-}
-
-body header nav ul:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-}
-
-body header nav ul:before {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
 }
 
 body header nav ul.nav-list {
@@ -164,22 +124,6 @@ body header nav ul li ul.sub-nav-list {
     zoom: 1;
 }
 
-body header nav ul li ul.sub-nav-list:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-}
-
-body header nav ul li ul.sub-nav-list:before {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-}
-
 body header nav ul li ul li {
     float: none;
     margin: 0 15px;
@@ -201,22 +145,6 @@ body section {
     float: left;
     color: black;
     zoom: 1;
-}
-
-body section:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-}
-
-body section:before {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
 }
 
 body section article {
@@ -262,22 +190,6 @@ body aside {
     width: 20%;
     margin: 20px;
     zoom: 1;
-}
-
-body aside:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-}
-
-body aside:before {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
 }
 
 body aside > ul {

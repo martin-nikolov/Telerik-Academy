@@ -10,7 +10,7 @@ div, h1, h3, h4, h5, h6, header, footer, body, section, nav, article, aside {
     display: block;
 }
 
-@mixin clearfix {
+.clearfix {
     content: "\0020";
     display: block;
     height: 0;
@@ -22,11 +22,11 @@ div, h1, h3, h4, h5, h6, header, footer, body, section, nav, article, aside {
     zoom: 1;
 
     &:after {
-        @include clearfix;
+        @extend .clearfix;
     }
 
     &:before {
-        @include clearfix;
+        @extend .clearfix;
     }
 }
 

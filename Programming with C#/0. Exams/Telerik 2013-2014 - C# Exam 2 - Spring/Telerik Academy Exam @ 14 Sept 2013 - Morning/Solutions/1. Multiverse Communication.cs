@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
  
-class Exam1
+class MultiverseCommunication
 {
     static List<string> ciphers = new List<string>();
  

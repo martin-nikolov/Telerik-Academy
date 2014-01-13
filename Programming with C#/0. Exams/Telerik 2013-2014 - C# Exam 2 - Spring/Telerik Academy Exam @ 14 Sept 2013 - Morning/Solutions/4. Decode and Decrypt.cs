@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Text;
  
-class Program
+class DecodeAndDecrypt
 {
     static void Main()
     {

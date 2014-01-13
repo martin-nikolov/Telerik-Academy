@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
  
-class Program
+class MagicWords
 {
     static List<string> words = new List<string>();
     static int bestLength = 0;

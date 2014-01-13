@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
   
-class Program
+class FeaturingWithGrisko
 {
     static StringBuilder result;
     static char[] letters;

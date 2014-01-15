@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>4. Windows Calculator</title>
+        <link href="styles/styles.css" rel="stylesheet" />
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="scripts/modernizr.js"></script>
+    </head>
+    <body>
+
+        <div id="main-container">
+            <div id="title-bar">
+                <img src="images/icon.png" alt="" />
+                <span class="title">Calculator</span>
+
+                <ul id="control-buttons">
+                    <li><button id="minimize-button"><div>_</div></button></li><li><button id="maximize-button" disabled><img src="images/maximize-sign.png" alt="Alternate Text" /></button></li><li><button id="close-button"><span><img src="images/x-sign.png" alt="Close" /></span></button></li>
+                </ul>
+            </div>
+
+            <div id="inner-container">
+                <div id="navigation-bar">
+                    <ul>
+                        <li>View</li><li>Edit</li><li>Help</li>
+                    </ul>
+
+                    <!-- Create sub-menus -->
+                </div>
+
+                <div id="view-container">
+                    <div id="result-container-bg">
+                        <div id="result-container">
+                            <textarea maxlength="20">0</textarea>
+                        </div>
+                    </div>
+                    <div id="binary-result-container-bg">
+                        <div id="binary-result-container">
+                            <div class="zeros">
+                                <ul>
+                                    <li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li>
+                                </ul>
+                            </div>
+
+                            <div class="decimals">
+                                <ul>
+                                    <li>63</li>
+                                    <li class="center">47</li>
+                                    <li class="right">32</li>
+                                </ul>
+                            </div>
+
+                            <div class="zeros">
+                                <ul>
+                                    <li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li>
+                                </ul>
+                            </div>
+
+                            <div class="decimals">
+                                <ul>
+                                    <li>31</li>
+                                    <li class="center">15</li>
+                                    <li class="right right-more">0</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="radio-container">
+                            <div id="numeral-systems-container">
+                                <form>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" name="systems" id="hex" />
+                                            <label for="hex">Hex</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="systems" id="dec" checked />
+                                            <label for="dec">Dec</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="systems" id="oct" />
+                                            <label for="oct">Oct</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="systems" id="bin" />
+                                            <label for="bin">Bin</label>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+
+                            <div id="bits-length-container">
+                                <form>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" name="systems" id="qword" checked />
+                                            <label for="qword">Qword</label>
+                                        </li>
+
+                                        <li>
+                                            <input type="radio" name="systems" id="dword" />
+                                            <label for="dword">Dword</label>
+                                        </li>
+
+                                        <li>
+                                            <input type="radio" name="systems" id="word" />
+                                            <label for="word">Word</label>
+                                        </li>
+
+                                        <li>
+                                            <input type="radio" name="systems" id="byte" />
+                                            <label for="byte">Byte</label>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="buttons-container">
+                        <div id="buttons-bitwise">
+                            <ul><li><button class="disabled">&nbsp;</button></li><li><button>Mod</button></li><li><button>(</button></li><li><button>)</button></li><li><button>RoL</button></li><li><button>RoR</button></li><li><button>Or</button></li><li><button>Xor</button></li><li><button>Lsh</button></li><li><button>Rsh</button></li><li><button>Not</button></li><li><button>And</button></li></ul>
+                        </div>
+
+                        <div id="buttons-letters">
+                            <ul><li><button class="disabled">A</button></li><li><button class="disabled">B</button></li><li><button class="disabled">C</button></li><li><button class="disabled">D</button></li><li><button class="disabled">E</button></li><li><button class="disabled">F</button></li></ul>
+                        </div>
+
+                        <div id="buttons-common">
+                            <div id="buttons-memory" class="disabled">
+                                <ul><li><button>MC</button></li><li><button>MR</button></li><li><button>MS</button></li><li><button>M+</button></li><li><button>M-</button></li></ul>
+                            </div>
+
+                            <div id="buttons-common-operations">
+                                <ul><li><button>Clear</button></li><li><button>CE</button></li><li><button>C</button></li><li><button>±</button></li><li><button class="disabled">√</button></li><li><button class="digit">7</button></li><li><button class="digit">8</button></li><li><button class="digit">9</button></li><li><button>/</button></li><li><button class="disabled">%</button></li><li><button class="digit">4</button></li><li><button class="digit">5</button></li><li><button class="digit">6</button></li><li><button>*</button></li><li><button class="disabled">1/x</button></li><li><button class="digit">1</button></li><li><button class="digit">2</button></li><li><button class="digit">3</button></li><li><button>-</button></li><li class="row2"><button>=</button></li><li class="col2"><button class="digit">0</button></li><li><button class="disabled">.</button></li><li><button>+</button></li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

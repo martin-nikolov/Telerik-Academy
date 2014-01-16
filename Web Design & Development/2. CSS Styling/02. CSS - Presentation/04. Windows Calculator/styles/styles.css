@@ -1,27 +1,35 @@
 .unselectable, #main-container #title-bar, #main-container #inner-container #navigation-bar ul li, #main-container #inner-container #view-container #result-container-bg #result-container textarea, #main-container #inner-container #view-container #binary-result-container-bg #binary-result-container ul {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  z-index: -1; }
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: -1;
+}
 
 * {
-  margin: 0;
-  padding: 0; }
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  margin: 0;
-  padding: 0;
-  cursor: default;
-  background: url("../images/background.jpg") no-repeat;
-  background-position-x: center; }
-  body ul {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    background: url("../images/background.jpg") no-repeat;
+    background-position-x: center;
+}
+
+body ul {
     list-style-type: none;
-    display: inline-block; }
-    body ul li {
-      display: inline-block; }
-  body #buttons-container button, body #main-container #inner-container #view-container #buttons-container #buttons-common .digit:hover, #main-container #inner-container #view-container body #buttons-container #buttons-common .digit:hover, body #main-container #inner-container #view-container #buttons-container #buttons-memory button:hover, #main-container #inner-container #view-container body #buttons-container #buttons-memory button:hover {
+    display: inline-block;
+}
+
+body ul li {
+    display: inline-block;
+}
+
+body #buttons-container button, body #main-container #inner-container #view-container #buttons-container #buttons-common .digit:hover, #main-container #inner-container #view-container body #buttons-container #buttons-common .digit:hover, body #main-container #inner-container #view-container #buttons-container #buttons-memory button:hover, #main-container #inner-container #view-container body #buttons-container #buttons-memory button:hover {
     height: 27px;
     max-height: 27px;
     width: 34px;
@@ -39,256 +47,369 @@ body {
     background: -o-linear-gradient(top, #f0f6fb 0%, #e2eaf3 49%, #d5e0ed 50%, #d7e2ef 100%);
     background: -ms-linear-gradient(top, #f0f6fb 0%, #e2eaf3 49%, #d5e0ed 50%, #d7e2ef 100%);
     background: linear-gradient(to bottom, #f0f6fb 0%, #e2eaf3 49%, #d5e0ed 50%, #d7e2ef 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 ); }
-    body #buttons-container button.disabled, body #buttons-container button.disabled:hover, body #main-container #inner-container #view-container #buttons-container #buttons-common .disabled.digit:hover, #main-container #inner-container #view-container body #buttons-container #buttons-common .disabled.digit:hover, body #main-container #inner-container #view-container #buttons-container #buttons-memory button.disabled:hover, #main-container #inner-container #view-container body #buttons-container #buttons-memory button.disabled:hover, body #main-container #inner-container #view-container #buttons-container #buttons-common .disabled.digit:hover, #main-container #inner-container #view-container body #buttons-container #buttons-common .disabled.digit:hover, #main-container #inner-container #view-container body #buttons-container #buttons-common button.digit.disabled:hover, body #main-container #inner-container #view-container #buttons-container #buttons-common button.digit.disabled:hover, body #main-container #inner-container #view-container #buttons-container #buttons-memory button.disabled:hover, #main-container #inner-container #view-container body #buttons-container #buttons-memory button.disabled:hover {
-      border: 1px solid #B4C2D1;
-      background: #D9E4F1; }
-    body #buttons-container button:hover, body #main-container #inner-container #view-container #buttons-container #buttons-common .digit:hover, #main-container #inner-container #view-container body #buttons-container #buttons-common .digit:hover, body #main-container #inner-container #view-container #buttons-container #buttons-memory button:hover, #main-container #inner-container #view-container body #buttons-container #buttons-memory button:hover {
-      border: 1px solid #FFDB00;
-      -webkit-transition: border 0.5s;
-      -moz-transition: border 0.5s;
-      -o-transition: border 0.5s;
-      transition: border 0.5s;
-      background: #fef5eb;
-      background: -moz-linear-gradient(top, #fef5eb 0%, #fce3c6 49%, #ffd06b 50%, #fff29e 100%);
-      background: -webkit-gradient(left top, left bottom, color-stop(0%, #fef5eb), color-stop(49%, #fce3c6), color-stop(50%, #fbd075), color-stop(100%, #fcf8ca));
-      background: -webkit-linear-gradient(top, #fef5eb 0%, #fce3c6 49%, #fbd075 50%, #fcf8ca 100%);
-      background: -o-linear-gradient(top, #fef5eb 0%, #fce3c6 49%, #fbd075 50%, #fcf8ca 100%);
-      background: -ms-linear-gradient(top, #fef5eb 0%, #fce3c6 49%, #fbd075 50%, #fcf8ca 100%);
-      background: linear-gradient(to bottom, #fef5eb 0%, #fce3c6 49%, #fbd075 50%, #fcf8ca 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 ); }
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+}
+
+body #buttons-container button.disabled, body #buttons-container button.disabled:hover, body #main-container #inner-container #view-container #buttons-container #buttons-common .disabled.digit:hover, #main-container #inner-container #view-container body #buttons-container #buttons-common .disabled.digit:hover, body #main-container #inner-container #view-container #buttons-container #buttons-memory button.disabled:hover, #main-container #inner-container #view-container body #buttons-container #buttons-memory button.disabled:hover, body #main-container #inner-container #view-container #buttons-container #buttons-common .disabled.digit:hover, #main-container #inner-container #view-container body #buttons-container #buttons-common .disabled.digit:hover, #main-container #inner-container #view-container body #buttons-container #buttons-common button.digit.disabled:hover, body #main-container #inner-container #view-container #buttons-container #buttons-common button.digit.disabled:hover, body #main-container #inner-container #view-container #buttons-container #buttons-memory button.disabled:hover, #main-container #inner-container #view-container body #buttons-container #buttons-memory button.disabled:hover {
+    border: 1px solid #B4C2D1;
+    background: #D9E4F1;
+}
+
+body #buttons-container button:hover, body #main-container #inner-container #view-container #buttons-container #buttons-common .digit:hover, #main-container #inner-container #view-container body #buttons-container #buttons-common .digit:hover, body #main-container #inner-container #view-container #buttons-container #buttons-memory button:hover, #main-container #inner-container #view-container body #buttons-container #buttons-memory button:hover {
+    border: 1px solid #FFDB00;
+    -webkit-transition: border 0.5s;
+    -moz-transition: border 0.5s;
+    -o-transition: border 0.5s;
+    transition: border 0.5s;
+    background: #fef5eb;
+    background: -moz-linear-gradient(top, #fef5eb 0%, #fce3c6 49%, #ffd06b 50%, #fff29e 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #fef5eb), color-stop(49%, #fce3c6), color-stop(50%, #fbd075), color-stop(100%, #fcf8ca));
+    background: -webkit-linear-gradient(top, #fef5eb 0%, #fce3c6 49%, #fbd075 50%, #fcf8ca 100%);
+    background: -o-linear-gradient(top, #fef5eb 0%, #fce3c6 49%, #fbd075 50%, #fcf8ca 100%);
+    background: -ms-linear-gradient(top, #fef5eb 0%, #fce3c6 49%, #fbd075 50%, #fcf8ca 100%);
+    background: linear-gradient(to bottom, #fef5eb 0%, #fce3c6 49%, #fbd075 50%, #fcf8ca 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+}
+
 
 #main-container {
-  margin: 0 auto;
-  margin-top: 50px;
-  width: 421px;
-  max-width: 421px;
-  height: 387px;
-  max-height: 387px;
-  border: 1px solid #667F95;
-  background-color: #86A6C3;
- /*/
-@include main-container-style2;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 421px;
+    max-width: 421px;
+    height: 387px;
+    max-height: 387px;
+    border: 1px solid #667F95;
+    background-color: #86A6C3;
+    /*/
+    @include main-container-style2;
 //*/ }
-  #main-container #title-bar {
-    padding-left: 11px; }
-    #main-container #title-bar #icon {
-      padding-top: 4px;
-      vertical-align: middle; }
-    #main-container #title-bar .title {
-      display: inline-block;
-      padding-top: 4px;
-      margin-left: 150px;
-      vertical-align: middle;
-      font-family: 'Segoe UI';
-      font-size: 15px; }
-    #main-container #title-bar #control-buttons {
-      float: right; }
-      #main-container #title-bar #control-buttons img {
-        margin-bottom: 1px; }
-      #main-container #title-bar #control-buttons .styled-button, #main-container #title-bar #control-buttons #minimize-button, #main-container #title-bar #control-buttons #maximize-button, #main-container #title-bar #control-buttons #close-button {
-        border: none;
-        background: transparent;
-        outline: none; }
-      #main-container #title-bar #control-buttons #minimize-button {
-        width: 26px;
-        height: 20px; }
-        #main-container #title-bar #control-buttons #minimize-button img {
-          background-color: #282828; }
-        #main-container #title-bar #control-buttons #minimize-button:hover {
-          -webkit-transition: background-color 0.5s;
-          -moz-transition: background-color 0.5s;
-          -o-transition: background-color 0.5s;
-          transition: background-color 0.5s;
-          background-color: #3665B3; }
-          #main-container #title-bar #control-buttons #minimize-button:hover img {
-            background-color: white; }
-      #main-container #title-bar #control-buttons #maximize-button {
-        width: 27px;
-        height: 20px; }
-      #main-container #title-bar #control-buttons #close-button {
-        height: 20px;
-        width: 45px;
-        margin-right: 6px;
-        background-color: #C75050; }
-        #main-container #title-bar #control-buttons #close-button:hover {
-          -webkit-transition: background-color 0.5s;
-          -moz-transition: background-color 0.5s;
-          -o-transition: background-color 0.5s;
-          transition: background-color 0.5s;
-          background-color: #E04343; }
-  #main-container #inner-container {
+
+#main-container #title-bar {
+    padding-left: 11px;
+}
+
+#main-container #title-bar #icon {
+    padding-top: 4px;
+    vertical-align: middle;
+}
+
+#main-container #title-bar .title {
+    display: inline-block;
+    padding-top: 4px;
+    margin-left: 150px;
+    vertical-align: middle;
+    font-family: 'Segoe UI';
+    font-size: 15px;
+}
+
+#main-container #title-bar #control-buttons {
+    float: right;
+}
+
+#main-container #title-bar #control-buttons img {
+    margin-bottom: 1px;
+}
+
+#main-container #title-bar #control-buttons .styled-button, #main-container #title-bar #control-buttons #minimize-button, #main-container #title-bar #control-buttons #maximize-button, #main-container #title-bar #control-buttons #close-button {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+#main-container #title-bar #control-buttons #minimize-button {
+    width: 26px;
+    height: 20px;
+}
+
+#main-container #title-bar #control-buttons #minimize-button img {
+    background-color: #282828;
+}
+
+#main-container #title-bar #control-buttons #minimize-button:hover {
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    background-color: #3665B3;
+}
+
+#main-container #title-bar #control-buttons #minimize-button:hover img {
+    background-color: white;
+}
+
+#main-container #title-bar #control-buttons #maximize-button {
+    width: 27px;
+    height: 20px;
+}
+
+#main-container #title-bar #control-buttons #close-button {
+    height: 20px;
+    width: 45px;
+    margin-right: 6px;
+    background-color: #C75050;
+}
+
+#main-container #title-bar #control-buttons #close-button:hover {
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    background-color: #E04343;
+}
+
+#main-container #inner-container {
     margin: 5px 6px 6px 6px;
     height: auto;
-    border: 1px solid #D6D6D6; }
-    #main-container #inner-container #navigation-bar {
-      height: 19px;
-      max-height: 19px;
-      background-color: #F5F6F7;
-      border-bottom: 1px solid #E8E9EA; }
-      #main-container #inner-container #navigation-bar ul {
-        display: block;
-        margin-left: -1px;
-        font-family: 'Segoe UI';
-        font-size: 12px; }
-        #main-container #inner-container #navigation-bar ul li {
-          cursor: default;
-          margin-top: -1px;
-          padding: 2px 7px 0 7px; }
-          #main-container #inner-container #navigation-bar ul li:hover {
-            padding: 1px 6px 3px 6px;
-            background-color: #D5E7F8;
-            border: 1px solid #74AAE2; }
-    #main-container #inner-container #view-container {
-      padding: 10px 0 7px 11px;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #edf4fc), color-stop(1, #d9e4f1));
-      background-image: -o-linear-gradient(bottom, #edf4fc 0%, #d9e4f1 100%);
-      background-image: -moz-linear-gradient(bottom, #edf4fc 0%, #d9e4f1 100%);
-      background-image: -webkit-linear-gradient(bottom, #edf4fc 0%, #d9e4f1 100%);
-      background-image: -ms-linear-gradient(bottom, #edf4fc 0%, #d9e4f1 100%);
-      background-image: linear-gradient(to bottom, #edf4fc 0%, #d9e4f1 100%); }
-      #main-container #inner-container #view-container #result-container-bg {
-        padding: 1px;
-        margin-right: 10px;
-        background-color: white;
-        border: 1px solid #8E9CAD;
-        border-radius: 2px; }
-        #main-container #inner-container #view-container #result-container-bg #result-container {
-          height: 46px;
-          padding-right: 3px;
-          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e5eefb), color-stop(1, white));
-          background-image: -o-linear-gradient(bottom, #e5eefb 0%, white 100%);
-          background-image: -moz-linear-gradient(bottom, #e5eefb 0%, white 100%);
-          background-image: -webkit-linear-gradient(bottom, #e5eefb 0%, white 100%);
-          background-image: -ms-linear-gradient(bottom, #e5eefb 0%, white 100%);
-          background-image: linear-gradient(to bottom, #e5eefb 0%, white 100%); }
-          #main-container #inner-container #view-container #result-container-bg #result-container textarea {
-            width: 100%;
-            height: 30px;
-            margin-top: 14px;
-            overflow: hidden;
-            resize: none;
-            outline: none;
-            cursor: default;
-            font-family: 'Consolas';
-            font-size: 1.5em;
-            text-align: right;
-            vertical-align: top;
-            background-color: transparent;
-            border: none; }
-      #main-container #inner-container #view-container #binary-result-container-bg {
-        margin-top: 5px;
-        border: 1px solid #8E9CAD;
-        border-radius: 2px;
-        padding: 1px;
-        margin-right: 10px;
-        background-color: white; }
-        #main-container #inner-container #view-container #binary-result-container-bg #binary-result-container {
-          height: 54px;
-          padding: 3px 0 0 6px;
-          line-height: 15px;
-          cursor: default;
-          font-family: 'Consolas';
-          font-size: 12px;
-          background-color: #E6EEF8; }
-          #main-container #inner-container #view-container #binary-result-container-bg #binary-result-container ul {
-            display: block;
-            padding: 0;
-            margin: -2px 0; }
-            #main-container #inner-container #view-container #binary-result-container-bg #binary-result-container ul li {
-              margin: 0;
-              padding: 0; }
-              #main-container #inner-container #view-container #binary-result-container-bg #binary-result-container ul li.center {
-                padding-left: 171px; }
-              #main-container #inner-container #view-container #binary-result-container-bg #binary-result-container ul li.right {
-                padding-left: 137px; }
-              #main-container #inner-container #view-container #binary-result-container-bg #binary-result-container ul li.right.right-more {
-                padding-left: 144px; }
-          #main-container #inner-container #view-container #binary-result-container-bg #binary-result-container .zeros {
-            color: #1E395B; }
-            #main-container #inner-container #view-container #binary-result-container-bg #binary-result-container .zeros li:not(:first-child) {
-              padding-left: 20px; }
-          #main-container #inner-container #view-container #binary-result-container-bg #binary-result-container .decimals {
-            color: #666666; }
-      #main-container #inner-container #view-container .small-containers-options, #main-container #inner-container #view-container #radio-container #numeral-systems-container, #main-container #inner-container #view-container #radio-container #bits-length-container {
-        width: 64px;
-        max-width: 64px;
-        margin-top: 5px;
-        padding: 8px 0 1px 7px;
-        border: 1px solid #8696AA;
-        border-radius: 2px; }
-        #main-container #inner-container #view-container .small-containers-options ul, #main-container #inner-container #view-container #radio-container #numeral-systems-container ul, #main-container #inner-container #view-container #radio-container #bits-length-container ul {
-          display: block;
-          font-family: 'Segoe UI';
-          font-size: 11px; }
-          #main-container #inner-container #view-container .small-containers-options ul li, #main-container #inner-container #view-container #radio-container #numeral-systems-container ul li, #main-container #inner-container #view-container #radio-container #bits-length-container ul li {
-            display: block;
-            padding-bottom: 5px; }
-            #main-container #inner-container #view-container .small-containers-options ul li label, #main-container #inner-container #view-container #radio-container #numeral-systems-container ul li label, #main-container #inner-container #view-container #radio-container #bits-length-container ul li label {
-              display: inline-block;
-              width: 45px;
-              vertical-align: top; }
-      #main-container #inner-container #view-container #radio-container {
-        display: inline-block;
-        float: left; }
-      #main-container #inner-container #view-container #buttons-container {
-        display: inline-block;
-        margin-top: 5px; }
-        #main-container #inner-container #view-container #buttons-container #buttons-bitwise {
-          display: inline-block;
-          width: 79px; }
-          #main-container #inner-container #view-container #buttons-container #buttons-bitwise li {
-            padding-left: 5px;
-            padding-bottom: 5px; }
-        #main-container #inner-container #view-container #buttons-container #buttons-letters {
-          width: 36px;
-          display: inline-block; }
-          #main-container #inner-container #view-container #buttons-container #buttons-letters button, #main-container #inner-container #view-container #buttons-container #buttons-letters #buttons-common .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common #buttons-letters .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-letters #buttons-memory button:hover, #main-container #inner-container #view-container #buttons-container #buttons-memory #buttons-letters button:hover {
-            font-size: 12px;
-            background-color: #D4E0ED; }
-          #main-container #inner-container #view-container #buttons-container #buttons-letters li {
-            padding-bottom: 5px; }
-        #main-container #inner-container #view-container #buttons-container #buttons-common {
-          display: inline-block;
-          width: 195px; }
-          #main-container #inner-container #view-container #buttons-container #buttons-common li {
-            padding-bottom: 5px; }
-            #main-container #inner-container #view-container #buttons-container #buttons-common li:not(:last-of-type) {
-              padding-right: 5px; }
-          #main-container #inner-container #view-container #buttons-container #buttons-common #clear-sign {
-            font-weight: bold; }
-          #main-container #inner-container #view-container #buttons-container #buttons-common .digit {
-            background: #f7fbff;
-            background: -moz-linear-gradient(top, #f7fbff 0%, #edf3f8 49%, #ffd06b 50%, #fff29e 100%);
-            background: -webkit-gradient(left top, left bottom, color-stop(0%, #f7fbff), color-stop(49%, #edf3f8), color-stop(50%, #e7edf5), color-stop(100%, #eef6fb));
-            background: -webkit-linear-gradient(top, #f7fbff 0%, #edf3f8 49%, #e7edf5 50%, #eef6fb 100%);
-            background: -o-linear-gradient(top, #f7fbff 0%, #edf3f8 49%, #e7edf5 50%, #eef6fb 100%);
-            background: -ms-linear-gradient(top, #f7fbff 0%, #edf3f8 49%, #e7edf5 50%, #eef6fb 100%);
-            background: linear-gradient(to bottom, #f7fbff 0%, #edf3f8 49%, #e7edf5 50%, #eef6fb 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 ); }
-        #main-container #inner-container #view-container #buttons-container #buttons-common-operations .col2 {
-          width: 73px; }
-          #main-container #inner-container #view-container #buttons-container #buttons-common-operations .col2 button, #main-container #inner-container #view-container #buttons-container #buttons-common-operations .col2 #buttons-common .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common #buttons-common-operations .col2 .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common-operations .col2 #buttons-memory button:hover, #main-container #inner-container #view-container #buttons-container #buttons-memory #buttons-common-operations .col2 button:hover {
-            min-width: 100%; }
-        #main-container #inner-container #view-container #buttons-container #buttons-common-operations .relative {
-          position: relative; }
-        #main-container #inner-container #view-container #buttons-container #buttons-common-operations .row2 {
-          position: relative; }
-          #main-container #inner-container #view-container #buttons-container #buttons-common-operations .row2 button, #main-container #inner-container #view-container #buttons-container #buttons-common-operations .row2 #buttons-common .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common #buttons-common-operations .row2 .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common-operations .row2 #buttons-memory button:hover, #main-container #inner-container #view-container #buttons-container #buttons-memory #buttons-common-operations .row2 button:hover {
-            position: absolute;
-            top: -13px;
-            height: 59px;
-            max-height: 59px;
-            font-size: 1.3em;
-            font-weight: bold; }
-        #main-container #inner-container #view-container #buttons-container #buttons-memory button, #main-container #inner-container #view-container #buttons-container #buttons-memory #buttons-common .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common #buttons-memory .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-memory button:hover {
-          border: 1px solid #8797AA;
-          background: #d4e0ed;
-          background: -moz-linear-gradient(top, #d4e0ed 0%, #d5e0ed 49%, #ffd06b 50%, #fff29e 100%);
-          background: -webkit-gradient(left top, left bottom, color-stop(0%, #d4e0ed), color-stop(49%, #d5e0ed), color-stop(50%, #d5e0ed), color-stop(100%, #d7e2ef));
-          background: -webkit-linear-gradient(top, #d4e0ed 0%, #d5e0ed 49%, #d5e0ed 50%, #d7e2ef 100%);
-          background: -o-linear-gradient(top, #d4e0ed 0%, #d5e0ed 49%, #d5e0ed 50%, #d7e2ef 100%);
-          background: -ms-linear-gradient(top, #d4e0ed 0%, #d5e0ed 49%, #d5e0ed 50%, #d7e2ef 100%);
-          background: linear-gradient(to bottom, #d4e0ed 0%, #d5e0ed 49%, #d5e0ed 50%, #d7e2ef 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 ); }
+    border: 1px solid #D6D6D6;
+}
 
+#main-container #inner-container #navigation-bar {
+    height: 19px;
+    max-height: 19px;
+    background-color: #F5F6F7;
+    border-bottom: 1px solid #E8E9EA;
+}
+
+#main-container #inner-container #navigation-bar ul {
+    display: block;
+    margin-left: -1px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+}
+
+#main-container #inner-container #navigation-bar ul li {
+    cursor: default;
+    margin-top: -1px;
+    padding: 2px 7px 0 7px;
+}
+
+#main-container #inner-container #navigation-bar ul li:hover {
+    padding: 1px 6px 3px 6px;
+    background-color: #D5E7F8;
+    border: 1px solid #74AAE2;
+}
+
+#main-container #inner-container #view-container {
+    padding: 10px 0 7px 11px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #edf4fc), color-stop(1, #d9e4f1));
+    background-image: -o-linear-gradient(bottom, #edf4fc 0%, #d9e4f1 100%);
+    background-image: -moz-linear-gradient(bottom, #edf4fc 0%, #d9e4f1 100%);
+    background-image: -webkit-linear-gradient(bottom, #edf4fc 0%, #d9e4f1 100%);
+    background-image: -ms-linear-gradient(bottom, #edf4fc 0%, #d9e4f1 100%);
+    background-image: linear-gradient(to bottom, #edf4fc 0%, #d9e4f1 100%);
+}
+
+#main-container #inner-container #view-container #result-container-bg {
+    padding: 1px;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid #8E9CAD;
+    border-radius: 2px;
+}
+
+#main-container #inner-container #view-container #result-container-bg #result-container {
+    height: 46px;
+    padding-right: 3px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e5eefb), color-stop(1, white));
+    background-image: -o-linear-gradient(bottom, #e5eefb 0%, white 100%);
+    background-image: -moz-linear-gradient(bottom, #e5eefb 0%, white 100%);
+    background-image: -webkit-linear-gradient(bottom, #e5eefb 0%, white 100%);
+    background-image: -ms-linear-gradient(bottom, #e5eefb 0%, white 100%);
+    background-image: linear-gradient(to bottom, #e5eefb 0%, white 100%);
+}
+
+#main-container #inner-container #view-container #result-container-bg #result-container textarea {
+    width: 100%;
+    height: 30px;
+    margin-top: 14px;
+    overflow: hidden;
+    resize: none;
+    outline: none;
+    cursor: default;
+    font-family: 'Consolas';
+    font-size: 1.5em;
+    text-align: right;
+    vertical-align: top;
+    background-color: transparent;
+    border: none;
+}
+
+#main-container #inner-container #view-container #binary-result-container-bg {
+    margin-top: 5px;
+    border: 1px solid #8E9CAD;
+    border-radius: 2px;
+    padding: 1px;
+    margin-right: 10px;
+    background-color: white;
+}
+
+#main-container #inner-container #view-container #binary-result-container-bg #binary-result-container {
+    height: 54px;
+    padding: 3px 0 0 6px;
+    line-height: 15px;
+    cursor: default;
+    font-family: 'Consolas';
+    font-size: 12px;
+    background-color: #E6EEF8;
+}
+
+#main-container #inner-container #view-container #binary-result-container-bg #binary-result-container ul {
+    display: block;
+    padding: 0;
+    margin: -2px 0;
+}
+
+#main-container #inner-container #view-container #binary-result-container-bg #binary-result-container ul li {
+    margin: 0;
+    padding: 0;
+}
+
+#main-container #inner-container #view-container #binary-result-container-bg #binary-result-container ul li.center {
+    padding-left: 171px;
+}
+
+#main-container #inner-container #view-container #binary-result-container-bg #binary-result-container ul li.right {
+    padding-left: 137px;
+}
+
+#main-container #inner-container #view-container #binary-result-container-bg #binary-result-container ul li.right.right-more {
+    padding-left: 144px;
+}
+
+#main-container #inner-container #view-container #binary-result-container-bg #binary-result-container .zeros {
+    color: #1E395B;
+}
+
+#main-container #inner-container #view-container #binary-result-container-bg #binary-result-container .zeros li:not(:first-child) {
+    padding-left: 20px;
+}
+
+#main-container #inner-container #view-container #binary-result-container-bg #binary-result-container .decimals {
+    color: #666666;
+}
+
+#main-container #inner-container #view-container .small-containers-options, #main-container #inner-container #view-container #radio-container #numeral-systems-container, #main-container #inner-container #view-container #radio-container #bits-length-container {
+    width: 64px;
+    max-width: 64px;
+    margin-top: 5px;
+    padding: 8px 0 1px 7px;
+    border: 1px solid #8696AA;
+    border-radius: 2px;
+}
+
+#main-container #inner-container #view-container .small-containers-options ul, #main-container #inner-container #view-container #radio-container #numeral-systems-container ul, #main-container #inner-container #view-container #radio-container #bits-length-container ul {
+    display: block;
+    font-family: 'Segoe UI';
+    font-size: 11px;
+}
+
+#main-container #inner-container #view-container .small-containers-options ul li, #main-container #inner-container #view-container #radio-container #numeral-systems-container ul li, #main-container #inner-container #view-container #radio-container #bits-length-container ul li {
+    display: block;
+    padding-bottom: 5px;
+}
+
+#main-container #inner-container #view-container .small-containers-options ul li label, #main-container #inner-container #view-container #radio-container #numeral-systems-container ul li label, #main-container #inner-container #view-container #radio-container #bits-length-container ul li label {
+    display: inline-block;
+    width: 45px;
+    vertical-align: top;
+}
+
+#main-container #inner-container #view-container #radio-container {
+    display: inline-block;
+    float: left;
+}
+
+#main-container #inner-container #view-container #buttons-container {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-bitwise {
+    display: inline-block;
+    width: 79px;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-bitwise li {
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-letters {
+    width: 36px;
+    display: inline-block;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-letters button, #main-container #inner-container #view-container #buttons-container #buttons-letters #buttons-common .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common #buttons-letters .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-letters #buttons-memory button:hover, #main-container #inner-container #view-container #buttons-container #buttons-memory #buttons-letters button:hover {
+    font-size: 12px;
+    background-color: #D4E0ED;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-letters li {
+    padding-bottom: 5px;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-common {
+    display: inline-block;
+    width: 195px;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-common li {
+    padding-bottom: 5px;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-common li:not(:last-of-type) {
+    padding-right: 5px;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-common #clear-sign {
+    font-weight: bold;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-common .digit {
+    background: #f7fbff;
+    background: -moz-linear-gradient(top, #f7fbff 0%, #edf3f8 49%, #ffd06b 50%, #fff29e 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #f7fbff), color-stop(49%, #edf3f8), color-stop(50%, #e7edf5), color-stop(100%, #eef6fb));
+    background: -webkit-linear-gradient(top, #f7fbff 0%, #edf3f8 49%, #e7edf5 50%, #eef6fb 100%);
+    background: -o-linear-gradient(top, #f7fbff 0%, #edf3f8 49%, #e7edf5 50%, #eef6fb 100%);
+    background: -ms-linear-gradient(top, #f7fbff 0%, #edf3f8 49%, #e7edf5 50%, #eef6fb 100%);
+    background: linear-gradient(to bottom, #f7fbff 0%, #edf3f8 49%, #e7edf5 50%, #eef6fb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-common-operations .col2 {
+    width: 73px;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-common-operations .col2 button, #main-container #inner-container #view-container #buttons-container #buttons-common-operations .col2 #buttons-common .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common #buttons-common-operations .col2 .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common-operations .col2 #buttons-memory button:hover, #main-container #inner-container #view-container #buttons-container #buttons-memory #buttons-common-operations .col2 button:hover {
+    min-width: 100%;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-common-operations .relative {
+    position: relative;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-common-operations .row2 {
+    position: relative;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-common-operations .row2 button, #main-container #inner-container #view-container #buttons-container #buttons-common-operations .row2 #buttons-common .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common #buttons-common-operations .row2 .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common-operations .row2 #buttons-memory button:hover, #main-container #inner-container #view-container #buttons-container #buttons-memory #buttons-common-operations .row2 button:hover {
+    position: absolute;
+    top: -13px;
+    height: 59px;
+    max-height: 59px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#main-container #inner-container #view-container #buttons-container #buttons-memory button, #main-container #inner-container #view-container #buttons-container #buttons-memory #buttons-common .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-common #buttons-memory .digit:hover, #main-container #inner-container #view-container #buttons-container #buttons-memory button:hover {
+    border: 1px solid #8797AA;
+    background: #d4e0ed;
+    background: -moz-linear-gradient(top, #d4e0ed 0%, #d5e0ed 49%, #ffd06b 50%, #fff29e 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #d4e0ed), color-stop(49%, #d5e0ed), color-stop(50%, #d5e0ed), color-stop(100%, #d7e2ef));
+    background: -webkit-linear-gradient(top, #d4e0ed 0%, #d5e0ed 49%, #d5e0ed 50%, #d7e2ef 100%);
+    background: -o-linear-gradient(top, #d4e0ed 0%, #d5e0ed 49%, #d5e0ed 50%, #d7e2ef 100%);
+    background: -ms-linear-gradient(top, #d4e0ed 0%, #d5e0ed 49%, #d5e0ed 50%, #d7e2ef 100%);
+    background: linear-gradient(to bottom, #d4e0ed 0%, #d5e0ed 49%, #d5e0ed 50%, #d7e2ef 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+}

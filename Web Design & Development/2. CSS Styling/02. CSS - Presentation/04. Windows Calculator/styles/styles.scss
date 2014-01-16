@@ -8,16 +8,15 @@
 	background-image: linear-gradient(to bottom, $from 0%, $to 100%);
 }
 
-
 @mixin buttons-gradient($top, $top-center, $center, $bottom) {
 	background: $top;
-	background: -moz-linear-gradient(top, $top 0%, $top-center 50%, #ffd06b 51%, #fff29e 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, $top), color-stop(50%, $top-center), color-stop(51%, $center), color-stop(100%, $bottom));
-	background: -webkit-linear-gradient(top, $top 0%, $top-center 50%, $center 51%, $bottom 100%);
-	background: -o-linear-gradient(top, $top 0%, $top-center 50%, $center 51%, $bottom 100%);
-	background: -ms-linear-gradient(top, $top 0%, $top-center 50%, $center 51%, $bottom 100%);
-	background: linear-gradient(to bottom, $top 0%, $top-center 50%, $center 51%, $bottom 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom', GradientType=0 );
+	background: -moz-linear-gradient(top, $top 0%, $top-center 49%, #ffd06b 50%, #fff29e 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, $top), color-stop(49%, $top-center), color-stop(50%, $center), color-stop(100%, $bottom));
+	background: -webkit-linear-gradient(top, $top 0%, $top-center 49%, $center 50%, $bottom 100%);
+	background: -o-linear-gradient(top, $top 0%, $top-center 49%, $center 50%, $bottom 100%);
+	background: -ms-linear-gradient(top, $top 0%, $top-center 49%, $center 50%, $bottom 100%);
+	background: linear-gradient(to bottom, $top 0%, $top-center 49%, $center 50%, $bottom 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
 }
 
 @mixin clearfix {
@@ -111,9 +110,8 @@ body {
 
 		&:hover {
 			border: 1px solid #FFDB00;
-
 			@include transition(0.5s, border);
-			@include buttons-gradient(#ffdd00, #fee3c3, #ffd06b, #fff29e);
+			@include buttons-gradient(#FEF5EB, #FCE3C6, #FBD075, #FCF8CA);
 		}
 	}
 }
@@ -139,7 +137,7 @@ body {
 
 		padding-left: 11px;
 
-		img {
+		#icon {
 			padding-top: 4px;
 			vertical-align: middle;
 		}
@@ -154,7 +152,11 @@ body {
 		}
 
 		#control-buttons {
-			float: right;	
+			float: right;
+
+			img {
+				margin-bottom: 1px;
+			}
 
 			.styled-button {
 				border: none;
@@ -164,22 +166,21 @@ body {
 
 			#minimize-button {
 				width: 26px;
-				height: 20px;
-				vertical-align: top;
-				font-size: 1.1em;
-				font-weight: bold;
-				color: #282828;
+				height: 20px;		
 
 				@extend .styled-button;
 				
-				&:hover {
-					@include transition(0.5s);
-					color: white;
-					background-color: #3665B3;
+				img {
+					background-color: #282828;
 				}
 
-				div {
-					margin-top: -12px;
+				&:hover {
+					@include transition(0.5s);
+					background-color: #3665B3;
+
+					img {
+						background-color: white;
+					}
 				}
 			}
 
@@ -188,17 +189,13 @@ body {
 				height: 20px;
 
 				@extend .styled-button;
-
-				img {
-					margin-top: -7px;
-				}
 			}
 
 			#close-button {
 				height: 20px;
 				width: 45px;
 				margin-right: 6px;
-				color: white;
+
 				background-color: #C75050;
 
 				@extend .styled-button;
@@ -206,10 +203,6 @@ body {
 				&:hover {					
 					@include transition(0.5s);
 					background-color: #E04343;
-				}
-
-				img {
-					margin-top: -7px;
 				}
 			}
 		}
@@ -262,36 +255,32 @@ body {
 				border: 1px solid #8E9CAD;
 				border-radius: 2px;
 
-				#result-container {
-				height: 46px;
-				padding-right: 3px;
+					#result-container {
+					height: 46px;
+					padding-right: 3px;
 
-				@include linear-gradient(#E5EEFB, #FFFFFF);
+					@include linear-gradient(#E5EEFB, #FFFFFF);
 
-				textarea {
-					width: 100%;
-					height: 30px;
-					margin-top: 14px;
-					overflow: hidden;
-					resize: none;
-					outline: none;
-					cursor: default;
+					textarea {
+						width: 100%;
+						height: 30px;
+						margin-top: 14px;
+						overflow: hidden;
+						resize: none;
+						outline: none;
+						cursor: default;
 
-					color: transparent;
-					-webkit-text-shadow: 0px 0px 0px #000;
-					text-shadow: 0px 0px 0px #000;
-
-					font-family: 'Consolas';
-					font-size: 1.5em;
-					text-align: right;
-					vertical-align: top;
+						font-family: 'Consolas';
+						font-size: 1.5em;
+						text-align: right;
+						vertical-align: top;
 										
-					background-color: transparent;
-					border: none;	
+						background-color: transparent;
+						border: none;	
 					
-					@extend .unselectable;			
+						@extend .unselectable;			
+					}
 				}
-			}
 			}
 
 			#binary-result-container-bg {
@@ -305,10 +294,11 @@ body {
 				#binary-result-container {
 					height: 54px;
 					padding: 3px 0 0 6px;
+					line-height: 15px;
 					cursor: default;
 
 					font-family: 'Consolas';
-					font-size: 0.8em;
+					font-size: 12px;
 								
 					background-color: #E6EEF8;
 
@@ -381,8 +371,6 @@ body {
 			#radio-container {
 				display: inline-block;
 				float: left;
-				margin-top: 2px;
-				margin-left: -2px;
 
 				#numeral-systems-container {
 					@extend .small-containers-options;
@@ -394,7 +382,6 @@ body {
 			}
 
 			#buttons-container {
-				width: 322px;
 				display: inline-block;
 				margin-top: 5px;
 
@@ -434,6 +421,10 @@ body {
 						}
 					}
 
+					#clear-sign {
+						font-weight: bold;
+					}
+
 					.digit {
 						@include buttons-gradient(#F7FBFF, #EDF3F8, #E7EDF5, #EEF6FB);
 
@@ -452,12 +443,18 @@ body {
 						}
 					}
 
+					.relative {
+						position: relative;
+					}
+
 					.row2 {
-						position: absolute;
-						height: 59px;
+						position: relative;
 
 						button {
-							min-height: 100%;						
+							position: absolute;
+							top: -13px;
+							height: 59px;	
+							max-height: 59px;				
 							font-size: 1.3em;
 							font-weight: bold;
 						}

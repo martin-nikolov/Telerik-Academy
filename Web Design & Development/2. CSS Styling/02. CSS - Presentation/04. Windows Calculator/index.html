@@ -12,11 +12,10 @@
 
         <div id="main-container">
             <div id="title-bar">
-                <img src="images/icon.png" alt="" />
+                <img src="images/icon.png" id="icon" alt="Calculator" />
                 <span class="title">Calculator</span>
 
-                <ul id="control-buttons">
-                    <li><button id="minimize-button"><div>_</div></button></li><li><button id="maximize-button" disabled><img src="images/maximize-sign.png" alt="Alternate Text" /></button></li><li><button id="close-button"><span><img src="images/x-sign.png" alt="Close" /></span></button></li>
+                <ul id="control-buttons"><li id="minimize-button-list"><button id="minimize-button"><span><img src="images/minimize-sign.png" alt="Minimize" /></span></button></li><li><button id="maximize-button" disabled><img src="images/maximize-sign.png" alt="Alternate Text" /></button></li><li><button id="close-button"><span><img src="images/x-sign.png" alt="Close" /></span></button></li>
                 </ul>
             </div>
 
@@ -25,8 +24,6 @@
                     <ul>
                         <li>View</li><li>Edit</li><li>Help</li>
                     </ul>
-
-                    <!-- Create sub-menus -->
                 </div>
 
                 <div id="view-container">
@@ -65,7 +62,9 @@
                                 </ul>
                             </div>
                         </div>
+                    </div>
 
+                    <div id="functions">
                         <div id="radio-container">
                             <div id="numeral-systems-container">
                                 <form>
@@ -116,23 +115,24 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
-                    <div id="buttons-container">
-                        <div id="buttons-bitwise">
-                            <ul><li><button class="disabled">&nbsp;</button></li><li><button>Mod</button></li><li><button>(</button></li><li><button>)</button></li><li><button>RoL</button></li><li><button>RoR</button></li><li><button>Or</button></li><li><button>Xor</button></li><li><button>Lsh</button></li><li><button>Rsh</button></li><li><button>Not</button></li><li><button>And</button></li></ul>
-                        </div>
 
-                        <div id="buttons-letters">
-                            <ul><li><button class="disabled">A</button></li><li><button class="disabled">B</button></li><li><button class="disabled">C</button></li><li><button class="disabled">D</button></li><li><button class="disabled">E</button></li><li><button class="disabled">F</button></li></ul>
-                        </div>
-
-                        <div id="buttons-common">
-                            <div id="buttons-memory" class="disabled">
-                                <ul><li><button>MC</button></li><li><button>MR</button></li><li><button>MS</button></li><li><button>M+</button></li><li><button>M-</button></li></ul>
+                        <div id="buttons-container">
+                            <div id="buttons-bitwise">
+                                <ul><li><button class="disabled">&nbsp;</button></li><li><button>Mod</button></li><li><button>(</button></li><li><button>)</button></li><li><button>RoL</button></li><li><button>RoR</button></li><li><button>Or</button></li><li><button>Xor</button></li><li><button>Lsh</button></li><li><button>Rsh</button></li><li><button>Not</button></li><li><button>And</button></li></ul>
                             </div>
 
-                            <div id="buttons-common-operations">
-                                <ul><li><button>Clear</button></li><li><button>CE</button></li><li><button>C</button></li><li><button>±</button></li><li><button class="disabled">√</button></li><li><button class="digit">7</button></li><li><button class="digit">8</button></li><li><button class="digit">9</button></li><li><button>/</button></li><li><button class="disabled">%</button></li><li><button class="digit">4</button></li><li><button class="digit">5</button></li><li><button class="digit">6</button></li><li><button>*</button></li><li><button class="disabled">1/x</button></li><li><button class="digit">1</button></li><li><button class="digit">2</button></li><li><button class="digit">3</button></li><li><button>-</button></li><li class="row2"><button>=</button></li><li class="col2"><button class="digit">0</button></li><li><button class="disabled">.</button></li><li><button>+</button></li></ul>
+                            <div id="buttons-letters">
+                                <ul><li><button class="disabled">A</button></li><li><button class="disabled">B</button></li><li><button class="disabled">C</button></li><li><button class="disabled">D</button></li><li><button class="disabled">E</button></li><li><button class="disabled">F</button></li></ul>
+                            </div>
+
+                            <div id="buttons-common">
+                                <div id="buttons-memory" class="disabled">
+                                    <ul><li><button>MC</button></li><li><button>MR</button></li><li><button>MS</button></li><li><button>M+</button></li><li><button>M-</button></li></ul>
+                                </div>
+
+                                <div id="buttons-common-operations">
+                                    <ul><li><button id="clear-sign">←</button></li><li><button>CE</button></li><li><button>C</button></li><li><button>±</button></li><li><button class="disabled">√</button></li><li><button class="digit">7</button></li><li><button class="digit">8</button></li><li><button class="digit">9</button></li><li><button>/</button></li><li><button class="disabled">%</button></li><li><button class="digit">4</button></li><li><button class="digit">5</button></li><li><button class="digit">6</button></li><li><button>*</button></li><li><button class="disabled">1/x</button></li><li><button class="digit">1</button></li><li><button class="digit">2</button></li><li><button class="digit">3</button></li><li><button>-</button></li><li class="row2"><button>=</button></li><li class="col2"><button class="digit">0</button></li><li><button class="disabled">.</button></li><li><button>+</button></li></ul>
+                                </div>
                             </div>
                         </div>
                     </div>

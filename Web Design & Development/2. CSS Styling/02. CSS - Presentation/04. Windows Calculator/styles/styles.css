@@ -71,7 +71,6 @@ body #buttons-container button:hover, body #main-container #inner-container #vie
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
 }
 
-
 #main-container {
     margin: 0 auto;
     margin-top: 50px;
@@ -81,9 +80,7 @@ body #buttons-container button:hover, body #main-container #inner-container #vie
     max-height: 387px;
     border: 1px solid #667F95;
     background-color: #86A6C3;
-    /*/
-    @include main-container-style2;
-//*/ }
+}
 
 #main-container #title-bar {
     padding-left: 11px;

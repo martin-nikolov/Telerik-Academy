@@ -54,18 +54,12 @@ label > img {
 }
             
 .larger img {
-    visibility: hidden;
+    display: none;
     width: 848px;
-    opacity: 0;
 }
 
 input[type=radio]:checked + span img {
-    visibility: visible;
-    opacity: 1;    
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
+    display: block;
 }
 
 .larger a {

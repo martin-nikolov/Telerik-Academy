@@ -9,8 +9,8 @@ function Main(bufferElement) {
 	var number = ReadLine("Enter a number: ", GetRandomInt(100));
 
     SetSolveButton(function () {
-        ConsoleClear();
-    	CheckOddOrEven(number.value);
+		ConsoleClear();
+		CheckOddOrEven(number.value);
     });
 }
 

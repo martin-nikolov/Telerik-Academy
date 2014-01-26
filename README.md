@@ -52,14 +52,6 @@
 
 # Web Design & Development
 
-## PHP Web-development
-1. [Creating an address book](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book/Readme.md)) - 22.09.2013
-* [Working with sessions and files](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/02.%20Working%20with%20sessions%20and%20files) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/02.%20Working%20with%20sessions%20and%20files/Readme.md)) - 29.09.2013
-* [Working with MySQL](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/03.%20Working%20with%20MySQL) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/03.%20Working%20with%20MySQL/Readme.md)) - 07.10.2013
-* [Indeces and JOIN in MySQL](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/04.%20Indeces%20and%20JOIN%20in%20MySQL) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/04.%20Indeces%20and%20JOIN%20in%20MySQL/Readme.md)) - 15.10.2013
-* [Solution to Homework of Lecture 4th](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/05.%20Solution%20to%20Homework%20of%20Lecture%204th) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/05.%20Solution%20to%20Homework%20of%20Lecture%204th/Readme.md)) - 21.10.2013
-* [Views](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/06.%20Views) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/06.%20Views/Readme.md)) - 27.10.2013
-
 ## HTML Basics
 
 1. [HTML - Fundamentals](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/1.%20HTML%20Basics/01.%20HTML%20-%20Fundamentals) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20&%20Development/1.%20HTML%20Basics/01.%20HTML%20-%20Fundamentals/Readme.md)) - 23.12.2013
@@ -78,3 +70,11 @@
 1. [Operators and Expressions](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/01.%20Operators%20and%20Expressions) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/01.%20Operators%20and%20Expressions/Readme.md)) - 23.01.2014
 * [Conditional Statements](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/02.%20Conditional%20Statements) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/02.%20Conditional%20Statements/Readme.md)) - 24.01.2014
 * [Loops](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/03.%20Loops) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/03.%20Loops/Readme.md)) - 25.01.2014
+
+## PHP Web-development
+1. [Creating an address book](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book/Readme.md)) - 22.09.2013
+* [Working with sessions and files](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/02.%20Working%20with%20sessions%20and%20files) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/02.%20Working%20with%20sessions%20and%20files/Readme.md)) - 29.09.2013
+* [Working with MySQL](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/03.%20Working%20with%20MySQL) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/03.%20Working%20with%20MySQL/Readme.md)) - 07.10.2013
+* [Indeces and JOIN in MySQL](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/04.%20Indeces%20and%20JOIN%20in%20MySQL) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/04.%20Indeces%20and%20JOIN%20in%20MySQL/Readme.md)) - 15.10.2013
+* [Solution to Homework of Lecture 4th](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/05.%20Solution%20to%20Homework%20of%20Lecture%204th) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/05.%20Solution%20to%20Homework%20of%20Lecture%204th/Readme.md)) - 21.10.2013
+* [Views](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/06.%20Views) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/06.%20Views/Readme.md)) - 27.10.2013

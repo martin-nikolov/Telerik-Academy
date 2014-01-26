@@ -66,6 +66,11 @@
 * [SASS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/04.%20SASS) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/04.%20SASS/Readme.md)) - 11.01.2014
 * [LESS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/05.%20LESS) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/05.%20LESS/Readme.md)) - 12.01.2014
 
+## JavaScript - Fundamentals
+1. [Operators and Expressions](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/01.%20Operators%20and%20Expressions) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/01.%20Operators%20and%20Expressions/Readme.md)) - 23.01.2014
+* [Conditional Statements](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/02.%20Conditional%20Statements) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/02.%20Conditional%20Statements/Readme.md)) - 24.01.2014
+* [Loops](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/03.%20Loops) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/03.%20Loops/Readme.md)) - 25.01.2014
+
 ## PHP Web-development
 1. [Creating an address book](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book/Readme.md)) - 22.09.2013
 * [Working with sessions and files](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/02.%20Working%20with%20sessions%20and%20files) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/02.%20Working%20with%20sessions%20and%20files/Readme.md)) - 29.09.2013

@@ -36,7 +36,7 @@ function IsNumber(n) {
 
 function IsInsideCircle(point) {
     var circleX = 1, circleY = 1, circleRadius = 3;
-    var newPoint = { x: 0, y: 0 }; // Keep the old coordinates
+    var newPoint = { x: 0, y: 0 }; // Кeep the old coordinates
 
     newPoint.x = point.x - circleX;
     newPoint.y = point.y - circleY;

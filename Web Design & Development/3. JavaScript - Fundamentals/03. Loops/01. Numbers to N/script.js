@@ -1,23 +1,23 @@
 ﻿/*
-	1. Write a script that prints all the numbers from 1 to N
+    1. Write a script that prints all the numbers from 1 to N
 */
 
 taskName = "1. Numbers to N";
 
 function Main(bufferElement) {
 
-	var N = ReadLine("Enter N: ");
+    var N = ReadLine("Enter N: ");
 
     SetSolveButton(function () {
-    	ConsoleClear();
-    	PrintNumbers(N.value);
+        ConsoleClear();
+        PrintNumbers(N.value);
     });
 }
 
 function PrintNumbers(count) {
-	count = parseInt(count);
+    count = parseInt(count);
 
-	for (var i = 1; i <= count; i++) {
-		WriteLine(i);
-	};
+    for (var i = 1; i <= count; i++) {
+        WriteLine(i);
+    };
 }

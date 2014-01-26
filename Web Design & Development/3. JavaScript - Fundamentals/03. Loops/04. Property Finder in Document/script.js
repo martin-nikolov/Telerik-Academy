@@ -1,6 +1,6 @@
 ﻿/*
-	4. Write a script that finds the lexicographically smallest
-	and largest property in document, window and navigator objects.
+    4. Write a script that finds the lexicographically smallest
+    and largest property in document, window and navigator objects.
 */
 
 taskName = "4. Property finder in document";
@@ -10,20 +10,20 @@ function Main(bufferElement) {
 }
 
 function GetProperties(containers) {
-	if (!Array.isArray(containers)) {
-		return;
-	}
+    if (!Array.isArray(containers)) {
+        return;
+    }
 
     for (var object in containers) {
-		var properties = [];
+        var properties = [];
 
-		for (properties[properties.length] in containers[object]);
+        for (properties[properties.length] in containers[object]);
 
-		properties.sort();
+        properties.sort();
 
-		WriteLine(containers[object]);
-		WriteLine('Smallest: ' + properties.shift());
-		WriteLine('Largest: ' + properties.pop());
-		WriteLine();
-	}
+        WriteLine(containers[object]);
+        WriteLine('Smallest: ' + properties.shift());
+        WriteLine('Largest: ' + properties.pop());
+        WriteLine();
+    }
 }

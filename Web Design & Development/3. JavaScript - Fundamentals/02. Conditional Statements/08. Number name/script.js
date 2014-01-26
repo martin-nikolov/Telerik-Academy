@@ -14,20 +14,20 @@ taskName = "8. Get number name";
 
 function Main(bufferElement) {
 
-	var integer = ReadLine("Enter a integer: ", GetRandomInt(999));
+    var integer = ReadLine("Enter a integer: ", GetRandomInt(999));
    
     SetSolveButton(function () {
-		ConsoleClear();
+        ConsoleClear();
 
-    	GetNumberName(integer.value);
+        GetNumberName(integer.value);
 
-    	WriteLine('<br>' + '------------------------------')
+        WriteLine('<br>' + '------------------------------')
 
-		for (var i = 0; i < 10; i++) {
-		    GetNumberName(GetRandomInt(999));
-		};
+        for (var i = 0; i < 10; i++) {
+            GetNumberName(GetRandomInt(999));
+        };
 
-    	WriteLine('------------------------------')
+        WriteLine('------------------------------')
     });
 }
 

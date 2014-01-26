@@ -1,40 +1,40 @@
 ﻿/*
-	3. Write a script that finds the max and min 
-	number from a sequence of numbers.
+    3. Write a script that finds the max and min 
+    number from a sequence of numbers.
 */
 
 taskName = "3. Max and Min from sequence";
 
 function Main(bufferElement) {
 
-	var numbers = ReadLine("Enter a numbers: ", GetRandomNumbers(5));
+    var numbers = ReadLine("Enter a numbers: ", GetRandomNumbers(5));
 
     SetSolveButton(function () {
-    	ConsoleClear();
-    	var inputValues = ParseFloatCollection(numbers.value);
-    	GetMinMaxNumber(inputValues);
+        ConsoleClear();
+        var inputValues = ParseFloatCollection(numbers.value);
+        GetMinMaxNumber(inputValues);
     });
 }
 
 function GetMinMaxNumber(numbers) {
-	if (!(numbers instanceof Array)) {
-		WriteLine("Error! Incorrect input format!");
-		return;
-	}
+    if (!(numbers instanceof Array)) {
+        WriteLine("Error! Incorrect input format!");
+        return;
+    }
 
-	var max = Math.max.apply(Math, numbers);
-	var min = Math.min.apply(Math, numbers);
+    var max = Math.max.apply(Math, numbers);
+    var min = Math.min.apply(Math, numbers);
 
-	WriteLine('Max: ' + max);
-	WriteLine('Min: ' + min);
+    WriteLine('Max: ' + max);
+    WriteLine('Min: ' + min);
 }
 
 function GetRandomNumbers(count) {
-	var numbers = new Array();
+    var numbers = new Array();
 
-	for (var i = 0; i < count; i++) {
-		numbers.push(GetRandomInt(-25, 25));
-	};
+    for (var i = 0; i < count; i++) {
+        numbers.push(GetRandomInt(-25, 25));
+    };
 
-	return numbers.join(', ');
+    return numbers.join(', ');
 }

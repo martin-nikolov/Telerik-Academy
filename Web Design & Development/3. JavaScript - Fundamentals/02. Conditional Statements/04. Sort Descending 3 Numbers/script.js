@@ -6,25 +6,25 @@ taskName = "4. Sort Descending 3 Numbers";
 
 function Main(bufferElement) {
 
-	var a = ReadLine("Enter a: ", GetRandomFloat(-15, 35, 1));
-	var b = ReadLine("Enter b: ", GetRandomFloat(-20, 35, 1));
-	var c = ReadLine("Enter c: ", GetRandomFloat(-10, 35, 1));
+    var a = ReadLine("Enter a: ", GetRandomFloat(-15, 35, 1));
+    var b = ReadLine("Enter b: ", GetRandomFloat(-20, 35, 1));
+    var c = ReadLine("Enter c: ", GetRandomFloat(-10, 35, 1));
 
     SetSolveButton(function () {
         ConsoleClear();
-		SortDescendingThreeRealValues(a.value, b.value, c.value);
+        SortDescendingThreeRealValues(a.value, b.value, c.value);
     });
 }
 
 function SortDescendingThreeRealValues(a, b, c) {
-	a = parseFloat(a);
-	b = parseFloat(b);
-	c = parseFloat(c);
+    a = parseFloat(a);
+    b = parseFloat(b);
+    c = parseFloat(c);
 
-	if (Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c)) {
-		WriteLine("Error! There is some incorrect input value!");
-		return;
-	}
+    if (Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c)) {
+        WriteLine("Error! There is some incorrect input value!");
+        return;
+    }
 
     if (a > b) {
         if (a > c) {

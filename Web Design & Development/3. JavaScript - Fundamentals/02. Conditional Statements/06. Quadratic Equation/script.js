@@ -10,13 +10,13 @@ taskName = "6. Quadratic Equation";
 
 function Main(bufferElement) {
 
-	var a = ReadLine("Enter a: ", GetRandomInt(-15, 35));
-	var b = ReadLine("Enter b: ", GetRandomInt(-10, 35));
-	var c = ReadLine("Enter c: ", GetRandomInt(-20, 35));
+    var a = ReadLine("Enter a: ", GetRandomInt(-15, 35));
+    var b = ReadLine("Enter b: ", GetRandomInt(-10, 35));
+    var c = ReadLine("Enter c: ", GetRandomInt(-20, 35));
 
     SetSolveButton(function () {
         ConsoleClear();
-		FindRootsOfQuadraticEquation(a.value, b.value, c.value);
+        FindRootsOfQuadraticEquation(a.value, b.value, c.value);
     });
 }
 
@@ -46,7 +46,7 @@ function FindRootsOfQuadraticEquation (a, b, c) {
             WriteLine("No real roots!");
         }
         else if (discriminant > 0) {
-           	WriteLine("x[1] = " + (-b + Math.sqrt(discriminant)) / (2 * a));
+               WriteLine("x[1] = " + (-b + Math.sqrt(discriminant)) / (2 * a));
             WriteLine("x[2] = " + (-b - Math.sqrt(discriminant)) / (2 * a));
         }
     }

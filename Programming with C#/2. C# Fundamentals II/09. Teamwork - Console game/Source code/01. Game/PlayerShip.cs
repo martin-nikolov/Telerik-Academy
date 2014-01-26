@@ -4,7 +4,7 @@ using System.Linq;
 using System.Media;
 using System.Threading;
 
-namespace _01.Game
+namespace FreeSpaceInvaders
 {
     public class PlayerShip : ObjectProperties
     {

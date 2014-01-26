@@ -6,7 +6,7 @@ using System.Threading;
 using System.Linq;
 using ConsoleExtender;
 
-namespace _01.Game
+namespace FreeSpaceInvaders
 {
     public class Field
     {

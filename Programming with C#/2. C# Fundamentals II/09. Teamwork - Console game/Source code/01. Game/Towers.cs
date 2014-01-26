@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace _01.Game
+namespace FreeSpaceInvaders
 {
     public class Towers : ObjectProperties
     {

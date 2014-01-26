@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _01.Game
+namespace FreeSpaceInvaders
 {
     class FlyingSaucer : ObjectProperties
     {

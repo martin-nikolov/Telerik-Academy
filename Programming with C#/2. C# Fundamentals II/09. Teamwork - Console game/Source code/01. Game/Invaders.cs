@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace _01.Game
+namespace FreeSpaceInvaders
 {
     class Invaders : ObjectProperties
     {
@@ -57,15 +57,15 @@ namespace _01.Game
         {
             if (Invaders.Right)
             {
-                Invaders.MoveRight(ref Invaders.InvaderCoords1, 1);
-                Invaders.MoveRight(ref Invaders.InvaderCoords2, 2);
-                Invaders.MoveRight(ref Invaders.InvaderCoords3, 3);
+                Invaders.MoveRight(ref Invaders.InvaderCoords1);
+                Invaders.MoveRight(ref Invaders.InvaderCoords2);
+                Invaders.MoveRight(ref Invaders.InvaderCoords3);
             }
             else if (!Invaders.Right)
             {
-                Invaders.MoveLeft(ref Invaders.InvaderCoords1, 1);
-                Invaders.MoveLeft(ref Invaders.InvaderCoords2, 2);
-                Invaders.MoveLeft(ref Invaders.InvaderCoords3, 3);
+                Invaders.MoveLeft(ref Invaders.InvaderCoords1);
+                Invaders.MoveLeft(ref Invaders.InvaderCoords2);
+                Invaders.MoveLeft(ref Invaders.InvaderCoords3);
             }
         }
 
@@ -94,7 +94,7 @@ namespace _01.Game
             }
         }
 
-        private static void MoveRight(ref List<Coordinates[]> invadersCoords, int type)
+        private static void MoveRight(ref List<Coordinates[]> invadersCoords)
         {
             for (int i = 0; i < invadersCoords.Count; i++)
             {
@@ -112,7 +112,7 @@ namespace _01.Game
                 }
             }
         }
-        private static void MoveLeft(ref List<Coordinates[]> invadersCoords, int type)
+        private static void MoveLeft(ref List<Coordinates[]> invadersCoords)
         {
             for (int i = 0; i < invadersCoords.Count; i++)
             {

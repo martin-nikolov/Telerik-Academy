@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace _01.Game
+namespace FreeSpaceInvaders
 {
     class Boss : ObjectProperties
     {

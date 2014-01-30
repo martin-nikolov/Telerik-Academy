@@ -10,6 +10,7 @@ function Main(bufferElement) {
 
     SetSolveButton(function () {
         ConsoleClear();
+
         var inputValues = ParseFloatCollection(numbers.value);
         WriteLine(GetMaxNumber(inputValues));
     });

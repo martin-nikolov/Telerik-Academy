@@ -11,6 +11,7 @@ function Main(bufferElement) {
 
     SetSolveButton(function () {
         ConsoleClear();
+        
         var inputValues = ParseFloatCollection(numbers.value);
         GetMinMaxNumber(inputValues);
     });

@@ -1,4 +1,4 @@
-// jsConsole Library © Martin Nikolov - Version [0.2] 
+// jsConsole Library © Martin Nikolov - Version [0.3] 
 
 var taskName = "JavaScript Console";
 var message = "";
@@ -86,25 +86,35 @@ function AccumulatePixels(px1, px2) {
 //
 // Collection elements Parser
 //
+function filterNumber(element) {
+    var number = parseFloat(element);
+
+    if (!Number.isNaN(number)) {
+        return new Number(number);
+    }
+}
+
 function SplitBySeparator(string, separators) {
     separators = typeof separators !== 'undefined' ? separators : " ";
-    string = string.split(separators);
-    return string;
+
+    if (Array.isArray(separators)) {
+        string = string.split(new RegExp(separators.join('|'), 'g'));
+    }
+    else {
+        string = string.split(separators);
+    }
+
+    return string.filter(String);
 }
 
 function ParseIntCollection(string, separators) {
     string = SplitBySeparator(string, separators);
-    return ParseElementsToInt(string).filter(Number);
+    return ParseElementsToInt(string).filter(filterNumber);
 }
 
 function ParseFloatCollection(string, separators) {
     string = SplitBySeparator(string, separators);
-    return ParseElementsToFloat(string).filter(Number);
-}
-
-function ParseStringCollection(string, separators) {
-    string = SplitBySeparator(string, separators);
-    return string.filter(String);
+    return ParseElementsToFloat(string).filter(filterNumber);
 }
 
 function ParseElementsToInt(collection) {

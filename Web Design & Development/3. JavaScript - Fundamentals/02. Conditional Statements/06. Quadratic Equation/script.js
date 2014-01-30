@@ -46,7 +46,7 @@ function FindRootsOfQuadraticEquation (a, b, c) {
             WriteLine("No real roots!");
         }
         else if (discriminant > 0) {
-               WriteLine("x[1] = " + (-b + Math.sqrt(discriminant)) / (2 * a));
+            WriteLine("x[1] = " + (-b + Math.sqrt(discriminant)) / (2 * a));
             WriteLine("x[2] = " + (-b - Math.sqrt(discriminant)) / (2 * a));
         }
     }

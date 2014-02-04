@@ -31,7 +31,7 @@ a {
     background-color: #DDDDDD;
 }
 
-.solve-button:hover {
+.solve-button:hover, .solve-button:focus {
     border: 1px solid #3C7FB1;
     background-color: #BEE6FD;
 }
@@ -56,6 +56,7 @@ a {
 }
 
 #content {
+    overflow-wrap: break-word;
     padding-left: 2px;
     font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
     font-size: 15px;

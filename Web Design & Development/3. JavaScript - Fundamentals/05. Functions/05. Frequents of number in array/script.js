@@ -17,7 +17,10 @@ function Main(bufferElement) {
         var elementsArray = ParseIntCollection(elements.value, [',', ' ']);
         var searchedNumber = parseInt(number.value);
 
-        WriteLine(getFrequentsOfNumber(elementsArray, searchedNumber));
+        WriteLine(Format("Number '{0}' occurs {1} time(s) in the array.", 
+                  searchedNumber, getFrequentsOfNumber(elementsArray, searchedNumber)));
+
+        testFunction();
     });
 }
 
@@ -25,7 +28,7 @@ function getFrequentsOfNumber(collection, number) {
     var searchedNumber = parseInt(number);
 
     if (!Array.isArray(collection) || (!searchedNumber && number !== 0)) {
-        return "Error! There is some invalid input value";
+        throw new Error("Error! There is some invalid input value");
     }
 
     var count = 0;
@@ -36,9 +39,35 @@ function getFrequentsOfNumber(collection, number) {
         }
     }
 
-    return Format("Number '{0}' occurs {1} time(s) in the array.", searchedNumber, count);
+    return count;
 }
 
 function testFunction() {
+    var elements = [1, 2, 2, 3, 2, 2];
+    var searchedNumber = 2;
 
+    var expected = 4;
+    var actual = getFrequentsOfNumber(elements, 2);
+
+    WriteLine("<br>Test 1 passed: " + (actual == expected ? "TRUE" : "FALSE"));
+
+    /* --------------- */
+
+    elements = [1, 1, 1];
+    searchedNumber = 1;
+
+    expected = 3;
+    actual = getFrequentsOfNumber(elements, 1);
+
+    WriteLine("Test 2 passed: " + (actual == expected ? "TRUE" : "FALSE"));
+
+    /* --------------- */
+
+    elements = [1, 2, 3, 4];
+    searchedNumber = 5;
+
+    expected = 0;
+    actual = getFrequentsOfNumber(elements, 5);
+
+    WriteLine("Test 3 passed: " + (actual == expected ? "TRUE" : "FALSE"));
 }

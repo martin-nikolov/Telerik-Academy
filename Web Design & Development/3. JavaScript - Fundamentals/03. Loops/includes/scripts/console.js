@@ -10,6 +10,7 @@ window.onload = function () {
     _ChangeTitleAndMessage();
     _ExecuteExternalScript(document.getElementById('content'));
     _SetFocusToFirstInput();
+    _SetOnEnterClickEvent();
 }
 
 function _ChangeTitleAndMessage() {
@@ -23,6 +24,48 @@ function _ExecuteExternalScript(onHtmlElement) {
     // You call your functions in Main method
     // that is placed in your .js file
     Main(content);
+}
+
+function _SetOnEnterClickEvent() {
+    if (document.layers) {
+        document.captureEvents(Event.KEYDOWN);
+    }
+
+    document.onkeydown = function (e) {
+        var keyCode = e ? (e.which ? e.which : e.keyCode) : event.keyCode;
+
+        if (keyCode == 13) {
+            FocusNextEmptyInput();
+            ActivateEnterButton();
+        }
+
+        function FocusNextEmptyInput() {
+            var inputs = document.getElementsByTagName('input');
+
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].value == "") {
+                    inputs[i].focus();
+                    break;
+                }
+            }
+        }
+
+        function ActivateEnterButton() {
+            var inputs = document.getElementsByTagName('input');
+            var hasEmptyInput = false;
+
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].value == "") {
+                    hasEmptyInput = true;
+                    break;
+                }
+            }
+
+            if (!hasEmptyInput) {
+                document.getElementsByClassName('solve-button')[0].focus();
+            }
+        }
+    }
 }
 
 function _SetFocusToFirstInput() {
@@ -225,6 +268,7 @@ function SetSolveButtonToElement(toElement, events, textMessage) {
     button.className = 'solve-button';
     button.innerHTML = textMessage;
     button.onclick = events;
+    button.id = "btn";
 
     var resultContainer = document.createElement('div');
     resultContainer.id = 'result-container';

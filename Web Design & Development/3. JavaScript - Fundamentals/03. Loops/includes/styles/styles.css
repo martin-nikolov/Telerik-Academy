@@ -31,7 +31,7 @@ a {
     background-color: #DDDDDD;
 }
 
-.solve-button:hover {
+.solve-button:hover, .solve-button:focus {
     border: 1px solid #3C7FB1;
     background-color: #BEE6FD;
 }

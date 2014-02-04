@@ -1,4 +1,4 @@
-// jsConsole Library © Martin Nikolov - Version [0.2] 
+// jsConsole Library © Martin Nikolov - Version [0.3] 
 
 var taskName = "JavaScript Console";
 var message = "";
@@ -10,6 +10,7 @@ window.onload = function () {
     _ChangeTitleAndMessage();
     _ExecuteExternalScript(document.getElementById('content'));
     _SetFocusToFirstInput();
+    _SetOnEnterClickEvent();
 }
 
 function _ChangeTitleAndMessage() {
@@ -23,6 +24,48 @@ function _ExecuteExternalScript(onHtmlElement) {
     // You call your functions in Main method
     // that is placed in your .js file
     Main(content);
+}
+
+function _SetOnEnterClickEvent() {
+    if (document.layers) {
+        document.captureEvents(Event.KEYDOWN);
+    }
+
+    document.onkeydown = function (e) {
+        var keyCode = e ? (e.which ? e.which : e.keyCode) : event.keyCode;
+
+        if (keyCode == 13) {
+            FocusNextEmptyInput();
+            ActivateEnterButton();
+        }
+
+        function FocusNextEmptyInput() {
+            var inputs = document.getElementsByTagName('input');
+
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].value == "") {
+                    inputs[i].focus();
+                    break;
+                }
+            }
+        }
+
+        function ActivateEnterButton() {
+            var inputs = document.getElementsByTagName('input');
+            var hasEmptyInput = false;
+
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].value == "") {
+                    hasEmptyInput = true;
+                    break;
+                }
+            }
+
+            if (!hasEmptyInput) {
+                document.getElementsByClassName('solve-button')[0].focus();
+            }
+        }
+    }
 }
 
 function _SetFocusToFirstInput() {
@@ -86,6 +129,14 @@ function AccumulatePixels(px1, px2) {
 //
 // Collection elements Parser
 //
+function filterNumber(element) {
+    var number = parseFloat(element);
+
+    if (!Number.isNaN(number)) {
+        return new Number(number);
+    }
+}
+
 function SplitBySeparator(string, separators) {
     separators = typeof separators !== 'undefined' ? separators : " ";
 
@@ -101,12 +152,12 @@ function SplitBySeparator(string, separators) {
 
 function ParseIntCollection(string, separators) {
     string = SplitBySeparator(string, separators);
-    return ParseElementsToInt(string).filter(Number);
+    return ParseElementsToInt(string).filter(filterNumber);
 }
 
 function ParseFloatCollection(string, separators) {
     string = SplitBySeparator(string, separators);
-    return ParseElementsToFloat(string).filter(Number);
+    return ParseElementsToFloat(string).filter(filterNumber);
 }
 
 function ParseElementsToInt(collection) {
@@ -217,6 +268,7 @@ function SetSolveButtonToElement(toElement, events, textMessage) {
     button.className = 'solve-button';
     button.innerHTML = textMessage;
     button.onclick = events;
+    button.id = "btn";
 
     var resultContainer = document.createElement('div');
     resultContainer.id = 'result-container';

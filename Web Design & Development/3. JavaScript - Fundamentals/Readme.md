@@ -1,3 +1,5 @@
+# Web Design & Development
+
 ## JavaScript - Fundamentals
 1. [Operators and Expressions](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/01.%20Operators%20and%20Expressions) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/01.%20Operators%20and%20Expressions/Readme.md)) - 23.01.2014
 * [Conditional Statements](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/02.%20Conditional%20Statements) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20-%20Fundamentals/02.%20Conditional%20Statements/Readme.md)) - 24.01.2014

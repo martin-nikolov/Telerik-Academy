@@ -43,7 +43,7 @@ Hundreds =
 function GetNumberName (number) {
     number = parseInt(number);
 
-    if (Number.isNaN(number) || number < 0 || number > 999) {
+    if (!IsNumber(number) || number < 0 || number > 999) {
         WriteLine("Invalid Number! The number is out of range [0;999]...");
         return;
     }

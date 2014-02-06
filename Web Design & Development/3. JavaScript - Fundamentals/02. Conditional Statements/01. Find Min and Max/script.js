@@ -20,8 +20,9 @@ function FindMinMax(a, b) {
     a = parseInt(a);
     b = parseInt(b);
 
-    if (Number.isNaN(a) || Number.isNaN(b)) {
+    if (!IsNumber(a) || !IsNumber(b)) {
         WriteLine( "Error! There is some incorrect input value!");
+        return;
     }
 
     var min, max;

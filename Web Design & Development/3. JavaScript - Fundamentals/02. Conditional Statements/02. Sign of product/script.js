@@ -23,7 +23,7 @@ function SignOfProduct(a, b, c) {
 	b = parseFloat(b);
 	c = parseFloat(c);
 
-	if (Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c)) {
+	if (!IsNumber(a) || !IsNumber(b) || !IsNumber(c)) {
 		return "Error! There is some incorrect input value!";
 	}
 

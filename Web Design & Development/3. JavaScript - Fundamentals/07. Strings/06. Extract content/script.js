@@ -17,5 +17,7 @@ function Main(bufferElement) {
 
     var result = input.replace(/<(.*?)>/g, '');
 
+    WriteLine(input);
+    WriteLine();
     WriteLine(result);
 }

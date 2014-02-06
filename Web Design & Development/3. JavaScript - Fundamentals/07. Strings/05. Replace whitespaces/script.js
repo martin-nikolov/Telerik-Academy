@@ -12,5 +12,7 @@ function Main(bufferElement) {
     
     var result = text.replace(/ /g, newSubstring);
 
+    WriteLine(text);
+    WriteLine();
     WriteLine(result);
 }

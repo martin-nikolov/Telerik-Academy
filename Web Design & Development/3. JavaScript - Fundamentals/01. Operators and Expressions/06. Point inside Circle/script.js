@@ -21,7 +21,7 @@ function IsPointInsideCircle(xCoords, yCoords, circleRadius) {
     xCoords = parseFloat(xCoords);
     yCoords = parseFloat(yCoords);
 
-    if (Number.isNaN(xCoords) || Number.isNaN(yCoords)) {
+    if (!IsNumber(xCoords) || !IsNumber(yCoords)) {
         WriteLine("Error! There is some incorrect input value!");
         return;
     }

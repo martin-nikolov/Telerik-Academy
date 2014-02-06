@@ -20,7 +20,7 @@ function Main(bufferElement) {
 function reverseNumber(number) {
     var integer = parseInt(number);
 
-    if (Number.isNaN(integer)) {
+    if (!IsNumber(integer)) {
         return "Error! There is some incorrect input value!";
     }
 

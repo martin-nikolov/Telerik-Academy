@@ -6,7 +6,7 @@ taskName = "1. Numbers to N";
 
 function Main(bufferElement) {
 
-    var N = ReadLine("Enter N: ");
+    var N = ReadLine("Enter N: ", GetRandomInt(20));
 
     SetSolveButton(function () {
         ConsoleClear();

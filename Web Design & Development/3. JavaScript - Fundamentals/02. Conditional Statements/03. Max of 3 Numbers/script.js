@@ -22,7 +22,7 @@ function GetBiggestFromThreeNumbers(a, b, c) {
     b = parseInt(b);
     c = parseInt(c);
 
-    if (Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c)) {
+    if (!IsNumber(a) || !IsNumber(b) || !IsNumber(c)) {
         return "Error! There is some incorrect input value!";
     }
 

@@ -52,6 +52,10 @@ function Main(bufferElement) {
 }
 
 function Point(x, y) {
+    if (!IsNumber(x) || !IsNumber(y)) {
+        throw new Error("Error! There is some incorrect input value!");
+    }
+
     if (!(this instanceof Point)) {
         return new Point(x, y);
     }

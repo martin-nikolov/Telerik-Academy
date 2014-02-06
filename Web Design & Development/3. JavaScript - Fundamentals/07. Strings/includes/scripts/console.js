@@ -132,7 +132,7 @@ function AccumulatePixels(px1, px2) {
 function filterNumber(element) {
     var number = parseFloat(element);
 
-    if (!Number.isNaN(number)) {
+    if (IsNumber(number)) {
         return new Number(number);
     }
 }
@@ -290,11 +290,11 @@ function GetRandomInt(min, max) {
     min = parseInt(min);
     max = parseInt(max);
 
-    if (Number.isNaN(min)) {
+    if (!IsNumber(min)) {
         return 0;
     }
 
-    if (Number.isNaN(max)) {
+    if (!IsNumber(max)) {
         max = min;
         min = 0;
     }
@@ -312,11 +312,11 @@ function GetRandomFloat(min, max, toFixed) {
     min = parseInt(min);
     max = parseInt(max);
 
-    if (Number.isNaN(min)) {
+    if (!IsNumber(min)) {
         return 0;
     }
 
-    if (Number.isNaN(max)) {
+    if (!IsNumber(max)) {
         max = min;
         min = 0;
     }
@@ -326,6 +326,10 @@ function GetRandomFloat(min, max, toFixed) {
     }
 
     return (Math.random() * (max - min) + min).toFixed(toFixed);
+}
+
+function IsNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
 //

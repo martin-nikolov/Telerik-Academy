@@ -1,8 +1,8 @@
-﻿taskName = "6. Most frequent element";
+﻿taskName = "6. Most frequent number";
 
 function Main(bufferElement) {
 
-    var elements = ReadLine("Enter elements: ", "4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3");
+    var elements = ReadLine("Enter number: ", "4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3");
 
     SetSolveButton(function () {
         ConsoleClear();
@@ -36,9 +36,9 @@ function PrintMostFrequent(array) {
     var frequents = sortedArray[sortedArray.length - 1];
 
     if (mostFrequent != -1 && frequents) {
-        WriteLine(Format("Most frequent element is: {0} -> {1} time(s).", mostFrequent, frequents));
+        WriteLine(Format("Most frequent number is: {0} -> {1} time(s).", mostFrequent, frequents));
     }
     else {
-        WriteLine("There is no most frequent element.")
+        WriteLine("There is no most frequent number.")
     }
 }

@@ -7,7 +7,7 @@ taskName = "2. Numbers to N not divisible by 21";
 
 function Main(bufferElement) {
 
-    var N = ReadLine("Enter N: ");
+    var N = ReadLine("Enter N: ", GetRandomInt(150));
 
     SetSolveButton(function () {
         ConsoleClear();

@@ -18,7 +18,7 @@ function Main(bufferElement) {
 function IsPrime(number) {
     var number = parseInt(number);
 
-    if (Number.isNaN(number)) {
+    if (!IsNumber(number)) {
         WriteLine("Error! Incorrect input value!");
         return;
     }

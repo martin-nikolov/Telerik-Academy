@@ -29,6 +29,10 @@ function Main(bufferElement) {
 
  Array.prototype.binarySearch = function(find) {
 
+    if (!IsNumber(find)) {
+        return -1;
+    }
+
     var low = 0, high = this.length - 1;
     var middle;
 

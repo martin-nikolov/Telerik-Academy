@@ -20,9 +20,8 @@ function CalculateRectancleArea(width, height) {
     width = parseFloat(width);
     height = parseFloat(height);
 
-    if (Number.isNaN(width) || Number.isNaN(height)) {
-        WriteLine("Error! There is some incorrect input value!");
-        return;
+    if (!IsNumber(width) || !IsNumber(height)) {
+        throw new Error("Error! There is some incorrect input value!");
     }
 
     return width * height;

@@ -20,6 +20,7 @@ function Main(bufferElement) {
 
 function CheckWhereIsPoint(point) {    
     if(!IsNumber(point.x) || !IsNumber(point.y)) {
+        WriteLine("Error! There is some incorrect input value!");
         return;
     }
 

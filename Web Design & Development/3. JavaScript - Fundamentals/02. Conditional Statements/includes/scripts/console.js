@@ -16,6 +16,7 @@ window.onload = function () {
 function _ChangeTitleAndMessage() {
     document.getElementById('title').innerHTML = taskName;
     document.getElementById('content').innerHTML = message;
+    document.title = taskName;
 }
 
 function _ExecuteExternalScript(onHtmlElement) {

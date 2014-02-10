@@ -15,7 +15,7 @@ namespace Algorithms
 
             while (left <= right)
             {
-                middle = left + ((right - left) >> 1);
+                middle = left + (right - left >> 1);
 
                 if (collection[middle].CompareTo(item) < 0)
                 {

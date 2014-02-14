@@ -1,0 +1,23 @@
+#tag-cloud {
+    width: 300px;
+    height: 200px;
+
+    margin: 10px;
+    border: 1px solid white;
+}
+
+#tag-cloud-list, #tag-cloud-list li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#tag-cloud-list {
+    padding: 10px 0 0 10px;
+}
+
+#tag-cloud-list li {
+    float: left;
+    margin: 0 7px 3px 0;
+    vertical-align: top;
+}

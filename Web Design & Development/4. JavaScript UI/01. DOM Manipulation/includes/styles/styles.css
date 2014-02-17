@@ -46,6 +46,7 @@ a {
 
 #inner-container {
     height: 367px;
+    width: 99.5%;
     border: 1px solid #D6D6D6;
     background-color: #000000;
     overflow: auto;

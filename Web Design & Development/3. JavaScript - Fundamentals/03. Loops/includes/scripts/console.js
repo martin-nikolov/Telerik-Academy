@@ -1,4 +1,11 @@
-// jsConsole Library © Martin Nikolov - Version [0.3] 
+/*!
+* jsConsole Library - https://github.com/flextry/jsConsole
+*
+* Copyright 2014 Martin Nikolov
+* Released under the MIT license
+*
+* jsConsole Library © Martin Nikolov - Version [0.4] 
+*/
 
 var taskName = "JavaScript Console";
 var message = "";
@@ -189,7 +196,7 @@ function WriteLine(message) {
 }
 
 function WriteToElement(message, toElement) {
-    if (message && toElement) {
+    if (message.toString() && toElement) {
         var messageWithEscapedBrTags = _EscapeBrTags(message);
 
         var textBlock = document.createTextNode(messageWithEscapedBrTags);

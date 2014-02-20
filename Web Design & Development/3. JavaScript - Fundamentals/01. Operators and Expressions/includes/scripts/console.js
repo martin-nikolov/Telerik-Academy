@@ -196,7 +196,14 @@ function WriteLine(message) {
 }
 
 function WriteToElement(message, toElement) {
-    if (message.toString() && toElement) {
+    try {
+        message = message.toString();
+    }
+    catch(e) {
+        message = "";
+    }
+
+    if (message && toElement) {
         var messageWithEscapedBrTags = _EscapeBrTags(message);
 
         var textBlock = document.createTextNode(messageWithEscapedBrTags);

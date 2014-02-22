@@ -10,25 +10,30 @@ define(function(require) {
         }
     }());
 
-    function merge(self, object) {
-        for (var property in object) {
-            if (object.hasOwnProperty(property) && property !== 'constructor') {
-                self[property] = object[property];
+    function isEmpty(destination) {
+        return Object.keys(destination).length === 0;
+    }
+
+
+    function extend(destination, source) {
+        for (var property in source) {
+            if (source.hasOwnProperty(property) && property !== 'constructor') {
+                destination[property] = source[property];
             }
         }
 
-        return self;
+        return destination; 
     }
 
     Function.prototype.inherit = function(parent) {
         var child = this;
 
-        if (Object.keys(child.prototype).length === 0) {
+        if (isEmpty(child.prototype)) {
             child.prototype = Object.create(parent.prototype);
             child.prototype.parent = parent.prototype;
             child.prototype.constructor = child;
         } else {
-            merge(child.prototype, parent.prototype);
+            extend(child.prototype, parent.prototype);
         }
     }
 

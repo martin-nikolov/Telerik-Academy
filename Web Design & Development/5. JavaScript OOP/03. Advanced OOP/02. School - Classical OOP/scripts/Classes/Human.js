@@ -5,8 +5,6 @@ define(function(require) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age || 0;
-
-        return this;
     }
 
     // Property for Object introducement

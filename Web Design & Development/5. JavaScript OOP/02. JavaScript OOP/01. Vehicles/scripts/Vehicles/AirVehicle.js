@@ -7,19 +7,17 @@ define(function(require) {
     // Constructor
     function AirVehicle(propellingNozzle) {
         Vehicle.call(this, [propellingNozzle]);
-
-        // Property for Afterburner switch de/activation
-        this.switchAfterBurner = function() {
-            this.propulsionUnits.forEach(function(propellingNozzle) {
-                propellingNozzle.afterBurnerSwitch.changeCondition();
-            });
-
-            return this;
-        }
     }
 
     // Inheritance of parent
     AirVehicle.inherit(Vehicle);
+
+    // Property for Afterburner switch de/activation
+    AirVehicle.prototype.switchAfterBurner = function() {
+        this.propulsionUnits.forEach(function(propellingNozzle) {
+            propellingNozzle.afterBurnerSwitch.changeCondition();
+        });
+    }
 
     return AirVehicle;
 })

@@ -75,10 +75,6 @@ define(function(require) {
     amphibiousVehicle.changePropulsionUnits();
     amphibiousVehicle.accelerate();
     WriteLine("- Speed (after acceleration/Units: Propellers): " + amphibiousVehicle.speed);
-
-    //WriteLine(amphibiousVehicle instanceof Vehicle);
-    //WriteLine(amphibiousVehicle instanceof LandVehicle);
-    //WriteLine(amphibiousVehicle instanceof WaterVehicle);
     WriteLine();
 
     /* ------------------------------------------------------------------------ */

@@ -16,25 +16,23 @@ define(function(require) {
 
         this.finsCount = finsCount;
         this.spinDirection = spinDirections.CLOCKWISE;
-
-        // Produce acceleration (change in speed) Property
-        this.produceAcceleration = function() {
-            return (this.spinDirection === spinDirections.CLOCKWISE ? 1 : -1) * this.finsCount;
-        }
-
-        // Change spin direction Property
-        this.changeSpinDirection = function() {
-            var isClockwise = this.spinDirection === spinDirections.CLOCKWISE;
-
-            this.spinDirection = 
-                 spinDirections[isClockwise ? 'COUNTERCLOCKWISE' : 'CLOCKWISE'];
-
-            return this;
-        }
     }
 
     // Inheritance of parent
     Propeller.inherit(PropulsionUnit);
+
+    // Produce acceleration (change in speed) Property
+    Propeller.prototype.produceAcceleration = function() {
+        return (this.spinDirection === spinDirections.CLOCKWISE ? 1 : -1) * this.finsCount;
+    }
+
+    // Change spin direction Property
+    Propeller.prototype.changeSpinDirection = function() {
+        var isClockwise = this.spinDirection === spinDirections.CLOCKWISE;
+
+        this.spinDirection = 
+             spinDirections[isClockwise ? 'COUNTERCLOCKWISE' : 'CLOCKWISE'];
+    }
 
     return Propeller;
 })

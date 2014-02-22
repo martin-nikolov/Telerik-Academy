@@ -9,19 +9,17 @@ define(function(require) {
         var args = Array.prototype.slice.call(arguments);
 
         Vehicle.call(this, args);
-
-        // Property for changing spin direction
-        this.changeSpinDirection = function() {
-            this.propulsionUnits.forEach(function(propeller) {
-                propeller.changeSpinDirection();
-            });
-
-            return this;
-        }
     }
 
     // Inheritance of parent
     WaterVehicle.inherit(Vehicle);
+
+    // Property for changing spin direction
+    WaterVehicle.prototype.changeSpinDirection = function() {
+        this.propulsionUnits.forEach(function(propeller) {
+            propeller.changeSpinDirection();
+        });
+    }
 
     return WaterVehicle;
 })

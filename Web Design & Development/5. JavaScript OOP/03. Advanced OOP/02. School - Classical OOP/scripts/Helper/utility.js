@@ -31,14 +31,4 @@ define(function(require) {
             merge(child.prototype, parent.prototype);
         }
     }
-
-    var utils = {
-        circle: {
-            calculatePerimeter: function(radius) {
-                return 2 * Math.PI * radius;
-            }
-        }
-    };
-
-    return utils;
 })

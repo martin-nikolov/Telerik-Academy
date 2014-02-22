@@ -9,15 +9,15 @@ define(function(require) {
         PropulsionUnit.apply(this, arguments);
 
         this.radius = radius;
-
-        // Produce acceleration (change in speed) Property
-        this.produceAcceleration = function() {
-            return utility.circle.calculatePerimeter(this.radius);
-        }
     }
 
     // Inheritance of parent
     Wheel.inherit(PropulsionUnit);
 
+    // Produce acceleration (change in speed) Property
+    Wheel.prototype.produceAcceleration = function() {
+        return utility.circle.calculatePerimeter(this.radius);
+    }
+    
     return Wheel;
 })

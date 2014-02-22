@@ -3,19 +3,22 @@ define(function(require) {
     function Vehicle(propulsionUnits) {
         this.propulsionUnits = propulsionUnits;
         this.speed = 0;
+    }
+    
+    // Property for acceleration
+    Vehicle.prototype.accelerate = function() {
+        if (!Array.isArray(this.propulsionUnits) || !this.propulsionUnits) 
+            return;
 
-        this.accelerate = function() {
-            if (!Array.isArray(propulsionUnits) || !propulsionUnits) return;
+        var sum = 0;
 
-            var sum = 0;
+        this.propulsionUnits.forEach(function(propulsionUnit) {
+            sum += propulsionUnit.produceAcceleration();
+        });
 
-            this.propulsionUnits.forEach(function(propulsionUnit) {
-                sum += propulsionUnit.produceAcceleration();
-            });
+        this.speed = sum;
 
-            this.speed = sum;
-            return this;
-        }
+        return this.speed;
     }
 
     return Vehicle;

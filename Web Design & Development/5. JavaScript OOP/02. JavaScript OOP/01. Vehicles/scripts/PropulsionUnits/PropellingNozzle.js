@@ -12,15 +12,15 @@ define(function(require) {
 
         this.power = power;
         this.afterBurnerSwitch = new AfterBurnerSwitch();
-
-        // Produce acceleration (change in speed) Property
-        this.produceAcceleration = function() {
-            return (this.afterBurnerSwitch.active ? 2 : 1) * this.power;
-        }
     }
 
     // Inheritance of parent
     PropellingNozzles.inherit(PropulsionUnit);
+
+    // Produce acceleration (change in speed) Property
+    PropellingNozzles.prototype.produceAcceleration = function() {
+        return (this.afterBurnerSwitch.active ? 2 : 1) * this.power;
+    }
 
     return PropellingNozzles;
 })

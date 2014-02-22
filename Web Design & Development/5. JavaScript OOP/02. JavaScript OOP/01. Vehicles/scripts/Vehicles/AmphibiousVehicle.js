@@ -4,8 +4,8 @@ define(function(require) {
     var utility = require('../Helper/utility.js');
 
     var Vehicle = require('./Vehicle.js')
-    //var LandVehicle = require('./LandVehicle.js')
-    //var WaterVehicle = require('./WaterVehicle.js')
+    var LandVehicle = require('./LandVehicle.js')
+    var WaterVehicle = require('./WaterVehicle.js')
 
     // Constructor
     function AmphibiousVehicle(wheels, propellers) {
@@ -13,19 +13,17 @@ define(function(require) {
 
         this.wheels = wheels;
         this.propellers = propellers;
-
-        // Property for changing propulsion units
-        this.changePropulsionUnits = function() {
-            this.propulsionUnits = (this.propulsionUnits === this.wheels) ? this.propellers : this.wheels;
-
-            return this;
-        }
     }
 
     // Inheritance of parent
     AmphibiousVehicle.inherit(Vehicle);
-    //AmphibiousVehicle.inherit(LandVehicle);
-    //AmphibiousVehicle.inherit(WaterVehicle);
+    AmphibiousVehicle.inherit(LandVehicle);
+    AmphibiousVehicle.inherit(WaterVehicle);
+
+    // Property for changing propulsion units
+    AmphibiousVehicle.prototype.changePropulsionUnits = function() {
+        this.propulsionUnits = (this.propulsionUnits === this.wheels) ? this.propellers : this.wheels;
+    }
 
     return AmphibiousVehicle;
 })

@@ -1,21 +1,22 @@
 define(function(require) {
-
-    (function() {
-        if (!Object.create) {
-            Object.create = function(obj) {
-                function func() { };
-                func.prototype = obj;
-                return new func();    
-            };
-        }
-    }());
+    if (typeof Object.create != 'function') {
+        (function () {
+            var F = function () {};
+            Object.create = function (o) {
+                if (arguments.length > 1) { throw Error('Second argument not supported'); }
+                if (o === null) { throw Error('Cannot set a null [[Prototype]]'); }
+                if (typeof o != 'object') { throw TypeError('Argument must be an object'); }
+                F.prototype = o;
+                return new F;
+            }
+        })();
+    }
 
     function isEmpty(destination) {
         return Object.keys(destination).length === 0;
     }
 
-
-    function extend(destination, source) {
+    function merge(destination, source) {
         for (var property in source) {
             if (source.hasOwnProperty(property) && property !== 'constructor') {
                 destination[property] = source[property];
@@ -32,8 +33,9 @@ define(function(require) {
             child.prototype = Object.create(parent.prototype);
             child.prototype.parent = parent.prototype;
             child.prototype.constructor = child;
-        } else {
-            extend(child.prototype, parent.prototype);
+        } 
+        else {
+            merge(child.prototype, parent.prototype);
         }
     }
 })

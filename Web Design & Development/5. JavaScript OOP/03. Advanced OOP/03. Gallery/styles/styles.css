@@ -1,0 +1,115 @@
+﻿html {
+    min-height: 98%;
+    height: 98%;
+}
+
+body {
+    min-height: 97%;
+    height: 97%;
+    background-color: #212121;
+}
+
+section {
+    min-height: 100%;
+    height: 100%;
+    width: 213px;
+    max-width: 213px;
+    max-height: 815px;
+    margin-top: 5px;
+    padding: 10px 30px 10px 15px;
+    text-align: left;
+    overflow-x: auto;
+    overflow-y: overlay;
+}
+
+section header {
+    position: fixed;
+    left: 370px;
+    font-family: Consolas;
+    font-weight: normal;
+    font-size: 1.7em;
+    color: white;
+}
+
+header h1, header h2 {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+header h2 {
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+input[type=radio] {
+    display: none;
+}
+            
+label > img {
+    width: 200px;
+    max-width: 200px;
+    padding: 3px;
+    margin: 3px;
+    cursor: pointer; 
+}
+            
+.larger {
+    position: absolute;
+    top: 115px;
+    left: 370px;
+    width: 670px;
+}
+            
+.larger img {
+    display: none;
+    margin: 0 auto;
+    width: 670px;
+}
+
+input[type=radio]:checked + span img {
+    display: block;
+}
+
+.larger a {
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    width: 670px;
+    margin-top: 5px;
+    text-align: center;
+    color: white;
+}
+            
+input[type=radio]:checked + span a {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.button {
+    display: block;
+    position: absolute;
+
+    left: 270px;
+    top: 340px;
+
+    width: 100px;
+    height: 50px;
+
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.button.previous {
+    background: url(../images/previous.png) no-repeat;
+}
+
+.button.next {
+    background: url(../images/next.png) no-repeat;
+    left: 1041px;
+}

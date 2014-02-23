@@ -35,7 +35,7 @@ function Main(bufferElement) {
         WriteLine(line.toString());
         WriteLine("Distance between 2 points: " + line.distance());
 
-        WriteLine("<br>---------------------------<br>")
+        WriteLine("<br>-------- Test - invalid triangle --------<br>")
 
         // Test 2
         try {

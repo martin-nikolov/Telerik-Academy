@@ -10,11 +10,16 @@ function Main(bufferElement) {
     var controls = treeViewModule();
     var treeView = controls.treeView("div.tree-view");
 
-    var jsnode = treeView.addNode();
-    jsnode.content("JavaScript");
+    var jsnode = treeView.addNode("JavaScript");
 
-    var js1subnode = jsnode.addNode();
-    js1subnode.content("JavaScript - part 1");
+    var js1subnode = jsnode.addNode("JavaScript - part 1");
+    js1subnode.addNode("Operators and Expressions");
+    js1subnode.addNode("Conditional Statements");
+    js1subnode.addNode("Loops");
+    js1subnode.addNode("Arrays");
+    js1subnode.addNode("Functions");
+    js1subnode.addNode("Using Objects");
+    js1subnode.addNode("Strings");
 
     var js2subnode = jsnode.addNode();
     js2subnode.content("JavaScript - part 2");
@@ -48,25 +53,45 @@ function treeViewModule() {
         return wrapper;
     }
 
-    function _createTreeView(liCount, message, isSubItem) {
-        var list = document.createElement('ul');
-        message = message || "Item";
+    function _createUl(li) {
+        return document.createElement('ul');
+    }
 
-        for (var i = 0; i < liCount; i++) {
-            var li = list.addNode(message);
-            list.appendChild(li);
+    function _createLi(child) {
+        var li = document.createElement('li');
+
+        if (child) {
+            li.appendChild(child);
         }
 
-        if (isSubItem) {
-            list.style.display = 'none';
+        return li;
+    }
+
+    function _createAnchor(content) {
+        var anchor = document.createElement('a');
+        anchor.expanded = false;
+
+        if (content) {
+            anchor.innerHTML = content;
         }
 
-        return list;
+        // Set event to anchor
+        anchor.onclick = function() {
+            var children = anchor.nextElementSibling;
+
+            if (children) {
+                children.style.display =  this.expanded ? 'none' : 'block';
+            }
+
+            this.expanded = !this.expanded;
+        }
+
+        return anchor;
     }
 
     function treeView(wrapper) {
         var mainContainer = _GetDefaultContainer();
-        var treeView = document.createElement('ul');
+        var treeView = _createUl();
 
         if (wrapper) {
             var wrapperElement = _createWrapper(wrapper);
@@ -77,35 +102,27 @@ function treeViewModule() {
             mainContainer.appendChild(treeView);
         }     
 
-        function addNode() {
-            var anchor = document.createElement('a');
-            anchor.expanded = false;
+        return { 
+            addNode: function(content) { return addNode(treeView, content); }
+        }
+    }
 
-            // Set event to anchor
-            anchor.onclick = function() {
-                var children = anchor.nextElementSibling;
+    function addNode(treeView, content) {
+        var anchor = _createAnchor(content);
+        var li = _createLi(anchor);
 
-                if (children) {
-                    children.style.display =  this.expanded ? 'none' : 'block';
-                }
-
-                this.expanded = !this.expanded;
-            }
-
-            var li = document.createElement('li');
-            li.appendChild(anchor);
-
+        if (treeView.tagName === "LI") {
+            var ul = treeView.getElementsByTagName('ul')[0] || _createUl();
+            ul.appendChild(li);
+            treeView.appendChild(ul);
+        }
+        else if (treeView.tagName === "UL") {
             treeView.appendChild(li);
-
-            return {
-                this: function() { return li; },
-                content: function(content) { anchor.innerHTML = content; }
-            }
         }
 
-        return { 
-            this: function() { return treeView; }, 
-            addNode: function() { return addNode(); }
+        return {
+            addNode: function(content) { return addNode(li, content); },
+            content: function(content) { anchor.innerHTML = content || ""; }
         }
     }
 

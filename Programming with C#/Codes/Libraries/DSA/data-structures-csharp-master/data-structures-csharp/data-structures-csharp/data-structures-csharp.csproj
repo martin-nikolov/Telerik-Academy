@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FBD79E3-616A-4F3E-B2CA-65FED347C8E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataStructures</RootNamespace>
+    <AssemblyName>DataStructures</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>True</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>True</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>True</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestEnsures>False</CodeContractsSuggestEnsures>
+    <CodeContractsSuggestObjectInvariants>True</CodeContractsSuggestObjectInvariants>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>DoNotBuild</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdjacencyList\AdjacencyList.cs" />
+    <Compile Include="AdjacencyList\WeightedAdjacencyList.cs" />
+    <Compile Include="AvlTree\AvlTree.cs" />
+    <Compile Include="AvlTree\Node.cs" />
+    <Compile Include="BinarySearchTree\BinarySearchTree.cs" />
+    <Compile Include="BinarySearchTree\BinarySearchTreeTranspose.cs" />
+    <Compile Include="BinarySearchTree\Node.cs" />
+    <Compile Include="BinomialHeap\BinomialHeap.cs" />
+    <Compile Include="BinomialHeap\Node.cs" />
+    <Compile Include="BloomFilter\BloomFilter.cs" />
+    <Compile Include="BPlusTree\BPlusTree.cs" />
+    <Compile Include="BPlusTree\IntermediateNode.cs" />
+    <Compile Include="BPlusTree\LeafNode.cs" />
+    <Compile Include="BPlusTree\INode.cs" />
+    <Compile Include="BPlusTree\Split.cs" />
+    <Compile Include="BTree\BTree.cs" />
+    <Compile Include="BTree\Entry.cs" />
+    <Compile Include="BTree\Node.cs" />
+    <Compile Include="CircularBuffer\CircularBuffer.cs" />
+    <Compile Include="ConcurrentAdjacencyList\ConcurrentAdjacencyList.cs" />
+    <Compile Include="ConcurrentHashSet\ConcurrentHashSet.cs" />
+    <Compile Include="Hash\DoubleHashedDictionary.cs" />
+    <Compile Include="Hash\LinearProbingDictionary.cs" />
+    <Compile Include="Hash\LinkedDictionary.cs" />
+    <Compile Include="Heap\Node.cs" />
+    <Compile Include="HSBT\HeapStructuredBinaryTree.cs" />
+    <Compile Include="HSBT\Node.cs" />
+    <Compile Include="List\CircularQueue.cs" />
+    <Compile Include="List\SortedList.cs" />
+    <Compile Include="QuadTree\Children.cs" />
+    <Compile Include="QuadTree\Node.cs" />
+    <Compile Include="QuadTree\NullChildren.cs" />
+    <Compile Include="QuadTree\Point.cs" />
+    <Compile Include="QuadTree\QuadTree.cs" />
+    <Compile Include="QuadTree\Rectangle.cs" />
+    <Compile Include="RegionQuadTree\Children.cs" />
+    <Compile Include="RegionQuadTree\Node.cs" />
+    <Compile Include="RegionQuadTree\NullChildren.cs" />
+    <Compile Include="RegionQuadTree\Point.cs" />
+    <Compile Include="RegionQuadTree\Rectangle.cs" />
+    <Compile Include="RegionQuadTree\RegionQuadTree.cs" />
+    <Compile Include="RootedTree\Node.cs" />
+    <Compile Include="CompressedTrie\CompressedTrie.cs" />
+    <Compile Include="CompressedTrie\Node.cs" />
+    <Compile Include="CompressedTrie\NullNode.cs" />
+    <Compile Include="DAWG\DirectedAcyclicWordGraph.cs" />
+    <Compile Include="DAWG\Edge.cs" />
+    <Compile Include="DAWG\Node.cs" />
+    <Compile Include="IntervalTree\IntervalTree.cs" />
+    <Compile Include="List\MoveToFrontList.cs" />
+    <Compile Include="Heap\Heap.cs" />
+    <Compile Include="IntervalTree\Interval.cs" />
+    <Compile Include="IntervalTree\Node.cs" />
+    <Compile Include="FrequencyList\FrequencyList.cs" />
+    <Compile Include="FrequencyList\Node.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue\Deque.cs" />
+    <Compile Include="RedBlackTree\Node.cs" />
+    <Compile Include="RedBlackTree\NodeType.cs" />
+    <Compile Include="RedBlackTree\NullNode.cs" />
+    <Compile Include="RedBlackTree\RedBlackTree.cs" />
+    <Compile Include="RootedTree\RootedTree.cs" />
+    <Compile Include="Rope\Node.cs" />
+    <Compile Include="Rope\Rope.cs" />
+    <Compile Include="SkipList\NullSkipNode.cs" />
+    <Compile Include="SkipList\SkipList.cs" />
+    <Compile Include="SkipList\SkipNode.cs" />
+    <Compile Include="SplayTree\Node.cs" />
+    <Compile Include="SplayTree\SplayTree.cs" />
+    <Compile Include="TransposeList\Node.cs" />
+    <Compile Include="TransposeList\TransposeList.cs" />
+    <Compile Include="Trie\Node.cs" />
+    <Compile Include="Trie\NullNode.cs" />
+    <Compile Include="Trie\Trie.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SuffixArray\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

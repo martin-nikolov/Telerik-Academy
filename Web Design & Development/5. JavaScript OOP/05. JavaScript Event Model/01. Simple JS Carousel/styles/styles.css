@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    padding: 0 20px 0 20px;
+}
+
 ul, li {
     list-style-type: none;
     display: inline-block;
@@ -16,8 +20,10 @@ ul, li {
 
 #wrapper {
     position: relative;
-    width: 1300px;
     margin: 0 auto;
+        width: 1045px;
+    min-width: 1045px;
+    max-width: 1045px;
 }
 
 #carousel-container {
@@ -32,9 +38,33 @@ ul, li {
 #carousel-innercontainer {
     height: 225px;
     max-height: 225px;
-        width: 3000px;
-    min-width: 3000px;
-    max-width: 3000px;
+        width: 1500px;
+    min-width: 1500px;
+    max-width: 1500px;
+}
+
+#carousel-nav {
+    position: absolute;
+    width: 908px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#carousel-nav div {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    border: none;
+    background: url('../images/other.png');
+}
+
+#carousel-nav div.current {
+    background: url('../images/current.png');
+}
+
+#carousel-nav div:hover {
+    background: url('../images/current.png');
 }
 
 button {
@@ -48,11 +78,11 @@ button {
 }
 
 #previousButton {
-    left: 90px;
+    left: -35px;
     background: url(../images/previous.png);
 }
 
 #nextButton {
-    right: 90px;
+    right: -35px;
     background: url(../images/next.png);
 }

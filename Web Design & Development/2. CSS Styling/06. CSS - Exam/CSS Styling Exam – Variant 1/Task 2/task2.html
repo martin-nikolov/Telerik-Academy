@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Styling Exam Variant 1 - Task 2</title>
+    <link href="task2.css" rel="stylesheet" />
+    <script src="jquery-1.9.1.js"></script>
+    <script src="tab-strip.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <ul class="tab-strip">
+            <li class="current">
+                <a href="#" class="tab-btn">Tab 1</a>
+                <div class="tab-content">
+                    <ul>
+                        <li>List Item 1
+							<ul>
+								<li>List Item 1
+								</li>
+								<li>List Item 1
+								</li>
+								<li>List Item 1
+								</li>
+								<li>List Item 1
+								</li>
+							</ul>
+                        </li>
+                        <li>List Item 1
+                        </li>
+                        <li>List Item 1
+                        </li>
+                        <li>List Item 1
+                        </li>
+                    </ul>
+                </div>
+            </li><li>
+                <a href="#" class="tab-btn">Tab 2</a>
+                <div class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                                <th>Column 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li><li>
+                <a href="#" class="tab-btn">Tab 3</a>
+                <div class="tab-content">
+                    In tab 3
+                </div>
+            </li><li>
+                <a href="#" class="tab-btn">Tab 4</a>
+                <div class="tab-content">
+                    In tab 4
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(".tab-strip").tabStrip();
+    </script>
+</body>
+</html>

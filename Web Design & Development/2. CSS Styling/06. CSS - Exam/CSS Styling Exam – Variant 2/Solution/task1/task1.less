@@ -1,0 +1,119 @@
+﻿body, html.div, ul, li, a, img, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+.linear-gradient(@from-color,@from-pos,@to-color,@to-pos) {
+    background: @to-color;
+    background: -moz-linear-gradient(top, @from-color @from-pos, @to-color @to-pos);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@from-pos,@from-color), color-stop(@to-pos,@to-color));
+    background: -webkit-linear-gradient(top, @from-color @from-pos,@to-color @to-pos);
+    background: -o-linear-gradient(top, @from-color @from-pos,@to-color @to-pos);
+    background: -ms-linear-gradient(top, @from-color @from-pos,@to-color @to-pos);
+    background: linear-gradient(to bottom, @from-color @from-pos,@to-color @to-pos);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{from-color}', endColorstr='@{to-color}',GradientType=0 );
+}
+
+body {
+    @default-font-size: 18px;
+    @default-font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+
+    font-size: @default-font-size;
+    font-family: @default-font-family;
+    color: #444;
+
+    #wrapper {
+        width: 960px;
+
+        .accordion {
+            margin-left: 50px;
+            margin-top: 50px;
+            list-style-type: none;
+            width: 400px;
+
+            li {
+                .accordion-btn {
+                    color: #444;
+                    font-weight: bold;
+                    text-decoration: none;
+                    font-size: 1.3em;
+                    text-align: center;
+                    display: block;
+                    border: 1px solid black;
+                    .linear-gradient(#eee,25%,#aaa,75%);
+
+					&:hover{
+						background:#aaa;
+					}
+                }
+
+                .accordion-content {
+                    display: none;
+                    background: #aaa;
+                    border: 1px solid black;
+                    border-top: none;
+                    padding: 5px 15px;
+
+                    h1 {
+                        font-size: 1.6em;
+                        text-align: center;
+                        margin: 5px auto;
+                        color: lighten( #444,10%);
+                    }
+
+                    p {
+                        text-align: justify;
+                    }
+
+                    table {
+                        border-collapse: collapse;
+                        margin: 15px auto;
+                        border-radius: 5px;
+                        border: 1px solid black;
+
+                        thead {
+                            tr {
+                                .linear-gradient(#eee,0%,#888,100%);
+                                border-top-right-radius: 15px;
+
+                                th {
+                                    &:first-of-type {
+                                        border-top-left-radius: 15px;
+                                    }
+                                }
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                .linear-gradient(#888,0%,#ccc,100%);
+
+                                &:nth-of-type(2n+1) {
+                                    .linear-gradient(#ccc,0%,#888,100%);
+                                }
+								td{
+									color:#fff;
+								}
+                            }
+                        }
+
+                        td, th {
+                            border: 1px solid black;
+                            padding: 5px;
+                        }
+                    }
+                }
+
+                &.current {
+                    .accordion-btn {
+                        border-bottom: none;
+                    }
+
+                    .accordion-content {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

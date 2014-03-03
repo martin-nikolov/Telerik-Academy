@@ -1,0 +1,141 @@
+﻿html, body, ul, li, a, div, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+
+.linear-gradient(@from-color,@from-pos,@to-color,@to-pos) {
+    background: @to-color;
+    background: -moz-linear-gradient(top, @from-color @from-pos, @to-color @to-pos);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@from-pos,@from-color), color-stop(@to-pos,@to-color));
+    background: -webkit-linear-gradient(top, @from-color @from-pos,@to-color @to-pos);
+    background: -o-linear-gradient(top, @from-color @from-pos,@to-color @to-pos);
+    background: -ms-linear-gradient(top, @from-color @from-pos,@to-color @to-pos);
+    background: linear-gradient(to bottom, @from-color @from-pos,@to-color @to-pos);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{from-color}', endColorstr='@{to-color}',GradientType=0 );
+}
+
+.clearfix() {
+    zoom: 1;
+
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+body {
+    @default-font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+    @default-font-size: 16px;
+    @default-font-color: #0094ff;
+
+    font-size: @default-font-size;
+    font-family: @default-font-family;
+    color: @default-font-color;
+
+
+    #wrapper {
+        width: 960px;
+
+        .msg-bar {
+            list-style-type: none;
+            position: relative;
+            margin-top: 200px;
+            margin-left: 50px;
+            display: inline-block;
+            width: 560px;
+
+            & > li {
+                display: inline-block;
+                /*border: 1px solid black;*/
+                padding-top: 5px;
+
+                .msg-bar-btn {
+                    display: inline-block;
+                    color: @default-font-color;
+                    text-decoration: none;
+                    padding: 5px 15px;
+                    border: 1px solid black;
+                    .linear-gradient(#AAFFEF,20%,darken(#AAFFEF,30%),100%);
+                }
+
+                .msg-bar-content {
+                    background: #AAFFEF;
+                    display: none;
+                    position: absolute;
+                    bottom: 35px;
+                    width: 430px;
+                    left: 0;
+                    border: 1px solid black;
+					border-bottom:none;
+                    padding: 5px 15px;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+
+                    ul {
+                        list-style-type: none;
+                        text-align: right;
+
+                        li {
+                            display: block;
+                            margin-top: 5px;
+                            .clearfix();
+
+                            span {
+                                display: block;
+                                text-align: right;
+                                border-bottom: 1px solid black;
+                                margin-left: 100px;
+                                padding: 5px 15px;
+
+                                &.user {
+                                    border: 1px solid black;
+                                    border-radius: 100px;
+                                    float: left;
+                                    padding-left: 25px;
+                                    background-position: 5px center;
+                                    background-repeat: no-repeat;
+                                    margin: 0;
+                                }
+                            }
+
+                            &:last-of-type {
+                                span:not(.user) {
+                                    border: none;
+                                }
+                            }
+
+                            &.me-item {
+                                span.user {
+                                    background-image: url(imgs/me.png);
+                                    background-repeat: no-repeat;
+                                }
+                            }
+
+                            &.other-item {
+                                span.user {
+                                    background-image: url(imgs/male.png);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    .linear-gradient(#AAFFEF,20%,darken(#AAFFEF,30%),100%);
+
+                    .msg-bar-btn {
+                        border-top: none;
+                        background: darken(#AAFFEF,40%);
+                    }
+
+                    .msg-bar-content {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

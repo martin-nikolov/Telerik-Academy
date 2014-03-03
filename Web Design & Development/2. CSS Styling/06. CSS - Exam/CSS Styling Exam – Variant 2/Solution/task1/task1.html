@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Styling Exam - Variant 2</title>
+    <link href="task1.css" rel="stylesheet" />
+    <script src="jquery-1.9.1.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <ul class="accordion">
+            <li class="current">
+                <a href="#" class="accordion-btn">Label 0</a>
+                <div class="accordion-content">
+                    content 0
+                </div>
+            </li>
+            <li>
+                <a href="#" class="accordion-btn">Label 1</a>
+                <div class="accordion-content">
+                    <h1>The item content 1</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="accordion-btn">Label 2</a>
+                <div class="accordion-content">
+                    <h1>The item content 2</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="accordion-btn">Label 3</a>
+                <div class="accordion-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title 0
+                                </th>
+                                <th>Title 1
+                                </th>
+                                <th>Title 2
+                                </th>
+                                <th>Title 3
+                                </th>
+                                <th>Title 4
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Value 0</td>
+                                <td>Value 1</td>
+                                <td>Value 2</td>
+                                <td>Value 3</td>
+                                <td>Value 4</td>
+                            </tr>
+                            <tr>
+                                <td>Value 0</td>
+                                <td>Value 1</td>
+                                <td>Value 2</td>
+                                <td>Value 3</td>
+                                <td>Value 4</td>
+                            </tr>
+                            <tr>
+                                <td>Value 0</td>
+                                <td>Value 1</td>
+                                <td>Value 2</td>
+                                <td>Value 3</td>
+                                <td>Value 4</td>
+                            </tr>
+                            <tr>
+                                <td>Value 0</td>
+                                <td>Value 1</td>
+                                <td>Value 2</td>
+                                <td>Value 3</td>
+                                <td>Value 4</td>
+                            </tr>
+                            <tr>
+                                <td>Value 0</td>
+                                <td>Value 1</td>
+                                <td>Value 2</td>
+                                <td>Value 3</td>
+                                <td>Value 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="accordion-btn">Label 4</a>
+                <div class="accordion-content">
+                    content 4
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        (function () {
+
+            $.fn.accordion = function () {
+                var selector = this.selector;
+
+                $(selector + " .accordion-btn").on("click", function (e) {
+
+                    var isCurrent = $(this).parent().hasClass("current");
+
+                    $(selector + " .current").removeClass("current");
+
+                    if (!isCurrent) {
+                        $(this).parent().addClass("current");
+                    }
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    }
+                    return false;
+                });
+            };
+
+        }).call(this);
+
+        $(function onDocumentReady() {
+            $(".accordion").accordion();
+        });
+
+    </script>
+</body>
+</html>

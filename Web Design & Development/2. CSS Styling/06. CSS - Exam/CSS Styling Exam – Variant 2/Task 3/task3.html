@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Styling Exam - Variant 2</title>
+    <link href="task3.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <form>
+            <fieldset>
+                <legend>Register Information</legend>
+                <label for="tb-username">Username: </label>
+                <input type="text" id="tb-username" /><br />
+                <label for="tb-password">Password: </label>
+                <input type="password" id="tb-password" /><br />
+                <label for="tb-rpt-password">Repeat Password: </label>
+                <input type="password" id="tb-rpt-password" /><br />
+            </fieldset>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="tb-firstname">Firsname: </label>
+                <input type="text" id="tb-firstname" /><br />
+                <label for="tb-lastname">Lastname: </label>
+                <input type="text" id="tb-lastname" /><br />
+                <label for="tb-age">Age: </label>
+                <input type="number" id="tb-age" value="1" min="0" max="99" /><br />
+            </fieldset>
+            Agree with our temrs of use?
+            <label for="radio-yes">Yes</label>
+            <input type="radio" id="radio-yes" name="terms-group" value="yes" />
+            <label for="radio-no">No</label>
+            <input type="radio" id="radio-no" name="terms-group" checked="checked" value="no" />
+            <br />
+            <button>
+                Register now
+            </button>
+            <input type="reset" value="Clear form" />
+            <div id="msg-holder"></div>
+        </form>
+    </div>
+</body>
+</html>

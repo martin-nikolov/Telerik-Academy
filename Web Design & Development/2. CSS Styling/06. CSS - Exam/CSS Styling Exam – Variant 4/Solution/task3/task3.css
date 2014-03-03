@@ -1,0 +1,106 @@
+body, h1, h2, h3, h4, h5, h6, div{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+}
+
+#wrapper{
+	margin: 20px 20px;
+	display: block;
+	width: 960px;
+	height: 270px;`
+	zoom: 1;
+}
+
+#wrapper:after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+div#wrapper>div{
+	width: 140px;
+	height: 250px;	
+	border-top: 2px solid #D3D7DA;
+	border-bottom: 2px solid #D3D7DA;
+	float: left;
+	margin: 0px;
+	padding: 10px 4px 0px 4px;
+}
+
+div#wrapper>div:first-of-type{
+	border-left: 2px solid #D3D7DA;
+}
+
+div#wrapper>div:nth-of-type(2n){
+	height: 270px;
+	border-left: 2px solid #D3D7DA;
+	border-right: 2px solid #D3D7DA;
+	background: #F1F2F3;
+	background: -moz-linear-gradient(top, #ffffff 20%, #F1F2F3 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #ffffff), color-stop(100%, #F1F2F3));
+	background: -webkit-linear-gradient(top, #ffffff 20%, #F1F2F3 100%);
+	background: -o-linear-gradient(top, #ffffff 20%, #F1F2F3 100%);
+	background: -ms-linear-gradient(top, #ffffff 20%, #F1F2F3 100%);
+	background: linear-gradient(to bottom, #ffffff 20%, #F1F2F3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#F1F2F3', GradientType=0);
+}
+
+
+
+div#wrapper div:nth-of-type(1) hgroup{
+	background: url('imgs/install.png') no-repeat;
+}
+
+div#wrapper div:nth-of-type(2) hgroup{
+	background: url('imgs/tuneUp.png') no-repeat;
+}
+
+div#wrapper div:nth-of-type(3) hgroup{
+	background: url('imgs/manage.png') no-repeat;	
+}
+
+div#wrapper div:nth-of-type(4) hgroup{
+	background: url('imgs/openSource.png') no-repeat;
+}
+
+div#wrapper div:nth-of-type(5) hgroup{
+	background: url('imgs/twitter.png') no-repeat;
+}
+
+div#wrapper div:nth-of-type(6) hgroup{
+	background: url('imgs/about.png') no-repeat;
+}
+
+div#wrapper div hgroup{
+	background-position: left bottom !important;
+	padding-left: 40px;
+	height: 40px;
+	display: table-cell;
+	vertical-align: bottom;
+}
+
+a{
+	display: block;
+	text-decoration: none;
+	color: #C72D2F;
+}
+
+p{
+	margin-bottom: 5px;
+}
+
+.yellowBox{
+	border: 1px solid yellow;
+	background-color: #FFFFDD;
+}
+
+.yellowBox a{
+	display: inline-block;
+}
+
+div a span{
+	text-transform: uppercase;
+}

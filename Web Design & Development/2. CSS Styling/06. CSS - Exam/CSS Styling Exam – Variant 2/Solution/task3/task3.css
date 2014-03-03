@@ -1,0 +1,95 @@
+﻿html,
+body,
+div,
+form,
+fieldset,
+input,
+button,
+label,
+legend {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #333;
+  /*@from-bg-color:#FFC175;
+	@to-bg-color:#FFE066;*/
+
+}
+body #wrapper {
+  width: 960px;
+  font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+}
+body #wrapper form {
+  width: 380px;
+  background: #8cfffb;
+  background: -moz-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #68d1ff), color-stop(100%, #8cfffb));
+  background: -webkit-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: -o-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: -ms-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: linear-gradient(to bottom, #68d1ff 0%, #8cfffb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#68d1ff', endColorstr='#8cfffb', GradientType=0);
+  margin-top: 25px;
+  margin-left: 25px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: right;
+}
+body #wrapper form fieldset {
+  border: 3px solid #333;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+body #wrapper form fieldset legend {
+  margin-right: 25px;
+  font-size: 1.3em;
+  font-style: italic;
+  padding: 0 15px;
+}
+body #wrapper form fieldset input {
+  padding: 5px 15px;
+  border: 1px solid #008fce;
+  border-radius: 5px;
+  background: #8cfffb;
+  background: -moz-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #68d1ff), color-stop(100%, #8cfffb));
+  background: -webkit-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: -o-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: -ms-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: linear-gradient(to bottom, #68d1ff 0%, #8cfffb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#68d1ff', endColorstr='#8cfffb', GradientType=0);
+  color: #333;
+}
+body #wrapper form fieldset input[type=number] {
+  width: 35px;
+  padding: 5px;
+}
+body #wrapper form label {
+  margin-top: 5px;
+  display: inline-block;
+}
+body #wrapper form button,
+body #wrapper form input[type=reset] {
+  font-size: 1.2em;
+  padding: 5px 15px;
+  display: inline-block;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+  background: #8cfffb;
+  background: -moz-linear-gradient(top, #35c1ff 0%, #8cfffb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #35c1ff), color-stop(100%, #8cfffb));
+  background: -webkit-linear-gradient(top, #35c1ff 0%, #8cfffb 100%);
+  background: -o-linear-gradient(top, #35c1ff 0%, #8cfffb 100%);
+  background: -ms-linear-gradient(top, #35c1ff 0%, #8cfffb 100%);
+  background: linear-gradient(to bottom, #35c1ff 0%, #8cfffb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#35c1ff', endColorstr='#8cfffb', GradientType=0);
+  border-bottom: 1px solid black;
+  color: #333;
+}
+body #wrapper form button:hover,
+body #wrapper form input[type=reset]:hover {
+  background: #9be1ff;
+}

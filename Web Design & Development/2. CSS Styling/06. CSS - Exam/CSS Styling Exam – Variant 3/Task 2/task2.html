@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Styling Exam Variant 3 - task 2</title>
+    <link href="task2.css" rel="stylesheet" />
+    <script src="jquery-1.9.1.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="select-list">
+            <ul class="all-items">
+                <li class="selected">Bulgaria
+                </li>
+                <li>England
+                </li>
+                <li>Russia
+                </li>
+                <li>Portugal
+                </li>
+                <li>Spain
+                </li>
+                <li>USA
+                </li>
+                <li>Germany
+                </li>
+                <li>Italy
+                </li>
+                <li>Austia
+                </li>
+                <li>Canada
+                </li>
+                <li>China
+                </li>
+                <li>Japan
+                </li>
+                <li>Denmark
+                </li>
+            </ul>
+            <a href="#" class="btn-unselect">
+                <img src="imgs/arrow-left.png" /></a>
+            <a href="#" class="btn-select">
+                <img src="imgs/arrow-right.png" /></a>
+            <ul class="selected-items">
+            </ul>
+        </div>
+    </div>
+    <script>
+        (function () {
+            $.fn.selectList = function createSelectList() {
+                var selector = this.selector;
+
+                function attachLiEvents() {
+                    $(selector + " ul li").off("click");
+
+                    $(selector + " ul li").on("click", function onItemClick(e) {
+                        if ($(this).hasClass("selected")) {
+                            $(this).removeClass("selected");
+                        } else {
+                            $(this).addClass("selected");
+                        }
+
+                        if (e.preventDefault) {
+                            e.preventDefault();
+                        }
+                        return false;
+                    });
+                }
+
+                attachLiEvents();
+
+                $(selector + " .btn-select img").on("click", function onSelectBtnClick(e) {
+
+                    var selectedItem = $(selector + " .all-items .selected");
+
+                    var newItem = document.createElement("li");
+                    $(newItem).html(selectedItem.html());
+                    selectedItem.remove();
+
+                    $(selector + " .all-items .selected").removeClass("selected");
+
+                    $(selector + " .all-items li").first().addClass("selected");
+                    $(selector + " .selected-items").append(selectedItem);
+
+                    $(selector + " .selected").removeClass("selected");
+
+                    attachLiEvents();
+
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    }
+                    return false;
+                });
+
+                $(selector + " .btn-unselect").on("click", function onUnselectBtnClick(e) {
+
+                    var selectedItem = $(selector + " .selected-items .selected");
+
+                    var newItem = document.createElement("li");
+                    $(newItem).html(selectedItem.html());
+                    selectedItem.remove();
+
+                    $(selector + " .all-items").append(selectedItem);
+
+                    attachLiEvents();
+
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    }
+                    return false;
+                });
+            };
+        }).call(this);
+
+        $(".select-list").selectList();
+    </script>
+
+</body>
+</html>

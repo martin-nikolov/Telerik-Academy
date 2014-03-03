@@ -1,0 +1,66 @@
+﻿html, body, div, h1, ul, li, a, img, span, form, legend, input, button, textarea, fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+.linear-gradient(@from-color,@from-pos,@to-color,@to-pos) {
+    background: @to-color;
+    background: -moz-linear-gradient(top, @from-color @from-pos, @to-color @to-pos);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@from-pos,@from-color), color-stop(@to-pos,@to-color));
+    background: -webkit-linear-gradient(top, @from-color @from-pos,@to-color @to-pos);
+    background: -o-linear-gradient(top, @from-color @from-pos,@to-color @to-pos);
+    background: -ms-linear-gradient(top, @from-color @from-pos,@to-color @to-pos);
+    background: linear-gradient(to bottom, @from-color @from-pos,@to-color @to-pos);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{from-color}', endColorstr='@{to-color}',GradientType=0 );
+}
+
+body {
+    font-size: 16px;
+    font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+
+    #wrapper {
+        width: 960px;
+
+        div {
+            margin-top: 25px;
+            margin-left: 25px;
+            border-radius: 15px;
+            border: 1px solid black;
+            position: relative;
+            padding: 15px 35px;
+            .linear-gradient(#DE28FF,15%,lighten(#DE28FF,35%),75%);
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            p {
+                &.postedby {
+                    border-top: 1px solid black;
+                    border-bottom: 1px solid black;
+                    padding: 5px 15px;
+                    margin: 5px 15px;
+                    display: inline-block;
+                }
+
+                &.info {
+                    text-align: justify;
+                }
+            }
+
+            img {
+                border: none;
+                position: absolute;
+                top: 40%;
+
+                &.left-arrow {
+                    left: 0;
+                }
+
+                &.right-arrow {
+                    right: 0;
+                }
+            }
+        }
+    }
+}

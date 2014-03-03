@@ -19,6 +19,8 @@ function Main(bufferElement) {
 }
 
 var InsertModule = (function() {
+    var _id = 0;
+
     function insertBefore(element) {
         insertElement(element, 'insertBefore');
     }
@@ -28,7 +30,7 @@ var InsertModule = (function() {
     }
 
     function insertElement(element, action) {
-        $('<div class="square inserted" />')[action]($('#middleElement'));
+        $('<div class="square inserted" />')[action]($('#middleElement')).text(++_id);
     }
 
     return {
@@ -41,7 +43,8 @@ function createMiddleElement(bufferElement) {
     var div = $('<div/>');
     $(div).addClass('square');
     $(div).attr('id', 'middleElement');
-
+    div.text(0);
+    
     return div;
 }
 

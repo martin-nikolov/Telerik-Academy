@@ -5,10 +5,17 @@ div.square {
     margin: 10px;
 }
 
+div#middleElement, div.inserted {
+    color: black;
+    text-align: center;
+    line-height: 50px;  
+}
+
 div#middleElement {
     background-color: white;
 }
 
 div.inserted {
+    color: white;
     background-color: red;
 }

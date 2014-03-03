@@ -4,6 +4,11 @@ window.onload = function() {
     SimpleOrganizer = (function() {
         // Const
         var MONTH_NAME = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+        var PRIORITY = {
+            'Low' : 0,
+            'Medium' : 1,
+            'High' : 2
+        };
 
         var _currentItemForEdition = null; // Very bad solution
 
@@ -53,8 +58,9 @@ window.onload = function() {
                 _showElements('block', _createItem);
 
                 if (_currentItemForEdition) {
-                    _taskTitle.value = _currentItemForEdition.taskTitle;
-                    _taskContent.value = _currentItemForEdition.taskContent;
+                    _taskTitle.value = _currentItemForEdition[0].taskTitle;
+                    _taskContent.value = _currentItemForEdition[0].taskContent;
+                    _priorityRadios[PRIORITY[_currentItemForEdition[0].priority]].checked = true;
                 }
             };
 
@@ -72,8 +78,17 @@ window.onload = function() {
                 var selectedPriority = _getCheckedRadio(_priorityRadios);
 
                 if (_currentItemForEdition) {
-                    _currentItemForEdition.taskTitle = _taskTitle.value;
-                    _currentItemForEdition.taskContent = _taskContent.value;
+                    // Edit current item properties
+                    _currentItemForEdition[0].taskTitle = _taskTitle.value;
+                    _currentItemForEdition[0].taskContent = _taskContent.value;
+                    _currentItemForEdition[0].taskDate = new Date();
+                    _currentItemForEdition[0].priority = selectedPriority;
+
+                    // Edit (refresh) item view with the new value
+                    _currentItemForEdition[1][0].innerHTML = _taskTitle.value;
+                    _currentItemForEdition[1][1].innerHTML = _getFormattedDate(_currentItemForEdition[0].taskDate);
+                    _currentItemForEdition[1][2].innerHTML = _taskContent.value;
+                    _currentItemForEdition[1][3].src = 'images/' + selectedPriority.toLowerCase() + '.png';
 
                     // Show - Saved Message
                     _showElements('inline-block', _updatedMsg);
@@ -112,7 +127,7 @@ window.onload = function() {
 
         function _addItemToView(task) {
             var wrapper = document.createElement('div');
-            wrapper.className = 'wrapper-gradient item';
+            wrapper.className = 'item wrapper-gradient';
 
             var itemContainer = document.createElement('div');
             itemContainer.className = 'item-container';
@@ -158,7 +173,7 @@ window.onload = function() {
 
                 _editItem.onclick = function() {
                     _homeButton.click();
-                    _currentItemForEdition = task;
+                    _currentItemForEdition = [task, itemContainer.childNodes];
                     _createTaskButton.click();
                 };
             }
@@ -242,6 +257,8 @@ window.onload = function() {
         }
     }());
 
+    /* --------------------------------------------------------------------------- */
+
     SimpleOrganizer.initialize();
 
     SimpleOrganizer.addTask('CSS - Exam', '1-2 March', 'Low');
@@ -255,4 +272,6 @@ window.onload = function() {
     SimpleOrganizer.addTask('C# OOP - Exam', '22-23 June', 'High');
     SimpleOrganizer.addTask('C++ - Exam', '22-23 July', 'Medium');
     SimpleOrganizer.addTask('PHP - Exam', '5-6 August', 'Low');
+
+    /* --------------------------------------------------------------------------- */
 }

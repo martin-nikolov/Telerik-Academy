@@ -41,7 +41,7 @@ class LeastMajorityMultiple
                 dividerCount++;
             }
 
-            if(dividerCount >= 3)
+            if (dividerCount >= 3)
             {
                 Console.WriteLine(number);
                 break;

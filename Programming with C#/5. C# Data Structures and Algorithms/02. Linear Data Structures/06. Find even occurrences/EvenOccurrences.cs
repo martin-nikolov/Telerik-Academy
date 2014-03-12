@@ -16,12 +16,12 @@ class EvenOccurrences
     {
         var elements = new List<int>() { 4, 2, 2, 5, 2, 3, 2, 3, 1, 5, 2 };
 
-        var evenNumberOfTimes = FindEvenOccurrences(elements);
+        var extractedElements = FindElements(elements, isOddNumberOfTimes: false);
 
-        PrintResult(elements, evenNumberOfTimes);
+        PrintResult(elements, extractedElements);
     }
 
-    static HashSet<T> FindEvenOccurrences<T>(IList<T> collection)
+    static ISet<T> FindElements<T>(IList<T> collection, bool isOddNumberOfTimes)
     {
         var oddOccurrences = new HashSet<T>();
         var evenOccurrences = new HashSet<T>();
@@ -41,10 +41,10 @@ class EvenOccurrences
             }
         }
 
-        return evenOccurrences;
+        return isOddNumberOfTimes ? oddOccurrences : evenOccurrences;
     }
 
-    static void PrintResult<T>(List<T> elements, HashSet<T> evenNumberOfTimes)
+    static void PrintResult<T>(IList<T> elements, ISet<T> evenNumberOfTimes)
     {
         for (int i = 0; i < elements.Count; i++)
         {

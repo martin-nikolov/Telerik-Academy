@@ -15,7 +15,7 @@ namespace Algorithms
 
             while (left <= right)
             {
-                middle = left + ((right - left) >> 1);
+                middle = GetMedian(left, right);
 
                 if (collection[middle].CompareTo(item) < 0)
                 {
@@ -32,6 +32,11 @@ namespace Algorithms
             }
 
             return -1;
+        }
+
+        private static int GetMedian(int left, int right)
+        {
+            return left + ((right - left) >> 1);
         }
     }
 }

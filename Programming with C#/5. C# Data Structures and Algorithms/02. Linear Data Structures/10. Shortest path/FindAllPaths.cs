@@ -77,7 +77,7 @@ namespace PathFinder
             // Repeats recursively steps above for each childs of parentNode
             foreach (var child in parentNode.Childs)
             {
-                FindAllPathsBFS(child, leaf);                
+                FindAllPathsBFS(child, leaf);
             }
         }
 
@@ -87,8 +87,10 @@ namespace PathFinder
         /// <param name="parentNode">The startup Node value.</param>
         static void PrintAllPaths(Node<int> parentNode, string separator = " -> ")
         {
-            var allPaths = new List<List<int>>();
-            ConnectAllPathsDFS(parentNode, new List<int>(), ref allPaths);
+            var allPaths = new List<LinkedList<int>>();
+            ConnectAllPathsDFS(parentNode, new LinkedList<int>(), ref allPaths);
+
+            Console.WriteLine("All Paths Count: " + allPaths.Count + Environment.NewLine);
 
             // Finds all shortest paths
             var minPathLength = allPaths.Min(a => a.Count);
@@ -107,7 +109,7 @@ namespace PathFinder
         /// Prints all paths from list of paths.
         /// </summary>
         /// <param name="pathCollection">The list containing lists of paths.</param>
-        static void PrintCurrentPath(List<List<int>> pathCollection, string separator)
+        static void PrintCurrentPath(List<LinkedList<int>> pathCollection, string separator)
         {
             for (int i = 0; i < pathCollection.Count; i++)
             {
@@ -121,9 +123,9 @@ namespace PathFinder
         /// <param name="parentNode">The startup Node value.</param>
         /// <param name="currentResult">The list stores current paths in every moment.</param>
         /// <param name="allPaths">The collection stores all paths.</param>
-        static void ConnectAllPathsDFS(Node<int> parentNode, List<int> currentResult, ref List<List<int>> allPaths)
+        static void ConnectAllPathsDFS(Node<int> parentNode, LinkedList<int> currentResult, ref List<LinkedList<int>> allPaths)
         {
-            currentResult.Add(parentNode.Value);
+            currentResult.AddLast(parentNode.Value);
 
             // For each child go and visit its subtree
             foreach (var child in parentNode.Childs)
@@ -133,10 +135,10 @@ namespace PathFinder
 
             if (parentNode.Childs.Count == 0)
             {
-                allPaths.Add(new List<int>(currentResult));
+                allPaths.Add(new LinkedList<int>(currentResult));
             }
 
-            currentResult.RemoveAt(currentResult.Count - 1);
+            currentResult.RemoveLast();
         }
 
         static void SwapValue(ref int n, ref int m)

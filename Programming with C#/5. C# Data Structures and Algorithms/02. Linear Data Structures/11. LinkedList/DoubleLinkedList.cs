@@ -2,19 +2,31 @@
 {
     using System;
     using System.Collections;
-    using System.Collections.Generic;
 
-    public class LinkedList<T> : IEnumerable<T>
+    public class DoubleLinkedList<T> : System.Collections.Generic.IEnumerable<T>
     {
-        public LinkedListNode<T> First { get; private set; }
+        /// <summary>
+        /// Gets the first node of the collection.
+        /// </summary>
+        public ListNode<T> First { get; private set; }
 
-        public LinkedListNode<T> Last { get; private set; }
+        /// <summary>
+        /// Gets the last node of the collection.
+        /// </summary>
+        public ListNode<T> Last { get; private set; }
 
+        /// <summary>
+        /// Gets the number of nodes actually contained in the collection.
+        /// </summary>
         public int Count { get; private set; }
 
+        /// <summary>
+        /// Adds a new node containing the specified value at the start of the collection.
+        /// </summary>
+        /// <param name="value">The value to add at the start of the collection.</param>
         public void AddFirst(T value)
         {
-            var linkedListNode = new LinkedListNode<T>(value);
+            var linkedListNode = new ListNode<T>(value);
 
             if (this.First == null)
             {
@@ -30,9 +42,13 @@
             this.Count++;
         }
 
+        /// <summary>
+        /// Adds a new node containing the specified value at the end of the collection.
+        /// </summary>
+        /// <param name="value">The value to add at the end of the collection.</param>
         public void AddLast(T value)
         {
-            var linkedListNode = new LinkedListNode<T>(value);
+            var linkedListNode = new ListNode<T>(value);
 
             if (this.Last == null)
             {
@@ -48,14 +64,19 @@
             this.Count++;
         }
 
-        public void AddBefore(LinkedListNode<T> node, T value)
+        /// <summary>
+        /// Adds a new node containing the specified value before the specified existing node in the collection.
+        /// </summary>
+        /// <param name="node">The ListNode before which to insert a new ListNode containing value.</param>
+        /// <param name="value">The value to add to the collection.</param>
+        public void AddBefore(ListNode<T> node, T value)
         {
             if (node == null)
             {
                 return;
             }
 
-            var newNode = new LinkedListNode<T>(value);
+            var newNode = new ListNode<T>(value);
 
             if (node.Previous == null)
             {
@@ -79,14 +100,19 @@
             this.Count++;
         }
 
-        public void AddAfter(LinkedListNode<T> node, T value)
+        /// <summary>
+        /// Adds a new node containing the specified value after the specified existing node in the collection.
+        /// </summary>
+        /// <param name="node">The ListNode after which to insert a new ListNode containing value.</param>
+        /// <param name="value">The value to add to the collection.</param>
+        public void AddAfter(ListNode<T> node, T value)
         {
             if (node == null)
             {
                 return;
             }
 
-            var newNode = new LinkedListNode<T>(value);
+            var newNode = new ListNode<T>(value);
 
             if (node.Next == null)
             {
@@ -110,21 +136,42 @@
             this.Count++;
         }
 
-        public void RemoveFirst(T value)
+        /// <summary>
+        /// Removes the first occurrence of the specified value from the collection.
+        /// </summary>
+        /// <param name="value">The value to remove from the collection.</param>
+        public void Remove(T value)
         {
-            var node = this.FindFirst(value);
-
-            this.RemoveReference(ref node);
-        }
-  
-        public void RemoveLast(T value)
-        {
-            var node = this.FindLast(value);
+            var node = this.Find(value);
 
             this.RemoveReference(ref node);
         }
 
-        public LinkedListNode<T> FindFirst(T value)
+        /// <summary>
+        /// Removes the node at the start of the collection.
+        /// </summary>
+        public void RemoveFirst()
+        {
+            var node = this.First;
+
+            this.RemoveReference(ref node);
+        }
+
+        /// <summary>
+        /// Removes the node at the end of the collection.
+        /// </summary>
+        public void RemoveLast()
+        {
+            var node = this.Last;
+
+            this.RemoveReference(ref node);
+        }
+
+        /// <summary>
+        /// Finds the first node that contains the specified value.
+        /// </summary>
+        /// <param name="value">The value to locate in the collection.</param>
+        public ListNode<T> Find(T value)
         {
             var currentNode = this.First;
 
@@ -141,7 +188,11 @@
             return null;
         }
 
-        public LinkedListNode<T> FindLast(T value)
+        /// <summary>
+        /// Finds the last node that contains the specified value.
+        /// </summary>
+        /// <param name="value">The value to locate in the collection.</param>
+        public ListNode<T> FindLast(T value)
         {
             var currentNode = this.Last;
 
@@ -158,13 +209,19 @@
             return null;
         }
 
+        /// <summary>
+        /// Removes all nodes from the collection.
+        /// </summary>
         public void Clear()
         {
             this.First = this.Last = null;
             this.Count = 0;
         }
 
-        public IEnumerator<T> GetEnumerator()
+        /// <summary>
+        /// Returns an enumerator that iterates through the collection.
+        /// </summary>
+        public System.Collections.Generic.IEnumerator<T> GetEnumerator()
         {
             var currentNode = this.First;
 
@@ -181,7 +238,7 @@
             return this.GetEnumerator();
         }
 
-        private void RemoveReference(ref LinkedListNode<T> node)
+        private void RemoveReference(ref ListNode<T> node)
         {
             if (node != null)
             {

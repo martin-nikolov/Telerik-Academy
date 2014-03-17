@@ -2,18 +2,18 @@
 {
     using System;
 
-    public class LinkedListNode<T>
+    public class ListNode<T>
     {
-        public LinkedListNode(T value)
+        public ListNode(T value)
         {
             this.Value = value;
         }
 
         public T Value { get; set; }
 
-        public LinkedListNode<T> Previous { get; set; }
+        public ListNode<T> Previous { get; set; }
 
-        public LinkedListNode<T> Next { get; set; }
+        public ListNode<T> Next { get; set; }
 
         public override string ToString()
         {

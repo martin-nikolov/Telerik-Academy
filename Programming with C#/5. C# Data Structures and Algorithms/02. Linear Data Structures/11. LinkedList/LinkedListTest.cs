@@ -4,14 +4,14 @@
  * (of type ListItem<T>). Define additionally a class LinkedList<T>
  * with a single field FirstElement (of type ListItem<T>).
  */
-
 using System;
+using DynamicList;
 
 class LinkedListTest
 {
     static void Main()
     {
-        var linkedList = new DynamicList.LinkedList<int>();
+        var linkedList = new DoubleLinkedList<int>();
 
         /* ------------------------------------------------------------------------ */
 
@@ -31,11 +31,11 @@ class LinkedListTest
         Console.WriteLine("\nElements: " + string.Join(" ", linkedList) + Environment.NewLine);
 
         /* ------------------------------------------------------------------------ */
-
+      
         // Test Find Method
-        var firstNode = linkedList.FindFirst(1); // Exists
-        var lastNode = linkedList.FindFirst(7); // Exists
-        var nullNode = linkedList.FindFirst(0); // Null
+        var firstNode = linkedList.Find(1); // Exists
+        var lastNode = linkedList.Find(7); // Exists
+        var nullNode = linkedList.Find(0); // Null
 
         Console.WriteLine("firstNode == linkedList.First: {0}", firstNode == linkedList.First); // True
         Console.WriteLine("lastNode == linkedList.Last: {0}", lastNode == linkedList.Last); // True
@@ -46,7 +46,7 @@ class LinkedListTest
         // Test AddBefore Method
         linkedList.AddBefore(linkedList.First, 0); // 0 1 2 3 4 7
         linkedList.AddBefore(linkedList.Last, 6); // 0 1 2 3 4 6 7
-        linkedList.AddBefore(linkedList.FindFirst(6), 5); // 0 1 2 3 4 5 6 7
+        linkedList.AddBefore(linkedList.Find(6), 5); // 0 1 2 3 4 5 6 7
 
         Console.WriteLine("\nElements: " + string.Join(" ", linkedList) + Environment.NewLine);
 
@@ -55,7 +55,7 @@ class LinkedListTest
         // Test AddAfter Method
         linkedList.AddAfter(linkedList.First, -111); // 0 -111 1 2 3 4 5 6 7
         linkedList.AddAfter(linkedList.Last, 8); // 0 -111 1 2 3 4 5 6 7 8
-        linkedList.AddAfter(linkedList.FindFirst(6), -777); // 0 -111 1 2 3 4 5 6 -777 7 8
+        linkedList.AddAfter(linkedList.Find(6), -777); // 0 -111 1 2 3 4 5 6 -777 7 8
 
         Console.WriteLine("Elements: " + string.Join(" ", linkedList) + Environment.NewLine);
 
@@ -67,11 +67,13 @@ class LinkedListTest
 
         Console.WriteLine("Elements: " + string.Join(" ", linkedList) + Environment.NewLine);
 
-        linkedList.RemoveFirst(-111); // 0 -111 1 2 3 4 5 6 -777 7 8 -777
-        linkedList.RemoveLast(-111); // 0 1 2 3 4 5 6 -777 7 8 -777
+        linkedList.Remove(-111); // 0 -111 1 2 3 4 5 6 -777 7 8 -777
+        linkedList.Remove(-111); // 0 1 2 3 4 5 6 -777 7 8 -777
+        linkedList.Remove(-777); // 0 1 2 3 4 5 6 -777 7 8 -777
+        linkedList.Remove(-777); // 0 1 2 3 4 5 6 7 8
 
-        linkedList.RemoveLast(-777); // 0 1 2 3 4 5 6 -777 7 8
-        linkedList.RemoveFirst(-777); // 0 1 2 3 4 5 6 7 8
+        linkedList.RemoveFirst(); // 1 2 3 4 5 6 7 8
+        linkedList.RemoveLast(); // 1 2 3 4 5 6 7
 
         Console.WriteLine("Elements: " + string.Join(" ", linkedList) + Environment.NewLine);
 

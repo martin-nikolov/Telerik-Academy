@@ -3,7 +3,6 @@
  * Resize the capacity on demand (when no space is available 
  * to add / insert a new element).
  */
-
 using System;
 
 class StackTest

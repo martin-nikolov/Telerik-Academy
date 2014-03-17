@@ -109,7 +109,7 @@ namespace PathFinder
         /// Prints all paths from list of paths.
         /// </summary>
         /// <param name="pathCollection">The list containing lists of paths.</param>
-        static void PrintCurrentPath(List<LinkedList<int>> pathCollection, string separator)
+        static void PrintCurrentPath(IList<LinkedList<int>> pathCollection, string separator)
         {
             for (int i = 0; i < pathCollection.Count; i++)
             {

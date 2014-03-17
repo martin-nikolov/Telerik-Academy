@@ -21,7 +21,7 @@
             private set { this.value = value; }
         }
 
-        public List<Node<T>> Childs
+        public IList<Node<T>> Childs
         {
             get { return this.childs.ToList(); }
         }

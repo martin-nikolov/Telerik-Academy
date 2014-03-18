@@ -1,0 +1,8 @@
+find("kireto");
+find("mimi");
+find("pETroVA");
+find("GanChO");
+find("kireto", "Varna");
+find("mimi", "plOVDIV");
+find("Unknown");
+find("Unknown", "plovdiv");

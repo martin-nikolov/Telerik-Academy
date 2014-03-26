@@ -12,7 +12,7 @@ class KruskalAlgorithm
     public static int FindMinimumSpanningTree()
     {
         tree = new int[Edges.Count];
-        Edges.Sort();
+        Edges.Sort(); // sorting ...
 
         foreach (var edge in Edges)
         {

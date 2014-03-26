@@ -11,6 +11,9 @@ class HamiltonianCycle
     static Node startNode;
     static int nodesCount = 0;
 
+    /// <summary>
+    /// Finds all hamiltonian cycles starting from some node
+    /// </summary>
     public static void FindHamiltonianCycles(Node currentNode, int level)
     {
         // Found Hamiltonian cycle -> iterated over all nodes

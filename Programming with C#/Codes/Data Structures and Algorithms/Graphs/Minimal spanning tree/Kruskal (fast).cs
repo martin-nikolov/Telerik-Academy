@@ -26,7 +26,7 @@ class KruskalAlgorithm
         // Sorting edges by their weight
         Array.Sort(edges, (a, b) => a.Item3.CompareTo(b.Item3));
 
-        double result = 0;
+        double result = 0; // Minimal spanning tree distance
 
         foreach (var edge in edges)
         {
@@ -38,6 +38,7 @@ class KruskalAlgorithm
 
             result += edge.Item3;
 
+            // Combine trees
             tree1.UnionWith(tree2);
             allTrees.Remove(tree2);
 

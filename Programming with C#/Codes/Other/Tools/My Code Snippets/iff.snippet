@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>iff</Title>
+            <Shortcut>iff</Shortcut>
+            <Description>Code snippet for IF DEBUG -> new StreamReader</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal Editable="false">
+                    <ID>SystemConsole</ID>
+                    <Function>SimpleTypeName(global::System.Console)</Function>
+                </Literal>
+                <Literal Editable="false">
+                    <ID>type</ID>
+                    <Default>long.</Default>
+                </Literal>
+                <Literal Editable="false">
+                    <ID>Parse</ID>
+                    <Default>Parse</Default>
+                </Literal>
+            <Literal>
+                    <ID>myVar</ID>
+                    <Default>myVar</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">#if DEBUG
+                Console.SetIn(new System.IO.StreamReader("../../input.txt"));
+                #endif
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

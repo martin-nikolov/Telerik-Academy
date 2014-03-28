@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>sj</Title>
+            <Shortcut>sj</Shortcut>
+            <Description>Code snippet for string.Join</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal Editable="false">
+                    <ID>SystemConsole</ID>
+                    <Function>SimpleTypeName(global::System.Console)</Function>
+                </Literal>
+                <Literal Editable="false">
+                    <ID>type</ID>
+                    <Default>short.</Default>
+                </Literal>
+                <Literal Editable="false">
+                    <ID>Parse</ID>
+                    <Default>Parse</Default>
+                </Literal>
+            <Literal>
+                    <ID>array</ID>
+                    <Default>array</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp"><![CDATA[$SystemConsole$.WriteLine(string.Join(" ", $array$));$end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

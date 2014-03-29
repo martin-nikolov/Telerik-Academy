@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>tokk</Title>
+            <Shortcut>tokk</Shortcut>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal Editable="false">
+                    <ID>SystemConsole</ID>
+                    <Function>SimpleTypeName(global::System.Console)</Function>
+                </Literal>
+                <Literal Editable="false">
+                    <ID>new</ID>
+                    <Default>int[]]</Default>
+                </Literal>
+                <Literal>
+                    <ID>string</ID>
+                    <Default>string</Default>
+                </Literal>
+                <Literal>
+                    <ID>rows</ID>
+                </Literal>
+                <Literal>
+                    <ID>numbers</ID>
+                    <Default>numbers</Default>
+                </Literal>
+                <Literal>
+                    <ID>lineReader</ID>
+                    <Default>lineReader</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp"><![CDATA[var $numbers$ = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();$end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

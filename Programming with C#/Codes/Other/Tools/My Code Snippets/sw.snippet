@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>sw</Title>
+            <Shortcut>sw</Shortcut>
+            <Description>Code snippet for Stopwatch</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal Editable="false">
+                    <ID>SystemConsole</ID>
+                    <Function>SimpleTypeName(global::System.Console)</Function>
+                </Literal>
+                <Literal>
+                    <ID>sw</ID>
+                    <Default>sw</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp"><![CDATA[static Stopwatch $sw$ = new Stopwatch();$end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

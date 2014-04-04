@@ -30,7 +30,7 @@ class Horse
 
         var distance = FindMinimalDistanceBFS();
 
-        Console.WriteLine(distance);
+        Console.WriteLine(distance != -1 ? distance.ToString() : "-1"); // or No
     }
 
     static int FindMinimalDistanceBFS()

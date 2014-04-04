@@ -28,7 +28,9 @@ class Horse
             }
         }
 
-        Console.WriteLine(FindMinimalDistanceBFS());
+        var distance = FindMinimalDistanceBFS();
+
+        Console.WriteLine(distance != -1 ? distance.ToString() : "-1"); // or No
     }
 
     static int FindMinimalDistanceBFS()

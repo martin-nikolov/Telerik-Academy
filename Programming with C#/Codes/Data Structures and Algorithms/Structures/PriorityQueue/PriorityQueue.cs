@@ -1,28 +1,36 @@
 using System;
-using System.Linq;
 
 public class PriorityQueue<T> where T : IComparable
 {
+    private const int InitialCapacity = 16;
+
     private T[] heap;
     private int index;
 
+    /// <summary>
+    /// Creates a new priority queue. Implementation is based on the binary heap data structure.
+    /// </summary>
     public PriorityQueue()
     {
-        this.heap = new T[16];
+        this.heap = new T[InitialCapacity];
         this.index = 1;
     }
 
+    /// <summary>
+    /// Gets the number of elements contained in the priority queue.
+    /// </summary>
     public int Count
     {
         get { return this.index - 1; }
     }
 
-    public void AddFirst(T element)
+    /// <summary>
+    /// Adds a new element to the priority queue.
+    /// </summary>
+    /// <param name="element">The element to add to the priority queue.</param>
+    public void Add(T element)
     {
-        if (this.index >= this.heap.Length - 1)
-        {
-            this.IncreaseArray();
-        }
+        this.IncreaseArrayIfNecessary();
 
         this.heap[this.index] = element;
 
@@ -41,6 +49,10 @@ public class PriorityQueue<T> where T : IComparable
         }
     }
 
+    /// <summary>
+    /// Removes and returns the first element from the priority queue.
+    /// </summary>
+    /// <returns>The element of type T with high priority.</returns>
     public T RemoveFirst()
     {
         T result = this.heap[1];
@@ -49,7 +61,6 @@ public class PriorityQueue<T> where T : IComparable
         this.index--;
 
         int rootIndex = 1;
-
         int minChild;
 
         while (true)
@@ -57,24 +68,19 @@ public class PriorityQueue<T> where T : IComparable
             int leftChildIndex = rootIndex * 2;
             int rightChildIndex = rootIndex * 2 + 1;
 
-            if (leftChildIndex > this.index)
+            if (leftChildIndex > this.index) break;
+
+            if (rightChildIndex > this.index)
             {
-                break;
+                minChild = leftChildIndex;
             }
-            else if (rightChildIndex > this.index)
+            else if (this.heap[leftChildIndex].CompareTo(this.heap[rightChildIndex]) < 0)
             {
                 minChild = leftChildIndex;
             }
             else
             {
-                if (this.heap[leftChildIndex].CompareTo(this.heap[rightChildIndex]) < 0)
-                {
-                    minChild = leftChildIndex;
-                }
-                else
-                {
-                    minChild = rightChildIndex;
-                }
+                minChild = rightChildIndex;
             }
 
             if (this.heap[minChild].CompareTo(this.heap[rootIndex]) < 0)
@@ -94,20 +100,24 @@ public class PriorityQueue<T> where T : IComparable
         return result;
     }
 
+    /// <summary>
+    /// Gets the first element from the priority queue without removing it.
+    /// </summary>
+    /// <returns>The element of type T with high priority.</returns>
     public T Peek()
     {
         return this.heap[1];
     }
 
-    private void IncreaseArray()
+    private void IncreaseArrayIfNecessary()
     {
-        T[] copiedHeap = new T[this.heap.Length * 2];
-
-        for (int i = 0; i < this.heap.Length; i++)
+        if (this.index >= this.heap.Length - 1)
         {
-            copiedHeap[i] = this.heap[i];
-        }
+            T[] copiedHeap = new T[this.heap.Length * 2];
 
-        this.heap = copiedHeap;
+            Array.Copy(this.heap, 0, copiedHeap, 0, this.heap.Length);
+
+            this.heap = copiedHeap;
+        }
     }
 }

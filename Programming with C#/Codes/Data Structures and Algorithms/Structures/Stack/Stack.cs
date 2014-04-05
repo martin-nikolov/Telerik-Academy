@@ -40,7 +40,7 @@ class Stack<T> : IStack<T>, System.Collections.Generic.IEnumerable<T>
     }
 
     /// <summary>
-    /// Inserts an objects at the top of the collection.
+    /// Inserts an object at the top of the collection.
     /// </summary>
     /// <param name="value">The object to push onto the collection. The value can be null for reference types.</param>
     public void Push(T value)

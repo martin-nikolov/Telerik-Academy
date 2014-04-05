@@ -19,8 +19,7 @@ class Goro
         {
             sum += numbers[2];
 
-            if (numbers[2] >= 1)
-                numbers[2]--;
+            if (numbers[2] >= 1) numbers[2]--;
 
             Array.Sort(numbers);
         }

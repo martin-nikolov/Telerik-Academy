@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>XAct.Wintellect.PowerCollections</id>
+    <version>0.0.1</version>
+    <title>An unofficial packaging of WIntellect's PowerCollections</title>
+    <authors>Sky Sigal</authors>
+    <owners>Sky Sigal</owners>
+    <licenseUrl>http://www.eclipse.org/legal/epl-v10.html</licenseUrl>
+    <projectUrl>http://powercollections.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An unofficial packaging of WIntellect's PowerCollections.
+
+I needed one, couldn't find one on NuGet - so just whipped this up. 
+
+Contact me know when an official package becomes available so that I can remove this one.</description>
+    <summary>An unofficial packaging of WIntellect's PowerCollections.I needed one, couldn't find one on NuGet - so just whipped this up. Contact me know when an official package becomes available so that I can remove this one.</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>Wintellect PowerCollections</tags>
+  </metadata>
+</package>

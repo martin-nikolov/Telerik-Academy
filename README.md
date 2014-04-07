@@ -82,3 +82,13 @@
 * [Indeces and JOIN in MySQL](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/04.%20Indeces%20and%20JOIN%20in%20MySQL) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/04.%20Indeces%20and%20JOIN%20in%20MySQL/Readme.md)) - 15.10.2013
 * [Solution to Homework of Lecture 4th](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/05.%20Solution%20to%20Homework%20of%20Lecture%204th) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/05.%20Solution%20to%20Homework%20of%20Lecture%204th/Readme.md)) - 21.10.2013
 * [Views](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/06.%20Views) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/06.%20Views/Readme.md)) - 27.10.2013
+
+# Other courses
+
+## Algo Academy
+* [Data Structures](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Data%20Structures)
+* [Dynamic Programming](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Dynamic%20Programming)
+* [Graphs Fundamentals](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Graphs%20Fundamentals)
+* [Graphs Algorithms](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Graphs%20Algorithms)
+* [Sorting and Searching Algorithms](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Sorting%20and%20Searching%20Algorithms)
+* [Preparation for National Olympiad in Informatics](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Preparation%20for%20NOI)

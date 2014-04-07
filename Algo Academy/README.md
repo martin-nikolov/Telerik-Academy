@@ -1,5 +1,6 @@
 # Algo Academy
 * [Data Structures](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Data%20Structures)
+* [Combinatorics](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Combinatorics)
 * [Dynamic Programming](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Dynamic%20Programming)
 * [Graphs Fundamentals](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Graphs%20Fundamentals)
 * [Graphs Algorithms](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Graphs%20Algorithms)

@@ -23,13 +23,13 @@ class Words
 
     static void GetWordsFromText()
     {
-        HashSet<string> uniqueWords = new HashSet<string>();
+        var uniqueWords = new HashSet<string>();
 
         int N = int.Parse(Console.ReadLine());
 
         for (int i = 0; i < N; i++)
         {
-            uniqueWords.UnionWith(Regex.Matches(Console.ReadLine().ToLower(), @"[a-zA-Z]+")
+            uniqueWords.UnionWith(Regex.Matches(Console.ReadLine().ToLower(), @"[a-z]+")
                                        .Cast<Match>()
                                        .Select(a => a.Value));
         }

@@ -22,7 +22,8 @@ div#wrapper {
 
 div#wrapper img {
     width: 15px;
-    height: 15px;}
+    height: 15px;
+}
 
 div#wrapper ul.notification-list {
     display: inline-block;

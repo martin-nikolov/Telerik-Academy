@@ -1,0 +1,110 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 960px;
+    max-width: 960px;
+
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+    font-size: 16px;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+div#wrapper {
+    width: 464px;
+    padding: 211px 0 0 50px;
+
+    color: #0094FF;
+}
+
+div#wrapper > ul > li {
+    display: inline-block;
+}
+
+div#wrapper div.msg-bar-content {
+    width: 430px;
+    height: 138px;
+    display: none;
+
+    position: absolute;
+    left: 50px;
+    top: 43px;
+
+    padding: 10px 15px 10px 15px;
+
+    border: 1px solid black;
+    border-bottom: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    background: #AAFFEF;
+}
+
+div#wrapper div.msg-bar-content ul li {
+    margin-bottom: 6px;
+    text-align: right;
+}
+
+div#wrapper div.msg-bar-content ul li span:last-of-type {
+    display: inline-block;
+    text-align: right;
+    border-bottom: 1px solid black;
+
+    width: 300px;
+    padding: 5px 15px;
+}
+
+div#wrapper div.msg-bar-content ul li span.user {
+    float: left;
+    padding: 5px 15px 5px 5px;
+
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+div#wrapper div.msg-bar-content ul li.me-item span.user:before {
+    padding-right: 5px;
+    content: url('../images/me.png');
+}
+
+div#wrapper div.msg-bar-content ul li.other-item span.user:before {
+    padding-right: 5px;
+    content: url('../images/male.png');
+}
+
+div#wrapper div.msg-bar-content ul li:last-of-type span:last-of-type {
+    border-bottom: none;
+}
+
+div#wrapper a.msg-bar-btn {
+    padding: 5px 15px;
+
+    color: #0094FF;
+    text-decoration: none;
+
+    border: 1px solid black;
+
+    background: #a8ffef;
+    background: -moz-linear-gradient(top, #a8ffef 0%, #14ffd2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a8ffef), color-stop(100%,#14ffd2));
+    background: -webkit-linear-gradient(top, #a8ffef 0%,#14ffd2 100%);
+    background: -o-linear-gradient(top, #a8ffef 0%,#14ffd2 100%);
+    background: -ms-linear-gradient(top, #a8ffef 0%,#14ffd2 100%);
+    background: linear-gradient(to bottom, #a8ffef 0%,#14ffd2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8ffef', endColorstr='#14ffd2',GradientType=0 );
+}
+
+div#wrapper a.msg-bar-btn:hover {
+    background: #00DDB3;
+
+    border-top: 4px solid #AAFFEF;
+}
+
+div#wrapper a.msg-bar-btn:hover + div.msg-bar-content {
+    display: block;
+}

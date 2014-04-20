@@ -1,0 +1,100 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 960px;
+
+	font-size: 16px;
+  	color: #333333;
+}
+
+div#wrapper ul#popup-box {
+	margin: 14px 0 0 15px;
+
+	list-style-type: none;
+}
+
+div#wrapper ul#popup-box li {
+	position: relative;
+	width: 100px;
+	padding: 5px 5px 7px 5px;
+
+	border-top: 1px solid black;
+}
+
+div#wrapper ul#popup-box li:last-of-type {
+	border-bottom: 1px solid black;
+}
+div#wrapper ul#popup-box li div.popup-content {
+	position: absolute;
+
+	top: 0px;
+	left: 120px;
+}
+
+div#wrapper ul#popup-box li div.popup-content a.btn-popup-close {
+	position: absolute;
+	top: 15px;
+	right: 16px;
+
+	padding: 0px 5px;
+
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+div#wrapper ul#popup-box li div.popup-content a.btn-popup-close:hover {
+	text-decoration: underline;
+}
+
+div#wrapper ul#popup-box li div.popup-content div fieldset {
+	padding: 15px;
+	border: 1px solid black;
+}
+
+div#wrapper ul#popup-box li div.popup-content div fieldset button {
+	padding: 5px 10px;
+
+	color: #333333;
+
+	border: none;
+	border-radius: 15px;
+
+	background: #cacaca;
+	background: -moz-linear-gradient(top,  #cacaca 0%, #686868 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cacaca), color-stop(100%,#686868));
+	background: -webkit-linear-gradient(top,  #cacaca 0%,#686868 100%);
+	background: -o-linear-gradient(top,  #cacaca 0%,#686868 100%);
+	background: -ms-linear-gradient(top,  #cacaca 0%,#686868 100%);
+	background: linear-gradient(to bottom,  #cacaca 0%,#686868 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#686868',GradientType=0 );
+}
+
+div#wrapper ul#popup-box li div.popup-content div fieldset button:hover {
+	background: #CCCCCC
+}
+
+div#wrapper ul#popup-box li div.popup-content div fieldset legend {
+	font-size: 19px;
+	font-weight: bold;
+	padding: 0 2px;
+}
+
+div#wrapper ul#popup-box li div.invisible {
+	display: none;
+}
+
+div#wrapper ul#popup-box li a {
+	color: black;
+	text-decoration: none;
+}
+
+div#wrapper ul#popup-box li span.current {
+	font-weight: bold;
+}
+
+div#wrapper ul#popup-box li a img {
+	width: 25px;
+}

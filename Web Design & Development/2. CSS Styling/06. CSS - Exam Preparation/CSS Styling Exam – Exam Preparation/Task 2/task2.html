@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/task2.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.9.0.js"></script>
+    <script>
+        $(function onDocumentReady() {
+            $(".btn-login-form").on("click", function onShowRegisterBtnClick() {
+                var btnId = $(this).attr("id");
+                var formId = "form-" + btnId.substr("btn-show-".length);
+                $("form").addClass("invisible");
+                $("#" + formId).removeClass("invisible");
+
+                $("a.current").removeClass("current");
+                $(this).addClass("current");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <a href="#" id="btn-show-register" class="btn-login-form current">Register</a>
+        <a href="#" id="btn-show-login" class="btn-login-form">Login</a>
+        <form id="form-register">
+            <fieldset>
+                <legend>Registration form</legend>
+
+                <label for="tb-username">Username: </label>
+                <input type="text" id="tb-username" placeholder="Enter username" /><br />
+
+                <label for="tb-password">Password: </label>
+                <input type="password" id="tb-password" placeholder="Enter password" /><br />
+
+                <label for="tb-repeat-pass">Repeat password: </label>
+                <input type="password" id="tb-repeat-pass" placeholder="Enter password" /><br />
+                <button>Register</button>
+            </fieldset>
+        </form>
+        <form id="form-login" class="invisible">
+            <fieldset>
+                <legend>Login form</legend>
+
+                <label for="tb-username">Username: </label>
+                <input type="text" id="Text1" placeholder="Enter username" /><br />
+
+                <label for="tb-pass">Password: </label>
+                <input type="text" id="Text2" placeholder="Enter password" /><br />
+                <button>Login</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

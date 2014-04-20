@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/task3.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.9.0.js"></script>
+
+    <script>
+        (function () {
+            $.fn.popupBox = function createPopupBox() {
+                var selector = this.selector;
+
+                var showHideBtn = $(selector + " .popup-item > a");
+                showHideBtn.on("click", function (e) {
+                    var thisPopupDiv = $(this).next();
+                    var wasThisPopupDivInvisible = thisPopupDiv.hasClass("invisible");
+                    var popupDivs = selector + " .popup-item > div";
+                    $(popupDivs).addClass("invisible");
+                    if (wasThisPopupDivInvisible) {
+                        thisPopupDiv.removeClass("invisible");
+                    }
+
+                    $(selector + " .current").removeClass("current");
+                    $(this).children("span").first().addClass("current");
+                    if (e.preventDefaults) {
+                        e.preventDefaults();
+                    }
+                    return false;
+                });
+            };
+        }).call(jQuery);
+    </script>
+
+    <script>
+        $(function onDocumentReady() {
+            $("#popup-box").popupBox();
+        });
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <ul id="popup-box">
+            <li class="popup-item">
+                <a href="#">
+                    <span>Product 1</span>
+                    <img src="images/cart.png" />
+                </a>
+                <div class="popup-content invisible">
+
+                    <a href="#" class="btn-popup-close">x</a>
+                    <div>
+                        <fieldset>
+                            <legend>Product 1 </legend>
+                            <label for="select-quatity">Select quantity:</label>
+                            <select id="select-quatity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select><br />
+
+                            <label for="ta-remarks">Any remarks?</label>
+                            <textarea id="ta-remarks"></textarea><br />
+                            <button>Add to cart</button>
+
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+            <li class="popup-item">
+                <a href="#">
+                    <span>Product 2</span>
+                    <img src="images/cart.png" />
+                </a>
+                <div class="popup-content invisible">
+                    <a href="#" class="btn-popup-close">x</a>
+                    <div>
+                        <fieldset>
+                            <legend>Product 2 </legend>
+                            <label for="select-quatity">Select quantity:</label>
+                            <select id="select1">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select><br />
+
+                            <label for="ta-remarks">Any remarks?</label>
+                            <textarea id="Textarea1"></textarea><br />
+                            <button>Add to cart</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+            <li class="popup-item">
+                <a href="#">
+                    <span>Product 3</span>
+                    <img src="images/cart.png" />
+                </a>
+                <div class="popup-content invisible">
+                    <a href="#" class="btn-popup-close">x</a>
+                    <div>
+                        <fieldset>
+                            <legend>Product 3 </legend>
+                            <label for="select-quatity">Select quantity:</label>
+                            <select id="select2">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select><br />
+
+                            <label for="ta-remarks">Any remarks?</label>
+                            <textarea id="Textarea2"></textarea><br />
+                            <button>Add to cart</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+            <li class="popup-item">
+                <a href="#">
+                    <span>Product 4</span>
+                    <img src="images/cart.png" />
+                </a>
+                <div class="popup-content invisible">
+                    <a href="#" class="btn-popup-close">x</a>
+                    <div>
+                        <fieldset>
+                            <legend>Product 4 </legend>
+                            <label for="select-quatity">Select quantity:</label>
+                            <select id="select3">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select><br />
+
+                            <label for="ta-remarks">Any remarks?</label>
+                            <textarea id="Textarea3"></textarea><br />
+                            <button>Add to cart</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+            <li class="popup-item">
+                <a href="#">
+                    <span>Product 5</span>
+                    <img src="images/cart.png" />
+                </a>
+                <div class="popup-content invisible">
+                    <a href="#" class="btn-popup-close">x</a>
+                    <div>
+                        <fieldset>
+                            <legend>Product 5 </legend>
+                            <label for="select-quatity">Select quantity:</label>
+                            <select id="select4">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select><br />
+
+                            <label for="ta-remarks">Any remarks?</label>
+                            <textarea id="Textarea4"></textarea><br />
+                            <button>Add to cart</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+            <li class="popup-item">
+                <a href="#">
+                    <span>Product 6</span>
+                    <img src="images/cart.png" />
+                </a>
+                <div class="popup-content invisible">
+                    <a href="#" class="btn-popup-close">x</a>
+                    <div>
+                        <fieldset>
+                            <legend>Product 6 </legend>
+                            <label for="select-quatity">Select quantity:</label>
+                            <select id="select5">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select><br />
+
+                            <label for="ta-remarks">Any remarks?</label>
+                            <textarea id="Textarea5"></textarea><br />
+                            <button>Add to cart</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

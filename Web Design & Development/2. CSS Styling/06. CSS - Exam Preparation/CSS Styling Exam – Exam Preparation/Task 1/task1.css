@@ -1,0 +1,97 @@
+﻿body,
+div,
+nav,
+header,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #000000;
+  font-size: 16px;
+  font-family: Arial;
+}
+body div#wrapper {
+  width: 960px;
+}
+body div#wrapper header {
+  background: #77d1ff;
+  background: -moz-linear-gradient(top, #002d44 0%, #77d1ff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #002d44), color-stop(100%, #77d1ff));
+  background: -webkit-linear-gradient(top, #002d44 0%, #77d1ff 100%);
+  background: -o-linear-gradient(top, #002d44 0%, #77d1ff 100%);
+  background: -ms-linear-gradient(top, #002d44 0%, #77d1ff 100%);
+  background: linear-gradient(to bottom, #002d44 0%, #77d1ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#002d44', endColorstr='#77d1ff', GradientType=0);
+  height: 150px;
+  font-size: 2em;
+  padding-top: 50px;
+}
+body div#wrapper header nav {
+  height: 100px;
+  padding-left: 50px;
+}
+body div#wrapper header nav ul {
+  list-style-type: none;
+}
+body div#wrapper header nav ul li {
+  display: inline-block;
+  padding: 5px 10px;
+  border: none;
+  border-width: 1px;
+}
+body div#wrapper header nav ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+body div#wrapper header nav ul li ul {
+  display: none;
+  position: absolute;
+  left: 50px;
+}
+body div#wrapper header nav ul li ul li {
+  position: relative;
+}
+body div#wrapper header nav ul li ul li ul {
+  display: none;
+  width: 350px;
+  left: 0;
+  background: #77d1ff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #77d1ff 70%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(70%, #77d1ff));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #77d1ff 70%);
+  background: -o-linear-gradient(top, #ffffff 0%, #77d1ff 70%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #77d1ff 70%);
+  background: linear-gradient(to bottom, #ffffff 0%, #77d1ff 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#77d1ff', GradientType=0);
+  padding: 15px;
+  text-align: center;
+  border-radius: 15px;
+}
+body div#wrapper header nav ul li ul li ul li {
+  display: -block;
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+body div#wrapper header nav ul li ul li ul li:last-of-type {
+  border: none;
+}
+body div#wrapper header nav ul li ul li:hover ul {
+  display: block;
+}
+body div#wrapper header nav ul li:hover {
+  background-color: rgba(0, 79, 119, 0.7);
+  border-radius: 15px;
+}
+body div#wrapper header nav ul li.selected {
+  background-color: rgba(0, 0, 0, 0.30000000000000004);
+  border-radius: 15px;
+}
+body div#wrapper header nav ul li.selected > ul {
+  display: block;
+}
+body div#wrapper header nav ul li.selected:hover > a {
+  text-decoration: none;
+}

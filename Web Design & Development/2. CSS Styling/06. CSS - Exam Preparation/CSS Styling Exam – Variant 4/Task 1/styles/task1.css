@@ -1,0 +1,62 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 960px;
+
+	font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+	font-size: 16px;
+}
+
+div#wrapper {
+	position: relative;
+
+	margin: 25px 0 0 25px;
+	padding: 15px 35px 31px 35px;
+
+	border: 1px solid black;
+	border-radius: 15px;
+
+background: #d91eff;
+background: -moz-linear-gradient(top,  #d91eff 0%, #f5ddff 75%, #f9dbff 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d91eff), color-stop(75%,#f5ddff), color-stop(100%,#f9dbff));
+background: -webkit-linear-gradient(top,  #d91eff 0%,#f5ddff 75%,#f9dbff 100%);
+background: -o-linear-gradient(top,  #d91eff 0%,#f5ddff 75%,#f9dbff 100%);
+background: -ms-linear-gradient(top,  #d91eff 0%,#f5ddff 75%,#f9dbff 100%);
+background: linear-gradient(to bottom,  #d91eff 0%,#f5ddff 75%,#f9dbff 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d91eff', endColorstr='#f9dbff',GradientType=0 );
+}
+
+div#wrapper h1 {
+	font-size: 29px;
+}
+
+div#wrapper p.postedby {
+	width: 366px;
+
+	margin: 5px 0 21px 15px;
+	padding: 5px 15px;
+
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+div#wrapper p.info {
+	text-align: justify;
+}
+
+div#wrapper img.left-arrow {
+	position: absolute;
+
+	top: 83px;
+	left: 0;
+}
+
+div#wrapper img.right-arrow {
+	position: absolute;
+	
+	top: 83px;
+	right: 0;
+}

@@ -1,0 +1,119 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 960px;
+
+	font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+	font-size: 16px;
+}
+
+h2, h3 {
+	font-size: 16px;
+}
+
+div#wrapper {
+	zoom: 1;
+	margin: 20px 0 0 20px;
+}
+
+div#wrapper:after{
+   content: ""; 
+   display: block; 
+   clear: both; 
+   height: 0; 
+}
+
+div#wrapper > div {
+	float: left;
+	width: 140px;
+
+	margin-left: -2px;
+	padding: 10px 4px 5px 4px;
+
+	border: 2px solid #D3D7DA;
+}
+
+div#wrapper > div:first-of-type {
+	margin-left: 0px;
+}
+
+div#wrapper > div:nth-child(2n) {
+	height: 265px;
+
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f2f3 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f1f2f3));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f2f3 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#f1f2f3 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f2f3 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#f1f2f3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f1f2f3',GradientType=0 );
+}
+
+div#wrapper > div:nth-child(2n+1) {
+	height: 245px;
+}
+
+div#wrapper > div p {
+	margin-top: 16px;
+}
+
+div#wrapper > div hgroup {
+	height: 40px;
+	padding-left: 40px;
+
+	display: table-cell;
+	vertical-align: bottom;
+
+	background-position: left bottom !important;
+}
+
+div#wrapper > div:nth-child(1) hgroup {
+	background: url('../images/install.png') no-repeat;
+}
+
+div#wrapper > div:nth-child(2) hgroup{
+	background: url('../images/tuneUp.png') no-repeat;
+}
+
+div#wrapper > div:nth-child(3) hgroup {
+	background: url('../images/manage.png') no-repeat;
+}
+
+div#wrapper > div:nth-child(4) hgroup {
+	background: url('../images/openSource.png') no-repeat;
+}
+
+div#wrapper > div:nth-child(5) hgroup {
+	background: url('../images/twitter.png') no-repeat;
+}
+
+div#wrapper > div:nth-child(6) hgroup {
+	background: url('../images/about.png') no-repeat;
+}
+
+div#wrapper > div > div {
+	margin-top: 5px;
+}
+
+div#wrapper > div > div.yellowBox {
+	border: 1px solid #FFFF00;
+	background: #FFFFDD;
+}
+
+div#wrapper > div > div.yellowBox a {
+	display: inline-block;
+}
+
+div#wrapper > div > div a {
+	display: block;
+	color: #C72D2F;
+	text-decoration: none;
+}
+
+div#wrapper > div > div span {
+	text-transform: uppercase;
+}

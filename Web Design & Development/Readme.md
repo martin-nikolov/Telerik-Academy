@@ -17,6 +17,7 @@
 * [CSS - Layout](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/03.%20CSS%20-%20Layout) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/03.%20CSS%20-%20Layout/Readme.md)) - 10.01.2014
 * [SASS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/04.%20SASS) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/04.%20SASS/Readme.md)) - 11.01.2014
 * [LESS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/05.%20LESS) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/05.%20LESS/Readme.md)) - 12.01.2014
+* [CSS - Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/06.%20CSS%20-%20Exam%20Preparation)
 
 ## JavaScript Fundamentals
 1. [Operators and Expressions](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20Fundamentals/01.%20Operators%20and%20Expressions) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20Fundamentals/01.%20Operators%20and%20Expressions/Readme.md)) - 23.01.2014

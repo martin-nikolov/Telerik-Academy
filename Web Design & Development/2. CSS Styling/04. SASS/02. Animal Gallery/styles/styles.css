@@ -55,7 +55,7 @@ label > img {
             
 .larger img {
     display: none;
-    width: 848px;
+    width: 500px;
 }
 
 input[type=radio]:checked + span img {

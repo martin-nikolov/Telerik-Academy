@@ -105,6 +105,6 @@ div#wrapper a.msg-bar-btn:hover {
     border-top: 4px solid #AAFFEF;
 }
 
-div#wrapper a.msg-bar-btn:hover + div.msg-bar-content {
+div#wrapper li:hover > div.msg-bar-content {
     display: block;
 }

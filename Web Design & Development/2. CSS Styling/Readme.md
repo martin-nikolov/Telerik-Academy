@@ -7,3 +7,4 @@
 * [SASS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/04.%20SASS) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/04.%20SASS/Readme.md)) - 11.01.2014
 * [LESS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/05.%20LESS) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/05.%20LESS/Readme.md)) - 12.01.2014
 * [CSS - Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/06.%20CSS%20-%20Exam%20Preparation)
+* [CSS - Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/07.%20CSS%20-%20Exam)

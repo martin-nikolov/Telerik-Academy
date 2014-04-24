@@ -84,6 +84,12 @@
 * [Solution to Homework of Lecture 4th](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/05.%20Solution%20to%20Homework%20of%20Lecture%204th) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/05.%20Solution%20to%20Homework%20of%20Lecture%204th/Readme.md)) - 21.10.2013
 * [Views](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/06.%20Views) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/06.%20Views/Readme.md)) - 27.10.2013
 
+# Projects
+
+## Desktop
+* [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - 01.09.2013 (Course - C# Part 2)
+* [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - 11.12.2013 (Course - C# OOP) 
+
 # Other courses
 
 ## Algo Academy

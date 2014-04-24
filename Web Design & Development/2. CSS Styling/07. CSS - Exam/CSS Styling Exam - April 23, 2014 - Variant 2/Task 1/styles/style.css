@@ -1,0 +1,91 @@
+html, body, div, header, h1, h2, ul, li, article, p, aside, hr, input {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+#wrapper > header {
+	padding: 20px 20px 31px 20px;
+	background: url('../images/header-bg.png');
+}
+
+#wrapper div#line {
+	height: 5px;
+	margin-bottom: 20px;
+	background: #39C518;
+}
+
+#wrapper > header div#title h1 {
+	color: #EEFFEE;
+	font-size: 34px;
+}
+
+#wrapper > header div#title h2 {
+	color: #C0C0C0;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#wrapper > header #nav ul {
+	margin: -33px 8px 0 0;
+	text-align: right;
+}
+
+#wrapper > header #nav ul li {
+	display: inline-block;
+	margin-left: 16px;
+	list-style-type: none;
+
+	color: #CC6600;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#wrapper div#content {
+	float: left;
+	width: 760px;
+}
+
+#wrapper div#content h1 {
+	padding-bottom: 6px;
+	
+	color: #59770E;
+	font-size: 30px;
+}
+
+#wrapper div#content article p {
+	margin-top: 14px;
+	color: #555555;
+}
+
+#wrapper aside {
+	float: right;
+	width: 200px;
+
+	color: #59770E;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#wrapper aside hr {
+	margin: 7px 0 9px 0;
+}
+
+#wrapper aside input {
+	width: 155px;
+	height: 22px;
+	margin-left: 2px;
+}

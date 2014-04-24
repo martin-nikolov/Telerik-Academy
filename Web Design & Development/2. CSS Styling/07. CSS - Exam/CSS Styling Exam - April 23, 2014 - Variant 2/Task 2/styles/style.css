@@ -1,0 +1,81 @@
+html, body, ul, li, div, h3, img, p {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+	font-size: 16px;
+}
+
+ul, li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+#wrapper {
+	width: 960px;
+
+	margin: 5px 0 0 4px; /* Is necessary? */
+}
+
+#wrapper ul.menu li {
+	float: left;
+	margin-right: 5px;
+	padding: 5px 30px 14px 30px;
+
+	text-align: center;
+
+	border: 20px solid #808080;
+
+	background: #727272;
+	background: -moz-linear-gradient(top,  #727272 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#727272), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top,  #727272 0%,#ffffff 100%);
+	background: -o-linear-gradient(top,  #727272 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top,  #727272 0%,#ffffff 100%);
+	background: linear-gradient(to bottom,  #727272 0%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#727272', endColorstr='#ffffff',GradientType=0 );
+}
+
+#wrapper ul.menu li:hover {
+	padding: 5px 16px 14px 16px;
+	border: 20px solid #454545;
+	background: #808080;
+}
+
+#wrapper ul.menu li:hover h3 {
+	text-decoration: underline;
+}
+
+#wrapper ul.menu li:hover img {
+	width: 140px;
+	height: 110px;
+	margin: 5px 0 0 0;
+}
+
+#wrapper ul.menu li:hover > p.subtitle {
+	display: none;
+}
+
+#wrapper ul.menu li > p.click-here {
+	display: none;
+	margin-left: 1px;
+}
+
+#wrapper ul.menu li:hover > p.click-here {
+	display: block;
+	color: white;
+	text-transform: uppercase;
+}
+
+#wrapper ul.menu li h3 {
+	color: white;
+}
+
+#wrapper ul.menu li img {
+	width: 120px;
+	height: 100px;
+	margin: 5px 0 10px 0;
+	border-radius: 20px;
+}

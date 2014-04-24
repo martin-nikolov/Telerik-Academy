@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <link href="styles/style.css" rel="stylesheet">
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
+<body>
+  <div id="root">
+    <h1>Add employees</h1>
+    <div class="widget">
+      <div class="box add-employee">
+        <label for="tb-fname">First name: </label>
+        <input id="tb-fname" placeholder="type your first name"><br>
+        <label for="tb-lname">Last name: </label>
+        <input id="tb-lname" placeholder="type your last name"><br>
+        <label for="dd-rank">Rank: </label>
+        <div id="dd-rank" class="dropdown"><span class="chosen">Senior</span>
+          <ul>
+            <li>Junior
+            </li>
+            <li>Mid-level
+            </li>
+            <li>Senior
+            </li>
+          </ul>
+        </div><br>
+        <label for="dd-title">Title: </label>
+        <div id="dd-title" class="dropdown"><span class="chosen">Software Developer</span>
+          <ul>
+            <li>Software Developer
+            </li>
+            <li>QA Engineer
+            </li>
+            <li>Front-end Developer
+            </li>
+            <li>UX Designer
+            </li>
+          </ul>
+        </div><br>
+        <button>Add</button>
+      </div>
+    </div>
+  </div>
+</body>

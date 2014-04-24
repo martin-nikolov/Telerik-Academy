@@ -1,0 +1,175 @@
+html, body, ul, li, div, h1, span, label, button, input {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 14px;
+	font-family: Corbel;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+body #root {
+	width: 350px;
+	margin: 3px 0 0 5px; /* Is necessary? */
+	padding: 18px 0 25px 25px; 
+
+	border-top: 3px solid black;
+	border-left: 3px solid black;
+	border-top-left-radius: 15px;
+}
+
+body #root > h1 {
+	display: inline-block;
+	margin: 0 0 18px 45px;
+
+	font-size: 27px;
+	text-align: center;
+}
+
+body #root div.widget {
+	border: 1px solid black;
+	border-radius: 5px;
+
+	background: #cbf7be;
+	background: -moz-linear-gradient(top,  #cbf7be 0%, #cbf7be 14%, #e5d96e 59%, #e5d96e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cbf7be), color-stop(14%,#cbf7be), color-stop(59%,#e5d96e), color-stop(100%,#e5d96e));
+	background: -webkit-linear-gradient(top,  #cbf7be 0%,#cbf7be 14%,#e5d96e 59%,#e5d96e 100%);
+	background: -o-linear-gradient(top,  #cbf7be 0%,#cbf7be 14%,#e5d96e 59%,#e5d96e 100%);
+	background: -ms-linear-gradient(top,  #cbf7be 0%,#cbf7be 14%,#e5d96e 59%,#e5d96e 100%);
+	background: linear-gradient(to bottom,  #cbf7be 0%,#cbf7be 14%,#e5d96e 59%,#e5d96e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbf7be', endColorstr='#e5d96e',GradientType=0 );
+}
+
+body #root div.widget {
+	width: 290px;
+}
+
+body #root div.widget div.box.add-employee div.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+body #root div.widget div.box.add-employee div.dropdown ul {
+	z-index: 5;
+	position: absolute;
+	left: 130px;
+	top: 0;
+
+	padding: 0 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+
+	background: #e5d96e;
+	background: -moz-linear-gradient(top,  #e5d96e 0%, #e4d96f 11%, #cbf7be 70%, #cbf7be 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5d96e), color-stop(11%,#e4d96f), color-stop(70%,#cbf7be), color-stop(100%,#cbf7be));
+	background: -webkit-linear-gradient(top,  #e5d96e 0%,#e4d96f 11%,#cbf7be 70%,#cbf7be 100%);
+	background: -o-linear-gradient(top,  #e5d96e 0%,#e4d96f 11%,#cbf7be 70%,#cbf7be 100%);
+	background: -ms-linear-gradient(top,  #e5d96e 0%,#e4d96f 11%,#cbf7be 70%,#cbf7be 100%);
+	background: linear-gradient(to bottom,  #e5d96e 0%,#e4d96f 11%,#cbf7be 70%,#cbf7be 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5d96e', endColorstr='#cbf7be',GradientType=0 );
+}
+
+body #root div.widget div.box.add-employee div.dropdown ul li {
+	width: 120px;
+	padding: 5px 15px;
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+body #root div.widget div.box.add-employee div#dd-title.dropdown ul li:hover {
+	background: #B6DDAA;
+}
+
+body #root div.widget div.box.add-employee div#dd-rank.dropdown ul li:hover {
+	background: #CDC262;
+}
+
+body #root div.widget div.box.add-employee div.dropdown ul li:last-of-type {
+	border-bottom: none;
+}
+
+body #root div.widget div.box.add-employee div.dropdown ul.expanded {
+	display: block;
+}
+
+body #root div.widget div.box.add-employee div.dropdown span {
+	padding-left: 25px;
+	background: url('images/down-arrow.png');
+	background-repeat: no-repeat;
+	background-position: 5px 0;
+}
+
+body #root div.widget div.box.add-employee div.dropdown span.expanded {
+	background: url('images/left-arrow.png');
+	background-repeat: no-repeat;
+	background-position: 5px 0;
+}
+
+body #root div.widget div.box.add-employee div.dropdown ul {
+	display: none;
+}
+
+body #root div.widget div.box.add-employee {
+	padding: 15px;
+}
+
+body #root div.widget div.box.add-employee label {
+	display: inline-block;
+	width: 86px;
+	margin: 0 5px 10px 0;
+	text-align: right;
+	font-weight: bold;
+}
+
+body #root div.widget div.box.add-employee label[for=dd-rank], 
+body #root div.widget div.box.add-employee label[for=dd-title] {
+	margin-left: 6px;
+}
+
+body #root div.widget input {
+	width: 130px;
+	margin-bottom: 5px;
+	padding: 5px 15px;
+
+	color: black;
+	font-style: italic;
+
+	border: 3px inset #CBF7BE;
+	border-radius: 5px;
+	background: transparent;
+}
+
+body #root div.widget input:last-of-type {
+	margin-bottom: 10px;
+}
+
+body #root div.widget button {
+	width: 260px;
+	padding: 5px 15px;
+
+	color: black;
+	font-size: 15px;
+
+	border: 3px inset #CBF7BE;
+	border-radius: 5px;
+	background: transparent;
+}
+
+::-webkit-input-placeholder {
+    color: black;
+}
+
+body #root div.widget button:hover {
+	background: #cbf7be;
+	background: -moz-linear-gradient(top,  #cbf7be 0%, #cbf7be 8%, #e4da70 69%, #e5d96e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cbf7be), color-stop(8%,#cbf7be), color-stop(69%,#e4da70), color-stop(100%,#e5d96e));
+	background: -webkit-linear-gradient(top,  #cbf7be 0%,#cbf7be 8%,#e4da70 69%,#e5d96e 100%);
+	background: -o-linear-gradient(top,  #cbf7be 0%,#cbf7be 8%,#e4da70 69%,#e5d96e 100%);
+	background: -ms-linear-gradient(top,  #cbf7be 0%,#cbf7be 8%,#e4da70 69%,#e5d96e 100%);
+	background: linear-gradient(to bottom,  #cbf7be 0%,#cbf7be 8%,#e4da70 69%,#e5d96e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbf7be', endColorstr='#e5d96e',GradientType=0 );
+}

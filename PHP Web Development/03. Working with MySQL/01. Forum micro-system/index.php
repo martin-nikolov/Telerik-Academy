@@ -29,7 +29,7 @@ if (isset($_SESSION['is_logged']))
 // Проверка за потребителска сесия
 if (isset($_POST['login']))
 {
-    $username = htmlspecialchars(mysqli_real_escape_string($CONNECTION, trim($_POST['username'])));
+    $username = trim($_POST['username']);
 
     // Извличане на името
     $query = mysqli_query($CONNECTION, "SELECT username, password FROM users WHERE username = '" . $username . "'");

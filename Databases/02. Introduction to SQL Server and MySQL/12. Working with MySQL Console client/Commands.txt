@@ -1,0 +1,45 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mydb               |
+| mysql              |
+| performance_schema |
+| sakila             |
+| test               |
+| worldnew           |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use worldnew
+Database changed
+
+mysql> select * from city limit 20;
++----+---------------------+-------------+---------------+------------+
+| ID | Name                | CountryCode | District      | Population |
++----+---------------------+-------------+---------------+------------+
+|  1 | Kabul               | AFG         | Kabol         |    1780000 |
+|  2 | Qandahar            | AFG         | Qandahar      |     237500 |
+|  3 | 232                 | AFG         | Herat         |     186800 |
+|  4 | Mazar-e-Sharif      | 232         | Balkh         |     127800 |
+|  5 | as                  | NLD         | Noord-Holland |     731200 |
+|  6 | Rotterdam           | NLD         | Zuid-Holland  |     593321 |
+|  7 | Haag                | NLD         | Zuid-Holland  |     440900 |
+|  8 | Utrecht             | NLD         | Utrecht       |     234323 |
+|  9 | Eindhoven           | NLD         | Noord-Brabant |     201843 |
+| 10 | Tilburg             | NLD         | Noord-Brabant |     193238 |
+| 11 | Groningen           | NLD         | Groningen     |     172701 |
+| 12 | Breda               | NLD         | Noord-Brabant |     160398 |
+| 13 | Apeldoorn           | NLD         | Gelderland    |     153491 |
+| 14 | Nijmegen            | NLD         | Gelderland    |     152463 |
+| 15 | Enschede            | NLD         | Overijssel    |     149544 |
+| 16 | Haarlem             | NLD         | Noord-Holland |     148772 |
+| 17 | Almere              | NLD         | Flevoland     |     142465 |
+| 18 | Arnhem              | NLD         | Gelderland    |     138020 |
+| 19 | Zaanstad            | NLD         | Noord-Holland |     135621 |
+| 20 | Â´s-Hertogenbosch   | NLD         | Noord-Brabant |     129170 |
++----+---------------------+-------------+---------------+------------+
+20 rows in set (0.00 sec)
+
+mysql> quit

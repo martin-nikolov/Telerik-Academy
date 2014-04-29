@@ -52,3 +52,9 @@
 * [Telerik Kids Academy 2011/2012](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%20Kids%20Academy%202011-2012) - 20x3 exercises
 * [Telerik Kids Academy 2012/2013](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%20Kids%20Academy%202012-2013) - 18x3 exercises
 * [Others](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Others) - 1 exercise
+
+# Projects
+
+## Desktop
+* [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - 01.09.2013 (Course - C# Part 2)
+* [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - 11.12.2013 (Course - C# OOP) 

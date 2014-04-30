@@ -1,8 +1,8 @@
 ## Database Modeling
 
 1. Create the following database diagram in SQL Server:
-![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Databases/03.%20Database%20Modeling/01.%20task/diagram.png)
 
+  ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Databases/03.%20Database%20Modeling/01.%20task/diagram.png)
 2. Fill some sample data in the tables with SQL Server Management Studio.
 
 *Typical universities have: faculties, departments, professors, students, courses, etc. Faculties have name and could have several departments. Each department has name, professors and courses. Each professor has name, a set of titles (Ph. D, academician, senior assistant, etc.) and a set of courses. Each course consists of several students. Each student belongs to some faculty and to several of the courses. Your task is to create a data model (E/R diagram) for the typical university in SQL Server using SQL Server Management Studio (SSMS).

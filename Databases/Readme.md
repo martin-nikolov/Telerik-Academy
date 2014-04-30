@@ -2,4 +2,4 @@
 
 1. [Database Systems - Overview](https://github.com/flextry/Telerik-Academy/tree/master/Databases/01.%20Database%20Systems%20-%20Overview) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/01.%20Database%20Systems%20-%20Overview/Readme.md)) - 28.04.2013
 * [Introduction to SQL Server and MySQL](https://github.com/flextry/Telerik-Academy/tree/master/Databases/02.%20Introduction%20to%20SQL%20Server%20and%20MySQL) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/02.%20Introduction%20to%20SQL%20Server%20and%20MySQL/Readme.md)) - 29.04.2013
-* [Database Modeling](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Dynamic%20Programming) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/01.%20Introduction%20to%20Programming%20with%20C-Sharp/Readme.md))
+* [Database Modeling](https://github.com/flextry/Telerik-Academy/tree/master/Databases/03.%20Database%20Modeling) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/03.%20Database%20Modeling/Readme.md))

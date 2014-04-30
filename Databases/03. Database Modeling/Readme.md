@@ -2,7 +2,7 @@
 
 1. Create the following database diagram in SQL Server:
 
-![Screenshot](https://raw.github.com/jasssonpet/TelerikAcademy/master/WebDesign/2.CSSStyling/7.Exam/1.Carousel/index.png)
+![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Databases/03.%20Database%20Modeling/01.%20task/diagram.png)
 
 * Fill some sample data in the tables with SQL Server Management Studio.
 

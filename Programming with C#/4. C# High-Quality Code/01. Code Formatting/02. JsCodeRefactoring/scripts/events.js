@@ -13,29 +13,28 @@
         addScroll = true;
     }
 
-    if (browserName == netscapeBrowserName) {
+    if (browserName === netscapeBrowserName) {
         document.captureEvents(Event.MOUSEMOVE)
     }
 
     document.onmousemove = mouseMove;
 
     function mouseMove(eventObj) {
-        if (browserName == netscapeBrowserName) {
+        if (browserName === netscapeBrowserName) {
             pX = eventObj.pageX - 5;
             pY = eventObj.pageY;
-        }
-        else {
-            pX = eventObj.x - 5;
-            pY = eventObj.y;
-        }
 
-        if (browserName == netscapeBrowserName) {
             if (document.layers['ToolTip'].visibility == 'show') {
                 PopToolTip();
             }
         }
-        else if (document.all['ToolTip'].style.visibility == 'visible') {
-            PopToolTip();
+        else {
+            pX = eventObj.x - 5;
+            pY = eventObj.y;
+
+            if (document.all['ToolTip'].style.visibility == 'visible') {
+                PopToolTip();
+            }
         }
     }
 

@@ -1,21 +1,20 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-
-namespace Events
+﻿namespace Events
 {
+    using System;
+    using System.Linq;
+    using System.Text;
+
     public class EventProcessingEngine
     {
-        private static readonly StringBuilder output = new StringBuilder();
-        private static readonly EventHolder events = new EventHolder();
-
         private const string AddEventsCommand = "AddEvent";
         private const string DeleteEventsCommand = "DeleteEvents";
         private const string ListEventsCommand = "ListEvents";
-
         private const char CommandSeparator = '|';
+        
+        private static readonly StringBuilder output = new StringBuilder();
+        private static readonly EventHolder events = new EventHolder();
 
-        static void Main()
+        public static void Main()
         {
             bool hasValidCommand;
 
@@ -44,16 +43,19 @@ namespace Events
                         AddEvent(command);
                         return true;
                     }
+
                 case 'D':
                     {
                         DeleteEvents(command);
                         return true;
                     }
+
                 case 'L':
                     {
                         ListEvents(command);
                         return true;
                     }
+
                 default:
                     {
                         return false;

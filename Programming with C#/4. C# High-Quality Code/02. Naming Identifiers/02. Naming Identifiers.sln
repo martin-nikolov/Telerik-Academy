@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Code Refactoring", "01. Code Refactoring\01. Code Refactoring.csproj", "{1EA4E07B-69B4-47FD-8D25-68FEC8978971}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Code Refactoring", "02. Code Refactoring\02. Code Refactoring.csproj", "{C08A290F-E78B-4DE6-918F-B54AA9DD2E01}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "03. JS Code Refactoring", "http://localhost:49897", "{366E7257-9DF7-4411-949B-9048A0DC2A66}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49897"
+		Debug.AspNetCompiler.PhysicalPath = "03. JS Code Refactoring\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49897\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49897"
+		Release.AspNetCompiler.PhysicalPath = "03. JS Code Refactoring\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49897\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "03. JS Code Refactoring\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Code improvements", "04. Code improvements\04. Code improvements.csproj", "{3B66E407-BC1B-4F3B-A77D-87818F8DB3A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EA4E07B-69B4-47FD-8D25-68FEC8978971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA4E07B-69B4-47FD-8D25-68FEC8978971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA4E07B-69B4-47FD-8D25-68FEC8978971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA4E07B-69B4-47FD-8D25-68FEC8978971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C08A290F-E78B-4DE6-918F-B54AA9DD2E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C08A290F-E78B-4DE6-918F-B54AA9DD2E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C08A290F-E78B-4DE6-918F-B54AA9DD2E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C08A290F-E78B-4DE6-918F-B54AA9DD2E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366E7257-9DF7-4411-949B-9048A0DC2A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366E7257-9DF7-4411-949B-9048A0DC2A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366E7257-9DF7-4411-949B-9048A0DC2A66}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{366E7257-9DF7-4411-949B-9048A0DC2A66}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3B66E407-BC1B-4F3B-A77D-87818F8DB3A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B66E407-BC1B-4F3B-A77D-87818F8DB3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B66E407-BC1B-4F3B-A77D-87818F8DB3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B66E407-BC1B-4F3B-A77D-87818F8DB3A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

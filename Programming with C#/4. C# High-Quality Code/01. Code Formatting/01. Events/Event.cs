@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-
-namespace Events
+﻿namespace Events
 {
+    using System;
+    using System.Linq;
+    using System.Text;
+
     public class Event : IComparable
     {
         private const string EventMessageFormat = " | {0}";

@@ -1,14 +1,14 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-
-namespace Events
+﻿namespace Events
 {
+    using System;
+    using System.Linq;
+    using System.Text;
+
     public class MessageLog
     {
         private const string EventAddedMessage = "Event added";
         private const string NoEventsFoundMessage = "No events found";
-        private const string EventsDeletedMessage = "event(s) deleted";
+        private const string EventsDeletedMessage = @"event(s) deleted";
 
         private readonly StringBuilder output = new StringBuilder();
 

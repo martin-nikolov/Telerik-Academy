@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using Wintellect.PowerCollections;
-
-namespace Events
+﻿namespace Events
 {
+    using System;
+    using System.Linq;
+    using Wintellect.PowerCollections;
+
     public class EventHolder
     {
         private readonly MultiDictionary<string, Event> byTitle = new MultiDictionary<string, Event>(true);
@@ -43,7 +43,7 @@ namespace Events
 
         public void ListEvents(DateTime date, int count)
         {
-            OrderedBag<Event>.View eventsToShow = this.byDate.RangeFrom(new Event(date, "", ""), true);
+            OrderedBag<Event>.View eventsToShow = this.byDate.RangeFrom(new Event(date, string.Empty, string.Empty), true);
             int showedEvents = 0;
 
             foreach (var eventToShow in eventsToShow)

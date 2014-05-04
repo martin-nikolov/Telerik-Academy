@@ -13,11 +13,11 @@ function Main(bufferElement) {
     SetSolveButton(function() {
         ConsoleClear();
         
-        FindMinMax(a.value, b.value);
+        findMinMax(a.value, b.value);
     });
 }
 
-function FindMinMax(a, b) {
+function findMinMax(a, b) {
     a = parseInt(a);
     b = parseInt(b);
 

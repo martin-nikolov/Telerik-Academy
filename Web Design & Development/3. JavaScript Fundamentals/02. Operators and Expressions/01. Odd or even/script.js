@@ -11,11 +11,11 @@ function Main(bufferElement) {
     SetSolveButton(function() {
         ConsoleClear();
 
-        CheckOddOrEven(number.value);
+        checkOddOrEven(number.value);
     });
 }
 
-function CheckOddOrEven(number) {
+function checkOddOrEven(number) {
     number = parseInt(number);
 
     if (!IsNumber(number)) {
@@ -23,5 +23,5 @@ function CheckOddOrEven(number) {
         return;
     }
 
-    WriteLine(Format("The number {0} is: {1}", number, (number % 2 != 0 ? "ODD" : "EVEN")));
+    WriteLine(Format("The number {0} is: {1}", number, (number % 2 !== 0 ? "ODD" : "EVEN")));
 }

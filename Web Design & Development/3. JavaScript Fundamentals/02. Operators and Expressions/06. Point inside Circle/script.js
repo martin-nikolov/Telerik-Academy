@@ -13,11 +13,11 @@ function Main(bufferElement) {
 
     SetSolveButton(function() {
         ConsoleClear();
-        IsPointInsideCircle(xCoords.value, yCoords.value, circleRadius);
+        isPointInsideCircle(xCoords.value, yCoords.value, circleRadius);
     });
 }
 
-function IsPointInsideCircle(xCoords, yCoords, circleRadius) {
+function isPointInsideCircle(xCoords, yCoords, circleRadius) {
     xCoords = parseFloat(xCoords);
     yCoords = parseFloat(yCoords);
 

@@ -12,11 +12,11 @@ function Main(bufferElement) {
     SetSolveButton(function() {
         ConsoleClear();
 
-        IsPrime(integer.value);
+        isPrime(integer.value);
     });
 }
 
-function IsPrime(number) {
+function isPrime(number) {
     var number = parseInt(number);
 
     if (!IsNumber(number)) {

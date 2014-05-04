@@ -6,10 +6,10 @@
 taskName = "4. Property finder in document";
 
 function Main(bufferElement) {
-    GetProperties([document, window, navigator]);
+    getProperties([document, window, navigator]);
 }
 
-function GetProperties(containers) {
+function getProperties(containers) {
     if (!Array.isArray(containers)) {
         return;
     }
@@ -17,7 +17,9 @@ function GetProperties(containers) {
     for (var object in containers) {
         var properties = [];
 
-        for (properties[properties.length] in containers[object]);
+        for (var prop in containers[object]) {
+            properties.push(prop);
+        }
 
         properties.sort();
 

@@ -14,11 +14,11 @@ function Main(bufferElement) {
         ConsoleClear();
 
         WriteLine(Format("Rectangle area: {0} units",
-            CalculateRectancleArea(width.value, height.value).toFixed(4)));
+            calculateRectancleArea(width.value, height.value).toFixed(4)));
     });
 }
 
-function CalculateRectancleArea(width, height) {
+function calculateRectancleArea(width, height) {
     width = parseFloat(width);
     height = parseFloat(height);
 

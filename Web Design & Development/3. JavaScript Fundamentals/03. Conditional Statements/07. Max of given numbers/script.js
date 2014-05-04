@@ -6,17 +6,17 @@ taskName = "7. Max of given numbers";
 
 function Main(bufferElement) {
 
-    var numbers = ReadLine("Enter a numbers: ", GetRandomNumbers(5));
+    var numbers = ReadLine("Enter a numbers: ", getRandomNumbers(5));
 
     SetSolveButton(function() {
         ConsoleClear();
 
         var inputValues = ParseFloatCollection(numbers.value);
-        WriteLine(GetMaxNumber(inputValues));
+        WriteLine(getMaxNumber(inputValues));
     });
 }
 
-function GetMaxNumber(numbers) {
+function getMaxNumber(numbers) {
     if (!(numbers instanceof Array)) {
         return "Error! Incorrect input format!";
     }
@@ -26,7 +26,7 @@ function GetMaxNumber(numbers) {
     return 'Max: ' + max;
 }
 
-function GetRandomNumbers(count) {
+function getRandomNumbers(count) {
     var numbers = [];
 
     for (var i = 0; i < count; i++) {

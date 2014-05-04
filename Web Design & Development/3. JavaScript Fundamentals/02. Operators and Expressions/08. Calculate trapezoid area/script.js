@@ -15,11 +15,11 @@ function Main(bufferElement) {
         ConsoleClear();
 
         WriteLine(Format("Trapezoid area is: {0} units",
-            CalculateTrapezoidArea(a.value, b.value, height.value).toFixed(5)));
+            calculateTrapezoidArea(a.value, b.value, height.value).toFixed(5)));
     });
 }
 
-function CalculateTrapezoidArea(a, b, height) {
+function calculateTrapezoidArea(a, b, height) {
     a = parseFloat(a);
     b = parseFloat(b);
     height = parseFloat(height);

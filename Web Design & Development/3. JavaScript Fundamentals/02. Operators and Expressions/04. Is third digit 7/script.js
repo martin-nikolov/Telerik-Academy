@@ -14,11 +14,11 @@ function Main(bufferElement) {
         ConsoleClear();
 
         WriteLine(Format("Third digit of number {0} is 7: {1}",
-            number.value, IsThirdDigit7(number.value) ? "YES" : "NO"));
+            number.value, isThirdDigit7(number.value) ? "YES" : "NO"));
     });
 }
 
-function IsThirdDigit7(number) {
+function isThirdDigit7(number) {
     number = parseInt(number);
 
     var thirdDigit = ((number / 100) | 0) % 10;

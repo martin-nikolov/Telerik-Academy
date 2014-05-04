@@ -19,28 +19,28 @@ function Main(bufferElement) {
             y: parseFloat(yCoords.value)
         };
 
-        CheckWhereIsPoint(point);
+        checkWhereIsPoint(point);
     });
 }
 
-function CheckWhereIsPoint(point) {
-    if (!IsNumber(point.x) || !IsNumber(point.y)) {
+function checkWhereIsPoint(point) {
+    if (!isNumber(point.x) || !isNumber(point.y)) {
         WriteLine("Error! There is some incorrect input value!");
         return;
     }
 
-    var isInsideCircle = IsInsideCircle(point);
-    var isInsideOfRectangle = IsInsideRectangle(point);
+    var isInsideCircle = isInsideCircle(point);
+    var isInsideOfRectangle = isInsideRectangle(point);
 
     WriteLine(Format("Point({0}, {1}) is {2}side a circle and {3}side a rectangle.",
         point.x, point.y, isInsideCircle ? "in" : "out", isInsideOfRectangle ? "in" : "out"));
 }
 
-function IsNumber(n) {
+function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
-function IsInsideCircle(point) {
+function isInsideCircle(point) {
     var circleX = 1,
         circleY = 1,
         circleRadius = 3;
@@ -56,7 +56,7 @@ function IsInsideCircle(point) {
     return (newPoint.x * newPoint.x + newPoint.y * newPoint.y) <= circleRadius * circleRadius;
 }
 
-function IsInsideRectangle(point) {
+function isInsideRectangle(point) {
     var rxLeft = -1;
     var ryTop = 1;
     var rxRight = 5;

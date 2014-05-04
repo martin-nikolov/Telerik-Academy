@@ -19,12 +19,12 @@ function Main(bufferElement) {
     SetSolveButton(function () {
         ConsoleClear();
 
-        GetNumberName(integer.value);
+        getNumberName(integer.value);
 
         WriteLine('<br>' + '------------------------------');
 
         for (var i = 0; i < 10; i++) {
-            GetNumberName(GetRandomInt(999));
+            getNumberName(GetRandomInt(999));
         }
 
         WriteLine('------------------------------');
@@ -40,7 +40,7 @@ Decimals =
 Hundreds =
     [ "", "ONE", "TWENTY", "THIRTY", "FORTY", "FIFTY", "SIXTY", "SEVENTY", "EIGHTY", "NINETY" ];
 
-function GetNumberName (number) {
+function getNumberName(number) {
     number = parseInt(number);
 
     if (!IsNumber(number) || number < 0 || number > 999) {
@@ -48,10 +48,10 @@ function GetNumberName (number) {
         return;
     }
 
-    WriteLine(number + " -> " + GetHundreds(number) + "" + GetDecimals(number) + "" + GetUnits(number));
+    WriteLine(number + " -> " + getHundreds(number) + "" + getDecimals(number) + "" + getUnits(number));
 }
 
-function GetHundreds(number) {
+function getHundreds(number) {
     if (number >= 100) {
         return Units[Math.floor(number / 100) + 1] + " HUNDRED";
     }
@@ -59,7 +59,7 @@ function GetHundreds(number) {
     return "";
 }
 
-function GetDecimals(number) {
+function getDecimals(number) {
     if (number > 9 && number < 20) {
         return Decimals[Math.floor(number % 10 + 1)];
     }
@@ -79,7 +79,7 @@ function GetDecimals(number) {
     }
 }
 
-function GetUnits(number) {
+function getUnits(number) {
     if (number < 10) {
         return Units[Math.floor(number % 10 + 1)];
     }

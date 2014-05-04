@@ -8,11 +8,11 @@ taskName = "5. Get digit name";
 function Main(bufferElement) {
 
     for (var i = 0; i < 10; i++) {
-        WriteLine(Format('{0} -> {1}', i, GetDigitName(i)));
+        WriteLine(Format('{0} -> {1}', i, getDigitName(i)));
     }
 }
 
-function GetDigitName(number) {
+function getDigitName(number) {
     var integer = parseInt(number);
 
     if (!IsNumber(integer)) {

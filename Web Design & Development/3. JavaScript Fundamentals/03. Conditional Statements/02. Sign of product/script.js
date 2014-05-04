@@ -15,11 +15,11 @@ function Main(bufferElement) {
 	SetSolveButton(function() {
 		ConsoleClear();
 		
-		WriteLine(SignOfProduct(a.value, b.value, c.value));
+		WriteLine(signOfProduct(a.value, b.value, c.value));
 	});
 }
 
-function SignOfProduct(a, b, c) {
+function signOfProduct(a, b, c) {
 	a = parseFloat(a);
 	b = parseFloat(b);
 	c = parseFloat(c);

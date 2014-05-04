@@ -17,11 +17,11 @@ function Main(bufferElement) {
     SetSolveButton(function() {
         ConsoleClear();
 
-        FindRootsOfQuadraticEquation(a.value, b.value, c.value);
+        findRootsOfQuadraticEquation(a.value, b.value, c.value);
     });
 }
 
-function FindRootsOfQuadraticEquation(a, b, c) {
+function findRootsOfQuadraticEquation(a, b, c) {
     a = parseFloat(a);
     b = parseFloat(b);
     c = parseFloat(c);

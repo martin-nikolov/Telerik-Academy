@@ -10,7 +10,7 @@ function Main(bufferElement) {
 
     var elements = ReadLine("Enter collection: ", '2, 1, 1, 2, 3, 3, 2, 2, 2, 1')
 
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ConsoleClear();
 
         var collection = SplitBySeparator(elements.value, [',', ' ']);
@@ -25,10 +25,12 @@ function findMaxSequenceOfEquals(collection) {
         throw new Error("Error! There is some incorrect input value!");
     }
 
-    var currentLength = 1, currentElement = collection[0];
-    var bestLength = 0, bestElement; 
+    var currentLength = 1;
+    var currentElement = collection[0];
+    var bestLength = 0;
+    var bestElement; 
 
-    if (collection.length == 1) {
+    if (collection.length === 1) {
         return [currentElement];
     }
 
@@ -47,5 +49,7 @@ function findMaxSequenceOfEquals(collection) {
         }
     }
 
-    return Array.apply(null, new Array(bestLength)).map(function() { return bestElement; });
+    return Array.apply(null, new Array(bestLength)).map(function() {
+        return bestElement; 
+    });
 }

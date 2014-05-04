@@ -14,11 +14,11 @@ function Main(bufferElement) {
     SetSolveButton(function() {
         ConsoleClear();
         
-        WriteLine(GetBiggestFromThreeNumbers(a.value, b.value, c.value));
+        WriteLine(getBiggestFromThreeNumbers(a.value, b.value, c.value));
     });
 }
 
-function GetBiggestFromThreeNumbers(a, b, c) {
+function getBiggestFromThreeNumbers(a, b, c) {
     a = parseInt(a);
     b = parseInt(b);
     c = parseInt(c);

@@ -7,17 +7,17 @@ taskName = "3. Max and Min from sequence";
 
 function Main(bufferElement) {
 
-    var numbers = ReadLine("Enter a numbers: ", GetRandomNumbers(5));
+    var numbers = ReadLine("Enter a numbers: ", getRandomNumbers(5));
 
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ConsoleClear();
-        
+
         var inputValues = ParseFloatCollection(numbers.value);
-        GetMinMaxNumber(inputValues);
+        getMinMaxNumber(inputValues);
     });
 }
 
-function GetMinMaxNumber(numbers) {
+function getMinMaxNumber(numbers) {
     if (!(numbers instanceof Array)) {
         WriteLine("Error! Incorrect input format!");
         return;
@@ -30,12 +30,12 @@ function GetMinMaxNumber(numbers) {
     WriteLine('Min: ' + min);
 }
 
-function GetRandomNumbers(count) {
-    var numbers = new Array();
+function getRandomNumbers(count) {
+    var numbers = [];
 
     for (var i = 0; i < count; i++) {
         numbers.push(GetRandomInt(-25, 25));
-    };
+    }
 
     return numbers.join(', ');
 }

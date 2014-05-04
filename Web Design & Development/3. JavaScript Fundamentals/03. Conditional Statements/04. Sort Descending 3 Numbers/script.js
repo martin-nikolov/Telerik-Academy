@@ -13,11 +13,11 @@ function Main(bufferElement) {
     SetSolveButton(function() {
         ConsoleClear();
 
-        SortDescendingThreeRealValues(a.value, b.value, c.value);
+        sortDescendingThreeRealValues(a.value, b.value, c.value);
     });
 }
 
-function SortDescendingThreeRealValues(a, b, c) {
+function sortDescendingThreeRealValues(a, b, c) {
     a = parseFloat(a);
     b = parseFloat(b);
     c = parseFloat(c);

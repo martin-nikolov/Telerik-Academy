@@ -13,11 +13,11 @@ function Main(bufferElement) {
     SetSolveButton(function() {
         ConsoleClear();
 
-        IsDivisibleBy21(number.value);
+        isDivisibleBy21(number.value);
     });
 }
 
-function IsDivisibleBy21(number) {
+function isDivisibleBy21(number) {
     number = parseInt(number);
 
     if (!IsNumber(number)) {

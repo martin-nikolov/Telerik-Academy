@@ -8,12 +8,12 @@ function Main(bufferElement) {
         ConsoleClear();
 
         var elementsArray = SplitBySeparator(elements.value, [',', ' ']);
-        var allFrequents = FindAllFrequents(elementsArray);
-        PrintMostFrequent(allFrequents);
+        var allFrequents = findAllFrequents(elementsArray);
+        printMostFrequent(allFrequents);
     });
 }
 
-function FindAllFrequents(array) {
+function findAllFrequents(array) {
 
     if (!Array.isArray(array)) {
         return;
@@ -27,7 +27,7 @@ function FindAllFrequents(array) {
     return occurs;
 }
 
-function PrintMostFrequent(array) {
+function printMostFrequent(array) {
 
     var sortedArray = array.slice(0).filter(String);
     sortedArray.sort();
@@ -39,6 +39,6 @@ function PrintMostFrequent(array) {
         WriteLine(Format("Most frequent number is: {0} -> {1} time(s).", mostFrequent, frequents));
     }
     else {
-        WriteLine("There is no most frequent number.")
+        WriteLine("There is no most frequent number.");
     }
 }

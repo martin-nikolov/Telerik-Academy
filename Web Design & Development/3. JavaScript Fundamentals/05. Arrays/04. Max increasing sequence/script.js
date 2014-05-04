@@ -8,7 +8,7 @@ taskName = "4. Max increasing sequence";
 
 function Main(bufferElement) {
 
-    var elements = ReadLine("Enter elements: ", '3, 2, 3, 4, 2, 2, 4')
+    var elements = ReadLine("Enter elements: ", '3, 2, 3, 4, 2, 2, 4');
 
     SetSolveButton(function () {
         ConsoleClear();
@@ -25,7 +25,9 @@ function findMaxIncreasingSequence(collection) {
         throw new Error("Error! There is some incorrect input value!");
     }
 
-    if (collection.length == 1) return [collection[0]];
+    if (collection.length === 1) {
+        return [collection[0]];
+    }
 
     var maxIncreasingSequence = [collection[0]];
     var bestSequence = [];

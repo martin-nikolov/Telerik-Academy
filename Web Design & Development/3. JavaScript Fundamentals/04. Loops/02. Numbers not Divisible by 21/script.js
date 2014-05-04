@@ -9,22 +9,23 @@ function Main(bufferElement) {
 
     var N = ReadLine("Enter N: ", GetRandomInt(150));
 
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ConsoleClear();
-        PrintNumbersNotDivisibleBy21(N.value);
+        
+        printNumbersNotDivisibleBy21(N.value);
     });
 }
 
-function PrintNumbersNotDivisibleBy21(count) {
+function printNumbersNotDivisibleBy21(count) {
     count = parseInt(count);
     var found = false;
 
     for (var i = 1; i <= count; i++) {
-        if (i % 21 == 0) {
+        if (i % 21 === 0) {
             WriteLine(i);
             found = true;
         }
-    };
+    }
 
     if (!found) {
         WriteLine("No numbers divisible by 21...");

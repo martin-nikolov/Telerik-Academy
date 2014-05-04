@@ -12,15 +12,15 @@ function Main(bufferElement) {
     var randomElement = GetRandomInt(-15, 15);
 
     var inputElements = ReadLine("Enter elements:", inputCollection.join(', '));
-    var element = ReadLine("Searched element: ", randomElement)
+    var element = ReadLine("Searched element: ", randomElement);
 
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ConsoleClear();
 
         var collection = ParseIntCollection(inputElements.value, [',', ' ']);
         collection.sort(function(a, b) { return a - b; });
 
-        var targetIndex = collection.binarySearch(new Number(element.value))
+        var targetIndex = collection.binarySearch(new Number(element.value));
 
         WriteLine("Collection: " + collection.join(', '));
         WriteLine(Format("<br>Element '{0}' found at index {1}.", element.value, targetIndex));
@@ -47,7 +47,7 @@ function Main(bufferElement) {
     }
 
     return -1;
-}
+};
 
 function getCollectionWithRandoms() {
     var collection = [];
@@ -55,7 +55,7 @@ function getCollectionWithRandoms() {
 
     for (var i = 0; i < length; i++) {
         collection.push(GetRandomInt(-15, 15));
-    };
+    }
 
     collection.sort(function(a, b) { return a - b; });
 

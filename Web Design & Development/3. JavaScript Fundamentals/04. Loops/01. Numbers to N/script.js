@@ -8,16 +8,17 @@ function Main(bufferElement) {
 
     var N = ReadLine("Enter N: ", GetRandomInt(20));
 
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ConsoleClear();
-        PrintNumbers(N.value);
+
+        printNumbers(N.value);
     });
 }
 
-function PrintNumbers(count) {
+function printNumbers(count) {
     count = parseInt(count);
 
     for (var i = 1; i <= count; i++) {
         WriteLine(i);
-    };
+    }
 }

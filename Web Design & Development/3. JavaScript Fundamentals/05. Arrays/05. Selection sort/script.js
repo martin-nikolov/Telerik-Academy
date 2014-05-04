@@ -16,7 +16,7 @@ function Main(bufferElement) {
 
     var inputElements = ReadLine("Enter elements:", inputCollection.join(', '));
 
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ConsoleClear();
 
         var collection = ParseIntCollection(inputElements.value, [',', ' ']);
@@ -41,8 +41,9 @@ function selectionSort(collection) {
         index = i;
 
         for (var j = i + 1; j < collection.length; j++) {
-            if (collection[j] < collection[index]) 
+            if (collection[j] < collection[index]) {
                 index = j;
+            }
         }
 
         swap = collection[i];
@@ -59,7 +60,7 @@ function getCollectionWithRandoms() {
 
     for (var i = 0; i < length; i++) {
         collection.push(GetRandomInt(-9, 9));
-    };
+    }
 
     return collection;
 }

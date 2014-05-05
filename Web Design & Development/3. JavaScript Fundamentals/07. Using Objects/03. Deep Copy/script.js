@@ -32,7 +32,7 @@ function Main(bufferElement) {
         sqrt: function() {
             return Math.sqrt(this.x);
         }
-    }
+    };
 
     var deepClonedObj = deepClone(obj);
     deepClonedObj.x = 16;
@@ -40,15 +40,15 @@ function Main(bufferElement) {
     WriteLine(Format("Sqrt({0}) != Sqrt({1})", obj.sqrt(), deepClonedObj.sqrt()));
 }
 
-function deepClone(obj) {
-    if (typeof(obj) !== 'object') {
-        return obj;
+function deepClone(primitiveType) {
+    if (typeof(primitiveType) !== 'object') {
+        return primitiveType;
     }
 
     var deepClonedObj = [], property;
 
-    for (property in obj) {
-        deepClonedObj[property] = deepClone(obj[property]);
+    for (property in primitiveType) {
+        deepClonedObj[property] = deepClone(primitiveType[property]);
     }
 
     return deepClonedObj;

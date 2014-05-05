@@ -11,7 +11,7 @@ function Main(bufferElement) {
 
     var input = ReadLine("Enter an expression: ", "((a+b)/5-d)");
 
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ConsoleClear();
 
         var isValid = isValidExpression(input.value);
@@ -24,10 +24,16 @@ function isValidExpression(exp) {
     var bracketCount = 0;
 
     for (i = 0; i < exp.length; i++) {
-        if (exp[i] == '(') bracketCount++;
-        else if (exp[i] == ')') bracketCount--;
+        if (exp[i] == '(') {
+            bracketCount++;
+        }
+        else if (exp[i] == ')') {
+            bracketCount--;
+        }
 
-        if (bracketCount < 0) return false;
+        if (bracketCount < 0) {
+            return false;
+        }
     }
 
     return bracketCount === 0;

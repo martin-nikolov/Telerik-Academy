@@ -35,13 +35,13 @@ function Main(bufferElement) {
         WriteLine(line.toString());
         WriteLine("Distance between 2 points: " + line.distance());
 
-        WriteLine("<br>-------- Test - invalid triangle --------<br>")
+        WriteLine("<br>-------- Test - invalid triangle --------<br>");
 
         // Test 2
         try {
             var invalidTriangle = Triangle(Line(Point(0, 0), Point(5, 30)),
                                            Line(Point(0, 0), Point(10, 0)),
-                                           Line(Point(10, 0), Point(5, 10))); 
+                                           Line(Point(10, 0), Point(5, 10)));
 
             WriteLine("Segment lines can form a triangle!"); // throws exception before print this
         }
@@ -50,6 +50,8 @@ function Main(bufferElement) {
         }
     });
 }
+
+// POINT CONSTRUCTOR
 
 function Point(x, y) {
     if (!IsNumber(x) || !IsNumber(y)) {
@@ -60,33 +62,45 @@ function Point(x, y) {
         return new Point(x, y);
     }
 
-    this.toString = function() {
-        return Format("Point({0}, {1})", this.x, this.y);
-    }
-
     this.x = x;
     this.y = y;
 }
 
+// POINT PROTOTYPES
+
+Point.prototype.toString = function() {
+    return Format("Point({0}, {1})", this.x, this.y);
+};
+
+// LINE CONSTRUCTOR
+
 function Line(startPoint, endPoint) {
+    if (!(startPoint instanceof Point) || !(endPoint instanceof Point)) {
+        throw new Error("Error! There is some incorrect input value!");
+    }
+
     if (!(this instanceof Line)) {
         return new Line(startPoint, endPoint);
-    }
-
-    this.distance = function() {
-        var x = Math.pow(this.startPoint.x - this.endPoint.x, 2);
-        var y = Math.pow(this.startPoint.y - this.endPoint.y, 2);
-
-        return Math.sqrt(x + y)
-    }
-
-    this.toString = function() {
-        return Format("Line[{0}, {1}]", startPoint.toString(), endPoint.toString());
     }
 
     this.startPoint = startPoint;
     this.endPoint = endPoint;
 }
+
+// LINE PROTOTYPES
+
+Line.prototype.distance = function() {
+    var x = Math.pow(this.startPoint.x - this.endPoint.x, 2);
+    var y = Math.pow(this.startPoint.y - this.endPoint.y, 2);
+
+    return Math.sqrt(x + y);
+};
+
+Line.prototype.toString = function() {
+    return Format("Line[{0}, {1}]", this.startPoint, this.endPoint);
+};
+
+// TRIANGLE CONSTRUCTOR
 
 function Triangle(a, b, c) {
     if (!(this instanceof Triangle)) {
@@ -101,6 +115,8 @@ function Triangle(a, b, c) {
     this.b = b;
     this.c = c;
 }
+
+// FUNCTIONS
 
 function canFormTriangle(a, b, c) {
     return a.distance() < b.distance() + c.distance() &&

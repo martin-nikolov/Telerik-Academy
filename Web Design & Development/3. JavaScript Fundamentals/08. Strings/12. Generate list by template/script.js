@@ -14,7 +14,7 @@ taskName = "12. Generate list by template";
 
 function Main(bufferElement) {
 
-    var women = 
+    var women =
     [
         { name: "Aleksandrina", age: 20 },
         { name: "Stela", age: 25 },

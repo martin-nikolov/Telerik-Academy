@@ -10,7 +10,7 @@ function Main(bufferElement) {
 
     var number = ReadLine("Enter a integer: ", GetRandomInt(-1000, 1000));
 
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ConsoleClear();
 
         WriteLine(reverseNumber(number.value));
@@ -24,10 +24,9 @@ function reverseNumber(number) {
         return "Error! There is some incorrect input value!";
     }
 
-    var isNegative = false;
+    var isNegative = integer < 0;
 
-    if (integer < 0) {
-        isNegative = true;
+    if (isNegative) {
         integer *= -1;
     }
 

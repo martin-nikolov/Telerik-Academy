@@ -12,7 +12,7 @@
 taskName = "3. Occurs of substring";
 
 function Main(bufferElement) {
-    
+
     var text = "We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.";
 
     var searchedSubstring = "in";
@@ -22,7 +22,7 @@ function Main(bufferElement) {
     WriteLine();
 
     WriteLine("Target substring: " + searchedSubstring);
-    WriteLine("Result: " + occurs)
+    WriteLine("Result: " + occurs);
 }
 
 function allOccursLength(str, pattern, isSubstring, isCaseSensitive) {

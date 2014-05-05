@@ -10,12 +10,12 @@ taskName = "6. Group an array";
 
 function Main(bufferElement) {
 
-    var persons = 
+    var persons =
     [ 
         Person("Georgi", "Ivanov", 32),
         Person("Ivan", "Georgiev", 17),
         Person("Ivan", "Georgiev", 32),
-        Person("Georgi", "Ivanov", 17), 
+        Person("Georgi", "Ivanov", 17),
     ];
 
     var groupedByFname = group(persons, "firstName");
@@ -28,13 +28,11 @@ function Main(bufferElement) {
     printAppropiate("BY AGE", groupedByAge);
 }
 
+// PERSON CONSTRUCTOR
+
 function Person(firstName, lastName, age) {
     if (!(this instanceof Person)) {
         return new Person(firstName, lastName, age);
-    }
-
-    this.toString = function() {
-        return firstName + " " + lastName + " - " + age;
     }
 
     this.firstName = firstName;
@@ -42,25 +40,33 @@ function Person(firstName, lastName, age) {
     this.age = age;
 }
 
-function group(array, property) {
+// PERSON PROTOTYPES
+
+Person.prototype.toString = function() {
+    return this.firstName + " " + this.lastName + " - " + this.age;
+};
+
+// FUNCTIONS
+
+function group(persons, property) {
     var groupedArray = [];
 
-    for (var i in array) {
-        var current = array[i][property];
+    for (var i in persons) {
+        var current = persons[i][property];
 
-        groupedArray[current] = groupedArray[current] || [];
-        groupedArray[current].push(array[i]);
+        groupedArray[current] = groupedArray[current] || []; // If not exists -> creates new array
+        groupedArray[current].push(persons[i]); // Push the current person
     }
 
     return groupedArray;
 }
 
-function printAppropiate(message, array) {
+function printAppropiate(message, persons) {
     WriteLine("------------[" + message + "]------------");
 
-    for (property in array) {
+    for (var property in persons) {
         WriteLine("* Key: " + property);
-        WriteLine("->  " + array[property].join('; '));
+        WriteLine("->  " + persons[property].join('; '));
         WriteLine();
     }
 }

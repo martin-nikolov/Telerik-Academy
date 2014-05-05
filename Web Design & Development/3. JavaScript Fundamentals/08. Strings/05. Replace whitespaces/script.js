@@ -9,7 +9,7 @@ function Main(bufferElement) {
 
     var text = "This is   an example .";
     var newSubstring = "&nbsp;";
-    
+
     var result = text.replace(/ /g, newSubstring);
 
     WriteLine(text);

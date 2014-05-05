@@ -20,7 +20,12 @@ function Main(bufferElement) {
     var fragments = extractUrlFragments(urlAddress);
 
     // Convert to JSON object
-    var jsonObject = JSON.stringify({ protocol: fragments[1], server: fragments[2], resource: fragments[3] });
+    var jsonObject = JSON.stringify({
+        protocol: fragments[1],
+        server: fragments[2],
+        resource: fragments[3]
+    });
+    
     WriteLine("JSON: " + jsonObject);
 
     // Parse JSON object to JS object
@@ -29,7 +34,7 @@ function Main(bufferElement) {
     WriteLine();
     WriteLine("URL Address: " + urlAddress);
     WriteLine("[protocol] = " + jsObject.protocol);
-    WriteLine("[server] = "+ jsObject.server);
+    WriteLine("[server] = " + jsObject.server);
     WriteLine("[resource] = " + jsObject.resource);
 }
 

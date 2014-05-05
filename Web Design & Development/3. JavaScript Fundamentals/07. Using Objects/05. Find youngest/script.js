@@ -8,12 +8,12 @@ taskName = "5. Find youngest";
 
 function Main(bufferElement) {
 
-    var persons = 
+    var persons =
     [ 
         Person("Gosho", "Petrov", 32),
         Person("John", "Junior", 17),
         Person("Bay", "Ivan", 81),
-        Person("Georgi", "Georgiev", 23), 
+        Person("Georgi", "Georgiev", 23),
         Person("Peter", "Petrov", 25)
     ];
 
@@ -24,19 +24,23 @@ function Main(bufferElement) {
     WriteLine("Youngest person: " + findYoungestPerson(persons));
 }
 
+// PERSON CONSTRUCTOR
+
 function Person(firstName, lastName, age) {
     if (!(this instanceof Person)) {
         return new Person(firstName, lastName, age);
-    }
-
-    this.toString = function() {
-        return firstName + " " + lastName + ", " + age;
     }
 
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
 }
+
+// PERSON PROTOTYPE
+
+Person.prototype.toString = function() {
+    return this.firstName + " " + this.lastName + ", " + this.age;
+};
 
 function findYoungestPerson(persons) {
     var youngest = persons.reduce(function(a, b) {

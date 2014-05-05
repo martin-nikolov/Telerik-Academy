@@ -21,25 +21,25 @@ function Main(bufferElement) {
 
 String.prototype.escapeTags = function() {
     return this.escapeUpcaseTags().escapeLowcaseTags().escapeMixcaseTags();
-}
+};
 
 String.prototype.escapeUpcaseTags = function() {
     return this.replace(/<upcase>(.*?)<\/upcase>/gi, function(tag, match) {
-        return match.toUpperCase()
+        return match.toUpperCase();
     });
-}
+};
 
 String.prototype.escapeLowcaseTags = function() {
     return this.replace(/<lowcase>(.*?)<\/lowcase>/gi, function(tag, match) {
-        return match.toLowerCase()
+        return match.toLowerCase();
     });
-}
+};
 
 String.prototype.escapeMixcaseTags = function() {
     return this.replace(/<mixcase>(.*?)<\/mixcase>/gi, function(tag, match) {
         return match.toMixCase();
     });
-}
+};
 
 String.prototype.toMixCase = function() {
     var result = "", letter = "", toLowerCase = false;
@@ -52,4 +52,4 @@ String.prototype.toMixCase = function() {
     }
 
     return result;
-}
+};

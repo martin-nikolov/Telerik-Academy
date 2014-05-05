@@ -2,7 +2,7 @@
 
 function Main(bufferElement) {
 
-    var obj  = {
+    var obj = {
         name: "reference",
         price: 15
     };

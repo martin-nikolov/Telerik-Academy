@@ -25,7 +25,7 @@ function getFirstBiggerThanNeighbours(collection) {
             WriteLine(Format("Array[{0}] = {1}<br>", i, collection[i]));
             return;
         }
-    };
+    }
 
     WriteLine("- There is no element bigger than its neighbours");
 }
@@ -54,7 +54,7 @@ function getCollectionWithRandoms() {
 
     for (var i = 0; i < length; i++) {
         collection.push(GetRandomInt(15));
-    };
+    }
 
     return collection;
 }

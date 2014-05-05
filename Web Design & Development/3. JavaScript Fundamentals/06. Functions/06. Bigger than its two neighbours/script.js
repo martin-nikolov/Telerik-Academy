@@ -11,7 +11,7 @@ function Main(bufferElement) {
     var randomIndex = GetRandomInt(inputCollection.length - 1);
 
     var inputElements = ReadLine("Enter elements:", inputCollection.join(', '));
-    var index = ReadLine("Enter a index: ", randomIndex)
+    var index = ReadLine("Enter a index: ", randomIndex);
 
     SetSolveButton(function () {
         ConsoleClear();
@@ -49,7 +49,7 @@ function getCollectionWithRandoms() {
 
     for (var i = 0; i < length; i++) {
         collection.push(GetRandomInt(-15, 15));
-    };
+    }
 
     return collection;
 }

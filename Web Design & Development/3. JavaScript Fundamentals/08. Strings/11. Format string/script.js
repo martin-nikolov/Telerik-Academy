@@ -28,7 +28,7 @@ function Main(bufferElement) {
 function stringFormat(str) {
     var selfArguments = arguments;
 
-    return str.replace(/\{(\d+)\}/g, function (match, arg) {
+    return str.replace(/\{(\d+)\}/g, function(match, arg) {
         return selfArguments[+arg + 1];
-    })
+    });
 }

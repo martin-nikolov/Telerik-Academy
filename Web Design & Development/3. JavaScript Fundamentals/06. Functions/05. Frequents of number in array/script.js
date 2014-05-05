@@ -11,14 +11,14 @@ function Main(bufferElement) {
     var elements = ReadLine("Enter elements: ", "0, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4");
     var number = ReadLine("Enter a number: ", 2);
 
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ConsoleClear();
 
         var elementsArray = ParseIntCollection(elements.value, [',', ' ']);
         var searchedNumber = parseInt(number.value);
 
-        WriteLine(Format("Number '{0}' occurs {1} time(s) in the array.", 
-                  searchedNumber, getFrequentsOfNumber(elementsArray, searchedNumber)));
+        WriteLine(Format("Number '{0}' occurs {1} time(s) in the array.",
+            searchedNumber, getFrequentsOfNumber(elementsArray, searchedNumber)));
 
         testFunction();
     });

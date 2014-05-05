@@ -10,7 +10,7 @@ function Main(bufferElement) {
 
     var inputText = ReadLine("Enter a string: ", "sample");
 
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ConsoleClear();
 
         var reversedText = inputText.value.split("").reverse().join("");

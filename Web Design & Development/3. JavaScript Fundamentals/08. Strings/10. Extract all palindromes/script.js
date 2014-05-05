@@ -20,7 +20,7 @@ function extractPalindromes(text) {
     var currentWord = "";
     var regex = /\b\w+\b/g;
 
-    while (currentWord = regex.exec(text)) {
+    while (currentWord = regex.exec(text)) { /* regex-exec -> Gets matches one-by-one*/
         if (isPalindrome(currentWord[0])) {
             palindromes.push(currentWord[0]);
         }

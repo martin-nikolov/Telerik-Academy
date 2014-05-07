@@ -1,9 +1,9 @@
-﻿(function () {
+﻿(function() {
     // Const
     var netscapeBrowserName = "Netscape";
 
     // Variables
-    var browserName = navigator.appName
+    var browserName = navigator.appName;
     var addScroll = false;
     var theLayer;
     var pX = 0;
@@ -14,7 +14,7 @@
     }
 
     if (browserName === netscapeBrowserName) {
-        document.captureEvents(Event.MOUSEMOVE)
+        document.captureEvents(Event.MOUSEMOVE);
     }
 
     document.onmousemove = mouseMove;
@@ -24,21 +24,24 @@
             pX = eventObj.pageX - 5;
             pY = eventObj.pageY;
 
-            if (document.layers['ToolTip'].visibility == 'show') {
-                PopToolTip();
+            if (document.hasOwnProperty('layers') &&
+                document.layers.hasOwnProperty('ToolTip') &&
+                document.layers['ToolTip'].visibility == 'show') {
+                popToolTip();
             }
         }
         else {
             pX = eventObj.x - 5;
             pY = eventObj.y;
 
-            if (document.all['ToolTip'].style.visibility == 'visible') {
-                PopToolTip();
+            if (document.all.hasOwnProperty('ToolTip') &&
+                document.all['ToolTip'].style.visibility == 'visible') {
+                popToolTip();
             }
         }
     }
 
-    function PopToolTip() {
+    function popToolTip() {
         if (browserName == netscapeBrowserName) {
             theLayer = eval('document.layers[\'ToolTip\']');
 
@@ -73,18 +76,12 @@
         }
     }
 
-    function HideToolTip() {
-        args = HideToolTip.arguments;
-
-        if (browserName === netscapeBrowserName) {
-            document.layers.ToolTip.visibility = "hide";
-        }
-        else {
-            document.all.ToolTip.style.visibility = "hidden";
-        }
+    function hideToolTip() {
+        hideElement('ToolTip');
     }
 
-    function HideMenu(menuName) {
+    // HideMenu();
+    function hideElement(menuName) {
         if (browserName == netscapeBrowserName) {
             document.layers[menuName].visibility = 'hide';
         }
@@ -93,7 +90,8 @@
         }
     }
 
-    function ShowMenu(menuName) {
+    // ShowMenu();
+    function showElement(menuName) {
         if (browserName == netscapeBrowserName) {
             theLayer = eval('document.layers[\'' + menuName + '\']');
             theLayer.visibility = 'show';

@@ -432,11 +432,11 @@ WHERE EmployeeId = 2
 --- the 'Sales' department along with all dependent records from 
 --- the pother tables. At the end rollback the transaction.
 
+BEGIN TRAN
+
 ALTER TABLE Departments
 DROP CONSTRAINT FK_Departments_Employees
 GO
-
-BEGIN TRAN
 
 DELETE e FROM Employees e
 JOIN Departments d
@@ -449,9 +449,30 @@ WHERE d.Name = 'Sales'
 --- 31. Start a database transaction and drop the table EmployeesProjects.
 --- Now how you could restore back the lost table data?
 
-BEGIN TRAN
+BEGIN TRANSACTION
 
 DROP TABLE EmployeesProjects
 
---- ROLLBACK TRAN
---- COMMIT TRAN
+--- ROLLBACK TRANSACTION
+--- COMMIT TRANSACTION
+
+--- 32. Find how to use temporary tables in SQL Server. Using temporary 
+--- tables backup all records from EmployeesProjects and restore them back 
+--- after dropping and re-creating the table.
+
+BEGIN TRANSACTION
+
+SELECT * 
+INTO #TempEmployeesProjects  --- Create new table
+FROM EmployeesProjects
+
+DROP TABLE EmployeesProjects
+
+SELECT * 
+INTO EmployeesProjects --- Create new table
+FROM #TempEmployeesProjects;
+
+DROP TABLE #TempEmployeesProjects
+
+--- ROLLBACK TRANSACTION
+--- COMMIT TRANSACTION

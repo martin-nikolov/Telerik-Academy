@@ -93,8 +93,9 @@ ORDER BY Salary desc
 --- their address. Use inner join with ON clause.
 
 SELECT e.EmployeeID, e.FirstName, e.LastName, a.AddressText, e.AddressID, a.AddressID
-FROM Employees e JOIN Addresses a
-ON e.AddressID = a.AddressID
+FROM Employees e 
+JOIN Addresses a
+    ON e.AddressID = a.AddressID
 
 --- 19. Write a SQL query to find all employees and their address. 
 --- Use equijoins (conditions in the WHERE clause).
@@ -107,8 +108,9 @@ WHERE e.AddressID = a.AddressID
 
 SELECT  e.EmployeeID, CONCAT(e.FirstName, ' ', e.LastName) AS Employee,
         m.EmployeeID AS ManagerID, CONCAT(m.FirstName, ' ', m.LastName) AS Manager
-FROM Employees e JOIN Employees m
-ON e.ManagerID = m.EmployeeID
+FROM Employees e 
+JOIN Employees m
+    ON e.ManagerID = m.EmployeeID
 
 --- 21. Write a SQL query to find all employees, along with 
 --- their manager and their address. Join the 3 tables: 
@@ -116,10 +118,11 @@ ON e.ManagerID = m.EmployeeID
 
 SELECT CONCAT(e.FirstName, ' ', e.LastName, ' [Address: ', a.AddressText, ']') AS Employee,
        CONCAT(m.FirstName, ' ', m.LastName) AS Manager
-FROM Employees e JOIN Employees m
-ON e.ManagerID = m.EmployeeID
+FROM Employees e 
+JOIN Employees m
+    ON e.ManagerID = m.EmployeeID
 JOIN Addresses a
-ON e.AddressID = a.AddressID
+    ON e.AddressID = a.AddressID
 
 --- 22. Write a SQL query to find all departments 
 --- and all town names as a single list. Use UNION.
@@ -138,21 +141,22 @@ FROM Towns t
 SELECT CONCAT(e.FirstName, ' ', e.LastName) as Employee,
        CONCAT(m.FirstName, ' ', m.LastName) as Manager
 FROM Employees m RIGHT JOIN Employees e
-ON e.ManagerID = m.EmployeeID
+    ON e.ManagerID = m.EmployeeID
 
 --- 
 
 SELECT CONCAT(e.FirstName, ' ', e.LastName) as Employee,
        CONCAT(m.FirstName, ' ', m.LastName) as Manager
 FROM Employees e LEFT JOIN Employees m
-ON e.ManagerID = m.EmployeeID
+    ON e.ManagerID = m.EmployeeID
 
 --- 24. Write a SQL query to find the names of all employees 
 --- from the departments "Sales" and "Finance" whose hire 
 --- year is between 1995 and 2005.
 
 SELECT CONCAT(e.FirstName, ' ', e.LastName, ' - ', d.Name, ', [', DatePart(YEAR, e.HireDate), ']')
-FROM Employees e JOIN Departments d
-ON d.Name IN ('Sales', 'Finance') 
-AND e.DepartmentID = d.DepartmentID 
-AND DatePart(YEAR, e.HireDate) BETWEEN 1995 AND 2005
+FROM Employees e 
+JOIN Departments d
+    ON e.DepartmentID = d.DepartmentID   
+WHERE d.Name IN ('Sales', 'Finance')
+    AND DATEPART(YEAR, e.HireDate) BETWEEN 1995 AND 2005

@@ -29,11 +29,11 @@ function checkWhereIsPoint(point) {
         return;
     }
 
-    var isInsideCircle = isInsideCircle(point);
-    var isInsideOfRectangle = isInsideRectangle(point);
+    var insideCircle = isInsideCircle(point);
+    var insideOfRectangle = isInsideRectangle(point);
 
     WriteLine(Format("Point({0}, {1}) is {2}side a circle and {3}side a rectangle.",
-        point.x, point.y, isInsideCircle ? "in" : "out", isInsideOfRectangle ? "in" : "out"));
+        point.x, point.y, insideCircle ? "in" : "out", insideOfRectangle ? "in" : "out"));
 }
 
 function isNumber(n) {

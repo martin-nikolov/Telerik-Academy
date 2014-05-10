@@ -2,7 +2,7 @@
 
 1. Create the following database diagram in SQL Server:
 
-  ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Databases/03.%20Database%20Modeling/01.%20Modeling%20a%20database%20-%20SQL%20Server/diagram.png)
+  ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Databases/03.%20Database%20Modeling/01.%20Clients%20Database%20(Diagram)%20-%20MSSQL/diagram.png)
   
 2. Fill some sample data in the tables with SQL Server Management Studio.
 

@@ -9,13 +9,15 @@
 * Define a function in the database TelerikAcademy that returns all Employee's names (first or middle or last name) and all town's names that are comprised of given set of letters. Example 'oistmiahf' will return 'Sofia', 'Smith', … but not 'Rob' and 'Guy'.
 * Using database cursor write a T-SQL script that scans all employees and their addresses and prints all pairs of employees that live in the same town.
 * * Write a T-SQL script that shows for each town a list of all employees that live in it. Sample output:
+
     ```sql
     Sofia -> Svetlin Nakov, Martin Kulov, George Denchev
     Ottawa -> Jose Saraiva
     ...
     ```
 * Define a .NET aggregate function StrConcat that takes as input a sequence of strings and return a single string that consists of the input strings separated by ','. For example the following SQL statement should return a single string:
+
     ```sql
-    SELECT StrConcat(FirstName + ' ' + LastName)
+    SELECT StrConcat(FirstName + ' ' + LastName) 
     FROM Employees
     ```

@@ -1,0 +1,9 @@
+-- SQLite
+
+CREATE TABLE [Books] (
+  [BookId] INTEGER PRIMARY KEY AUTOINCREMENT, 
+  [Title] NVARCHAR(100) NOT NULL, 
+  [Author] NVARCHAR(50) NOT NULL, 
+  [PublishDate] DATETIME, 
+  [ISBN] NVARCHAR(50)
+  );

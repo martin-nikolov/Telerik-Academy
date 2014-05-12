@@ -1,0 +1,13 @@
+-- MySQL Script
+
+CREATE DATABASE IF NOT EXISTS library;
+
+DROP TABLE IF EXISTS library.books;
+
+CREATE TABLE `library`.`books` (
+  `BookId` INT NOT NULL AUTO_INCREMENT,
+  `Title` VARCHAR(100) NOT NULL,
+  `Author` VARCHAR(50) NOT NULL,
+  `PublishDate` DATETIME NULL,
+  `ISBN` VARCHAR(50) NULL,
+  PRIMARY KEY (`BookId`));

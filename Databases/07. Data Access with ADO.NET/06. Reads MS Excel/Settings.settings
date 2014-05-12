@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DatabaseConnections" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="excelConnection" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=../../db.xlsx;Extended Properties='Excel 12.0 xml;HDR=Yes';</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

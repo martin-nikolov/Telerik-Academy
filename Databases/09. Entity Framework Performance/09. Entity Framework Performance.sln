@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Using Include statement", "01. Using Include statement\01. Using Include statement.csproj", "{FC6496CC-2F7C-4F17-9277-C13507AC941E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikAcademy.Models", "TelerikAcademy.Models\TelerikAcademy.Models.csproj", "{F07334C7-C6C8-4FE2-8C1E-0CE244CBE570}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Using ToList each time", "02. Using ToList each time\02. Using ToList each time.csproj", "{DC003764-1044-45AF-A435-E19B53EDAFFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC6496CC-2F7C-4F17-9277-C13507AC941E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6496CC-2F7C-4F17-9277-C13507AC941E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6496CC-2F7C-4F17-9277-C13507AC941E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6496CC-2F7C-4F17-9277-C13507AC941E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F07334C7-C6C8-4FE2-8C1E-0CE244CBE570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07334C7-C6C8-4FE2-8C1E-0CE244CBE570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07334C7-C6C8-4FE2-8C1E-0CE244CBE570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07334C7-C6C8-4FE2-8C1E-0CE244CBE570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC003764-1044-45AF-A435-E19B53EDAFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC003764-1044-45AF-A435-E19B53EDAFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC003764-1044-45AF-A435-E19B53EDAFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC003764-1044-45AF-A435-E19B53EDAFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

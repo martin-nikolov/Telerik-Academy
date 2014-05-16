@@ -7,7 +7,7 @@
 * Write a program that retrieves the images for all categories in the `Northwind` database and stores them as JPG files in the file system.
 * Create an Excel file with 2 columns: `name` and `score`:
 
-  ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Databases/03.%20Database%20Modeling/01.%20Clients%20Database%20(Diagram)%20-%20MSSQL/diagram.png)
+  ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Databases/07.%20Data%20Access%20with%20ADO.NET/06.%20Reads%20MS%20Excel/excel.png)
 
     Write a program that reads your MS Excel file through the OLE DB data provider and displays the name and score row by row.
 * Implement appending new rows to the Excel file.

@@ -9,4 +9,7 @@
 * [Data Access with ADO.NET](https://github.com/flextry/Telerik-Academy/tree/master/Databases/07.%20Data%20Access%20with%20ADO.NET) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/07.%20Data%20Access%20with%20ADO.NET/Readme.md)) - 12.05.2014
 * [Entity Framework](https://github.com/flextry/Telerik-Academy/tree/master/Databases/08.%20Entity%20Framework) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/08.%20Entity%20Framework/Readme.md)) - 16.05.2014
 * [Entity Framework Performance](https://github.com/flextry/Telerik-Academy/tree/master/Databases/09.%20Entity%20Framework%20Performance) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/09.%20Entity%20Framework%20Performance/Readme.md)) - 15.05.2014
+<<<<<<< HEAD
 * [Entity Framework Code First](https://github.com/flextry/Telerik-Academy/tree/master/Databases/09.%20Entity%20Framework%20Performance) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/09.%20Entity%20Framework%20Performance/Readme.md)) - 17.05.2014
+=======
+>>>>>>> 8adc34583c3cc187cca8b196b00f975af05b68bf

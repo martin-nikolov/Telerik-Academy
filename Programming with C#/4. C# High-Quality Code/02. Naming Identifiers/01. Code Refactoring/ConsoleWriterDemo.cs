@@ -3,11 +3,11 @@
     using System;
     using System.Linq;
 
-    public class ConsolePrinterDemo
+    public class ConsoleWriterDemo
     {
         public static void Main()
         {
-            ConsolePrinter consolePrinter = new ConsolePrinter();
+            ConsoleWriter consolePrinter = new ConsoleWriter();
             consolePrinter.Print(true);
         }
     }

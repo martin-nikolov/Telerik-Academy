@@ -10,7 +10,7 @@
         {
             HumanFactory humanFactory = new HumanFactory();
 
-            Human human = humanFactory.ProduceHuman("Ivan", 25, Sex.Male);
+            var human = humanFactory.ProduceHuman("Ivan", 25, Sex.Male);
 
             Console.WriteLine(human);
         }

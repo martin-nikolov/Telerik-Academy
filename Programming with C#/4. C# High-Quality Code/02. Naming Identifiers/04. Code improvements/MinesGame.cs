@@ -3,8 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Games.IOEngines;
     using Games.Interfaces;
+    using Games.IOEngines;
 
     public class MinesGame
     {

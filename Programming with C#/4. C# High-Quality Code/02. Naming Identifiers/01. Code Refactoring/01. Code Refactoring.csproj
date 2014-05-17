@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsolePrinterDemo.cs" />
-    <Compile Include="ConsolePrinter.cs" />
+    <Compile Include="ConsoleWriterDemo.cs" />
+    <Compile Include="ConsoleWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

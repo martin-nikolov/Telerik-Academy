@@ -1,4 +1,4 @@
-## Using Control Structures
+## Control Flow, Conditional Statements and Loops
 
 1. Refactor the following class using best practices for organizing straight-line code:
 

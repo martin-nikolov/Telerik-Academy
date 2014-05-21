@@ -1,4 +1,9 @@
-﻿taskName = "2. Comparing char arrays";
+﻿/*
+    2. Write a script that compares two char arrays 
+    lexicographically (letter by letter).
+*/
+
+taskName = "2. Comparing char arrays";
 
 function Main(bufferElement) {
 

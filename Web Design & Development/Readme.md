@@ -31,13 +31,3 @@
 * [Strings](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20Fundamentals/07.%20Strings) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20Fundamentals/07.%20Strings/Readme.md)) - 05.02.2014
 * [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202012-2013%20-%20JavaScript%20Exam%201)
 * [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Exam%201)
-
-## CSS - Exams
-1. [Telerik 2012-2013 - CSS Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202012-2013%20-%20CSS%20Exam) - 5x3 exercises
-* [Telerik 2013-2014 - CSS Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20CSS%20Exam) - 3x3 exercises
-
-## JavaScript - Exams
-1. [Telerik 2012-2013 - JavaScript Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202012-2013%20-%20JavaScript%20Exam%201) - 2x3 + 8 exercises
-* [Telerik 2013-2014 - JavaScript Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Exam%201) - 2x4 exercises
-
-

@@ -8,4 +8,8 @@ Finish the `Poker` project given in the Visual Studio Solution "[homework.zip](h
 * Implement `IPokerHandsChecker.IsFlush(IHand)` method. Follow the official poker rules from Wikipedia: [List of Poker Hands](http://en.wikipedia.org/wiki/List_of_poker_hands).
 * Implement `IsFourOfAKind(IHand)` method. Did you test all the scenarios?
 * \* Implement the other check for poker hands: `IsHighCard(IHand hand)`, `IsOnePair(IHand hand)`, `IsTwoPair(IHand hand)`, `IsThreeOfAKind(IHand hand)`, `IsFullHouse(IHand hand)`, `IsStraight(IHand hand)` and `IsStraightFlush(IHand hand)`. Did you test all the scenarios well?
+<<<<<<< HEAD
 * \* Implement a card comparison logic for Poker hands (+ tests). `CompareHands(...)` should return -1, 0 or 1.
+=======
+* \* Implement a card comparison logic for Poker hands (+ tests). `CompareHands(...)` should return -1, 0 or 1.
+>>>>>>> 44ba6495d9b055fa410e3eb86fb4b4d1626f4cb3

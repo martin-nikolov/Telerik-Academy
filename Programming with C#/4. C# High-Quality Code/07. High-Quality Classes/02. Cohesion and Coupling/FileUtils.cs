@@ -15,7 +15,7 @@
             int indexOfLastDot = fileName.LastIndexOf(".");
             if (indexOfLastDot == -1)
             {
-                return "";
+                return string.Empty;
             }
 
             string extension = fileName.Substring(indexOfLastDot + 1);

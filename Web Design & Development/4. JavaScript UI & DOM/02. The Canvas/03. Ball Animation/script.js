@@ -12,12 +12,10 @@ window.onload = function () {
     var strokeColor = 'white';
 
     function moveCircle() {
-        canvasCtx.clearRect(0, 0, canvasCtx.canvas.width, canvasCtx.canvas.height)
+        canvasCtx.clearRect(0, 0, canvasCtx.canvas.width, canvasCtx.canvas.height);
         drawCircle(canvasCtx, startX, startY, radius, 0, 360);
         canvasCtx.strokeStyle = strokeColor;
         canvasCtx.stroke();
-
-        requestAnimationFrame(moveCircle);
 
         startX += changeX;
         startY += changeY;
@@ -29,6 +27,8 @@ window.onload = function () {
         if (startY <= radius || startY >= canvasHeight - radius) {
             changeY *= -1;
         }
+
+        requestAnimationFrame(moveCircle, 10);
     }
 
     requestAnimationFrame(moveCircle);

@@ -32,7 +32,7 @@ function createColorInput(eventObj) {
     colorInput.onchange = function() {
         var textArea = document.getElementsByTagName('textarea')[0];
         textArea.style[eventObj] = colorInput.value;
-    }
+    };
 
     var div = document.createElement('div');
     div.style.marginTop = '10px';

@@ -1,0 +1,148 @@
+﻿input[type=text] {
+    margin: 0 0 5px 5px;
+    width: 300px;
+    font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+    font-size: 15px;
+    color: #ffffff;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+input[type=text]:hover {
+    margin-top: 0px;
+    margin-bottom: 4px;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.solve-button {
+    display: block;
+    width: 150px;
+    height: 25px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #707070;
+    background-color: #DDDDDD;
+}
+
+.solve-button:hover, .solve-button:focus {
+    border: 1px solid #3C7FB1;
+    background-color: #BEE6FD;
+}
+
+#main-container {
+    width: 850px;
+    height: 400px;
+    padding: 0 8px 8px 8px;
+    border: 1px solid #C0C0C0;
+    background-color: #FBFBFB;
+}
+
+#inner-container {
+    height: 367px;
+    width: 99.5%;
+    border: 1px solid #D6D6D6;
+    background-color: #000000;
+    overflow: auto;
+}
+
+#console-container {
+    height: 700px;
+}
+
+#content {
+    overflow-wrap: break-word;
+    padding-left: 2px;
+    font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+    font-size: 15px;
+    color: #c0c0c0;
+}
+
+#title-bar {
+    padding-left: 0px;
+    margin-bottom: 7px;
+    cursor: default;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: -1;
+}
+
+#title-bar #icon {
+    padding: 7px 0 0 1px;
+    vertical-align: middle;
+}
+
+#title-bar #title-controls {
+    width: 92%;
+    display: inline-block;
+    float: right;
+    text-align: center;
+}
+
+#title-bar #title {
+    display: inline-block;
+    padding-top: 4px;
+    margin-left: 35px;
+    font-family: 'Segoe UI';
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+#title-bar #control-buttons {
+    float: right;
+    margin-right: -6px;
+}
+
+#title-bar #control-buttons img {
+    margin-bottom: 1px;
+}
+
+#title-bar #control-buttons #minimize-button {
+    width: 26px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+#title-bar #control-buttons #minimize-button img {
+    background-color: #282828;
+}
+
+#title-bar #control-buttons #minimize-button:hover {
+    background-color: #3665B3;
+}
+
+#title-bar #control-buttons #minimize-button:hover img {
+    background-color: white;
+}
+
+#title-bar #control-buttons #maximize-button {
+    width: 27px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+#title-bar #control-buttons #close-button {
+    height: 20px;
+    width: 45px;
+    margin-right: 6px;
+    background-color: #C75050;
+    border: none;
+    outline: none;
+}
+
+#title-bar #control-buttons #close-button:hover {
+    background-color: #E04343;
+}

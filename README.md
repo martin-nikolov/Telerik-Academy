@@ -93,6 +93,11 @@
 * [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202012-2013%20-%20JavaScript%20Exam%201)
 * [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Exam%201)
 
+## JavaScript UI & DOM 
+1. [Document Object Model](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/01.%20Document%20Object%20Model) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/01.%20Document%20Object%20Model/Readme.md)) - 30.05.2014
+* [The Canvas](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/02.%20The%20Canvas) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/02.%20The%20Canvas/Readme.md)) - 26.05.2014
+* [KineticJS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/03.%20KineticJS) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/03.%20KineticJS/Readme.md)) - 31.05.2014
+
 ## PHP Web-development
 1. [Creating an address book](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book/Readme.md)) - 22.09.2013
 * [Working with sessions and files](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/02.%20Working%20with%20sessions%20and%20files) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/02.%20Working%20with%20sessions%20and%20files/Readme.md)) - 29.09.2013

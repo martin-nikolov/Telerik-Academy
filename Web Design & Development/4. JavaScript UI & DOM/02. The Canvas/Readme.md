@@ -2,10 +2,10 @@
 
 1. Draw the following graphics using canvas:
 
-    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/01.%20The%20Canvas/first-task.png)
+    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/02.%20The%20Canvas/first-task.png)
 * Draw a circle that flies inside a box
     * When it reaches an edge, it should bounce that edge
-    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/01.%20The%20Canvas/ball.png)
+    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/02.%20The%20Canvas/ball.png)
 * *Create the famous game "Snake"
     * The snake is a sequence of rectangles/ellipses
     * The snake can move left, right, up or down

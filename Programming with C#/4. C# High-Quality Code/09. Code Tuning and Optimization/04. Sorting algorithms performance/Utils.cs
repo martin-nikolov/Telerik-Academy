@@ -1,6 +1,7 @@
 ﻿namespace Performance
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
 
     public static class Utils
@@ -41,6 +42,19 @@
             }
 
             return randomStrings.ToArray();
+        }
+
+        public static bool AreSequencesEqual<T>(IList<T> arr1, IList<T> arr2) where T : IComparable
+        {
+            for (int i = 0; i < arr1.Count; i++)
+            {
+                if (arr1[i].CompareTo(arr2[i]) != 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         private static char[] GetArrayWithRandomChars()

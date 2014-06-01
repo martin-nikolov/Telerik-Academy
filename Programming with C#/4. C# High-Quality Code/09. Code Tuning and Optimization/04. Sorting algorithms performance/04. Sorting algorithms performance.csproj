@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\ISorter.cs" />
+    <Compile Include="Algorithms\InsertionSortAlgorithm.cs" />
     <Compile Include="Algorithms\MergeSortAlgorithm.cs" />
     <Compile Include="AlgorithmsPerformance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -12,10 +12,18 @@ namespace Performance
     using System.Linq;
     using Performance.Algorithms;
 
+    /// <summary>
+    /// How it works:
+    ///     1) Test with no sorted random elements
+    ///     2) Test with sorted ascending elements
+    ///     3) Test with sorted descending elements
+    ///     4) After each performance test - function AreSequencesEqual(arr1, arr2) is executed
+    ///        to guarantee that all the arrays are correctly sorted
+    /// </summary>
     internal class AlgorithmsPerformance
     {
         private static readonly Stopwatch sw = new Stopwatch();
-        private const int Capacity = 10000; // test with 10 elements
+        private const int Capacity = 10000; // test it with 10 elements
 
         static void Main()
         {
@@ -100,11 +108,23 @@ namespace Performance
             Console.WriteLine("MergeSort: " + sw.Elapsed);
             
             #endregion
-
+            
+            #region [Insertion sort]
+            
+            var insertionSortCollection = randomIntegers.ToList();
+            
+            sw.Restart();
+            new InsertionSortAlgorithm<int>().Sort(insertionSortCollection);
+            sw.Stop();
+            
+            Console.WriteLine("InsertionSort: " + sw.Elapsed);
+            
+            #endregion
+            
             #region [Selection sort]
             
             var selectionSortCollection = randomIntegers.ToList();
-
+            
             sw.Restart();
             new SelectionSortAlgorithm<int>().Sort(selectionSortCollection);
             sw.Stop();
@@ -115,8 +135,9 @@ namespace Performance
 
             #region [Validate result]
 
-            if (!quickSortCollection.SequenceEqual(mergeSortCollection) ||
-                !mergeSortCollection.SequenceEqual(selectionSortCollection))
+            if (!Utils.AreSequencesEqual(quickSortCollection, mergeSortCollection) ||
+                !Utils.AreSequencesEqual(mergeSortCollection, selectionSortCollection) ||
+                !Utils.AreSequencesEqual(selectionSortCollection, insertionSortCollection))
             {
                 throw new ArgumentException("Sorting does not work correctly.");
             }
@@ -163,6 +184,18 @@ namespace Performance
             
             #endregion
             
+            #region [Insertion sort]
+            
+            var insertionSortCollection = randomDoubles.ToList();
+            
+            sw.Restart();
+            new InsertionSortAlgorithm<double>().Sort(insertionSortCollection);
+            sw.Stop();
+            
+            Console.WriteLine("InsertionSort: " + sw.Elapsed);
+            
+            #endregion
+            
             #region [Selection sort]
             
             var selectionSortCollection = randomDoubles.ToList();
@@ -177,8 +210,9 @@ namespace Performance
             
             #region [Validate result]
             
-            if (!quickSortCollection.SequenceEqual(mergeSortCollection) ||
-                !mergeSortCollection.SequenceEqual(selectionSortCollection))
+            if (!Utils.AreSequencesEqual(quickSortCollection, mergeSortCollection) ||
+                !Utils.AreSequencesEqual(mergeSortCollection, selectionSortCollection) ||
+                !Utils.AreSequencesEqual(selectionSortCollection, insertionSortCollection))
             {
                 throw new ArgumentException("Sorting does not work correctly.");
             }
@@ -200,47 +234,60 @@ namespace Performance
             {
                 Array.Reverse(randomStrings);
             }
-
+            
             #region [Quicksort]
-
+            
             var quickSortCollection = randomStrings.ToList();
             
             sw.Start();
             new QuickSortAlgorithm<string>().Sort(quickSortCollection);
             sw.Stop();
-
+            
             Console.WriteLine("QuickSort: " + sw.Elapsed);
-
+            
             #endregion
-
+            
             #region [Mergesort]
-
+            
             var mergeSortCollection = randomStrings.ToList();
             
             sw.Restart();
             new MergeSortAlgorithm<string>().Sort(mergeSortCollection);
             sw.Stop();
-
+            
             Console.WriteLine("MergeSort: " + sw.Elapsed);
-
+            
             #endregion
-
+            
+            #region [Insertion sort]
+            
+            var insertionSortCollection = randomStrings.ToList();
+            
+            sw.Restart();
+            new InsertionSortAlgorithm<string>().Sort(insertionSortCollection);
+            sw.Stop();
+            
+            Console.WriteLine("InsertionSort: " + sw.Elapsed);
+            
+            #endregion
+            
             #region [Selection sort]
-
+            
             var selectionSortCollection = randomStrings.ToList();
             
             sw.Restart();
             new SelectionSortAlgorithm<string>().Sort(selectionSortCollection);
             sw.Stop();
-
+            
             Console.WriteLine("SelectionSort: " + sw.Elapsed);
-
+            
             #endregion
 
             #region [Validate result]
                 
-            if (!quickSortCollection.SequenceEqual(mergeSortCollection) ||
-                !mergeSortCollection.SequenceEqual(selectionSortCollection))
+            if (!Utils.AreSequencesEqual(quickSortCollection, mergeSortCollection) ||
+                !Utils.AreSequencesEqual(mergeSortCollection, selectionSortCollection) ||
+                !Utils.AreSequencesEqual(selectionSortCollection, insertionSortCollection))
             {
                 throw new ArgumentException("Sorting does not work correctly.");
             }

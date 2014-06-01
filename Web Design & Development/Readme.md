@@ -31,3 +31,8 @@
 * [Strings](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20Fundamentals/07.%20Strings) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20Fundamentals/07.%20Strings/Readme.md)) - 05.02.2014
 * [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202012-2013%20-%20JavaScript%20Exam%201)
 * [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Exam%201)
+
+## JavaScript UI & DOM 
+1. [Document Object Model](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/01.%20Document%20Object%20Model) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/01.%20Document%20Object%20Model/Readme.md)) - 30.05.2014
+* [The Canvas](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/02.%20The%20Canvas) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/02.%20The%20Canvas/Readme.md)) - 26.05.2014
+* [KineticJS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/03.%20KineticJS) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/03.%20KineticJS/Readme.md)) - 31.05.2014

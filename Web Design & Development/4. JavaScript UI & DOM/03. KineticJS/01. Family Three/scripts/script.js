@@ -48,14 +48,11 @@ function initializeLayer() {
 }
 
 function parseData(data) {
-    var dataToJson = JSON.stringify(data);
-    var JsonToObject = JSON.parse(dataToJson);
-
     var result = [];
-    for (var i = 0; i < JsonToObject.length; i++) {
-        var node = new Node(JsonToObject[i].mother,
-            JsonToObject[i].father,
-            JsonToObject[i].children);
+    for (var i = 0; i < data.length; i++) {
+        var node = new Node(data[i].mother,
+            data[i].father,
+            data[i].children);
 
         result.push(node);
     }

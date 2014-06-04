@@ -47,7 +47,8 @@
 * [Code Tuning and Optimization](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/09.%20Code%20Tuning%20and%20Optimization) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/09.%20Code%20Tuning%20and%20Optimization/Readme.md)) - 25.05.2014
 * [Unit-Testing](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/10.%20Unit-Testing) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/10.%20Unit-Testing/Readme.md)) - 26.05.2014
 * [Test-Driven-Development](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/11.%20Test-Driven-Development) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/11.%20Test-Driven-Development/Readme.md)) - 28.05.2014
-
+* [Refactoring](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/12.%20Refactoring) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/12.%20Refactoring/Readme.md)) - 29.05.2014
+* 
 ## C# - Exams
 1. [Telerik 2011/2012 - C# Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%201) - 4x5 exercises
 * [Telerik 2011/2012 - C# Exam 2](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%202) - 5x5 exercises

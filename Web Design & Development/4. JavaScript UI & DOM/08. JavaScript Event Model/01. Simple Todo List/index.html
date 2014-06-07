@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Organizer</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <script data-main="scripts/main.js" src="scripts/require.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="navigation">
+                <span id="header"></span><span id="home" class="sprite"></span><span id="nav"></span><span id="nav-small"></span><span id="add-item" class="sprite"></span><span id="save-item" class="sprite"></span><span id="edit-item" class="sprite"></span><span id="delete-item" class="sprite"></span>
+            </div>
+
+            <div id="main-menu">
+                <span id="tasks"></span><span id="create-task"></span>
+            </div>
+
+            <div id="task-items"></div>
+
+            <div id="create-item">
+                <div id="create-item-wrapper" class="wrapper-gradient">
+                    <input id="task-title" type="text" placeholder="Task Title" maxlength="25" />
+
+                    <div id="priority">
+                        <input type="radio" value="Low" name="prior" id="low">
+                        <label for="low">Low</label>
+
+                        <input type="radio" value="Medium" name="prior" id="medium">
+                        <label for="medium">Medium</label>
+
+                        <input type="radio" value="High" name="prior" id="high">
+                        <label for="high">High</label>
+                    </div>
+
+                    <textarea id="task-content" placeholder="Task Content" maxlength="400"></textarea>
+                </div>
+            </div>
+
+            <div id="task-item-info">
+                <div id="task-item-info-wrapper" class="wrapper-gradient"></div>
+            </div>
+
+            <div id="messages">
+                <div id="saved">Note saved</div>
+                <div id="updated">Note updated</div>
+                <div id="deleted">Note deleted</div>
+            </div>
+        </div>
+    </body>
+</html>

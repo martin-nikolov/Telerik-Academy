@@ -1,7 +1,6 @@
 define(function(require) {
 
     // Include classes
-    var utils = require('scripts/Helper/utils.js');
     var SimpleOrganizer = require('scripts/Classes/SimpleOrganizer.js');
 
     var simpleOrganizer = new SimpleOrganizer();

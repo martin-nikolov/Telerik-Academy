@@ -1,0 +1,26 @@
+{
+  "name": "GitHub extension @ by Martin Nikolov",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "homepage_url": "http://github.com/flextry",
+  "icons": {
+    "16": "icons/github.png",
+    "48": "icons/github128.png",
+    "128": "icons/github128.png"
+  },
+  "permissions": [
+    "https://github.com/*"
+  ],
+  "page_action": {
+    "default_icon": "icons/github.png"
+  },
+  "content_scripts": [{
+    "matches": [
+      "https://www.github.com/*",
+      "https://github.com/*"
+    ],
+    "js": [
+      "src/inject/inject.js"
+    ]
+  }]
+}

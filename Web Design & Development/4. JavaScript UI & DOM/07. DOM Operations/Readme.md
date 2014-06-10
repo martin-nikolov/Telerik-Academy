@@ -1,4 +1,4 @@
-## DOM Manipulation
+## DOM Operations
 
 1. Write a script that creates a number of `div` elements. Each `div` element must have the following
     * Random `width` and `height` between `20px` and `100px`

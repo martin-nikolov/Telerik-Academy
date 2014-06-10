@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task 1 - Vanilla JavaScript</title>
+</head>
+<body>
+	<div id="root">
+		<h1>The Calendar</h1>
+		<div id="calendar-container">
+		</div>	
+	</div>
+	<script src="script.js"></script>
+	<script>
+		var events = [{
+			title: '22 Exam',
+			date: '22',
+			hour: '10:00',
+			duration: '60'
+		}, {
+			title: '9 Exam',
+			date: '9',
+			hour: '10:00',
+			duration: '60'
+		}];
+		createCalendar('#calendar-container', events);
+	</script>
+</body>
+</html>

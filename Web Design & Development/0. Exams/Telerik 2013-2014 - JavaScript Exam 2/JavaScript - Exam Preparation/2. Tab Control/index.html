@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task 2 - jQuery</title>
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+	<div id="root" style="margin-top:150px; margin-left:150px;">
+		<div id="tabs-container">
+			<div class="tab-item">
+				<strong class="tab-item-title">Title 1</strong>
+				<div class="tab-item-content">
+					<h1>Title 1</h1>
+					<div class="content">
+						<p>Contens of the first tab. This is completely meaningless text, <strong>just</strong> to show how the content should look like</p>
+						<ul>
+							<li>And</li>
+							<li>there</li>
+							<li>is</li>
+							<li>a list</li>
+							<li>with <a href="#">link</a></li>					
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="tab-item">
+				<strong class="tab-item-title">Title 2</strong>
+				<div class="tab-item-content">
+					<h1>Title 2</h1>
+				</div>
+			</div><div class="tab-item">
+				<strong class="tab-item-title">Title 3</strong>
+				<div class="tab-item-content">					
+					<h1>Title 3</h1>
+				</div>
+			</div><div class="tab-item">
+				<strong class="tab-item-title">Title 4</strong>
+				<div class="tab-item-content">					
+					<h1>Title 4</h1>
+				</div>
+			</div><div class="tab-item">
+				<strong class="tab-item-title">Title 5</strong>
+				<div class="tab-item-content">					
+					<h1>Title 5</h1>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/scripts.js"></script>
+	<script>
+		$(function () {
+			$('#tabs-container').tabs();
+		});
+	</script>
+</body>
+</html>

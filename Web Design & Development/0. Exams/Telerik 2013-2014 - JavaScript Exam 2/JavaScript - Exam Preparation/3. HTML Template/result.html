@@ -1,0 +1,50 @@
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>Task 3 - Handlebars</title>	
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="book-items-container">
+		<ul class="books-list">			
+			<li class="book-item">
+				<a href="#" data-id="1">
+					<strong class="book-title">JavaScript: The good parts</strong><span class="author">by Douglas Crockford</span>
+				</a>
+			</li>
+			<li class="book-item">
+				<a href="#" data-id="2">
+					<strong class="book-title">Secrets of the JavaScript Ninja</strong><span class="author">by John Resig</span>
+				</a>
+			</li>
+			<li class="book-item">
+				<a href="#" data-id="3">
+					<strong class="book-title">Core HTML5 Canvas: Graphics, Animation, and Game Development</strong><span class="author">by David Geary</span>
+				</a>
+			</li>		
+			<li class="book-item">
+				<a href="#" data-id="4">
+					<strong class="book-title">JavaScript Patterns</strong><span class="author">by Stoyan Stefanov</span>
+				</a>
+			</li>			
+		</ul>
+	</div>
+	<script id="books-list-template" type='text/x-handlebars-template'>
+		<!--content -->
+	</script>
+	<script id="book-details-template" type='text/x-handlebars-template'>
+		<!--content -->
+	</script>
+	<div id="book-details-container">
+		<div class="book-details">
+			<h2 class="book-title">
+				JavaScript: The good parts
+			</h2>
+			<p><span class="isbn">0596517742</span></p>
+			<p>Published on <span class="publish-date">May 2008</span> by <strong class="author">Douglas Crockford</strong></p>
+			<p class="description">Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and released in a hurry before it could be refined. This authoritative book scrapes away these bad features to reveal a subset of JavaScript that's more reliable, readable, and maintainable than the language as a whole—a subset you can use to create truly extensible and efficient code. Considered the JavaScript expert by many people in the development community, author Douglas Crockford identifies the abundance of good ideas that make JavaScript an outstanding object-oriented programming language-ideas such as functions, loose typing, dynamic objects, and an expressive object literal notation. Unfortunately, these good ideas are mixed in with bad and downright awful ideas, like a programming model based on global variables.</p>
+		</div>
+	</div>
+	<script src="handlebars.min.js"></script>
+	<script src="scripts.js"></script>
+
+</body></html>

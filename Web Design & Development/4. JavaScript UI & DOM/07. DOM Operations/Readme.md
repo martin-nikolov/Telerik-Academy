@@ -10,7 +10,6 @@
     * Random `border-color`
     * Random `border-width` between `1px` and `20px`
 * Write a script that creates 5 `div` elements and moves them in circular path with interval of 100 milliseconds
-* Write a script that shims `querySelector` and `querySelectorAll` in older browsers
 * Create a `textarea` and two `input`s with `type="color"`
     * Make the font `color` of the text area as the value of the first color `input`
     * Make the `background-color` of the `textarea` as the value of the second `input`

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Task 3 - Handlebars</title>	
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 	<div id="book-items-container">
@@ -11,10 +11,27 @@
 	<div id="book-details-container">
 	</div>
 	<script id="books-list-template" type='text/x-handlebars-template'>
+		<ul class="books-list">			
+			{{#each books}}
+			<li class="book-item">
+				<a href="#" data-id="{{id}}">
+					<strong class="book-title">{{title}}</strong><span class="author">by {{author}}</span>
+				</a>
+			</li>
+			{{/each}}
+		</ul>
 	</script>
 	<script id="book-details-template" type='text/x-handlebars-template'>
+	  <div class="book-details">
+			<h2 class="book-title">
+				{{title}}
+			</h2>
+			<p><span class="isbn">{{isbn}}</span></p>
+			<p>Published on <span class="publish-date">{{publicationDate}}</span> by <strong class="author">{{author}}</strong></p>
+			<p class="description">{{description}}</p>
+		</div>
 	</script>
-	<script src="handlebars.min.js"></script>
-	<script src="scripts.js"></script>
+	<script src="scripts/handlebars.min.js"></script>
+	<script src="scripts/scripts.js"></script>
 </body>
 </html>

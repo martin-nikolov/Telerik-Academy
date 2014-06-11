@@ -6,7 +6,7 @@ var MAX_DAYS = 30;
 function createCalendar(selector, events) {
     var table = createTable(events);
     setStylesAndEvents(table);
-    
+
     var container = document.querySelector(selector);
     container.appendChild(table);
 }
@@ -63,11 +63,14 @@ function setStylesAndEvents(table) {
         allTitles[i].style.textAlign = 'center';
         allTitles[i].style.background = '#CCCCCC';
         allTitles[i].style.borderBottom = '1px solid black';
-
-        allTitles[i].addEventListener('click', onClick, false);
-        allTitles[i].addEventListener('mouseover', onMouseOver, false);
-        allTitles[i].addEventListener('mouseout', onMouseOut, false);
+        addEventListeners(allTitles[i]);
     }
+}
+
+function addEventListeners(element) {
+    element.addEventListener('click', onClick, false);
+    element.addEventListener('mouseover', onMouseOver, false);
+    element.addEventListener('mouseout', onMouseOut, false);
 }
 
 function onClick(e) {
@@ -77,12 +80,12 @@ function onClick(e) {
         var lastCurrent = document.getElementById('current');
         if (lastCurrent) {
             lastCurrent.removeAttribute('id');
-            lastCurrent.addEventListener('mouseover', onMouseOver, false);
-            lastCurrent.addEventListener('mouseout', onMouseOut, false);
+            addEventListeners(lastCurrent);
             onMouseOut(lastCurrent);
         }
 
         e.target.setAttribute('id', 'current');
+        e.target.removeEventListener('click', onClick, false);
         e.target.removeEventListener('mouseover', onMouseOver, false);
         e.target.removeEventListener('mouseout', onMouseOut, false);
     }

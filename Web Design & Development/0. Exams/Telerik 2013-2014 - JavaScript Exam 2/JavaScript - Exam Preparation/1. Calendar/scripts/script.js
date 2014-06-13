@@ -5,7 +5,8 @@ var MAX_DAYS = 30;
 
 function createCalendar(selector, events) {
     var table = createTable(events);
-    setStylesAndEvents(table);
+    setStyles(table);
+    setEvents(table);
 
     var container = document.querySelector(selector);
     container.appendChild(table);
@@ -46,7 +47,7 @@ function createTable(events) {
     return table;
 }
 
-function setStylesAndEvents(table) {
+function setStyles(table) {
     table.style.borderCollapse = 'collapse';
 
     var allTds = table.getElementsByClassName('day-col');
@@ -63,40 +64,44 @@ function setStylesAndEvents(table) {
         allTitles[i].style.textAlign = 'center';
         allTitles[i].style.background = '#CCCCCC';
         allTitles[i].style.borderBottom = '1px solid black';
-        addEventListeners(allTitles[i]);
     }
 }
 
-function addEventListeners(element) {
-    element.addEventListener('click', onClick, false);
-    element.addEventListener('mouseover', onMouseOver, false);
-    element.addEventListener('mouseout', onMouseOut, false);
+function setEvents(table) {
+    table.addEventListener('click', onClick, false);
+    table.addEventListener('mouseover', onMouseOver, false);
+    table.addEventListener('mouseout', onMouseOut, false);
 }
 
 function onClick(e) {
-    e.target.style.background = '#FFFFFF';
-
-    if (e.target.className.indexOf('day-title') != -1) {
+    if (isTitle(e)) {
         var lastCurrent = document.getElementById('current');
         if (lastCurrent) {
             lastCurrent.removeAttribute('id');
-            addEventListeners(lastCurrent);
             onMouseOut(lastCurrent);
         }
 
+        e.target.style.background = '#FFFFFF';
         e.target.setAttribute('id', 'current');
-        e.target.removeEventListener('click', onClick, false);
-        e.target.removeEventListener('mouseover', onMouseOver, false);
-        e.target.removeEventListener('mouseout', onMouseOut, false);
     }
 }
 
 function onMouseOver(e) {
-    (e.target || e).style.background = '#999999';
+    if (isTitle(e)) {
+        (e.target || e).style.background = '#999999';
+    }
 }
 
 function onMouseOut(e) {
-    (e.target || e).style.background = '#CCCCCC';
+    if (isTitle(e)) {
+        (e.target || e).style.background = '#CCCCCC';
+    }
+}
+
+function isTitle(e) {
+    e = e.target || e;
+    return e.className.indexOf('day-title') !== -1 &&
+        e.id !== 'current';
 }
 
 function titleToString(currentDay) {

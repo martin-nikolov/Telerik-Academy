@@ -1,0 +1,26 @@
+div.message {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    width: 200px;
+    
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    opacity: 1;
+}
+
+.error {
+    color: white;
+    background: red;
+}
+
+.warning {
+    color: white;
+    background: orange;
+}
+
+.success {
+    color: white;
+    background: green;
+}

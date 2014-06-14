@@ -22,7 +22,6 @@
         …
       </ul>
     </div>
-  
   ```
   
   * And make it work as SELECT node

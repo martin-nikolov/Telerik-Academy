@@ -42,8 +42,8 @@
 
 `$('#books-list').listview(books);`
 
-    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/03.%20ListView/example-2.png)
-
+![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/03.%20ListView/example-2.png)
+    
 ```html
     <table>
       <thead>

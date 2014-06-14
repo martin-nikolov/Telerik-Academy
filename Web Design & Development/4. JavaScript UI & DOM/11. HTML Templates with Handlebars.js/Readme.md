@@ -2,13 +2,13 @@
 
 1. Create the following using Handlebars.js
 
-    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/05.%20Raphael.js/01.%20Telerik%20Logo/telerik-logo.png)
+    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/01.%20Simple%20table/index.png)
 
 * Create a dynamic select using Handlebars.js
     * The options in the select should be generated based on a collection of JavaScript objects
     * Example:
 
-    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/05.%20Raphael.js/01.%20Telerik%20Logo/telerik-logo.png)
+    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/02.%20Select%20menu/index.png)
 
 ```js
     var items = [{
@@ -27,7 +27,7 @@
     * Using the data-template attribute set the ID of the template to use for the items
     * Must work with different collections and templates
 
-    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/05.%20Raphael.js/01.%20Telerik%20Logo/telerik-logo.png)
+    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/03.%20ListView/example-1.png)
 
 ```html
     <ul id="books-list"     data-template="book-item-template"></ul>
@@ -41,6 +41,8 @@
 ```
 
 `$('#books-list').listview(books);`
+
+    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/03.%20ListView/example-2.png)
 
 ```html
     <table>

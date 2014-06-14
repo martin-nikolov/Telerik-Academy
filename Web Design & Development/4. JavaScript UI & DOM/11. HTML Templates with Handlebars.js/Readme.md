@@ -10,17 +10,17 @@
 
     ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/02.%20Select%20menu/index.png)
 
-```js
-    var items = [{
-      value: 1,
-      text: 'One'
-    }, {
-      value: 2,
-      text: 'Two'
-    }];
-
-    var selectHTML = selectTemplate(items);
-```
+    ```js
+        var items = [{
+          value: 1,
+          text: 'One'
+        }, {
+          value: 2,
+          text: 'Two'
+        }];
+    
+        var selectHTML = selectTemplate(items);
+    ```
 
 3. *Create a jQuery plugin for ListView
     * Apply a template for each item of a collection

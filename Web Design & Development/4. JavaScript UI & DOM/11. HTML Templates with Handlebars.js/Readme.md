@@ -29,55 +29,55 @@
 
     ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/03.%20ListView/example-1.png)
 
-```html
-    <ul id="books-list"     data-template="book-item-template"></ul>
-    <script id="book-item-template" type="…">
-      <li class="book-item">
-        <a href="/#books/{{id}}">
-          <strong>{{title}}</strong>
-        </a>
-      </li> 
-    </script>
-```
-
-`$('#books-list').listview(books);`
+    ```html
+        <ul id="books-list"     data-template="book-item-template"></ul>
+        <script id="book-item-template" type="…">
+          <li class="book-item">
+            <a href="/#books/{{id}}">
+              <strong>{{title}}</strong>
+            </a>
+          </li> 
+        </script>
+    ```
+    
+    `$('#books-list').listview(books);`
 
 ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/03.%20ListView/example-2.png)
     
-```html
-    <table>
-      <thead>
-        <tr><th>#</th><th>Name</th><th>Mark</th></tr>
-      </thead>
-      <tbody id="students-table"          data-template="students-row-template">   
-      </tbody>
-    </table>
-    <script id="students-row-template" type="…">
-      <tr class="student-row">
-        <td>{{number}}</td>
-        <td>{{name}}</td>
-        <td>{{mark}}</td>
-      </tr>     
-    </script>
-```
-
-`$('#students-table').listview(students);`
+    ```html
+        <table>
+          <thead>
+            <tr><th>#</th><th>Name</th><th>Mark</th></tr>
+          </thead>
+          <tbody id="students-table"          data-template="students-row-template">   
+          </tbody>
+        </table>
+        <script id="students-row-template" type="…">
+          <tr class="student-row">
+            <td>{{number}}</td>
+            <td>{{name}}</td>
+            <td>{{mark}}</td>
+          </tr>     
+        </script>
+    ```
+    
+    `$('#students-table').listview(students);`
 
 4. *Extend the previous task to set the template inside the DOM element, instead of setting it with data-template
 
-```html
-    <table>
-      <thead>
-        <tr><th>#</th><th>Name</th><th>Mark</th></tr>
-      </thead>
-      <tbody id="students-table">
-        <tr class="student-row">
-          <td>{{number}}</td>
-          <td>{{name}}</td>
-          <td>{{mark}}</td>
-        </tr>       
-      </tbody>
-    </table>
-```
-
-`$('#students-table').listview(students);`
+    ```html
+        <table>
+          <thead>
+            <tr><th>#</th><th>Name</th><th>Mark</th></tr>
+          </thead>
+          <tbody id="students-table">
+            <tr class="student-row">
+              <td>{{number}}</td>
+              <td>{{name}}</td>
+              <td>{{mark}}</td>
+            </tr>       
+          </tbody>
+        </table>
+    ```
+    
+    `$('#students-table').listview(students);`

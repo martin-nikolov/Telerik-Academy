@@ -4,7 +4,7 @@
 
     ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/01.%20Simple%20table/index.png)
 
-* Create a dynamic select using Handlebars.js
+2. Create a dynamic select using Handlebars.js
     * The options in the select should be generated based on a collection of JavaScript objects
     * Example:
 
@@ -22,7 +22,7 @@
     var selectHTML = selectTemplate(items);
 ```
 
-* *Create a jQuery plugin for ListView
+3. *Create a jQuery plugin for ListView
     * Apply a template for each item of a collection
     * Using the data-template attribute set the ID of the template to use for the items
     * Must work with different collections and templates
@@ -63,7 +63,7 @@
 
 `$('#students-table').listview(students);`
 
-* *Extend the previous task to set the template inside the DOM element, instead of setting it with data-template
+4. *Extend the previous task to set the template inside the DOM element, instead of setting it with data-template
 
 ```html
     <table>

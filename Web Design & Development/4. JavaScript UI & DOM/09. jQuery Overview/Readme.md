@@ -21,6 +21,3 @@
     * Each GridView can have at most one header row
   * Each row can have  a nested GridView
     * Each GridView can have at most one nested GridView
-  
-
-

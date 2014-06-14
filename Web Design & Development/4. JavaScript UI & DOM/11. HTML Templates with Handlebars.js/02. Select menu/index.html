@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script src="scripts/handlebars-v1.3.0.js"></script>
+        <script src="scripts/scripts.js"></script>
+    </head>
+    <body>
+        <select name="menu" id="select-menu" data-template="select-menu-template"></select>
+
+        <script id="select-option-template" type="text/x-handlebars-template">
+            {{#each items}}
+                <option value="{{value}}">{{text}}</option>
+            {{/each}}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="scripts/jquery-2.1.1.min.js"></script>
+        <script src="scripts/handlebars-v1.3.0.js"></script>
+        <script src="scripts/scripts.js"></script>
+    </head>
+    <body>
+        <ul id="books-list" data-template="book-item-template"></ul>
+
+        <script id="book-item-template" type="text/x-handlebars-template">
+            <li class="book-item">
+                <a href="/#books/{{id}}">
+                    <strong>{{title}}</strong>
+                </a>
+            </li> 
+        </script>
+
+        <script>
+            window.onload = function() {
+               var books = [{
+                    id: '100',
+                    title: 'JavaScript: The Good Parts'
+                }, {
+                    id: '101',
+                    title: 'Secrets of JavaScript Ninja'
+                }, {
+                    id: '102',
+                    title: 'Core HTML5 Canvas'
+                }, {
+                    id: '103',
+                    title: 'JavaScript Patterns'
+                }];
+
+                $('#books-list').listView(books);
+            }
+        </script>
+    </body>
+</html>

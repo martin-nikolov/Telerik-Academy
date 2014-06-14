@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="scripts/jquery-2.1.1.min.js"></script>
+        <script src="scripts/handlebars-v1.3.0.js"></script>
+        <script src="scripts/scripts.js"></script>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr><th>#</th><th>Name</th><th>Mark</th></tr>
+            </thead>
+                <tbody id="students-table" data-template="students-row-template">   
+            </tbody>
+        </table>
+
+        <script id="students-row-template" type="text/x-handlebars-template">
+            <tr class="student-row">
+                <td>{{number}}</td>
+                <td>{{name}}</td>
+                <td>{{mark}}</td>
+            </tr>
+        </script>
+
+        <script>
+           var students = [{
+                number: '1',
+                name: 'Peter Petrov',
+                mark: '5.5'
+            }, {
+                number: '2',
+                name: 'Stamat Georgiev',
+                mark: '4.7'
+            }, {
+                number: '3',
+                name: 'Maria Todorova',
+                mark: '6'
+            }, {
+                number: '4',
+                name: 'Georgi Geshov',
+                mark: '3.7'
+            }];
+
+            $('#students-table').listView(students);
+        </script>
+    </body>
+</html>

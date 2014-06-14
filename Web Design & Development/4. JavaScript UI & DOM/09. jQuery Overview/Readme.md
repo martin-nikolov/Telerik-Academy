@@ -13,7 +13,7 @@
   * Each student has first name,last name and grade
   * Use jQuery
 
-    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/02.%20Select%20menu/index.png) 
+    ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/09.%20jQuery%20Overview/03.%20Student%20table/index.png) 
   
 * Implement functionality to change the background color of a web page
   * i.e. select a color from a color picker and set this color as the background color of the page

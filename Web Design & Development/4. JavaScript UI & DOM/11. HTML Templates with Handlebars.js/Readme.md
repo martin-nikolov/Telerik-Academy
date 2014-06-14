@@ -12,11 +12,14 @@
 
     ```js
         var items = [{
-          value: 1,
-          text: 'One'
+            value: 1,
+            text: 'One'
         }, {
-          value: 2,
-          text: 'Two'
+            value: 2,
+            text: 'Two'
+        }, {
+            value: 3,
+            text: 'Three'
         }];
     
         var selectHTML = selectTemplate(items);
@@ -30,13 +33,14 @@
     ![Screenshot](https://raw.githubusercontent.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/11.%20HTML%20Templates%20with%20Handlebars.js/03.%20ListView/example-1.png) 
 
     ```html
-        <ul id="books-list"     data-template="book-item-template"></ul>
-        <script id="book-item-template" type="…">
-          <li class="book-item">
-            <a href="/#books/{{id}}">
-              <strong>{{title}}</strong>
-            </a>
-          </li> 
+        <ul id="books-list" data-template="book-item-template"></ul>
+
+        <script id="book-item-template" type="text/x-handlebars-template">
+            <li class="book-item">
+                <a href="/#books/{{id}}">
+                    <strong>{{title}}</strong>
+                </a>
+            </li> 
         </script>
     ```
     
@@ -46,18 +50,19 @@
     
     ```html
         <table>
-          <thead>
-            <tr><th>#</th><th>Name</th><th>Mark</th></tr>
-          </thead>
-          <tbody id="students-table"          data-template="students-row-template">   
-          </tbody>
+            <thead>
+                <tr><th>#</th><th>Name</th><th>Mark</th></tr>
+            </thead>
+                <tbody id="students-table" data-template="students-row-template">   
+            </tbody>
         </table>
-        <script id="students-row-template" type="…">
-          <tr class="student-row">
-            <td>{{number}}</td>
-            <td>{{name}}</td>
-            <td>{{mark}}</td>
-          </tr>     
+
+        <script id="students-row-template" type="text/x-handlebars-template">
+            <tr class="student-row">
+                <td>{{number}}</td>
+                <td>{{name}}</td>
+                <td>{{mark}}</td>
+            </tr>
         </script>
     ```
     
@@ -67,16 +72,16 @@
 
     ```html
         <table>
-          <thead>
-            <tr><th>#</th><th>Name</th><th>Mark</th></tr>
-          </thead>
-          <tbody id="students-table">
-            <tr class="student-row">
-              <td>{{number}}</td>
-              <td>{{name}}</td>
-              <td>{{mark}}</td>
-            </tr>       
-          </tbody>
+            <thead>
+                <tr><th>#</th><th>Name</th><th>Mark</th></tr>
+            </thead>
+            <tbody id="students-table">
+                <tr class="student-row">
+                    <td>{{number}}</td>
+                    <td>{{name}}</td>
+                    <td>{{mark}}</td>
+                </tr>       
+            </tbody>
         </table>
     ```
     

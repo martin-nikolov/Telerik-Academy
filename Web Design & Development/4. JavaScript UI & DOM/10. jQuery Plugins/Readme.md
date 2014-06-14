@@ -11,9 +11,7 @@
   ```
   
   `$('#dropdown').dropdown();`
-  
   * Produces the following HTML:
-
   ```html
     <select id="dropdown" style="display: none">…</select>
     <div class="dropdown-list-container">
@@ -23,10 +21,9 @@
       </ul>
     </div>
   ```
-  
   * And make it work as SELECT node
     * Selecting an one of the generated LI nodes, selects the corresponding OPTION node
-      * So `$('#dropdown:selected')` works
+      * So `$('#dropdown:selected')` works 
 
 2. *Create a jQuery plugin for fading in/fading out message box
   * Creates a message box

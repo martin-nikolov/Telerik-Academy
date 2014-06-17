@@ -1,0 +1,37 @@
+.grid-view {
+    width: 800px;
+    height: 200px;
+    padding-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    display: table;
+}
+
+.nested-grid-views .grid-view {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+table.grid-view-table {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+table.grid-view-table td, table.grid-view-table tr, table.grid-view-table th,tbody, thead {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+div.grid-view-controls {
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+button.grid-view-control {
+    font-size: 16px;
+}

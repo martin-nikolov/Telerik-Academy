@@ -1,0 +1,89 @@
+body {
+    font-size: 14px;
+    font-family: 'Corbel';
+}
+
+#authors:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+#authors {
+    display: block;
+    width: 700px;
+}
+
+    #authors .box {
+        float: left;
+        width: 330px;
+        border: 1px solid #ccc;
+        background: #fff;
+        padding: 1px;
+        margin: 0 30px 30px 0;
+    }
+
+        #authors .box:hover {
+            -moz-box-shadow: 0 0 5px rgb(255, 120, 0);
+            -webkit-box-shadow: 0 0 5px rgb(255, 120, 0);
+            box-shadow: 0 0 5px rgb(255, 120, 0);
+        }
+
+        #authors .box.right {
+            float: right;
+            margin: 0 0 30px;
+        }
+
+        #authors .box .inner {
+            padding: 10px 0 10px 10px;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+
+            #authors .box .inner img {
+                float: left;
+                border: 1px solid #ccc;
+                background: #fff;
+                padding: 1px;
+                margin: 0 10px 0 0;
+            }
+
+            #authors .box .inner div {
+                float: left;
+                width: 206px;
+                height: 133px;
+                position: relative;
+            }
+
+            #authors .box .inner h3 {
+                margin: 0 0 4px;
+                padding: 0;
+                font: 400 16px/18px Arial;
+                color: #3d5f5e;
+                border: none;
+                background: none;
+            }
+
+            #authors .box .inner p {
+                margin: 0;
+                padding: 0;
+                font: 400 11px/14px Arial;
+                text-align: left;
+            }
+
+            #authors .box .inner ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font: 400 11px Arial;
+                position: absolute;
+                bottom: 0;
+                height: 32px;
+            }
+
+            #authors .box .inner li {
+                height: 16px;
+                line-height: 16px;
+                background: url(images/icons.gif) no-repeat 0 0;
+                padding: 0 0 0 20px;
+            }

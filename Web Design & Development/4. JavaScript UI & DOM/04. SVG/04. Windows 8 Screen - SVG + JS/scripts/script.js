@@ -74,7 +74,7 @@ function drawScreen(svgNs) {
         new Image(x + 265, y + 315, 61, 60, 'images/18.jpg'),
         new Image(x + 417, y + 318, 61, 60, 'images/19.jpg'),
         new Image(x + 517, y + 317, 61, 60, 'images/20.jpg'),
-        new Image(x + 640, y + 300, 195, 95, 'images/21.jpg'),
+        new Image(x + 640, y + 300, 195, 95, 'images/21.jpg')
     ];
 
     var texts = [
@@ -111,9 +111,7 @@ function drawScreen(svgNs) {
         new Text('Desktop', x + 15, y + 387, 10, '#F6FDFF'),
         new Text('Weather', x + 215, y + 387, 10, '#F6FDFF'),
         new Text('Camera', x + 415, y + 387, 10, '#F6FDFF'),
-        new Text('Xbox Comparison', x + 507, y + 387, 10, '#F6FDFF'),
-
-
+        new Text('Xbox Comparison', x + 507, y + 387, 10, '#F6FDFF')
     ];
 
     drawRectangles(svgNs, rows);

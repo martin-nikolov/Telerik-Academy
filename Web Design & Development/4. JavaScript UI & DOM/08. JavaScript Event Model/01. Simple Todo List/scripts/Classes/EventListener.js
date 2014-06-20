@@ -90,9 +90,9 @@ define(function(require) {
                 _currentItemForEdition.task.priority = selectedPriority;
 
                 // Edit (refresh) item view with the new value
-                _currentItemForEdition.items[0].innerHTML = Nav.taskTitle.value;
+                _currentItemForEdition.items[0].innerHTML = Utils.getShortStringIfNecessary(_currentItemForEdition.task.taskTitle, 20);
                 _currentItemForEdition.items[1].innerHTML = Utils.getFormattedDate(_currentItemForEdition.task.taskDate);
-                _currentItemForEdition.items[2].innerHTML = Nav.taskContent.value;
+                _currentItemForEdition.items[2].innerHTML = Utils.getShortStringIfNecessary(_currentItemForEdition.task.taskContent, 30);
 
                 Utils.removePriorityClasses(_currentItemForEdition.items[3]);
                 _currentItemForEdition.items[3].classList.add(selectedPriority.toLowerCase()); // HACK
@@ -102,7 +102,7 @@ define(function(require) {
                 setTimeout(function() {
                     Utils.hideElements(Nav.updatedMsg);
                 }, 1500);
-            } 
+            }
             else {
                 _addItemToViewRef(new Task(Nav.taskTitle.value, Nav.taskContent.value, selectedPriority));
 

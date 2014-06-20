@@ -69,6 +69,10 @@ define(function(require) {
         }
     }
 
+    function getShortStringIfNecessary(string, maxLen) {
+        return string.length > maxLen ? string.substr(0, maxLen) + '...' : string;
+    }
+
     return {
         PRIORITY: PRIORITY,
         getFormattedDate: getFormattedDate,
@@ -79,6 +83,7 @@ define(function(require) {
         removeAllChilds: removeAllChilds,
         addChildsRange: addChildsRange,
         createElement: createElement,
-        removePriorityClasses: removePriorityClasses
+        removePriorityClasses: removePriorityClasses,
+        getShortStringIfNecessary: getShortStringIfNecessary
     };
 });

@@ -18,10 +18,10 @@ define(function(require) {
 
     function _addItemToView(task) {
         var taskTitle = Utils.createElement('div', 'item-title');
-        taskTitle.innerHTML = task.taskTitle.length > 18 ? task.taskTitle.substr(0, 18) + '...' : task.taskTitle;
+        taskTitle.innerHTML = _getShortStringIfNecessary(task.taskTitle, 20);
 
         var taskContent = Utils.createElement('div', 'item-content');
-        taskContent.innerHTML = task.taskContent.length > 25 ? task.taskContent.substr(0, 25) + '...' : task.taskContent;
+        taskContent.innerHTML = Utils.getShortStringIfNecessary(task.taskContent, 30);
 
         var taskDate = Utils.createElement('div', 'item-date');
         taskDate.innerHTML = Utils.getFormattedDate(task.taskDate);
@@ -52,6 +52,10 @@ define(function(require) {
 
         var taskPriorImg = Utils.createElement('img', 'item-priority-img prior ' + task.priority.toLowerCase());
         Utils.addChildsRange(Nav.itemInfoInnerContainer, taskTitle, taskDate, taskContent, taskPriorImg);
+    }
+
+    function _getShortStringIfNecessary(string, maxLen) {
+        return string.length > maxLen ? string.substr(0, maxLen) + '...' : string;
     }
 
     SimpleOrganizer.prototype.addTask = function(taskTitle, taskContent, priority) {

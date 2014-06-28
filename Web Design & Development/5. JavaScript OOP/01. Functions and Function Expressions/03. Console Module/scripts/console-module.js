@@ -1,34 +1,35 @@
 var ConsoleModule = (function() {
-    var _selfContainer = null;
-
     function ConsoleModule(container) {
-        _selfContainer = $(container);
+        this.container = $(container);
+        return this;
     }
 
     ConsoleModule.prototype = {
-        writeLine: function(message) { _writeLine(_format(arguments)); },
-        writeError: function(message) { _writeError(_format(arguments)); },
-        writeWarning: function(message) { _writeWarning(_format(arguments)); }
+        writeLine: function(message) { _writeLine.call(this, _format(arguments)); },
+        writeError: function(message) { _writeError.call(this, _format(arguments)); },
+        writeWarning: function(message) { _writeWarning.call(this, _format(arguments)); }
     }
 
     function _writeLine(message) {
         var span = null;
-        if (message && _selfContainer) {
-            var span = $('<span/>').text(message);
-            _selfContainer.append(span);
+        if (this.container) {
+            if (message) {
+                span = $('<span/>').text(message);
+            }
+
+            this.container.append(span);
+            this.container.append($('<br/>'));
         }
-        _selfContainer.append($('<br/>'));
-        
         return span;
     }
 
     function _writeError(message) {
-        var errorMsg = _writeLine(message);
+        var errorMsg = _writeLine.call(this, message);
         if (errorMsg) errorMsg.css('color', 'red');
     }
 
     function _writeWarning(message) {
-        var warningMsg = _writeLine(message);
+        var warningMsg = _writeLine.call(this, message);
         if (warningMsg) warningMsg.css('color', 'yellow');
     }
 

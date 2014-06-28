@@ -24,7 +24,6 @@
        domModule.appendToBuffer("container", div.cloneNode(true));
        domModule.appendToBuffer("#main-nav ul", navItem);
    ```
-
 * Create a module that works with moving div nodes. Implement functionality for:
     * Add new moving div element to the DOM
         * The module should generate random background, font and border colors for the div element

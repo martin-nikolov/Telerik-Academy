@@ -40,7 +40,6 @@
        //add element with ellipse movement
        movingShapes.add("ellipse");
    ```
-
 * Create a module to work with the console object. Implement functionality for:
     * Writing a line to the console 
     * Writing a line to the console using a format

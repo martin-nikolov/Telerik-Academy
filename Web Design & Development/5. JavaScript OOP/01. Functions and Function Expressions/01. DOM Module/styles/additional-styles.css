@@ -1,0 +1,35 @@
+ul, li, a { 
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+div > ul > li { 
+    margin-bottom: 5px;
+}
+
+div > ul > li > a { 
+    font-size: 17px;
+}
+
+ul li li {
+    padding-left: 25px;
+}
+
+li {
+    list-style-image: url('../images/arrow.png');
+}
+
+li > ul {
+    margin-left: -15px;
+    margin-top: 5px;
+}
+
+li > ul li {
+    padding: 0;
+    list-style-image: url('../images/nested.png');
+}
+
+li a {
+    cursor: default;
+}

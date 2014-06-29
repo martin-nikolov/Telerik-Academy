@@ -1,0 +1,12 @@
+<#@ output extension=".txt" #>
+<#
+    string[] errors = { "Critical", "Stopper", "Fail" };
+    for(int i = 0; i < 25; i++)
+    {
+        var result = i;
+        if (i % 3 == 0) result *= 3;
+
+        WriteLine("Error: #{0} -> {1}", 
+                    result.ToString(), errors[i % errors.Length]);
+    }
+#>

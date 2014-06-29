@@ -1,0 +1,26 @@
+Teamwork in which I participate:
+    + TFS
+    + Google Code
+    + GitHub
+
+----------------------------------------------------
+
+Course: C# Fundamentals II - Teamwork, September 2013 (Console Game)
+TFS: https://goofy.visualstudio.com
+
+    • Username: telerik-tfs@hotmail.com
+    • Password: Teleriktest1
+
+----------------------------------------------------
+
+Course: C# Object-Oriented Programming - Teamwork, December 2013 (UI Business Application)
+Google Code: https://code.google.com/p/team-dioptase/
+
+----------------------------------------------------
+
+Course: JavaScript UI & DOM - Teamwork, June 2014 (Client-side JavaScript application)
+GitHub: https://github.com/Reiko-JS
+
+----------------------------------------------------
+
+Annonymous project: https://gist.github.com/4948e37cd0f305245f7a

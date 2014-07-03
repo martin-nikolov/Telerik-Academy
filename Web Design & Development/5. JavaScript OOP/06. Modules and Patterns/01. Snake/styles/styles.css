@@ -1,0 +1,63 @@
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+body {
+    text-align: center;
+    background-color: #AECE8B;
+}
+
+#wrapper {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+
+#score {
+    padding-left: 25px;
+    text-align: left;
+    font-size: 40px;
+}
+
+#top10 {
+    display: inline-block;
+    text-align: right;
+    float: right;
+    padding-right: 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#the-canvas {
+    border: 2px solid #3C4830;
+    background-color: #8EB367;
+}
+
+#game-over {
+    display: none;
+    position: absolute;
+    left: 140px;
+    top: 140px;
+}
+
+#game-over {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+#game-over:hover {
+  -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}

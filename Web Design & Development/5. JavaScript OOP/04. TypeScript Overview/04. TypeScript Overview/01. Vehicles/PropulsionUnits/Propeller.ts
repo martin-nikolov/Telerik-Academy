@@ -18,11 +18,11 @@
         }
 
         public get spinDirection(): string {
-            return this._spinDirection.toString();
+            return this._spinDirection === SpinDirection.Clockwise ? "Clockwise" : "CounterClockwise";
         }
 
         public changeSpinDirection(): void {
-            var isClockwise = this._spinDirection === SpinDirection.Clockwise;
+            var isClockwise = (this._spinDirection === SpinDirection.Clockwise);
             this._spinDirection = SpinDirection[isClockwise ? "CounterClockwise" : "Clockwise"];
         }
 

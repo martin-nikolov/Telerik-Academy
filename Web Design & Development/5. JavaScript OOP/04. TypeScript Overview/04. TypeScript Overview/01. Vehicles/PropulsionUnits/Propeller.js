@@ -32,14 +32,14 @@ var PropulsionUnits;
 
         Object.defineProperty(Propeller.prototype, "spinDirection", {
             get: function () {
-                return this._spinDirection.toString();
+                return this._spinDirection === 0 /* Clockwise */ ? "Clockwise" : "CounterClockwise";
             },
             enumerable: true,
             configurable: true
         });
 
         Propeller.prototype.changeSpinDirection = function () {
-            var isClockwise = this._spinDirection === 0 /* Clockwise */;
+            var isClockwise = (this._spinDirection === 0 /* Clockwise */);
             this._spinDirection = SpinDirection[isClockwise ? "CounterClockwise" : "Clockwise"];
         };
 

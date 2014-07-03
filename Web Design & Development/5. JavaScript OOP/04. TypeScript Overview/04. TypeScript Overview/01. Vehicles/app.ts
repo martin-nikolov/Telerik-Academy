@@ -91,9 +91,9 @@ console.group("Propulsion Units");
     {
         var propeller = new PU.Propeller(12);
         console.log("Fins Count: " + propeller.finsCount);
-        console.log("Acceleration (Direction: {0}): {1}", propeller.spinDirection, propeller.produceAcceleration());
+        console.log("Acceleration (Direction: %s): %f", propeller.spinDirection, propeller.produceAcceleration());
         propeller.changeSpinDirection();
-        console.log("Acceleration (Direction: {0}): {1}", propeller.spinDirection, propeller.produceAcceleration());
+        console.log("Acceleration (Direction: %s): %f", propeller.spinDirection, propeller.produceAcceleration());
     }
     console.groupEnd();
 

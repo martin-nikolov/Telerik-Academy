@@ -1,0 +1,22 @@
+.person-item {
+    width: 110px;
+    margin-bottom: 5px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    font-size: 14px;
+    text-align: center;
+}
+
+.person-item p.person-age {
+    margin: 0;
+}
+
+.person-item img {
+    width: 80px;
+}
+
+.person-item:not(#selected-item) {
+    display: none;
+}

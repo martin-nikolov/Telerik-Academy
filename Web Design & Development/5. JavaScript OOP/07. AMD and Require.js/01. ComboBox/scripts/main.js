@@ -4,7 +4,7 @@
         paths: {
             "jquery": "library/jquery-2.1.1.min",
             "handlebars": "library/handlebars-v1.3.0",
-            "controls": "Controls",
+            "controls": "controls",
         }
     });
 

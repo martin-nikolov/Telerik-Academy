@@ -1,20 +1,18 @@
 define(function(require) {
     var ScoreBoard = (function() {
-        var _scoreContainer = null;
-        var _showTop10 = null;
-
+        // Constructor
         function ScoreBoard(scoreContainerId, showTop10Id) {
             var that = this;
-            _scoreContainer = document.getElementById(scoreContainerId);
-            _showTop10 = document.getElementById(showTop10Id);
-            _showTop10.onclick = function() {
+            this._scoreContainer = document.getElementById(scoreContainerId);
+            this._showTop10 = document.getElementById(showTop10Id);
+            this._showTop10.onclick = function() {
                 that.showTop10();
             };
             this.update(0);
         }
 
-        function _getScore() {
-            var score = parseInt(_scoreContainer.textContent) || 0;
+        ScoreBoard.prototype._getScore = function() {
+            var score = parseInt(this._scoreContainer.textContent) || 0;
             return score;
         }
 
@@ -46,13 +44,13 @@ define(function(require) {
         ScoreBoard.prototype.addPlayerToRank = function() {
             var playerName = prompt("Enter your name: ");
             if (playerName) {
-                localStorage.setItem(playerName, _getScore());
+                localStorage.setItem(playerName, this._getScore());
             }
         };
 
         ScoreBoard.prototype.update = function(value) {
-            var result = _getScore() + value;
-            _scoreContainer.textContent = result;
+            var result = this._getScore() + value;
+            this._scoreContainer.textContent = result;
         };
 
         return ScoreBoard;

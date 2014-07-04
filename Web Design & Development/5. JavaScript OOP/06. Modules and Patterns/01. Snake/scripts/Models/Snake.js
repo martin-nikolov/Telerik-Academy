@@ -9,58 +9,56 @@ define(function(require) {
             left: { X: -1, Y: 0 },
             right: { X: 1, Y: 0 }
         };
-        var _currentDir = "right";
-        var _snakeBody = null;
-        var _head = null;
 
         // Constructor
         function Snake(posX, posY) {
-            _head = new GameBlock(posX, posY);
-            _snakeBody = new Array(GlobalConsts.SNAKE_SIZE - 1);
+            this._head = new GameBlock(posX, posY);
+            this._snakeBody = new Array(GlobalConsts.SNAKE_SIZE - 1);
+            this._currentDir = "right";
 
-            for (var i = 1; i <= _snakeBody.length; i++) {
-                _snakeBody[i - 1] = new GameBlock(posX - GlobalConsts.BLOCK_SIZE * i, posY);
+            for (var i = 1; i <= this._snakeBody.length; i++) {
+                this._snakeBody[i - 1] = new GameBlock(posX - GlobalConsts.BLOCK_SIZE * i, posY);
             }
 
-            _snakeBody.unshift(_head);
+            this._snakeBody.unshift(this._head);
         }
 
         Snake.prototype.getHead = function() {
-            return _head;
+            return this._head;
         };
 
         Snake.prototype.getBody = function() {
-            return _snakeBody;
+            return this._snakeBody;
         };
 
         Snake.prototype.grow = function() {
-            var tail = _snakeBody[_snakeBody.length - 1];
+            var tail = this._snakeBody[this._snakeBody.length - 1];
             var newTail = new GameBlock(tail.X - GlobalConsts.BLOCK_SIZE,
                                         tail.Y + GlobalConsts.BLOCK_SIZE);
-            _snakeBody.push(newTail);
+            this._snakeBody.push(newTail);
         };
 
         Snake.prototype.changeDirection = function(dir) {
             if (!dir) {
                 return;
             }
-            else if ((_currentDir == 'left' || _currentDir == 'right') && (dir == 'left' || dir == 'right')) {
+            else if ((this._currentDir == 'left' || this._currentDir == 'right') && (dir == 'left' || dir == 'right')) {
                 return;
             }
-            else if ((_currentDir == 'up' || _currentDir == 'down') && (dir == 'up' || dir == 'down')) {
+            else if ((this._currentDir == 'up' || this._currentDir == 'down') && (dir == 'up' || dir == 'down')) {
                 return;
             }
 
-            _currentDir = dir;
+            this._currentDir = dir;
         };
 
         Snake.prototype.move = function() {
-            var currentDir = _dirs[_currentDir];
-            var tail = _snakeBody.pop();
-            tail = new GameBlock(_head.X + GlobalConsts.BLOCK_SIZE * currentDir.X,
-                                 _head.Y + GlobalConsts.BLOCK_SIZE * currentDir.Y);
-            _head = tail;
-            _snakeBody.unshift(tail);
+            var currentDir = _dirs[this._currentDir];
+            var tail = this._snakeBody.pop();
+            tail = new GameBlock(this._head.X + GlobalConsts.BLOCK_SIZE * currentDir.X,
+                                 this._head.Y + GlobalConsts.BLOCK_SIZE * currentDir.Y);
+            this._head = tail;
+            this._snakeBody.unshift(tail);
         };
 
         return Snake;

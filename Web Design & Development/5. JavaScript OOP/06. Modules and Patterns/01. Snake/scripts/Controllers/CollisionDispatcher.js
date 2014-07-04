@@ -1,27 +1,24 @@
 define(function(require) {
     var CollisionDispatcher = (function() {
-        var _context = null;
-        var _gameElements = null;
-
         // Constructor
         function CollisionDispatcher(canvasCtx, gameElements) {
-            _context = canvasCtx;
-            _gameElements = gameElements;
+            this._context = canvasCtx;
+            this._gameElements = gameElements;
         }
 
-        function _isOutOfGameField(snakeHead) {
+        CollisionDispatcher.prototype._isOutOfGameField = function(snakeHead) {
             var hitVerticalWall = (snakeHead.X - snakeHead.blockSize < 0 ||
-                snakeHead.X + snakeHead.blockSize >= _context.canvas.width);
+                snakeHead.X + snakeHead.blockSize >= this._context.canvas.width);
 
             var hitHorizontalWall = (snakeHead.Y - snakeHead.blockSize < 0 ||
-                snakeHead.Y + snakeHead.blockSize >= _context.canvas.height);
+                snakeHead.Y + snakeHead.blockSize >= this._context.canvas.height);
 
             if (hitVerticalWall || hitHorizontalWall) {
                 return true;
             }
         }
 
-        function _isSnakeEatItself(snakeHead, snakeBody) {
+        CollisionDispatcher.prototype._isSnakeEatItself = function(snakeHead, snakeBody) {
             for (var i = 1; i < snakeBody.length; i++) {
                 if (snakeHead.X === snakeBody[i].X && snakeHead.Y === snakeBody[i].Y) {
                     return true;
@@ -30,21 +27,21 @@ define(function(require) {
         }
 
         CollisionDispatcher.prototype.invalidStepDispatch = function() {
-            var snakeHead = _gameElements['snake'].getHead();
-            var snakeBody = _gameElements['snake'].getBody();
+            var snakeHead = this._gameElements['snake'].getHead();
+            var snakeBody = this._gameElements['snake'].getBody();
 
-            if (_isOutOfGameField(snakeHead)) {
+            if (this._isOutOfGameField(snakeHead)) {
                 return true;
             }
 
-            if (_isSnakeEatItself(snakeHead, snakeBody)) {
+            if (this._isSnakeEatItself(snakeHead, snakeBody)) {
                 return true;
             }
         };
 
         CollisionDispatcher.prototype.foodDispatchIndex = function() {
-            var snakeHead = _gameElements['snake'].getHead();
-            var food = _gameElements['food'];
+            var snakeHead = this._gameElements['snake'].getHead();
+            var food = this._gameElements['food'];
 
             for (var i = 0; i < food.length; i++) {
                 if (snakeHead.X === food[i].X && food[i].Y === snakeHead.Y) {

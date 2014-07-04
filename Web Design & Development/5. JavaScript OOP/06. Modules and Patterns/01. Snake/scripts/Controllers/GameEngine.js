@@ -28,7 +28,7 @@ define(function(require) {
             _gameBlockDrawer = new GameBlockDrawer(_canvasCtx);
             _keyboardEventHandler = new KeyboardEventHandler();
             _collisionDispatcher = new CollisionDispatcher(_canvasCtx, _gameElements);
-console.log(_scoreBoard);
+
             _addGameObjects();
             _updateCanvasDrawing();
         }

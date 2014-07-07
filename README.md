@@ -2,6 +2,15 @@
 
 <p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming%20with%20C%23/Codes/Other/Telerik.png" /></a></p>
 
+| Programming                                                         | Web development                                    | Software Technologies
+| ------------------------------------------------------------------- | -------------------------------------------------- | ---------------------------- |
+| [C# - Part I](c---part-i)                                           | [HTML Basics](html-basics)                         | [Databases](databases)
+| [C# - Part II](c---part-ii)                                         | [CSS Styling](css-styling)                         | 
+| [C# - Object-Oriented Programming](c---object-oriented-programming) | [JavaScript Fundamentals](javascript-fundamentals) |
+| [C# - High-Quality Code](c---high-quality-code)                     | [JavaScript UI & DOM](javascript-ui--dom)          |
+| [C# - Exams](c---exams)                                             | [JavaScript OOP](javascript-oop)                   |
+| [Algo Academy](algo-academy)                                        | [PHP Web-development](php-web-development)         |
+
 # Programming with C# 
 
 ## C# - Part I
@@ -127,6 +136,22 @@
 * [Indeces and JOIN in MySQL](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/04.%20Indeces%20and%20JOIN%20in%20MySQL) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/04.%20Indeces%20and%20JOIN%20in%20MySQL/Readme.md)) - 15.10.2013
 * [Solution to Homework of Lecture 4th](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/05.%20Solution%20to%20Homework%20of%20Lecture%204th) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/05.%20Solution%20to%20Homework%20of%20Lecture%204th/Readme.md)) - 21.10.2013
 * [Views](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/06.%20Views) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/06.%20Views/Readme.md)) - 27.10.2013
+
+# Software Technologies
+
+## Databases
+
+1. [Database Systems - Overview](https://github.com/flextry/Telerik-Academy/tree/master/Databases/01.%20Database%20Systems%20-%20Overview) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/01.%20Database%20Systems%20-%20Overview/Readme.md)) - 28.04.2013
+* [Introduction to SQL Server and MySQL](https://github.com/flextry/Telerik-Academy/tree/master/Databases/02.%20Introduction%20to%20SQL%20Server%20and%20MySQL) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/02.%20Introduction%20to%20SQL%20Server%20and%20MySQL/Readme.md)) - 29.04.2013
+* [Database Modeling](https://github.com/flextry/Telerik-Academy/tree/master/Databases/03.%20Database%20Modeling) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/03.%20Database%20Modeling/Readme.md)) - 03.05.2014
+* [Structured Query Language (SQL)](https://github.com/flextry/Telerik-Academy/tree/master/Databases/04.%20Structured%20Query%20Language%20(SQL)) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/04.%20Structured%20Query%20Language%20(SQL)/Readme.md)) - 04.05.2014
+* [Advanced SQL](https://github.com/flextry/Telerik-Academy/tree/master/Databases/05.%20Advanced%20SQL) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/05.%20Advanced%20SQL/Readme.md)) - 08.05.2014
+* [Transact SQL (T-SQL)](https://github.com/flextry/Telerik-Academy/tree/master/Databases/06.%20Transact%20SQL%20(T-SQL)) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/06.%20Transact%20SQL%20(T-SQL)/Readme.md)) - 10.05.2014
+* [Data Access with ADO.NET](https://github.com/flextry/Telerik-Academy/tree/master/Databases/07.%20Data%20Access%20with%20ADO.NET) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/07.%20Data%20Access%20with%20ADO.NET/Readme.md)) - 12.05.2014
+* [Entity Framework](https://github.com/flextry/Telerik-Academy/tree/master/Databases/08.%20Entity%20Framework) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/08.%20Entity%20Framework/Readme.md)) - 16.05.2014
+* [Entity Framework Performance](https://github.com/flextry/Telerik-Academy/tree/master/Databases/09.%20Entity%20Framework%20Performance) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/09.%20Entity%20Framework%20Performance/Readme.md)) - 15.05.2014
+* [Entity Framework Code First](https://github.com/flextry/Telerik-Academy/tree/master/Databases/10.%20Entity%20Framework%20Code%20First) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/10.%20Entity%20Framework%20Code%20First/Readme.md)) - 17.05.2014
+* [Database Performance](https://github.com/flextry/Telerik-Academy/tree/master/Databases/11.%20Database%20Performance) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/11.%20Database%20Performance/Readme.md)) - 21.05.2014
 
 # Projects
 

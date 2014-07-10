@@ -90,7 +90,7 @@ define(['tech-store-models/item'], function(Item) {
             },
             countItemsByType: function() {
                 var typesCountDict, i, len, itemType;
-                typesCountDict = [];
+                typesCountDict = {};
 
                 for (i = 0, len = this._items.length; i < len; i++) {
                     itemType = this._items[i].type;
@@ -121,9 +121,12 @@ define(['tech-store-models/item'], function(Item) {
         };
 
         function byNameComparer(item1, item2) {
-            if (item1.name < item2.name) return -1;
-            if (item1.name > item2.name) return 1;
-            return 0;
+            var itemName1 = item1.name.toLowerCase(),
+                itemName2 = item2.name.toLowerCase();
+
+            if (itemName1 < itemName2) return -1;
+            else if (itemName1 > itemName2) return 1;
+            else return 0;
         }
 
         function byPriceComparer(item1, item2) {

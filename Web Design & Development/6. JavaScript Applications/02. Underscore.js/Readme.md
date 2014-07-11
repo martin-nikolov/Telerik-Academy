@@ -8,4 +8,3 @@
     * Each animal can have 2, 4, 6, 8 or 100 legs
 * By a given collection of books, find the most popular author (the author with the biggest number of books)
 * By an array of people find the most common first and last name. Use underscore.
-

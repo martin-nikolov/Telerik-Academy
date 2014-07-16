@@ -6,8 +6,6 @@
 taskName = "6. Most popular author";
 
 function Main(bufferElement) {
-    SetConsoleSize(500);
-
     var booksCount = 10;
     var randomBooks = Library.BooksGenerator.getRandomBooks(booksCount);
     WriteLine('-- Random books --');

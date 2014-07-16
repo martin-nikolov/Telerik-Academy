@@ -6,8 +6,6 @@
 taskName = "5. Total number of legs";
 
 function Main(bufferElement) {
-    SetConsoleSize(500);
-
     var animalsCount = 10;
     var animals = Zoo.AnimalsGenerator.getRandomAnimals(animalsCount);
     WriteLine('-- Random animals --');

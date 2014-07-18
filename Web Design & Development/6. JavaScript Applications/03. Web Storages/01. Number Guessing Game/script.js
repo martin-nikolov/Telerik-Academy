@@ -27,7 +27,8 @@ function printResult(result) {
         disableInputs();
         registerPlayerInScoreboard();
         showScoreboardButton();
-    } else {
+    }
+    else {
         WriteLine("Sheep(s): " + result.sheepCount);
         WriteLine("Ram(s): " + result.ramCount);
     }

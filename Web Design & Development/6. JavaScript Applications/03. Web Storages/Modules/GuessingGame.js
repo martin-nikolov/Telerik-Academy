@@ -35,14 +35,9 @@ var GuessingGame = (function() {
     };
 
     function _throwErrorIfNotValidNumber(chosenNumber) {
-        var isNumberInRange = chosenNumber >= Math.pow(10, NUMBER_OF_DIGITS - 1) && chosenNumber < Math.pow(10, NUMBER_OF_DIGITS),
-            isNumberValidType = (typeof chosenNumber === 'number');
-
+        var isNumberInRange = chosenNumber >= Math.pow(10, NUMBER_OF_DIGITS - 1) && chosenNumber < Math.pow(10, NUMBER_OF_DIGITS);
         if (!isNumberInRange) {
-            throw new Error("Chosen number is not in range!")
-        }
-        else if (!isNumberValidType) {
-            throw new Error("Chosen number is not valid type!")
+            throw new Error("Chosen number is not in valid range!")
         }
 
         var chosenNumberAsArray = chosenNumber.toString().split(""),
@@ -54,7 +49,6 @@ var GuessingGame = (function() {
             if (!digitCounter[digit]) {
                 uniqueDigitsCount++;
             }
-
             digitCounter[digit] = true;
         }
 
@@ -82,8 +76,7 @@ var GuessingGame = (function() {
     }
 
     function _generateNumber() {
-        var randomIndex,
-            randomDigit,
+        var randomIndex, randomDigit,
             possibleDigits = POSSIBLE_DIGITS.slice(0),
             numberAsArray = [];
 

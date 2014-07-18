@@ -6,7 +6,7 @@ function Main(bufferElement) {
 
     var inputNumber = ReadLine("Enter a 4-digit number: ", "", "number-input");
 
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ConsoleClear();
         try {
             var result = guessingGame.isNumberGuessed(inputNumber.value);
@@ -27,8 +27,7 @@ function printResult(result) {
         disableInputs();
         registerPlayerInScoreboard();
         showScoreboardButton();
-    }
-    else {
+    } else {
         WriteLine("Sheep(s): " + result.sheepCount);
         WriteLine("Ram(s): " + result.ramCount);
     }
@@ -45,7 +44,7 @@ function disableInputs() {
 function registerPlayerInScoreboard() {
     var playerName = ReadLine("Please enter your nickname: ");
     var isPlayerAlreadyAdded = false;
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         if (playerName.value && !isPlayerAlreadyAdded) {
             ScoreBoard.addPlayerToRank(playerName.value);
             isPlayerAlreadyAdded = true;
@@ -54,7 +53,7 @@ function registerPlayerInScoreboard() {
 }
 
 function showScoreboardButton() {
-    SetSolveButton(function () {
+    SetSolveButton(function() {
         ScoreBoard.showTop10();
     }, "See ranklist");
 }

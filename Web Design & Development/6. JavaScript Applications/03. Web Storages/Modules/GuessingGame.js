@@ -1,20 +1,20 @@
-var GuessingGame = (function () {
+var GuessingGame = (function() {
     'use strict';
 
     var NUMBER_OF_DIGITS = 4,
-        POSSIBLE_DIGITS = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
+        POSSIBLE_DIGITS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     function GuessingGame() {}
 
     GuessingGame.prototype = {
-        start: function () {
+        start: function() {
             this.secretNumber = _generateNumber();
 
             // For testing purpose
             console.log('You are trying to cheat!');
             console.log('Secret number is: ' + this.secretNumber);
         },
-        isNumberGuessed: function (chosenNumber) {
+        isNumberGuessed: function(chosenNumber) {
             chosenNumber = chosenNumber | 0;
 
             if (this.secretNumber === undefined) {

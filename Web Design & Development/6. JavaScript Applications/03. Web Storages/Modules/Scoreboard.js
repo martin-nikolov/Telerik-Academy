@@ -1,4 +1,4 @@
-var ScoreBoard = (function () {
+var ScoreBoard = (function() {
     function showTop10() {
         var top10Players = _getSortedTop10Players(),
             top10PlayersToString = [];
@@ -27,7 +27,7 @@ var ScoreBoard = (function () {
         }
 
         // Sort them by number of guessed numbers
-        top10.sort(function (a, b) {
+        top10.sort(function(a, b) {
             return b[1] - a[1];
         });
 

@@ -1,0 +1,107 @@
+body {
+    font: 12px arial;
+    color: #222;
+    text-align: center;
+    padding: 35px; }
+
+form, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    outline: none;
+}
+
+a {
+    font: 12px arial;
+}
+
+input.btn {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    width: 58px;
+    line-height: 21px;
+    margin: 5px 0 10px 0;
+    padding: 0;
+    border: 1px solid #707070;
+    background-color: #DDDDDD;
+}
+
+input.btn:hover, input.btn:focus {
+    border: 1px solid #3C7FB1;
+    background-color: #BEE6FD;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#chat-form, #login-form {
+    margin: 0 auto;
+    padding-bottom: 25px;
+    background: #EBF4FB;
+    width: 504px;
+    border: 1px solid #ACD8F0;
+}
+
+#login-form {
+    padding-top: 18px;
+}
+
+#login-form p {
+    margin: 5px;
+}
+
+#chatbox {
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 10px;
+    background: #fff;
+    height: 270px;
+    width: 430px;
+    border: 1px solid #ACD8F0;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#login-name {
+    height: 17px;
+}
+
+#usermsg {
+    width: 395px;
+    height: 21px;
+    border: 1px solid #ACD8F0;
+}
+
+#submit {
+    width: 60px;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.error-validation {
+    box-shadow: red 0px 0px 2.5pt 1pt;
+}
+
+#menu {
+    padding: 12.5px 25px 12.5px 25px;
+}
+
+.welcome {
+    float: left;
+}
+
+.logout {
+    float: right;
+}
+
+.msgln {
+    margin: 0 0 2px 0;
+}
+

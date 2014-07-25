@@ -1,5 +1,5 @@
 ﻿(function () {
-    var widgetId = '492726091031666688',
+    var widgetId = '345690956013633536',
         tweetsContainerId = 'tweets-container',
         numberOfTweetsToTake = 100,
         useLinks = true,

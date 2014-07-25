@@ -64,6 +64,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="includes\images\icon.png" />
+    <Content Include="includes\images\maximize-sign.png" />
+    <Content Include="includes\images\minimize-sign.png" />
+    <Content Include="includes\images\x-sign.png" />
+    <Content Include="includes\scripts\console.js" />
+    <Content Include="includes\scripts\jquery-2.1.1.min.js" />
+    <Content Include="includes\scripts\underscore-min.js" />
+    <Content Include="includes\styles\styles.css" />
     <Content Include="index.html" />
     <Content Include="scripts\data-persister.js" />
     <Content Include="scripts\http-requester.js" />

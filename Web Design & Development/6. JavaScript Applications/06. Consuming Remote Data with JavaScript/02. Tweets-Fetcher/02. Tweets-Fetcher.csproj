@@ -65,8 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
-    <Content Include="scripts\script.js" />
-    <Content Include="scripts\twitterFetcher.min.js" />
+    <Content Include="scripts\main.js" />
+    <Content Include="scripts\vendor\jquery.js" />
+    <Content Include="scripts\vendor\mustache.js" />
+    <Content Include="scripts\vendor\oauth.js" />
+    <Content Include="styles\bootstrap.css" />
     <Content Include="styles\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>

@@ -32,8 +32,14 @@ ul li:hover {
   float:left;
 }
 
+.error {
+    box-shadow: red 0 0 4pt 1pt;
+}
+
 .user {
   width:25%;
+  clear:left;
+
 }
 
 .tweet {
@@ -42,10 +48,6 @@ ul li:hover {
 
 .timePosted {
   width:15%;
-}
-
-.user {
-  clear:left;
 }
 
 .user a {

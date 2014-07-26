@@ -1,13 +1,80 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>Tweets</title>
-        <link href="styles/style.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="scripts/twitterFetcher.min.js"></script>
-        <script type="text/javascript" src="scripts/script.js"></script>
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <script type="text/javascript" src="scripts/vendor/mustache.js"></script>
+        <script type="text/javascript" src="scripts/vendor/oauth.js"></script>
+        <script type="text/javascript" src="scripts/vendor/jquery.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+        <style>
+            .control-label {
+                font-weight: bold;
+            }
+
+            .control-label.span1 {
+                width: 60px;
+            }
+            
+            .form-horizontal .control-group {
+                margin: 0 auto;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                width: 500px;
+            }
+
+            .form-horizontal .control-group dd.controls input.span4 {
+                width: 250px;
+                padding-left: 10px;
+            }
+
+            .form-horizontal .form-actions {
+                padding: 20px 0;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
+        <form class="form-horizontal" method="post">
+            <dl class="control-group">
+                <dt><label for="twitter-username" class="control-label">Twitter Username:</label></dt>
+
+                <dd class="controls">
+                    <input autofocus type="text" class="span4" name="twitter-username" id="twitter-username" placeholder="AJEnglish" />
+                </dd>
+            </dl>
+
+            <dl class="control-group">
+                <dt><label for="msg-count" class="control-label">Number of messages:</label></dt>
+
+                <dd class="controls">
+                    <input type="text" class="span4" name="msg-count" id="msg-count" placeholder="20" />
+                </dd>
+            </dl>
+
+            <div class="form-actions">
+                <input type="button" class="btn btn-primary" id="show-tweets-btn" value="Show Tweets" />
+            </div>
+        </form>
+
         <div id="tweets-container"></div>
+
+        <script id="tweet-template" type="text/x-mustache-template">
+            <li>
+                <div class="user">
+                    <a href="https://twitter.com/{{username}}">
+                        <img src="{{img_src}}" />
+                        <span>
+                            <span>{{name}}</span>
+                        </span>
+                        <span>{{screen_name}}</span>
+                    </a>
+                </div>
+                <p class="tweet">{{tweet_msg}}</p>
+                <p class="timePosted">{{time_posted}}</p>
+            </li>
+        </script>
     </body>
 </html>

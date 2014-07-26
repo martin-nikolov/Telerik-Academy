@@ -5,11 +5,13 @@
         * GET http://crowd-chat.herokuapp.com/posts
             * Return all posts
     * POST http://crowd-chat.herokuapp.com/posts
-        * Body: 
-            ``js
+        * Body:
+
+            ```js
             { 
                 "user": "USER_NAME", 
                 "text": "MESSAGE_TEXT"
             }
             ```
+
         * Sends a new post

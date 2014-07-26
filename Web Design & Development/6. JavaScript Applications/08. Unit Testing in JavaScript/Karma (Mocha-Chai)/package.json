@@ -1,0 +1,21 @@
+{
+    "name": "mocha-test-suites-and-tests",
+    "version": "0.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "BSD-2-Clause",
+    "devDependencies": {
+        "karma": "~0.12.17",
+        "karma-mocha": "~0.1.6",
+        "karma-chai": "~0.1.0",
+        "karma-chrome-launcher": "~0.1.4",
+        "karma-phantomjs-launcher": "~0.1.4"
+    }
+}

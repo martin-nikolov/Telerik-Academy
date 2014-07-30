@@ -1,0 +1,11 @@
+﻿---------------------------------------------
+Common refactoring problems:
+
+- Bad comments (removed)
+- Improper naming (renamed)
+- Global variables in class PhoneBookDemo (change their scope only for Main() method)
+
+---------------------------------------------
+Bugs:
+
+- ...

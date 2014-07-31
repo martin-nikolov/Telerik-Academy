@@ -30,7 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PowerCollections">
+    <Reference Include="PowerCollections, Version=1.0.2141.24679, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\XAct.Wintellect.PowerCollections.0.0.1\lib\net20\PowerCollections.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -53,6 +54,7 @@
     <Compile Include="Contracts\ICommandFactory.cs" />
     <Compile Include="Contracts\ICommandProcessor.cs" />
     <Compile Include="Contracts\IPhonebookRepository.cs" />
+    <Compile Include="Contracts\IPhoneNumberDeletable.cs" />
     <Compile Include="PhonebookRepositoryFast.cs" />
     <Compile Include="PhonebookRepositorySlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +68,9 @@
       <Project>{E25A6D06-6F02-40C1-B37C-9340EF19479E}</Project>
       <Name>Phonebook.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

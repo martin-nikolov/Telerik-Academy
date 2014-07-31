@@ -23,8 +23,7 @@
             }
 
             var name = arguments[0];
-            var phoneNumbers = arguments.Skip(1).ToArray(); // TODO: Slow?
-
+            var phoneNumbers = arguments.Skip(1).ToArray(); // at least 1 and at most 10
             for (int i = 0; i < phoneNumbers.Length; i++)
             {
                 phoneNumbers[i] = phoneNumbers[i].ConvertPhoneToCannonicalForm();

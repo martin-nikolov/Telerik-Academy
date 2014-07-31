@@ -1,9 +1,10 @@
-﻿namespace Phonebook
+﻿namespace Phonebook.Models
 {
     using System;
     using System.Linq;
     using System.Text;
-    using Phonebook.Contracts;
+    using Phonebook.Common;
+    using Phonebook.Common.Contracts;
 
     public class CommandProcessor : ICommandProcessor
     {
@@ -29,7 +30,10 @@
 
         public IPhonebookRepository PhonebookRepository
         {
-            get { return this.phonebookRepository; }
+            get 
+            { 
+                return this.phonebookRepository; 
+            }
 
             private set
             {
@@ -106,7 +110,7 @@
         {
             try
             {
-                var hasDeletedPhoneNumbers = this.phonebookRepository.RemovePhone(phoneNumber);
+                var hasDeletedPhoneNumbers = this.phonebookRepository.DeletePhone(phoneNumber);
                 if (hasDeletedPhoneNumbers)
                 {
                     return PhoneNumberDeletedMessage;

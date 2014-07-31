@@ -1,9 +1,10 @@
-namespace Phonebook
+namespace Phonebook.Data
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Phonebook.Contracts;
+    using Phonebook.Common.Contracts;
+    using Phonebook.Models;
     using Wintellect.PowerCollections;
 
     public class PhonebookRepositoryFast : IPhonebookRepository
@@ -46,7 +47,7 @@ namespace Phonebook
         }
 
         // TODO: Validation
-        public bool RemovePhone(string phoneNumber)
+        public bool DeletePhone(string phoneNumber)
         {
             if (string.IsNullOrEmpty(phoneNumber))
             {

@@ -1,9 +1,10 @@
-namespace Phonebook
+namespace Phonebook.Data
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Phonebook.Contracts;
+    using Phonebook.Common.Contracts;
+    using Phonebook.Models;
 
     public class PhonebookRepositorySlow : IPhonebookRepository
     {
@@ -49,7 +50,7 @@ namespace Phonebook
             return flag;
         }
 
-        public bool RemovePhone(string phoneNumber)
+        public bool DeletePhone(string phoneNumber)
         {
             // TODO: Implement this method
             throw new NotImplementedException();

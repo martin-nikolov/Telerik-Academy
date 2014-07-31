@@ -1,4 +1,4 @@
-namespace Phonebook.Contracts
+namespace Phonebook.Common.Contracts
 {
     using System.Collections.Generic;
 
@@ -8,7 +8,7 @@ namespace Phonebook.Contracts
 
         int ChangePhone(string oldPhoneNumber, string newPhoneNumber);
 
-        bool RemovePhone(string phoneNumber);
+        bool DeletePhone(string phoneNumber);
 
         IEnumerable<IPhoneEntry> ListEntries(int startIndex, int count);
     }

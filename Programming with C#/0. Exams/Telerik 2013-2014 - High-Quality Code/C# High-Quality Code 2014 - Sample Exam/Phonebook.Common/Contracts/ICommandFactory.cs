@@ -1,4 +1,4 @@
-﻿namespace Phonebook.Contracts
+﻿namespace Phonebook.Common.Contracts
 {
     using System;
     using System.Linq;

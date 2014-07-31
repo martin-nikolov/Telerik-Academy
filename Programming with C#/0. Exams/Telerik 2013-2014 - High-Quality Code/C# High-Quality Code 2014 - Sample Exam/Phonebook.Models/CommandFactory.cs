@@ -1,8 +1,8 @@
-﻿namespace Phonebook
+﻿namespace Phonebook.Models
 {
     using System;
     using System.Linq;
-    using Phonebook.Contracts;
+    using Phonebook.Common.Contracts;
 
     public class CommandFactory : ICommandFactory
     {

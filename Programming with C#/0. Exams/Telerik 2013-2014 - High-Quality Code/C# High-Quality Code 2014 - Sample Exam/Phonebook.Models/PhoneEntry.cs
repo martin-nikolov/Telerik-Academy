@@ -1,10 +1,10 @@
-namespace Phonebook
+namespace Phonebook.Models
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using Phonebook.Contracts;
+    using Phonebook.Common.Contracts;
 
     public class PhoneEntry : IPhoneEntry
     {
@@ -18,7 +18,10 @@ namespace Phonebook
 
         public string Name
         {
-            get { return this.name; }
+            get 
+            { 
+                return this.name; 
+            }
             
             set
             {
@@ -33,7 +36,10 @@ namespace Phonebook
 
         public ISet<string> PhoneNumbers
         {
-            get { return this.phoneNumbers; }
+            get 
+            {
+                return this.phoneNumbers;
+            }
 
             set
             { 

@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook", "Phonebook\Phonebook.csproj", "{75B5C2A1-CA42-43E6-A23B-C1AEBD0E1966}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.ConsoleClient", "Phonebook.ConsoleClient\Phonebook.ConsoleClient.csproj", "{75B5C2A1-CA42-43E6-A23B-C1AEBD0E1966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.Common", "Phonebook.Common\Phonebook.Common.csproj", "{E5D31143-8C08-418A-B582-A45DE7B98FC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.Models", "Phonebook.Models\Phonebook.Models.csproj", "{E25A6D06-6F02-40C1-B37C-9340EF19479E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.Data", "Phonebook.Data\Phonebook.Data.csproj", "{B0BF7DC0-1A5F-4006-ACAE-6FC890B007A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{75B5C2A1-CA42-43E6-A23B-C1AEBD0E1966}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75B5C2A1-CA42-43E6-A23B-C1AEBD0E1966}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75B5C2A1-CA42-43E6-A23B-C1AEBD0E1966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5D31143-8C08-418A-B582-A45DE7B98FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5D31143-8C08-418A-B582-A45DE7B98FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5D31143-8C08-418A-B582-A45DE7B98FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5D31143-8C08-418A-B582-A45DE7B98FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25A6D06-6F02-40C1-B37C-9340EF19479E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25A6D06-6F02-40C1-B37C-9340EF19479E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25A6D06-6F02-40C1-B37C-9340EF19479E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25A6D06-6F02-40C1-B37C-9340EF19479E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0BF7DC0-1A5F-4006-ACAE-6FC890B007A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0BF7DC0-1A5F-4006-ACAE-6FC890B007A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0BF7DC0-1A5F-4006-ACAE-6FC890B007A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0BF7DC0-1A5F-4006-ACAE-6FC890B007A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

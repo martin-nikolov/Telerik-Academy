@@ -1,4 +1,4 @@
-﻿namespace Phonebook
+﻿namespace Phonebook.Common
 {
     using System;
     using System.Linq;
@@ -8,7 +8,7 @@
     {
         private const string DefaultPhonePrefix = "+359";
 
-        public static string ConvertPhoneToCannonicalForm(this string phoneNumber, string defaultPhonePrefix = DefaultPhonePrefix)
+        public static string ConvertPhoneToCannonicalForm(this string phoneNumber, string phonePrefix = DefaultPhonePrefix)
         {
             var phoneNumberToCannonicalForm = new StringBuilder();
             foreach (char ch in phoneNumber)
@@ -33,7 +33,7 @@
 
             if (phoneNumberToCannonicalForm.Length > 0 && phoneNumberToCannonicalForm[0] != '+')
             {
-                phoneNumberToCannonicalForm.Insert(0, defaultPhonePrefix);
+                phoneNumberToCannonicalForm.Insert(0, phonePrefix);
             }
 
             return phoneNumberToCannonicalForm.ToString();

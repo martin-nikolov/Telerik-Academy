@@ -1,8 +1,8 @@
-﻿namespace Phonebook
+﻿namespace Phonebook.Models
 {
     using System;
     using System.Linq;
-    using Phonebook.Contracts;
+    using Phonebook.Common.Contracts;
 
     public class Command : ICommand
     {
@@ -11,7 +11,10 @@
 
         public string Name
         {
-            get { return this.name; }
+            get 
+            { 
+                return this.name; 
+            }
 
             set
             {
@@ -26,7 +29,10 @@
 
         public string[] Arguments
         {
-            get { return this.arguments; }
+            get 
+            { 
+                return this.arguments; 
+            }
 
             set
             {

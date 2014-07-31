@@ -1,6 +1,7 @@
-namespace Phonebook.Common.Contacts
+namespace Phonebook.Data.Contracts
 {
     using System.Collections.Generic;
+    using Phonebook.Models.Contracts;
 
     public interface IPhonebookRepository
     {

@@ -39,12 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contacts\ICommand.cs" />
-    <Compile Include="Contacts\IInputCommand.cs" />
-    <Compile Include="Contacts\ICommandFactory.cs" />
-    <Compile Include="Contacts\ICommandProcessor.cs" />
-    <Compile Include="Contacts\IPhonebookRepository.cs" />
-    <Compile Include="Contacts\IPhoneEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>

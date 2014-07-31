@@ -1,4 +1,4 @@
-﻿namespace Phonebook.Common.Contacts
+﻿namespace Phonebook.Models.Contracts
 {
     public interface IInputCommand
     {

@@ -4,7 +4,7 @@ namespace Phonebook.Models
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using Phonebook.Common.Contacts;
+    using Phonebook.Models.Contracts;
 
     public class PhoneEntry : IPhoneEntry
     {

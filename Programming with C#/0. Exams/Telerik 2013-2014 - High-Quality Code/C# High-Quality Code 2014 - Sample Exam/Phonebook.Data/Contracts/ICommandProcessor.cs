@@ -1,5 +1,7 @@
-﻿namespace Phonebook.Common.Contacts
+﻿namespace Phonebook.Data.Contracts
 {
+    using Phonebook.Models.Contracts;
+
     public interface ICommandProcessor
     {
         string ProcessCommand(IInputCommand command);

@@ -42,6 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandFactory.cs" />
+    <Compile Include="CommandProcessor.cs" />
+    <Compile Include="Commands\AddPhoneCommand.cs" />
+    <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="Commands\ChangePhoneCommand.cs" />
+    <Compile Include="Commands\DeletePhoneCommand.cs" />
+    <Compile Include="Commands\ListPhonesCommand.cs" />
+    <Compile Include="Contracts\ICommand.cs" />
+    <Compile Include="Contracts\ICommandFactory.cs" />
+    <Compile Include="Contracts\ICommandProcessor.cs" />
+    <Compile Include="Contracts\IPhonebookRepository.cs" />
     <Compile Include="PhonebookRepositoryFast.cs" />
     <Compile Include="PhonebookRepositorySlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

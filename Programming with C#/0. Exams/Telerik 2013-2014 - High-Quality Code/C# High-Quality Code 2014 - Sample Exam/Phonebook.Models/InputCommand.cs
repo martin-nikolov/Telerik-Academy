@@ -2,7 +2,7 @@
 {
     using System;
     using System.Linq;
-    using Phonebook.Common.Contacts;
+    using Phonebook.Models.Contracts;
 
     public class InputCommand : IInputCommand
     {

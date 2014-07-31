@@ -1,9 +1,9 @@
-﻿namespace Phonebook.Models.Commands
+﻿namespace Phonebook.Data.Commands
 {
     using System;
     using System.Linq;
     using Phonebook.Common;
-    using Phonebook.Common.Contacts;
+    using Phonebook.Data.Contracts;
 
     public class ChangePhoneCommand : BaseCommand, ICommand
     {

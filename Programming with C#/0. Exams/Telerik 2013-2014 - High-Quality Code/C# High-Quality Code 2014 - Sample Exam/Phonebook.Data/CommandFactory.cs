@@ -1,8 +1,10 @@
-﻿namespace Phonebook.Models
+﻿namespace Phonebook.Data
 {
     using System;
     using System.Linq;
-    using Phonebook.Common.Contacts;
+    using Phonebook.Data.Contracts;
+    using Phonebook.Models;
+    using Phonebook.Models.Contracts;
 
     public class CommandFactory : ICommandFactory
     {

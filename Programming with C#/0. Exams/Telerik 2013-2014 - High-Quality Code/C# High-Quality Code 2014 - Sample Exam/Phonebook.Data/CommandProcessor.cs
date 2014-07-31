@@ -1,10 +1,11 @@
-﻿namespace Phonebook.Models
+﻿namespace Phonebook.Data
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Phonebook.Common.Contacts;
-    using Phonebook.Models.Commands;
+    using Phonebook.Data.Commands;
+    using Phonebook.Data.Contracts;
+    using Phonebook.Models.Contracts;
 
     public class CommandProcessor : ICommandProcessor
     {

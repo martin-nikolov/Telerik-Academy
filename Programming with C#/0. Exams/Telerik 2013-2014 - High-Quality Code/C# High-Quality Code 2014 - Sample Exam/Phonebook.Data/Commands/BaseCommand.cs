@@ -1,8 +1,8 @@
-﻿namespace Phonebook.Models.Commands
+﻿namespace Phonebook.Data.Commands
 {
     using System;
     using System.Linq;
-    using Phonebook.Common.Contacts;
+    using Phonebook.Data.Contracts;
 
     public class BaseCommand
     {

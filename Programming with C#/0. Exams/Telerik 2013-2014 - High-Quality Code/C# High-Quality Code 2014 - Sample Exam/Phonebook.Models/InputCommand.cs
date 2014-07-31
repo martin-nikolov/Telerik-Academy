@@ -1,7 +1,6 @@
 ﻿namespace Phonebook.Models
 {
     using System;
-    using System.Linq;
     using Phonebook.Models.Contracts;
 
     public class InputCommand : IInputCommand

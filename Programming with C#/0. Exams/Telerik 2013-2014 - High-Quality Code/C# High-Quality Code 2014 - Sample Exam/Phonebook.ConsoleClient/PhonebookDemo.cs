@@ -1,7 +1,6 @@
 ﻿namespace Phonebook.ConsoleClient
 {
     using System;
-    using System.Linq;
     using System.Text;
     using Phonebook.Data;
 

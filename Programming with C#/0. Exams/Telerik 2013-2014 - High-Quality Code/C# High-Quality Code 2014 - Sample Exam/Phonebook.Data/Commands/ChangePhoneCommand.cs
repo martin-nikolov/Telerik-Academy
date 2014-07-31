@@ -1,7 +1,6 @@
 ﻿namespace Phonebook.Data.Commands
 {
     using System;
-    using System.Linq;
     using Phonebook.Common;
     using Phonebook.Data.Contracts;
 

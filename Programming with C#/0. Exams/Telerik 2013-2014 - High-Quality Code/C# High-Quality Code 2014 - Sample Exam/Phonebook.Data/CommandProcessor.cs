@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using Phonebook.Data.Commands;
     using Phonebook.Data.Contracts;
     using Phonebook.Models.Contracts;

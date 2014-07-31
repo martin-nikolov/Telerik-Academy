@@ -3,7 +3,7 @@ namespace Phonebook.Data
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Phonebook.Common.Contracts;
+    using Phonebook.Common.Contacts;
     using Phonebook.Models;
     using Wintellect.PowerCollections;
 

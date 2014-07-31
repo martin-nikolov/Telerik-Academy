@@ -2,11 +2,11 @@
 {
     using System;
     using System.Linq;
-    using Phonebook.Common.Contracts;
+    using Phonebook.Common.Contacts;
 
     public class CommandFactory : ICommandFactory
     {
-        public ICommand Parse(string command)
+        public IInputCommand Parse(string command)
         {
             if (string.IsNullOrEmpty(command))
             {
@@ -25,7 +25,7 @@
                                                .Select(c => c.Trim())
                                                .ToArray();
 
-            var parsedCommand = new Command { Name = commandName, Arguments = commandArgs };
+            var parsedCommand = new InputCommand { Name = commandName, Arguments = commandArgs };
             return parsedCommand;
         }
     }

@@ -3,12 +3,12 @@ namespace Phonebook.Data
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Phonebook.Common.Contracts;
+    using Phonebook.Common.Contacts;
     using Phonebook.Models;
 
     public class PhonebookRepositorySlow : IPhonebookRepository
     {
-        public List<IPhoneEntry> entries = new List<IPhoneEntry>();
+        private readonly List<IPhoneEntry> entries = new List<IPhoneEntry>();
 
         public bool AddPhone(string name, IEnumerable<string> phoneNumbers)
         {

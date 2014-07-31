@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Phonebook.Common\Phonebook.Common.csproj">
-      <Project>{E5D31143-8C08-418A-B582-A45DE7B98FC9}</Project>
+      <Project>{e5d31143-8c08-418a-b582-a45de7b98fc9}</Project>
       <Name>Phonebook.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Phonebook.Models\Phonebook.Models.csproj">

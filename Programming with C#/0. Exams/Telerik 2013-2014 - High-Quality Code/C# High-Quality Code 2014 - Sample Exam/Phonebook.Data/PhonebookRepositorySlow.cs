@@ -20,8 +20,7 @@ namespace Phonebook.Data
             bool flag;
             if (old.Count() == 0)
             {
-                PhoneEntry obj = new PhoneEntry();
-                obj.Name = name;
+                var obj = new PhoneEntry(name);
 
                 foreach (var num in phoneNumbers)
                 {

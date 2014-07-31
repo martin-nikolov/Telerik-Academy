@@ -1,92 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Phonebook.Common.StringExtensions" Collapsed="true">
-    <Position X="1" Y="1.75" Width="1.5" />
+    <Position X="1" Y="2.25" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Phonebook.ConsoleClient.PhonebookDemo" Collapsed="true">
-    <Position X="1" Y="0.5" Width="1.5" />
+    <Position X="1" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>PhonebookDemo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Phonebook.Data.CommandFactory" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7" Y="0.5" Width="1.5" />
+    <Position X="7" Y="1" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.CommandProcessor" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7" Y="1.75" Width="1.5" />
+    <Position X="7" Y="2.25" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.PhonebookRepositoryFast" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5" Y="0.5" Width="1.5" />
+    <Position X="5" Y="1" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.PhonebookRepositorySlow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5" Y="1.75" Width="1.5" />
+    <Position X="5" Y="2.25" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.Commands.AddPhoneCommand" Collapsed="true">
-    <Position X="0.5" Y="4.5" Width="1.5" />
+    <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.Commands.BaseCommand" Collapsed="true">
-    <Position X="3.75" Y="3.25" Width="1.5" />
+    <Position X="3.75" Y="3.75" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Phonebook.Data.Commands.ChangePhoneCommand" Collapsed="true">
-    <Position X="5" Y="4.5" Width="1.5" />
+    <Position X="5" Y="5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.Commands.DeletePhoneCommand" Collapsed="true">
-    <Position X="7.25" Y="4.5" Width="1.5" />
+    <Position X="7.25" Y="5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.Commands.ListPhonesCommand" Collapsed="true">
-    <Position X="2.75" Y="4.5" Width="1.5" />
+    <Position X="2.75" Y="5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Models.InputCommand" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="3" Y="1.75" Width="1.5" />
+    <Position X="3" Y="2.25" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Models.PhoneEntry" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="3" Y="0.5" Width="1.5" />
+    <Position X="3" Y="1" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Phonebook.Data.Contracts.ICommand" Collapsed="true">
-    <Position X="10.25" Y="0.5" Width="1.5" />
+    <Position X="9.5" Y="1" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Data.Contracts.ICommandFactory" Collapsed="true">
-    <Position X="12" Y="0.5" Width="1.5" />
+    <Position X="11.25" Y="1" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Data.Contracts.ICommandProcessor" Collapsed="true">
-    <Position X="10.25" Y="1.5" Width="1.5" />
+    <Position X="9.5" Y="2" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Data.Contracts.IPhonebookRepository" Collapsed="true">
-    <Position X="12" Y="1.5" Width="1.5" />
+    <Position X="11.25" Y="2" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Models.Contracts.IInputCommand" Collapsed="true">
-    <Position X="10.25" Y="2.5" Width="1.5" />
+    <Position X="9.5" Y="3" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Models.Contracts.IPhoneEntry" Collapsed="true">
-    <Position X="12" Y="2.5" Width="1.5" />
+    <Position X="11.25" Y="3" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Font Name="Segoe UI" Size="9" />

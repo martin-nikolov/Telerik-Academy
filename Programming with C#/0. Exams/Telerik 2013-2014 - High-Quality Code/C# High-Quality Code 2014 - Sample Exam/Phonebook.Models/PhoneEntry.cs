@@ -10,8 +10,9 @@ namespace Phonebook.Models
         private string name;
         private ISet<string> phoneNumbers;
 
-        public PhoneEntry()
+        public PhoneEntry(string name)
         {
+            this.Name = name;
             this.phoneNumbers = new SortedSet<string>();
         }
 

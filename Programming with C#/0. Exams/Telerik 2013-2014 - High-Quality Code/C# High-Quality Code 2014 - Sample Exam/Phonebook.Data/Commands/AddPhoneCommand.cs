@@ -23,7 +23,7 @@
             }
 
             var name = arguments[0];
-            var phoneNumbers = arguments.Skip(1).ToArray();
+            var phoneNumbers = arguments.Skip(1).ToArray(); // TODO: Slow?
 
             for (int i = 0; i < phoneNumbers.Length; i++)
             {

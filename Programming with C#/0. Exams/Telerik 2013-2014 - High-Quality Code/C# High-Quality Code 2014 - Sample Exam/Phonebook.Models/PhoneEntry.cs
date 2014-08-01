@@ -2,7 +2,6 @@ namespace Phonebook.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Text;
     using Phonebook.Models.Contracts;
 
     public class PhoneEntry : IPhoneEntry
@@ -54,8 +53,8 @@ namespace Phonebook.Models
 
         public override string ToString()
         {
-            var output = new StringBuilder();
-            output.AppendFormat("[{0}: {1}]", this.Name, string.Join(", ", this.PhoneNumbers));
+            var mergedPhoneNumbersText = string.Join(", ", this.PhoneNumbers);
+            var output = string.Format("[{0}: {1}]", this.Name, mergedPhoneNumbersText);
             return output.ToString();
         }
 

@@ -15,9 +15,9 @@
             this.output.AppendLine(text);
         }
 
-        public string GetAllText()
+        public void Accept(ILoggerVisitor visitor)
         {
-            return this.output.ToString();
+            visitor.Visit(this.output.ToString());
         }
     }
 }

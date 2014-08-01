@@ -6,10 +6,10 @@
     using Phonebook.Models;
     using Phonebook.Models.Contracts;
 
-    //! Factory pattern
-    public class CommandFactory : ICommandFactory
+    //! Strategy
+    public class CommandParser : ICommandParser
     {
-        public IInputCommand Parse(string command)
+        public IPhonebookCommand Parse(string command)
         {
             if (string.IsNullOrEmpty(command))
             {
@@ -28,7 +28,7 @@
                                                .Select(c => c.Trim())
                                                .ToArray();
 
-            var parsedCommand = new InputCommand { Name = commandName, Arguments = commandArgs };
+            var parsedCommand = new CommandInfo { Name = commandName, Arguments = commandArgs };
             return parsedCommand;
         }
     }

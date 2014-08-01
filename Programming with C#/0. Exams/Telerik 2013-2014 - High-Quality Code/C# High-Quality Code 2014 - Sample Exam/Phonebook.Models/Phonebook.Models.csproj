@@ -39,9 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IInputCommand.cs" />
+    <Compile Include="Contracts\IPhonebookCommand.cs" />
     <Compile Include="Contracts\IPhoneEntry.cs" />
-    <Compile Include="InputCommand.cs" />
+    <Compile Include="CommandInfo.cs" />
     <Compile Include="PhoneEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

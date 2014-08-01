@@ -7,6 +7,6 @@
     {
         void AppendLine(string text);
 
-        string GetAllText();
+        void Accept(ILoggerVisitor visitor);
     }
 }

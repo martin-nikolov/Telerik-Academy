@@ -11,8 +11,10 @@
             Console.SetIn(new System.IO.StreamReader("../../input.txt"));
             #endif
 
-            var commandProcessor = new CommandProcessor();
-            var output = new StringBuilderLogger();
+            var commandParser = new CommandParser();
+            var commandFactory = new CommandFactoryWithLazyLoading();
+            //var commandProcessor = new CommandProcessor();
+            var consoleLogger = new StringBuilderLogger();
 
             while (true)
             {
@@ -22,11 +24,19 @@
                     break;
                 }
 
-                var result = commandProcessor.ProcessCommand(line);
-                output.AppendLine(result);
+                var commandInfo = commandParser.Parse(line);
+                var command = commandFactory.Create(commandInfo);
+                var result = command.Execute(commandInfo.Arguments);
+                consoleLogger.AppendLine(result);
+
+                //var result = commandProcessor.ProcessCommand(commandInfo);
+                //consoleLogger.AppendLine(result);
             }
 
-            Console.Write(output.GetAllText());
+            //! Visitor
+            consoleLogger.Accept(new ConsoleLoggerVisitorWithoutNewLine());
+            //logger.Accept(new ConsoleLoggerVisitorWithNewLine());
+            //Console.Write(logger.GetAllText());
         }
     }
 }

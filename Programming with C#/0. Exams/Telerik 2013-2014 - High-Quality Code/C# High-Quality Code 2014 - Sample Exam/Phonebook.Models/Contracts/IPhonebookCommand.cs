@@ -1,6 +1,6 @@
 ﻿namespace Phonebook.Models.Contracts
 {
-    public interface IInputCommand
+    public interface IPhonebookCommand
     {
         string Name { get; set; }
 

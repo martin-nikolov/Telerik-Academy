@@ -7,7 +7,17 @@
     public class AddPhoneTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void AddNonExistingPhoneEntry()
+        {
+        }
+
+        [TestMethod]
+        public void AddExistingPhonebookEntryShouldReturnFalse()
+        {
+        }
+
+        [TestMethod]
+        public void AddPhoneShouldMergePhoneNumbers()
         {
         }
     }

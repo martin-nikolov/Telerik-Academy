@@ -4,6 +4,6 @@
 
     public interface ICommandProcessor
     {
-        string ProcessCommand(IInputCommand command);
+        string ProcessCommand(IPhonebookCommand command);
     }
 }

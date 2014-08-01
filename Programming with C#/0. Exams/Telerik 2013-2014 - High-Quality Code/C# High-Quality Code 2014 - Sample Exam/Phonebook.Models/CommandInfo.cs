@@ -3,7 +3,7 @@
     using System;
     using Phonebook.Models.Contracts;
 
-    public class InputCommand : IInputCommand
+    public class CommandInfo : IPhonebookCommand
     {
         private string name;
         private string[] arguments;

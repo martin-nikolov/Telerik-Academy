@@ -5,7 +5,7 @@
     using Phonebook.Common;
     using Phonebook.Data.Contracts;
 
-    public class AddPhoneCommand : BaseCommand, ICommand
+    public class AddPhoneCommand : BaseCommand
     {
         private const string PhoneEntryCreatedMessage = "Phone entry created";
         private const string PhoneEntryMergedMessage = "Phone entry merged";
@@ -15,7 +15,7 @@
         {
         }
 
-        public string Execute(string[] arguments)
+        public override string Execute(string[] arguments)
         {
             if (arguments == null || arguments.Length < 2)
             {

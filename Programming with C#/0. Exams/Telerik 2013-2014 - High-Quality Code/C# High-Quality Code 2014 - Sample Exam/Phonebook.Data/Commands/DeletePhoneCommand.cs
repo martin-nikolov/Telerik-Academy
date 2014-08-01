@@ -4,7 +4,7 @@
     using System.Linq;
     using Phonebook.Data.Contracts;
 
-    public class DeletePhoneCommand : BaseCommand, ICommand
+    public class DeletePhoneCommand : BaseCommand
     {
         private const string PhoneNumberDeletedMessage = "Phone number deleted";
         private const string InvalidPhoneNumberMessage = "Invalid phone number";
@@ -15,7 +15,7 @@
         {
         }
 
-        public string Execute(string[] arguments)
+        public override string Execute(string[] arguments)
         {
             if (arguments == null || arguments.Length != 1)
             {

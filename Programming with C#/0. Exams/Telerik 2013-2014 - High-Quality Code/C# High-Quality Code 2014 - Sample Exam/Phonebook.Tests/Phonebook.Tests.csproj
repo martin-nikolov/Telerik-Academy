@@ -50,8 +50,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="IPhonebookRepositoryTests.cs" />
+    <Compile Include="DeletePhoneTest.cs" />
+    <Compile Include="ChangePhoneTest.cs" />
+    <Compile Include="AddPhoneTest.cs" />
+    <Compile Include="ListPhoneTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PhoneRepositoryTests\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

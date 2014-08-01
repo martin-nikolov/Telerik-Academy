@@ -8,6 +8,7 @@ namespace Phonebook.Data
     using Phonebook.Models.Contracts;
     using Wintellect.PowerCollections;
 
+    // TODO: Implement Abstract Factory
     // TODO: Export an abstact PhonebookRepository class
     public class PhonebookRepositoryFast : IPhonebookRepository
     {
@@ -15,6 +16,7 @@ namespace Phonebook.Data
         private readonly IDictionary<string, IPhoneEntry> entriesByName;
         private readonly MultiDictionaryBase<string, IPhoneEntry> entriesByPhone;
 
+        //! Dependency inversion
         public PhonebookRepositoryFast()
             : this(new Dictionary<string, IPhoneEntry>(), new MultiDictionary<string, IPhoneEntry>(false))
         {
@@ -64,6 +66,7 @@ namespace Phonebook.Data
                 return false;
             }
 
+            // TODO: Extract method
             foreach (var phoneEntry in matchedPhoneEntries)
             {
                 if (phoneEntry.PhoneNumbers.Count == 1)
@@ -88,10 +91,11 @@ namespace Phonebook.Data
                 throw new ArgumentException("Phone numbers cannot be null or empty.");
             }
 
-            // Bottleneck -> .ToList()
-            // No fix is available.
+            //! Bottleneck -> .ToList()
+            //! No fix is available.
             var matchedPhoneEntries = this.entriesByPhone[oldPhoneNumber].ToList();
 
+            // TODO: Extract method
             foreach (var phoneEntry in matchedPhoneEntries)
             {
                 phoneEntry.PhoneNumbers.Remove(oldPhoneNumber);

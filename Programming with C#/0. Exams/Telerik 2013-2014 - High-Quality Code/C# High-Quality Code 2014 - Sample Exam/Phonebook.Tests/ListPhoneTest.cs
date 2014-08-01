@@ -4,7 +4,7 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
-    public class IPhonebookRepositoryTests
+    public class ListPhoneTest
     {
         [TestMethod]
         public void TestMethod1()

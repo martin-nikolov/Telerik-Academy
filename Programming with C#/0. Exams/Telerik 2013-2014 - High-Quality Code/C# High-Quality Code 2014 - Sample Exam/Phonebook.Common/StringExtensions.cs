@@ -6,6 +6,7 @@
     {
         private const string DefaultPhonePrefix = "+359";
 
+        //? Export it as ISanitiezer interface -> Strategy pattern
         public static string ConvertPhoneToCannonicalForm(this string phoneNumber, string phonePrefix = DefaultPhonePrefix)
         {
             var phoneNumberToCannonicalForm = new StringBuilder();

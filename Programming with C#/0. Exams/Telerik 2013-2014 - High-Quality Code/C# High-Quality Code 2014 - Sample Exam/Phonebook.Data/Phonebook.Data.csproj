@@ -53,11 +53,13 @@
     <Compile Include="Contracts\ICommand.cs" />
     <Compile Include="Contracts\ICommandFactory.cs" />
     <Compile Include="Contracts\ICommandProcessor.cs" />
+    <Compile Include="Contracts\ILogger.cs" />
     <Compile Include="Contracts\IPhonebookRepository.cs" />
     <Compile Include="Contracts\IPhoneNumberDeletable.cs" />
     <Compile Include="PhonebookRepositoryFast.cs" />
     <Compile Include="PhonebookRepositorySlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringBuilderLogger.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Phonebook.Common\Phonebook.Common.csproj">

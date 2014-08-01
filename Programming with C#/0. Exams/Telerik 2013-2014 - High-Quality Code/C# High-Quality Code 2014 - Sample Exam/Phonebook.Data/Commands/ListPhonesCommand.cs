@@ -5,7 +5,7 @@
     using System.Text;
     using Phonebook.Data.Contracts;
 
-    public class ListPhonesCommand : BaseCommand, ICommand
+    public class ListPhonesCommand : BaseCommand
     {
         private const string InvalidRangeMessage = "Invalid range";
 
@@ -14,7 +14,7 @@
         {
         }
 
-        public string Execute(string[] arguments)
+        public override string Execute(string[] arguments)
         {
             if (arguments == null || arguments.Length != 2)
             {

@@ -6,6 +6,7 @@
     using Phonebook.Data.Contracts;
     using Phonebook.Models.Contracts;
 
+    //! Command patterns
     public class CommandProcessor : ICommandProcessor
     {
         private const string AddPhoneCommandName = "AddPhone";
@@ -15,11 +16,29 @@
 
         private readonly IDictionary<string, ICommand> commands = new Dictionary<string, ICommand>();
 
+        //! Dependency inversion
+        public CommandProcessor()
+            : this(new PhonebookRepositoryFast())
+        {
+        }
+
         public CommandProcessor(IPhonebookRepository phonebookRepository)
         {
             this.InitializeCommandList(phonebookRepository);
         }
  
+        public string ProcessCommand(string @string)
+        {
+            if (string.IsNullOrEmpty(@string))
+            {
+                throw new ArgumentException("Input string cannot be null or empty.");
+            }
+
+            var commandFactory = new CommandFactory();
+            var command = commandFactory.Parse(@string);
+            return this.ProcessCommand(command);
+        }
+
         public string ProcessCommand(IInputCommand command)
         {
             if (command == null)

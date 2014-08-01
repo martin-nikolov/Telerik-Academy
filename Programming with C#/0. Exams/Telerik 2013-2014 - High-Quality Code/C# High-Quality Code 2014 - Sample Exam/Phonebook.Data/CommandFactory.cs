@@ -6,6 +6,7 @@
     using Phonebook.Models;
     using Phonebook.Models.Contracts;
 
+    //! Factory pattern
     public class CommandFactory : ICommandFactory
     {
         public IInputCommand Parse(string command)

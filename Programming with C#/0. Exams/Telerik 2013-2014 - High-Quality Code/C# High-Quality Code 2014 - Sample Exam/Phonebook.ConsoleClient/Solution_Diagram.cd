@@ -4,11 +4,11 @@
     <Position X="1" Y="2.25" Width="1.5" />
     <TypeIdentifier />
   </Class>
-  <Class Name="Phonebook.ConsoleClient.PhonebookDemo" Collapsed="true">
+  <Class Name="Phonebook.ConsoleClient.PhonebookEntryPoint" Collapsed="true">
     <Position X="1" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>PhonebookDemo.cs</FileName>
+      <FileName>PhonebookEntryPoint.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Phonebook.Data.CommandFactory" Collapsed="true" BaseTypeListCollapsed="true">
@@ -32,28 +32,25 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.Commands.AddPhoneCommand" Collapsed="true">
-    <Position X="0.5" Y="5" Width="1.5" />
+    <Position X="0.5" Y="6.25" Width="1.5" />
     <TypeIdentifier />
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.Commands.BaseCommand" Collapsed="true">
-    <Position X="3.75" Y="3.75" Width="1.5" />
+    <Position X="3.75" Y="5" Width="1.5" />
     <TypeIdentifier />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.Commands.ChangePhoneCommand" Collapsed="true">
-    <Position X="5" Y="5" Width="1.5" />
+    <Position X="5" Y="6.25" Width="1.5" />
     <TypeIdentifier />
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.Commands.DeletePhoneCommand" Collapsed="true">
-    <Position X="7.25" Y="5" Width="1.5" />
+    <Position X="7" Y="6.25" Width="1.5" />
     <TypeIdentifier />
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.Commands.ListPhonesCommand" Collapsed="true">
-    <Position X="2.75" Y="5" Width="1.5" />
+    <Position X="2.75" Y="6.25" Width="1.5" />
     <TypeIdentifier />
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Models.InputCommand" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="3" Y="2.25" Width="1.5" />
@@ -65,12 +62,17 @@
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="Phonebook.Data.StringBuilderLogger" Collapsed="true">
+    <Position X="1" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="Phonebook.Data.Contracts.ICommand" Collapsed="true">
     <Position X="9.5" Y="1" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Data.Contracts.ICommandFactory" Collapsed="true">
-    <Position X="11.25" Y="1" Width="1.5" />
+    <Position X="11.25" Y="4" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Data.Contracts.ICommandProcessor" Collapsed="true">
@@ -87,6 +89,14 @@
   </Interface>
   <Interface Name="Phonebook.Models.Contracts.IPhoneEntry" Collapsed="true">
     <Position X="11.25" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Phonebook.Data.Contracts.ILogger" Collapsed="true">
+    <Position X="9.5" Y="4" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Phonebook.Data.Contracts.IPhoneNumberDeletable" Collapsed="true">
+    <Position X="11.25" Y="1" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Font Name="Segoe UI" Size="9" />

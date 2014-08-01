@@ -3,7 +3,7 @@
     using System;
     using Phonebook.Data.Contracts;
 
-    public class BaseCommand
+    public abstract class BaseCommand : ICommand
     {
         private IPhonebookRepository phonebookRepository;
 
@@ -11,7 +11,7 @@
         {
             this.PhonebookRepository = phonebookRepository;
         }
-
+ 
         public IPhonebookRepository PhonebookRepository
         {
             get 
@@ -29,5 +29,7 @@
                 this.phonebookRepository = value;
             }
         }
+
+        public abstract string Execute(string[] arguments);
     }
 }

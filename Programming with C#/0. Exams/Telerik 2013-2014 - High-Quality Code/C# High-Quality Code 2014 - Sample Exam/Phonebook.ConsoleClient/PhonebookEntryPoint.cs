@@ -1,10 +1,9 @@
 ﻿namespace Phonebook.ConsoleClient
 {
     using System;
-    using System.Text;
     using Phonebook.Data;
 
-    internal class PhonebookDemo
+    internal class PhonebookEntryPoint
     {
         internal static void Main()
         {
@@ -12,10 +11,8 @@
             Console.SetIn(new System.IO.StreamReader("../../input.txt"));
             #endif
 
-            var phonebookRepository = new PhonebookRepositoryFast();
-            var commandFactory = new CommandFactory();
-            var commandProcessor = new CommandProcessor(phonebookRepository);
-            var output = new StringBuilder();
+            var commandProcessor = new CommandProcessor();
+            var output = new StringBuilderLogger();
 
             while (true)
             {
@@ -25,12 +22,11 @@
                     break;
                 }
 
-                var command = commandFactory.Parse(line);
-                var result = commandProcessor.ProcessCommand(command);
+                var result = commandProcessor.ProcessCommand(line);
                 output.AppendLine(result);
             }
 
-            Console.Write(output);
+            Console.Write(output.GetAllText());
         }
     }
 }

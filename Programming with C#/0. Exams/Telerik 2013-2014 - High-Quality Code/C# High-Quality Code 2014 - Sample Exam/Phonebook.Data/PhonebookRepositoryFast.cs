@@ -10,7 +10,7 @@ namespace Phonebook.Data
 
     // TODO: Implement Abstract Factory
     // TODO: Export an abstact PhonebookRepository class
-    public class PhonebookRepositoryFast : IPhonebookRepository
+    public class PhonebookRepositoryFast : IPhonebookRepository, IDeletablePhonebookRepository
     {
         private readonly OrderedSet<IPhoneEntry> sortedEntries;
         private readonly IDictionary<string, IPhoneEntry> entriesByName;
@@ -69,7 +69,8 @@ namespace Phonebook.Data
             // TODO: Extract method
             foreach (var phoneEntry in matchedPhoneEntries)
             {
-                if (phoneEntry.PhoneNumbers.Count == 1)
+                bool hasOnlyOnePhoneNumber = phoneEntry.PhoneNumbers.Count == 1;
+                if (hasOnlyOnePhoneNumber)
                 {
                     this.sortedEntries.Remove(phoneEntry);
                     this.entriesByName.Remove(phoneEntry.Name.ToLower());

@@ -7,7 +7,7 @@ namespace Phonebook.Data
     using Phonebook.Models;
     using Phonebook.Models.Contracts;
 
-    public class PhonebookRepositorySlow : IPhonebookRepository
+    public class PhonebookRepositorySlow : IPhonebookRepository, IDeletablePhonebookRepository
     {
         private readonly List<IPhoneEntry> entries = new List<IPhoneEntry>();
 

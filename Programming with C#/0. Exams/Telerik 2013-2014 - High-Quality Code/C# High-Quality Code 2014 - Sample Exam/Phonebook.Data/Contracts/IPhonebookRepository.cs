@@ -3,7 +3,7 @@ namespace Phonebook.Data.Contracts
     using System.Collections.Generic;
     using Phonebook.Models.Contracts;
 
-    public interface IPhonebookRepository : IPhoneNumberDeletable
+    public interface IPhonebookRepository : IDeletablePhonebookRepository
     {
         bool AddPhone(string name, IEnumerable<string> phoneNumbers);
 

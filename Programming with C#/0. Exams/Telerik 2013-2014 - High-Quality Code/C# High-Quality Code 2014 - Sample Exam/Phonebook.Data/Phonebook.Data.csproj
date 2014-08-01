@@ -57,7 +57,7 @@
     <Compile Include="Contracts\ICommandProcessor.cs" />
     <Compile Include="Contracts\ILogger.cs" />
     <Compile Include="Contracts\IPhonebookRepository.cs" />
-    <Compile Include="Contracts\IPhoneNumberDeletable.cs" />
+    <Compile Include="Contracts\IDeletablePhonebookRepository.cs" />
     <Compile Include="Contracts\ICommandFactory.cs" />
     <Compile Include="PhonebookRepositoryFast.cs" />
     <Compile Include="PhonebookRepositorySlow.cs" />

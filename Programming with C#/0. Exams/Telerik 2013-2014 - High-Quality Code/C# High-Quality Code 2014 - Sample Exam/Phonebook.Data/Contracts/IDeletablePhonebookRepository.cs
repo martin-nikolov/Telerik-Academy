@@ -1,6 +1,6 @@
 ﻿namespace Phonebook.Data.Contracts
 {
-    public interface IPhoneNumberDeletable
+    public interface IDeletablePhonebookRepository
     {
         bool DeletePhone(string phoneNumber);
     }

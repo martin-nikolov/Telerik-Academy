@@ -100,6 +100,18 @@
         #endregion
         
         [TestMethod]
+        public void CreateCarsControllerWithoutSpecificRepository()
+        {
+            var carController = new CarsController();
+        }
+
+        [TestMethod]
+        public void CreateCarsControllerWithSpecificRepository()
+        {
+            var carController = new CarsController(this.carsData);
+        }
+
+        [TestMethod]
         public void SortingByMarkInAscendingOrder()
         {
             var sortedCarsByMakeModel = (IList<Car>)this.GetModel(() => this.controller.Sort("make"));

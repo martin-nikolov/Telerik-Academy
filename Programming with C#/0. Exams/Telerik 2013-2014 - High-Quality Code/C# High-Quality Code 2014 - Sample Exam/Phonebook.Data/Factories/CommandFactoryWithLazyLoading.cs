@@ -24,17 +24,17 @@
 
         //! Dependency inversion
         public CommandFactoryWithLazyLoading()
-            : this(new PhonebookRepositoryFast())
+            : this(new PhonebookRepositoryFast(), new PhonebookSanitizer())
         {
         }
 
-        public CommandFactoryWithLazyLoading(IPhonebookRepository phonebookRepository)
+        public CommandFactoryWithLazyLoading(IPhonebookRepository phonebookRepository, IPhoneNumberSanitizer sanitizer)
         {
             this.PhonebookRepository = phonebookRepository;
 
             //! Lazy loading
-            this.addPhoneCommand = new Lazy<AddPhoneCommand>(() => new AddPhoneCommand(this.PhonebookRepository));
-            this.changePhoneCommand = new Lazy<ChangePhoneCommand>(() => new ChangePhoneCommand(this.PhonebookRepository));
+            this.addPhoneCommand = new Lazy<AddPhoneCommand>(() => new AddPhoneCommand(this.PhonebookRepository, sanitizer));
+            this.changePhoneCommand = new Lazy<ChangePhoneCommand>(() => new ChangePhoneCommand(this.PhonebookRepository, sanitizer));
             this.deletePhoneCommand = new Lazy<DeletePhoneCommand>(() => new DeletePhoneCommand(this.PhonebookRepository));
             this.listPhonesCommand = new Lazy<ListPhonesCommand>(() => new ListPhonesCommand(this.PhonebookRepository));
         }

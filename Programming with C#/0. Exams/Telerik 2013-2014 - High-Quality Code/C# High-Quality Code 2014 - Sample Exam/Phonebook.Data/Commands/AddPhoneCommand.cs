@@ -2,7 +2,6 @@
 {
     using System;
     using System.Linq;
-    using Phonebook.Common;
     using Phonebook.Data.Contracts;
 
     //! Command pattern
@@ -11,9 +10,12 @@
         private const string PhoneEntryCreatedMessage = "Phone entry created";
         private const string PhoneEntryMergedMessage = "Phone entry merged";
 
-        public AddPhoneCommand(IPhonebookRepository phonebookRepository)
+        private readonly IPhoneNumberSanitizer sanitizer;
+
+        public AddPhoneCommand(IPhonebookRepository phonebookRepository, IPhoneNumberSanitizer sanitizer)
             : base(phonebookRepository)
         {
+            this.sanitizer = sanitizer;
         }
 
         public override string Execute(string[] arguments)
@@ -24,7 +26,7 @@
             var phoneNumbers = arguments.Skip(1).ToArray(); // at least 1 and at most 10
             for (int i = 0; i < phoneNumbers.Length; i++)
             {
-                phoneNumbers[i] = phoneNumbers[i].ConvertPhoneToCannonicalForm();
+                phoneNumbers[i] = this.sanitizer.Sanitize(phoneNumbers[i]);
             }
 
             bool isNewEntry = this.PhonebookRepository.AddPhone(name, phoneNumbers);

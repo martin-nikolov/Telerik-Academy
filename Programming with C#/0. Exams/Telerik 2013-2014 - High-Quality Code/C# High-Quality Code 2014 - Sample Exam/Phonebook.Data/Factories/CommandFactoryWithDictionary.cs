@@ -17,15 +17,17 @@
         private const string ListPhonesCommandName = "List";
 
         private readonly IDictionary<string, ICommand> commands = new Dictionary<string, ICommand>();
+        private readonly IPhoneNumberSanitizer sanitizer;
 
         //! Dependency inversion
         public CommandFactoryWithDictionary()
-            : this(new PhonebookRepositoryFast())
+            : this(new PhonebookRepositoryFast(), new PhonebookSanitizer())
         {
         }
 
-        public CommandFactoryWithDictionary(IPhonebookRepository phonebookRepository)
+        public CommandFactoryWithDictionary(IPhonebookRepository phonebookRepository, IPhoneNumberSanitizer sanitizer)
         {
+            this.sanitizer = sanitizer;
             this.InitializeCommandList(phonebookRepository);
         }
 
@@ -53,9 +55,9 @@
                 throw new NullReferenceException("Phonebook repository instance cannot be null.");
             }
 
-            this.commands[AddPhoneCommandName] = new AddPhoneCommand(phonebookRepository);
+            this.commands[AddPhoneCommandName] = new AddPhoneCommand(phonebookRepository, this.sanitizer);
             this.commands[DeletePhoneCommandName] = new DeletePhoneCommand(phonebookRepository);
-            this.commands[ChangePhoneCommandName] = new ChangePhoneCommand(phonebookRepository);
+            this.commands[ChangePhoneCommandName] = new ChangePhoneCommand(phonebookRepository, this.sanitizer);
             this.commands[ListPhonesCommandName] = new ListPhonesCommand(phonebookRepository);
         }
     }

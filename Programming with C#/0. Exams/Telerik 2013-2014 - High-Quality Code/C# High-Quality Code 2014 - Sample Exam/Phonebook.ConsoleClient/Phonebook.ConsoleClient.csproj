@@ -48,13 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="input.txt" />
-    <Content Include="Refactoring-notes.txt" />
+    <Content Include="notes.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Phonebook.Common\Phonebook.Common.csproj">
-      <Project>{e5d31143-8c08-418a-b582-a45de7b98fc9}</Project>
-      <Name>Phonebook.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Phonebook.Data\Phonebook.Data.csproj">
       <Project>{b0bf7dc0-1a5f-4006-acae-6fc890b007a2}</Project>
       <Name>Phonebook.Data</Name>

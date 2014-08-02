@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Phonebook.Common.StringExtensions" Collapsed="true">
-    <Position X="1" Y="2.25" Width="1.5" />
-    <TypeIdentifier />
-  </Class>
   <Class Name="Phonebook.ConsoleClient.PhonebookEntryPoint" Collapsed="true">
     <Position X="1" Y="1" Width="1.5" />
     <TypeIdentifier>
@@ -93,6 +89,11 @@
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="Phonebook.Data.PhonebookSanitizer" Collapsed="true">
+    <Position X="1" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="Phonebook.Data.Contracts.ICommand" Collapsed="true">
     <Position X="9.5" Y="1" Width="1.5" />
     <TypeIdentifier />
@@ -110,11 +111,11 @@
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Data.Contracts.ILogger" Collapsed="true">
-    <Position X="9.5" Y="4" Width="1.5" />
+    <Position X="13" Y="1" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Data.Contracts.ICommandFactory" Collapsed="true">
-    <Position X="11.25" Y="4" Width="1.5" />
+    <Position X="14.75" Y="1" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Data.Contracts.ICommandParser" Collapsed="true">
@@ -122,15 +123,19 @@
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Data.Contracts.ILoggerVisitor" Collapsed="true">
-    <Position X="9.5" Y="5" Width="1.5" />
+    <Position X="13" Y="2" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Models.Contracts.IPhonebookCommand" Collapsed="true">
-    <Position X="11.25" Y="5" Width="1.5" />
+    <Position X="14.75" Y="2" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Phonebook.Data.Contracts.IDeletablePhonebookRepository" Collapsed="true">
     <Position X="11.25" Y="1" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Phonebook.Data.Contracts.IPhoneNumberSanitizer" Collapsed="true">
+    <Position X="13" Y="3" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Font Name="Segoe UI" Size="9" />

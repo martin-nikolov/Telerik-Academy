@@ -1,13 +1,14 @@
-﻿namespace Phonebook.Common
+﻿namespace Phonebook.Data
 {
     using System.Text;
+    using Phonebook.Data.Contracts;
 
-    public static class StringExtensions
+    //! Strategy pattern
+    public class PhonebookSanitizer : IPhoneNumberSanitizer
     {
         private const string DefaultPhonePrefix = "+359";
 
-        //? Export it as ISanitiezer interface -> Strategy pattern
-        public static string ConvertPhoneToCannonicalForm(this string phoneNumber, string phonePrefix = DefaultPhonePrefix)
+        public string Sanitize(string phoneNumber)
         {
             var phoneNumberToCannonicalForm = new StringBuilder();
             foreach (char ch in phoneNumber)
@@ -32,7 +33,7 @@
 
             if (phoneNumberToCannonicalForm.Length > 0 && phoneNumberToCannonicalForm[0] != '+')
             {
-                phoneNumberToCannonicalForm.Insert(0, phonePrefix);
+                phoneNumberToCannonicalForm.Insert(0, DefaultPhonePrefix);
             }
 
             return phoneNumberToCannonicalForm.ToString();

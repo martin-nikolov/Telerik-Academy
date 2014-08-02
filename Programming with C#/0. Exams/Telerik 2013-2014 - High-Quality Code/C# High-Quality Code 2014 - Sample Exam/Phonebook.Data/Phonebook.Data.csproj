@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandProcessorAdapter.cs" />
+    <Compile Include="Contracts\IPhoneNumberSanitizer.cs" />
     <Compile Include="Factories\CommandFactoryWithLazyLoading.cs" />
     <Compile Include="CommandParser.cs" />
     <Compile Include="Factories\CommandFactoryWithDictionary.cs" />
@@ -60,16 +61,13 @@
     <Compile Include="Contracts\IPhonebookRepository.cs" />
     <Compile Include="Contracts\IDeletablePhonebookRepository.cs" />
     <Compile Include="Contracts\ICommandFactory.cs" />
+    <Compile Include="PhonebookSanitizer.cs" />
     <Compile Include="Repositories\PhonebookRepositoryFast.cs" />
     <Compile Include="Repositories\PhonebookRepositorySlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Loggers\StringBuilderLogger.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Phonebook.Common\Phonebook.Common.csproj">
-      <Project>{e5d31143-8c08-418a-b582-a45de7b98fc9}</Project>
-      <Name>Phonebook.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Phonebook.Models\Phonebook.Models.csproj">
       <Project>{E25A6D06-6F02-40C1-B37C-9340EF19479E}</Project>
       <Name>Phonebook.Models</Name>

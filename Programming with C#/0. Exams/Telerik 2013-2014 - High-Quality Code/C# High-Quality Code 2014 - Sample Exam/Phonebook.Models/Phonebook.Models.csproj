@@ -45,12 +45,6 @@
     <Compile Include="PhoneEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Phonebook.Common\Phonebook.Common.csproj">
-      <Project>{E5D31143-8C08-418A-B582-A45DE7B98FC9}</Project>
-      <Name>Phonebook.Common</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

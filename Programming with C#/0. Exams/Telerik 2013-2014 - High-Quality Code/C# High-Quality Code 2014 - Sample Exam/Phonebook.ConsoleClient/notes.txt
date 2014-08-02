@@ -9,3 +9,12 @@ Common refactoring problems:
 Bugs:
 
 - ...
+
+---------------------------------------------
+Implemented Design-patterns:
+
+- Command
+- Factory + Lazy-loading (Flyweight)
+- Strategy
+- Adapter
+- Visitor

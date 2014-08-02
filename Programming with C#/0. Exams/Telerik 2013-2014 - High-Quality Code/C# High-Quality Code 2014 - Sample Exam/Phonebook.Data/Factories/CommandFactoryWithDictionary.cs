@@ -1,14 +1,15 @@
-﻿namespace Phonebook.Data
+﻿namespace Phonebook.Data.Factories
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using Phonebook.Data.Commands;
     using Phonebook.Data.Contracts;
+    using Phonebook.Data.Repositories;
     using Phonebook.Models.Contracts;
 
-    //!++ This class in unnecessary
-    //! Command patterns
-    public class CommandProcessor : ICommandProcessor
+    //! Factory pattern
+    public class CommandFactoryWithDictionary : ICommandFactory
     {
         private const string AddPhoneCommandName = "AddPhone";
         private const string DeletePhoneCommandName = "DeletePhone";
@@ -18,44 +19,33 @@
         private readonly IDictionary<string, ICommand> commands = new Dictionary<string, ICommand>();
 
         //! Dependency inversion
-        public CommandProcessor()
+        public CommandFactoryWithDictionary()
             : this(new PhonebookRepositoryFast())
         {
         }
 
-        public CommandProcessor(IPhonebookRepository phonebookRepository)
+        public CommandFactoryWithDictionary(IPhonebookRepository phonebookRepository)
         {
             this.InitializeCommandList(phonebookRepository);
         }
- 
-        public string ProcessCommand(string @string, ICommandParser commandParser)
-        {
-            if (string.IsNullOrEmpty(@string))
-            {
-                throw new ArgumentException("Input string cannot be null or empty.");
-            }
 
-            var command = commandParser.Parse(@string);
-            return this.ProcessCommand(command);
-        }
-
-        public string ProcessCommand(IPhonebookCommand command)
+        public ICommand Create(IPhonebookCommand commandInfo)
         {
-            if (command == null)
+            if (commandInfo == null)
             {
                 throw new NullReferenceException("Input command instance cannot be null.");
             }
 
             ICommand selectedCommand;
-            this.commands.TryGetValue(command.Name, out selectedCommand);
+            this.commands.TryGetValue(commandInfo.Name, out selectedCommand);
             if (selectedCommand == null)
             {
                 throw new ArgumentException("You have entered unknown command name.");
             }
-            
-            return selectedCommand.Execute(command.Arguments);
-        }
 
+            return selectedCommand;
+        }
+ 
         private void InitializeCommandList(IPhonebookRepository phonebookRepository)
         {
             if (phonebookRepository == null)

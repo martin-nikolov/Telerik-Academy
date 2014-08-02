@@ -11,40 +11,25 @@
       <FileName>PhonebookEntryPoint.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Phonebook.Data.CommandProcessor" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5" Y="2.25" Width="1.5" />
-    <TypeIdentifier />
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Phonebook.Data.PhonebookRepositoryFast" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5" Y="1" Width="1.5" />
-    <TypeIdentifier />
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Phonebook.Data.PhonebookRepositorySlow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="3" Y="2.25" Width="1.5" />
-    <TypeIdentifier />
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="Phonebook.Data.Commands.AddPhoneCommand" Collapsed="true">
-    <Position X="0.5" Y="6.25" Width="1.5" />
+    <Position X="0.75" Y="7.25" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Phonebook.Data.Commands.BaseCommand" Collapsed="true">
-    <Position X="3.75" Y="5" Width="1.5" />
+    <Position X="4" Y="5.5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.Commands.ChangePhoneCommand" Collapsed="true">
-    <Position X="5" Y="6.25" Width="1.5" />
+    <Position X="5.25" Y="7.25" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Phonebook.Data.Commands.DeletePhoneCommand" Collapsed="true">
-    <Position X="7" Y="6.25" Width="1.5" />
+    <Position X="7.25" Y="7.25" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Phonebook.Data.Commands.ListPhonesCommand" Collapsed="true">
-    <Position X="2.75" Y="6.25" Width="1.5" />
+    <Position X="2.75" Y="7.25" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Phonebook.Models.PhoneEntry" Collapsed="true" BaseTypeListCollapsed="true">
@@ -52,39 +37,59 @@
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Phonebook.Data.StringBuilderLogger" Collapsed="true">
+  <Class Name="Phonebook.ConsoleClient.Visitors.ConsoleLoggerVisitorWithNewLine" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Visitors\ConsoleLoggerVisitorWithNewLine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Phonebook.ConsoleClient.Visitors.ConsoleLoggerVisitorWithoutNewLine" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Visitors\ConsoleLoggerVisitorWithoutNewLine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Phonebook.Data.CommandParser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="1" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Phonebook.Models.CommandInfo" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Phonebook.Data.Factories.CommandFactoryWithDictionary" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Phonebook.Data.Factories.CommandFactoryWithLazyLoading" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Phonebook.Data.Loggers.StringBuilderLogger" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="1" Y="3.5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Phonebook.ConsoleClient.ConsoleLoggerVisitorWithNewLine" Collapsed="true">
-    <Position X="3" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ConsoleLoggerVisitorWithNewLine.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Phonebook.ConsoleClient.ConsoleLoggerVisitorWithoutNewLine" Collapsed="true">
-    <Position X="5" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ConsoleLoggerVisitorWithoutNewLine.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Phonebook.Data.CommandFactoryWithLazyLoading" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7" Y="1" Width="1.5" />
+  <Class Name="Phonebook.Data.Repositories.PhonebookRepositoryFast" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="2.25" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Phonebook.Data.CommandParser" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="Phonebook.Data.Repositories.PhonebookRepositorySlow" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="7" Y="2.25" Width="1.5" />
     <TypeIdentifier />
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Phonebook.Models.CommandInfo" Collapsed="true">
-    <Position X="7" Y="3.5" Width="1.5" />
+  <Class Name="Phonebook.Data.CommandProcessorAdapter" Collapsed="true">
+    <Position X="1" Y="4.5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
@@ -122,6 +127,10 @@
   </Interface>
   <Interface Name="Phonebook.Models.Contracts.IPhonebookCommand" Collapsed="true">
     <Position X="11.25" Y="5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Phonebook.Data.Contracts.IDeletablePhonebookRepository" Collapsed="true">
+    <Position X="11.25" Y="1" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Font Name="Segoe UI" Size="9" />

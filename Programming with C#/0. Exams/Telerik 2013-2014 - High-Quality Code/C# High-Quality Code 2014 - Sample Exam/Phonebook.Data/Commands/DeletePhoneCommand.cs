@@ -4,6 +4,7 @@
     using System.Linq;
     using Phonebook.Data.Contracts;
 
+    //! Command pattern
     public class DeletePhoneCommand : BaseCommand
     {
         private const string PhoneNumberDeletedMessage = "Phone number deleted";
@@ -17,10 +18,7 @@
 
         public override string Execute(string[] arguments)
         {
-            if (arguments == null || arguments.Length != 1)
-            {
-                throw new ArgumentException("Invalid input arguments collection.");
-            }
+            this.CheckForNullArguments(arguments);
 
             try
             {

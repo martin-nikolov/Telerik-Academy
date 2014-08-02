@@ -1,4 +1,4 @@
-﻿namespace Phonebook.Data
+﻿namespace Phonebook.Data.Loggers
 {
     using System;
     using System.Linq;

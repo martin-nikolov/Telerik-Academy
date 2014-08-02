@@ -4,6 +4,7 @@
     using Phonebook.Common;
     using Phonebook.Data.Contracts;
 
+    //! Command pattern
     public class ChangePhoneCommand : BaseCommand
     {
         private const string PhoneEntriesChangedMessage = "{0} numbers changed";
@@ -15,10 +16,7 @@
 
         public override string Execute(string[] arguments)
         {
-            if (arguments == null || arguments.Length != 2)
-            {
-                throw new ArgumentException("Invalid input arguments collection.");
-            }
+            this.CheckForNullArguments(arguments);
 
             var oldPhoneNumber = arguments[0].ConvertPhoneToCannonicalForm();
             var newPhoneNumber = arguments[1].ConvertPhoneToCannonicalForm();

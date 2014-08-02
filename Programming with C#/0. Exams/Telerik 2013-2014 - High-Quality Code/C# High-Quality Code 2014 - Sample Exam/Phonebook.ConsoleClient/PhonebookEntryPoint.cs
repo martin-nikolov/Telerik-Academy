@@ -1,7 +1,9 @@
 ﻿namespace Phonebook.ConsoleClient
 {
     using System;
+    using Phonebook.ConsoleClient.Visitors;
     using Phonebook.Data;
+    using Phonebook.Data.Loggers;
 
     internal class PhonebookEntryPoint
     {
@@ -11,11 +13,9 @@
             Console.SetIn(new System.IO.StreamReader("../../input.txt"));
             #endif
 
-            var commandParser = new CommandParser();
-            var commandFactory = new CommandFactoryWithLazyLoading();
-            //var commandProcessor = new CommandProcessor();
+            var commandProcessorAdapter = new CommandProcessorAdapter();
             var consoleLogger = new StringBuilderLogger();
-
+            
             while (true)
             {
                 string line = Console.ReadLine();
@@ -24,19 +24,12 @@
                     break;
                 }
 
-                var commandInfo = commandParser.Parse(line);
-                var command = commandFactory.Create(commandInfo);
-                var result = command.Execute(commandInfo.Arguments);
-                consoleLogger.AppendLine(result);
-
-                //var result = commandProcessor.ProcessCommand(commandInfo);
-                //consoleLogger.AppendLine(result);
+                var commandResultMessage = commandProcessorAdapter.ProcessCommand(line);
+                consoleLogger.AppendLine(commandResultMessage);
             }
 
             //! Visitor
             consoleLogger.Accept(new ConsoleLoggerVisitorWithoutNewLine());
-            //logger.Accept(new ConsoleLoggerVisitorWithNewLine());
-            //Console.Write(logger.GetAllText());
         }
     }
 }

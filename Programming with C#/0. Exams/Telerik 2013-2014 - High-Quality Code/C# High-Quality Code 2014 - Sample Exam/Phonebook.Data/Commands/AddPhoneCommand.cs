@@ -5,6 +5,7 @@
     using Phonebook.Common;
     using Phonebook.Data.Contracts;
 
+    //! Command pattern
     public class AddPhoneCommand : BaseCommand
     {
         private const string PhoneEntryCreatedMessage = "Phone entry created";
@@ -17,10 +18,7 @@
 
         public override string Execute(string[] arguments)
         {
-            if (arguments == null || arguments.Length < 2)
-            {
-                throw new ArgumentException("Invalid input arguments collection.");
-            }
+            this.CheckForNullArguments(arguments);
 
             var name = arguments[0];
             var phoneNumbers = arguments.Skip(1).ToArray(); // at least 1 and at most 10

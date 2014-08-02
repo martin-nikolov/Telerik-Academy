@@ -1,4 +1,4 @@
-namespace Phonebook.Data
+namespace Phonebook.Data.Repositories
 {
     using System;
     using System.Collections.Generic;

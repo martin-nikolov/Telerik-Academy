@@ -3,6 +3,7 @@
     using System;
     using Phonebook.Data.Contracts;
 
+    //! Command pattern -> base abstract class
     public abstract class BaseCommand : ICommand
     {
         private IPhonebookRepository phonebookRepository;
@@ -31,5 +32,13 @@
         }
 
         public abstract string Execute(string[] arguments);
+
+        protected void CheckForNullArguments(string[] arguments)
+        {
+            if (arguments == null)
+            {
+                throw new ArgumentException("Arguments collection instance cannot be null.");
+            }
+        }
     }
 }

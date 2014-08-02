@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleLoggerVisitorWithNewLine.cs" />
-    <Compile Include="ConsoleLoggerVisitorWithoutNewLine.cs" />
+    <Compile Include="Visitors\ConsoleLoggerVisitorWithNewLine.cs" />
+    <Compile Include="Visitors\ConsoleLoggerVisitorWithoutNewLine.cs" />
     <Compile Include="PhonebookEntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

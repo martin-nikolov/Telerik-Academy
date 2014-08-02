@@ -35,7 +35,7 @@
 
             set
             {
-                if (value == null || value.Length == 0)
+                if (value == null)
                 {
                     throw new NullReferenceException("Command arguments cannot be null or empty.");
                 }

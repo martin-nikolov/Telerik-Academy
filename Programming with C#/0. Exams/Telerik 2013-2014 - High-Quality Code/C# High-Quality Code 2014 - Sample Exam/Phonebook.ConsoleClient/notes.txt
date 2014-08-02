@@ -16,5 +16,5 @@ Implemented Design-patterns:
 - Command
 - Factory + Lazy-loading (Flyweight)
 - Strategy
-- Adapter
+- Facade
 - Visitor

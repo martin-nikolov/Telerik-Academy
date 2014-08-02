@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandProcessorAdapter.cs" />
+    <Compile Include="CommandProcessorFacade.cs" />
     <Compile Include="Contracts\IPhoneNumberSanitizer.cs" />
     <Compile Include="Factories\CommandFactoryWithLazyLoading.cs" />
     <Compile Include="CommandParser.cs" />

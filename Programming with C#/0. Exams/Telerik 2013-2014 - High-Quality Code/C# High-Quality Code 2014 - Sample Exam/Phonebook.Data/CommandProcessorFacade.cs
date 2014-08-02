@@ -5,20 +5,20 @@
     using Phonebook.Data.Contracts;
     using Phonebook.Data.Factories;
 
-    //! Adapter
-    public class CommandProcessorAdapter : ICommandProcessor
+    //! Facade
+    public class CommandProcessorFacade : ICommandProcessor
     {
         private readonly ICommandParser commandParser;
         private readonly ICommandFactory commandFactory;
 
         //! Dependency inversion
-        public CommandProcessorAdapter()
+        public CommandProcessorFacade()
             : this(new CommandParser(), new CommandFactoryWithLazyLoading())
         {
         }
 
         // TODO: Validation
-        public CommandProcessorAdapter(ICommandParser commandParser, ICommandFactory commandFactory)
+        public CommandProcessorFacade(ICommandParser commandParser, ICommandFactory commandFactory)
         {
             this.commandParser = commandParser;
             this.commandFactory = commandFactory;

@@ -13,7 +13,7 @@
             Console.SetIn(new System.IO.StreamReader("../../input.txt"));
             #endif
 
-            var commandProcessorAdapter = new CommandProcessorAdapter();
+            var commandProcessorAdapter = new CommandProcessorFacade();
             var consoleLogger = new StringBuilderLogger();
             
             while (true)

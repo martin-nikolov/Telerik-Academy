@@ -8,7 +8,7 @@ Common refactoring problems:
 ---------------------------------------------
 Bugs:
 
-- ...
+- CommandParser -> Parse() method
 
 ---------------------------------------------
 Implemented Design-patterns:

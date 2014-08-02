@@ -85,7 +85,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Phonebook.Data.CommandProcessorAdapter" Collapsed="true">
-    <Position X="1" Y="4.5" Width="1.5" />
+    <Position X="1" Y="4.75" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>

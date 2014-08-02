@@ -12,6 +12,9 @@ namespace Phonebook.Data.Repositories
     // TODO: Export an abstact PhonebookRepository class
     public class PhonebookRepositoryFast : IPhonebookRepository, IDeletablePhonebookRepository
     {
+        private const int MinListEntriesCount = 1;
+        private const int MaxListEntriesCount = 20;
+
         private readonly OrderedSet<IPhoneEntry> sortedEntries;
         private readonly IDictionary<string, IPhoneEntry> entriesByName;
         private readonly MultiDictionaryBase<string, IPhoneEntry> entriesByPhone;
@@ -31,6 +34,16 @@ namespace Phonebook.Data.Repositories
 
         public bool AddPhone(string name, IEnumerable<string> phoneNumbers)
         {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentException("Phone entry name cannot be null or empty.");
+            }
+
+            if (phoneNumbers == null)
+            {
+                throw new NullReferenceException("Phone numbers to add to phone entry cannot be null.");
+            }
+
             string nameToLowerCase = name.ToLowerInvariant();
             IPhoneEntry phoneEntry;
             bool isNewEntry = !this.entriesByName.TryGetValue(nameToLowerCase, out phoneEntry);
@@ -69,7 +82,7 @@ namespace Phonebook.Data.Repositories
             // TODO: Extract method
             foreach (var phoneEntry in matchedPhoneEntries)
             {
-                bool hasOnlyOnePhoneNumber = phoneEntry.PhoneNumbers.Count == 1;
+                bool hasOnlyOnePhoneNumber = phoneEntry.PhoneNumbers.Count == MinListEntriesCount;
                 if (hasOnlyOnePhoneNumber)
                 {
                     this.sortedEntries.Remove(phoneEntry);
@@ -116,8 +129,7 @@ namespace Phonebook.Data.Repositories
                 throw new ArgumentOutOfRangeException("Invalid start index value. Start index is out of range.");
             }
 
-            // TODO: Const
-            if (count < 1 || count > 20)
+            if (count < MinListEntriesCount || count > MaxListEntriesCount)
             {
                 throw new ArgumentOutOfRangeException("Count must be in range [1;20]");
             }

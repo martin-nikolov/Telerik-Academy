@@ -9,6 +9,9 @@ namespace Phonebook.Data.Repositories
 
     public class PhonebookRepositorySlow : IPhonebookRepository, IDeletablePhonebookRepository
     {
+        private const int MinListEntriesCount = 1;
+        private const int MaxListEntriesCount = 20;
+
         private readonly List<IPhoneEntry> entries = new List<IPhoneEntry>();
 
         public bool AddPhone(string name, IEnumerable<string> phoneNumbers)
@@ -82,8 +85,7 @@ namespace Phonebook.Data.Repositories
                 throw new ArgumentOutOfRangeException("Invalid start index value. Start index is out of range.");
             }
 
-            // TODO: Const
-            if (count < 1 || count > 20)
+            if (count < MinListEntriesCount || count > MaxListEntriesCount)
             {
                 throw new ArgumentOutOfRangeException("Count must be in range [1;20]");
             }

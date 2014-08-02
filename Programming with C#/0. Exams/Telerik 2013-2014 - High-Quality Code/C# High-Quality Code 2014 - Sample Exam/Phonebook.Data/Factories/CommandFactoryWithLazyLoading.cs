@@ -15,10 +15,10 @@
         private const string ChangePhoneCommandName = "ChangePhone";
         private const string ListPhonesCommandName = "List";
 
-        private readonly Lazy<AddPhoneCommand> addPhoneCommand;
-        private readonly Lazy<ChangePhoneCommand> changePhoneCommand;
-        private readonly Lazy<DeletePhoneCommand> deletePhoneCommand;
-        private readonly Lazy<ListPhonesCommand> listPhonesCommand;
+        private Lazy<AddPhoneCommand> addPhoneCommand;
+        private Lazy<ChangePhoneCommand> changePhoneCommand;
+        private Lazy<DeletePhoneCommand> deletePhoneCommand;
+        private Lazy<ListPhonesCommand> listPhonesCommand;
 
         private IPhonebookRepository phonebookRepository;
 
@@ -28,17 +28,13 @@
         {
         }
 
+        // TODO: Validate Sanitizer
         public CommandFactoryWithLazyLoading(IPhonebookRepository phonebookRepository, IPhoneNumberSanitizer sanitizer)
         {
             this.PhonebookRepository = phonebookRepository;
-
-            //! Lazy loading
-            this.addPhoneCommand = new Lazy<AddPhoneCommand>(() => new AddPhoneCommand(this.PhonebookRepository, sanitizer));
-            this.changePhoneCommand = new Lazy<ChangePhoneCommand>(() => new ChangePhoneCommand(this.PhonebookRepository, sanitizer));
-            this.deletePhoneCommand = new Lazy<DeletePhoneCommand>(() => new DeletePhoneCommand(this.PhonebookRepository));
-            this.listPhonesCommand = new Lazy<ListPhonesCommand>(() => new ListPhonesCommand(this.PhonebookRepository));
+            this.InitializeLazyLoadCommandClasses(sanitizer);
         }
-
+ 
         private IPhonebookRepository PhonebookRepository
         {
             get
@@ -83,6 +79,15 @@
             }
 
             return command;
+        }
+
+        //! Lazy loading
+        private void InitializeLazyLoadCommandClasses(IPhoneNumberSanitizer sanitizer)
+        {
+            this.addPhoneCommand = new Lazy<AddPhoneCommand>(() => new AddPhoneCommand(this.PhonebookRepository, sanitizer));
+            this.changePhoneCommand = new Lazy<ChangePhoneCommand>(() => new ChangePhoneCommand(this.PhonebookRepository, sanitizer));
+            this.deletePhoneCommand = new Lazy<DeletePhoneCommand>(() => new DeletePhoneCommand(this.PhonebookRepository));
+            this.listPhonesCommand = new Lazy<ListPhonesCommand>(() => new ListPhonesCommand(this.PhonebookRepository));
         }
     }
 }

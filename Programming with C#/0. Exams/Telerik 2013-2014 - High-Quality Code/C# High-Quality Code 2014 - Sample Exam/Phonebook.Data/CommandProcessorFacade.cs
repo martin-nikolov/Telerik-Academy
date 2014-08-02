@@ -17,7 +17,6 @@
         {
         }
 
-        // TODO: Validation
         public CommandProcessorFacade(ICommandParser commandParser, ICommandFactory commandFactory)
         {
             this.CommandParser = commandParser;

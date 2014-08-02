@@ -18,3 +18,14 @@ Implemented Design-patterns:
 - Strategy
 - Facade
 - Visitor
+
+---------------------------------------------
+Ensured principles:
+
+- Single responsibility
+- Open/Closed principle
+- Liskov substitution principle
+- Interface segregation
+- Dependency inversion
+- DRY
+- KISS

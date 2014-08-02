@@ -29,7 +29,7 @@
             }
 
             //! Visitor
-            consoleLogger.Accept(new ConsoleLoggerVisitorWithoutNewLine());
+            consoleLogger.Accept(new ConsoleLoggerVisitorWithNewLine());
         }
     }
 }

@@ -61,6 +61,7 @@
     <Compile Include="Contracts\IPhonebookRepository.cs" />
     <Compile Include="Contracts\IDeletablePhonebookRepository.cs" />
     <Compile Include="Contracts\ICommandFactory.cs" />
+    <Compile Include="Loggers\ListOfStringsLogger.cs" />
     <Compile Include="PhonebookSanitizer.cs" />
     <Compile Include="Repositories\PhonebookRepositoryFast.cs" />
     <Compile Include="Repositories\PhonebookRepositorySlow.cs" />

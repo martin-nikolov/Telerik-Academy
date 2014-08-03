@@ -2,14 +2,16 @@
 
 <p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming%20with%20C%23/Codes/Other/Telerik.png" /></a></p>
 
-| Programming                                                          | Web development                                     | Software Technologies
-| -------------------------------------------------------------------- | --------------------------------------------------- | ---------------------------- |
-| [C# - Part I](#c---part-i)                                           | [HTML Basics](#html-basics)                         | [Databases](#databases)      |
-| [C# - Part II](#c---part-ii)                                         | [CSS Styling](#css-styling)                         | 
-| [C# - Object-Oriented Programming](#c---object-oriented-programming) | [JavaScript Fundamentals](#javascript-fundamentals) |
-| [C# - High-Quality Code](#c---high-quality-code)                     | [JavaScript UI & DOM](#javascript-ui--dom)          |
-| [C# - Exams](#c---exams)                                             | [JavaScript OOP](#javascript-oop)                   |
-| [Algo Academy](#algo-academy)                                        | [PHP Web-development](#php-web-development)         |
+| Programming                                                                 | Web development                                     | Software Technologies
+| --------------------------------------------------------------------------- | --------------------------------------------------- | ---------------------------- |
+| [C# - Part I](#c---part-i)                                                  | [HTML Basics](#html-basics)                         | [Databases](#databases)      |
+| [C# - Part II](#c---part-ii)                                                | [CSS Styling](#css-styling)                         | 
+| [C# - Object-Oriented Programming](#c---object-oriented-programming)        | [JavaScript Fundamentals](#javascript-fundamentals) |
+| [C# - High-Quality Code](#c---high-quality-code)                            | [JavaScript UI & DOM](#javascript-ui--dom)          |
+| [C# - Data Structures and Algorithms](#c---data-structures-and-algorithms)  | [JavaScript OOP](#javascript-oop)                   |
+| [C# - Exams](#c---exams)                                                    | [JavaScript Applications](#javascript-applications) |
+| [Algo Academy](#algo-academy)                                               | [PHP Web-development](#php-web-development)         |
+| [Projects](#desktop)                                                        | [Projects](#web-development)                        |
 
 # Programming with C# 
 
@@ -65,6 +67,20 @@
 * [Software Quality Assurance](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/18.%20Software%20Quality%20Assurance)
 * [Mocking with Moq and JustMock](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/19.%20Mocking%20with%20Moq%20and%20JustMock) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/19.%20Mocking%20with%20Moq%20and%20JustMock/Readme.md)) - 26.07.2014
 * [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20High-Quality%20Code)
+
+## C# - Data Structures and Algorithms
+1. Data Structures Algorithms and Complexity - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/01.%20Data%20Structures%20Algorithms%20and%20Complexity%20-%20%E2%9C%98/Readme.md))
+* [Linear Data Structures](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/02.%20Linear%20Data%20Structures) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/02.%20Linear%20Data%20Structures/Readme.md)) - 11.03.2014
+* Trees and Traversals - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/03.%20Trees%20and%20Traversals%20-%20%E2%9C%98/Readme.md))
+* [Dictionaries, Hash Tables and Sets](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/04.%20Dictionaries%2C%20Hash%20Tables%20and%20Sets) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/04.%20Dictionaries%2C%20Hash%20Tables%20and%20Sets/Readme.md)) - 18.03.2014
+* [Advanced Data Structures](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/05.%20Advanced%20Data%20Structures) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/05.%20Advanced%20Data%20Structures/Readme.md)) - 05.04.2014
+* [Data Structure Efficiency](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/06.%20Data%20Structures%20Efficiency) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/06.%20Data%20Structures%20Efficiency/Readme.md)) - 03.04.2014
+* [Sorting and Searching Algorithms](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/07.%20Sorting%20and%20Searching%20Algorithms) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/07.%20Sorting%20and%20Searching%20Algorithms/Readme.md)) - 13.03.2014
+* [Recursion](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/08.%20Recursion) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/08.%20Recursion/Readme.md)) - 17.04.2014
+* Combinatorics - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/09.%20Combinatorics%20-%20%E2%9C%98/Readme.md))
+* Dynamic Programming - ([assignment](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/10.%20Dynamic%20Programming%20-%E2%9C%98))
+* [Graphs and Algorithms](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/11.%20Graphs%20and%20Graph%20Algorithms) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/11.%20Graphs%20and%20Graph%20Algorithms/Readme.md)) - 27.03.2014
+* Other Algorithms - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/12.%20Other%20Algorithms%20-%20%E2%9C%98/Readme.md))
 
 ## C# - Exams
 1. [Telerik 2011/2012 - C# Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%201) - 4x5 exercises
@@ -176,8 +192,20 @@
 # Projects
 
 ## Desktop
-* [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - 01.09.2013 (Course - C# Part 2)
-* [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - 11.12.2013 (Course - C# OOP) 
+* [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - September, 2013 (Course - C# Part 2)
+* [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - December, 2013 (Course - C# OOP) 
+* [Teamwork - Console-based game](https://github.com/Hangman-3/High-Quality-Code-Teamwork) - May - July, 2014 (Course - C# High-Quality Code)
+
+## Web-development
+* [Teamwork - Client-side JavaScript application](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - June, 2014 (Course - JavaScript UI & DOM) 
+
+## Other simple & interesting tasks
+* [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) ([Demo](http://nikolov.cloudvps.bg/Windows%208%20Calculator/)) - HTML / CSS
+* [Simple Organizer](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/08.%20JavaScript%20Event%20Model/01.%20Simple%20Todo%20List) ([Demo](http://nikolov.cloudvps.bg/Simple%20Organizer/)) - HTML / CSS / JavaScript
+* [JavaScript Console - Windows 8 Style](https://github.com/flextry/jsConsole) ([Demo](http://nikolov.cloudvps.bg/jsConsole/)) - HTML / CSS / JavaScript
+* [Snake game](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/02.%20The%20Canvas/04.%20Snake) ([Demo](http://nikolov.cloudvps.bg/Snake/)) - HTML / CSS / Canvas / JavaScript
+* [Family tree](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/03.%20KineticJS/01.%20Family%20Three) ([Demo](http://nikolov.cloudvps.bg/Family%20Tree/)) - HTML / CSS / JavaScript / KineticJS / Tree Data Structure and BFS
+* [Crowd Chat - Simple SPA Application](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA/01.%20CrowdChat) ([Demo](http://nikolov.cloudvps.bg/CrowdChat)) - HTML / CSS / JavaScript / Sammy.js
 
 # Other courses
 

@@ -192,6 +192,8 @@
 # Projects
 
 ## Desktop
+* [Windows 7 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Calculator%20(XAML)) - C# / WPF / XAML (School Assignment)
+* [Magic Numbers Game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Magic%20Numbers%20(XAML)) - C# / WPF / XAML (School Assignment)
 * [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - September, 2013 (Course - C# Part 2)
 * [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - December, 2013 (Course - C# OOP) 
 * [Teamwork - Console-based game](https://github.com/Hangman-3/High-Quality-Code-Teamwork) - May - July, 2014 (Course - C# High-Quality Code)

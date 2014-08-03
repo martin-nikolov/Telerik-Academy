@@ -180,8 +180,11 @@
 * [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - 11.12.2013 (Course - C# OOP) 
 
 ## Other simple & interesting tasks
-* [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) - HTML & CSS
-* [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - 11.12.2013 (Course - C# OOP) 
+* [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) ([Demo](https://rawgit.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator/index.html)) - HTML / CSS
+* [Simple Organizer](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/08.%20JavaScript%20Event%20Model/01.%20Simple%20Todo%20List) ([Demo](https://rawgit.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/08.%20JavaScript%20Event%20Model/01.%20Simple%20Todo%20List/index.html)) - HTML / CSS / JavaScript
+* [Snake game](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/02.%20The%20Canvas/04.%20Snake) ([Demo](https://rawgit.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/02.%20The%20Canvas/04.%20Snake/index.html)) - HTML / CSS / Canvas / JavaScript
+* [Family tree](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/03.%20KineticJS/01.%20Family%20Three) ([Demo](https://rawgit.com/flextry/Telerik-Academy/master/Web%20Design%20&%20Development/4.%20JavaScript%20UI%20&%20DOM/03.%20KineticJS/01.%20Family%20Three/index.html)) - HTML / CSS / JavaScript / KineticJS / Tree Data Structure and BFS
+* [Crowd Chat - Simple SPA Application](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA/01.%20CrowdChat) ([Demo](http://nikolov.cloudvps.bg/CrowdChat)) - HTML / CSS / JavaScript / Sammy.js
 
 # Other courses
 

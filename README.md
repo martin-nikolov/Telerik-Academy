@@ -8,7 +8,8 @@
 | [C# - Part II](#c---part-ii)                                         | [CSS Styling](#css-styling)                         | 
 | [C# - Object-Oriented Programming](#c---object-oriented-programming) | [JavaScript Fundamentals](#javascript-fundamentals) |
 | [C# - High-Quality Code](#c---high-quality-code)                     | [JavaScript UI & DOM](#javascript-ui--dom)          |
-| [C# - Exams](#c---exams)                                             | [JavaScript OOP](#javascript-oop)                   |
+| [C# - Data Structures and Algorithms](#c---high-quality-code)        | [JavaScript OOP](#javascript-oop)                   |
+| [C# - Exams](#c---exams)                                             | [JavaScript Applications](#javascript-applications) |
 | [Algo Academy](#algo-academy)                                        | [PHP Web-development](#php-web-development)         |
 
 # Programming with C# 
@@ -65,6 +66,20 @@
 * [Software Quality Assurance](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/18.%20Software%20Quality%20Assurance)
 * [Mocking with Moq and JustMock](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/19.%20Mocking%20with%20Moq%20and%20JustMock) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/19.%20Mocking%20with%20Moq%20and%20JustMock/Readme.md)) - 26.07.2014
 * [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20High-Quality%20Code)
+
+## C# - Data Structures and Algorithms
+1. Data Structures Algorithms and Complexity - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/01.%20Data%20Structures%20Algorithms%20and%20Complexity%20-%20%E2%9C%98/Readme.md))
+* [Linear Data Structures](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/02.%20Linear%20Data%20Structures) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/02.%20Linear%20Data%20Structures/Readme.md)) - 11.03.2014
+* Trees and Traversals - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/03.%20Trees%20and%20Traversals%20-%20%E2%9C%98/Readme.md))
+* [Dictionaries, Hash Tables and Sets](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/04.%20Dictionaries%2C%20Hash%20Tables%20and%20Sets) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/04.%20Dictionaries%2C%20Hash%20Tables%20and%20Sets/Readme.md)) - 18.03.2014
+* [Advanced Data Structures](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/05.%20Advanced%20Data%20Structures) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/05.%20Advanced%20Data%20Structures/Readme.md)) - 05.04.2014
+* [Data Structure Efficiency](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/06.%20Data%20Structures%20Efficiency) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/06.%20Data%20Structures%20Efficiency/Readme.md)) - 03.04.2014
+* [Sorting and Searching Algorithms](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/07.%20Sorting%20and%20Searching%20Algorithms) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/07.%20Sorting%20and%20Searching%20Algorithms/Readme.md)) - 13.03.2014
+* [Recursion](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/08.%20Recursion) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/08.%20Recursion/Readme.md)) - 17.04.2014
+* Combinatorics - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/09.%20Combinatorics%20-%20%E2%9C%98/Readme.md))
+* Dynamic Programming - ([assignment](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/10.%20Dynamic%20Programming%20-%E2%9C%98))
+* [Graphs and Algorithms](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/11.%20Graphs%20and%20Graph%20Algorithms) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/11.%20Graphs%20and%20Graph%20Algorithms/Readme.md)) - 27.03.2014
+* Other Algorithms - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/12.%20Other%20Algorithms%20-%20%E2%9C%98/Readme.md))
 
 ## C# - Exams
 1. [Telerik 2011/2012 - C# Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%201) - 4x5 exercises

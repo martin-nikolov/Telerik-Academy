@@ -11,6 +11,7 @@
 | [C# - Data Structures and Algorithms](#c---data-structures-and-algorithms)  | [JavaScript OOP](#javascript-oop)                   |
 | [C# - Exams](#c---exams)                                                    | [JavaScript Applications](#javascript-applications) |
 | [Algo Academy](#algo-academy)                                               | [PHP Web-development](#php-web-development)         |
+| [Projects](#desktop)                                                        | [Projects](#web-development)                        |
 
 # Programming with C# 
 

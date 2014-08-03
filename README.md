@@ -200,10 +200,10 @@
 * [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - December, 2013 (Course - C# OOP) 
 * [Teamwork - Console-based game](https://github.com/Hangman-3/High-Quality-Code-Teamwork) - May - July, 2014 (Course - C# High-Quality Code)
 
-## Web-development
+## Web-Development
 * [Teamwork - Client-side JavaScript application](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - June, 2014 (Course - JavaScript UI & DOM) 
 
-## Other simple & interesting tasks
+## Other Simple & Interesting Tasks
 * [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) ([Demo](http://nikolov.cloudvps.bg/Windows%208%20Calculator/)) - HTML / CSS
 * [Simple Organizer](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/08.%20JavaScript%20Event%20Model/01.%20Simple%20Todo%20List) ([Demo](http://nikolov.cloudvps.bg/Simple%20Organizer/)) - HTML / CSS / JavaScript
 * [JavaScript Console - Windows 8 Style](https://github.com/flextry/jsConsole) ([Demo](http://nikolov.cloudvps.bg/jsConsole/)) - HTML / CSS / JavaScript

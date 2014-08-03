@@ -192,6 +192,8 @@
 # Projects
 
 ## Desktop
+* [Falling Rocks](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/04.%20Console%20Input-Output/11.%20Falling%20Rocks) - C# Console-based game (C# Part I - Homework)
+* [JustSnake](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Games/Snake) - C# Console-based game
 * [Windows 7 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Calculator%20(XAML)) - C# / WPF / XAML (School Assignment)
 * [Magic Numbers Game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Magic%20Numbers%20(XAML)) - C# / WPF / XAML (School Assignment)
 * [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - September, 2013 (Course - C# Part 2)

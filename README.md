@@ -211,7 +211,7 @@
 * [Family tree](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/03.%20KineticJS/01.%20Family%20Three) ([Demo](http://nikolov.cloudvps.bg/Family%20Tree/)) - HTML / CSS / JavaScript / KineticJS / Tree Data Structure and BFS
 * [Crowd Chat - Simple SPA Application](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA/01.%20CrowdChat) ([Demo](http://nikolov.cloudvps.bg/CrowdChat)) - HTML / CSS / JavaScript / Sammy.js
 
-## Knowledge Sharing and Team Working - Telerik Courses
+## Knowledge Sharing and Team Working
 * [Teamwork - Wikipedia enrichment](https://docs.google.com/file/d/0B7N-_H75aDfJdmNYX3hSV09BU2s) - (Knowledge Sharing)
 
 # Other courses

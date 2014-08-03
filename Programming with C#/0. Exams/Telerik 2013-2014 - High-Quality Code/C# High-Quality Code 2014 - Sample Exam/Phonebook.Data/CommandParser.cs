@@ -24,11 +24,11 @@
 
             string commandName = command.Substring(0, firstOpenBracket);
             string commandArgsString = command.Substring(firstOpenBracket + 1, command.Length - commandName.Length - 2); // Bug fixed
-            var commandArgs = commandArgsString.Split(',')
-                                               .Select(c => c.Trim())
-                                               .ToArray();
+            var commandArgsCollection = commandArgsString.Split(',')
+                                                         .Select(c => c.Trim())
+                                                         .ToArray();
 
-            var parsedCommand = new CommandInfo { Name = commandName, Arguments = commandArgs };
+            var parsedCommand = new CommandInfo { Name = commandName, Arguments = commandArgsCollection };
             return parsedCommand;
         }
     }

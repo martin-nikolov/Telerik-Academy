@@ -50,14 +50,22 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DeletePhoneTest.cs" />
-    <Compile Include="ChangePhoneTest.cs" />
-    <Compile Include="AddPhoneTest.cs" />
-    <Compile Include="ListPhoneTest.cs" />
+    <Compile Include="PhoneRepositoryTests\DeletePhoneTest.cs" />
+    <Compile Include="PhoneRepositoryTests\ChangePhoneTest.cs" />
+    <Compile Include="PhoneRepositoryTests\AddPhoneTest.cs" />
+    <Compile Include="PhoneRepositoryTests\ListPhoneTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="PhoneRepositoryTests\" />
+    <ProjectReference Include="..\Phonebook.Data\Phonebook.Data.csproj">
+      <Project>{b0bf7dc0-1a5f-4006-acae-6fc890b007a2}</Project>
+      <Name>Phonebook.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phonebook.Models\Phonebook.Models.csproj">
+      <Project>{e25a6d06-6f02-40c1-b37c-9340ef19479e}</Project>
+      <Name>Phonebook.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

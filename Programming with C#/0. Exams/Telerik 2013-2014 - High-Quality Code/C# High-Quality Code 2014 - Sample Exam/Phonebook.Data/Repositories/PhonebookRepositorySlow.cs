@@ -87,7 +87,8 @@ namespace Phonebook.Data.Repositories
 
             if (count < MinListEntriesCount || count > MaxListEntriesCount)
             {
-                throw new ArgumentOutOfRangeException("Count must be in range [1;20]");
+                throw new ArgumentOutOfRangeException(
+                    string.Format("Count must be in range [{0};{1}]", MinListEntriesCount, MaxListEntriesCount));
             }
 
             this.entries.Sort();

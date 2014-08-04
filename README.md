@@ -192,24 +192,24 @@
 # Projects
 
 ## Desktop
-* [Falling Rocks](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/04.%20Console%20Input-Output/11.%20Falling%20Rocks) - C# Console-based game (C# Part I - Homework)
-* [JustSnake](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Games/Snake) - C# Console-based game
-* [Windows 7 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Calculator%20(XAML)) - C# / WPF / XAML (School Assignment)
-* [Magic Numbers Game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Magic%20Numbers%20(XAML)) - C# / WPF / XAML (School Assignment)
 * [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - September, 2013 (Course - C# Part 2)
 * [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - December, 2013 (Course - C# OOP) 
 * [Teamwork - Console-based game](https://github.com/Hangman-3/High-Quality-Code-Teamwork) - May - July, 2014 (Course - C# High-Quality Code)
 
-## Web-development
+## Web-Development
 * [Teamwork - Client-side JavaScript application](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - June, 2014 (Course - JavaScript UI & DOM) 
 
-## Other simple & interesting tasks
+## Other Simple & Interesting Tasks
 * [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) ([Demo](http://nikolov.cloudvps.bg/Windows%208%20Calculator/)) - HTML / CSS
 * [Simple Organizer](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/08.%20JavaScript%20Event%20Model/01.%20Simple%20Todo%20List) ([Demo](http://nikolov.cloudvps.bg/Simple%20Organizer/)) - HTML / CSS / JavaScript
 * [JavaScript Console - Windows 8 Style](https://github.com/flextry/jsConsole) ([Demo](http://nikolov.cloudvps.bg/jsConsole/)) - HTML / CSS / JavaScript
 * [Snake game](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/02.%20The%20Canvas/04.%20Snake) ([Demo](http://nikolov.cloudvps.bg/Snake/)) - HTML / CSS / Canvas / JavaScript
 * [Family tree](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/03.%20KineticJS/01.%20Family%20Three) ([Demo](http://nikolov.cloudvps.bg/Family%20Tree/)) - HTML / CSS / JavaScript / KineticJS / Tree Data Structure and BFS
 * [Crowd Chat - Simple SPA Application](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA/01.%20CrowdChat) ([Demo](http://nikolov.cloudvps.bg/CrowdChat)) - HTML / CSS / JavaScript / Sammy.js
+* [Falling Rocks](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/04.%20Console%20Input-Output/11.%20Falling%20Rocks) - C# Console-based game (C# Part I - Homework)
+* [JustSnake](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Games/Snake) - C# Console-based game
+* [Windows 7 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Calculator%20(XAML)) - C# / WPF / XAML (School Assignment)
+* [Magic Numbers Game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Magic%20Numbers%20(XAML)) - C# / WPF / XAML (School Assignment)
 
 ## Knowledge Sharing and Team Working
 * [Teamwork - Wikipedia](https://docs.google.com/file/d/0B7N-_H75aDfJdmNYX3hSV09BU2s) - Enrichment of [Software engineering](http://bg.wikipedia.org/wiki/%D0%A1%D0%BE%D1%84%D1%82%D1%83%D0%B5%D1%80%D0%BD%D0%BE_%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D1%81%D1%82%D0%B2%D0%BE) and [Enterprise resource planning](http://bg.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B8%D1%80%D0%B0%D0%BD%D0%B5_%D0%BD%D0%B0_%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D0%B8%D1%82%D0%B5_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5%D1%82%D0%BE) articles

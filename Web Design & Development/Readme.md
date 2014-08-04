@@ -57,6 +57,7 @@
 * [AMD and Require.js](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/5.%20JavaScript%20OOP/07.%20AMD%20and%20Require.js) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/5.%20JavaScript%20OOP/07.%20AMD%20and%20Require.js/Readme.md)) - 04.07.2014
 * [JavaScript Exceptions](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/5.%20JavaScript%20OOP/08.%20JavaScript%20Exceptions)
 * [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Exam%20OOP)
+* [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20OOP%20Exam/JavaScript%20-%207%20July%202014%20-%20Morning) - 07.07.2014
 
 ## JavaScript Applications
 
@@ -69,3 +70,14 @@
 7. [App Clouds for persistent data (SaaS)](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/07.%20App%20Clouds%20for%20persistent%20data%20(SaaS))
 8. [Unit Testing in JavaScript](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/08.%20Unit%20Testing%20in%20JavaScript)
 9. [JavaScript Patterns and SPA](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA/Readme.md)) - 25.07.2014
+10. [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Apps%20Exam/JavaScript%20-%2029%20July%202014) - 29.07.2014
+
+## Web Design & Development - Exams
+1. [Telerik 2012-2013 - CSS Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202012-2013%20-%20CSS%20Exam) - 5x3 exercises
+* [Telerik 2013-2014 - CSS Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20CSS%20Exam) - 3x3 exercises
+* [Telerik 2012-2013 - JavaScript Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202012-2013%20-%20JavaScript%20Exam%201) - 2x3 + 8 exercises
+* [Telerik 2012-2013 - JavaScript Exam 2](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202012-2013%20-%20JavaScript%20Exam%202) - 3х1 exercises
+* [Telerik 2013-2014 - JavaScript Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Exam%201) - 2x4 exercises
+* [Telerik 2013-2014 - JavaScript Exam 2](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Exam%202) - 2x3 exercises
+* [Telerik 2013-2014 - JavaScript OOP Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Exam%20OOP) - 1x2 exercises
+* [Telerik 2013-2014 - JavaScript Applications Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Apps%20Exam) - 1 exercise

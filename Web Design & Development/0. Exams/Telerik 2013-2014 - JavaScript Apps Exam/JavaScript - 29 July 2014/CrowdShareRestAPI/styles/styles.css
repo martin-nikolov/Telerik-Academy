@@ -1,0 +1,189 @@
+﻿body
+{
+    background-color: #e8dbdb;
+}
+
+body > p
+{
+    text-align: center;
+}
+
+#reg-msg {
+    text-align: center;
+}
+
+input[type=text], input[type=password], textarea
+{
+    background-color: #f3e9e9;
+}
+
+h2:hover
+{
+    cursor: pointer;
+}
+
+#wrapper:after
+{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#wrapper
+{
+    width: 960px;
+    margin: 0 auto;
+}
+
+h3
+{
+    margin-top: 0;
+    padding-top: 10px;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+div#posts
+{
+    width: 500px;
+    height: 330px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+div#posts .post-entry
+{
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+#create-post-container
+{
+    margin-top: 20px;
+}
+
+#create-post-container .create-post-form
+{
+    text-align: center;
+}
+
+#posts-options
+{
+    margin-top: 10px;
+    text-align: center;
+}
+
+#posts-count
+{
+    width: 50px;
+    text-align: center;
+}
+
+#posts-sorting-options
+{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#user-loged-in
+{
+    text-align: center;
+    border: 1px solid #606060;
+    width: 300px;
+    padding: 13px;
+    margin: 0 auto;
+}
+
+#greetings
+{
+    display: inline-block;
+}
+
+#user-loged-in button#button-logout
+{
+    margin-left: 5px;
+    display: inline-block;
+}
+
+#user-loged-in > p
+{
+    text-align: center;
+}
+
+#user-loged-in > button
+{
+    display: block;
+    margin: 5px auto;
+}
+
+#register-user-container
+{
+    width: 300px;
+    margin: 0 auto;
+}
+
+#register-user-container > label
+{
+    line-height: 26px;
+    display: inline-block;
+    width: 100px;
+    overflow: hidden;
+}
+
+#register-user-container > input
+{
+    width: 190px;
+}
+
+#register-user-container #back-to-homepage
+{
+    float: right;
+    margin: 5px 5px 0 0;
+}
+
+#login-user-container
+{
+    width: 300px;
+    margin: 0 auto;
+}
+
+#login-user-container > label
+{
+    line-height: 26px;
+    display: inline-block;
+    width: 100px;
+}
+
+#login-user-container > input
+{
+    width: 190px;
+}
+
+#login-user-container > a
+{
+    float: right;
+    margin-top: 6px;
+}
+
+#messages
+{
+    width: 300px;
+    margin: 10px auto;
+    text-align: center;
+    overflow: hidden;
+    color: #15d415;
+}
+
+#error-messages, #success-messages
+{
+    width: 300px;
+    margin: 0 auto;
+    color: red;
+    text-align: center;
+    overflow: hidden;
+}
+
+#success-messages
+{
+    color: green;
+}

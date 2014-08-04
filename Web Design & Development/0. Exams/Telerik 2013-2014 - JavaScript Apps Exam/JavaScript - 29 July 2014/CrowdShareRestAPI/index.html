@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bulls and cows</title>
+        <link href="styles/styles.css" rel="stylesheet" />
+        <script data-main="scripts/main" src="scripts/vendor/require.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="error-messages"></div>
+            <div id="success-messages"></div>
+            <div id="login-container"></div>
+            <div id="posts-sorting-options">
+                Sort by:
+                <select id="sort-criteria">
+                    <option></option>
+                    <option value="date">Date</option>
+                    <option value="title">Title</option>
+                </select>
+                in:
+                <select id="sort-order">
+                    <option></option>
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+                </select>
+                Order
+                <div>
+                    <input type="button" value="Sort" id="sort-btn" />
+                </div>
+            </div>
+
+            <div id="posts"></div>
+            <div id="posts-options">
+                <div>
+                    Posts on page:
+                    <input type="text" placeholder="Posts on page" value="5" id="posts-count" />
+                </div>
+
+                <input type="button" value="Previous page" id="prev-page-btn" />
+                <strong>Current page:</strong> <span id="posts-page"></span>
+                <input type="button" value="Next page" id="next-page-btn" />
+            </div>
+        </div>
+    </body>
+</html>

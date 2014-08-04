@@ -10,3 +10,4 @@
 * [AMD and Require.js](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/5.%20JavaScript%20OOP/07.%20AMD%20and%20Require.js) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/5.%20JavaScript%20OOP/07.%20AMD%20and%20Require.js/Readme.md)) - 04.07.2014
 * [JavaScript Exceptions](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/5.%20JavaScript%20OOP/08.%20JavaScript%20Exceptions)
 * [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Exam%20OOP)
+* [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20OOP%20Exam/JavaScript%20-%207%20July%202014%20-%20Morning) - 07.07.2014

@@ -1,3 +1,7 @@
+<p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming%20with%20C%23/Codes/Other/Telerik.png" /></a></p>
+
+---
+
 <h1>Project Description</h1>
 <p>Design and implement <strong>a Console Game</strong> by choice. It could be a classic well-known application like Minesweeper, Tetris, Chess, Snake, etc., but you can design your own type of game. You are absolutely <strong>free to choose the topic of your work.</strong></p>
 <h2>General Requirements</h2>

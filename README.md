@@ -8,7 +8,7 @@
 | [C# - Part II](#c---part-ii)                                                | [CSS Styling](#css-styling)                         | 
 | [C# - Object-Oriented Programming](#c---object-oriented-programming)        | [JavaScript Fundamentals](#javascript-fundamentals) |
 | [C# - High-Quality Code](#c---high-quality-code)                            | [JavaScript UI & DOM](#javascript-ui--dom)          |
-| [C# - Data Structures and Algorithms](#c---data-structures-and-algorithms)  | [JavaScript Object-Oriented Programming](#javascript-oop)                   |
+| [C# - Data Structures and Algorithms](#c---data-structures-and-algorithms)  | [JavaScript OOP](#javascript-oop)                   |
 | [C# - Exams](#c---exams)                                                    | [JavaScript Applications](#javascript-applications) |
 | [Algo Academy](#algo-academy)                                               | [PHP Web-development](#php-web-development)         |
 | [Projects](#desktop)                                                        | [Projects](#web-development)                        |

@@ -1,3 +1,7 @@
+<p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming%20with%20C%23/Codes/Other/Telerik.png" /></a></p>
+
+---
+
 # Databases
 
 1. [Database Systems - Overview](https://github.com/flextry/Telerik-Academy/tree/master/Databases/01.%20Database%20Systems%20-%20Overview) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Databases/01.%20Database%20Systems%20-%20Overview/Readme.md)) - 28.04.2013

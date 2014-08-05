@@ -22,8 +22,8 @@
                 throw new ArgumentException("Invalid command parameters.");
             }
 
-            string commandName = command.Substring(0, firstOpenBracket);
-            string commandArgsString = command.Substring(firstOpenBracket + 1, command.Length - commandName.Length - 2); // Bug fixed
+            var commandName = command.Substring(0, firstOpenBracket);
+            var commandArgsString = command.Substring(firstOpenBracket + 1, command.Length - commandName.Length - 2); // Bug fixed
             var commandArgsCollection = commandArgsString.Split(',')
                                                          .Select(c => c.Trim())
                                                          .ToArray();

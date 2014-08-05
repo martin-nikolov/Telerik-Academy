@@ -2,7 +2,6 @@
 {
     using System;
     using System.Linq;
-    using System.Text;
     using Phonebook.Data.Contracts;
 
     //! Command pattern
@@ -24,10 +23,9 @@
 
             try
             {
-                var output = new StringBuilder();
                 var listedPhoneEntries = this.PhonebookRepository.ListEntries(startIndex, count).ToList();
-                listedPhoneEntries.ForEach(entry => output.AppendLine(entry.ToString()));
-                return output.ToString().Trim();
+                var output = string.Join(Environment.NewLine, listedPhoneEntries.Select(e => e)).Trim();
+                return output;
             }
             catch (ArgumentOutOfRangeException)
             {

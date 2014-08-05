@@ -17,8 +17,8 @@
 
         public void Accept(ILoggerVisitor visitor)
         {
-            var mergedLinesString = string.Join(Environment.NewLine, this.output);
-            visitor.Visit(mergedLinesString);
+            var output = string.Join(Environment.NewLine, this.output);
+            visitor.Visit(output);
         }
     }
 }

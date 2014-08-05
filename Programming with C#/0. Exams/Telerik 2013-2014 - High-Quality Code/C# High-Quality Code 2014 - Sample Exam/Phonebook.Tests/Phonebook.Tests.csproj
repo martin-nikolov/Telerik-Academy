@@ -50,7 +50,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="PhoneRepositoryTests\DeletePhoneTest.cs" />
     <Compile Include="PhoneRepositoryTests\ChangePhoneTest.cs" />
     <Compile Include="PhoneRepositoryTests\AddPhoneTest.cs" />
     <Compile Include="PhoneRepositoryTests\ListPhoneTest.cs" />

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3607BBE3-5D97-4860-88BB-8245B611ECD7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Computers.Models</RootNamespace>
+    <AssemblyName>Computers.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName />
+    <SccLocalPath />
+    <SccAuxPath />
+    <SccProvider />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstracts\Laptop.cs" />
+    <Compile Include="Abstracts\Computer.cs" />
+    <Compile Include="Abstracts\Machine.cs" />
+    <Compile Include="Abstracts\Server.cs" />
+    <Compile Include="CommandInfo.cs" />
+    <Compile Include="Abstracts\Cpu.cs" />
+    <Compile Include="Abstracts\Manufacturer.cs" />
+    <Compile Include="Components\Cpu128Bits.cs" />
+    <Compile Include="Components\Cpu32Bits.cs" />
+    <Compile Include="Components\Cpu64Bits.cs" />
+    <Compile Include="Components\VideoCard.cs" />
+    <Compile Include="Contracts\IComputer.cs" />
+    <Compile Include="Contracts\ILaptop.cs" />
+    <Compile Include="Contracts\IRandomNumberProvider.cs" />
+    <Compile Include="Contracts\IServer.cs" />
+    <Compile Include="DellComputers\DellLaptop.cs" />
+    <Compile Include="DellComputers\DellManufacturer.cs" />
+    <Compile Include="DellComputers\DellPersonalComputer.cs" />
+    <Compile Include="DellComputers\DellServer.cs" />
+    <Compile Include="VideoCardDrawStrategy.cs" />
+    <Compile Include="HpComputers\HpLaptop.cs" />
+    <Compile Include="HpComputers\HpManufacturer.cs" />
+    <Compile Include="HpComputers\HpPersonalComputer.cs" />
+    <Compile Include="HpComputers\HpServer.cs" />
+    <Compile Include="Components\HardDriver.cs" />
+    <Compile Include="Contracts\IMotherboard.cs" />
+    <Compile Include="Contracts\ICommandInfo.cs" />
+    <Compile Include="Components\LaptopBattery.cs" />
+    <Compile Include="Components\Motherboard.cs" />
+    <Compile Include="Contracts\IDrawStrategy.cs" />
+    <Compile Include="LenovoComputers\LenovoLaptop.cs" />
+    <Compile Include="LenovoComputers\LenovoManufacturer.cs" />
+    <Compile Include="LenovoComputers\LenovoPersonalComputer.cs" />
+    <Compile Include="LenovoComputers\LenovoServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Components\RamMemory.cs" />
+    <Compile Include="Enumerations\ComputerType.cs" />
+    <Compile Include="RandomNumberProvider.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

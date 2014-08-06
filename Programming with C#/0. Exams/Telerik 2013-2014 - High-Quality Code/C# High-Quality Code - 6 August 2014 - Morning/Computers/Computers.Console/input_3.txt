@@ -1,0 +1,15 @@
+﻿Lenovo
+Play 5
+Play 6
+Charge 10
+Charge 0
+Charge -100
+Charge 200
+Charge -1
+Process -1
+Process 2001
+Process 2000
+Process 1000
+Process 500
+Process 16
+Exit

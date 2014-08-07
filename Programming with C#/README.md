@@ -12,6 +12,7 @@
 * [Console Input/Output](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/04.%20Console%20Input-Output) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/04.%20Console%20Input-Output/Readme.md)) - 16.05.2013
 * [Conditional Statements](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/05.%20Conditional%20Statements) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/05.%20Conditional%20Statements/Readme.md)) - 17.05.2013
 * [Loops](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/06.%20Loops) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/06.%20Loops/Readme.md)) - 21.05.2013
+* [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20C%23%20Exam%201%20-%20Spring/Telerik%20Academy%20Exam%201%20%40%2023%20June%202013) - 23.06.2013
 
 ## C# - Part II
 1. [Arrays](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/01.%20Arrays) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/01.%20Arrays/Readme.md)) - 01.07.2013
@@ -23,6 +24,7 @@
 * [Text Files](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/07.%20Text%20Files) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/07.%20Text%20Files/Readme.md)) - 12.07.2013
 * [Strings and Text Processing](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/08.%20Strings%20and%20Text%20Processing) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/08.%20Strings%20and%20Text%20Processing/Readme.md)) - 14.07.2013
 * [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - 01.09.2013
+* [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20C%23%20Exam%202%20-%20Spring/Telerik%20Academy%20Exam%20%40%2014%20Sept%202013%20-%20Morning) - 14.09.2013
 
 ## C# - Object-Oriented Programming
 1. [Defining classes - Part I](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/01.%20Defining%20classes%20-%20Part%20I) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/01.%20Defining%20classes%20-%20Part%20I/Readme.md)) - 21.09.2013
@@ -34,6 +36,7 @@
 * [Design Patterns](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/07.%20Design%20Patterns) - 11.11.2013
 * [Practical Workshop - Academy Popcorn API](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/08.%20OOP%20Practical%20Workshop%20-%20Academy%20Popcorn) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/08.%20OOP%20Practical%20Workshop%20-%20Academy%20Popcorn/Readme.md)) - 11.11.2013
 * [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - 11.12.2013
+* [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20OOP%20Exam%20-%20Spring/OOP%20-%2012%20December%202013) - 12.12.2013
 
 ## C# - High-Quality Code
 1. [Code Formatting](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/01.%20Code%20Formatting) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/01.%20Code%20Formatting/Readme.md)) - 28.04.2014
@@ -55,6 +58,7 @@
 * [Software Engineering Fundamentals](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/17.%20Software%20Engineering%20Fundamentals)
 * [Software Quality Assurance](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/18.%20Software%20Quality%20Assurance)
 * [Mocking with Moq and JustMock](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/19.%20Mocking%20with%20Moq%20and%20JustMock) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/19.%20Mocking%20with%20Moq%20and%20JustMock/Readme.md)) - 26.07.2014
+* [Teamwork - Console-based game](https://github.com/Hangman-3/High-Quality-Code-Teamwork)
 * [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20High-Quality%20Code/C%23%20High-Quality%20Code%202014%20-%20Sample%20Exam)
 * [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20High-Quality%20Code/C%23%20High-Quality%20Code%20-%206%20August%202014%20-%20Morning) - 06.08.2014
 

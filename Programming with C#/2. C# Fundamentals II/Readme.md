@@ -10,4 +10,5 @@
 * [Text Files](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/07.%20Text%20Files) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/07.%20Text%20Files/Readme.md)) - 12.07.2013
 * [Strings and Text Processing](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/08.%20Strings%20and%20Text%20Processing) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/08.%20Strings%20and%20Text%20Processing/Readme.md)) - 14.07.2013
 * [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - 01.09.2013
+* [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20C%23%20Exam%202%20-%20Spring/Telerik%20Academy%20Exam%20%40%2014%20Sept%202013%20-%20Morning) - 14.09.2013
 

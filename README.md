@@ -114,8 +114,8 @@
 * [SASS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/04.%20SASS) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/04.%20SASS/Readme.md)) - 11.01.2014
 * [LESS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/05.%20LESS) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/05.%20LESS/Readme.md)) - 12.01.2014
 * [CSS - Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202012-2013%20-%20CSS%20Exam)
-* [CSS - Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20CSS%20Exam)
-
+* [CSS - Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20CSS%20Exam) - 23.04.2014
+* 
 ## JavaScript Fundamentals
 1. [Data Types and Variables](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20Fundamentals/01.%20Data%20Types%20and%20Variables) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20Fundamentals/01.%20Data%20Types%20and%20Variables/Readme.md)) - 04.05.2014
 * [Operators and Expressions](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/3.%20JavaScript%20Fundamentals/01.%20Operators%20and%20Expressions) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/3.%20JavaScript%20Fundamentals/01.%20Operators%20and%20Expressions/Readme.md)) - 23.01.2014

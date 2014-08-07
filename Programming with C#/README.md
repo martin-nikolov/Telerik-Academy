@@ -56,7 +56,7 @@
 * [Software Quality Assurance](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/18.%20Software%20Quality%20Assurance)
 * [Mocking with Moq and JustMock](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/19.%20Mocking%20with%20Moq%20and%20JustMock) - ([conditions](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20C%23%20High-Quality%20Code/19.%20Mocking%20with%20Moq%20and%20JustMock/Readme.md)) - 26.07.2014
 * [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20High-Quality%20Code/C%23%20High-Quality%20Code%202014%20-%20Sample%20Exam)
-* [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20High-Quality%20Code/C%23%20High-Quality%20Code%20-%206%20August%202014%20-%20Morning)
+* [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20High-Quality%20Code/C%23%20High-Quality%20Code%20-%206%20August%202014%20-%20Morning) - 06.08.2014
 
 ## C# - Data Structures and Algorithms
 1. Data Structures Algorithms and Complexity - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/01.%20Data%20Structures%20Algorithms%20and%20Complexity%20-%20%E2%9C%98/Readme.md))

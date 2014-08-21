@@ -9,7 +9,7 @@
 
         /// <summary>
         /// Initialize a new instance of Queue class that is empty.
-        /// Queue data structure uses DoubleLinkedList.
+        /// Queue implementation uses DoubleLinkedList abstract data structure.
         /// </summary>
         public Queue()
         {

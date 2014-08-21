@@ -30,6 +30,9 @@
             this.elements = new T[Math.Max(DefaultCapacity, capacity)];
         }
 
+        /// <summary>Initializes a new instance of the Stack class class that contains 
+        /// elements copied from the specified collection.</summary>
+        /// <param name="collection">The collection contains elements to seed.</param>
         public Stack(System.Collections.Generic.IEnumerable<T> collection)
             : this()
         {

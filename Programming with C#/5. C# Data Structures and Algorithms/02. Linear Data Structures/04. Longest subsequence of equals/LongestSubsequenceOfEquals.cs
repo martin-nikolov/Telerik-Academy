@@ -4,75 +4,75 @@
  * Write a program to test whether the method works correctly.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-class LongestSubsequenceOfEquals
+namespace LinearDataStructures
 {
-    static void Main()
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Utility;
+
+    public class LongestSubsequenceOfEquals
     {
-        PrintResult(new List<int>() { 1, 2, 2, 3, 3, 3 });
-
-        /* -------------- */
-        
-        TestRunner();
-    }
-
-    static void PrintResult<T>(IList<T> sequence) where T : IComparable
-    {
-        var longestSubsequence = FindLongestSubsequence(sequence);
-
-        Console.WriteLine(string.Join(" ", sequence) + " -> " + string.Join(" ", longestSubsequence));
-    }
-
-    static IList<T> FindLongestSubsequence<T>(IList<T> sequence) where T : IComparable
-    {
-        if (sequence.Count == 0)
+        public static void Main()
         {
-            throw new InvalidOperationException("Sequence contains no elements");
+            #if DEBUG
+            Console.SetIn(new System.IO.StreamReader("../../input.txt"));
+            #endif
+
+            var numbers = ConsoleUtility.ReadSequenceOfElements<int>().ToList();
+            var longestSubsequence = FindLongestSubsequence(numbers);
+
+            PrintResult(numbers, longestSubsequence);
+
+            // There are Unit-Tests -> See LinearDataStructures.Tests -> LongestSubsequenceOfEqualsTests
         }
 
-        T bestElement = sequence[0];
-        int bestOccurs = 1;
-
-        T currentBestElement = sequence[0];
-        int currentOccurs = 1;
-
-        for (int i = 1; i < sequence.Count; i++)
+        public static IList<T> FindLongestSubsequence<T>(IList<T> sequence) where T : IComparable
         {
-            if (currentBestElement.CompareTo(sequence[i]) == 0)
+            if (sequence == null || sequence.Count == 0)
             {
-                currentOccurs++;
+                throw new ArgumentException("Sequence collection cannot be null or empty.");
+            }
 
-                if (currentOccurs >= bestOccurs)
+            T bestElement = sequence[0];
+            int bestOccurs = 1;
+
+            T currentBestElement = sequence[0];
+            int currentOccurs = 1;
+
+            for (int i = 1; i < sequence.Count; i++)
+            {
+                if (currentBestElement.CompareTo(sequence[i]) == 0)
                 {
-                    bestOccurs = currentOccurs;
-                    bestElement = currentBestElement;
+                    currentOccurs++;
+
+                    if (currentOccurs >= bestOccurs)
+                    {
+                        bestOccurs = currentOccurs;
+                        bestElement = currentBestElement;
+                    }
+                }
+            
+                if (currentBestElement.CompareTo(sequence[i]) != 0)
+                {
+                    currentBestElement = sequence[i];
+                    currentOccurs = 1;
                 }
             }
             
-            if (currentBestElement.CompareTo(sequence[i]) != 0)
+            if (currentBestElement.CompareTo(bestElement) != 0 && currentOccurs >= bestOccurs)
             {
-                currentBestElement = sequence[i];
-                currentOccurs = 1;
+                bestElement = currentBestElement;
+                bestOccurs = currentOccurs;
             }
+
+            var longestSubsequence = Enumerable.Repeat(bestElement, bestOccurs).ToList();
+            return longestSubsequence;
         }
 
-        return Enumerable.Repeat(bestElement, bestOccurs).ToList();
-    }
-
-    static void TestRunner()
-    {
-        Console.WriteLine();
-
-        PrintResult(new List<int>() { 1, 1, 1, 2, 2, 3, 3, 3 });
-        PrintResult(new List<int>() { 1, 1, 1, 1, 2, 2, 3, 3, 3 });
-        PrintResult(new List<int>() { 1, 1, 1, 1, 2, 2, 3, 3, 3, 3 });
-        PrintResult(new List<int>() { 1, 2, 2, 3, 3, 3, 4, 4, 4, 4 });
-        PrintResult(new List<int>() { 1, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4 });
-        PrintResult(new List<int>() { 1, 2, 2, 3, 3, 3, 3, 4, 4, 4 });
-        PrintResult(new List<int>() { 1, 2, 3, 4 });
-        PrintResult(new List<string>() { "a", "b", "b", "b", "c", "c" });
+        public static void PrintResult<T>(IList<T> sequence, IList<T> longestSubsequence) where T : IComparable
+        {
+            Console.WriteLine(string.Join(" ", sequence) + " -> " + string.Join(" ", longestSubsequence));
+        }
     }
 }

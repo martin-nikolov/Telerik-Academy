@@ -5,37 +5,31 @@
  * of the elements of the sequence. Keep the sequence in List<int>.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-class SumAndAverage
+namespace LinearDataStructures
 {
-    static void Main()
+    using System;
+    using System.Linq;
+    using Utility;
+
+    public class SumAndAverage
     {
-        var positiveNumbers = ReadSequenceOfNumbers<int>();
-
-        var sum = positiveNumbers.Where(a => a > 0).Sum();
-        var average = positiveNumbers.Where(a => a > 0).Average();
-
-        Console.WriteLine("Sum: " + sum);
-        Console.WriteLine("Average: " + average);
-    }
-
-    static IEnumerable<T> ReadSequenceOfNumbers<T>() where T : IComparable
-    {
-        ICollection<T> numbers = new List<T>();
-
-        string input = Console.ReadLine();
-
-        while (!string.IsNullOrEmpty(input))
+        public static void Main()
         {
-            T number = (T)Convert.ChangeType(input, typeof(T));
-            numbers.Add(number);
+            #if DEBUG
+            Console.SetIn(new System.IO.StreamReader("../../input.txt"));
+            #endif
 
-            input = Console.ReadLine();
+            var numbers = ConsoleUtility.ReadSequenceOfElements<int>();
+            var sumOfNumbers = numbers.Where(a => a > 0).Sum();
+            var averageOfNumbers = numbers.Where(a => a > 0).Average();
+
+            PrintResult(sumOfNumbers, averageOfNumbers);
         }
-
-        return numbers;
+         
+        public static void PrintResult(int sumOfNumbers, double averageOfNumbers)
+        {
+            Console.WriteLine("Sum: " + sumOfNumbers);
+            Console.WriteLine("Average: " + averageOfNumbers);
+        }
     }
 }

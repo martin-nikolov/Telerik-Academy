@@ -7,8 +7,8 @@
     <ProjectGuid>{6F4F9E85-B88A-481C-9535-9504E6C03516}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02.Reverse_Sequence</RootNamespace>
-    <AssemblyName>_02.Reverse_Sequence</AssemblyName>
+    <RootNamespace>LinearDataStructures</RootNamespace>
+    <AssemblyName>ReverseSequence</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,6 +46,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\12. Stack ADT\12. Stack ADT.csproj">
+      <Project>{2188c96a-469e-4a8a-90d0-d4d7b66b4bfc}</Project>
+      <Name>12. Stack ADT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{0290BE52-AF42-4BF8-BF67-7AA872E405D1}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="input.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

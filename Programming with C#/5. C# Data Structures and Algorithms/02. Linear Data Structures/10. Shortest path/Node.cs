@@ -4,10 +4,10 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    class Node<T> where T : struct, IComparable<T>
+    public class Node<T> where T : struct, IComparable<T>
     {
-        private T value;
         private readonly List<Node<T>> childs;
+        private T value;
 
         public Node(T value)
         {

@@ -7,8 +7,8 @@
     <ProjectGuid>{2188C96A-469E-4A8A-90D0-D4D7B66B4BFC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_12.Stack_ADT</RootNamespace>
-    <AssemblyName>_12.Stack_ADT</AssemblyName>
+    <RootNamespace>AbstractDataStructures</RootNamespace>
+    <AssemblyName>StackADT</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

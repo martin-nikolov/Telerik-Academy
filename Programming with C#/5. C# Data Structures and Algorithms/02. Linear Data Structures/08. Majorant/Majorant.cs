@@ -2,52 +2,65 @@
  * 8. *The majorant of an array of size N is a value that
  * occurs in it at least N/2 + 1 times. Write a program to
  * find the majorant of given array (if exists). 
+ * 
  * Example: {2, 2, 3, 3, 2, 3, 4, 3, 3} -> 3
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-class Majorant
+namespace LinearDataStructures
 {
-    static void Main()
-    {
-        var elements = new List<int>() { 2, 2, 3, 3, 2, 3, 4, 3, 3 };
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Utility;
 
-        var majorant = FindMajorant(elements);
-
-        Console.WriteLine(majorant.HasValue ? "Majorant: " + majorant.ToString() : "There is no majorant.");
-    }
-  
-    static Nullable<T> FindMajorant<T>(IList<T> collection) where T : struct
+    public class Majorant
     {
-        if (collection.Count == 0)
+        public static void Main()
         {
-            throw new InvalidOperationException("Sequence contains no elements");
+            #if DEBUG
+            Console.SetIn(new System.IO.StreamReader("../../input.txt"));
+            #endif
+
+            var elements = ConsoleUtility.ReadSequenceOfElements<int>().ToList();
+            var majorant = FindMajorant(elements);
+
+            PrintResult(majorant);
         }
-
-        int majorantMedian = collection.Count / 2 + 1;
-        T? majorant = null;
-
-        var dict = new Dictionary<T, int>();
-
-        for (int i = 0; i < collection.Count; i++)
+ 
+        public static Nullable<T> FindMajorant<T>(IList<T> collection) where T : struct
         {
-            if (!dict.ContainsKey(collection[i]))
+            if (collection == null || collection.Count == 0)
             {
-                dict[collection[i]] = 0;
+                throw new ArgumentException("Sequence collection cannot be null or empty.");
             }
 
-            dict[collection[i]]++;
+            int majorantMedian = collection.Count / 2 + 1;
+            T? majorant = null;
 
-            if (dict[collection[i]] >= majorantMedian)
+            var dict = new Dictionary<T, int>();
+
+            for (int i = 0; i < collection.Count; i++)
             {
-                majorant = collection[i];
-                break;
+                if (!dict.ContainsKey(collection[i]))
+                {
+                    dict[collection[i]] = 0;
+                }
+
+                dict[collection[i]]++;
+
+                if (dict[collection[i]] >= majorantMedian)
+                {
+                    majorant = collection[i];
+                    break;
+                }
             }
+
+            return majorant;
         }
 
-        return majorant;
+        public static void PrintResult(int? majorant)
+        {
+            Console.WriteLine(majorant.HasValue ? "Majorant: " + majorant.ToString() : "There is no majorant.");
+        }
     }
 }

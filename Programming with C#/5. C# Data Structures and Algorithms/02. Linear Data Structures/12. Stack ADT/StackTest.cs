@@ -3,80 +3,16 @@
  * Resize the capacity on demand (when no space is available 
  * to add / insert a new element).
  */
-using System;
 
-class StackTest
+namespace AbstractDataStructures
 {
-    static void Main()
+    using System;
+
+    public class StackTest
     {
-        var stack = new Stack<int>();
-        stack.Push(1);
-        stack.Push(2);
-        stack.Push(3);
-
-        Console.WriteLine("Count: " + stack.Count);
-
-        /* -------------------------------------------------------------- */
-
-        Console.WriteLine("\nFirst Element: " + stack.Peek());
-        Console.WriteLine("Count: " + stack.Count + " - Peek");
-
-        /* -------------------------------------------------------------- */
-
-        for (int i = 0; i < 3; i++)
+        public static void Main()
         {
-            Console.WriteLine("\nElement: " + stack.Pop());
-            Console.WriteLine("Count: " + stack.Count + " - Pop");
+            // There are Unit-Tests -> See LinearDataStructures.Tests -> StackTests
         }
-
-        /* -------------------------------------------------------------- */
-
-        try
-        {
-            stack.Pop();
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("\n- " + e.Message);
-        }
-
-        try
-        {
-            stack.Peek();
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("- " + e.Message);
-        }
-
-        /* -------------------------------------------------------------- */
-
-        for (int i = 0; i < 930; i++)
-        {
-            stack.Push(i);
-        }
-
-        Console.WriteLine("\nCount: " + stack.Count);
-        Console.WriteLine("Capacity: " + stack.Capacity);
-
-        /* -------------------------------------------------------------- */
-
-        stack.TrimExcess();
-        Console.WriteLine("\nTrimExcess -> Count: " + stack.Count);
-        Console.WriteLine("TrimExcess -> Capacity: " + stack.Capacity);
-
-        for (int i = 0; i < 10; i++)
-        {
-            stack.Pop();
-        }
-
-        stack.TrimExcess();
-        Console.WriteLine("\nTrimExcess -> Count: " + stack.Count);
-        Console.WriteLine("TrimExcess -> Capacity: " + stack.Capacity);
-
-        stack.Clear();
-
-        Console.WriteLine("\nCount: " + stack.Count);
-        Console.WriteLine("Capacity: " + stack.Capacity);
     }
 }

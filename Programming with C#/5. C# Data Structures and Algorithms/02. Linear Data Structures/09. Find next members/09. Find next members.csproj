@@ -7,8 +7,8 @@
     <ProjectGuid>{FD3C63B4-CBA1-478B-AF22-B35F889C197E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_09.Find_next_members</RootNamespace>
-    <AssemblyName>_09.Find_next_members</AssemblyName>
+    <RootNamespace>LinearDataStructures</RootNamespace>
+    <AssemblyName>FindNextMembers</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\13. Queue ADT\13. Queue ADT.csproj">
+      <Project>{f92c6599-e4b8-48f5-9dec-c53fdbbbea34}</Project>
+      <Name>13. Queue ADT</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

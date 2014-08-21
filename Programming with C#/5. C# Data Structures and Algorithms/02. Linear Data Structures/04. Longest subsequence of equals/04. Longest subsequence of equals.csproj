@@ -7,8 +7,8 @@
     <ProjectGuid>{D181134E-9123-4AEC-B8C3-D0C7ADE9980E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_04.Longest_subsequence_of_equals</RootNamespace>
-    <AssemblyName>_04.Longest_subsequence_of_equals</AssemblyName>
+    <RootNamespace>LinearDataStructures</RootNamespace>
+    <AssemblyName>LongestSubsequenceOfEquals</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,6 +46,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="input.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{0290BE52-AF42-4BF8-BF67-7AA872E405D1}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

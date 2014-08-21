@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    struct Cell
+    public struct Cell
     {
         public Cell(int x, int y, int value)
             : this()

@@ -7,8 +7,8 @@
     <ProjectGuid>{F92C6599-E4B8-48F5-9DEC-C53FDBBBEA34}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_13.Queue_ADT</RootNamespace>
-    <AssemblyName>_13.Queue_ADT</AssemblyName>
+    <RootNamespace>AbstractDataStructures</RootNamespace>
+    <AssemblyName>QueueADT</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -1,13 +1,16 @@
-﻿using System;
-using System.Linq;
-
-interface IStack<T>
+﻿namespace AbstractDataStructures
 {
-    void Push(T value);
+    using System;
+    using System.Linq;
 
-    T Peek();
+    public interface IStack<T>
+    {
+        void Push(T value);
 
-    T Pop();
+        T Peek();
 
-    void Clear();
+        T Pop();
+
+        void Clear();
+    }
 }

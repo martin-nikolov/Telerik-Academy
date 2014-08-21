@@ -3,23 +3,32 @@
  * and reverses them using a stack. Use the Stack<int> class.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-class ReverseSequence
+namespace LinearDataStructures
 {
-    static void Main()
+    using System;
+    using System.Linq;
+    using Utility;
+
+    public class ReverseSequence
     {
-        // Input elements
-        var numbers = new List<int>() { 1, 2, 3, 4, 5 };
-
-        Stack<int> elements = new Stack<int>(numbers);
-
-        // Prints elements backwards
-        while (elements.Count > 0)
+        public static void Main()
         {
-            Console.WriteLine(elements.Pop());
+            #if DEBUG
+            Console.SetIn(new System.IO.StreamReader("../../input.txt"));
+            #endif
+
+            var numbers = ConsoleUtility.ReadSequenceOfElements<int>();
+            var elementsBackwards = new AbstractDataStructures.Stack<int>(numbers); // My implementation of Stack
+
+            PrintElementsBackwards(elementsBackwards);
+        }
+
+        public static void PrintElementsBackwards(AbstractDataStructures.Stack<int> elements)
+        {
+            while (elements.Count > 0)
+            {
+                Console.WriteLine(elements.Pop());
+            }
         }
     }
 }

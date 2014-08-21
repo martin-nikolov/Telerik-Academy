@@ -4,63 +4,15 @@
  * data types in the queue.
  */
 
-using System;
-
-class QueueTest
+namespace AbstractDataStructures
 {
-    static void Main()
+    using System;
+
+    public class QueueTest
     {
-        var queue = new Queue<int>();
-        queue.Enqueue(1);
-        queue.Enqueue(2);
-        queue.Enqueue(3);
-
-        Console.WriteLine("Count: " + queue.Count);
-
-        /* -------------------------------------------------------------- */
-
-        Console.WriteLine("\nFirst Element: " + queue.Peek());
-        Console.WriteLine("Count: " + queue.Count + " - Peek");
-
-        /* -------------------------------------------------------------- */
-
-        for (int i = 0; i < 3; i++)
+        public static void Main()
         {
-            Console.WriteLine("\nElement: " + queue.Dequeue());
-            Console.WriteLine("Count: " + queue.Count + " - Dequeue");
+            // There are Unit-Tests -> See LinearDataStructures.Tests -> QueueTests
         }
-
-        /* -------------------------------------------------------------- */
-
-        try
-        {
-            queue.Dequeue();
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("\n- " + e.Message);
-        }
-
-        try
-        {
-            queue.Peek();
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("- " + e.Message);
-        }
-
-        /* -------------------------------------------------------------- */
-
-        for (int i = 0; i < 1024; i++)
-        {
-            queue.Enqueue(i);
-        }
-
-        Console.WriteLine("\nCount: " + queue.Count);
-
-        queue.Clear();
-
-        Console.WriteLine("Count: " + queue.Count);
     }
 }

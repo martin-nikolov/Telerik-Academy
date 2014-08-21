@@ -18,51 +18,55 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-class FindNextMembers
+namespace LinearDataStructures
 {
-    static readonly Func<int, int>[] operations =
+    public class FindNextMembers
     {
-        x => x + 1,
-        x => 2 * x + 1,
-        x => x + 2,
-    };
-
-    static void Main()
-    {
-        Console.Write("N: ");
-        var n = int.Parse(Console.ReadLine());
-
-        Console.Write("Count: ");
-        var count = uint.Parse(Console.ReadLine());
-
-        var result = CalculateNextMembers(n, count);
-
-        Console.WriteLine(string.Join(", ", result));
-    }
-
-    static IEnumerable<int> CalculateNextMembers(int n, uint count)
-    {
-        var sequence = new Queue<int>();
-        var result = new List<int>();
-
-        sequence.Enqueue(n);
-        result.Add(n);
-
-        for (int i = 0; i < count; i++)
+        private static readonly Func<int, int>[] operations =
         {
-            var member = sequence.Dequeue();
-            var nextMembers = new List<int>();
-            
-            foreach (var operation in operations)
-                nextMembers.Add(operation(member));
+            x => x + 1,
+            x => 2 * x + 1,
+            x => x + 2,
+        };
 
-            sequence.Enqueue(nextMembers[0]);
-            sequence.Enqueue(nextMembers[1]);
-            sequence.Enqueue(nextMembers[2]);
+        public static void Main()
+        {
+            Console.Write("N: ");
+            var startupNumber = int.Parse(Console.ReadLine());
 
-            result.AddRange(nextMembers);
+            Console.Write("Count: ");
+            var count = int.Parse(Console.ReadLine());
+
+            var calculatedMembers = CalculateNextMembers(startupNumber, count);
+            Console.WriteLine(string.Join(", ", calculatedMembers));
         }
 
-        return result;
+        public static IEnumerable<int> CalculateNextMembers(int startupNumber, int count)
+        {
+            var sequence = new AbstractDataStructures.Queue<int>(); // My implementation of Queue
+            var result = new List<int>();
+
+            sequence.Enqueue(startupNumber);
+            result.Add(startupNumber);
+
+            for (int i = 0; i < count; i++)
+            {
+                var member = sequence.Dequeue();
+                var nextMembers = new List<int>();
+            
+                foreach (var operation in operations)
+                {
+                    nextMembers.Add(operation(member));
+                }
+
+                sequence.Enqueue(nextMembers[0]);
+                sequence.Enqueue(nextMembers[1]);
+                sequence.Enqueue(nextMembers[2]);
+
+                result.AddRange(nextMembers);
+            }
+
+            return result;
+        }
     }
 }

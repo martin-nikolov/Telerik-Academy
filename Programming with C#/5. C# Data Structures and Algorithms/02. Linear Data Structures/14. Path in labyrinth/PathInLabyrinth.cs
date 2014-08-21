@@ -1,12 +1,12 @@
-﻿namespace PathFinder
+﻿namespace PathFinders
 {
     using System;
     using System.Linq;
-    using PathFinders;
+    using PathFinders.PathFinderStrategies;
 
-    class PathInLabyrinth
+    public class PathInLabyrinth
     {
-        static void Main()
+        public static void Main()
         {
             //string[,] labyrinth = 
             //{
@@ -27,24 +27,22 @@
                 { "0", "0", "0", "x", "0", "x" }
             };
 
+            var pathFinder = new PathFinder();
+
             // Using BFS Algorithm -> Queue
-            var bfsLabyrinth = BfsPathFinder.FindAllPaths((string[,])labyrinth.Clone());
+            var bfsLabyrinth = pathFinder.FindAllPaths(labyrinth, new BfsPathFinder());
             PrintMatrix(bfsLabyrinth, " BFS Traversal:");
 
-            /* ----------------------------------- */
-
             // Using DFS Algorithm -> Stack
-            var dfsLabyrinth = DfsPathFinder.FindAllPaths((string[,])labyrinth.Clone());
+            var dfsLabyrinth = pathFinder.FindAllPaths(labyrinth, new DfsPathFinder());
             PrintMatrix(dfsLabyrinth, " DFS Traversal:");
 
-            /* ----------------------------------- */
-
-            // Using recursion with bottom function
-            var recursiveLabyrinth = RecursivePathFinder.FindAllPaths((string[,])labyrinth.Clone());
+            // Using Recursion -> Bottom function
+            var recursiveLabyrinth = pathFinder.FindAllPaths(labyrinth, new RecursivePathFinder());
             PrintMatrix(recursiveLabyrinth, " Recursively Traversal:");
         }
 
-        static void PrintMatrix<T>(T[,] matrix, string message)
+        public static void PrintMatrix<T>(T[,] matrix, string message)
         {
             Console.WriteLine(message + Environment.NewLine);
 

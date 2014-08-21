@@ -2,55 +2,49 @@
  * 5. Write a program that removes from given sequence all negative numbers.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-class RemoveNegativeNumbers
+namespace LinearDataStructures
 {
-    static void Main()
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Utility;
+
+    public class RemoveNegativeNumbers
     {
-        var numbers = ReadSequenceOfNumbers<int>();
-
-        Console.WriteLine("All numbers: " + string.Join(" ", numbers));
-
-        var positiveNumbers = ExtractPositiveNumbers(numbers);
-
-        Console.WriteLine("Positive numbers: " + string.Join(" ", positiveNumbers));
-    }
-
-    static IList<T> ReadSequenceOfNumbers<T>() where T : IComparable
-    {
-        var numbers = new List<T>();
-
-        string input = Console.ReadLine();
-
-        while (!string.IsNullOrEmpty(input))
+        public static void Main()
         {
-            T number = (T)Convert.ChangeType(input, typeof(T));
-            numbers.Add(number);
+            #if DEBUG
+            Console.SetIn(new System.IO.StreamReader("../../input.txt"));
+            #endif
 
-            input = Console.ReadLine();
+            var numbers = ConsoleUtility.ReadSequenceOfElements<decimal>().ToList();
+            var positiveNumbers = ExtractPositiveNumbers(numbers);
+
+            PrintResult(numbers, positiveNumbers);
         }
 
-        return numbers;
-    }
-
-    /// <summary>
-    /// Works for sbyte, byte, int, uint, long, ulong, double, decimal, etc.
-    /// </summary>
-    static IList<T> ExtractPositiveNumbers<T>(IList<T> collection) where T : IComparable
-    {
-        var positiveNumbers = new List<T>();
-
-        for (int i = 0; i < collection.Count; i++)
+        /// <summary>
+        /// Works for sbyte, byte, int, uint, long, ulong, double, decimal, etc.
+        /// </summary>
+        public static IList<T> ExtractPositiveNumbers<T>(IList<T> collection) where T : IComparable
         {
-            if (collection[i].CompareTo((T)Convert.ChangeType(0, typeof(T))) > 0)
+            var positiveNumbers = new List<T>();
+
+            for (int i = 0; i < collection.Count; i++)
             {
-                positiveNumbers.Add(collection[i]);
+                if (collection[i].CompareTo((T)Convert.ChangeType(0, typeof(T))) > 0)
+                {
+                    positiveNumbers.Add(collection[i]);
+                }
             }
+
+            return positiveNumbers;
         }
 
-        return positiveNumbers;
+        public static void PrintResult<T>(IEnumerable<T> collection, IEnumerable<T> positiveNumbers)
+        {
+            Console.WriteLine("All numbers: " + string.Join(" ", collection));
+            Console.WriteLine("Positive numbers: " + string.Join(" ", positiveNumbers));
+        }
     }
 }

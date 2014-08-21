@@ -2,35 +2,25 @@
  * 3. Write a program that reads a sequence of integers (List<int>)
  * ending with an empty line and sorts them in an increasing order.
  */
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
-class SortInputElements
+namespace LinearDataStructures
 {
-    static void Main()
+    using System;
+    using System.Linq;
+    using Utility;
+
+    public class SortInputElements
     {
-        var elements = ReadSequenceOfElements<int>();
-
-        var sortedCollection = elements.OrderBy(a => a).ToList();
-
-        Console.WriteLine("Sorted elements: " + string.Join(" ", sortedCollection));
-    }
-
-    static IList<T> ReadSequenceOfElements<T>() where T : IComparable
-    {
-        IList<T> elements = new List<T>();
-
-        string input = Console.ReadLine();
-
-        while (!string.IsNullOrEmpty(input))
+        static void Main()
         {
-            T element = (T)Convert.ChangeType(input, typeof(T));
-            elements.Add(element);
+            #if DEBUG
+            Console.SetIn(new System.IO.StreamReader("../../input.txt"));
+            #endif
 
-            input = Console.ReadLine();
+            var elements = ConsoleUtility.ReadSequenceOfElements<int>();
+            var sortedCollection = elements.OrderBy(a => a).ToList();
+
+            Console.WriteLine("Sorted elements: " + string.Join(" ", sortedCollection));
         }
-
-        return elements;
     }
 }

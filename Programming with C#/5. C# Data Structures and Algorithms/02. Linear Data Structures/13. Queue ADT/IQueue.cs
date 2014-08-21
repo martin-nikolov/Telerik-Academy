@@ -1,13 +1,13 @@
-﻿using System;
-using System.Linq;
-
-interface IQueue<T>
+﻿namespace AbstractDataStructures
 {
-    void Enqueue(T value);
+    public interface IQueue<T>
+    {
+        void Enqueue(T value);
 
-    T Peek();
+        T Peek();
 
-    T Dequeue();
+        T Dequeue();
 
-    void Clear();
+        void Clear();
+    }
 }

@@ -1,39 +1,43 @@
-﻿namespace PathFinders
+﻿namespace PathFinders.PathFinderStrategies
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
+    using PathFinders;
 
-    static class BfsPathFinder
+    public class RecursivePathFinder : IPathFinder
     {
         private const string StartupSign = "*";
         private const string EmptySign = "0";
         private const string UnreachableSign = "u";
 
-        public static string[,] FindAllPaths(string[,] matrix)
+        public string[,] FindAllPaths(string[,] matrix)
         {
-            var startupCell = GetStartupCell(matrix);
+            var startupCell = this.GetStartupCell(matrix);
 
-            var visitedCells = new Queue<Cell>();
-            visitedCells.Enqueue(startupCell);
-
-            while (visitedCells.Count > 0)
-            {
-                var currentCell = visitedCells.Dequeue();
-                int x = currentCell.X, y = currentCell.Y, nextValue = currentCell.Value + 1;
-
-                TryVisitCell(visitedCells, matrix, new Cell(x, y + 1, nextValue));
-                TryVisitCell(visitedCells, matrix, new Cell(x, y - 1, nextValue));
-                TryVisitCell(visitedCells, matrix, new Cell(x + 1, y, nextValue));
-                TryVisitCell(visitedCells, matrix, new Cell(x - 1, y, nextValue));
-            }
-
-            MarkInaccessibleCells(matrix);
+            this.FindPathsRecursively(matrix, startupCell);
+            this.MarkInaccessibleCells(matrix);
 
             return matrix;
         }
 
-        private static Cell GetStartupCell(string[,] matrix)
+        private void FindPathsRecursively(string[,] matrix, Cell cell)
+        {
+            var currentCell = cell;
+            int x = currentCell.X, y = currentCell.Y, nextValue = currentCell.Value + 1;
+
+            // Bottom of recursion
+            if (!this.TryVisitCell(matrix, currentCell) && currentCell.Value != 0)
+            {
+                return;
+            }
+
+            this.FindPathsRecursively(matrix, new Cell(x + 1, y, nextValue));
+            this.FindPathsRecursively(matrix, new Cell(x - 1, y, nextValue));
+            this.FindPathsRecursively(matrix, new Cell(x, y + 1, nextValue));
+            this.FindPathsRecursively(matrix, new Cell(x, y - 1, nextValue));
+        }
+
+        private Cell GetStartupCell(string[,] matrix)
         {
             for (int i = 0; i < matrix.GetLongLength(0); i++)
             {
@@ -49,17 +53,19 @@
             throw new ArgumentOutOfRangeException("There is no startup cell...");
         }
 
-        private static void TryVisitCell(Queue<Cell> visitedCells, string[,] matrix, Cell cell)
+        private bool TryVisitCell(string[,] matrix, Cell cell)
         {
-            if (IsCellAccessible(matrix, cell))
+            if (this.IsCellAccessible(matrix, cell))
             {
-                visitedCells.Enqueue(cell);
                 matrix[cell.X, cell.Y] = cell.Value.ToString();
+                return true;
             }
+
+            return false;
         }
 
-        private static bool IsCellAccessible(string[,] matrix, Cell cell)
-        { 
+        private bool IsCellAccessible(string[,] matrix, Cell cell)
+        {
             long rows = matrix.GetLongLength(0), cols = matrix.GetLongLength(1);
             int row = cell.X, col = cell.Y;
 
@@ -73,7 +79,7 @@
             return true;
         }
 
-        private static void MarkInaccessibleCells(string[,] matrix)
+        private void MarkInaccessibleCells(string[,] matrix)
         {
             for (int i = 0; i < matrix.GetLongLength(0); i++)
             {

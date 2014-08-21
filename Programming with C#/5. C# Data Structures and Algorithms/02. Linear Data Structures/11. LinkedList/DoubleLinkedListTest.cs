@@ -7,8 +7,6 @@
 
 namespace DynamicList
 {
-    using System;
-
     public class DoubleLinkedListTest
     {
         public static void Main()

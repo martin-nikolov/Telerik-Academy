@@ -44,26 +44,21 @@ namespace LinearDataStructures
         public static IEnumerable<int> CalculateNextMembers(int startupNumber, int count)
         {
             var sequence = new AbstractDataStructures.Queue<int>(); // My implementation of Queue
-            var result = new List<int>();
-
             sequence.Enqueue(startupNumber);
+
+            var result = new List<int>();
             result.Add(startupNumber);
 
             for (int i = 0; i < count; i++)
             {
-                var member = sequence.Dequeue();
-                var nextMembers = new List<int>();
-            
+                var firstMember = sequence.Dequeue();
+
                 foreach (var operation in operations)
                 {
-                    nextMembers.Add(operation(member));
+                    var nextMember = operation(firstMember);
+                    sequence.Enqueue(nextMember);
+                    result.Add(nextMember);
                 }
-
-                sequence.Enqueue(nextMembers[0]);
-                sequence.Enqueue(nextMembers[1]);
-                sequence.Enqueue(nextMembers[2]);
-
-                result.AddRange(nextMembers);
             }
 
             return result;

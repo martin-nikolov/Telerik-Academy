@@ -1,7 +1,5 @@
 ﻿namespace DynamicList
 {
-    using System;
-
     public class ListNode<T>
     {
         public ListNode(T value)

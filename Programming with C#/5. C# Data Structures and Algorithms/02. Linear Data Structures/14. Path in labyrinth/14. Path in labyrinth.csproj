@@ -53,6 +53,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\12. Stack ADT\12. Stack ADT.csproj">
+      <Project>{2188c96a-469e-4a8a-90d0-d4d7b66b4bfc}</Project>
+      <Name>12. Stack ADT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\13. Queue ADT\13. Queue ADT.csproj">
+      <Project>{f92c6599-e4b8-48f5-9dec-c53fdbbbea34}</Project>
+      <Name>13. Queue ADT</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

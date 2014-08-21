@@ -6,8 +6,6 @@
 
 namespace AbstractDataStructures
 {
-    using System;
-
     public class QueueTest
     {
         public static void Main()

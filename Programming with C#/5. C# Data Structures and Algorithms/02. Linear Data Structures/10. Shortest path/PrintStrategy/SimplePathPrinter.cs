@@ -3,12 +3,15 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using DynamicList;
     using PathFinder;
 
     public class SimplePathPrinter : IPrinter
     {
-        public void PrintResult(List<LinkedList<int>> allPaths, Node<int> parentNode, string separator = " -> ")
+        public void PrintResult(List<DoubleLinkedList<int>> allPaths, Node<int> parentNode, string separator = " -> ")
         {
+            Console.WriteLine("---------------- ALL PATHS -----------------\n");
+
             this.PrintCurrentPath(allPaths, separator);
 
             Console.WriteLine("\n--------------------------------------------\n");
@@ -23,14 +26,14 @@
 
             this.PrintCurrentPath(shortestPaths, separator);
 
-            Console.WriteLine("\n---------------- ALL PATHS -----------------\n");
+            Console.WriteLine("\n--------------------------------------------\n");
         }
 
         /// <summary>
         /// Prints all paths from list of paths.
         /// </summary>
         /// <param name="pathCollection">The list containing lists of paths.</param>
-        public void PrintCurrentPath(IList<LinkedList<int>> pathCollection, string separator)
+        public void PrintCurrentPath(IList<DoubleLinkedList<int>> pathCollection, string separator)
         {
             for (int i = 0; i < pathCollection.Count; i++)
             {

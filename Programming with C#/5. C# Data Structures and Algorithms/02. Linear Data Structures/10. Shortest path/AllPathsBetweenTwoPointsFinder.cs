@@ -2,7 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
+    using DynamicList;
     using PathFinder.PrintStrategy;
 
     public class AllPathsBetweenTwoPointsFinder
@@ -41,8 +41,8 @@
         /// <param name="printerStrategy">The result printer strategy</param>
         public void PrintResult(IPrinter printerStrategy)
         {
-            var allPaths = new List<LinkedList<int>>();
-            this.ConnectAllPathsDFS(this.parentNode, new LinkedList<int>(), ref allPaths);
+            var allPaths = new List<DoubleLinkedList<int>>();
+            this.ConnectAllPathsDFS(this.parentNode, new DoubleLinkedList<int>(), ref allPaths);
 
             printerStrategy.PrintResult(allPaths, this.parentNode);
         }
@@ -79,7 +79,7 @@
         /// <param name="parentNode">The startup Node value.</param>
         /// <param name="currentResult">The list stores current paths in every moment.</param>
         /// <param name="allPaths">The collection stores all paths.</param>
-        private void ConnectAllPathsDFS(Node<int> parentNode, LinkedList<int> currentResult, ref List<LinkedList<int>> allPaths)
+        private void ConnectAllPathsDFS(Node<int> parentNode, DoubleLinkedList<int> currentResult, ref List<DoubleLinkedList<int>> allPaths)
         {
             currentResult.AddLast(parentNode.Value);
 
@@ -91,7 +91,7 @@
 
             if (parentNode.Childs.Count == 0)
             {
-                allPaths.Add(new LinkedList<int>(currentResult));
+                allPaths.Add(new DoubleLinkedList<int>(currentResult));
             }
 
             currentResult.RemoveLast();

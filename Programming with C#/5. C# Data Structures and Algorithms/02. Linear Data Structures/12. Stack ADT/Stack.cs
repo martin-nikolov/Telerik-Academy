@@ -1,8 +1,6 @@
 ﻿namespace AbstractDataStructures
 {
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
 
     public class Stack<T> : IStack<T>, System.Collections.Generic.IEnumerable<T>
     {
@@ -11,11 +9,17 @@
         private T[] elements;
         private int size = 0;
 
+        /// <summary>
+        /// Initialize a new instance of Stack class that is empty and has the default initial capacity.
+        /// </summary>
         public Stack()
+            : this(DefaultCapacity)
         {
-            this.elements = new T[0];
         }
 
+        /// <summary>Initializes a new instance of the Stack class that is empty 
+        /// and has the specified initial capacity or the default initial capacity, 
+        /// whichever is greater.</summary>
         public Stack(int capacity)
         {
             if (capacity < 0)
@@ -23,10 +27,10 @@
                 throw new ArgumentOutOfRangeException("Capacity must be non-negative number.");
             }
 
-            this.elements = new T[capacity];
+            this.elements = new T[Math.Max(DefaultCapacity, capacity)];
         }
 
-        public Stack(IEnumerable<T> collection)
+        public Stack(System.Collections.Generic.IEnumerable<T> collection)
             : this()
         {
             if (collection == null)
@@ -138,7 +142,7 @@
             }
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
             return this.GetEnumerator();
         }

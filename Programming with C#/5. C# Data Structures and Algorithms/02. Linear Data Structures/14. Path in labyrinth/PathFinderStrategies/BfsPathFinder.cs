@@ -14,7 +14,7 @@
         {
             var startupCell = this.GetStartupCell(matrix);
 
-            var visitedCells = new Queue<Cell>();
+            var visitedCells = new AbstractDataStructures.Queue<Cell>(); // My implementation of Queue
             visitedCells.Enqueue(startupCell);
 
             while (visitedCells.Count > 0)
@@ -49,7 +49,7 @@
             throw new ArgumentOutOfRangeException("There is no startup cell...");
         }
 
-        private void TryVisitCell(Queue<Cell> visitedCells, string[,] matrix, Cell cell)
+        private void TryVisitCell(AbstractDataStructures.Queue<Cell> visitedCells, string[,] matrix, Cell cell)
         {
             if (this.IsCellAccessible(matrix, cell))
             {

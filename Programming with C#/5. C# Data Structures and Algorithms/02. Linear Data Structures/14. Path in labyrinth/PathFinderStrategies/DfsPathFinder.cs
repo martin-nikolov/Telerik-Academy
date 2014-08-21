@@ -14,7 +14,7 @@
         {
             var startupCell = this.GetStartupCell(matrix);
 
-            var visitedCells = new Stack<Cell>();
+            var visitedCells = new AbstractDataStructures.Stack<Cell>(); // My implementation of Stack
             visitedCells.Push(startupCell);
 
             while (visitedCells.Count > 0)
@@ -49,7 +49,7 @@
             throw new ArgumentOutOfRangeException("There is no startup cell...");
         }
 
-        private void TryVisitCell(Stack<Cell> visitedCells, string[,] matrix, Cell cell)
+        private void TryVisitCell(AbstractDataStructures.Stack<Cell> visitedCells, string[,] matrix, Cell cell)
         {
             if (this.IsCellAccessible(matrix, cell))
             {

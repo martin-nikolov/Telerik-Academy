@@ -6,8 +6,6 @@
 
 namespace AbstractDataStructures
 {
-    using System;
-
     public class StackTest
     {
         public static void Main()

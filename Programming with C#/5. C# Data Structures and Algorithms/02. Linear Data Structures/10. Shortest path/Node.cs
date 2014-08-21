@@ -6,7 +6,7 @@
 
     public class Node<T> where T : struct, IComparable<T>
     {
-        private readonly List<Node<T>> childs;
+        private readonly IList<Node<T>> childs;
         private T value;
 
         public Node(T value)

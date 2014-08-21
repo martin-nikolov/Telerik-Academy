@@ -1,13 +1,16 @@
 ﻿namespace AbstractDataStructures
 {
     using System;
-    using System.Collections;
     using DynamicList;
 
     public class Queue<T> : IQueue<T>, System.Collections.Generic.IEnumerable<T>
     {
         private readonly DoubleLinkedList<T> elements;
 
+        /// <summary>
+        /// Initialize a new instance of Queue class that is empty.
+        /// Queue data structure uses DoubleLinkedList.
+        /// </summary>
         public Queue()
         {
             this.elements = new DoubleLinkedList<T>();
@@ -57,7 +60,6 @@
             }
 
             T value = this.elements.First.Value;
-
             this.elements.RemoveFirst();
 
             return value;
@@ -82,7 +84,7 @@
             }
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
             return this.GetEnumerator();
         }

@@ -1,10 +1,34 @@
 ﻿namespace DynamicList
 {
     using System;
-    using System.Collections;
 
     public class DoubleLinkedList<T> : System.Collections.Generic.IEnumerable<T>
     {
+        /// <summary>
+        /// Initialize a new instance of DoubleLinkedList class that is empty.
+        /// </summary>
+        public DoubleLinkedList()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DoubleLinkedList class that 
+        /// contains elements copied from the specified collection.
+        /// </summary>
+        /// <param name="collection">The collection contains elements to seed.</param>
+        public DoubleLinkedList(System.Collections.Generic.IEnumerable<T> collection)
+        {
+            if (collection == null)
+            {
+                throw new NullReferenceException("Seed collection cannot be null.");
+            }
+
+            foreach (var item in collection)
+            {
+                this.AddLast(item);
+            }
+        }
+
         /// <summary>
         /// Gets the first node of the collection.
         /// </summary>
@@ -143,7 +167,6 @@
         public void Remove(T value)
         {
             var node = this.Find(value);
-
             this.RemoveReference(ref node);
         }
 
@@ -153,7 +176,6 @@
         public void RemoveFirst()
         {
             var node = this.First;
-
             this.RemoveReference(ref node);
         }
 
@@ -163,7 +185,6 @@
         public void RemoveLast()
         {
             var node = this.Last;
-
             this.RemoveReference(ref node);
         }
 
@@ -233,7 +254,7 @@
             }
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
             return this.GetEnumerator();
         }

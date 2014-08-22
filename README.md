@@ -3,9 +3,9 @@
 <p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming%20with%20C%23/Codes/Other/Telerik.png" /></a></p>
 
 | Programming                                                                 | Web development                                     | Software Technologies
-| --------------------------------------------------------------------------- | --------------------------------------------------- | ---------------------------- |
-| [C# - Part I](#c---part-i)                                                  | [HTML Basics](#html-basics)                         | [Databases](#databases)      |
-| [C# - Part II](#c---part-ii)                                                | [CSS Styling](#css-styling)                         | 
+| --------------------------------------------------------------------------- | --------------------------------------------------- | ---------------------------------- |
+| [C# - Part I](#c---part-i)                                                  | [HTML Basics](#html-basics)                         | [Databases](#databases)            |
+| [C# - Part II](#c---part-ii)                                                | [CSS Styling](#css-styling)                         | [Projects](#software-technologies) |
 | [C# - Object-Oriented Programming](#c---object-oriented-programming)        | [JavaScript Fundamentals](#javascript-fundamentals) |
 | [C# - High-Quality Code](#c---high-quality-code)                            | [JavaScript UI & DOM](#javascript-ui--dom)          |
 | [C# - Data Structures and Algorithms](#c---data-structures-and-algorithms)  | [JavaScript OOP](#javascript-oop)                   |
@@ -216,6 +216,9 @@
 ## Web-Development
 * [Teamwork - Client-side JavaScript application](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - June, 2014 (Course - JavaScript UI & DOM) 
 * [RockBands - RESTful Responsive Single-Page Application](https://github.com/flextry/RockBands) ([Demo](http://nikolov.cloudvps.bg/rockbands/)) - August, 2014
+
+## Software Technologies
+* [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - August - September, 2014 
 
 ## Other Simple & Interesting Tasks
 * [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) ([Demo](http://nikolov.cloudvps.bg/Windows%208%20Calculator/)) - HTML / CSS

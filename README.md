@@ -2,7 +2,7 @@
 
 <p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming%20with%20C%23/Codes/Other/Telerik.png" /></a></p>
 
-| Programming                                                                 | Web-Development                                     | Software Technologies
+| Programming                                                                 | Web Development                                     | Software Technologies
 | --------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------- |
 | [C# - Part I](#c---part-i)                                                  | [HTML Basics](#html-basics)                         | [Databases](#databases)               |
 | [C# - Part II](#c---part-ii)                                                | [CSS Styling](#css-styling)                         | [Projects](#software-technologies-1)  |

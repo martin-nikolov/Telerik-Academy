@@ -3,30 +3,30 @@
 1. What is the expected running time of the following C# code? Explain why. Assume the array's size is n.
 
     ```c#
-    long Compute(int[] arr)
-    {
-        long count = 0;
-    
-        for (int i = 0; i < arr.Length; i++)
+        long Compute(int[] arr)
         {
-            int start = 0, end = arr.Length - 1;
-    
-            while (start < end)
+            long count = 0;
+        
+            for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[start] < arr[end])
+                int start = 0, end = arr.Length - 1;
+        
+                while (start < end)
                 {
-                    start++;
-                    count++;
-                }
-                else
-                {
-                    end--;
+                    if (arr[start] < arr[end])
+                    {
+                        start++;
+                        count++;
+                    }
+                    else
+                    {
+                        end--;
+                    }
                 }
             }
-        }
-    
-        return count;
-    }   
+        
+            return count;
+        }   
     ``` 
         
     ### Algorithm Complexity: 
@@ -41,13 +41,11 @@
         * общ брой изпълнения (итерации на 2-та цикъла) -> 90 пъти
         * влизания във if -> 90 пъти
         * влизания в else -> 0 пъти
-    
     * При низходящо сортиран масив броя влизания в if (arr[start] < arr[end]) ще е 0 пъти, а в else -> N * (N - 1) пъти.
         * Пример за N = 100
         * общ брой изпълнения (итерации на 2-та цикъла) -> 90 пъти
         * влизания във if -> 0 пъти
         * влизания в else -> 90 пъти
-    
     * При масив със случайно наредени елементи, влизането в която и да е условна конструкция ще е средно [N * (N - 1)] / 2 пъти.
         * Пример за N = 100
         * общ брой изпълнения (итерации на 2-та цикъла) -> 90 пъти
@@ -57,26 +55,26 @@
 2. What is the expected running time of the following C# code? Assume the input matrix has size of `n` * `m`. Explain why.
 
     ```c#
-    long CalcCount(int[,] matrix)
-    {
-        long count = 0;
-
-        for (int row = 0; row < matrix.GetLength(0); row++)
+        long CalcCount(int[,] matrix)
         {
-            if (matrix[row, 0] % 2 == 0)
+            long count = 0;
+
+            for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                for (int col = 0; col < matrix.GetLength(1); col++)
+                if (matrix[row, 0] % 2 == 0)
                 {
-                    if (matrix[row, col] > 0)
+                    for (int col = 0; col < matrix.GetLength(1); col++)
                     {
-                        count++;
+                        if (matrix[row, col] > 0)
+                        {
+                            count++;
+                        }
                     }
                 }
             }
-        }
 
-        return count;
-    }
+            return count;
+        }
     ``` 
         
     ### Algorithm Complexity: 
@@ -95,24 +93,24 @@
 3. \* What is the expected running time of the following C# code?  Assume the input matrix has size of `n` * `m`. Explain why.
 
     ```c#
-    long CalcSum(int[,] matrix, int row)
-    {
-        long sum = 0;
-
-        for (int col = 0; col < matrix.GetLength(0); col++)
+        long CalcSum(int[,] matrix, int row)
         {
-            sum += matrix[row, col];
+            long sum = 0;
+
+            for (int col = 0; col < matrix.GetLength(0); col++)
+            {
+                sum += matrix[row, col];
+            }
+
+            if (row + 1 < matrix.GetLength(1))
+            {
+                sum += this.CalcSum(matrix, row + 1);
+            }
+
+            return sum;
         }
 
-        if (row + 1 < matrix.GetLength(1))
-        {
-            sum += this.CalcSum(matrix, row + 1);
-        }
-
-        return sum;
-    }
-
-    Console.WriteLine(CalcSum(matrix, 0));
+        Console.WriteLine(CalcSum(matrix, 0));
     ``` 
         
     ### Algorithm Complexity: 

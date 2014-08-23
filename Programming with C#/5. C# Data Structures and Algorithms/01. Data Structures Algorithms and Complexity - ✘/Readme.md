@@ -53,7 +53,7 @@
         * общ брой изпълнения (итерации на 2-та цикъла) -> 90 пъти
         * влизания във if -> ~50% от N
         * влизания в else -> ~50% от N
-    
+
 2. What is the expected running time of the following C# code? Assume the input matrix has size of `n` * `m`. Explain why.
 
     ```c#

@@ -35,7 +35,7 @@ long Compute(int[] arr)
 ### Explanation:
 * За всяка итерация на for-цикъла (0 -> N - 1), while-цикъла ще се изпълни точно N - 1 пъти. 
 
--- Изпълнения на if-конструкцията: -- 
+### Executions of if-conditional statement:
 
 При възходящо сортиран масив броя влизания в if (arr[start] < arr[end]) ще е точно N * (N - 1) пъти, а в else конструкцията 0 пъти.
 

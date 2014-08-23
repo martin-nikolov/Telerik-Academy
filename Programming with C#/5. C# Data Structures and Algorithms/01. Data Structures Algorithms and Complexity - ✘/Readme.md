@@ -54,7 +54,7 @@ long Compute(int[] arr)
     * влизания във if -> ~50% от N
     * влизания в else -> ~50% от N
     
-2. What is the expected running time of the following C# code? Explain why.
+2. What is the expected running time of the following C# code? Assume the input matrix has size of `n` * `m`. Explain why.
 
     ```c#
     long CalcCount(int[,] matrix)
@@ -92,7 +92,6 @@ long Compute(int[] arr)
 * В случай, че числата във всички редове на 1-ва колона са четни, то вътрешният цикъл ще бъде достигнат N пъти, или ще се изпълни N * M пъти..
 * В случай, че числата във всички редове на 1-ва колона са нечетни, то вътрешният цикъл ще бъде достигнат точно 0 пъти и сложността ще е N.
 
-    Assume the input matrix has size of `n` * `m`.
 * \* What is the expected running time of the following C# code? Explain why.
 
     ```c#

@@ -28,6 +28,7 @@
         return count;
     }
     ```
+    
 ## Algorithm Complexity: 
     * приблизително O(N * (N - 1))
 

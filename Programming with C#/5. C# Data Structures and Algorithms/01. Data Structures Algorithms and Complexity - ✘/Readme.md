@@ -92,7 +92,7 @@ long Compute(int[] arr)
 * В случай, че числата във всички редове на 1-ва колона са четни, то вътрешният цикъл ще бъде достигнат N пъти, или ще се изпълни N * M пъти..
 * В случай, че числата във всички редове на 1-ва колона са нечетни, то вътрешният цикъл ще бъде достигнат точно 0 пъти и сложността ще е N.
 
-* \* What is the expected running time of the following C# code? Explain why.
+* \* What is the expected running time of the following C# code?  Assume the input matrix has size of `n` * `m`. Explain why.
 
     ```c#
     long CalcSum(int[,] matrix, int row)
@@ -114,8 +114,6 @@ long Compute(int[] arr)
 
     Console.WriteLine(CalcSum(matrix, 0));
     ```
-
-    Assume the input matrix has size of `n` * `m`.
     
 ### Algorithm Complexity: 
 * приблизително O(N * M) => със забележката -> O(N ^ 2), тъй като N = M

@@ -123,7 +123,7 @@ long Compute(int[] arr)
     Assume the input matrix has size of `n` * `m`.
     
 ### Algorithm Complexity: 
-    приблизително O(N * M) => със забележката -> O(N ^ 2), тъй като N = M
+* приблизително O(N * M) => със забележката -> O(N ^ 2), тъй като N = M
 
 ### Explanation:
 * Разглежда се матрица с размери N * M.

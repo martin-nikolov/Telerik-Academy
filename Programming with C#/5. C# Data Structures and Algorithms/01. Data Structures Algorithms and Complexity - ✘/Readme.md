@@ -2,32 +2,32 @@
 
 1. What is the expected running time of the following C# code? Explain why. Assume the array's size is n.
 
-```c#
-long Compute(int[] arr)
-{
-    long count = 0;
-
-    for (int i = 0; i < arr.Length; i++)
+    ```c#
+    long Compute(int[] arr)
     {
-        int start = 0, end = arr.Length - 1;
-
-        while (start < end)
+        long count = 0;
+    
+        for (int i = 0; i < arr.Length; i++)
         {
-            if (arr[start] < arr[end])
+            int start = 0, end = arr.Length - 1;
+    
+            while (start < end)
             {
-                start++;
-                count++;
-            }
-            else
-            {
-                end--;
+                if (arr[start] < arr[end])
+                {
+                    start++;
+                    count++;
+                }
+                else
+                {
+                    end--;
+                }
             }
         }
-    }
-
-    return count;
-}   
-``` 
+    
+        return count;
+    }   
+    ``` 
         
     ### Algorithm Complexity: 
     * приблизително O(N * (N - 1))

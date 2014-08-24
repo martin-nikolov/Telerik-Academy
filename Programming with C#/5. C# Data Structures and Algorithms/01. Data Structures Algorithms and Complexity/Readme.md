@@ -86,7 +86,7 @@
     ### Algorithm Complexity: 
     * Average case (random numbers in 1st column): approximately `O((N / 2) * M)`
     * Best case (only odd numbers in 1st column): N executions of the outer loop, the inner loop won't be executed at all ⇛ approximately `O(N)`
-    * Worst case (only even numbers in 1st column): N executions of the outer loop → M executions of the inner loop ⇛ approximately `О(N * M)`
+    * Worst case (only even numbers in 1st column): N executions of the outer loop → M executions of the inner loop for each execution of the outer loop ⇛ approximately `О(N * M)`
     
     ### Memory Usage
     * `N * M * sizeof(T)`, where T : data type used in the matrix

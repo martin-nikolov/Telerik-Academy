@@ -30,16 +30,16 @@
     ``` 
         
     ### Algorithm Complexity: 
-    * приблизително `O(N * (N - 1))`
+    * Approximately `O(N * (N - 1))`
     
     ### Memory Usage
-    * `N * sizeof(T)`, където T е типа данни използван в масива
-    * `sizeof(long)` за count променливата
-    * `2 * N * sizeof(int)` за start и end променливите.
-    * Приблизително: `N * sizeof(T) + sizeof(long) + 2 * N * sizeof(int)`
+    * `N * sizeof(T)` where T : data type used in the array
+    * `2 * N * sizeof(int)` for __start__ + __end__ variables
+    * `sizeof(long)` for __count__ variable
+    * Approximately: `N * sizeof(T) + sizeof(long) + 2 * N * sizeof(int)`
     
     ### Explanation:
-    * За всяка итерация на for-цикъла `(0 → N - 1)`, while-цикъла ще се изпълни точно `N - 1` пъти. 
+    * For each iteration of for-loop `(0 → N - 1)`, while-loop will be executed exactly `N - 1` times. 
     
     ### Executions of if-conditional statement:
     * При възходящо сортиран масив броя влизания в `if (arr[start] < arr[end])` ще е точно `N * (N - 1)` пъти, а в else конструкцията 0 пъти.
@@ -84,14 +84,14 @@
     ``` 
         
     ### Algorithm Complexity: 
-    * среден случай (случайни числа в 1-ва колона): `приблизително O((N / 2) * M)`
-    * най-бърз (нечетни числа в 1-ва колона): N изпълнения на външния цикъл, вътрешният не се изпълнява нито 1 път ⇛ сложността е `O(N)`
-    * най-бавен (четни числа в 1-ва колона): N изпълнения на външния цикъл и M изпълнения на вътрешният ⇛ сложността е `О(N * M)`
+    * Average case (random numbers in 1st column): approximately `O((N / 2) * M)`
+    * Best case (only odd numbers in 1st column): N executions of the outer loop, the inner loop won't be executed at all ⇛ approximately `O(N)`
+    * Worst case (only even numbers in 1st column): N executions of the outer loop → M executions of the inner loop ⇛ approximately `О(N * M)`
     
     ### Memory Usage
-    * `N * M * sizeof(T)`, където T е типа данни използван в матрицата
-    * `sizeof(long)` за count променливата
-    * Приблизително: `N * M * sizeof(T) + sizeof(long)`
+    * `N * M * sizeof(T)`, where T : data type used in the matrix
+    * `sizeof(long)` for __count__ variable
+    * Approximately: `N * M * sizeof(T) + sizeof(long)`
     
     ### Explanation:
     * При матрица с размери N x M, външният цикъл (итериращ по редовете) ще се изпълнява винаги точно N пъти.
@@ -125,13 +125,13 @@
     ``` 
         
     ### Algorithm Complexity: 
-    * `приблизително O(N * M)` ⇛ със забележката → `O(N ^ 2), тъй като N = M`
+    * Approximately `O(N * M)` ⇛ with remark → `O(N ^ 2) because N = M`
     
     ### Memory Usage
-    * `N * M * sizeof(T)`, където T е типа данни използван в матрицата
-    * `М * sizeof(long)` за sum променливата
-    * `М * sizeof(int)` за row променливата
-    * Приблизително: `N * M * sizeof(T) + М * sizeof(long) + М * sizeof(int)`
+    * `N * M * sizeof(T)`, where T : data type used in the matrix
+    * `М * sizeof(long)` for __sum__ variable
+    * `М * sizeof(int)` for __row__ variable
+    * Approximately: `N * M * sizeof(T) + М * sizeof(long) + М * sizeof(int)`
     
     ### Explanation:
     * Разглежда се матрица с размери N * M.

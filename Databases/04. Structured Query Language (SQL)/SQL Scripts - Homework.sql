@@ -59,7 +59,7 @@ WHERE LastName LIKE '%ei%'
 SELECT CONCAT(FirstName, ' ', LastName, ' receives $', Salary)
 FROM Employees
 WHERE Salary >= 20000 AND Salary <= 30000
-ORDER BY Salary asc
+ORDER BY Salary ASC
 
 --- 14. Write a SQL query to find the names of all 
 --- employees whose salary is 25000, 14000, 12500 or 23600.
@@ -67,7 +67,7 @@ ORDER BY Salary asc
 SELECT CONCAT(FirstName, ' ', LastName, ' receives $', Salary)
 FROM Employees
 WHERE Salary IN (25000, 14000, 12500, 23600)
-ORDER BY Salary asc
+ORDER BY Salary ASC
 
 --- 15. Write a SQL query to find all employees that do not have manager.
 
@@ -81,13 +81,13 @@ WHERE ManagerID IS NULL
 SELECT CONCAT(FirstName, ' ', LastName, ' receives $', Salary)
 FROM Employees
 WHERE Salary >= 50000 
-ORDER BY Salary desc
+ORDER BY Salary DESC
 
 --- 17. Write a SQL query to find the top 5 best paid employees.
 
 SELECT TOP 5 CONCAT(FirstName, ' ', LastName, ' receives $', Salary)
 FROM Employees
-ORDER BY Salary desc
+ORDER BY Salary DESC
 
 --- 18. Write a SQL query to find all employees along with 
 --- their address. Use inner join with ON clause.
@@ -140,14 +140,16 @@ FROM Towns t
 
 SELECT CONCAT(e.FirstName, ' ', e.LastName) as Employee,
        CONCAT(m.FirstName, ' ', m.LastName) as Manager
-FROM Employees m RIGHT JOIN Employees e
+FROM Employees m 
+RIGHT JOIN Employees e
     ON e.ManagerID = m.EmployeeID
 
 --- 
 
 SELECT CONCAT(e.FirstName, ' ', e.LastName) as Employee,
        CONCAT(m.FirstName, ' ', m.LastName) as Manager
-FROM Employees e LEFT JOIN Employees m
+FROM Employees e 
+LEFT JOIN Employees m
     ON e.ManagerID = m.EmployeeID
 
 --- 24. Write a SQL query to find the names of all employees 

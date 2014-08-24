@@ -7,6 +7,13 @@ FROM Employees e
 WHERE Salary = 
     (SELECT MIN(Salary) FROM Employees)
 
+--- Second variant
+
+DECLARE @MinSalary int = (SELECT MIN(Salary) FROM Employees)
+SELECT CONCAT(e.FirstName, ' ', e.LastName), Salary
+FROM Employees e
+WHERE Salary = @MinSalary
+
 --- 2. Write a SQL query to find the names and salaries 
 --- of the employees that have a salary that is up to 
 --- 10% higher than the minimal salary for the company.
@@ -17,13 +24,22 @@ WHERE Salary >
     (SELECT (MIN(Salary) + MIN(Salary) * 0.1) FROM Employees)
 ORDER BY Salary
 
+--- Second variant
+
+DECLARE @NeededSalary int = (SELECT (MIN(Salary) + MIN(Salary) * 0.1) FROM Employees)
+SELECT CONCAT(e.FirstName, ' ', e.LastName), Salary
+FROM Employees e
+WHERE Salary > @NeededSalary
+ORDER BY Salary
+
 --- 3. Write a SQL query to find the full name, salary and 
 --- department of the employees that take the minimal salary 
 --- in their department. Use a nested SELECT statement.
 
 SELECT CONCAT(e.FirstName, ' ', e.LastName), e.Salary, d.Name
-FROM Employees e JOIN Departments d
-ON e.DepartmentID = d.DepartmentID
+FROM Employees e 
+JOIN Departments d
+    ON e.DepartmentID = d.DepartmentID
 WHERE Salary =
     (SELECT MIN(Salary) FROM Employees emp
     WHERE emp.DepartmentID = d.DepartmentID)
@@ -32,24 +48,26 @@ ORDER BY Salary
 --- 4. Write a SQL query to find the average 
 --- salary in the department #1.
 
-SELECT AVG(e.Salary)
+SELECT ROUND(AVG(e.Salary), 2)
 FROM Employees e
 WHERE e.DepartmentID = '1'
 
 --- 5. Write a SQL query to find the average 
---- salary  in the "Sales" department.
+--- salary in the "Sales" department.
 
-SELECT AVG(e.Salary)
-FROM Employees e JOIN Departments d
-ON e.DepartmentID = d.DepartmentID
+SELECT ROUND(AVG(e.Salary), 2)
+FROM Employees e 
+JOIN Departments d
+    ON e.DepartmentID = d.DepartmentID
 WHERE d.Name = 'Sales'
 
 --- 6. Write a SQL query to find the number 
 --- of employees in the "Sales" department.
 
 SELECT COUNT(e.EmployeeID)
-FROM Employees e JOIN Departments d
-ON e.DepartmentID = d.DepartmentID
+FROM Employees e 
+JOIN Departments d
+    ON e.DepartmentID = d.DepartmentID
 WHERE d.Name = 'Sales'
 
 --- 7. Write a SQL query to find the number 
@@ -68,9 +86,10 @@ WHERE e.ManagerID IS NULL
 --- 9. Write a SQL query to find all departments 
 --- and the average salary for each of them.
 
-SELECT FLOOR(AVG(e.Salary)), d.Name
-FROM Employees e JOIN Departments d
-ON e.DepartmentID = d.DepartmentID
+SELECT ROUND(AVG(e.Salary), 2), d.Name
+FROM Employees e 
+JOIN Departments d
+    ON e.DepartmentID = d.DepartmentID
 GROUP BY d.Name
 ORDER BY AVG(e.Salary)
 
@@ -78,7 +97,8 @@ ORDER BY AVG(e.Salary)
 --- employees in each department and for each town.
 
 SELECT COUNT(e.EmployeeId) as EmployeeCount, d.Name, t.Name
-FROM Employees e JOIN Departments d
+FROM Employees e 
+JOIN Departments d
     ON e.DepartmentID = d.DepartmentID
 JOIN Addresses a
     ON e.AddressID = a.AddressID
@@ -90,12 +110,14 @@ ORDER BY d.Name
 --- Second variant
 
 SELECT COUNT(e.EmployeeId) as EmployeeCount, d.Name
-FROM Employees e JOIN Departments d
+FROM Employees e 
+JOIN Departments d
     ON e.DepartmentID = d.DepartmentID
 GROUP BY d.Name
     --- UNION
 SELECT COUNT(e.EmployeeId) as EmployeeCount, t.Name
-FROM Employees e JOIN Addresses a
+FROM Employees e 
+JOIN Addresses a
     ON e.AddressID = a.AddressID
 JOIN Towns t
     ON a.TownID = t.TownID
@@ -107,7 +129,8 @@ GROUP BY t.Name
 SELECT  e.EmployeeID as [ManagerId],
         CONCAT(e.FirstName, ' ', e.LastName) as [ManagerName],
         COUNT(e.EmployeeID) as [EmployeesCount]
-FROM Employees e JOIN Employees emp
+FROM Employees e 
+JOIN Employees emp
     ON emp.ManagerID = e.EmployeeID
 GROUP BY e.EmployeeID, e.FirstName, e.LastName
 HAVING COUNT(e.EmployeeID) = 5
@@ -118,8 +141,9 @@ HAVING COUNT(e.EmployeeID) = 5
 
 SELECT CONCAT(e.FirstName, ' ', e.LastName) as [EmployeeName],
        ISNULL(m.FirstName + ' ' +  m.LastName, 'No manager') as [ManagerName]
-FROM Employees e LEFT JOIN Employees m
-ON e.ManagerID = m.EmployeeID
+FROM Employees e 
+LEFT JOIN Employees m
+    ON e.ManagerID = m.EmployeeID
 
 --- 13. Write a SQL query to find the names of all employees
 --- whose last name is exactly 5 characters long. 
@@ -289,7 +313,8 @@ WHERE Password IS NULL
 --- employee salary by department and job title.
 
 SELECT FLOOR(AVG(e.Salary)), d.Name, e.JobTitle
-FROM Employees e JOIN Departments d
+FROM Employees e 
+JOIN Departments d
     ON e.DepartmentID = d.DepartmentID
 GROUP BY d.Name, e.JobTitle
 ORDER BY d.Name
@@ -299,7 +324,8 @@ ORDER BY d.Name
 --- name of some of the employees that take it.
 
 SELECT FLOOR(MIN(e.Salary)), d.Name, e.JobTitle, MIN(CONCAT(e.FirstName, ' ', e.LastName))
-FROM Employees e JOIN Departments d
+FROM Employees e 
+JOIN Departments d
     ON e.DepartmentID = d.DepartmentID
 GROUP BY d.Name, e.JobTitle
 ORDER BY d.Name

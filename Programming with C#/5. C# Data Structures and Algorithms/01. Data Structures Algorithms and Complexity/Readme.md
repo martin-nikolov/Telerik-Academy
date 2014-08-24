@@ -89,7 +89,7 @@
     * Worst case (only even numbers in 1st column): N executions of the outer loop → M executions of the inner loop for each execution of the outer loop ⇛ approximately `О(N * M)`
     
     ### Memory Usage
-    * `N * M * sizeof(T)`, where T : data type used in the matrix
+    * `N * M * sizeof(T)` where T : data type used in the matrix
     * `sizeof(long)` for __count__ variable
     * Approximately: `N * M * sizeof(T) + sizeof(long)`
     
@@ -128,7 +128,7 @@
     * Approximately `O(N * M)` ⇛ with remark → `O(N ^ 2) because N = M`
     
     ### Memory Usage
-    * `N * M * sizeof(T)`, where T : data type used in the matrix
+    * `N * M * sizeof(T)` where T : data type used in the matrix
     * `М * sizeof(long)` for __sum__ variable
     * `М * sizeof(int)` for __row__ variable
     * Approximately: `N * M * sizeof(T) + М * sizeof(long) + М * sizeof(int)`

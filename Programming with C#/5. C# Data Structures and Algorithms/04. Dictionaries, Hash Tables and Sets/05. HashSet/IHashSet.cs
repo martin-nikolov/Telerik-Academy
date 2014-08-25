@@ -1,18 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-interface IHashSet<T> where T : IComparable<T>
+﻿namespace AbstractDataStructures
 {
-    bool Add(T item);
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
-    bool Contains(T item);
+    public interface IHashSet<T> where T : IComparable<T>
+    {
+        bool Add(T item);
 
-    bool Remove(T item);
+        bool Contains(T item);
 
-    void Clear();
+        bool Remove(T item);
 
-    void UnionWith(IEnumerable<T> other);
+        void Clear();
 
-    void IntersectWith(IEnumerable<T> other);
+        void UnionWith(IEnumerable<T> other);
+
+        void IntersectWith(IEnumerable<T> other);
+    }
 }

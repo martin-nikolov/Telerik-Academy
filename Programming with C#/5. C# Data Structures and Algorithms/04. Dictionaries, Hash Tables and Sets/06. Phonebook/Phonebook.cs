@@ -1,127 +1,130 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-class Phonebook
+﻿namespace AbstractDataStructures
 {
-    /// <summary>
-    /// Holds all subscribers objects in collection.
-    /// </summary>
-    private readonly ICollection<Subscriber> subscribers;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using AbstractDataStructures.Comparers;
 
-    /// <summary>
-    /// Holds all subscribers as keys of its names.
-    /// </summary>
-    private readonly IDictionary<string, LinkedList<Subscriber>> subscribersByName;
-
-    /// <summary>
-    /// Holds all subscribers as keys of its names and town.
-    /// </summary>
-    private readonly IDictionary<Tuple<string, string>, LinkedList<Subscriber>> subscribersByNameAndTown;
-
-    public Phonebook(IList<Subscriber> subscribers)
+    public class Phonebook
     {
-        if (subscribers == null)
-            throw new ArgumentNullException("Collection cannot be null.");
+        /// <summary>
+        /// Holds all subscribers objects in collection.
+        /// </summary>
+        private readonly ICollection<Subscriber> subscribers;
 
-        this.subscribers = new List<Subscriber>(subscribers);
+        /// <summary>
+        /// Holds all subscribers as keys of its names.
+        /// </summary>
+        private readonly IDictionary<string, LinkedList<Subscriber>> subscribersByName;
 
-        this.subscribersByName =
-            new Dictionary<string, LinkedList<Subscriber>>(new CaseInsensitiveComparer());
+        /// <summary>
+        /// Holds all subscribers as keys of its names and town.
+        /// </summary>
+        private readonly IDictionary<Tuple<string, string>, LinkedList<Subscriber>> subscribersByNameAndTown;
 
-        this.subscribersByNameAndTown =
-            new Dictionary<Tuple<string, string>, LinkedList<Subscriber>>(new CaseInsensitiveTupleComparer());
-
-        this.AddSubscribers(this.subscribers);
-    }
-
-    public void AddSubscriber(Subscriber subscriber)
-    {
-        this.AddSubscribers(new List<Subscriber>() { subscriber });
-    }
-
-    public void AddSubscribers(ICollection<Subscriber> subscribers)
-    {
-        if (subscribers == null)
-            throw new ArgumentNullException("Collection cannot be null.");
-
-        if (subscribers != this.subscribers)
+        public Phonebook(IList<Subscriber> subscribers)
         {
+            if (subscribers == null)
+            {
+                throw new ArgumentNullException("Collection cannot be null.");
+            }
+            
+            this.subscribers = new List<Subscriber>(subscribers);
+
+            this.subscribersByName =
+                new Dictionary<string, LinkedList<Subscriber>>(new CaseInsensitiveComparer());
+
+            this.subscribersByNameAndTown =
+                new Dictionary<Tuple<string, string>, LinkedList<Subscriber>>(new CaseInsensitiveTupleComparer());
+
+            this.AddSubscribers(this.subscribers);
+        }
+
+        public void AddSubscriber(Subscriber subscriber)
+        {
+            this.AddSubscribers(new List<Subscriber>() { subscriber });
+        }
+
+        public void AddSubscribers(ICollection<Subscriber> subscribers)
+        {
+            if (subscribers == null)
+            {
+                throw new ArgumentNullException("Collection cannot be null.");
+            }
+
+            if (subscribers != this.subscribers)
+            {
+                foreach (var subscriber in subscribers)
+                {
+                    this.subscribers.Add(subscriber);
+                }
+            }
+
             foreach (var subscriber in subscribers)
             {
-                this.subscribers.Add(subscriber);
+                var subscriberNames = subscriber.Name.Split(' ');
+
+                foreach (var name in subscriberNames)
+                {
+                    this.AddSubscriberByName(name, subscriber);
+
+                    this.AddSubscriberByNameAndTown(name, subscriber);
+                }
             }
         }
 
-        foreach (var subscriber in subscribers)
+        public ICollection<Subscriber> Find(string name)
         {
-            var subscriberNames = subscriber.Name.Split(' ');
+            LinkedList<Subscriber> subscribers;
+            this.subscribersByName.TryGetValue(name, out subscribers);
 
-            foreach (var name in subscriberNames)
-            {
-                this.AddSubscriberByName(name, subscriber);
-
-                this.AddSubscriberByNameAndTown(name, subscriber);
-            }
+            return subscribers ?? new LinkedList<Subscriber>();
         }
-    }
 
-    public ICollection<Subscriber> Find(string name)
-    {
-        LinkedList<Subscriber> subscribers;
-        
-        this.subscribersByName.TryGetValue(name, out subscribers);
-
-        return subscribers ?? new LinkedList<Subscriber>();
-    }
-
-    public ICollection<Subscriber> Find(string name, string town)
-    {
-        var tuple = new Tuple<string, string>(name, town);
-
-        LinkedList<Subscriber> subscribers;
-        
-        this.subscribersByNameAndTown.TryGetValue(tuple, out subscribers);
+        public ICollection<Subscriber> Find(string name, string town)
+        {
+            var tuple = new Tuple<string, string>(name, town);
+            LinkedList<Subscriber> subscribers;
+            this.subscribersByNameAndTown.TryGetValue(tuple, out subscribers);
        
-        return subscribers ?? new LinkedList<Subscriber>();
-    }
-
-    public override string ToString()
-    {
-        var result = new StringBuilder();
-
-        result.AppendLine(new string('-', 35) + " PHONEBOOK" + new string('-', 35) + Environment.NewLine);
-
-        foreach (var item in this.subscribers)
-        {
-            result.AppendFormat("   - {0}{1}", item, Environment.NewLine);
+            return subscribers ?? new LinkedList<Subscriber>();
         }
 
-        result.AppendLine(Environment.NewLine + new string('-', 80));
-
-        return result.ToString();
-    }
-
-    private void AddSubscriberByName(string name, Subscriber subscriber)
-    {
-        if (!this.subscribersByName.ContainsKey(name))
+        public override string ToString()
         {
-            this.subscribersByName[name] = new LinkedList<Subscriber>();
+            var result = new StringBuilder();
+            result.AppendLine(new string('-', 35) + " PHONEBOOK" + new string('-', 35) + Environment.NewLine);
+
+            foreach (var item in this.subscribers)
+            {
+                result.AppendFormat("   - {0}{1}", item, Environment.NewLine);
+            }
+
+            result.AppendLine(Environment.NewLine + new string('-', 80));
+            return result.ToString();
         }
 
-        this.subscribersByName[name].AddLast(subscriber);
-    }
-
-    private void AddSubscriberByNameAndTown(string name, Subscriber subscriber)
-    {
-        var tuple = new Tuple<string, string>(name, subscriber.Town);
-
-        if (!this.subscribersByNameAndTown.ContainsKey(tuple))
+        private void AddSubscriberByName(string name, Subscriber subscriber)
         {
-            this.subscribersByNameAndTown[tuple] = new LinkedList<Subscriber>();
+            if (!this.subscribersByName.ContainsKey(name))
+            {
+                this.subscribersByName[name] = new LinkedList<Subscriber>();
+            }
+
+            this.subscribersByName[name].AddLast(subscriber);
         }
 
-        this.subscribersByNameAndTown[tuple].AddLast(subscriber);
+        private void AddSubscriberByNameAndTown(string name, Subscriber subscriber)
+        {
+            var tuple = new Tuple<string, string>(name, subscriber.Town);
+
+            if (!this.subscribersByNameAndTown.ContainsKey(tuple))
+            {
+                this.subscribersByNameAndTown[tuple] = new LinkedList<Subscriber>();
+            }
+
+            this.subscribersByNameAndTown[tuple].AddLast(subscriber);
+        }
     }
 }

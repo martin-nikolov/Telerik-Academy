@@ -1,18 +1,20 @@
-﻿using System;
-using System.Linq;
-
-interface IHashTable<TKey,
-                     TValue>
+﻿namespace AbstractDataStructures
 {
-    int Count { get; }
+    using System;
+    using System.Linq;
 
-    TValue this[TKey key] { get; set; }
+    public interface IHashTable<TKey, TValue>
+    {
+        int Count { get; }
 
-    void Add(TKey key, TValue value);
+        TValue this[TKey key] { get; set; }
 
-    TValue GetValue(TKey key);
+        void Add(TKey key, TValue value);
 
-    bool Remove(TKey key);
+        TValue GetValue(TKey key);
 
-    void Clear();
+        bool Remove(TKey key);
+
+        void Clear();
+    }
 }

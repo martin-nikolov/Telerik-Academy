@@ -7,8 +7,8 @@
     <ProjectGuid>{66956279-C3C1-47F5-9CB0-96B44EBD6FAC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_03.Occurrences_of_words_in_text</RootNamespace>
-    <AssemblyName>_03.Occurrences_of_words_in_text</AssemblyName>
+    <RootNamespace>AbstractDataStructures</RootNamespace>
+    <AssemblyName>OccurrencesOfWordsInText</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{cb2eafbd-8e57-4a59-9475-60cfefa486af}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

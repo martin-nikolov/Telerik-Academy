@@ -1,15 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-
-class CaseInsensitiveComparer : IEqualityComparer<string>
+﻿namespace AbstractDataStructures.Comparers
 {
-    public bool Equals(string x, string y)
-    {
-        return string.Equals(x, y, StringComparison.OrdinalIgnoreCase);
-    }
+    using System;
+    using System.Collections.Generic;
 
-    public int GetHashCode(string obj)
+    public class CaseInsensitiveComparer : IEqualityComparer<string>
     {
-        return obj.ToLowerInvariant().GetHashCode();
+        public bool Equals(string x, string y)
+        {
+            return string.Equals(x, y, StringComparison.OrdinalIgnoreCase);
+        }
+
+        public int GetHashCode(string obj)
+        {
+            return obj.ToLowerInvariant().GetHashCode();
+        }
     }
 }

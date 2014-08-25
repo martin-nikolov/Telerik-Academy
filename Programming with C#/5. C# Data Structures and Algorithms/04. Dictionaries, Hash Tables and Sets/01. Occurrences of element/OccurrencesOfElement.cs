@@ -9,43 +9,42 @@
  * 4 -> 3 times
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-class OccurrencesOfElement
+namespace AbstractDataStructures
 {
-    static void Main()
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Utility;
+
+    public class OccurrencesOfElement
     {
-        var elements = new List<double>() { 3, 4, 4, -2.5, 3, 3, 4, 3, -2.5 };
-
-        var occurrences = FindElementsOccurrences(elements);
-
-        PrintResult(occurrences);
-    }
-  
-    static IDictionary<T, int> FindElementsOccurrences<T>(IList<T> collection)
-    {
-        var dict = new Dictionary<T, int>();
-
-        for (int i = 0; i < collection.Count; i++)
+        public static void Main()
         {
-            if (!dict.ContainsKey(collection[i]))
-            {
-                dict[collection[i]] = 0;
-            }
+            #if DEBUG
+            Console.SetIn(new System.IO.StreamReader("../../input.txt"));
+            #endif
 
-            dict[collection[i]]++;
+            var elements = ConsoleUtility.ReadSequenceOfElements<double>().ToList();
+            var occurrences = FindElementsOccurrences(elements);
+
+            ConsoleUtility.PrintDictionaryElements(occurrences);
         }
 
-        return dict;
-    }
-
-    static void PrintResult<T>(IDictionary<T, int> dict)
-    {
-        foreach (KeyValuePair<T, int> item in dict)
+        public static IDictionary<T, int> FindElementsOccurrences<T>(IList<T> collection)
         {
-            Console.WriteLine("{0} -> {1} time(s).", item.Key, item.Value);
+            var dict = new Dictionary<T, int>();
+
+            for (int i = 0; i < collection.Count; i++)
+            {
+                if (!dict.ContainsKey(collection[i]))
+                {
+                    dict[collection[i]] = 0;
+                }
+
+                dict[collection[i]]++;
+            }
+
+            return dict;
         }
     }
 }

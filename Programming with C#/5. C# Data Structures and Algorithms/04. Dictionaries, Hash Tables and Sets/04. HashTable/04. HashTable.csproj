@@ -7,8 +7,8 @@
     <ProjectGuid>{2DBAC1AB-9091-4B77-9496-63764BDE1D80}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_04.HashTable</RootNamespace>
-    <AssemblyName>_04.HashTable</AssemblyName>
+    <RootNamespace>AbstractDataStructures</RootNamespace>
+    <AssemblyName>HashTable</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

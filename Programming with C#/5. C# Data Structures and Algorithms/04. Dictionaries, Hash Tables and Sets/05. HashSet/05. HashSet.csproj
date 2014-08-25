@@ -7,8 +7,8 @@
     <ProjectGuid>{A9B0FDA2-F03A-4020-A917-6B3381E3E57B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_05.HashSet</RootNamespace>
-    <AssemblyName>_05.HashSet</AssemblyName>
+    <RootNamespace>AbstractDataStructures</RootNamespace>
+    <AssemblyName>HashSet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

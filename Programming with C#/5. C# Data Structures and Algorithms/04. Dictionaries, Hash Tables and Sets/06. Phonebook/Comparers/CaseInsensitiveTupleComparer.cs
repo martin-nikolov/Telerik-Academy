@@ -1,17 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-class CaseInsensitiveTupleComparer : IEqualityComparer<Tuple<string, string>>
+﻿namespace AbstractDataStructures.Comparers
 {
-    public bool Equals(Tuple<string, string> x, Tuple<string, string> y)
-    {
-        return string.Equals(x.Item1, y.Item1, StringComparison.OrdinalIgnoreCase) &&
-               string.Equals(x.Item2, y.Item2, StringComparison.OrdinalIgnoreCase);
-    }
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
-    public int GetHashCode(Tuple<string, string> obj)
+    public class CaseInsensitiveTupleComparer : IEqualityComparer<Tuple<string, string>>
     {
-        return obj.Item1.ToLowerInvariant().GetHashCode() + obj.Item2.ToLowerInvariant().GetHashCode();
+        public bool Equals(Tuple<string, string> x, Tuple<string, string> y)
+        {
+            return string.Equals(x.Item1, y.Item1, StringComparison.OrdinalIgnoreCase) &&
+                   string.Equals(x.Item2, y.Item2, StringComparison.OrdinalIgnoreCase);
+        }
+
+        public int GetHashCode(Tuple<string, string> obj)
+        {
+            return obj.Item1.ToLowerInvariant().GetHashCode() + obj.Item2.ToLowerInvariant().GetHashCode();
+        }
     }
 }

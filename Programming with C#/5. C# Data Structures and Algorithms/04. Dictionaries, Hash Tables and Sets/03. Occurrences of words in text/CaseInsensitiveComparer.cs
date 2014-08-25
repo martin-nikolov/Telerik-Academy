@@ -1,11 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-class CaseInsensitiveComparer : IComparer<string>
+﻿namespace AbstractDataStructures
 {
-    public int Compare(string x, string y)
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    public class CaseInsensitiveComparer : IEqualityComparer<string>
     {
-        return string.Compare(x, y, StringComparison.OrdinalIgnoreCase);
+        public bool Equals(string x, string y)
+        {
+            return string.Equals(x, y, StringComparison.OrdinalIgnoreCase);
+        }
+
+        public int GetHashCode(string obj)
+        {
+            return obj.ToLower().GetHashCode();
+        }
     }
 }

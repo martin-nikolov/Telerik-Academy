@@ -7,8 +7,8 @@
     <ProjectGuid>{E1D8683E-6CF7-4075-B524-B067FA8F87BA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02.Elements_occurs_odd_times</RootNamespace>
-    <AssemblyName>_02.Elements_occurs_odd_times</AssemblyName>
+    <RootNamespace>AbstractDataStructures</RootNamespace>
+    <AssemblyName>ExtractElementsOddTimes</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,6 +46,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="input.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{CB2EAFBD-8E57-4A59-9475-60CFEFA486AF}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -81,7 +81,6 @@ CREATE TABLE [dbo].[Languages](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[PartOfSpeechTypes]    Script Date: 22.08.2014 г. 14:34:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -96,7 +95,6 @@ CREATE TABLE [dbo].[PartOfSpeechTypes](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Words]    Script Date: 22.08.2014 г. 14:34:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -114,7 +112,6 @@ CREATE TABLE [dbo].[Words](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Words_Explanations]    Script Date: 22.08.2014 г. 14:34:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -126,7 +123,6 @@ CREATE TABLE [dbo].[Words_Explanations](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Words_Hyponyms]    Script Date: 22.08.2014 г. 14:34:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -142,7 +138,6 @@ CREATE TABLE [dbo].[Words_Hyponyms](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Words_Synonyms]    Script Date: 22.08.2014 г. 14:34:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -158,7 +153,6 @@ CREATE TABLE [dbo].[Words_Synonyms](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Words_Translations]    Script Date: 22.08.2014 г. 14:34:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

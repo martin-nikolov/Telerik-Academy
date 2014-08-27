@@ -3,16 +3,15 @@
 1. You are given a tree of `N` nodes represented as a set of `N-1` pairs of nodes (parent node, child node), each in the range `(0..N-1)`. Example:
 
     ```
-    7
-    2 4
-    3 2
-    5 0
-    3 5
-    5 6
-    5 1
-    ```
-
-    Write a program to read the tree and find:
+        7
+        2 4
+        3 2
+        5 0
+        3 5
+        5 6
+        5 1
+    ``` 
+Write a program to read the tree and find:
     * the root node
     * all leaf nodes
     * all middle nodes

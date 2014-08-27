@@ -7,8 +7,8 @@
     <ProjectGuid>{92F6DFD0-147A-4269-A814-D27EF7D2B321}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DatabaseConnections</RootNamespace>
-    <AssemblyName>DatabaseConnections</AssemblyName>
+    <RootNamespace>DatabaseConnectionsAdoNet</RootNamespace>
+    <AssemblyName>ReadsExcelFiles</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

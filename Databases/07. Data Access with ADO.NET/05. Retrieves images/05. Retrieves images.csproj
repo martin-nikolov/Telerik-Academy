@@ -7,8 +7,8 @@
     <ProjectGuid>{DFED7C17-F345-4034-A1DF-051D33569062}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DatabaseConnections</RootNamespace>
-    <AssemblyName>DatabaseConnections</AssemblyName>
+    <RootNamespace>DatabaseConnectionsAdoNet</RootNamespace>
+    <AssemblyName>RetrievesImages</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -7,8 +7,8 @@
     <ProjectGuid>{CC8B2C82-E6CF-4E73-943A-1F78F80F1C7A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DatabaseConnections</RootNamespace>
-    <AssemblyName>DatabaseConnections</AssemblyName>
+    <RootNamespace>DatabaseConnectionsAdoNet</RootNamespace>
+    <AssemblyName>WorkingWithMySql</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

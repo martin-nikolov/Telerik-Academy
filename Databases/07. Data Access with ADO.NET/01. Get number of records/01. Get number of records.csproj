@@ -7,8 +7,8 @@
     <ProjectGuid>{CA709645-1932-4FAC-BE3C-8CED83545158}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DatabaseConnections</RootNamespace>
-    <AssemblyName>DatabaseConnections</AssemblyName>
+    <RootNamespace>DatabaseConnectionsAdoNet</RootNamespace>
+    <AssemblyName>NumberOfRecords</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

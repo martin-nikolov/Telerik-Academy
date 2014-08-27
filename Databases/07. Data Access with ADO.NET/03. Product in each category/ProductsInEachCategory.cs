@@ -4,61 +4,70 @@
  * category. Can you do this with a single SQL query (with table join)?
  */
 
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using DatabaseConnections;
-
-class ProductsInEachCategory
+namespace DatabaseConnectionsAdoNet
 {
-    static void Main()
+    using System;
+    using System.Collections.Generic;
+    using System.Data.SqlClient;
+    using System.Linq;
+
+    public class ProductsInEachCategory
     {
-        var dbConnection = new SqlConnection(Settings.Default.DbConnection);
-        dbConnection.Open();
-
-        SqlCommand sqlCommand = new SqlCommand(@"SELECT c.CategoryName, p.ProductName
-                                                 FROM Categories c
-                                                 JOIN Products P
-                                                    ON c.CategoryID = p.CategoryID
-                                                 ORDER BY c.CategoryID", dbConnection);
-
-        var categoryProducts = new Dictionary<string, ISet<string>>();
-
-        using (dbConnection)
+        public static void Main()
         {
-            using (SqlDataReader reader = sqlCommand.ExecuteReader())
+            var categoryProducts = new Dictionary<string, ISet<string>>();
+            GetCategoryProducts(categoryProducts);
+            PrintResult(categoryProducts);
+        }
+ 
+        private static void GetCategoryProducts(Dictionary<string, ISet<string>> categoryProducts)
+        {
+            using (var dbConnection = new SqlConnection(Settings.Default.DbConnection))
             {
-                while (reader.Read())
+                dbConnection.Open();
+                SqlCommand sqlCommand = GetSqlCommand(dbConnection);
+
+                using (SqlDataReader reader = sqlCommand.ExecuteReader())
                 {
-                    var categoryName = reader["CategoryName"].ToString();
-                    var productName = reader["ProductName"].ToString();
-
-                    if (!categoryProducts.ContainsKey(categoryName))
+                    while (reader.Read())
                     {
-                        categoryProducts[categoryName] = new HashSet<string>();
-                    }
+                        var categoryName = reader["CategoryName"].ToString();
+                        var productName = reader["ProductName"].ToString();
 
-                    categoryProducts[categoryName].Add(productName);
+                        if (!categoryProducts.ContainsKey(categoryName))
+                        {
+                            categoryProducts[categoryName] = new HashSet<string>();
+                        }
+
+                        categoryProducts[categoryName].Add(productName);
+                    }
                 }
             }
         }
-
-        PrintResult(categoryProducts);
-    }
-  
-    static void PrintResult(IDictionary<string, ISet<string>> categoryProducts)
-    {
-        foreach (var categories in categoryProducts)
+ 
+        private static SqlCommand GetSqlCommand(SqlConnection sqlConnection)
         {
-            Console.WriteLine("Category name: {0}", categories.Key);
-
-            foreach (var productName in categories.Value)
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT c.CategoryName, p.ProductName
+                                                     FROM Categories c
+                                                     JOIN Products P
+                                                        ON c.CategoryID = p.CategoryID
+                                                     ORDER BY c.CategoryID", sqlConnection);
+            return sqlCommand;
+        }
+  
+        private static void PrintResult(IDictionary<string, ISet<string>> categoryProducts)
+        {
+            foreach (var categories in categoryProducts)
             {
-                Console.WriteLine(" - {0}", productName);
-            }
+                Console.WriteLine("Category name: {0}", categories.Key);
 
-            Console.WriteLine();
+                foreach (var productName in categories.Value)
+                {
+                    Console.WriteLine(" - {0}", productName);
+                }
+
+                Console.WriteLine();
+            }
         }
     }
 }

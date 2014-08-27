@@ -4,43 +4,59 @@
  * OLE DB data provider and displays the name and score row by row.
  */
 
-using System;
-using System.Data;
-using System.Data.OleDb;
-using System.Linq;
-using DatabaseConnections;
-
-class ReadsExcelFiles
+namespace DatabaseConnectionsAdoNet
 {
-    static void Main()
+    using System;
+    using System.Data;
+    using System.Data.OleDb;
+    using System.Linq;
+
+    public class ReadsExcelFiles
     {
-        var excelConnection = new OleDbConnection(Settings.Default.excelConnection);
-        excelConnection.Open();
-
-        DataTable excelSchema = excelConnection.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-        string sheetName = excelSchema.Rows[0]["TABLE_NAME"].ToString();
-
-        OleDbCommand excelCommand = new OleDbCommand(@"SELECT *
-                                                           FROM [" + sheetName + "]", excelConnection);
-
-        using (excelConnection)
+        public static void Main()
         {
-            using (OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter(excelCommand))
+            ReadExcelData();
+        }
+ 
+        private static void ReadExcelData()
+        {
+            using (var excelConnection = new OleDbConnection(Settings.Default.excelConnection))
             {
-                DataSet dataSet = new DataSet();
-                oleDbDataAdapter.Fill(dataSet);
+                excelConnection.Open();
+                string sheetName = GetSheetName(excelConnection);
+                OleDbCommand excelCommand = GetOleDbCommand(sheetName, excelConnection);
 
-                using (DataTableReader reader = dataSet.CreateDataReader())
+                using (OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter(excelCommand))
                 {
-                    while (reader.Read())
-                    {
-                        var fullName = reader["Name"];
-                        var score = reader["Score"];
+                    DataSet dataSet = new DataSet();
+                    oleDbDataAdapter.Fill(dataSet);
 
-                        Console.WriteLine(fullName + " -> " + score);
+                    using (DataTableReader reader = dataSet.CreateDataReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var fullName = reader["Name"];
+                            var score = reader["Score"];
+
+                            Console.WriteLine(fullName + " -> " + score);
+                        }
                     }
                 }
             }
+        }
+     
+        private static string GetSheetName(OleDbConnection oleDbConnection)
+        {
+            DataTable excelSchema = oleDbConnection.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
+            string sheetName = excelSchema.Rows[0]["TABLE_NAME"].ToString();
+            return sheetName;
+        }
+
+        private static OleDbCommand GetOleDbCommand(string sheetName, OleDbConnection excelConnection)
+        {
+            OleDbCommand oleDbCommand = new OleDbCommand(@"SELECT *
+                                                           FROM [" + sheetName + "]", excelConnection);
+            return oleDbCommand;
         }
     }
 }

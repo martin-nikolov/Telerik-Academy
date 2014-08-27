@@ -3,29 +3,42 @@
  * of all categories in the Northwind DB.
  */
 
-using System;
-using System.Data.SqlClient;
-using System.Linq;
-using DatabaseConnections;
-
-class DataRetrievingFromDatabase
+namespace DatabaseConnectionsAdoNet
 {
-    static void Main()
-    {
-        var dbConnection = new SqlConnection(Settings.Default.DbConnection);
-        dbConnection.Open();
+    using System;
+    using System.Data.SqlClient;
+    using System.Linq;
 
-        SqlCommand sqlCommand = new SqlCommand(@"SELECT CategoryName, Description
-                                                 FROM Categories", dbConnection);
-        using (dbConnection)
+    public class DataRetrievingFromDatabase
+    {
+        public static void Main()
         {
-            using (SqlDataReader reader = sqlCommand.ExecuteReader())
+            GetCategoriesFromDatabase();
+        }
+ 
+        private static void GetCategoriesFromDatabase()
+        {
+            using (var dbConnection = new SqlConnection(Settings.Default.DbConnection))
             {
-                while (reader.Read())
+                dbConnection.Open();
+                SqlCommand sqlCommand = GetSqlCommand(dbConnection);
+
+                using (SqlDataReader reader = sqlCommand.ExecuteReader())
                 {
-                    Console.WriteLine("Category: {0} -> {1}", reader["CategoryName"], reader["Description"]);
+                    while (reader.Read())
+                    {
+                        Console.WriteLine("Category: {0} -> {1}",
+                            reader["CategoryName"], reader["Description"]);
+                    }
                 }
             }
+        }
+ 
+        private static SqlCommand GetSqlCommand(SqlConnection sqlConnection)
+        {
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT CategoryName, Description
+                                                     FROM Categories", sqlConnection);
+            return sqlCommand;
         }
     }
 }

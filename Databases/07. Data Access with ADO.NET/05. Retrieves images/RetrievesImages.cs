@@ -3,54 +3,63 @@
  * the Northwind database and stores them as JPG files in the file system.
  */
 
-using System;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using DatabaseConnections;
-
-class RetrievesImages
+namespace DatabaseConnectionsAdoNet
 {
-    const int OleMetaFilePictStartPosition = 78;
+    using System;
+    using System.Data.SqlClient;
+    using System.Drawing;
+    using System.IO;
+    using System.Linq;
 
-    static void Main()
+    public class RetrievesImages
     {
-        var dbConnection = new SqlConnection(Settings.Default.DbConnection);
-        dbConnection.Open();
+        private const int OleMetaFilePictStartPosition = 78;
 
-        SqlCommand sqlCommand = new SqlCommand(@"SELECT Picture 
-                                                 FROM Categories", dbConnection);
-
-        using (dbConnection)
+        public static void Main()
         {
-            using (SqlDataReader reader = sqlCommand.ExecuteReader())
+            GetImagesFromDatabase();
+        }
+ 
+        private static void GetImagesFromDatabase()
+        {
+            using (var dbConnection = new SqlConnection(Settings.Default.DbConnection))
             {
-                int imageId = 1;
+                dbConnection.Open();
+                SqlCommand sqlCommand = GetSqlCommand(dbConnection);
 
-                while (reader.Read())
+                using (SqlDataReader reader = sqlCommand.ExecuteReader())
                 {
-                    var fileBinaryData = (byte[])reader["Picture"];
+                    int imageId = 1;
 
-                    SaveImageWithOleMetaFilePict(imageId.ToString(), fileBinaryData, ".jpg");
-
-                    imageId++;
+                    while (reader.Read())
+                    {
+                        var fileBinaryData = (byte[])reader["Picture"];
+                        SaveImageWithOleMetaFilePict(imageId.ToString(), fileBinaryData, ".jpg");
+                        imageId++;
+                    }
                 }
             }
         }
-    }
 
-    static void SaveImageWithOleMetaFilePict(string fileName, byte[] imageBinaryData, string format)
-    {
-        MemoryStream memoryStream =
-            new MemoryStream(imageBinaryData, OleMetaFilePictStartPosition, imageBinaryData.Length - OleMetaFilePictStartPosition);
-
-        using (memoryStream)
+        private static void SaveImageWithOleMetaFilePict(string fileName, byte[] imageBinaryData, string extension)
         {
-            using (Image image = Image.FromStream(memoryStream))
+            MemoryStream memoryStream =
+                new MemoryStream(imageBinaryData, OleMetaFilePictStartPosition, imageBinaryData.Length - OleMetaFilePictStartPosition);
+
+            using (memoryStream)
             {
-                image.Save(fileName + format);
+                using (var image = Image.FromStream(memoryStream))
+                {
+                    image.Save(fileName + extension);
+                }
             }
+        }
+
+        private static SqlCommand GetSqlCommand(SqlConnection sqlConnection)
+        {
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT Picture 
+                                                     FROM Categories", sqlConnection);
+            return sqlCommand;
         }
     }
 }

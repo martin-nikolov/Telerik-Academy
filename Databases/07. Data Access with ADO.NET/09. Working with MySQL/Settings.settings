@@ -1,9 +1,9 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="_09.Working_with_MySQL" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DatabaseConnectionsAdoNet" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="DbConnection" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Server=localhost;Database=library;Uid=root;Pwd=tihina404fightBG;
+      <Value Profile="(Default)">Server=localhost;Database=library;Uid=root;Pwd=YOUR_PASSWORD;
 </Value>
     </Setting>
   </Settings>

@@ -4,38 +4,49 @@
  * correctly characters like ', %, ", \ and _.
  */
 
-using System;
-using System.Data.SqlClient;
-using System.Linq;
-using DatabaseConnections;
-
-class SearchingWithSpecialSymbols
+namespace DatabaseConnectionsAdoNet
 {
-    static void Main()
+    using System;
+    using System.Data.SqlClient;
+    using System.Linq;
+
+    public class SearchingWithSpecialSymbols
     {
-        Console.Write("Enter a search string: ");
-        var pattern = Console.ReadLine();
-
-        var dbConnection = new SqlConnection(Settings.Default.DbConnection);
-        dbConnection.Open();
-
-        SqlCommand sqlCommand = new SqlCommand(@"SELECT ProductName
-                                                 FROM Products
-                                                 WHERE CHARINDEX(@pattern, ProductName) > 0", dbConnection);
-
-        sqlCommand.Parameters.AddWithValue("@pattern", pattern);
-
-        using (dbConnection)
+        public static void Main()
         {
-            using (SqlDataReader reader = sqlCommand.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    var productName = reader["ProductName"];
+            Console.Write("Enter a search string: ");
+            var pattern = Console.ReadLine();
 
-                    Console.WriteLine(" - " + productName);
+            SearchProductNameByPattern(pattern);
+        }
+ 
+        private static void SearchProductNameByPattern(string pattern)
+        {
+            using (var dbConnection = new SqlConnection(Settings.Default.DbConnection))
+            {
+                dbConnection.Open();
+                SqlCommand sqlCommand = GetSearchByPatternSqlCommand(dbConnection, pattern);
+
+                using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var productName = reader["ProductName"];
+
+                        Console.WriteLine(" - " + productName);
+                    }
                 }
             }
+        }
+ 
+        private static SqlCommand GetSearchByPatternSqlCommand(SqlConnection sqlConnection, string pattern)
+        {
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT ProductName
+                                                     FROM Products
+                                                     WHERE CHARINDEX(@pattern, ProductName) > 0", sqlConnection);
+
+            sqlCommand.Parameters.AddWithValue("@pattern", pattern);
+            return sqlCommand;
         }
     }
 }

@@ -1,33 +1,36 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-
-class Book
+﻿namespace DatabaseConnectionsAdoNet
 {
-    public string Title { get; set; }
+    using System;
+    using System.Linq;
+    using System.Text;
 
-    public string Author { get; set; }
-
-    public DateTime? PublishDate { get; set; }
-
-    public string ISBN { get; set; }
-
-    public override string ToString()
+    public class Book
     {
-        var result = new StringBuilder();
-        result.AppendLine("   Book: " + this.Title);
-        result.AppendLine("      - Author: " + this.Author);
+        public string Title { get; set; }
 
-        if (this.PublishDate != null)
+        public string Author { get; set; }
+
+        public DateTime? PublishDate { get; set; }
+
+        public string ISBN { get; set; }
+
+        public override string ToString()
         {
-            result.AppendLine("      - Publish date: " + this.PublishDate.Value.ToLongDateString());
-        }
+            var result = new StringBuilder();
+            result.AppendLine("   Book: " + this.Title);
+            result.AppendLine("      - Author: " + this.Author);
 
-        if (!string.IsNullOrEmpty(this.ISBN))
-        {
-            result.AppendLine("      - ISBN: " + this.ISBN);
-        }
+            if (this.PublishDate != null)
+            {
+                result.AppendLine("      - Publish date: " + this.PublishDate.Value.ToLongDateString());
+            }
 
-        return result.ToString();
+            if (!string.IsNullOrEmpty(this.ISBN))
+            {
+                result.AppendLine("      - ISBN: " + this.ISBN);
+            }
+
+            return result.ToString();
+        }
     }
 }

@@ -2,39 +2,55 @@
  * 7. Implement appending new rows to the Excel file.
  */
 
-using System;
-using System.Data;
-using System.Data.OleDb;
-using System.Linq;
-using DatabaseConnections;
-
-class WriteToExcel
+namespace DatabaseConnectionsAdoNet
 {
-    static void Main()
+    using System;
+    using System.Data;
+    using System.Data.OleDb;
+    using System.Linq;
+
+    public class WriteToExcel
     {
-        var excelConnection = new OleDbConnection(Settings.Default.excelConnection);
-        excelConnection.Open();
-
-        DataTable excelSchema = excelConnection.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-        string sheetName = excelSchema.Rows[0]["TABLE_NAME"].ToString();
-
-        var name = "Peter Ivanov";
-        var age = 25;
-
-        OleDbCommand excelCommand = new OleDbCommand(@"INSERT INTO [" + sheetName + @"]
-                                                           VALUES (@name, @age)", excelConnection);
-
-        excelCommand.Parameters.AddWithValue("@name", name);
-        excelCommand.Parameters.AddWithValue("@age", age);
-
-        using (excelConnection)
+        public static void Main()
         {
-            for (int i = 0; i < 10; i++)
+            InsertRecordsToExcel();
+        }
+ 
+        private static void InsertRecordsToExcel(int numberOfRecordsToInsert = 10)
+        {
+            using (var excelConnection = new OleDbConnection(Settings.Default.excelConnection))
             {
-                var queryResult = excelCommand.ExecuteNonQuery();
+                excelConnection.Open();
+                string sheetName = GetSheetName(excelConnection);
+                OleDbCommand excelCommand = GetInsertOleDbCommand(excelConnection, sheetName);
 
-                Console.WriteLine("({0} row(s) affected)", queryResult); 
+                for (int i = 0; i < numberOfRecordsToInsert; i++)
+                {
+                    var queryResult = excelCommand.ExecuteNonQuery();
+                    Console.WriteLine("({0} row(s) affected)", queryResult); 
+                }
             }
+        }
+ 
+        private static string GetSheetName(OleDbConnection oleDbCommand)
+        {
+            DataTable excelSchema = oleDbCommand.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
+            string sheetName = excelSchema.Rows[0]["TABLE_NAME"].ToString();
+            return sheetName;
+        }
+ 
+        private static OleDbCommand GetInsertOleDbCommand(OleDbConnection oleDbConnection, string sheetName)
+        {
+            var name = "Peter Ivanov";
+            var age = 25;
+
+            OleDbCommand excelCommand = new OleDbCommand(@"INSERT INTO [" + sheetName + @"]
+                                                           VALUES (@name, @age)", oleDbConnection);
+            
+            excelCommand.Parameters.AddWithValue("@name", name);
+            excelCommand.Parameters.AddWithValue("@age", age);
+
+            return excelCommand;
         }
     }
 }

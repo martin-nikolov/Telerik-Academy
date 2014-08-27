@@ -3,27 +3,37 @@
  * database in MS SQL Server the number of rows in the Categories table.
  */
 
-using System;
-using System.Data.SqlClient;
-using System.Linq;
-using DatabaseConnections;
-
-class NumberOfRecords
+namespace DatabaseConnectionsAdoNet
 {
-    static void Main()
+    using System;
+    using System.Data.SqlClient;
+    using System.Linq;
+
+    public class NumberOfRecords
     {
-        var dbConnection = new SqlConnection(Settings.Default.DbConnection);
-        dbConnection.Open();
-
-        // COUNT(CategoryId) is faster than COUNT(*) -> CategoryId is NOT NULL
-        SqlCommand sqlCommand = new SqlCommand(@"SELECT COUNT(CategoryId) 
-                                                 FROM Categories", dbConnection); 
-
-        using (dbConnection)
+        public static void Main()
         {
-            int recordsCount = (int)sqlCommand.ExecuteScalar();
-
-            Console.WriteLine("Total records: {0}", recordsCount);
+            GetNumberOfCategories();
+        }
+ 
+        private static void GetNumberOfCategories()
+        {
+            using (var dbConnection = new SqlConnection(Settings.Default.DbConnection))
+            {
+                dbConnection.Open();
+                SqlCommand sqlCommand = GetSqlCommand(dbConnection);
+                
+                int recordsCount = (int)sqlCommand.ExecuteScalar();
+                Console.WriteLine("Total records: {0}", recordsCount);
+            }
+        }
+ 
+        private static SqlCommand GetSqlCommand(SqlConnection sqlConnection)
+        {
+            // COUNT(CategoryId) is faster than COUNT(*) -> CategoryId is NOT NULL
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT COUNT(CategoryId) 
+                                                     FROM Categories", sqlConnection);
+            return sqlCommand;
         }
     }
 }

@@ -6,4 +6,4 @@ CREATE TABLE [Books] (
   [Author] NVARCHAR(50) NOT NULL, 
   [PublishDate] DATETIME, 
   [ISBN] NVARCHAR(50)
-  );
+);

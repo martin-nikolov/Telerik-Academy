@@ -6,11 +6,11 @@
 
     public class HashSet<T> : IHashSet<T>, IEnumerable, IEnumerable<T> where T : IComparable<T>
     {
-        private readonly IDictionary<T, bool> elements;
+        private readonly HashTable<T, bool> elements;
 
         public HashSet()
         {
-            this.elements = new Dictionary<T, bool>();
+            this.elements = new HashTable<T, bool>();
         }
 
         public HashSet(IEnumerable<T> collection)
@@ -20,22 +20,12 @@
                 throw new ArgumentNullException("Collection cannot be null.");
             }
 
-            this.elements = new Dictionary<T, bool>();
+            this.elements = new HashTable<T, bool>();
 
             foreach (var item in collection)
             {
                 this.Add(item);
             }
-        }
-
-        public HashSet(IEqualityComparer<T> comparer)
-        {
-            if (comparer == null)
-            {
-                throw new ArgumentNullException("Comparer cannot be null.");
-            }
-
-            this.elements = new Dictionary<T, bool>(comparer);        
         }
 
         /// <summary>
@@ -56,7 +46,8 @@
         {
             get
             {
-                return new List<T>(this.elements.Keys);
+                var keys = new List<T>(this.elements.Keys);
+                return keys;
             }
         }
 

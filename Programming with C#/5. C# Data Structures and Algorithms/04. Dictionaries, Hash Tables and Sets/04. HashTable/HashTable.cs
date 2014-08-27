@@ -26,6 +26,15 @@
   
         public int Count { get; private set; }
 
+        public ICollection<TKey> Keys
+        {
+            get
+            {
+                var keys = this.GetKeys();
+                return keys;
+            }
+        }
+ 
         public TValue this[TKey key]
         {
             get
@@ -54,6 +63,24 @@
             chain.Add(new KeyValuePair<TKey, TValue>(key, value));
             this.Count++;
             this.Expand();
+        }
+
+        public bool ContainsKey(TKey key)
+        {
+            var chain = this.FindChain(key, false);
+
+            if (chain != null)
+            {
+                for (int i = 0; i < chain.Count; i++)
+                {
+                    if (chain[i].Key.Equals(key))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
         public TValue GetValue(TKey key)
@@ -121,6 +148,27 @@
         IEnumerator IEnumerable.GetEnumerator()
         {
             return this.GetEnumerator();
+        }
+
+        private List<TKey> GetKeys()
+        {
+            var keys = new List<TKey>();
+
+            for (int i = 0; i < this.table.Length; i++)
+            {
+                if (this.table[i] != null)
+                {
+                    for (int j = 0; j < this.table[i].Count; j++)
+                    {
+                        if (this.table[i][j].Key != null)
+                        {
+                            keys.Add(this.table[i][j].Key);
+                        }
+                    }
+                }
+            }
+
+            return keys;
         }
 
         private IList<KeyValuePair<TKey, TValue>> FindChain(TKey key, bool createIfMissing)

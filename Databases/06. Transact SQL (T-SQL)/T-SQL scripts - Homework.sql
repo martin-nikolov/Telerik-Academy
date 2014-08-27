@@ -2,6 +2,13 @@
 --- and Accounts(Id(PK), PersonId(FK), Balance). Insert few records for testing. 
 --- Write a stored procedure that selects the full names of all persons.
 
+--- DATABASE: Bank
+CREATE DATABASE Bank
+GO
+
+USE Bank
+GO
+
 --- TABLE: Persons
 CREATE TABLE Persons (
     PersonId int IDENTITY PRIMARY KEY,

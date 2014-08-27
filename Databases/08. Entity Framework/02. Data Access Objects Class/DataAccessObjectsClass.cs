@@ -1,6 +1,7 @@
 ﻿/*
  * 2. Create a DAO class with static methods which provide functionality
- * for inserting, modifying and deleting customers. Write a testing class.
+ * for inserting, modifying and deleting customers. 
+ * Write a testing class.
  */
 
 namespace EntityFramework.ConsoleClient
@@ -12,39 +13,13 @@ namespace EntityFramework.ConsoleClient
 
     public static class DataAccessObjectsClass
     {
-        public static int InsertCustomer(
-            string customerId,
-            string companyName,
-            string contactName = null,
-            string contactTitle = null,
-            string address = null,
-            string city = null,
-            string region = null,
-            string postalCode = null,
-            string country = null,
-            string phone = null,
-            string fax = null)
+        public static int InsertCustomer(Customer customer)
         {
             var affectedRows = 0;
 
-            var entity = new Customer()
-            {
-                CustomerID = customerId,
-                CompanyName = companyName,
-                ContactName = companyName,
-                ContactTitle = contactTitle,
-                Address = address,
-                City = city,
-                Region = region,
-                PostalCode = postalCode,
-                Country = country,
-                Phone = phone,
-                Fax = fax
-            };
-
             using (var dbContext = new NorthwindEntities())
             {
-                dbContext.Customers.Add(entity);
+                dbContext.Customers.Add(customer);
                 affectedRows = dbContext.SaveChanges();
             }
 
@@ -71,11 +46,17 @@ namespace EntityFramework.ConsoleClient
 
             using (var dbContext = new NorthwindEntities())
             {
-                affectedRows = dbContext.Database.ExecuteSqlCommand(@"DELETE FROM Customers
-                                                                      WHERE CustomerID = {0}", new object[]
-                                                                      {
-                                                                          customerId
-                                                                      });
+                var customersToDelete = dbContext.Customers.Where(c => c.CustomerID == customerId);
+
+                if (customersToDelete.Count() > 0)
+                {
+                    foreach (var customer in customersToDelete)
+                    {
+                        dbContext.Customers.Remove(customer);
+                    }
+                }
+
+                affectedRows = dbContext.SaveChanges();
             }
 
             return affectedRows;
@@ -112,24 +93,16 @@ namespace EntityFramework.ConsoleClient
         public static IEnumerable<Customer> Customers_With_Orders_In_1997_Shipped_To_Canada_Sql_View()
         {
             var entities = new List<Customer>();
-            
-            var sqlCommand = @"SELECT *
-                        FROM Customers c
-                        JOIN Orders o
-                            ON c.CustomerID = o.CustomerID
-                        WHERE DATEPART(YEAR, o.OrderDate) = {0} 
-                                AND o.ShipCountry = {1}";
-            
+
             var orderDateYear = 1997;
             var shipCountry = "Canada";
             
             using (var dbContext = new NorthwindEntities())
             {
-                entities = dbContext.Database.SqlQuery<Customer>(sqlCommand, new object[]
-                {
-                    orderDateYear,
-                    shipCountry
-                }).ToList();
+                entities = (from customer in dbContext.Customers
+                            join order in dbContext.Orders on customer.CustomerID equals order.CustomerID
+                            where order.OrderDate.Value.Year == orderDateYear && order.ShipCountry == shipCountry
+                            select customer).ToList();
             }
             
             return entities;

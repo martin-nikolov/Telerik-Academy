@@ -8,9 +8,9 @@ namespace EntityFramework.ConsoleClient
     using System;
     using System.Linq;
 
-    class CustomersWithSpecificOrdersSQL
+    public class CustomersWithSpecificOrdersSql
     {
-        static void Main()
+        public static void Main()
         {
             foreach (var customer in DataAccessObjectsClass.Customers_With_Orders_In_1997_Shipped_To_Canada_Sql_View())
             {

@@ -8,9 +8,9 @@ namespace EntityFramework.ConsoleClient
     using System;
     using System.Linq;
 
-    class QueryForSpecificSales
+    public class QueryForSpecificSales
     {
-        static void Main()
+        public static void Main()
         {
             var region = "SP";
             var startDate = new DateTime(1995, 5, 10);

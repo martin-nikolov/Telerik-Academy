@@ -9,9 +9,9 @@ namespace EntityFramework.ConsoleClient
     using System;
     using System.Linq;
 
-    class EmployeeExtendedTest
+    public class EmployeeExtendedTest
     {
-        static void Main()
+        public static void Main()
         {
             // EntitySet<T> is not available in EF 5/6 versions.
         }

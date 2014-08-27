@@ -11,9 +11,9 @@ namespace EntityFramework.ConsoleClient
     using System.Linq;
     using Northwind.Models;
 
-    class CallingStoredProcedure
+    public class CallingStoredProcedure
     {
-        static void Main()
+        public static void Main()
         {
             var supplierName = "Exotic Liquids";
             var startDate = new DateTime(1996, 1, 1);

@@ -19,19 +19,18 @@ namespace EntityFramework.ConsoleClient
     /// 
     /// More information: https://coderwall.com/p/jnniww
     /// </remarks>
-    class WorkingWithTransactions
+    public class WorkingWithTransactions
     {
-        static void Main()
+        public static void Main()
         {
             Console.WriteLine("({0} affected row(s))\n", TestOnExplicitlyStartedTransaction());
-
             Console.WriteLine("({0} affected row(s))\n", TestOnImplicitlyStartedTransaction());
         }
 
         /// <summary>
-        /// Started the transaction explicitly. 
+        /// Started the transaction explicitly. We have options to commit / roll-back transactions.
         /// </summary>
-        static int TestOnExplicitlyStartedTransaction()
+        private static int TestOnExplicitlyStartedTransaction()
         {
             var affectedRows = 0;
             var customerId = "VINET";
@@ -41,11 +40,12 @@ namespace EntityFramework.ConsoleClient
 
             using (var dbContext = new NorthwindEntities())
             {
+                dbContext.Entry(null).State = System.Data.Entity.EntityState.Modified; 
                 using (var transaction = dbContext.Database.BeginTransaction())
                 {
                     try
                     {
-                        #region [First Order]
+                        #region [Add Orders]
                         
                         // This cause an error
                         var firstOrder = new Order()
@@ -55,10 +55,6 @@ namespace EntityFramework.ConsoleClient
                         };
                         
                         dbContext.Orders.Add(firstOrder);
-                        
-                        #endregion
-                        
-                        #region [Second Order]
                         
                         var secondOrder = new Order()
                         {
@@ -105,7 +101,7 @@ namespace EntityFramework.ConsoleClient
         /// <summary>
         /// Started the transaction implicitly. 
         /// </summary>
-        static int TestOnImplicitlyStartedTransaction()
+        private static int TestOnImplicitlyStartedTransaction()
         {
             var affectedRows = 0;
             var customerId = "RATTC";
@@ -117,7 +113,7 @@ namespace EntityFramework.ConsoleClient
             {
                 try
                 {
-                    #region [First Order]
+                    #region [Add Orders]
                     
                     // This cause an error
                     var firstOrder = new Order()
@@ -127,10 +123,6 @@ namespace EntityFramework.ConsoleClient
                     };
                     
                     dbContext.Orders.Add(firstOrder);
-
-                    #endregion
-                    
-                    #region [Second Order]
                     
                     var secondOrder = new Order()
                     {

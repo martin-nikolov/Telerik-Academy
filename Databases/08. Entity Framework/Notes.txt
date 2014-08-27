@@ -1,0 +1,2 @@
+You must install packages:
+    - EntityFramework.6.1.0

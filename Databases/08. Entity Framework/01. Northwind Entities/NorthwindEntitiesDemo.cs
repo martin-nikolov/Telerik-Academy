@@ -9,22 +9,16 @@ namespace EntityFramework.ConsoleClient
     using System.Linq;
     using Northwind.Models;
 
-    class NorthwindEntitiesDemo
+    public class NorthwindEntitiesDemo
     {
-        static void Main()
+        public static void Main()
         {
+            Console.Write("Loading...");
+
             using (var northwindEntities = new NorthwindEntities())
             {
-                // Projection
-                var customers = northwindEntities.Customers.Select(c => new
-                {
-                    ContactName = c.ContactName
-                });
-
-                foreach (var customer in customers)
-                {
-                    Console.WriteLine(customer.ContactName);
-                }
+                var contactNames = northwindEntities.Customers.Select(c => c.ContactName); // Projection
+                Console.WriteLine("\r" + string.Join(Environment.NewLine, contactNames));
             }
         }
     }

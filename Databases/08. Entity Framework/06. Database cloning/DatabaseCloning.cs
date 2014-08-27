@@ -10,14 +10,19 @@ namespace EntityFramework.ConsoleClient
     using System.Linq;
     using Northwind.Models;
 
-    class DatabaseCloning
+    public class DatabaseCloning
     {
-        static void Main()
+        public static void Main()
         {
             // The connection string in App.config is changed
 
-            var northwindEntities = new NorthwindEntities();
-            northwindEntities.Database.CreateIfNotExists();
+            Console.Write("Loading...");
+
+            using (var northwindEntities = new NorthwindEntities())
+            {
+                northwindEntities.Database.CreateIfNotExists();
+                Console.WriteLine("\rNumbers of customers: " + northwindEntities.Customers.Count());
+            }
         }
     }
 }

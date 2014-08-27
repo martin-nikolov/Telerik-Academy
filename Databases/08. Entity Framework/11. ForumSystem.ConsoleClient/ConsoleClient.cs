@@ -15,9 +15,9 @@
     /// 
     /// More information: https://coderwall.com/p/jnniww
     /// </remarks>
-    class ConsoleClient
+    public class ConsoleClient
     {
-        static void Main()
+        public static void Main()
         {
             AddUserAndGroup();
         }
@@ -25,33 +25,14 @@
         /// <summary>
         /// Started the transaction implicitly. 
         /// </summary>
-        static void AddUserAndGroup()
+        private static void AddUserAndGroup()
         {
             using (var forumSystemContext = new ForumSystemContext())
             {
                 try
                 {
-                    var adminGroup = forumSystemContext.Groups.FirstOrDefault(g => g.GroupName == "Admins");
-
-                    if (adminGroup == null)
-                    {
-                        adminGroup = new Group()
-                        {
-                            GroupName = "Admins"
-                        };
-
-                        forumSystemContext.Groups.Add(adminGroup);
-                    }
-
-                    var user = new User()
-                    {
-                        FirstName = "John",
-                        LastName = "Snow",
-                        Nickname = "Bastard",
-                        Group = adminGroup
-                    };
-
-                    forumSystemContext.Users.Add(user);
+                    var adminGroup = GetOrCreateAdminGroup(forumSystemContext);
+                    CreateUser(adminGroup, forumSystemContext);
 
                     forumSystemContext.SaveChanges();
 
@@ -62,6 +43,36 @@
                     Console.WriteLine("Error: " + se.InnerException.InnerException.Message);
                 }
             }
+        }
+
+        private static Group GetOrCreateAdminGroup(ForumSystemContext forumSystemContext)
+        {
+            var adminGroup = forumSystemContext.Groups.FirstOrDefault(g => g.GroupName == "Admins");
+
+            if (adminGroup == null)
+            {
+                adminGroup = new Group()
+                {
+                    GroupName = "Admins"
+                };
+
+                forumSystemContext.Groups.Add(adminGroup);
+            }
+
+            return adminGroup;
+        }
+
+        private static void CreateUser(Group adminGroup, ForumSystemContext forumSystemContext)
+        {
+            var user = new User()
+            {
+                FirstName = "John",
+                LastName = "Snow",
+                Nickname = "Bastard",
+                Group = adminGroup
+            };
+
+            forumSystemContext.Users.Add(user);
         }
     }
 }

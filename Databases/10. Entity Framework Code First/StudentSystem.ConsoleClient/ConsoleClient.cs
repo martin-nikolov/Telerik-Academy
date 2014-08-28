@@ -4,23 +4,23 @@
     using System.Linq;
     using StudentSystem.Data;
 
-    internal class ConsoleClient
+    public class ConsoleClient
     {
-        static void Main()
+        public static void Main()
         {
+            Console.Write("Loading...");
+
             var forumSystemContext = new StudentSystemContext();
             forumSystemContext.Database.Initialize(true);
 
             PrintStudents(forumSystemContext);
-
             PrintCourses(forumSystemContext);
-
             PrintHomeworks(forumSystemContext);
         }
  
         private static void PrintStudents(StudentSystemContext forumSystemContext)
         {
-            Console.WriteLine("Students: ");
+            Console.WriteLine("\rStudents: ");
             foreach (var student in forumSystemContext.Students)
             {
                 Console.WriteLine(" - {0} -> present in {1} course(s).", student.Name, student.Courses.Count());

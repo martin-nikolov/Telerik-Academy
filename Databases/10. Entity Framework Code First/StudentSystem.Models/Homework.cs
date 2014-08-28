@@ -6,6 +6,8 @@
 
     public class Homework
     {
+        private ICollection<Material> materials;
+
         public Homework()
         {
             this.Materials = new HashSet<Material>();
@@ -17,7 +19,17 @@
 
         public DateTime? TimeSent { get; set; }
 
-        public virtual ICollection<Material> Materials { get; set; }
+        public virtual ICollection<Material> Materials
+        {
+            get
+            {
+                return this.materials;
+            }
+            set
+            {
+                this.materials = value;
+            }
+        }
 
         public int CourseId { get; set; }
 

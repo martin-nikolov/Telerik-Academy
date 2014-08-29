@@ -11,16 +11,15 @@ namespace EntityFramework.ConsoleClient
     using System.Linq;
     using TelerikAcademy.Models;
 
-    class UsingIncludeStatement
+    public class UsingIncludeStatement
     {
-        static void Main()
+        public static void Main()
         {
             SelectEmployeesUsingIncludeStatement();
-           
             SelectEmployeedWithoutUsingIncludeStatement();
         }
     
-        static void SelectEmployeesUsingIncludeStatement()
+        private static void SelectEmployeesUsingIncludeStatement()
         {
             using (var dbContext = new TelerikAcademyEntities())
             {
@@ -32,7 +31,7 @@ namespace EntityFramework.ConsoleClient
             }
         }
 
-        static void SelectEmployeedWithoutUsingIncludeStatement()
+        private static void SelectEmployeedWithoutUsingIncludeStatement()
         {
             using (var dbContext = new TelerikAcademyEntities())
             {

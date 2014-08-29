@@ -12,16 +12,15 @@ namespace EntityFramework.ConsoleClient
     using System.Linq;
     using TelerikAcademy.Models;
 
-    class UsingToListEachTime
+    public class UsingToListEachTime
     {
-        static void Main()
+        public static void Main()
         {
             UsingToListEachTimeTest();
-
             UsingToListOnceTest();
         }
 
-        static void UsingToListEachTimeTest()
+        private static void UsingToListEachTimeTest()
         {
             using (var dbContext = new TelerikAcademyEntities())
             {
@@ -38,7 +37,7 @@ namespace EntityFramework.ConsoleClient
             }
         }
 
-        static void UsingToListOnceTest()
+        private static void UsingToListOnceTest()
         {
             using (var dbContext = new TelerikAcademyEntities())
             {

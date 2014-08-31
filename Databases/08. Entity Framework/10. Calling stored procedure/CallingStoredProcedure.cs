@@ -15,6 +15,8 @@ namespace EntityFramework.ConsoleClient
     {
         public static void Main()
         {
+            // IMPORTANT: At first you must execute "Create-Stored-Procedure.sql" in Northwind database.
+
             var supplierName = "Exotic Liquids";
             var startDate = new DateTime(1996, 1, 1);
             var endDate = new DateTime(1997, 12, 31);

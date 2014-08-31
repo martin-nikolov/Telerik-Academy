@@ -40,7 +40,6 @@ namespace EntityFramework.ConsoleClient
 
             using (var dbContext = new NorthwindEntities())
             {
-                dbContext.Entry(null).State = System.Data.Entity.EntityState.Modified; 
                 using (var transaction = dbContext.Database.BeginTransaction())
                 {
                     try

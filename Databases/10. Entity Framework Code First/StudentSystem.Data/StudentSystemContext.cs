@@ -8,10 +8,8 @@
 
     public class StudentSystemContext : DbContext
     {
-        const string StudentSystemDatabaseName = "StudentSystem";
-
         public StudentSystemContext()
-            : base(StudentSystemDatabaseName)
+            : base(ConnectionStrings.Default.DatabaseConnectionString)
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<StudentSystemContext, Configuration>());
         }

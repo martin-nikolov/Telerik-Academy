@@ -8,10 +8,13 @@
     public class WorkingWithSQLite
     {
         private static readonly BookLibrary bookLibrary = new BookLibrary();
-        private static SQLiteConnection mySqlConnection = new SQLiteConnection(Settings.Default.DbConnection);
+        private static SQLiteConnection mySqlConnection;
 
         public static void Main()
         {
+            // IMPORTANT: Find folders with names "x86" and "x64" in the project directory and move them into "bin/Debug"
+            Console.WriteLine("-> IMPORTANT: Find folders with names 'x86' and 'x64' in the project directory and move them into 'bin/Debug'...\n");
+
             try
             {
                 ConnectToDatabase();

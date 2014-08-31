@@ -19,6 +19,8 @@
     {
         public static void Main()
         {
+            // IMPORTANT: Change the connection string in App.config file.
+
             AddUserAndGroup();
         }
 

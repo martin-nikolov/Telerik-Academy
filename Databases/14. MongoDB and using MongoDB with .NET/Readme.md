@@ -1,6 +1,6 @@
 ## MongoDB and using MongoDB with .NET
 
-1. Research how to create a MongoDB database in Mongolab(http://mongolab.com )
+1. Research how to create a MongoDB database in [MongoLab](http://mongolab.com)
 2. Create a chat database in MongoLab
   * The database should keep messages
   * Each message has a text, date and an embedded field user

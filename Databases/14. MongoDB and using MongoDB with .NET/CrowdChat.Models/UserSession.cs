@@ -3,13 +3,16 @@
     using System;
     using System.Linq;
 
-    public class User
+    public class UserSession
     {
-        public User(string name)
+        public UserSession(string name)
         {
             this.Name = name;
+            this.LoggedOn = DateTime.Now;
         }
 
         public string Name { get; set; }
+
+        public DateTime LoggedOn { get; set; }
     }
 }

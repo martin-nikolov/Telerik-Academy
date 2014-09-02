@@ -18,7 +18,7 @@
  
         private static void PrintAllPosts()
         {
-            var postsAsString = crowdChatModule.GenerateAllPostsAsString();
+            var postsAsString = crowdChatModule.GenerateAllPostsAsString(DateTime.MinValue, DateTime.MaxValue);
             Console.WriteLine(postsAsString);
             Console.WriteLine("\nNumber of posts: {0}\n", mongoDbContext.Posts.Count());
         }

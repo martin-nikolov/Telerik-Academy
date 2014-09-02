@@ -36,7 +36,7 @@
  
         private void ShowCrowdChatWindow(string username)
         {
-            var user = new User(username);
+            var user = new UserSession(username);
             var mainWindow = new CrowdChatWindow(user);
             mainWindow.Show();
         }

@@ -4,6 +4,7 @@
     using System.Linq;
     using System.Text;
     using CrowdChat.Models;
+    using MongoDB.Driver.Builders;
 
     public class CrowdChatModule
     {
@@ -19,11 +20,14 @@
             this.mongoDbContext.Posts.Insert(post);
         }
 
-        public StringBuilder GenerateAllPostsAsString()
+        public StringBuilder GenerateAllPostsAsString(DateTime startDate, DateTime endDate)
         {
             var postsAsString = new StringBuilder();
 
-            foreach (var post in this.mongoDbContext.Posts.FindAll())
+            var findPostsInDateRangeQuery = Query<Post>.Where(post => post.PostOn >= startDate && post.PostOn <= endDate);
+            var posts = this.mongoDbContext.Posts.Find(findPostsInDateRangeQuery);
+
+            foreach (var post in posts)
             {
                 postsAsString.AppendLine(this.GenerateOnePostAsString(post));
             }
@@ -38,7 +42,7 @@
  
         public string GenerateOnePostAsString(Post post)
         {
-            var formattedDate = post.PostOn.ToString("dd.MM.yyyy hh:mm:ss");
+            var formattedDate = post.PostOn.ToLocalTime().ToString("dd.MM.yyyy hh:mm:ss");
             return string.Format("[{0}] {1}: {2}", formattedDate, post.PostedBy, post.Content);
         }
     }

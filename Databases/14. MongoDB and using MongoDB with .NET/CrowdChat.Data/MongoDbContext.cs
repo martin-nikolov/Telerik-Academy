@@ -12,7 +12,7 @@
         private MongoServer mongoServer;
 
         public MongoDbContext()
-            : this(ConnectionStrings.Default.MongoDbLocalServer, ConnectionStrings.Default.MongoDbDefaultDatabase)
+            : this(ConnectionStrings.Default.MongoDbCloudServer, ConnectionStrings.Default.MongoDbDefaultDatabase)
         {
         }
 
@@ -30,11 +30,11 @@
             }
         }
 
-        public MongoCollection<User> Users
+        public MongoCollection<UserSession> Users
         {
             get
             {
-                return this.GetCollection<User>("Users");
+                return this.GetCollection<UserSession>("Users");
             }
         }
 

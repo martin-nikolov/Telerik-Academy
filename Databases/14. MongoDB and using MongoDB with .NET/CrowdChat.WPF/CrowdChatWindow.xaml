@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Icon="Images/mirc.png"
         Title="CrowdChat" 
-        Height="350" 
+        Height="425" 
         Width="525"
         Loaded="OnWindowFormLoaded"
         ResizeMode="NoResize"
@@ -61,5 +61,22 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+
+        <Button Content="Show all posts" 
+                HorizontalAlignment="Left" 
+                Margin="47,313,0,0" 
+                VerticalAlignment="Top"
+                Width="447" 
+                Height="28"
+                Click="OnShowAllPostsButtonClick"/>
+
+        <Button Content="Show posts from current session" 
+                Name="showPostsFromCurrentSessionButton"
+                HorizontalAlignment="Left" 
+                Margin="47,346,0,0" 
+                VerticalAlignment="Top" 
+                Width="447" 
+                Height="28"
+                Click="OnShowAllPostsFromCurrentSessionButtonClick"/>
     </Grid>
 </Window>

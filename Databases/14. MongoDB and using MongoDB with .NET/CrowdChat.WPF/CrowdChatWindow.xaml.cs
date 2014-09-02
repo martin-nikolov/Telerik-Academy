@@ -15,18 +15,13 @@
     public partial class CrowdChatWindow : Window
     {
         private const string GitHubUri = "http://www.github.com/flextry";
-        private Thread UpdatePostsThread;// XXX: bad
+        private Thread updatePostsThread;// XXX: bad
         CrowdChatModule crowdChatModule;
 
         public CrowdChatWindow(UserSession user)
         {
             this.InitializeComponent();
             this.User = user;
-        }
-
-        ~CrowdChatWindow()
-        {
-            this.UpdatePostsThread.Abort();
         }
 
         private UserSession User { get; set; }
@@ -36,7 +31,7 @@
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
-            UpdatePostsThread.Abort();
+            updatePostsThread.Abort();
             App.Current.Shutdown();
         }
 
@@ -71,7 +66,7 @@
 
         private async void UpdatePostsEachMsAsync(int refreshMs = 500)
         {
-            this.UpdatePostsThread = new Thread(() =>
+            this.updatePostsThread = new Thread(() =>
             {
                 while (true)
                 {
@@ -80,7 +75,7 @@
                 }
             });
 
-            this.UpdatePostsThread.Start();
+            this.updatePostsThread.Start();
         }
  
         private async void UpdatePosts()

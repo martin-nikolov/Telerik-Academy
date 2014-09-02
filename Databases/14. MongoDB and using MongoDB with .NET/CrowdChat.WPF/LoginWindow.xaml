@@ -1,0 +1,48 @@
+﻿<Window x:Class="CrowdChat.WPF.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CrowdChat.WPF"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d"
+        Icon="Images/mirc.png"
+        Title="Login"
+        Height="160" 
+        Width="390"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <TextBox Margin="49,28,48,53" 
+                 Name="usernameTextBox"
+                 Focusable="true"
+                 TextWrapping="Wrap" 
+                 Padding="6"
+                 MaxLength="10"
+                 FontFamily="Consolas" 
+                 FontSize="20"/>
+
+        <Button Content="Sign Up"
+                Margin="143,84,142,0" 
+                VerticalAlignment="Top" 
+                Height="26"
+                Click="OnSignUpButtonClick" 
+                IsDefault="True"/>
+        
+        <Button Height="25"
+                Width="25"
+                Focusable="False"
+                ToolTip="Find me at GitHub! - www.github.com/flextry"
+                Margin="341,88,0,0" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Click="OnGitHubButtonClick">
+
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Images/soc_github.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,65 @@
+﻿<Window x:Class="CrowdChat.WPF.CrowdChatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CrowdChat.WPF"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d"
+        Icon="Images/mirc.png"
+        Title="CrowdChat" 
+        Height="350" 
+        Width="525"
+        Loaded="OnWindowFormLoaded"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Button Content="Post" 
+                HorizontalAlignment="Left" 
+                Margin="419,270,0,0" 
+                VerticalAlignment="Top"
+                Width="75" 
+                Height="24" 
+                Click="OnPostButtonClick"
+                IsDefault="True"/>
+
+        <TextBox HorizontalAlignment="Left"
+                 Name="postContent"
+                 MaxLength="35"
+                 Height="24" 
+                 Padding="3"
+                 Margin="47,270,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top"
+                 Width="367"/>
+
+        <TextBox Name="allPostsTextBox"
+                 Focusable="False"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 IsReadOnly="true"
+                 Padding="5"
+                 HorizontalAlignment="Left"
+                 Margin="15,10,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Height="237"
+                 Width="479"/>
+
+        <Button Height="25"
+                Width="25"
+                Focusable="False"
+                ToolTip="Find me at GitHub! - www.github.com/flextry"
+                Margin="15,269,0,0" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Click="OnGitHubButtonClick">
+
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Images/soc_github.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>

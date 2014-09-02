@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CrowdChat.Data" GeneratedClassName="ConnectionStrings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MongoDbCloudServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mongodb://admin:telerik@ds035280.mongolab.com:35280/crowdchat</Value>
+    </Setting>
+    <Setting Name="MongoDbDefaultDatabase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">crowdchat</Value>
+    </Setting>
+    <Setting Name="MongoDbLocalServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mongodb://localhost</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

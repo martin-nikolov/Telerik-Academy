@@ -3,6 +3,7 @@
     using System;
     using System.Linq;
     using System.Text;
+    using System.Threading.Tasks;
     using CrowdChat.Models;
     using MongoDB.Driver.Builders;
 
@@ -15,9 +16,27 @@
             this.mongoDbContext = mongoDbContext;
         }
 
+        private long PostsCountOnLastCheck { get; set; }
+
         public void AddPost(Post post)
         {
             this.mongoDbContext.Posts.Insert(post);
+        }
+
+        public Task<bool> HaveNewPosts()
+        {
+            return Task.Run(() =>
+            {
+                var newPostCount = this.mongoDbContext.Posts.Count();
+
+                var haveNewPosts = newPostCount != this.PostsCountOnLastCheck;
+                if (haveNewPosts)
+                {
+                    this.PostsCountOnLastCheck = newPostCount;
+                }
+
+                return haveNewPosts;
+            });
         }
 
         public StringBuilder GenerateAllPostsAsString(DateTime startDate, DateTime endDate)

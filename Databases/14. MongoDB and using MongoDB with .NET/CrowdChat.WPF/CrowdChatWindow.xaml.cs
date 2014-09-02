@@ -15,7 +15,7 @@
     public partial class CrowdChatWindow : Window
     {
         private const string GitHubUri = "http://www.github.com/flextry";
-        private Thread updatePostsThread;// XXX: bad
+        private Thread updatePostsThread; // XXX: bad
         CrowdChatModule crowdChatModule;
 
         public CrowdChatWindow(UserSession user)
@@ -66,7 +66,7 @@
 
         private async void UpdatePostsEachMsAsync(int refreshMs = 500)
         {
-            this.updatePostsThread = new Thread(() =>
+            this.updatePostsThread = new Thread(async () =>
             {
                 while (true)
                 {
@@ -80,13 +80,15 @@
  
         private async void UpdatePosts()
         {
-            var newPostsAsString = await this.GetPostsAsString(this.GetDateTimeRange());
-
-            if (this.allPostsTextBox.Text != newPostsAsString)
+            var haveNewPosts = await this.crowdChatModule.HaveNewPosts();
+            if (!haveNewPosts)
             {
-                this.allPostsTextBox.Text = newPostsAsString;
-                this.allPostsTextBox.ScrollToEnd();
+                return;
             }
+
+            var newPostsAsString = await this.GetPostsAsString(this.GetDateTimeRange());
+            this.allPostsTextBox.Text = newPostsAsString;
+            this.allPostsTextBox.ScrollToEnd();
         }
 
         private void OnPostButtonClick(object sender, RoutedEventArgs e)

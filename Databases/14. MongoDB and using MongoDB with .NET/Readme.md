@@ -13,3 +13,9 @@
     * History of all posts
   * Logged-in users can post message
   * Create a simple WPF application for the client
+
+## CrowdChat - UI
+
+![screenshot](http://forums.academy.telerik.com/?qa=blob&qa_blobid=17785420198479217572)
+
+![screenshot](http://forums.academy.telerik.com/?qa=blob&qa_blobid=5100374060386906868)

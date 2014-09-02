@@ -31,7 +31,7 @@
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
-            updatePostsThread.Abort();
+            this.updatePostsThread.Abort();
             App.Current.Shutdown();
         }
 
@@ -80,8 +80,13 @@
  
         private async void UpdatePosts()
         {
-            this.allPostsTextBox.Text = await this.GetPostsAsString(this.GetDateTimeRange());
-            this.allPostsTextBox.ScrollToEnd();
+            var newPostsAsString = await this.GetPostsAsString(this.GetDateTimeRange());
+
+            if (this.allPostsTextBox.Text != newPostsAsString)
+            {
+                this.allPostsTextBox.Text = newPostsAsString;
+                this.allPostsTextBox.ScrollToEnd();
+            }
         }
 
         private void OnPostButtonClick(object sender, RoutedEventArgs e)

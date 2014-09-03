@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. PriorityQueue", "01. PriorityQueue\01. PriorityQueue.csproj", "{73A4940B-5A73-4FEF-BE64-B52C89DEEA37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Find product in range", "02. Find product in range\02. Find product in range.csproj", "{C6A666F1-EC6A-4B57-A7D6-B1CEEA3876E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Find a set of words", "03. Find a set of words\03. Find a set of words.csproj", "{813D0A97-0820-4240-A525-8BE6ACAB9151}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedDataStructures.Tests", "AdvancedDataStructures.Tests\AdvancedDataStructures.Tests.csproj", "{83B68023-E7FE-4A3D-818E-FC415FA1268F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{813D0A97-0820-4240-A525-8BE6ACAB9151}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{813D0A97-0820-4240-A525-8BE6ACAB9151}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{813D0A97-0820-4240-A525-8BE6ACAB9151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B68023-E7FE-4A3D-818E-FC415FA1268F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B68023-E7FE-4A3D-818E-FC415FA1268F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B68023-E7FE-4A3D-818E-FC415FA1268F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B68023-E7FE-4A3D-818E-FC415FA1268F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

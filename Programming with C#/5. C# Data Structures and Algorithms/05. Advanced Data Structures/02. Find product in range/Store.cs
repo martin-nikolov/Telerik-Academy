@@ -1,31 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Wintellect.PowerCollections;
-
-class Store
+﻿namespace AdvancedDataStructures
 {
-    private OrderedBag<Product> products = new OrderedBag<Product>();
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Wintellect.PowerCollections;
 
-    public OrderedBag<Product> Products
+    public class Store
     {
-        get { return this.products; }
-        set { this.products = value; }
-    }
+        private OrderedBag<Product> products = new OrderedBag<Product>();
 
-    public void AddProduct(Product product)
-    {
-        this.products.Add(product);
-    }
+        public OrderedBag<Product> Products
+        {
+            get
+            {
+                return this.products;
+            }
+            set
+            {
+                this.products = value;
+            }
+        }
 
-    public void AddProducts(params Product[] products)
-    {
-        this.products.AddMany(products);
-    }
+        public void AddProduct(Product product)
+        {
+            this.products.Add(product);
+        }
+
+        public void AddProducts(params Product[] products)
+        {
+            this.products.AddMany(products);
+        }
     
-    public ICollection<Product> SearchInPriceRange(decimal min, decimal max)
-    {
-        return this.products.Range(new Product(string.Empty, min), true,
-                                 new Product(string.Empty, max), true).Take(20).ToList();
+        public ICollection<Product> SearchInPriceRange(decimal min, decimal max)
+        {
+            return this.products
+                       .Range(new Product(string.Empty, min), true, new Product(string.Empty, max), true)
+                       .Take(20)
+                       .ToList();
+        }
     }
 }

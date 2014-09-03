@@ -5,47 +5,53 @@
  * Hint: you may use OrderedBag<T> and sub-ranges.
  */
 
-using System;
-using System.Diagnostics;
-
-class FindProductInRangeTest
+namespace AdvancedDataStructures
 {
-    static readonly Random rnd = new Random();
-    static readonly Stopwatch sw = new Stopwatch();
+    using System;
+    using System.Diagnostics;
 
-    static void Main()
+    public class FindProductInRangeTest
     {
-        Store store = new Store();
+        private static readonly Random rnd = new Random();
+        private static readonly Stopwatch sw = new Stopwatch();
 
-        Console.Write("Please wait... ");
-
-        sw.Start();
-
-        // 500 000 products
-        for (int i = 0; i < 500000; i++)
+        public static void Main()
         {
-            string name = rnd.Next(int.MaxValue).ToString();
-            decimal price = rnd.Next(20000) / 100;
-            
-            store.AddProduct(new Product(name, price));
+            var store = new Store();
+
+            Console.Write("Please wait... ");
+
+            sw.Start();
+            AddProducts(store); // 500 000 products
+            sw.Stop();
+
+            Console.WriteLine("\rCount: {0} | Elapsed time: {1}", store.Products.Count, sw.Elapsed);
+
+            sw.Restart();
+            SearchInPriceRange(store); // 10 000 price searches
+            sw.Stop();
+
+            Console.WriteLine("\nElapsed time: {0}\n", sw.Elapsed);
         }
 
-        sw.Stop();
-
-        Console.WriteLine("\rCount: {0} | Elapsed time: {1}", store.Products.Count, sw.Elapsed);
-
-        sw.Restart();
-
-        // 10 000 price searches
-        for (int i = 0; i < 10000; i++)
+        private static void AddProducts(Store store, int numOfProductsToAdd = 500000)
         {
-            int min = rnd.Next(200), max = rnd.Next(400, 1000);
-
-            store.SearchInPriceRange(min, max);
+            for (int i = 0; i < numOfProductsToAdd; i++)
+            {
+                string name = rnd.Next(int.MaxValue).ToString();
+                decimal price = rnd.Next(20000) / 100;
+                store.AddProduct(new Product(name, price));
+            }
         }
 
-        sw.Stop();
+        private static void SearchInPriceRange(Store store, int numOfSearches = 10000)
+        {
+            for (int i = 0; i < numOfSearches; i++)
+            {
+                int min = rnd.Next(200), max = rnd.Next(400, 1000);
 
-        Console.WriteLine("\nElapsed time: {0}\n", sw.Elapsed);
+                store.SearchInPriceRange(min, max);
+            }
+        }
     }
 }

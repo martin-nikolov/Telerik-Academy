@@ -7,8 +7,8 @@
     <ProjectGuid>{813D0A97-0820-4240-A525-8BE6ACAB9151}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_03.Find_a_set_of_words</RootNamespace>
-    <AssemblyName>_03.Find_a_set_of_words</AssemblyName>
+    <RootNamespace>AdvancedDataStructures</RootNamespace>
+    <AssemblyName>TrieTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

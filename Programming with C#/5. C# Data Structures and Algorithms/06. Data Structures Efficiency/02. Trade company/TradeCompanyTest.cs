@@ -5,48 +5,53 @@
  * Hint: use OrderedMultiDictionary<K,T> from Wintellect's Power Collections for .NET. 
  */
 
-using System;
-using System.Diagnostics;
-using System.Linq;
-
-class TradeCompanyTest
+namespace DataStructuresEfficiency
 {
-    static readonly Random rnd = new Random();
-    static readonly Stopwatch sw = new Stopwatch();
+    using System;
+    using System.Diagnostics;
+    using System.Linq;
 
-    static void Main()
+    public class TradeCompanyTest
     {
-        Store store = new Store();
+        private static readonly Random rnd = new Random();
+        private static readonly Stopwatch sw = new Stopwatch();
 
-        Console.Write("Please wait... ");
-
-        sw.Start();
-
-        // 500 000 products
-        for (int i = 0; i < 500000; i++)
+        public static void Main()
         {
-            string title = rnd.Next(int.MaxValue).ToString();
-            decimal price = rnd.Next(20000) / 100;
+            var store = new Store();
 
-            store.AddProduct(new Product(title, price));
+            Console.Write("Please wait... ");
+
+            sw.Start();
+            AddProducts(store); // 500 000 products
+            sw.Stop();
+
+            Console.WriteLine("\rAdding products -> Elapsed time: {0}", sw.Elapsed);
+
+            sw.Restart();
+            SearchProductsInPriceRange(store); // 5 000 000 price searches
+            sw.Stop();
+
+            Console.WriteLine("\nSearching products -> Elapsed time: {0}\n", sw.Elapsed);
         }
 
-        sw.Stop();
-
-        Console.WriteLine("\rAdding products -> Elapsed time: {0}", sw.Elapsed);
-
-        sw.Restart();
-
-        // 5 000 000 price searches
-        for (int i = 0; i < 5000000; i++)
+        private static void AddProducts(Store store, int numOfProductsToAdd = 500000)
         {
-            int min = rnd.Next(200), max = rnd.Next(250, 2000);
-
-            store.SearchInPriceRange(min, max);
+            for (int i = 0; i < numOfProductsToAdd; i++)
+            {
+                string title = rnd.Next(int.MaxValue).ToString();
+                decimal price = rnd.Next(20000) / 100;
+                store.AddProduct(new Product(title, price));
+            }
         }
 
-        sw.Stop();
-
-        Console.WriteLine("\nSearching products -> Elapsed time: {0}\n", sw.Elapsed);
+        private static void SearchProductsInPriceRange(Store store, int numOfProductsToSearch = 5000000)
+        {
+            for (int i = 0; i < numOfProductsToSearch; i++)
+            {
+                int min = rnd.Next(200), max = rnd.Next(250, 2000);
+                store.SearchInPriceRange(min, max);
+            }
+        }
     }
 }

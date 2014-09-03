@@ -1,26 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Wintellect.PowerCollections;
-
-class Store
+﻿namespace DataStructuresEfficiency
 {
-    private OrderedMultiDictionary<decimal, Product> products =
-        new OrderedMultiDictionary<decimal, Product>(true);
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Wintellect.PowerCollections;
 
-    public OrderedMultiDictionary<decimal, Product> Products
+    public class Store
     {
-        get { return this.products; }
-        set { this.products = value; }
-    }
+        private OrderedMultiDictionary<decimal, Product> products =
+            new OrderedMultiDictionary<decimal, Product>(true);
 
-    public void AddProduct(Product product)
-    {
-        this.products[product.Price].Add(product);
-    }
+        public OrderedMultiDictionary<decimal, Product> Products
+        {
+            get
+            {
+                return this.products;
+            }
+            set
+            {
+                this.products = value;
+            }
+        }
 
-    public ICollection<Product> SearchInPriceRange(decimal from, decimal to)
-    {
-        return this.products.Range(from, true, to, true).Values;
+        public void AddProduct(Product product)
+        {
+            this.products[product.Price].Add(product);
+        }
+
+        public ICollection<Product> SearchInPriceRange(decimal from, decimal to)
+        {
+            return this.products.Range(from, true, to, true).Values;
+        }
     }
 }

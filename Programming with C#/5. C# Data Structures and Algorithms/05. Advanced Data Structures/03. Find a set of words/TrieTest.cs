@@ -5,77 +5,88 @@
  * Hint: you may find a C# trie in Internet.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using rmandvikar.Trie;
-
-class TrieTest
+namespace AdvancedDataStructures
 {
-    static readonly Stopwatch sw = new Stopwatch();
-    static readonly Random rnd = new Random();
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics;
+    using rmandvikar.Trie;
 
-    static void Main()
+    public class TrieTest
     {
-        var trie = TrieFactory.GetTrie();
+        private static readonly Stopwatch sw = new Stopwatch();
+        private static readonly Random rnd = new Random();
 
-        var words = GenerateRandomWords(1000000);
-        var uniqueWords = new HashSet<string>(words);
+        public static void Main()
+        {
+            var trie = TrieFactory.GetTrie();
 
-        AddWordsToTrie(words, trie);
-        GetCountOfAllUniqueWords(uniqueWords, trie);
-    }
+            var words = GenerateRandomWords(1000000);
+            var uniqueWords = new HashSet<string>(words);
 
-    static ICollection<string> GenerateRandomWords(int count)
-    {
-        Console.Write("Generation random words... ");
-        sw.Start();
+            AddWordsToTrie(words, trie);
+            GetCountOfAllUniqueWords(uniqueWords, trie);
+        }
 
-        var words = new List<string>(count);
+        private static ICollection<string> GenerateRandomWords(int count)
+        {
+            Console.Write("Generation random words... ");
+            sw.Start();
 
-        for (int i = 0; i < count; i++)
-            words.Add(GetRandomWord());
+            var words = new List<string>(count);
 
-        sw.Stop();
-        Console.WriteLine("\rGeneration random words -> Total words: {0} | Elapsed time: {1}\n", words.Count, sw.Elapsed);
-        sw.Reset();
+            for (int i = 0; i < count; i++)
+            {
+                words.Add(GetRandomWord());
+            }
 
-        return words;
-    }
+            sw.Stop();
+            Console.WriteLine("\rGeneration random words -> Total words: {0} | Elapsed time: {1}\n", words.Count, sw.Elapsed);
+            sw.Reset();
 
-    static string GetRandomWord()
-    {
-        var newWord = new char[rnd.Next(3, 7)];
+            return words;
+        }
 
-        for (int i = 0; i < newWord.Length; i++)
-            newWord[i] = ((char)rnd.Next(97, 122));
+        private static string GetRandomWord()
+        {
+            var newWord = new char[rnd.Next(3, 7)];
 
-        return new string(newWord);
-    }
+            for (int i = 0; i < newWord.Length; i++)
+            {
+                newWord[i] = ((char)rnd.Next(97, 122));
+            }
 
-    static void AddWordsToTrie(ICollection<string> words, ITrie trie)
-    {
-        Console.Write("Adding words to trie... ");
-        sw.Start();
+            return new string(newWord);
+        }
 
-        foreach (var word in words)
-            trie.AddWord(word);
+        private static void AddWordsToTrie(ICollection<string> words, ITrie trie)
+        {
+            Console.Write("Adding words to trie... ");
+            sw.Start();
 
-        sw.Stop();
-        Console.WriteLine("\rAdding words to trie -> Elapsed time: {1}\n", words.Count, sw.Elapsed);
-        sw.Reset();
-    }
+            foreach (var word in words)
+            {
+                trie.AddWord(word);
+            }
 
-    static void GetCountOfAllUniqueWords(ICollection<string> wordsForSearcing, ITrie trie)
-    {
-        Console.Write("Searching words... ");
-        sw.Start();
+            sw.Stop();
+            Console.WriteLine("\rAdding words to trie -> Elapsed time: {1}\n", words.Count, sw.Elapsed);
+            sw.Reset();
+        }
 
-        foreach (var word in wordsForSearcing)
-            trie.WordCount(word); // return the number of words
+        private static void GetCountOfAllUniqueWords(ICollection<string> wordsForSearcing, ITrie trie)
+        {
+            Console.Write("Searching words... ");
+            sw.Start();
 
-        sw.Stop();
-        Console.WriteLine("\rSearching words -> Unique words: {0} | Elapsed time: {1}\n", wordsForSearcing.Count, sw.Elapsed);
-        sw.Reset();
+            foreach (var word in wordsForSearcing)
+            {
+                trie.WordCount(word); // return the number of words    
+            }
+
+            sw.Stop();
+            Console.WriteLine("\rSearching words -> Unique words: {0} | Elapsed time: {1}\n", wordsForSearcing.Count, sw.Elapsed);
+            sw.Reset();
+        }
     }
 }

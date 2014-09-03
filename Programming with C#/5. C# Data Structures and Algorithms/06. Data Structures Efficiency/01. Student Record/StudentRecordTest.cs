@@ -18,59 +18,65 @@
  *    SQL: Ivan Kolev, Stefka Nikolova
  */
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using Wintellect.PowerCollections;
-
-static class StudentRecordTest
+namespace DataStructuresEfficiency
 {
-    static readonly SortedDictionary<Course, OrderedBag<Student>> studentCourses =
-        new SortedDictionary<Course, OrderedBag<Student>>();
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using Wintellect.PowerCollections;
 
-    static void Main()
+    public static class StudentRecordTest
     {
-        ParseInput();
+        static readonly SortedDictionary<Course, OrderedBag<Student>> studentCourses =
+            new SortedDictionary<Course, OrderedBag<Student>>();
 
-        PrintStudentCourses();
-    }
-  
-    static void ParseInput()
-    {
-        using (var reader = new StreamReader("../../students.txt"))
+        public static void Main()
         {
-            while (!reader.EndOfStream)
+            ParseInput();
+            PrintStudentCourses();
+        }
+  
+        private static void ParseInput()
+        {
+            using (var reader = new StreamReader("../../students.txt"))
             {
-                var line = reader.ReadLine();
-                var studentInfo = line.Split(new char[] { ' ', '|' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var studentInfo = line.Split(new char[] { ' ', '|' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
 
-                studentCourses.AddOrCreate(studentInfo[2], studentInfo[0], studentInfo[1]);
+                    studentCourses.AddOrCreate(studentInfo[2], studentInfo[0], studentInfo[1]);
+                }
             }
         }
-    }
 
-    static void AddOrCreate(this SortedDictionary<Course, OrderedBag<Student>> dictionary, string courseName, params string[] studentNames)
-    {
-        var course = new Course(courseName);
-        var student = new Student(studentNames[0], studentNames[1]);
-
-        if (!dictionary.ContainsKey(course))
-            dictionary[course] = new OrderedBag<Student>();
-
-        dictionary[course].Add(student);
-    }
-
-    static void PrintStudentCourses()
-    {
-        foreach (var course in studentCourses)
+        private static void AddOrCreate(this SortedDictionary<Course, OrderedBag<Student>> dictionary, string courseName, params string[] studentNames)
         {
-            Console.WriteLine(course.Key);
+            var course = new Course(courseName);
+            var student = new Student(studentNames[0], studentNames[1]);
 
-            foreach (var student in course.Value)
-                Console.WriteLine("   - {0}", student);
+            if (!dictionary.ContainsKey(course))
+            {
+                dictionary[course] = new OrderedBag<Student>();
+            }
 
-            Console.WriteLine();
+            dictionary[course].Add(student);
+        }
+
+        private static void PrintStudentCourses()
+        {
+            foreach (var course in studentCourses)
+            {
+                Console.WriteLine(course.Key);
+
+                foreach (var student in course.Value)
+                {
+                    Console.WriteLine("   - {0}", student);
+                }
+
+                Console.WriteLine();
+            }
         }
     }
 }

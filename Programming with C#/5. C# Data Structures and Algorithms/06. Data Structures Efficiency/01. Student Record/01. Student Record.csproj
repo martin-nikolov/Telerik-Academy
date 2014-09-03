@@ -7,8 +7,8 @@
     <ProjectGuid>{43D07A1B-CAD6-43D5-ABEF-82E7BA3B5CA1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_01.Student_Record</RootNamespace>
-    <AssemblyName>_01.Student_Record</AssemblyName>
+    <RootNamespace>DataStructuresEfficiency</RootNamespace>
+    <AssemblyName>StudentRecord</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

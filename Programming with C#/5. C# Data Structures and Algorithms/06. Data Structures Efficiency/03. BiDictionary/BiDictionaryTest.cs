@@ -2,9 +2,9 @@
 {
     using System;
 
-    class BiDictionaryTest
+    public class BiDictionaryTest
     {
-        static void Main()
+        public static void Main()
         {
             var biDictionary = new BiDictionary<int, string, string>(true);
 
@@ -63,7 +63,7 @@
             PrintAllValues(biDictionary);
         }
   
-        static void PrintAllValues<K1, K2, V>(IBiDictionary<K1, K2, V> biDictionary)
+        public static void PrintAllValues<K1, K2, V>(IBiDictionary<K1, K2, V> biDictionary)
         {
             Console.WriteLine("\nCount: " + biDictionary.Count);
 

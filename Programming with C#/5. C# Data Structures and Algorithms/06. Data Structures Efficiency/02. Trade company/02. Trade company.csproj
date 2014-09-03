@@ -7,8 +7,8 @@
     <ProjectGuid>{44019A39-072C-49B3-93FD-F0223E82D1A2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02.Trade_company</RootNamespace>
-    <AssemblyName>_02.Trade_company</AssemblyName>
+    <RootNamespace>DataStructuresEfficiency</RootNamespace>
+    <AssemblyName>TradeCompany</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

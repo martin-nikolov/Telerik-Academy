@@ -7,8 +7,8 @@
     <ProjectGuid>{C6A666F1-EC6A-4B57-A7D6-B1CEEA3876E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02.Find_product_in_range</RootNamespace>
-    <AssemblyName>_02.Find_product_in_range</AssemblyName>
+    <RootNamespace>AdvancedDataStructures</RootNamespace>
+    <AssemblyName>FindProductInRangeTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

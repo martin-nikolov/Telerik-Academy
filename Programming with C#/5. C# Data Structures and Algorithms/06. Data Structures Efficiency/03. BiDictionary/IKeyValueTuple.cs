@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    interface IKeyValueTuple<K1, K2, V> : IEquatable<IKeyValueTuple<K1, K2, V>>
+    public interface IKeyValueTuple<K1, K2, V> : IEquatable<IKeyValueTuple<K1, K2, V>>
     {
         K1 Key1 { get; }
 

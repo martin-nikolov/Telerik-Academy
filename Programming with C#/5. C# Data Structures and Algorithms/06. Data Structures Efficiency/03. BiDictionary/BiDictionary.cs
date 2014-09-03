@@ -20,12 +20,18 @@
 
         public ICollection<IKeyValueTuple<K1, K2, V>> Values
         {
-            get { return this.byKey1Key2.Values.ToArray(); }
+            get
+            {
+                return this.byKey1Key2.Values.ToArray();
+            }
         }
 
         public int Count
         {
-            get { return this.byKey1Key2.KeyValuePairs.Count; }
+            get
+            {
+                return this.byKey1Key2.KeyValuePairs.Count;
+            }
         }
 
         public void Add(K1 key1, K2 key2, V value)

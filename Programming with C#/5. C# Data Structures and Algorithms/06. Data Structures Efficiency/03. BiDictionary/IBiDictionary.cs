@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    interface IBiDictionary<K1, K2, V>
+    public interface IBiDictionary<K1, K2, V>
     {
         int Count { get; }
 

@@ -3,9 +3,9 @@
     using System;
     using System.Linq;
 
-    partial class BiDictionary<K1, K2, V>
+    public partial class BiDictionary<K1, K2, V>
     {
-        internal class KeyValueTuple : IKeyValueTuple<K1, K2, V>
+        public class KeyValueTuple : IKeyValueTuple<K1, K2, V>
         {
             public KeyValueTuple(K1 key1, K2 key2, V value)
             {

@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ATM.Data" GeneratedClassName="ConnectionStrings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MSQLConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=ATM;Integrated Security=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

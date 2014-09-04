@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.Models", "ATM.Models\ATM.Models.csproj", "{F46CA499-0875-4BDF-A44E-834072D67999}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.Data", "ATM.Data\ATM.Data.csproj", "{465DD023-FC30-4671-84ED-9AD4C98E310B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.ConsoleClient", "ATM.ConsoleClient\ATM.ConsoleClient.csproj", "{E8ECA5BD-BC1E-4407-83D3-C76F529F0CF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.UnitTests", "ATM.UnitTests\ATM.UnitTests.csproj", "{64B51C65-056E-4628-A3E0-8EC15E4C0656}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F46CA499-0875-4BDF-A44E-834072D67999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46CA499-0875-4BDF-A44E-834072D67999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46CA499-0875-4BDF-A44E-834072D67999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46CA499-0875-4BDF-A44E-834072D67999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{465DD023-FC30-4671-84ED-9AD4C98E310B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{465DD023-FC30-4671-84ED-9AD4C98E310B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{465DD023-FC30-4671-84ED-9AD4C98E310B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{465DD023-FC30-4671-84ED-9AD4C98E310B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8ECA5BD-BC1E-4407-83D3-C76F529F0CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8ECA5BD-BC1E-4407-83D3-C76F529F0CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8ECA5BD-BC1E-4407-83D3-C76F529F0CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8ECA5BD-BC1E-4407-83D3-C76F529F0CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64B51C65-056E-4628-A3E0-8EC15E4C0656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B51C65-056E-4628-A3E0-8EC15E4C0656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B51C65-056E-4628-A3E0-8EC15E4C0656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B51C65-056E-4628-A3E0-8EC15E4C0656}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

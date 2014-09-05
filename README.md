@@ -223,7 +223,7 @@
 * [Teamwork - Console-based game](https://github.com/Hangman-3/High-Quality-Code-Teamwork) - May - July, 2014 (Course - C# High-Quality Code)
 
 ## Web-Development
-* [Teamwork - JavaScript-baded game](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - June, 2014 (Course - JavaScript UI & DOM) 
+* [Teamwork - JavaScript-based game](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - June, 2014 (Course - JavaScript UI & DOM) 
 * [RockBands - RESTful Responsive Single-Page Application](https://github.com/flextry/RockBands) ([Demo](http://nikolov.cloudvps.bg/rockbands/)) - August, 2014
 
 ## Software Technologies

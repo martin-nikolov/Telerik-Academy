@@ -221,14 +221,14 @@
 * [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - September, 2013 (Course - C# Part 2)
 * [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - December, 2013 (Course - C# OOP) 
 * [Teamwork - Console-based game](https://github.com/Hangman-3/High-Quality-Code-Teamwork) - May - July, 2014 (Course - C# High-Quality Code)
-* [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - September, 2014 (Course - Databases) - WPF + async tasks + MongoDb 
 
 ## Web-Development
-* [Teamwork - Client-side JavaScript application](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - June, 2014 (Course - JavaScript UI & DOM) 
+* [Teamwork - JavaScript-baded game](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - June, 2014 (Course - JavaScript UI & DOM) 
 * [RockBands - RESTful Responsive Single-Page Application](https://github.com/flextry/RockBands) ([Demo](http://nikolov.cloudvps.bg/rockbands/)) - August, 2014
 
 ## Software Technologies
 * [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - August - September, 2014 
+* [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - September, 2014 (Course - Databases) - WPF + async + MongoDb 
 
 ## Other Simple & Interesting Tasks
 * [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) ([Demo](http://nikolov.cloudvps.bg/Windows%208%20Calculator/)) - HTML / CSS

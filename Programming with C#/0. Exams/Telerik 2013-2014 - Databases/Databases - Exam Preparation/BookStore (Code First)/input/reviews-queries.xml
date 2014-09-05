@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<review-queries>
+  <query type="by-period">
+    <start-date>20-Jan-2012</start-date>
+    <end-date>31-Dec-2013</end-date>
+  </query>
+  <query type="by-author">
+    <author-name>Sudheer Kumar</author-name>
+  </query>
+  <query type="by-period">
+    <start-date>11-May-2013</start-date>
+    <end-date>20-Nov-2010</end-date>
+  </query>
+</review-queries>

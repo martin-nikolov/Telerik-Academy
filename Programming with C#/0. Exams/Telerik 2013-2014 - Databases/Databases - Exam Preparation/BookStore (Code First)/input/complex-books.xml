@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<catalog>
+  <book>
+    <title>SQL Server 2008 Query Performance Tuning Distilled (Expert's Voice in SQL Server)</title>
+    <authors>
+      <author>Sajal Dam</author>
+      <author>Grant Fritchey</author>
+    </authors>
+    <web-site>http://www.amazon.com/SQL-Server-Performance-Tuning/dp/1430219025</web-site>
+    <reviews>
+      <review author="Sudheer Kumar" date="17-Jul-2013">
+I will suggest this book for DBAs and SQL Programmers who want to know the theories behind Index and Statistics, Blocking and Deadlocking + Fragmentation.
+      </review>
+      <review date="11-Aug-2003">Nice book about SQL Server.</review>
+      <review author="Lefteris Paparakis" date="30-Jan-2013">
+Excellent material, a thorough analysis on MS SQL performance optimization. Book chapters are well structured with lots of examples. I enjoyed reading it a couple of times!
+      </review>
+    </reviews>
+    <isbn>9781430219026</isbn>
+    <price>35.03</price>
+  </book>
+  <book>
+    <authors>
+      <author>Ivan Vazov</author>
+    </authors>
+    <title>Under the Yoke</title>
+    <isbn>9789549403015</isbn>
+    <price>49.95</price>
+  </book>
+  <book>
+    <web-site>http://www.w3schools.com/sql/</web-site>
+    <title>SQL Tutorial</title>
+    <reviews>
+      <review>Easy to understand tutorial. Thank you W3 Schools!</review>
+      <review date="22-Jan-2012">Low-quality, don’t read this</review>
+    </reviews>
+  </book>
+  <book>
+    <title>XML: A Deep Understanding</title>
+    <authors>
+      <author>John Shirrell</author>
+    </authors>
+    <web-site>http://www.xmlbook.info</web-site>
+    <reviews>
+      <review date="3-Nov-2011">Free e-book on XML and other XML standards</review>
+      <review>Outdated. Written in 1999, useless today…</review>
+      <review>Better learn XML at W3 Schools: http://www.w3schools.com/xml/</review>
+    </reviews>
+  </book>
+</catalog>

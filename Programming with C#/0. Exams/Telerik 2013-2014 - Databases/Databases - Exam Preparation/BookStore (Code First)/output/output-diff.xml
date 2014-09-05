@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<search-results>
+  <result-set>
+    <review>
+      <date>22-Jan-2012</date>
+      <content>Low-quality, don’t read this</content>
+      <book>
+        <title>SQL Tutorial</title>
+        <url>http://www.w3schools.com/sql/</url>
+      </book>
+    </review>
+    <review>
+      <date>30-Jan-2013</date>
+      <content>Excellent material, a thorough analysis on MS SQL performance optimization. Book chapters are well structured with lots of examples. I enjoyed reading it a couple of times!</content>
+      <book>
+        <title>SQL Server 2008 Query Performance Tuning Distilled (Expert's Voice in SQL Server)</title>
+        <authors>Grant Fritchey, Sajal Dam</authors>
+        <isbn>9781430219026</isbn>
+        <url>http://www.amazon.com/SQL-Server-Performance-Tuning/dp/1430219025</url>
+      </book>
+    </review>
+    <review>
+      <date>17-Jul-2013</date>
+      <content>I will suggest this book for DBAs and SQL Programmers who want to know the theories behind Index and Statistics, Blocking and Deadlocking + Fragmentation.</content>
+      <book>
+        <title>SQL Server 2008 Query Performance Tuning Distilled (Expert's Voice in SQL Server)</title>
+        <authors>Grant Fritchey, Sajal Dam</authors>
+        <isbn>9781430219026</isbn>
+        <url>http://www.amazon.com/SQL-Server-Performance-Tuning/dp/1430219025</url>
+      </book>
+    </review>
+  </result-set>
+  <result-set>
+    <review>
+      <date>17-Jul-2013</date>
+      <content>I will suggest this book for DBAs and SQL Programmers who want to know the theories behind Index and Statistics, Blocking and Deadlocking + Fragmentation.</content>
+      <book>
+        <title>SQL Server 2008 Query Performance Tuning Distilled (Expert's Voice in SQL Server)</title>
+        <authors>Grant Fritchey, Sajal Dam</authors>
+        <isbn>9781430219026</isbn>
+        <url>http://www.amazon.com/SQL-Server-Performance-Tuning/dp/1430219025</url>
+      </book>
+    </review>
+  </result-set>
+  <result-set />
+</search-results>

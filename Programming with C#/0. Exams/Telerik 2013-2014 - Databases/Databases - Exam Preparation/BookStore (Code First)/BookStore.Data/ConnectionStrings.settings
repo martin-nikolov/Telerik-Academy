@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BookStore.Data" GeneratedClassName="ConnectionStrings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MSSqlConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=BookStore;Integrated Security=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

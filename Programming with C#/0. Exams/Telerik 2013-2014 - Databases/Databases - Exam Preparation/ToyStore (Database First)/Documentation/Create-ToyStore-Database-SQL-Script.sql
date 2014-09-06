@@ -74,7 +74,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[AgeRanges](
-    [AgeRangeId] [int] NOT NULL,
+    [AgeRangeId] [int] IDENTITY(1,1) NOT NULL,
     [MinAge] [int] NOT NULL,
     [MaxAge] [int] NULL,
  CONSTRAINT [PK_AgeRanges] PRIMARY KEY CLUSTERED 
@@ -89,9 +89,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Categories](
-    [CategoryId] [int] NOT NULL,
+    [CategoryId] [int] IDENTITY(1,1) NOT NULL,
     [Name] [nvarchar](50) NOT NULL,
- CONSTRAINT [PK_Categories] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Categories_1] PRIMARY KEY CLUSTERED 
 (
     [CategoryId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
@@ -103,7 +103,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Manufacturers](
-    [ManufacturerId] [int] NOT NULL,
+    [ManufacturerId] [int] IDENTITY(1,1) NOT NULL,
     [Name] [nvarchar](50) NOT NULL,
     [Country] [nvarchar](50) NOT NULL,
  CONSTRAINT [PK_Manufacturers] PRIMARY KEY CLUSTERED 
@@ -122,7 +122,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Toys](
-    [ToyId] [int] NOT NULL,
+    [ToyId] [int] IDENTITY(1,1) NOT NULL,
     [Name] [nvarchar](50) NOT NULL,
     [Type] [nvarchar](50) NULL,
     [ManufacturerId] [int] NOT NULL,
@@ -142,7 +142,12 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[ToysCategories](
     [CategoryId] [int] NOT NULL,
-    [ToyId] [int] NOT NULL
+    [ToyId] [int] NOT NULL,
+ CONSTRAINT [PK_ToysCategories] PRIMARY KEY CLUSTERED 
+(
+    [CategoryId] ASC,
+    [ToyId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
@@ -156,10 +161,10 @@ REFERENCES [dbo].[Manufacturers] ([ManufacturerId])
 GO
 ALTER TABLE [dbo].[Toys] CHECK CONSTRAINT [FK_Toys_Manufacturers]
 GO
-ALTER TABLE [dbo].[ToysCategories]  WITH CHECK ADD  CONSTRAINT [FK_ToysCategories_Categories] FOREIGN KEY([CategoryId])
+ALTER TABLE [dbo].[ToysCategories]  WITH CHECK ADD  CONSTRAINT [FK_ToysCategories_Categories1] FOREIGN KEY([CategoryId])
 REFERENCES [dbo].[Categories] ([CategoryId])
 GO
-ALTER TABLE [dbo].[ToysCategories] CHECK CONSTRAINT [FK_ToysCategories_Categories]
+ALTER TABLE [dbo].[ToysCategories] CHECK CONSTRAINT [FK_ToysCategories_Categories1]
 GO
 ALTER TABLE [dbo].[ToysCategories]  WITH CHECK ADD  CONSTRAINT [FK_ToysCategories_Toys] FOREIGN KEY([ToyId])
 REFERENCES [dbo].[Toys] ([ToyId])

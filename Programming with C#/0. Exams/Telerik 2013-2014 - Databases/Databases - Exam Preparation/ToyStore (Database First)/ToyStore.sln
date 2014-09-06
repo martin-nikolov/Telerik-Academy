@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyStore.Data", "ToyStore.Data\ToyStore.Data.csproj", "{34A5D524-08D7-453F-A3A6-C7920E2CC338}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyStore.ConsoleClient", "ToyStore.ConsoleClient\ToyStore.ConsoleClient.csproj", "{B4C648FA-5D56-4527-9043-07A58CA1694A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyStore.Common", "ToyStore.Common\ToyStore.Common.csproj", "{3DF5DDC3-C84D-4802-8C18-6BF16192D2B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyStore.DataGenerators", "ToyStore.DataGenerators\ToyStore.DataGenerators.csproj", "{43F8FC70-8927-4DCB-81BF-EFD726C7516A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyStore.DatabaseSeeder", "ToyStore.DatabaseSeeder\ToyStore.DatabaseSeeder.csproj", "{12E18AFD-DABE-40AA-A1BA-2927EFEFB457}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34A5D524-08D7-453F-A3A6-C7920E2CC338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A5D524-08D7-453F-A3A6-C7920E2CC338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A5D524-08D7-453F-A3A6-C7920E2CC338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A5D524-08D7-453F-A3A6-C7920E2CC338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4C648FA-5D56-4527-9043-07A58CA1694A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C648FA-5D56-4527-9043-07A58CA1694A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4C648FA-5D56-4527-9043-07A58CA1694A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4C648FA-5D56-4527-9043-07A58CA1694A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF5DDC3-C84D-4802-8C18-6BF16192D2B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF5DDC3-C84D-4802-8C18-6BF16192D2B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF5DDC3-C84D-4802-8C18-6BF16192D2B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF5DDC3-C84D-4802-8C18-6BF16192D2B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F8FC70-8927-4DCB-81BF-EFD726C7516A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F8FC70-8927-4DCB-81BF-EFD726C7516A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F8FC70-8927-4DCB-81BF-EFD726C7516A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F8FC70-8927-4DCB-81BF-EFD726C7516A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E18AFD-DABE-40AA-A1BA-2927EFEFB457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E18AFD-DABE-40AA-A1BA-2927EFEFB457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E18AFD-DABE-40AA-A1BA-2927EFEFB457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E18AFD-DABE-40AA-A1BA-2927EFEFB457}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

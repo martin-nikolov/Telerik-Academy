@@ -12,7 +12,7 @@
         public const string Digits = "1234567890";
 
         /// <summary>
-        /// Represent all small latin letters - ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        /// Represent all small latin letters - abcdefghijklmnopqrstuvwxyz
         /// </summary>
         public const string SmallLetters = "abcdefghijklmnopqrstuvwxyz";
 

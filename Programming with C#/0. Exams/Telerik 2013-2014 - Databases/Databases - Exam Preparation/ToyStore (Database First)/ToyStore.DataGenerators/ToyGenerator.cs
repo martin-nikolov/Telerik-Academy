@@ -28,7 +28,7 @@
                 {
                     Name = RandomDataGenerator.Instance.GetRandomString(MinLength, MaxLength),
                     Type = this.GetRandomStringOrNull(MinLength, MaxLength),
-                    Price = (decimal)Math.Round(RandomDataGenerator.Instance.GetRandomDouble() * 100, 2),
+                    Price = (decimal)Math.Round(RandomDataGenerator.Instance.GetRandomDouble() * 1000, 2),
                     Color = RandomDataGenerator.Instance.GetRandomString(MinLength, MaxLength),
                     AgeRangeId = this.GetRandomAgeRangeIdFromDatabase(),
                     ManufacturerId = this.GetRandomManufacturerIdFromDatabase(),

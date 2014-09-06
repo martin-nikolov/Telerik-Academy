@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalog>
+  <albums>
+    <album>
+      <name>Razamanaz</name>
+      <author>Nazareth</author>
+      <year>1973</year>
+      <price>14.99$</price>
+      <artists>
+        <artist>Dan McCafferty</artist>
+        <artist>John Locke</artist>
+        <artist>Billy Rankin</artist>
+        <artist>Manny Charlton</artist>
+      </artists>
+      <songs>
+        <song>
+          <title>Bad Bad Boy</title>
+          <duration>4:00</duration>
+        </song>
+        <song>
+          <title>Sold My Soul</title>
+          <duration>6:30</duration>
+        </song>
+        <song>
+          <title>Night Woman</title>
+          <duration>5:00</duration>
+        </song>
+      </songs>
+    </album>
+    <album>
+      <name>Red Album</name>
+      <author>The Beatles</author>
+      <year>1973</year>
+      <price>24.99$</price>
+      <artists>
+        <artist>John Lennon</artist>
+        <artist>Paul McCartney</artist>
+        <artist>George Harrison</artist>
+      </artists>
+      <songs>
+        <song>
+          <title>All Too Well</title>
+          <duration>4:00</duration>
+        </song>
+        <song>
+          <title>I Almost Do</title>
+          <duration>6:30</duration>
+        </song>
+        <song>
+          <title>The Moment I Knew</title>
+          <duration>5:00</duration>
+        </song>
+      </songs>
+    </album>
+    <album>
+      <name>Past Masters</name>
+      <author>The Beatles</author>
+      <year>2009</year>
+      <price>19.99$</price>
+      <artists>
+        <artist>John Lennon</artist>
+        <artist>Paul McCartney</artist>
+        <artist>George Harrison</artist>
+        <artist>Ringo Starr</artist>
+      </artists>
+      <songs>
+        <song>
+          <title>I Feel Fine</title>
+          <duration>4:00</duration>
+        </song>
+        <song>
+          <title>Bad Boy</title>
+          <duration>6:30</duration>
+        </song>
+        <song>
+          <title>I'm Down</title>
+          <duration>5:00</duration>
+        </song>
+      </songs>
+    </album>
+    <album>
+      <name>High Voltage</name>
+      <author>AC/DC</author>
+      <year>1975</year>
+      <price>29.99$</price>
+      <artists>
+        <artist>Brian Johnson</artist>
+        <artist>Angus Young</artist>
+        <artist>Cliff Williams</artist>
+        <artist>Phil Rudd</artist>
+      </artists>
+      <songs>
+        <song>
+          <title>Little Lover</title>
+          <duration>5:00</duration>
+        </song>
+        <song>
+          <title>Stick Around</title>
+          <duration>4:30</duration>
+        </song>
+        <song>
+          <title>You Ain't Got a Hold on Me</title>
+          <duration>7:00</duration>
+        </song>
+        <song>
+          <title>Show Business</title>
+          <duration>7:00</duration>
+        </song>
+      </songs>
+    </album>
+  </albums>
+</catalog>

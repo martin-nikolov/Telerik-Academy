@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<students xmlns:students="urn:telerikacademy.com:warriors">
+  <student>
+    <first-name>John</first-name>
+    <last-name>Snow</last-name>
+    <sex>Male</sex>
+    <birthdate>23/05/1988</birthdate>
+    <phone>+35984569878</phone>
+    <email>game-of-thrones@hit.com</email>
+    <course>Magic Stuff</course>
+    <specialty>Orc</specialty>
+    <faculty-number>987654321</faculty-number>
+    <taken-exams>
+      <exam>
+        <name>Kill Joffrey Baratheon</name>
+        <tutor>Bastard Stark</tutor>
+        <score>6+</score>
+      </exam>
+    </taken-exams>
+  </student>
+
+  <student>
+    <first-name>Joffrey</first-name>
+    <last-name>Baratheon</last-name>
+    <sex>Female</sex>
+    <birthdate>31/12/2012</birthdate>
+    <phone>02/253545</phone>
+    <email>joff-bar@mail.com</email>
+    <course>Mega maths</course>
+    <specialty>Math</specialty>
+    <faculty-number>123456789</faculty-number>
+    <taken-exams>
+      <exam>
+        <name>Math</name>
+        <tutor>Tyrion</tutor>
+        <score>2</score>
+      </exam>
+      <exam>
+        <name>Geography</name>
+        <tutor>Tyrion</tutor>
+        <score>2</score>
+      </exam>
+    </taken-exams>
+  </student>
+</students>

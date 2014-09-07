@@ -6,46 +6,48 @@
  * (hi hi), (hi a), (hi b), (a hi), (a a), (a b), (b hi), (b a), (b b)
  */
 
-using System;
-using System.Linq;
-
-class VariationsWithReps
+namespace Algorithms
 {
-    static readonly string[] elements = { "hi", "a", "b" };
-    static int[] variations;
+    using System;
 
-    static int N;
-
-    const int K = 2;
-
-    static void Main()
+    public class VariationsWithReps
     {
-        N = elements.Length;
-        variations = new int[N];
+        private static readonly string[] elements = { "hi", "a", "b" };
+        private static int[] variations;
+        private static int N;
+        private const int K = 2;
 
-        Variations(0);
-    }
-
-    static void Variations(int index)
-    {
-        if (index >= K)
+        public static void Main()
         {
-            Print();
-            return;
+            N = elements.Length;
+            variations = new int[N];
+
+            Variations(0);
         }
 
-        for (int i = 0; i < N; i++)
+        private static void Variations(int depth)
         {
-            variations[index] = i;
-            Variations(index + 1);
+            if (depth >= K)
+            {
+                Print();
+                return;
+            }
+
+            for (int i = 0; i < N; i++)
+            {
+                variations[depth] = i;
+                Variations(depth + 1);
+            }
         }
-    }
 
-    static void Print()
-    {
-        for (int i = 0; i < K; i++)
-            Console.Write(elements[variations[i]] + " ");
+        private static void Print()
+        {
+            for (int i = 0; i < K; i++)
+            {
+                Console.Write(elements[variations[i]] + " ");
+            }
 
-        Console.WriteLine();
+            Console.WriteLine();
+        }
     }
 }

@@ -7,8 +7,8 @@
     <ProjectGuid>{B65CF943-779D-4436-A894-EED6BC321AAC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_04.Permutations</RootNamespace>
-    <AssemblyName>_04.Permutations</AssemblyName>
+    <RootNamespace>Algorithms</RootNamespace>
+    <AssemblyName>Permutations</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

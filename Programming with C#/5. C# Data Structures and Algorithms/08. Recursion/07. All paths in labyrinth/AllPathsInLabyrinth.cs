@@ -3,74 +3,76 @@
  * Write a recursive program for finding all paths between two cells in the matrix.
  */
 
-using System;
-using System.Linq;
-
-class AllPathsInLabyrinth
+namespace Algorithms
 {
-    static readonly char[,] labyrinth =
+    using System;
+
+    public class AllPathsInLabyrinth
     {
-        { ' ', ' ', ' ', '*', ' ', ' ', ' ' },
-        { '*', '*', ' ', '*', ' ', '*', ' ' },
-        { ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-        { ' ', '*', '*', '*', '*', '*', ' ' },
-        { ' ', ' ', ' ', ' ', ' ', ' ', 'e' },
-    };
-
-    static readonly char[] directions = new char[labyrinth.GetLongLength(0) * labyrinth.GetLongLength(1)];
-
-    static int pathsCount = 0;
-
-    const char PassableCell = ' ';
-    const char NonPassableCell = '*';
-    const char FinalCell = 'e';
-
-    static void Main()
-    {
-        FindAllPaths(0, 0);
-
-        Console.WriteLine("\nTotal paths: {0}\n", pathsCount);
-    }
-
-    static void FindAllPaths(int row, int col, int currentLength = 1, char dir = ' ')
-    {
-        if (!IsCellPassable(row, col))
+        private static readonly char[,] labyrinth =
         {
-            return;
+            { ' ', ' ', ' ', '*', ' ', ' ', ' ' },
+            { '*', '*', ' ', '*', ' ', '*', ' ' },
+            { ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+            { ' ', '*', '*', '*', '*', '*', ' ' },
+            { ' ', ' ', ' ', ' ', ' ', ' ', 'e' },
+        };
+
+        private static readonly char[] directions = new char[labyrinth.GetLongLength(0) * labyrinth.GetLongLength(1)];
+        private static int pathsCount = 0;
+        private const char PassableCell = ' ';
+        private const char NonPassableCell = '*';
+        private const char FinalCell = 'e';
+
+        public static void Main()
+        {
+            FindAllPaths(0, 0);
+
+            Console.WriteLine("\nTotal paths: {0}\n", pathsCount);
         }
 
-        if (labyrinth[row, col] == FinalCell)
+        private static void FindAllPaths(int row, int col, int currentLength = 1, char dir = ' ')
         {
-            PrintPath(currentLength);
-            return;
+            if (!IsCellPassable(row, col))
+            {
+                return;
+            }
+
+            if (labyrinth[row, col] == FinalCell)
+            {
+                PrintPath(currentLength);
+                return;
+            }
+
+            directions[currentLength - 1] = dir;
+            labyrinth[row, col] = NonPassableCell;
+
+            FindAllPaths(row - 1, col, currentLength + 1, 'U');  // Up
+            FindAllPaths(row + 1, col, currentLength + 1, 'D');  // Down
+            FindAllPaths(row, col - 1, currentLength + 1, 'L');  // Left
+            FindAllPaths(row, col + 1, currentLength + 1, 'R');  // Right
+
+            directions[currentLength - 1] = ' ';
+            labyrinth[row, col] = PassableCell;
         }
 
-        directions[currentLength - 1] = dir;
-        labyrinth[row, col] = NonPassableCell;
+        private static bool IsCellPassable(int row, int col)
+        {
+            return row >= 0 && row < labyrinth.GetLongLength(0) &&
+                   col >= 0 && col < labyrinth.GetLongLength(1) &&
+                   labyrinth[row, col] != NonPassableCell;
+        }
 
-        FindAllPaths(row - 1, col, currentLength + 1, 'U');  // Up
-        FindAllPaths(row + 1, col, currentLength + 1, 'D');  // Down
-        FindAllPaths(row, col - 1, currentLength + 1, 'L');  // Left
-        FindAllPaths(row, col + 1, currentLength + 1, 'R');  // Right
+        private static void PrintPath(int currentLength)
+        {
+            Console.Write("Path #{0} -> cells length: {1} -> Direction: ", ++pathsCount, currentLength);
 
-        directions[currentLength - 1] = ' ';
-        labyrinth[row, col] = PassableCell;
-    }
+            for (int i = 1; i < currentLength; i++)
+            {
+                Console.Write(directions[i] + " ");
+            }
 
-    static bool IsCellPassable(int row, int col)
-    {
-        return row >= 0 && row < labyrinth.GetLongLength(0) &&
-               col >= 0 && col < labyrinth.GetLongLength(1) &&
-               labyrinth[row, col] != NonPassableCell;
-    }
-
-    static void PrintPath(int currentLength)
-    {
-        Console.Write("Path #{0} -> cells length: {1} -> Direction: ", ++pathsCount, currentLength);
-
-        for (int i = 1; i < currentLength; i++)
-            Console.Write(directions[i] + " ");
-
-        Console.WriteLine();
+            Console.WriteLine();
+        }
     }
 }

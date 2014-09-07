@@ -7,8 +7,8 @@
     <ProjectGuid>{DB3812F3-2F55-4CA6-BF2B-26B70EAAFC86}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_01.Nested_loops</RootNamespace>
-    <AssemblyName>_01.Nested_loops</AssemblyName>
+    <RootNamespace>Algorithms</RootNamespace>
+    <AssemblyName>NestedLoops</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

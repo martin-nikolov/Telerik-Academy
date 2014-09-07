@@ -7,8 +7,8 @@
     <ProjectGuid>{02393C2C-0E74-44D6-A721-2CD72473CF52}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02.Combinations_with_Duplicates</RootNamespace>
-    <AssemblyName>_02.Combinations_with_Duplicates</AssemblyName>
+    <RootNamespace>Algorithms</RootNamespace>
+    <AssemblyName>CombinationsWithDuplicates</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

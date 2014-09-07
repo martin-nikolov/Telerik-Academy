@@ -7,8 +7,8 @@
     <ProjectGuid>{CD0E9481-9813-4AFC-BB68-E04139CF9904}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_07.All_paths_in_labyrinth</RootNamespace>
-    <AssemblyName>_07.All_paths_in_labyrinth</AssemblyName>
+    <RootNamespace>Algorithms</RootNamespace>
+    <AssemblyName>AllPathsInLabyrinth</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

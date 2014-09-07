@@ -14,33 +14,34 @@
  *                            3 3 3 
  */
 
-using System;
-using System.Linq;
-
-class NestedLoops
+namespace Algorithms
 {
-    static readonly int[] result = new int[N];
+    using System;
 
-    const int N = 2;
-
-    static void Main()
+    public class NestedLoops
     {
-        IterateNestedLoops(0, N);
-    }
+        private static readonly Action printStrategy = () => { Console.WriteLine(string.Join(" ", result)); };
+        private static readonly int[] result = new int[N];
+        private const int N = 2;
 
-    static void IterateNestedLoops(int beginning, int last, int level = 0)
-    {
-        if (level == N)
+        public static void Main()
         {
-            Console.WriteLine(string.Join(" ", result));
-            return;
+            SimulateNestedLoops(0, N);
         }
 
-        for (int i = beginning; i < last; i++)
+        private static void SimulateNestedLoops(int startValue, int endValue, int depth = 0)
         {
-            result[level] = i + 1;
-            
-            IterateNestedLoops(0, last, level + 1);
+            if (depth == N)
+            {
+                printStrategy.Invoke();
+                return;
+            }
+
+            for (int i = startValue + 1; i <= endValue; i++)
+            {
+                result[depth] = i;
+                SimulateNestedLoops(0, endValue, depth + 1);
+            }
         }
     }
 }

@@ -5,41 +5,44 @@
  * Example: n=3, k=2 -> (1 1), (1 2), (1 3), (2 2), (2 3), (3 3)
  */
 
-using System;
-using System.Linq;
-
-class CombinationsWithDuplicates
+namespace Algorithms
 {
-    static readonly int[] combinations = new int[N];
+    using System;
 
-    const int N = 3;
-    const int K = 2;
-
-    static void Main()
+    public class CombinationsWithDuplicates
     {
-        Combinations(0, 0, true);
-    }
+        private static readonly int[] combinations = new int[N];
+        private const int N = 3;
+        private const int K = 2;
 
-    static void Combinations(int index, int start, bool withReps)
-    {
-        if (index >= K)
+        public static void Main()
         {
-            Print();
-            return;
+            Combinations(0, 0, true);
         }
 
-        for (int i = start; i < N; i++)
+        private static void Combinations(int startValue, int depth, bool withReps)
         {
-            combinations[index] = i;
-            Combinations(index + 1, withReps ? i : i + 1, withReps);
+            if (depth >= K)
+            {
+                Print();
+                return;
+            }
+
+            for (int i = startValue; i < N; i++)
+            {
+                combinations[depth] = i;
+                Combinations(withReps ? i : i + 1, depth + 1, withReps);
+            }
         }
-    }
 
-    static void Print()
-    {
-        for (int i = 0; i < K; i++)
-            Console.Write(combinations[i] + 1 + " ");
+        private static void Print()
+        {
+            for (int i = 0; i < K; i++)
+            {
+                Console.Write(combinations[i] + 1 + " ");
+            }
 
-        Console.WriteLine();
+            Console.WriteLine();
+        }
     }
 }

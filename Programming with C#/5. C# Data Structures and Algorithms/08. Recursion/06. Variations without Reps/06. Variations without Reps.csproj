@@ -7,8 +7,8 @@
     <ProjectGuid>{06BAC385-E739-4F79-953D-80D8A99D5526}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_06.Variations_without_Reps</RootNamespace>
-    <AssemblyName>_06.Variations_without_Reps</AssemblyName>
+    <RootNamespace>Algorithms</RootNamespace>
+    <AssemblyName>VariationsWithoutReps</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -14,64 +14,68 @@
  * Test it with { 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 }.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-class PermutationsWithDuplicates
+namespace Algorithms
 {
-    //*
-    static readonly SortedSet<string> uniquePermutations = new SortedSet<string>();
-    /*/
-    static readonly HashSet<string> uniquePermutations = new HashSet<string>(); // faster
-    //*/
+    using System;
+    using System.Collections.Generic;
 
-    //*
-    static readonly int[] elements = { 1, 3, 5, 5 };
-    /*/
-    static readonly int[] elements = { 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 };
-    //*/
-
-    static void Main()
+    public class PermutationsWithDuplicates
     {
-        Permutations(elements.Length);
+        //*
+        static readonly ISet<string> uniquePermutations = new SortedSet<string>();
+        /*/
+        static readonly HashSet<string> uniquePermutations = new HashSet<string>(); // faster
+        //*/
 
-        PrintUniquePermutations();
-    }
+        //*
+        static readonly int[] elements = { 1, 3, 5, 5 };
 
-    static void Permutations(int index)
-    {
-        if (index == 0)
+        /*/
+        static readonly int[] elements = { 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 };
+        //*/
+
+        public static void Main()
         {
-            uniquePermutations.Add(string.Join(" ", elements));
-            return;
+            Permutations(elements.Length);
+            PrintUniquePermutations();
         }
 
-        Permutations(index - 1);
-
-        for (int i = 0; i < index - 1; i++)
+        private static void Permutations(int depth)
         {
-            if (elements[i] != elements[index - 1])
+            if (depth == 0)
             {
-                Swap(ref elements[i], ref elements[index - 1]);
-                Permutations(index - 1);
-                Swap(ref elements[i], ref elements[index - 1]);
+                uniquePermutations.Add(string.Join(" ", elements));
+                return;
+            }
+
+            Permutations(depth - 1);
+
+            for (int i = 0; i < depth - 1; i++)
+            {
+                if (elements[i] != elements[depth - 1])
+                {
+                    Swap(ref elements[i], ref elements[depth - 1]);
+                    Permutations(depth - 1);
+                    Swap(ref elements[i], ref elements[depth - 1]);
+                }
             }
         }
-    }
 
-    static void Swap<T>(ref T a, ref T b)
-    {
-        T swap = a;
-        a = b;
-        b = swap;
-    }
+        private static void Swap<T>(ref T a, ref T b)
+        {
+            T swap = a;
+            a = b;
+            b = swap;
+        }
 
-    static void PrintUniquePermutations()
-    {
-        foreach (var permutation in uniquePermutations)
-            Console.WriteLine(permutation);
+        private static void PrintUniquePermutations()
+        {
+            foreach (var permutation in uniquePermutations)
+            {
+                Console.WriteLine(permutation);
+            }
 
-        Console.WriteLine("\nTotal unique permutations: {0}\n", uniquePermutations.Count);
+            Console.WriteLine("\nTotal unique permutations: {0}\n", uniquePermutations.Count);
+        }
     }
 }

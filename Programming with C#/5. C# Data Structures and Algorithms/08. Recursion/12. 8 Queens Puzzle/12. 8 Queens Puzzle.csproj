@@ -7,8 +7,8 @@
     <ProjectGuid>{913D2B8E-E475-4062-AFFF-029F5950DE94}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_12._8_Queens_Puzzle</RootNamespace>
-    <AssemblyName>12. 8 Queens Puzzle</AssemblyName>
+    <RootNamespace>Algorithms</RootNamespace>
+    <AssemblyName>EightQueenPuzzle</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

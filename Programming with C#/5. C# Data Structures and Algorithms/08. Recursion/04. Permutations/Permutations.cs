@@ -5,67 +5,70 @@
  * Example: n=3 -> {1, 2, 3}, {1, 3, 2}, {2, 1, 3}, {2, 3, 1}, {3, 1, 2},{3, 2, 1}
  */
 
-using System;
-using System.Linq;
-
-class Permutations
+namespace Algorithms
 {
-    static readonly int[] permutations = new int[N];
-    static readonly bool[] used = new bool[N];
+    using System;
 
-    const int N = 3;
-
-    static void Main()
+    public class Permutations
     {
-        Console.WriteLine("Permutations without repetition: ");
-        PermutationsWithoutReps(0);
+        private static readonly int[] permutations = new int[N];
+        private static readonly bool[] used = new bool[N];
+        private const int N = 3;
 
-        Console.WriteLine("\nPermutations with repetition: ");
-        PermutationsWithReps(0);
-    }
-
-    static void PermutationsWithoutReps(int index)
-    {
-        if (index >= N)
+        public static void Main()
         {
-            Print();
-            return;
+            Console.WriteLine("Permutations without repetition: ");
+            PermutationsWithoutReps(0);
+
+            Console.WriteLine("\nPermutations with repetition: ");
+            PermutationsWithReps(0);
         }
 
-        for (int i = 0; i < N; i++)
+        private static void PermutationsWithoutReps(int depth)
         {
-            if (used[i])
-                continue;
-            
-            used[i] = true;
+            if (depth >= N)
+            {
+                Print();
+                return;
+            }
 
-            permutations[index] = i;
-            PermutationsWithoutReps(index + 1);
+            for (int i = 0; i < N; i++)
+            {
+                if (used[i])
+                {
+                    continue;
+                }
 
-            used[i] = false;
+                used[i] = true;
+                permutations[depth] = i;
+                PermutationsWithoutReps(depth + 1);
+                used[i] = false;
+            }
         }
-    }
 
-    static void PermutationsWithReps(int index)
-    {
-        if (index >= N)
+        private static void PermutationsWithReps(int depth)
         {
-            Print();
-            return;
+            if (depth >= N)
+            {
+                Print();
+                return;
+            }
+
+            for (int i = 0; i < N; i++)
+            {
+                permutations[depth] = i;
+                PermutationsWithReps(depth + 1);
+            }
         }
 
-        for (int i = 0; i < N; i++)
+        private static void Print()
         {
-            permutations[index] = i;
-            PermutationsWithReps(index + 1);
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write(permutations[i] + 1 + " ");
+            }
+
+            Console.WriteLine();
         }
-    }
-
-    static void Print()
-    {
-        for (int i = 0; i < N; i++)
-            Console.Write(permutations[i] + 1 + " ");
-
-        Console.WriteLine();
     }
 }

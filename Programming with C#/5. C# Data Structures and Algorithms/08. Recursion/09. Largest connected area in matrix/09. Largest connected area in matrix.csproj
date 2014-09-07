@@ -7,8 +7,8 @@
     <ProjectGuid>{EDC91EF8-9E76-4D99-92F2-0816C7445E5C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_09.Largest_connected_area_in_matrix</RootNamespace>
-    <AssemblyName>_09.Largest_connected_area_in_matrix</AssemblyName>
+    <RootNamespace>Algorithms</RootNamespace>
+    <AssemblyName>LargestConnectedArea</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

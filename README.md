@@ -213,7 +213,7 @@
 * [Processing XML in .NET](https://github.com/flextry/Telerik-Academy/tree/master/Databases/17.%20Processing%20XML%20in%20.NET) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Databases/17.%20Processing%20XML%20in%20.NET/Readme.md)) - 06.09.2014
 * [Processing JSON in .NET](https://github.com/flextry/Telerik-Academy/tree/master/Databases/18.%20Processing%20JSON%20in%20.NET) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Databases/18.%20Processing%20JSON%20in%20.NET/Readme.md)) - 04.09.2014
 * [Teamwork](https://github.com/Team-Zealot-Databases) - ([assignment](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014/tree/master/Teamwork%20-%20Assignment))  - 04.09.2014
-* [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Databases)
+* [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Databases/Databases%20-%20Exam%20Preparation)
 * [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Databases/Databases%20-%20Practical%20Exam%20%40%20Sept%202014) - 08.09.2014
 
 # Projects

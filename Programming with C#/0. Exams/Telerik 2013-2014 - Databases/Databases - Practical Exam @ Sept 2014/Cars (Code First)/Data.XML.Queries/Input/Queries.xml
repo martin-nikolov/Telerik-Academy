@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Queries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Query OutputFileName="Result0.xml">
+    <OrderBy>Id</OrderBy>
+    <WhereClauses>
+      <WhereClause PropertyName="City" Type="Equals">Sofia</WhereClause>
+      <WhereClause PropertyName="Year" Type="GreaterThan">1999</WhereClause>
+    </WhereClauses>
+  </Query>
+  <Query OutputFileName="Result1.xml">
+    <OrderBy>Id</OrderBy>
+    <WhereClauses>
+      <WhereClause PropertyName="Id" Type="Equals">1</WhereClause>
+    </WhereClauses>
+  </Query>
+  <Query OutputFileName="Result2.xml">
+    <OrderBy>Id</OrderBy>
+    <WhereClauses>
+      <WhereClause PropertyName="Id" Type="GreaterThan">100</WhereClause>
+      <WhereClause PropertyName="Id" Type="LessThan">200</WhereClause>
+    </WhereClauses>
+  </Query>
+  <Query OutputFileName="Result3.xml">
+    <OrderBy>Id</OrderBy>
+    <WhereClauses>
+      <WhereClause PropertyName="Year" Type="Equals">2014</WhereClause>
+      <WhereClause PropertyName="Price" Type="LessThan">100000</WhereClause>
+      <WhereClause PropertyName="Price" Type="GreaterThan">90000</WhereClause>
+    </WhereClauses>
+  </Query>
+  <Query OutputFileName="Result4.xml">
+    <OrderBy>Id</OrderBy>
+    <WhereClauses>
+      <WhereClause PropertyName="Year" Type="LessThan">2008</WhereClause>
+      <WhereClause PropertyName="Model" Type="Contains">N</WhereClause>
+      <WhereClause PropertyName="Manufacturer" Type="Contains">N</WhereClause>
+      <WhereClause PropertyName="Dealer" Type="Contains">N</WhereClause>
+    </WhereClauses>
+  </Query>
+  <Query OutputFileName="Result5.xml">
+    <OrderBy>Id</OrderBy>
+    <WhereClauses>
+      <WhereClause PropertyName="Price" Type="Equals">10000.00</WhereClause>
+    </WhereClauses>
+  </Query>
+  <Query OutputFileName="Result6.xml">
+    <OrderBy>Id</OrderBy>
+    <WhereClauses>
+      <WhereClause PropertyName="Model" Type="Equals">jmWRnkVnGUugKhgcfDaL</WhereClause>
+      <WhereClause PropertyName="Manufacturer" Type="Equals">zVKNbOL</WhereClause>
+      <WhereClause PropertyName="Dealer" Type="Equals">aVhMNylErc</WhereClause>
+    </WhereClauses>
+  </Query>
+  <Query OutputFileName="Result7.xml">
+    <OrderBy>Id</OrderBy>
+    <WhereClauses>
+      <WhereClause PropertyName="City" Type="Equals">Sofia</WhereClause>
+    </WhereClauses>
+  </Query>
+</Queries>

@@ -3,10 +3,10 @@
 <p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming%20with%20C%23/Codes/Other/Telerik.png" /></a></p>
 
 | Programming                                                                 | Web Development                                     | Software Technologies
-| --------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------- |
-| [C# - Part I](#c---part-i)                                                  | [HTML Basics](#html-basics)                         | [Databases](#databases)               |
-| [C# - Part II](#c---part-ii)                                                | [CSS Styling](#css-styling)                         | [Projects](#software-technologies-1)  |
-| [C# - Object-Oriented Programming](#c---object-oriented-programming)        | [JavaScript Fundamentals](#javascript-fundamentals) | [Web Services and Cloud Technologies]
+| --------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------- |
+| [C# - Part I](#c---part-i)                                                  | [HTML Basics](#html-basics)                         | [Databases](#databases)                                                     |
+| [C# - Part II](#c---part-ii)                                                | [CSS Styling](#css-styling)                         | [Projects](#software-technologies-1)                                        |
+| [C# - Object-Oriented Programming](#c---object-oriented-programming)        | [JavaScript Fundamentals](#javascript-fundamentals) | [Web Services and Cloud Technologies](#web-services-and-cloud-technologies) |
 | [C# - High-Quality Code](#c---high-quality-code)                            | [JavaScript UI & DOM](#javascript-ui--dom)          |
 | [C# - Data Structures and Algorithms](#c---data-structures-and-algorithms)  | [JavaScript OOP](#javascript-oop)                   |
 | [C# - Exams](#c---exams)                                                    | [JavaScript Applications](#javascript-applications) |

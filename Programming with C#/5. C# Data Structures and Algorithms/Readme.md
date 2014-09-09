@@ -12,4 +12,4 @@
 * Combinatorics - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/09.%20Combinatorics%20-%20%E2%9C%98/Readme.md))
 * Dynamic Programming - ([assignment](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/10.%20Dynamic%20Programming%20-%E2%9C%98))
 * [Graphs and Algorithms](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/11.%20Graphs%20and%20Graph%20Algorithms) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/11.%20Graphs%20and%20Graph%20Algorithms/Readme.md)) - 27.03.2014
-* Methodology of Problem Solving
+* [Methodology of Problem Solving](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/12.%20Methodology%20of%20Problem%20Solving)

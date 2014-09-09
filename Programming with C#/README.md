@@ -74,8 +74,8 @@
 * Combinatorics - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/09.%20Combinatorics%20-%20%E2%9C%98/Readme.md))
 * Dynamic Programming - ([assignment](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/10.%20Dynamic%20Programming%20-%E2%9C%98))
 * [Graphs and Algorithms](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/11.%20Graphs%20and%20Graph%20Algorithms) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/11.%20Graphs%20and%20Graph%20Algorithms/Readme.md)) - 27.03.2014
-* Other Algorithms - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Programming%20with%20C%23/5.%20C%23%20Data%20Structures%20and%20Algorithms/12.%20Other%20Algorithms%20-%20%E2%9C%98/Readme.md))
-
+* Methodology of Problem Solving
+* 
 ## C# - Exams
 1. [Telerik 2011/2012 - C# Exam 1](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%201) - 4x5 exercises
 * [Telerik 2011/2012 - C# Exam 2](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202011-2012%20-%20C%23%20Exam%202) - 5x5 exercises

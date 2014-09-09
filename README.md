@@ -3,10 +3,10 @@
 <p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming%20with%20C%23/Codes/Other/Telerik.png" /></a></p>
 
 | Programming                                                                 | Web Development                                     | Software Technologies
-| --------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------- |
-| [C# - Part I](#c---part-i)                                                  | [HTML Basics](#html-basics)                         | [Databases](#databases)               |
-| [C# - Part II](#c---part-ii)                                                | [CSS Styling](#css-styling)                         | [Projects](#software-technologies-1)  |
-| [C# - Object-Oriented Programming](#c---object-oriented-programming)        | [JavaScript Fundamentals](#javascript-fundamentals) |
+| --------------------------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
+| [C# - Part I](#c---part-i)                                                  | [HTML Basics](#html-basics)                         | [Databases](#databases)                                        |
+| [C# - Part II](#c---part-ii)                                                | [CSS Styling](#css-styling)                         | [Web Services and Cloud](#web-services-and-cloud-technologies) |
+| [C# - Object-Oriented Programming](#c---object-oriented-programming)        | [JavaScript Fundamentals](#javascript-fundamentals) | [Projects](#software-technologies-1)                           |
 | [C# - High-Quality Code](#c---high-quality-code)                            | [JavaScript UI & DOM](#javascript-ui--dom)          |
 | [C# - Data Structures and Algorithms](#c---data-structures-and-algorithms)  | [JavaScript OOP](#javascript-oop)                   |
 | [C# - Exams](#c---exams)                                                    | [JavaScript Applications](#javascript-applications) |
@@ -215,6 +215,11 @@
 * [Teamwork](https://github.com/Team-Zealot-Databases) - ([assignment](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014/tree/master/Teamwork%20-%20Assignment))  - 04.09.2014
 * [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Databases/Databases%20-%20Exam%20Preparation)
 * [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Databases/Databases%20-%20Practical%20Exam%20%40%20Sept%202014) - 08.09.2014
+
+## Web Services and Cloud Technologies
+
+1. [Web Services and SOA](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Services%20and%20Cloud%20Technologies/01.%20Web%20Services%20and%20SOA)
+* [ASP.NET Web API](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Services%20and%20Cloud%20Technologies/02.%20ASP.NET%20Web%20API) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Services%20and%20Cloud%20Technologies/02.%20ASP.NET%20Web%20API/Readme.md))
 
 # Projects
 

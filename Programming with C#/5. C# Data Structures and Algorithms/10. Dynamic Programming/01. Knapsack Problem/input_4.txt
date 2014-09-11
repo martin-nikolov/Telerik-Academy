@@ -1,0 +1,11 @@
+﻿4
+9
+beer - weight=3, cost=2
+vodka - weight=8, cost=12
+scotch - weight=5, cost=13
+cheese - weight=4, cost=5
+nuts - weight=1, cost=4
+papaya - weight=1, cost=4
+ham - weight=2, cost=3
+whiskey - weight=8, cost=13
+papaya - weight=8, cost=13

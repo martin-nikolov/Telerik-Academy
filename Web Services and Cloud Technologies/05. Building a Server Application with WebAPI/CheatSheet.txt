@@ -1,0 +1,136 @@
+1. Create a new WebAPI project with individual accounts
+
+2. Show the code + edit user password requirements
+
+3. Register user (POST to /api/Account/Register)
+	Email,Password,ConfirmPassword
+
+4. User login WebAPI (POST to /Token)
+	grant_type=password,username,password
+
+5. Next calls (GET /api/Values)
+	Add header "Authorization" with value "Bearer [access_token]"
+
+6. Create TicTacToe.Models and TicTacToe.Data and add EntityFramework and Microsoft.AspNet.Identity.EntityFramework
+
+7. Move ApplicationDbContext and ApplicationUser to the corresponding libraries and fix usings
+
+8. Create migration for the context
+	NuGet package console: "Enable-Migrations"
+	Set AutomaticMigrationsEnabled to true
+	Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
+
+9. Fix connection string and show the database schema to the nerds
+
+10. Create game models
+	* Game { Guid Id, [StringLength(9)][Column(TypeName = "char")]Board, GameState State, [Required]string FirstPlayerId, ApplicationUser FirstPlayer, string SecondPlayerId, ApplicationUser SecondPlayer } + default constructor
+	* GameState { WaitingForSecondPlayer, TurnX, TurnY, GameWonByX, GameWonByO, GameDraw }
+	Create DbSet<Game> in the ApplicationDbContext
+
+11. Create repositories
+	IRepository -> All, GetById, Add, Update, Delete, Delete(id), SaveChanges
+	EfRepository -> Implementation using DbContext
+	MemoryRepository -> For Id: obj.GetType().GetProperty("Id").GetValue(obj);
+
+12. Unit of work
+	Create ITicTacToeData and TicTacToeData with IRepository<ApplicationUser> and IRepository<Game>
+
+13. Create GameController with simple GetUsersCount action to display number of users in the database using the unit of work instance
+
+14. Introduce dependency container (Ninject)
+	* install Ninject.Web.WebApi.OwinHost package
+	* Add to Startup.Configuration app.UseNinjectMiddleware(CreateKernel).UseNinjectWebApi(GlobalConfiguration.Configuration);
+	*   private static StandardKernel CreateKernel()
+		{
+			var kernel = new StandardKernel();
+			kernel.Load(Assembly.GetExecutingAssembly());
+		
+			BindTypes(kernel);
+		
+			return kernel;
+		}
+		
+		private static void BindTypes(StandardKernel kernel)
+		{
+			kernel.Bind<ITicTacToeData>().To<TicTacToeData>().WithConstructorArgument("context", c => new ApplicationDbContext());
+		}
+
+15. Remove empty constructor from GameController and test DI
+
+16. Create GameInfoDataModel
+
+17. Change routeTemplate to "api/{controller}/{action}/{id}"
+
+18. Write Create game action (POST)
+
+19. Write Join game action (POST)
+	* Prevent the same user to join his own game
+
+20. Write Status game action (GET: gameId)
+	* Return info for the games played by the current player
+
+21. Write Play game action (POST: gameId, row, col)
+	* Create PlayRequestDataModel ([Required]string gameId, [Range(1, 3)]int row, [Range(1, 3)]int col)
+	* Write play action and check if model state is valid: if (!ModelState.IsValid) { return this.BadRequest(this.ModelState); }
+	* var positionIndex = (row - 1) * 3 + col - 1
+	* Update board and game state (check if game has ended)
+
+22. Write method to check if the game has ended
+
+23. Extract BaseApiController with constructor with ITicTacToeData
+
+24. Add AutoMapper
+	* Add AutoMapper NuGet package
+	* public interface IMapFrom<T> { }
+	* public interface IHaveCustomMappings { void CreateMappings(IConfiguration configuration); }
+	*   public class AutoMapperConfig
+		{
+			public void Execute()
+			{
+				var types = Assembly.GetExecutingAssembly().GetExportedTypes();
+
+				LoadStandardMappings(types);
+
+				LoadCustomMappings(types);
+			}
+
+			private static void LoadStandardMappings(IEnumerable<Type> types)
+			{
+				var maps = (from t in types
+							from i in t.GetInterfaces()
+							where
+								i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IMappableFrom<>) && !t.IsAbstract
+								&& !t.IsInterface
+							select new { Source = i.GetGenericArguments()[0], Destination = t }).ToArray();
+
+				foreach (var map in maps)
+				{
+					Mapper.CreateMap(map.Source, map.Destination);
+				}
+			}
+
+			private static void LoadCustomMappings(IEnumerable<Type> types)
+			{
+				var maps = (from t in types
+							from i in t.GetInterfaces()
+							where typeof(IHaveCustomMappings).IsAssignableFrom(t) && !t.IsAbstract && !t.IsInterface
+							select (IHaveCustomMappings)Activator.CreateInstance(t)).ToArray();
+
+				foreach (var map in maps)
+				{
+					map.CreateMappings(Mapper.Configuration);
+				}
+			}
+		}
+	* Add it to Application_Start()
+	* Add Custom mapping for GameInfoDataModel
+		public void CreateMappings(IConfiguration configuration)
+		{
+			configuration.CreateMap<Game, GameInfoDataModel>()
+				   .ForMember(m => m.FirstPlayerName, opt => opt.MapFrom(game => game.FirstPlayer.UserName))
+				   .ForMember(m => m.SecondPlayerName, opt => opt.MapFrom(game => game.SecondPlayer == null ? null : game.SecondPlayer.UserName))
+				   .ForMember(m => m.State, opt => opt.MapFrom(game => game.State.ToString()));
+		}
+	* Use the mapping
+		.Project()
+		.To<GameInfoDataModel>()

@@ -1,7 +1,15 @@
+/* 
+ * Algo Academy March 2012 – Problem 05 – Friends of Pesho
+ * http://bgcoder.com/Contests/Practice/Index/118#4
+ */
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
+/// <summary>
+/// Using Dijsktra Algorithm without priority queue
+/// </summary>
 public class FriendsOfPesho
 {
     private static IList<KeyValuePair<int, int>>[] graph;

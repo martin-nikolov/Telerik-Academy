@@ -3,34 +3,31 @@
  * http://bgcoder.com/Contests/Practice/Index/63#0
  */
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-
 namespace AlgoAcademy
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+
     /// <summary>
     /// Using adjancency list and recursively DFS
     /// </summary>
-    class Salaries
+    public class Salaries
     {
-        static readonly IDictionary<int, List<int>> adjacencyList = new Dictionary<int, List<int>>();
-        static long[] employees;
+        private static readonly IDictionary<int, List<int>> adjacencyList = new Dictionary<int, List<int>>();
+        private static long[] employees;
 
-        static void Main()
+        internal static void Main()
         {
             #if DEBUG 
-                Console.SetIn(new StreamReader("../../input.txt"));
+            Console.SetIn(new StreamReader("../../input.txt"));
             #endif
 
             ParseInput();
-
-            var totalSalary = CalculateTotalSalary();
-
-            Console.WriteLine("Total salary: " + totalSalary);
+            Console.WriteLine("Total salary: " + CalculateTotalSalary());
         }
 
-        static void ParseInput()
+        private static void ParseInput()
         {
             var n = int.Parse(Console.ReadLine());
             employees = new long[n];
@@ -49,7 +46,7 @@ namespace AlgoAcademy
             }
         }
 
-        static long CalculateTotalSalary()
+        private static long CalculateTotalSalary()
         {
             long totalSalary = 0;
 
@@ -59,7 +56,7 @@ namespace AlgoAcademy
             return totalSalary;
         }
 
-        static long Calculate(int employeeId)
+        private static long Calculate(int employeeId)
         {
             if (employees[employeeId] != 0)
                 return employees[employeeId];

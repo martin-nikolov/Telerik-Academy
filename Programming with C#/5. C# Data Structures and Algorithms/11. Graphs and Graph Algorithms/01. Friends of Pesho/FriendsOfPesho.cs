@@ -3,106 +3,78 @@
  * http://bgcoder.com/Contests/Practice/Index/118#4
  */
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-
 namespace AlgoAcademy
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     /// <summary>
     /// Using Dijsktra Algorithm without priority queue
     /// </summary>
-    class FriendsOfPesho
+    public class FriendsOfPesho
     {
-        static IList<Node>[] graph;
-        static ISet<int> hospitalIds;
+        private static IList<KeyValuePair<int, int>>[] graph;
+        private static HashSet<int> hospitalIds;
+        private static int minimalDistance = int.MaxValue;
 
-        static void Main()
+        internal static void Main()
         {
             #if DEBUG
-                Console.SetIn(new StreamReader("../../input.txt"));
+            Console.SetIn(new System.IO.StreamReader("../../input.txt"));
             #endif
 
-            ParseInput();
-
-            var minDistance = FindMinSum(hospitalIds);
-
-            Console.WriteLine("Minimal distance: " + minDistance);
-        }
-  
-        static void ParseInput()
-        {
             var parameters = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-
-            graph = Enumerable.Range(0, parameters[0]).Select(i => new List<Node>()).ToArray();
-
             hospitalIds = new HashSet<int>(Console.ReadLine().Split(' ').Select(a => int.Parse(a) - 1));
+
+            graph = Enumerable.Range(0, parameters[0])
+                              .Select(i => new List<KeyValuePair<int, int>>())
+                              .ToArray();
 
             for (int i = 0; i < parameters[1]; i++)
             {
-                var input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-                int parent = input[0] - 1, child = input[1] - 1;
+                var nodesInfo = Console.ReadLine().Split(' ').Select(a => int.Parse(a) - 1).ToArray();
+                graph[nodesInfo[0]].Add(new KeyValuePair<int, int>(nodesInfo[1], nodesInfo[2] + 1));
+                graph[nodesInfo[1]].Add(new KeyValuePair<int, int>(nodesInfo[0], nodesInfo[2] + 1));
+            }
 
-                graph[parent].Add(new Node(child, input[2]));
-                graph[child].Add(new Node(parent, input[2]));
+            FindMinimalDistance();
+            Console.WriteLine(minimalDistance);
+        }
+
+        private static void FindMinimalDistance()
+        {
+            foreach (var hospital in hospitalIds)
+            {
+                var dijkstraDistances = FindMinimalDistanceDijkstra(hospital);
+                var distance = dijkstraDistances.Where((a, b) => !hospitalIds.Contains(b)).Sum();
+                minimalDistance = Math.Min(minimalDistance, distance);
             }
         }
 
-        static int FindMinSum(ISet<int> hospitalIds)
+        private static int[] FindMinimalDistanceDijkstra(int sourceId)
         {
-            var minDistance = Int32.MaxValue;
+            var queue = new Queue<KeyValuePair<int, int>>();
+            queue.Enqueue(new KeyValuePair<int, int>(sourceId, 0));
 
-            foreach (var item in hospitalIds)
-                minDistance = Math.Min(minDistance, 
-                    FindMinimalDistance(item).Where((a, b) => !hospitalIds.Contains(b)).Sum());
-
-            return minDistance;
-        }
-
-        /// <summary>
-        /// Dijkstra Algorithm without priority queue
-        /// </summary>
-        /// <param name="source">The startup node index</param>
-        static IEnumerable<int> FindMinimalDistance(int source)
-        {
-            var queue = new Queue<Node>();
-            queue.Enqueue(new Node(source, 0));
-
-            var distances = Enumerable.Repeat(int.MaxValue, graph.Length).ToArray();
-            distances[source] = 0;
+            var dijkstraDistances = Enumerable.Repeat(int.MaxValue, graph.Length).ToArray();
+            dijkstraDistances[sourceId] = 0;
 
             while (queue.Count != 0)
             {
-                Node currentNode = queue.Dequeue();
-
-                foreach (var neighbour in graph[currentNode.Id])
+                var currentNode = queue.Dequeue();
+                foreach (var neighbour in graph[currentNode.Key])
                 {
-                    int currentDistance = distances[currentNode.Id] + neighbour.Distance;
-
-                    if (currentDistance < distances[neighbour.Id])
+                    int currentDistance = dijkstraDistances[currentNode.Key] + neighbour.Value;
+                    if (currentDistance < dijkstraDistances[neighbour.Key])
                     {
-                        distances[neighbour.Id] = currentDistance;
-                        queue.Enqueue(new Node(neighbour.Id, currentDistance));
+                        dijkstraDistances[neighbour.Key] = currentDistance;
+                        queue.Enqueue(new KeyValuePair<int, int>(neighbour.Key, currentDistance));
                     }
                 }
             }
 
-            return distances;
-        }
-
-        struct Node
-        {
-            public Node(int id, int distance)
-                : this()
-            {
-                this.Id = id;
-                this.Distance = distance;
-            }
-
-            public int Id { get; set; }
-
-            public int Distance { get; set; }
+            return dijkstraDistances;
         }
     }
 }

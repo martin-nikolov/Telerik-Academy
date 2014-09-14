@@ -8,25 +8,25 @@
  * minimize the cost for cables.
  */
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-
 namespace AlgoAcademy
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+
     /// <summary>
     /// Using Kruskal to find Minimal Spanning Tree
     /// </summary>
-    class TvCompany
+    public class TvCompany
     {
-        static Tuple<int, int, int>[] paths;
-        static ISet<int> houses;
+        private static Tuple<int, int, int>[] paths;
+        private static ISet<int> houses;
 
-        static void Main()
+        internal static void Main()
         {
             #if DEBUG
-                Console.SetIn(new StreamReader("../../input.txt"));
+            Console.SetIn(new StreamReader("../../input.txt"));
             #endif
 
             ParseInput();
@@ -41,7 +41,7 @@ namespace AlgoAcademy
             Console.WriteLine("\nMinimal cost for cable: " + result);
         }
 
-        static HashSet<ISet<int>> RepresendEachNodeAsTree()
+        private static HashSet<ISet<int>> RepresendEachNodeAsTree()
         {
             var allTrees = new HashSet<ISet<int>>();
 
@@ -56,8 +56,8 @@ namespace AlgoAcademy
 
             return allTrees;
         }
-  
-        static double FindMinimalCost(HashSet<ISet<int>> allTrees)
+
+        private static double FindMinimalCost(HashSet<ISet<int>> allTrees)
         {
             // Kruskal -> Sorting edges by their weight
             Array.Sort(paths, (a, b) => a.Item3.CompareTo(b.Item3));
@@ -83,8 +83,8 @@ namespace AlgoAcademy
 
             return result;
         }
-  
-        static void ParseInput()
+
+        private static void ParseInput()
         {
             int N = int.Parse(Console.ReadLine());
             paths = new Tuple<int, int, int>[N];

@@ -1,4 +1,4 @@
-## Web API Application Architecture
+## Building a Server Application with WebAPI
 
 1. Finish the GameResult to determine the winner (unit test it well)
 2. Create two more services by your choice - it may be some leaderboards, game options, game passwords, etc.

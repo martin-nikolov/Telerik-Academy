@@ -238,6 +238,7 @@
 
 ## Software Technologies
 * [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - August - September, 2014 
+* [Teamwork - Web Services & Cloud](https://github.com/Team-Papaya-Web-Services-and-Cloud/Web-Services-and-Cloud-Teamwork-2014) - September, 2014 
 * [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - September, 2014 (Course - Databases) - WPF + async + MongoDb 
 
 ## Other Simple & Interesting Tasks

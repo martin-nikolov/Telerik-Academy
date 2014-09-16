@@ -239,7 +239,7 @@
 ## Software Technologies
 * [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - Aug - Sept, 2014 - `MSSQL, MySQL, MongoDb, SQLite, XML, PDF, JSON`
 * [Teamwork - Web Services & Cloud Technologies](https://github.com/Team-Papaya-Web-Services-and-Cloud/Web-Services-and-Cloud-Teamwork-2014) - Sept, 2014 - `MSSQL, EF, ASP.NET WebAPI`
-* [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - Sept, 2014 (Course - Databases) - `WPF + async + MongoDb `
+* [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - Sept, 2014 (Course - Databases) - `WPF + async, MongoDb `
 
 ## Other Simple & Interesting Tasks
 * [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) ([Demo](http://nikolov.cloudvps.bg/Windows%208%20Calculator/)) - `HTML / CSS`
@@ -250,8 +250,8 @@
 * [Crowd Chat - Simple SPA Application](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA/01.%20CrowdChat) ([Demo](http://nikolov.cloudvps.bg/CrowdChat)) - `HTML / CSS / JavaScript / Sammy.js`
 * [Falling Rocks](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/04.%20Console%20Input-Output/11.%20Falling%20Rocks) - C# Console-based game (C# Part I - Homework)
 * [JustSnake](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Games/Snake) - C# Console-based game
-* [Windows 7 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Calculator%20(XAML)) - `C# / WPF / XAML` (School Assignment)
-* [Magic Numbers Game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Magic%20Numbers%20(XAML)) - `C# / WPF / XAML` (School Assignment)
+* [Windows 7 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Calculator%20(XAML)) - `C# / WPF / XAML`
+* [Magic Numbers Game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Magic%20Numbers%20(XAML)) - `C# / WPF / XAML`
 
 ## Knowledge Sharing & Team Working
 * [Teamwork - Wikipedia](https://docs.google.com/file/d/0B7N-_H75aDfJdmNYX3hSV09BU2s) - Enrichment of [Software engineering](http://bg.wikipedia.org/wiki/%D0%A1%D0%BE%D1%84%D1%82%D1%83%D0%B5%D1%80%D0%BD%D0%BE_%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D1%81%D1%82%D0%B2%D0%BE) and [Enterprise resource planning](http://bg.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B8%D1%80%D0%B0%D0%BD%D0%B5_%D0%BD%D0%B0_%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D0%B8%D1%82%D0%B5_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5%D1%82%D0%BE) articles

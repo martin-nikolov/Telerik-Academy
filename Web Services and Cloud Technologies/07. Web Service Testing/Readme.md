@@ -16,7 +16,6 @@
   * Get bugs after a specific date: `GET .../bugs?date=22-06-2014`
   * Get bugs by status `GET .../bugs?type=pending`
   * Change bug status `PUT .../bugs/{id}`
-
 5. Write unit tests to test the BugLogger
  * Use a mocking framework
 6. Write integration tests to test the BugLogger

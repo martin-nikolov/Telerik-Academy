@@ -89,23 +89,7 @@
 * [Telerik 2013/2014 - C# Exam 2 (Spring)](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20C%23%20Exam%202%20-%20Spring) - 2x5 exercises
 * [Telerik 2013/2014 - OOP Exam (Spring)](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20OOP%20Exam%20-%20Spring) - 2 exercises
 * [Telerik 2013/2014 - High-Quality Code Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20High-Quality%20Code) - 2x1 exercises
+* [Telerik 2013-2014 - Databases](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Databases) - 2x2 exercises
 * [Telerik Kids Academy 2011/2012](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%20Kids%20Academy%202011-2012) - 20x3 exercises
 * [Telerik Kids Academy 2012/2013](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%20Kids%20Academy%202012-2013) - 18x3 exercises
 * [Others](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Others) - 1 exercise
-
-# Projects
-
-## Desktop
-* [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - September, 2013 (Course - C# Part 2)
-* [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - December, 2013 (Course - C# OOP) 
-* [Teamwork - Console-based game](https://github.com/Hangman-3/High-Quality-Code-Teamwork) - May - July, 2014 (Course - C# High-Quality Code)
-
-## Software Technologies
-* [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - August - September, 2014 
-* [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - September, 2014 (Course - Databases) - WPF + async + MongoDb 
-
-## Other Simple & Interesting Tasks
-* [Falling Rocks](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/04.%20Console%20Input-Output/11.%20Falling%20Rocks) - C# Console-based game (C# Part I - Homework)
-* [JustSnake](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Games/Snake) - C# Console-based game
-* [Windows 7 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Calculator%20(XAML)) - C# / WPF / XAML (School Assignment)
-* [Magic Numbers Game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/Codes/Other/School%20Assignments/Magic%20Numbers%20(XAML)) - C# / WPF / XAML (School Assignment)

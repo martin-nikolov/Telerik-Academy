@@ -234,7 +234,7 @@
 
 ## Web-Development
 * [Teamwork - JavaScript-based game](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - Jun, 2014 (Course - JavaScript UI & DOM)
-* [RockBands - RESTful Responsive SPA](https://github.com/flextry/RockBands) ([Demo](http://nikolov.cloudvps.bg/rockbands/)) - Aug, 2014 - `AngularJS + Telerik Backend Services`
+* [RockBands - RESTful Responsive SPA](https://github.com/flextry/RockBands) ([Demo](http://nikolov.cloudvps.bg/rockbands/)) - Aug, 2014 - `AngularJS + Cloud (Everlive)`
 
 ## Software Technologies
 * [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - Aug - Sept, 2014 - `MSSQL, MySQL, MongoDb, SQLite, XML, PDF, JSON`

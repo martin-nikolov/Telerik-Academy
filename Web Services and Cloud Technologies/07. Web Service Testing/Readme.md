@@ -6,10 +6,8 @@
  * Bugs have text and logDate
  * Newly added bugs always have status "pending"
  * Bugs can be queried – get all bugs, get bugs after a date, get only pending bugs, etc ...
-
 2. Develop a database in MS SQL Server that keeps the data of the bugs
 3. Create repositories to work with the bugs database
-
 4. Provide a REST API to work with the bugs
  * Using WebAPI
  * Provide the following actions:
@@ -21,5 +19,4 @@
 
 5. Write unit tests to test the BugLogger
  * Use a mocking framework
-
 6. Write integration tests to test the BugLogger

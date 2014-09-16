@@ -223,7 +223,7 @@
 * [ASP.NET Web API](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Services%20and%20Cloud%20Technologies/02.%20ASP.NET%20Web%20API) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Services%20and%20Cloud%20Technologies/02.%20ASP.NET%20Web%20API/Readme.md))
 
 ## Software Technologies - Exams
-1. [Telerik 2013-2014 - Databases](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Databases) - 2x2 + 2x1 exercises
+1. [Telerik 2013-2014 - Databases](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Databases) - 2x2 exercises
 
 # Projects
 

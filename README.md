@@ -229,16 +229,16 @@
 
 ## Desktop
 * [Teamwork - Console game](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/09.%20Teamwork%20-%20Console%20game) - Sept, 2013 (Course - C# Part 2)
-* [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - Dec, 2013 (Course - C# OOP) 
-* [Teamwork - Console-based game](https://github.com/Hangman-3/High-Quality-Code-Teamwork) - May - July, 2014 (Course - C# High-Quality Code)
+* [Teamwork - UI Business Application](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20Object-Oriented%20Programming/09.%20Teamwork%20-%20UI%20Business%20Application) - Dec, 2013 (Course - C# OOP) - `WPF`
+* [Teamwork - Console-based game](https://github.com/Hangman-3/High-Quality-Code-Teamwork) - May - Jul, 2014 (Course - C# High-Quality Code)
 
 ## Web-Development
 * [Teamwork - JavaScript-based game](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - Jun, 2014 (Course - JavaScript UI & DOM)
 * [RockBands - RESTful Responsive Single-Page Application](https://github.com/flextry/RockBands) ([Demo](http://nikolov.cloudvps.bg/rockbands/)) - Aug, 2014
 
 ## Software Technologies
-* [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - *Aug - Sept, 2014* - MSSQL, MySQL, MongoDb, SQLite 
-* [Teamwork - Web Services & Cloud Technologies](https://github.com/Team-Papaya-Web-Services-and-Cloud/Web-Services-and-Cloud-Teamwork-2014) - Sept, 2014
+* [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - Aug - Sept, 2014 - `MSSQL, MySQL, MongoDb, SQLite, XML, PDF, JSON`
+* [Teamwork - Web Services & Cloud Technologies](https://github.com/Team-Papaya-Web-Services-and-Cloud/Web-Services-and-Cloud-Teamwork-2014) - Sept, 2014 - `MSSQL, EF, ASP.NET WebAPI`
 * [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - Sept, 2014 (Course - Databases) - `WPF + async + MongoDb `
 
 ## Other Simple & Interesting Tasks

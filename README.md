@@ -233,13 +233,13 @@
 * [Teamwork - Console-based game](https://github.com/Hangman-3/High-Quality-Code-Teamwork) - May - July, 2014 (Course - C# High-Quality Code)
 
 ## Web-Development
-* [Teamwork - JavaScript-based game](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - June, 2014 (Course - JavaScript UI & DOM) 
-* [RockBands - RESTful Responsive Single-Page Application](https://github.com/flextry/RockBands) ([Demo](http://nikolov.cloudvps.bg/rockbands/)) - August, 2014
+* [Teamwork - JavaScript-based game](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - *June, 2014 (Course - JavaScript UI & DOM)*
+* [RockBands - RESTful Responsive Single-Page Application](https://github.com/flextry/RockBands) ([Demo](http://nikolov.cloudvps.bg/rockbands/)) - *August, 2014*
 
 ## Software Technologies
-* [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - August - September, 2014 - MSSQL, MySQL, MongoDb, SQLite, 
-* [Teamwork - Web Services & Cloud Technologies](https://github.com/Team-Papaya-Web-Services-and-Cloud/Web-Services-and-Cloud-Teamwork-2014) - September, 2014 
-* [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - September, 2014 (Course - Databases) - WPF + async + MongoDb 
+* [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - *August - September, 2014* - MSSQL, MySQL, MongoDb, SQLite 
+* [Teamwork - Web Services & Cloud Technologies](https://github.com/Team-Papaya-Web-Services-and-Cloud/Web-Services-and-Cloud-Teamwork-2014) - *September, 2014* 
+* [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - *September, 2014 (Course - Databases)* - WPF + async + MongoDb 
 
 ## Other Simple & Interesting Tasks
 * [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) ([Demo](http://nikolov.cloudvps.bg/Windows%208%20Calculator/)) - HTML / CSS

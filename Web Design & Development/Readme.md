@@ -81,17 +81,3 @@
 * [Telerik 2013-2014 - JavaScript Exam 2](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Exam%202) - 2x3 exercises
 * [Telerik 2013-2014 - JavaScript OOP Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20OOP%20Exam) - 1x2 exercises
 * [Telerik 2013-2014 - JavaScript Applications Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Apps%20Exam) - 1 exercise
-
-# Projects
-
-## Web-Development
-* [Teamwork - Client-side JavaScript application](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - June, 2014 (Course - JavaScript UI & DOM) 
-* [RockBands - RESTful Responsive Single-Page Application](https://github.com/flextry/RockBands) ([Demo](http://nikolov.cloudvps.bg/rockbands/)) - August, 2014
-
-## Other Simple & Interesting Tasks
-* [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) ([Demo](http://nikolov.cloudvps.bg/Windows%208%20Calculator/)) - HTML / CSS
-* [Simple Organizer](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/08.%20JavaScript%20Event%20Model/01.%20Simple%20Todo%20List) ([Demo](http://nikolov.cloudvps.bg/Simple%20Organizer/)) - HTML / CSS / JavaScript
-* [JavaScript Console - Windows 8 Style](https://github.com/flextry/jsConsole) ([Demo](http://nikolov.cloudvps.bg/jsConsole/)) - HTML / CSS / JavaScript
-* [Snake game](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/02.%20The%20Canvas/04.%20Snake) ([Demo](http://nikolov.cloudvps.bg/Snake/)) - HTML / CSS / Canvas / JavaScript
-* [Family tree](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/4.%20JavaScript%20UI%20%26%20DOM/03.%20KineticJS/01.%20Family%20Three) ([Demo](http://nikolov.cloudvps.bg/Family%20Tree/)) - HTML / CSS / JavaScript / KineticJS / Tree Data Structure and BFS
-* [Crowd Chat - Simple SPA Application](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA/01.%20CrowdChat) ([Demo](http://nikolov.cloudvps.bg/CrowdChat)) - HTML / CSS / JavaScript / Sammy.js

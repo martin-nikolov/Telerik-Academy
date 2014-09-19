@@ -103,6 +103,12 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceSubstringModule\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\02. SubstringModule.Services\02. SubstringModule.Services.csproj">
+      <Project>{27bb405f-0b11-4348-89e2-56d9354106bf}</Project>
+      <Name>02. SubstringModule.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

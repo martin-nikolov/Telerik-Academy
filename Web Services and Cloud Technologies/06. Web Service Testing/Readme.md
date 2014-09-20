@@ -2,7 +2,7 @@
 
 1. Develop a REST API for a BugLogger app
  * Bugs have status:
-  * fixed, assigned, for-testing, pending
+   * fixed, assigned, for-testing, pending
  * Bugs have text and logDate
  * Newly added bugs always have status "pending"
  * Bugs can be queried – get all bugs, get bugs after a date, get only pending bugs, etc ...

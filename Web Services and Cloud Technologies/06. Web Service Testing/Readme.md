@@ -3,8 +3,8 @@
 1. Develop a REST API for a BugLogger app
  * Bugs have status:
    * fixed, assigned, for-testing, pending
- * Bugs have text and logDate
- * Newly added bugs always have status "pending"
+ * Bugs have __text__ and __logDate__
+ * Newly added bugs always have status __"pending"__
  * Bugs can be queried – get all bugs, get bugs after a date, get only pending bugs, etc ...
 2. Develop a database in MS SQL Server that keeps the data of the bugs
 3. Create repositories to work with the bugs database

@@ -1,0 +1,19 @@
+<div class="container clearfix" ng-controller="ListBandsController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 big-text">
+                <strong>Bands</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center" ng-repeat="band in bands | filter: search">
+                <h3><a href="#/band/{{ band.Src }}">{{ band.Name | uppercase }}</a></h3>
+                <div class="image-container">
+                    <a href="#/band/{{ band.Src }}">
+                        <img src="" ng-src="{{ band.ImageUrl }}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

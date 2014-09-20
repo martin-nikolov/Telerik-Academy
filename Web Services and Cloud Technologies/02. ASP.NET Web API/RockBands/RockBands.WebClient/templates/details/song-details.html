@@ -1,0 +1,44 @@
+<div id="song-details-container" class="container clearfix" ng-controller="SongDetailsController">
+    <div class="row jumbotron">
+        <div class="col-md-7">
+            <h1>{{ song.Name}}</h1>
+            <div>
+                <p>
+                    <strong>Band: </strong>
+                    <span class="pull-right">
+                        <a href="#/band/{{ song.BandSrc }}">{{ song.BandName }}</a>
+                    </span>
+                </p>
+                <p>
+                    <strong>Album: </strong>
+                    <span class="pull-right">
+                        <a href="#/album/{{ song.AlbumSrc }}">{{ song.AlbumName }}</a>
+                    </span>
+                </p>
+                <p>
+                    <strong>Votes: </strong>
+                    <span class="pull-right">
+                        {{ song.Rating }}
+                        <span class="vote-buttons-container">
+                            <a class="btn btn-default btn-sm btn-voting" ng-click="upRating(song)">+</a>
+                            <a class="btn btn-default btn-sm btn-voting" ng-click="downRating(song)">−</a>
+                        </span>
+                    </span>
+                </p>
+                <p>
+                    <button class="btn btn-primary btn-md" ng-click="onShowVideoButtonClick()">See Official Video</button>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-5 image-container">
+            <img ng-src="{{ song.ImageUrl }}" alt="{{ song.Name}}"/>
+        </div>
+    </div>
+    <div class="row" id="video">
+        <div class="video-container">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{ song.YouTubeLink }}"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container clearfix" ng-controller="ListAlbumsController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 big-text">
+                <strong>Albums</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center" ng-repeat="album in albums | filter: search">
+                <h3><a href="#/album/{{ album.Src }}">{{ album.Name | uppercase }}</a></h3>
+                <div class="image-container">
+                    <a href="#/album/{{ album.Src }}">
+                        <img src="" ng-src="{{ album.ImageUrl }}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

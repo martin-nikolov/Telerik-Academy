@@ -1,0 +1,46 @@
+<div id="album-details-container" class="container clearfix" ng-controller="AlbumDetailsController">
+    <div class="row jumbotron">
+        <div class="col-md-7">
+            <h1>{{ album.Name}}</h1>
+            <div>
+                <p><strong>Released in:</strong> <span class="pull-right">{{ album.ReleasedAt }}</span></p>
+                <p>
+                    <strong>Band: </strong>
+                    <span class="pull-right">
+                        <a href="#/band/{{ album.BandSrc }}">{{ album.BandName }}</a>
+                    </span>
+                </p>
+                <p>
+                    <strong>Votes: </strong>
+                    <span class="pull-right">
+                        {{ album.Rating }}
+                        <span class="vote-buttons-container">
+                            <a class="btn btn-default btn-sm btn-voting" ng-click="upRating(album)">+</a>
+                            <a class="btn btn-default btn-sm btn-voting" ng-click="downRating(album)">−</a>
+                        </span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-5 image-container">
+            <img ng-src="{{ album.ImageUrl }}" alt="{{ album.Name}}"/>
+        </div>
+    </div>
+
+    <div class="row" ng-if="songs">
+        <div class="col-md-6 big-text">
+            <strong>{{ album.Name }} Album Tracklist</strong>
+        </div>
+    </div>
+    <div class="row" ng-if="songs">
+        <div class="col-md-4 text-center" ng-repeat="song in songs">
+            <h3><a href="#/song/{{ song.Src }}">{{ song.Name | uppercase }}</a></h3>
+
+            <div class="image-container">
+                <a href="#/song/{{ song.Src }}">
+                    <img src="" ng-src="{{ song.ImageUrl }}"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

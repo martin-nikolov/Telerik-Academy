@@ -1,0 +1,19 @@
+<div class="container clearfix" ng-controller="ListSongsController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 big-text">
+                <strong>Songs</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center" ng-repeat="song in songs | filter: search">
+                <h3><a href="#/song/{{ song.Src }}">{{ song.Name | uppercase }}</a></h3>
+                <div class="image-container">
+                    <a href="#/song/{{ song.Src }}">
+                        <img src="" ng-src="{{ song.ImageUrl }}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

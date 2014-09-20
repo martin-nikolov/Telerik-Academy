@@ -1,0 +1,31 @@
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#/" class="navbar-brand">RockBands</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#/">Home</a>
+                </li>
+                <li>
+                    <a href="#/bands/">Bands</a>
+                </li>
+                <li>
+                    <a href="#/albums/">Albums</a>
+                </li>
+                <li>
+                    <a href="#/songs/">Songs</a>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left rockBands-search" ng-show="isSearchInputShown">
+                <input type="text" id="search-input" class="form-control col-lg-8" placeholder="Search" ng-model="search">
+            </form>
+        </div>
+    </div>
+</div>

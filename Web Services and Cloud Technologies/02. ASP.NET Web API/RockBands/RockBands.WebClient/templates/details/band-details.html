@@ -1,0 +1,79 @@
+<div id="band-details-container" class="container clearfix" ng-controller="BandDetailsController">
+    <div class="row jumbotron">
+        <div class="col-md-7">
+            <h1>{{ band.Name}}</h1>
+            <div>
+                <p><strong>Founded in:</strong> <span class="pull-right">{{ band.ReleasedAt }}</span></p>
+                <p><strong>Nationality:</strong> <span class="pull-right">{{ band.Nationality }}</span></p>
+                <p>
+                    <strong>Official site: </strong><span class="pull-right">
+                        <a href="http://{{ band.OfficialSite }}">{{ band.OfficialSite }}</a>
+                    </span>
+                </p>
+                <p>
+                    <strong>Votes: </strong>
+                    <span class="pull-right">
+                        {{ band.Rating }}
+                        <span class="vote-buttons-container">
+                            <a class="btn btn-default btn-sm btn-voting" ng-click="upRating(band)">+</a>
+                            <a class="btn btn-default btn-sm btn-voting" ng-click="downRating(band)">−</a>
+                        </span>
+                    </span>
+                </p>
+                <p>
+                    <strong>Band members:</strong>
+                    <a class="btn btn-default btn-sm pull-right ng-binding" ng-click="showAndHideBandMembers()">{{
+                        toggleBandMembersListButtonText }}</a>
+                    <ul class="list-group" ng-show="isBandMembersListVisible">
+                        <li class="list-group-item band-members-list" ng-repeat="bandMember in band.BandMembers">
+                            <span>{{ bandMember }}</span>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-5 image-container">
+            <img ng-src="{{ band.ImageUrl }}" alt="{{ band.Name}}"/>
+        </div>
+    </div>
+
+    <div class="row" ng-if="albums">
+        <div class="col-md-6 big-text">
+            <strong>Albums related to {{ band.Name }}</strong>
+        </div>
+        <div class="col-md-6">
+            <a href="#/albums/{{ band.Src }}" class="btn btn-default pull-right">See all</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 text-center" ng-repeat="album in albums">
+            <h3><a href="#/album/{{ album.Src }}">{{ album.Name | uppercase }}</a></h3>
+
+            <div class="image-container">
+                <a href="#/album/{{ album.Src }}">
+                    <img src="" ng-src="{{ album.ImageUrl }}"/>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-if="songs">
+        <div class="col-md-6 big-text">
+            <strong>Songs related to {{ band.Name }}</strong>
+        </div>
+        <div class="col-md-6">
+            <a href="#/songs/{{ band.Src }}" class="btn btn-default pull-right">See all</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 text-center" ng-repeat="song in songs">
+            <h3><a href="#/song/{{ song.Src }}">{{ song.Name | uppercase }}</a></h3>
+
+            <div class="image-container">
+                <a href="#/song/{{ song.Src }}">
+                    <img src="" ng-src="{{ song.ImageUrl }}"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

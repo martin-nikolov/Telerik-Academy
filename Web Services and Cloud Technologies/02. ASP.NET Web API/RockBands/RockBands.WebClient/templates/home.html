@@ -1,0 +1,60 @@
+<div id="home-container" class="container clearfix" ng-controller="HomeController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 big-text">
+                <strong>Popular Bands</strong>
+            </div>
+            <div class="col-md-6">
+                <a href="#/bands" class="btn btn-default pull-right">See all</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center" ng-repeat="band in bands">
+                <h3><a href="#/band/{{ band.Src }}">{{ band.Name | uppercase }}</a></h3>
+                <div class="image-container">
+                    <a href="#/band/{{ band.Src }}">
+                        <img src="" ng-src="{{ band.ImageUrl }}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 big-text">
+                <strong>Popular Albums</strong>
+            </div>
+            <div class="col-md-6">
+                <a href="#/albums" class="btn btn-default pull-right">See all</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center" ng-repeat="album in albums">
+                <h3><a href="#/album/{{ album.Src }}">{{ album.Name | uppercase }}</a></h3>
+                <div class="image-container">
+                    <a href="#/album/{{ album.Src }}">
+                        <img src="" ng-src="{{ album.ImageUrl }}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 big-text">
+                <strong>Popular Songs</strong>
+            </div>
+            <div class="col-md-6">
+                <a href="#/songs" class="btn btn-default pull-right">See all</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center" ng-repeat="song in songs">
+                <h3><a href="#/song/{{ song.Src }}">{{ song.Name | uppercase }}</a></h3>
+                <div class="image-container">
+                    <a href="#/song/{{ song.Src }}">
+                        <img src="" ng-src="{{ song.ImageUrl }}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

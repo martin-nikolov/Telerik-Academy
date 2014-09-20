@@ -1,0 +1,1 @@
+__Change the Connection string -> RockBands.Common -> ConnectionStrings.cs__

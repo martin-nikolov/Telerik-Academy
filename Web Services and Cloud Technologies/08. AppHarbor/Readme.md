@@ -1,0 +1,5 @@
+## AppHarbor
+
+1. Write a "code jewels*" service. The service should enable POSTing a code jewel, GETing all code jewels and searching for code jewels by source code and by category (and retrieving them). The service should also enable voting for and against a code jewel (+ and -). Code jewels with very low scores should be deleted from the database. A code jewel has a category (e.g. "C#", "JavaScript", ...), an author's mail (e.g. me@itgeorge.net), a rating and source code. Deploy the service to AppHarbor. Implement deactivating the POSTing of code jewels through the AppHarbor interface. 
+ * *A code jewel is any relatively short, but useful piece of code (e.g. checking a bit's value, recursively deleting files, etc.)
+2. Develop a service hook, which maintains a list of e-mails, to which it sends an e-mail with the hooked app's name as a subject and the commit message as a body. The list of e-mails should be stored in a database, to which only the administrator has access. Upload the service to AppHarbor and hook the Code Jewels application to it.

@@ -5,6 +5,6 @@
 
 __Change the Connection string -> RockBands.Common -> ConnectionStrings.cs__
 
-Repository: https://github.com/flextry/RockBands-RestAPI
-Web Client: http://rockbands.apphb.com
-Web API Services: http://rockbandsservices.apphb.com
+Repository: https://github.com/flextry/RockBands-RestAPI 
+Web Client: http://rockbands.apphb.com 
+Web API Services: http://rockbandsservices.apphb.com 

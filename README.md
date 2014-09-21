@@ -247,7 +247,7 @@
 ## Software Technologies
 * [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - Aug - Sept, 2014 - `MSSQL, MySQL, MongoDb, SQLite, XML, PDF, JSON`
 * [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - Sept, 2014 (Course - Databases) - `WPF + async, MongoDb `
-* [RockBands - RESTful WebAPI](https://github.com/flextry/RockBands-RestAPI) ([Demo](http://rockbands.apphb.com/)) - Sept, 2014 - (Course - Web Services & Cloud) - `ASP.NET WebAPI, MSSQL, AngularJS`
+* [RockBands - RESTful WebAPI](https://github.com/flextry/RockBands-RestAPI) ([Demo](http://rockbands.apphb.com/)) - Sept, 2014 - `ASP.NET WebAPI, MSSQL, AngularJS`
 
 ## Other Simple & Interesting Tasks
 * [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) ([Demo](http://nikolov.cloudvps.bg/Windows%208%20Calculator/)) - `HTML / CSS`

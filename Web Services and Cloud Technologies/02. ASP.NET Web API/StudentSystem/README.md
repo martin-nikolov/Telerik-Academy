@@ -1,1 +1,1 @@
-__Change the Connection string -> RockBands.Common -> ConnectionStrings.cs__
+__Change the Connection string -> StudentSystem.Common -> ConnectionStrings.cs__

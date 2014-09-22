@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ForumSystem.WCF.AlertsService" CodeBehind="AlertsService.svc.cs" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>

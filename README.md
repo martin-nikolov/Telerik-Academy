@@ -6,9 +6,9 @@
 | --------------------------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
 | [C# - Part I](#c---part-i)                                                  | [HTML Basics](#html-basics)                         | [Databases](#databases)                                        |
 | [C# - Part II](#c---part-ii)                                                | [CSS Styling](#css-styling)                         | [Web Services and Cloud](#web-services-and-cloud-technologies) |
-| [C# - Object-Oriented Programming](#c---object-oriented-programming)        | [JavaScript Fundamentals](#javascript-fundamentals) | [Exams](#software-technologies---exams)|
-| [C# - High-Quality Code](#c---high-quality-code)                            | [JavaScript UI & DOM](#javascript-ui--dom)          | [Projects](#software-technologies-1)                           |
-| [C# - Data Structures and Algorithms](#c---data-structures-and-algorithms)  | [JavaScript OOP](#javascript-oop)                   |
+| [C# - Object-Oriented Programming](#c---object-oriented-programming)        | [JavaScript Fundamentals](#javascript-fundamentals) | [JavaScript SPA](#javascript-single-page-applications)         |
+| [C# - High-Quality Code](#c---high-quality-code)                            | [JavaScript UI & DOM](#javascript-ui--dom)          | [Exams](#software-technologies---exams)                        |
+| [C# - Data Structures and Algorithms](#c---data-structures-and-algorithms)  | [JavaScript OOP](#javascript-oop)                   | [Projects](#software-technologies-1)                           |
 | [C# - Exams](#c---exams)                                                    | [JavaScript Applications](#javascript-applications) |
 | [Algo Academy](#algo-academy)                                               | [PHP Web-development](#php-web-development)         |
 | [Projects](#desktop)                                                        | [Projects](#web-development)                        |

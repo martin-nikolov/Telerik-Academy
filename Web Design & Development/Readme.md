@@ -72,6 +72,11 @@
 9. [JavaScript Patterns and SPA](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA/Readme.md)) - 25.07.2014
 10. [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Apps%20Exam/JavaScript%20-%2029%20July%202014) - 29.07.2014
 
+## JavaScript Single-Page Applications
+
+1. [Introduction to AngularJS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/01.%20Introduction%20to%20AngularJS)
+2. [AngularJS - Controllers and Markup](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/02.%20AngularJS%20-%20Controllers%20and%20Markup)
+
 ## Web Design & Development - Exams
 1. [Telerik 2012-2013 - CSS Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202012-2013%20-%20CSS%20Exam) - 5x3 exercises
 * [Telerik 2013-2014 - CSS Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20CSS%20Exam) - 3x3 exercises

@@ -173,6 +173,14 @@
 9. [JavaScript Patterns and SPA](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/6.%20JavaScript%20Applications/09.%20JavaScript%20Patterns%20and%20SPA/Readme.md)) - 25.07.2014
 10. [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Apps%20Exam/JavaScript%20-%2029%20July%202014) - 29.07.2014
 
+## JavaScript Single-Page Applications
+
+1. [Introduction to AngularJS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/01.%20Introduction%20to%20AngularJS)
+2. [AngularJS - Controllers and Markup](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/02.%20AngularJS%20-%20Controllers%20and%20Markup)
+3. [AngularJS - Services](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/03.%20AngularJS%20-%20Services)
+4. [AngularJS - Routing](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/04.%20AngularJS%20-%20Routing)
+5. [AngularJS - Directives](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/05.%20AngularJS%20-%20Directives) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/05.%20AngularJS%20-%20Directives/Readme.md))
+
 ## PHP Web-development
 1. [Creating an address book](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book/Readme.md)) - 22.09.2013
 * [Working with sessions and files](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/02.%20Working%20with%20sessions%20and%20files) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/02.%20Working%20with%20sessions%20and%20files/Readme.md)) - 29.09.2013

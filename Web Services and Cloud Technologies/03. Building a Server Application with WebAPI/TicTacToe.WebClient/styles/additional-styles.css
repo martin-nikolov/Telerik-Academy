@@ -1,0 +1,215 @@
+div.navbar-collapse.collapse form.navbar-form.navbar-left.rockBands-search input {
+    height: 35px;
+    margin-top: 4px;
+}
+
+#main-container {
+    margin-bottom: 80px;
+}
+
+#home-container .container .row:nth-child(2n+1):not(:first-child), #band-details-container .row:nth-child(2n):not(:first-child) {
+    margin-top: 30px;
+}
+
+.big-text {
+    font-size: 2em;
+}
+
+.big-text strong {
+    font-weight: normal;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+.band-members {
+    text-align: center;
+}
+
+.even-band-members {
+    background-color: #95a5a6;
+    color: white;
+}
+
+input.ng-dirty.ng-invalid {
+    background-color: pink !important;
+}
+
+input.ng-dirty.ng-valid.validity {
+    background-color: darkseagreen !important;
+}
+
+.vertical-content {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.big-text {
+    font-size: 2em;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}
+
+.band-members-list {
+    text-align: center;
+}
+
+.vote-buttons-container {
+    margin-left: 5px;
+}
+
+.btn-voting {
+    width: 26px;
+    height: 26px;
+    padding: 3px 8px;
+}
+
+#song-details-container .jumbotron {
+    padding-bottom: 20px;
+}
+
+.video-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-signin {
+    max-width: 350px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.remember-me-label {
+    padding-left: 21px;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+form input.sign-in-password-input.form-control {
+    margin-bottom: -1px;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.sign-in-button {
+    padding: 12px 18px;
+}
+
+input.sign-in-password-input.form-control {
+    margin-top: 5px;
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.sign-in-confirm-password-input, form .form-control.sign-in-confirm-password-input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.href-btn {
+    cursor: default;
+}
+
+.tic-tac-toe-table-container {
+    text-align: center;
+}
+
+.tic-tac-toe-table, .tic-tac-toe-table tr, .tic-tac-toe-table td {
+    margin: 0 auto;
+    border: 1px solid white;
+}
+
+.tic-tac-toe-table.notAllowed td {
+    cursor: not-allowed;
+}
+
+.tic-tac-toe-table.allowed td {
+    cursor: crosshair;
+}
+
+.tic-tac-toe-table td {
+    font-size: 1.8em;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+}
+
+.tic-tac-toe-table td:hover {
+    background-color: slategray;
+}
+
+h3.gamePlayersInfo {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+h3.gameStatusInfo {
+    margin-top: 25px;
+}

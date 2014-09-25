@@ -1,0 +1,47 @@
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#/" class="navbar-brand">Tic-Tac-Toe</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li ng-if="isLoggedIn">
+                    <a href="#/games/">Games</a>
+                </li>
+                <li>
+                    <a href="#/scores/">Scores</a>
+                </li>
+                <li>
+                    <a href="#/users/">Users</a>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-left rockBands-search" ng-show="isSearchInputShown">
+                <input type="text" id="search-input" class="form-control col-lg-8" placeholder="Search" ng-model="search">
+            </form>
+
+            <ul class="nav navbar-nav navbar-right" ng-hide="isLoggedIn">
+                <li>
+                    <a href="#/registration/">Register</a>
+                </li>
+                <li>
+                    <a href="#/login/">Login</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" ng-show="isLoggedIn">
+                <li>
+                    <a class="href-btn">Hello, {{ username }}</a>
+                </li>
+                <li>
+                    <a class="href-btn" ng-controller="LogoutController" ng-click="logout()">Sign out</a>
+                </li>
+            </ul>          
+        </div>
+    </div>
+</div>

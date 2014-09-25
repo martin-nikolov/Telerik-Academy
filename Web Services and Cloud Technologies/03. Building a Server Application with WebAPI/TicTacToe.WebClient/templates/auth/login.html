@@ -1,0 +1,10 @@
+﻿<div class="container col-md-12" ng-controller="LoginController">
+    <form name="signInForm" class="form-signin" role="form">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" class="form-control" placeholder="Username" required="" autofocus="" ng-trim="" ng-minlength="2" ng-maxlength="20" ng-model="username">
+        <input type="password" class="form-control sign-in-confirm-password-input" placeholder="Password" ng-minlength="4" ng-maxlength="20" required="" ng-model="password">
+        <button class="btn btn-lg btn-primary btn-block sign-in-button" type="submit"
+                ng-disabled="signInForm.$pristine || signInForm.$invalid"
+                ng-click="login()">Sign in</button>
+    </form>
+</div>

@@ -179,7 +179,7 @@
 2. [AngularJS - Controllers and Markup](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/02.%20AngularJS%20-%20Controllers%20and%20Markup)
 3. [AngularJS - Services](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/03.%20AngularJS%20-%20Services)
 4. [AngularJS - Routing](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/04.%20AngularJS%20-%20Routing)
-5. [AngularJS - Directives](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/05.%20AngularJS%20-%20Directives) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/05.%20AngularJS%20-%20Directives/Readme.md))
+5. [AngularJS - Directives](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/05.%20AngularJS%20-%20Directives) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/05.%20AngularJS%20-%20Directives/Readme.md)) - 25.09.2014
 
 ## PHP Web-development
 1. [Creating an address book](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book/Readme.md)) - 22.09.2013

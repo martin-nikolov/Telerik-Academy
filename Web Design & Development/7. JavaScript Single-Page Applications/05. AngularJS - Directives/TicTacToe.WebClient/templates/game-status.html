@@ -1,0 +1,29 @@
+﻿<div class="container col-md-12" ng-controller="GameStatusController">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 big-text tic-tac-toe-table-container">
+            <h3 class="gamePlayersInfo" ng-if="hasTwoPlayers">{{ firstPlayer }} [X] vs. {{ secondPlayer }} [O]</h3>
+
+            <table class="tic-tac-toe-table" ng-class="cursorClass">
+                <tr>
+                    <td ng-click="click(0, 0)">{{ board[0] }}</td>
+                    <td ng-click="click(0, 1)">{{ board[1] }}</td>
+                    <td ng-click="click(0, 2)">{{ board[2] }}</td>
+                </tr>
+                <tr>
+                    <td ng-click="click(1, 0)">{{ board[3] }}</td>
+                    <td ng-click="click(1, 1)">{{ board[4] }}</td>
+                    <td ng-click="click(1, 2)">{{ board[5] }}</td>
+                </tr>
+                <tr>
+                    <td ng-click="click(2, 0)">{{ board[6] }}</td>
+                    <td ng-click="click(2, 1)">{{ board[7] }}</td>
+                    <td ng-click="click(2, 2)">{{ board[8] }}</td>
+                </tr>
+            </table>
+
+            <h3 class="gamePlayersInfo gameStatusInfo">Status: {{ gameStatus | gameStatusFilter:{state:gameStatus, firstPlayerName:firstPlayer, currentPlayerName: currentPlayer} }}</h3>
+            <a href="#/games" class="btn btn-primary">Back</a>
+        </div>
+    </div>
+</div>

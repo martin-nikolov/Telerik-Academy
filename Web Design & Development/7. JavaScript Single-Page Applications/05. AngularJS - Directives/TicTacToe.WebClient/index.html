@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic-Tac-Toe</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="styles/additional-styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-app="rockBandsApp" ng-controller="MainPageController" ng-cloak>
+    <div navigation-bar></div>
+    <div id="main-container" ng-view></div>
+    <div id="footer" footer></div>
+    <div modal-window></div>
+
+    <script src="scripts/lib/jquery-2.1.1.min.js"></script>
+    <script src="scripts/lib/angular/angular.min.js"></script>
+    <script src="scripts/lib/angular/angular-route.min.js"></script>
+    <script src="scripts/lib/angular/angular-resource.min.js"></script>
+    <script src="scripts/lib/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/ticTacToeData.js"></script>
+    <script src="scripts/services/auth.js"></script>
+    <script src="scripts/filters/gameStatusFilter.js"></script>
+    <script src="scripts/directives/navigationBarDirective.js"></script>
+    <script src="scripts/directives/footerDirective.js"></script>
+    <script src="scripts/directives/modalWindowDirective.js"></script>
+    <script src="scripts/controllers/MainPageController.js"></script>
+    <script src="scripts/controllers/auth/LoginController.js"></script>
+    <script src="scripts/controllers/auth/LogoutController.js"></script>
+    <script src="scripts/controllers/auth/RegistrationController.js"></script>
+    <script src="scripts/controllers/CreateGameController.js"></script>
+    <script src="scripts/controllers/GameStatusController.js"></script>
+    <script src="scripts/controllers/list/ScoreController.js"></script>
+    <script src="scripts/controllers/list/ListUsersController.js"></script>
+    <script src="scripts/controllers/list/ListGamesController.js"></script>
+    <script src="scripts/controllers/list/ListGamesHistoryController.js"></script>
+    <script src="scripts/utility/ErrorModalWindow.js"></script>
+    <script src="scripts/utility/MobileDeviceChecker.js"></script>
+</body>
+</html>

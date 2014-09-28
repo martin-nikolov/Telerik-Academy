@@ -1,0 +1,39 @@
+﻿<div class="container clearfix" ng-controller="ListGamesHistoryController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 big-text">
+                <strong ng-if="myGamesHistory">Games History:</strong>
+            </div>
+        </div>
+
+        <div class="row" ng-cloak ng-if="myGamesHistory">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Description</th>
+                            <th>Creator</th>
+                            <th>Opponent</th>
+                            <th>Created on</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="game in myGamesHistory">
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ game.Name }}</td>
+                            <td>{{ game.Creator }}</td>
+                            <td>{{ game.Opponent }}</td>
+                            <td>{{ game.DateCreated | date : 'd MMM, HH:mm' }}</td>
+                            <td>{{ game.Status | gameStatusFilter:{state:game.Status, firstPlayerName:game.Creator, currentPlayerName: currentPlayer} }}</td>
+                            <td><button class="btn btn-primary btn-sm" ng-click="seeStatus(game.Id)">Status</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

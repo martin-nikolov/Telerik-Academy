@@ -1,0 +1,38 @@
+<div class="container clearfix" ng-controller="ScoreController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 big-text">
+                <strong>Top 10 Scores</strong>
+            </div>
+        </div>
+
+        <div class="row" ng-cloak ng-if="scores">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Username</th>
+                            <th>Wins</th>
+                            <th>Draws</th>
+                            <th>Losses</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="user in scores">
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ user.Username }}</td>
+                            <td>{{ user.Wins }}</td>
+                            <td>{{ user.Draws }}</td>
+                            <td>{{ user.Losses }}</td>
+                            <td>{{ user.Points }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>

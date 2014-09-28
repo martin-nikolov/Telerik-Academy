@@ -1,0 +1,32 @@
+<div class="container clearfix" ng-controller="ListUsersController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 big-text">
+                <strong>Users</strong>
+            </div>
+        </div>
+
+        <div class="row" ng-cloak ng-if="users">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Username</th>
+                            <th>Registered on</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="user in users">
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ user.Username }}</td>
+                            <td>{{ user.DateRegistration | date : 'd MMM yyyy, HH:mm' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>

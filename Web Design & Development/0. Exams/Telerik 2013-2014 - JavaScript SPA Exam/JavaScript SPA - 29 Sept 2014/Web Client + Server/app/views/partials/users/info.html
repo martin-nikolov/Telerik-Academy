@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>{{ user.email }}</h1>
+
+    <div class="row trip-statistics">
+        <div class="col-md-2">
+            <div>Is Driver: <strong>{{ user.isDriver }}</strong></div>
+        </div>
+
+        <div class="col-md-2" ng-if="user.car">
+            <div>Car: <strong>{{ user.car }}</strong></div>
+        </div>
+    </div>
+</div>

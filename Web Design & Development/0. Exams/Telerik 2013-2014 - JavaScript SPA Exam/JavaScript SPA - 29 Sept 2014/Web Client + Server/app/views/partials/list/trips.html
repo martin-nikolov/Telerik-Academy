@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-11 text-center">
+            <h1 class="page-head">Trips</h1>
+        </div>
+
+        <div class="col-md-1" ng-show="isLoggedIn">
+            <button class="btn btn-primary" ng-click="createTrip()">Create</button>
+        </div>
+    </div>
+
+    <div class="row filter-row" ng-if="isLoggedIn">
+        <div class="col-md-3 text-center">
+            Sort
+            <select class="form-control sign-in-confirm-password-input" ng-model="filter.sort">
+                <option value="driver">Driver</option>
+                <option value="date">Date</option>
+                <option value="seats">Seats</option>
+                <option value="from">From</option>
+                <option value="to">To</option>
+            </select>
+        </div>
+
+        <div class="col-md-3 text-center">
+            Order
+            <select class="form-control sign-in-confirm-password-input" ng-model="filter.orderBy">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+        </div>
+
+        <div class="col-md-3 text-center">
+            From
+            <select class="form-control sign-in-confirm-password-input" ng-model="filter.from">
+                <option ng-repeat="city in cities">{{ city }}</option>
+            </select>
+        </div>
+
+        <div class="col-md-3 text-center">
+            To
+            <select class="form-control sign-in-confirm-password-input" ng-model="filter.to">
+                <option ng-repeat="city in cities">{{ city }}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row filter-row" ng-if="isLoggedIn">
+        <div class="col-md-6">
+            <label for="include-finished">
+                <input type="checkbox" id="include-finished" ng-model="filter.isIncludeFinishedSelected"/>
+                <span>Include finished</span>
+            </label> &nbsp;
+            <label for="mine-trips">
+                <input type="checkbox" id="mine-trips" ng-model="filter.isMineTripSelected"/>
+                <span>Only mine</span>
+            </label> &nbsp;
+            <button class="btn btn-primary" ng-click="filter()">Sort & Filter</button>
+        </div>
+
+        <div class="col-md-6">
+            <div class="col-md-2 pull-right">
+                <button class="btn btn-primary pull-right" ng-click="nextPage()">Next</button>
+            </div>
+            <div class="col-md-3 pull-right">
+                <input type="text" class="form-control text-center" disabled ng-model="currentPage"/>
+            </div>
+            <div class="col-md-2 pull-right">
+                <button class="btn btn-primary" ng-click="prevPage()">Previous</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>Driver</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Departure Time</th>
+                    <th>Trip Info</th>
+                    <th ng-if="isLoggedIn">Is Mine</th>
+                </tr>
+                </thead>
+                <tbody ng-repeat="trip in trips">
+                <tr class="text-center">
+                    <td><a href="#/drivers/{{ trip.driverId }}">{{ trip.driverName }}</a></td>
+                    <td>{{ trip.from }}</td>
+                    <td>{{ trip.to }}</td>
+                    <td>{{ trip.departureDate | date : 'd MMM yyyy, HH:mm' }}</td>
+                    <td>
+                        <a href="#/trips/{{ trip.id }}" class="btn btn-primary btn-xs">See Trip Info</a>
+                    </td>
+                    <td ng-if="isLoggedIn">
+                        <span ng-show="trip.isMine" class="glyphicon glyphicon-ok"></span>
+                        <span ng-hide="trip.isMine" class="glyphicon glyphicon-remove"></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

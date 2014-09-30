@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Trip Exchange System</title>
+        <link rel="stylesheet" href="../styles/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../styles/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="../styles/toastr.min.css"/>
+        <link rel="stylesheet" href="../styles/additional-styles.css"/>
+    </head>
+    <body ng-app="myApp" ng-controller="MainPageController" ng-cloak>
+        <div navigation-bar></div>
+        <div id="main-container" ng-view></div>
+        <div id="footer" footer></div>
+        <div modal-window></div>
+
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/toastr/toastr.min.js"></script>
+        <script src="lib/bootstrap/bootstrap.min.js"></script>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-resource.min.js"></script>
+        <script src="lib/angular/angular-route.min.js"></script>
+        <script src="lib/angular/angular-cookies.min.js"></script>
+
+        <script src="scripts/app.js"></script>
+
+        <script src="scripts/controllers/MainPageController.js"></script>
+        <script src="scripts/controllers/HomeController.js"></script>
+
+        <script src="scripts/controllers/list/ListDriversController.js"></script>
+        <script src="scripts/controllers/list/ListTripsController.js"></script>
+
+        <script src="scripts/controllers/create/CreateTripController.js"></script>
+        <script src="scripts/controllers/details/DetailsDriverController.js"></script>
+        <script src="scripts/controllers/details/DetailsTripController.js"></script>
+
+        <script src="scripts/controllers/auth/LoginController.js"></script>
+        <script src="scripts/controllers/auth/UsersInfoController.js"></script>
+        <script src="scripts/controllers/auth/LogoutController.js"></script>
+        <script src="scripts/controllers/auth/RegistrationController.js"></script>
+
+        <script src="scripts/filters/driverDetailsFilter.js"></script>
+        <script src="scripts/utility/ErrorModalWindow.js"></script>
+
+        <script src="scripts/directives/footerDirective.js"></script>
+        <script src="scripts/directives/modalWindowDirective.js"></script>
+        <script src="scripts/directives/navigationBarDirective.js"></script>
+
+        <script src="scripts/services/account/auth.js"></script>
+        <script src="scripts/services/account/identity.js"></script>
+        <script src="scripts/services/account/authorization.js"></script>
+
+        <script src="scripts/services/resources/appData.js"></script>
+        <script src="scripts/services/authFactory.js"></script>
+        <script src="scripts/services/notifier.js"></script>
+    </body>
+</html>

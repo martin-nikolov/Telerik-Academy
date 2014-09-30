@@ -1,0 +1,63 @@
+<div class="container">
+    <h1>{{ driver.name }}</h1>
+
+    <div class="row trip-statistics">
+        <div class="col-md-2">
+            <div>Upcoming trips: <strong>{{ driver.numberOfUpcomingTrips }}</strong></div>
+        </div>
+
+        <div class="col-md-2">
+            <div>Total trips: <strong>{{ driver.numberOfTotalTrips }}</strong></div>
+        </div>
+
+        <div class="col-md-2">
+            <label for="mine-trips">
+                <input type="checkbox" id="mine-trips" ng-model="isMineTripSelected"/>
+                <span>Only mine trips</span>
+            </label>
+        </div>
+
+        <div class="col-md-2">
+            <label for="driver-trip">
+                <input type="checkbox" id="driver-trip" ng-model="isOnlyDriverTripSelected"/>
+                <span>Only driver trips</span>
+            </label>
+        </div>
+
+        <div class="col-md-2 pull-right">
+            <select class="form-control sign-in-confirm-password-input" data-ng-model="orderBy">
+                <option selected="selected">None</option>
+                <option value="from">From</option>
+                <option value="to">To</option>
+                <option value="departureDate">Departure time</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>Driver</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Departure Time</th>
+                    <th>Trip Info</th>
+                </tr>
+                </thead>
+                <tbody ng-repeat="trip in driver.trips | orderBy: orderBy | driverDetailsFilter:driver.name:isMineTripSelected:isOnlyDriverTripSelected">
+                <tr class="text-center">
+                    <td><a href="#/drivers/{{ trip.driverId }}">{{ trip.driverName }}</a></td>
+                    <td>{{ trip.from }}</td>
+                    <td>{{ trip.to }}</td>
+                    <td>{{ trip.departureDate | date : 'd MMM yyyy, HH:mm' }}</td>
+                    <td>
+                        <a href="#/trips/{{ trip.id }}" class="btn btn-primary btn-xs">See Trip Info</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

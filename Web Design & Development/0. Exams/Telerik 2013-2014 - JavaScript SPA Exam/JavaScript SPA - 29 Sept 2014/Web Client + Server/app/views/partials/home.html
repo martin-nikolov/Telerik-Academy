@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1>Welcome to Trip Exchange</h1>
+
+        <p class="lead">Find your way home!</p>
+    </div>
+
+    <div class="row trip-statistics">
+        <div class="col-md-3">
+            <div><strong>Trips</strong></div>
+            <div>{{ stats.trips }}</div>
+        </div>
+
+        <div class="col-md-3">
+            <div><strong>Finished trips</strong></div>
+            <div>{{ stats.finishedTrips }}</div>
+        </div>
+
+        <div class="col-md-3">
+            <div><strong>Users</strong></div>
+            <div>{{ stats.users }}</div>
+        </div>
+
+        <div class="col-md-3">
+            <div><strong>Drivers</strong></div>
+            <div>{{ stats.drivers }}</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-primary text-center">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Latest trips</h3>
+                </div>
+                <table class="table table-hover table-striped">
+                    <thead>
+                    <tr>
+                        <th>Driver</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Departure Time</th>
+                        <th>Trip Info</th>
+                    </tr>
+                    </thead>
+                    <tbody ng-repeat="trip in trips">
+                    <tr>
+                        <td><a href="#/drivers/{{ trip.driverId }}">{{ trip.driverName }}</a></td>
+                        <td>{{ trip.from }}</td>
+                        <td>{{ trip.to }}</td>
+                        <td>{{ trip.departureDate | date : 'd MMM yyyy, HH:mm' }}</td>
+                        <td>
+                            <a href="#/trips/{{ trip.id }}" class="btn btn-primary btn-xs">See Trip Info</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-primary text-center">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Latest drivers</h3>
+                </div>
+                <table class="table table-hover table-striped">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Upcoming Trips</th>
+                        <th>Total Trips</th>
+                    </tr>
+                    </thead>
+                    <tbody ng-repeat="driver in drivers">
+                    <tr>
+                        <td><a href="#/drivers/{{ driver.id }}">{{ driver.name }}</a></td>
+                        <td>{{ driver.numberOfUpcomingTrips }}</td>
+                        <td>{{ driver.numberOfTotalTrips }}</td>
+                        <td>{{ driver.numberOfTotalTrips }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

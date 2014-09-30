@@ -1,0 +1,15 @@
+﻿<div class="container col-md-12">
+    <form name="newUserForm" class="form-signin" role="form">
+        <h2 class="form-signin-heading">Please sign up</h2>
+        <input type="email" class="form-control" placeholder="Email" required="" autofocus="" ng-trim="" ng-minlength="2" ng-maxlength="20" ng-model="email">
+        <input type="password" class="form-control sign-in-password-input" placeholder="Password" ng-minlength="4" ng-maxlength="20" required="" ng-model="password">
+        <input type="password" class="form-control sign-in-confirm-password-input" placeholder="Confirm Password" ng-minlength="4" ng-maxlength="20" required="" ng-model="confirmPassword">
+        <label for="driver-q"> &nbsp;
+            Are you driver: <input type="checkbox" ng-model="isDriver"/>
+        </label>
+        <input type="text" class="form-control driver-input" placeholder="Car name" required="" autofocus="" ng-trim="" ng-minlength="2" ng-maxlength="20" ng-model="carName" ng-show="isDriver" ng-required="isDriver">
+        <button class="btn btn-lg btn-primary btn-block sign-in-button" type="submit"
+                ng-disabled="newUserForm.$pristine || newUserForm.$invalid || password != confirmPassword"
+                ng-click="registration()">Sign up</button>
+    </form>
+</div>

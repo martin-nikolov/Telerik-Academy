@@ -1,0 +1,19 @@
+<div class="container col-md-12">
+    <form name="createNewTripForm" class="form-signin" role="form">
+        <h2 class="form-signin-heading">Create New Trip</h2>
+        <select class="form-control sign-in-confirm-password-input" data-ng-model="from">
+            <option ng-repeat="city in cities">{{ city }}</option>
+        </select>
+        <select class="form-control" data-ng-model="to">
+            <option ng-repeat="city in cities">{{ city }}</option>
+        </select>
+        <input type="number" class="form-control sign-in-confirm-password-input" placeholder="Available seats" required="" min="1" max="254" ng-model="availableSeats">
+        <input type="date" class="form-control sign-in-confirm-password-input" placeholder="Departure time" required="" ng-model="departureTime">
+        <div class="text-right">
+            <button class="btn btn-lg btn-primary sign-in-button" type="submit"
+                    ng-disabled="createNewTripForm.$pristine || createNewTripForm.$invalid || from == to"
+                    ng-click="createNewTrip()">Create</button>
+            <a href="#/trips" class="btn btn-lg btn-primary">Cancel</a>
+        </div>
+    </form>
+</div>

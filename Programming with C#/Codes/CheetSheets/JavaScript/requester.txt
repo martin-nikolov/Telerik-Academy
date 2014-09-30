@@ -1,0 +1,66 @@
+'use strict';
+
+// used to make requests and return promises
+app.factory('requester', function($http, $q){
+    function request(method, url, data, authorizationToken) {
+        // building the request parameters, based on the passed arguments
+        var httpOptions = {
+            url: url,
+            method: method,
+            transformRequest: function (obj) {
+                var str = [];
+                for (var p in obj)
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                return str.join("&");
+            },
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        };
+
+        if (data) {
+            httpOptions.data = data;
+        }
+
+        if (authorizationToken) {
+            httpOptions.headers.authorization = 'Bearer ' + authorizationToken;
+        }
+
+        // making the request
+        var deferred = $q.defer();
+
+        $http(httpOptions)
+            .success(function (data) {
+                deferred.resolve(data);
+            })
+            .error(function (error) {
+                deferred.reject(error);
+            });
+
+        return deferred.promise;
+    }
+
+    function httpGet(url, authorizationToken) {
+        return request('GET', url, undefined, authorizationToken);
+    }
+
+    function httpPost(url, data, authorizationToken) {
+        return request('POST', url, data, authorizationToken);
+    }
+
+    function httpPut(url, data, authorizationToken) {
+        return request('PUT', url, data, authorizationToken);
+    }
+
+    // add data if delete accepts data of some sort
+    function httpDelete(url, authorizationToken) {
+        return request('DELETE', url, undefined, authorizationToken);
+    }
+
+    return {
+        get : httpGet,
+        post: httpPost,
+        put: httpPut,
+        delete: httpDelete
+    }
+});

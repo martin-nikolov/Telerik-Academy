@@ -1,0 +1,24 @@
+Database.SetInitializer(new MigrateDatabaseToLatestVersion<BlogSystemContext, Configuration>());
+
+public IDbSet<T> Set<T>() where T : class
+{
+    return base.Set<T>();
+}
+
+public void SaveChanges()
+{
+    base.SaveChanges();
+}
+
+
+
+
+
+       config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.None;
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+
+repo.add(obj)
+DoInstead(() => isAddedCalled = true)
+
+MustBeCalled

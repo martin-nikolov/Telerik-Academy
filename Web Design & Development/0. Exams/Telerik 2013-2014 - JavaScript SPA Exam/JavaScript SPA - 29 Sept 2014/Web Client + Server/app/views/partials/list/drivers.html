@@ -1,0 +1,55 @@
+<div class="container" ng-cloak>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="page-head">Drivers</h1>
+        </div>
+    </div>
+
+    <div class="row filter-row" ng-if="isLoggedIn">
+        <div class="col-md-6">
+            <div class="col-md-5">
+                <input type="text" class="form-control" ng-model="driverName"/>
+            </div>
+            <button class="btn btn-primary" ng-click="filterByName(driverName)">Filter</button>
+        </div>
+
+        <div class="col-md-6">
+            <div class="col-md-2 pull-right">
+                <button class="btn btn-primary pull-right" ng-click="nextPage(driverName)">Next</button>
+            </div>
+            <div class="col-md-3 pull-right">
+                <input type="text" class="form-control text-center" disabled ng-model="currentPage"/>
+            </div>
+            <div class="col-md-2 pull-right">
+                <button class="btn btn-primary" ng-click="prevPage(driverName)">Previous</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-show="drivers.length==0">
+        <div class="col-md-12 text-center">
+            <h1 class="page-head">No Results!</h1>
+        </div>
+    </div>
+
+    <div class="row" ng-show="drivers.length!=0">
+        <div class="col-md-12">
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Upcoming Trips</th>
+                    <th>Total Trips</th>
+                </tr>
+                </thead>
+                <tbody ng-repeat="driver in drivers">
+                <tr class="text-center">
+                    <td><a href="#/drivers/{{ driver.id }}">{{ driver.name }}</a></td>
+                    <td>{{ driver.numberOfUpcomingTrips }}</td>
+                    <td>{{ driver.numberOfTotalTrips }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

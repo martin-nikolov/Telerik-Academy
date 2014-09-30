@@ -1,0 +1,30 @@
+<div class="container" ng-cloak>
+    <div class="row">
+        <div class="col-md-11 text-center">
+            <h1 class="page-head">{{ trip.driverName }} - {{ trip.departureDate | date : 'd MMM yyyy, HH:mm' }}</h1>
+        </div>
+        <div class="col-md-1" ng-hide="trip.isMine">
+            <button class="btn btn-primary" ng-click="joinInTrip()">Join Trip</button>
+        </div>
+    </div>
+
+    <div class="row trip-statistics">
+        <div class="col-md-4">
+            <div>From: <strong>{{ trip.from }}</strong></div>
+        </div>
+
+        <div class="col-md-4">
+            <div>To: <strong>{{ trip.to }}</strong></div>
+        </div>
+
+        <div class="col-md-4">
+            <div>Number of free seats: <strong>{{ trip.numberOfFreeSeats }}</strong></div>
+        </div>
+    </div>
+
+    <div class="row trip-statistics">
+        <div class="col-md-12">
+            Passengers: {{ trip.passengers }}
+        </div>
+    </div>
+</div>

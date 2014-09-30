@@ -89,3 +89,4 @@
 * [Telerik 2013-2014 - JavaScript Exam 2](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Exam%202) - 2x3 exercises
 * [Telerik 2013-2014 - JavaScript OOP Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20OOP%20Exam) - 1x2 exercises
 * [Telerik 2013-2014 - JavaScript Applications Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Apps%20Exam) - 1 exercise
+* [Telerik 2013-2014 - JavaScript SPA Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20SPA%20Exam) - 1 exercise

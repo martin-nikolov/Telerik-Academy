@@ -255,6 +255,9 @@
 * [Teamwork - JavaScript-based game](https://github.com/Reiko-JS/JavaScript-UI-and-DOM-2014-Teamwork) ([Demo](http://nikolov.cloudvps.bg/FruitNinja/)) - Jun, 2014 (Course - JavaScript UI & DOM)
 * [RockBands - RESTful Responsive SPA](https://github.com/flextry/RockBands) ([Demo](http://nikolov.cloudvps.bg/rockbands/)) - Aug, 2014 - `AngularJS + Cloud (Everlive)`
 
+## Mobile
+* [Teamwork - Hybrid Mobile Application](https://github.com/fast4y/MasterChefMobile) - Sept, 2014 - `Icenium`, `Everlive`, `ASP.NET Web API`, `KendoUI Mobile`
+
 ## Software Technologies
 * [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - Aug - Sept, 2014 - `MSSQL, MySQL, MongoDb, SQLite, XML, PDF, JSON`
 * [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - Sept, 2014 (Course - Databases) - `WPF + async, MongoDb `

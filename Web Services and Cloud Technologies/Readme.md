@@ -9,3 +9,4 @@
 * [Cloud Technologies and Cloud Platforms](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Services%20and%20Cloud%20Technologies/07.%20Cloud%20Technologies%20and%20Cloud%20Platforms)
 * [AppHarbor](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Services%20and%20Cloud%20Technologies/08.%20AppHarbor) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Services%20and%20Cloud%20Technologies/08.%20AppHarbor/Readme.md))
 * [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Web%20Services%20%26%20Cloud/Web%20Services%20%26%20Cloud%20-%20Exam%20Preparation)
+* [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Web%20Services%20%26%20Cloud/Web%20Services%20%26%20Cloud%20-%20Exam) - 23.09.2014

@@ -7,7 +7,7 @@
 | [C# - Part I](#c---part-i)                                                  | [HTML Basics](#html-basics)                         | [Databases](#databases)                                        |
 | [C# - Part II](#c---part-ii)                                                | [CSS Styling](#css-styling)                         | [Web Services and Cloud](#web-services-and-cloud-technologies) |
 | [C# - Object-Oriented Programming](#c---object-oriented-programming)        | [JavaScript Fundamentals](#javascript-fundamentals) | [JavaScript SPA](#javascript-single-page-applications)         |
-| [C# - High-Quality Code](#c---high-quality-code)                            | [JavaScript UI & DOM](#javascript-ui--dom)          | [JavaScript End-to-End Apps](#javascript-end-to-end-applications)   |
+| [C# - High-Quality Code](#c---high-quality-code)                            | [JavaScript UI & DOM](#javascript-ui--dom)          | [JavaScript End-to-End](#javascript-end-to-end-applications)   |
 | [C# - Data Structures and Algorithms](#c---data-structures-and-algorithms)  | [JavaScript OOP](#javascript-oop)                   | [Exams](#software-technologies---exams)                        | 
 | [C# - Exams](#c---exams)                                                    | [JavaScript Applications](#javascript-applications) | [Projects](#software-technologies-1)                           |
 | [Algo Academy](#algo-academy)                                               | [PHP Web-development](#php-web-development)         |

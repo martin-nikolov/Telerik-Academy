@@ -81,6 +81,15 @@
 5. [AngularJS - Directives](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/05.%20AngularJS%20-%20Directives) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/7.%20JavaScript%20Single-Page%20Applications/05.%20AngularJS%20-%20Directives/Readme.md)) - 25.09.2014
 6. [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20SPA%20Exam/JavaScript%20SPA%20-%2029%20Sept%202014) - 30.09.2014
 
+## JavaScript End-to-End Applications
+
+1. [Introduction to NodeJS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/01.%20Introduction%20to%20NodeJS)
+2. [NodeJS Web Server](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/02.%20NodeJS%20Web%20Server/) - ([assignment] (https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/02.%20NodeJS%20Web%20Server/Readme.md))
+3. [Advanced NodeJS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/03.%20Advanced%20Node.js)
+4. [MongoDB and Mongoose](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/04.%20MongoDB%20and%20Mongoose) - ([assignment] (https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/04.%20MongoDB%20and%20Mongoose/Readme.md))
+5. [NodeJS View Engines](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/05.%20NodeJS%20View%20Engines) - ([assignment] (https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/05.%20NodeJS%20View%20Engines/Readme.md))
+6. [ExpressJS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/06.%20ExpressJS) - ([assignment] (https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/06.%20ExpressJS/Readme.md))
+
 ## Web Design & Development - Exams
 1. [Telerik 2012-2013 - CSS Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202012-2013%20-%20CSS%20Exam) - 5x3 exercises
 * [Telerik 2013-2014 - CSS Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20CSS%20Exam) - 3x3 exercises

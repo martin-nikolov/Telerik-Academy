@@ -1,0 +1,16 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Telerik",
+  "license": "ISC",
+  "dependencies": {
+    "fileupload": "^0.3.0",
+    "formidable": "^1.0.15",
+    "node-uuid": "^1.4.1"
+  }
+}

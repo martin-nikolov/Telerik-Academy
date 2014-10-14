@@ -257,6 +257,8 @@
 ## Software Technologies - Exams
 1. [Telerik 2013-2014 - Databases](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Databases) - 2x2 exercises
 * [Telerik 2013-2014 - Web Services & Cloud Technologies](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Web%20Services%20%26%20Cloud) - 2x1 exercises
+* [Telerik 2013-2014 - JavaScript SPA Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20SPA%20Exam) - 1 exercise
+* [Telerik 2013-2014 - JavaScript End-to-End Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20End-to-End%20Exam) - 2x1 exercises
 
 # Projects
 

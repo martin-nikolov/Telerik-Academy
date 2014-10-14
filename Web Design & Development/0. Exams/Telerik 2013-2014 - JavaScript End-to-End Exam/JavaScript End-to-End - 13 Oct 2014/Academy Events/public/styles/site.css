@@ -1,0 +1,8 @@
+body {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+div.col-md-6 form.form-horizontal input.form-control {
+    margin-bottom: 5px;
+}

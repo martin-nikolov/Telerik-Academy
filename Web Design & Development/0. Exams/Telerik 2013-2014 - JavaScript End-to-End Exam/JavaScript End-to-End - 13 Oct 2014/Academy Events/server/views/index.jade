@@ -1,0 +1,18 @@
+extends shared/layout
+
+block main-content
+    .row
+        .col-md-12
+            h1 All passed events - statistics
+            br
+    .row
+        each event in events
+            .col-md-6
+                p Title: #{event.title}
+                p Creator: #{event.creatorName}
+                p Type: #{event.type}
+                p Date: #{event.eventDate}
+                p Evaluation: (Organization: #{event.eventPoints.organization}, Venue: #{event.eventPoints.venue})
+                p
+                    a.btn.btn-sm.btn-info(href="/events/details/#{event._id}") See info
+                hr

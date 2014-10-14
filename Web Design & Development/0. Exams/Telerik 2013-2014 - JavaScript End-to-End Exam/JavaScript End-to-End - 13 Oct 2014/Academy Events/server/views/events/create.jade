@@ -1,0 +1,33 @@
+extends ../shared/layout
+
+block main-content
+    .row
+        .col-md-3
+        .col-md-6
+            form.form-horizontal(method="post")
+                h2.form-sign-in-heading Create new event
+                input(id="title" class="form-control" type="text" name="title" placeholder="Title", required)
+                input(id="description" class="form-control" type="text" name="description" placeholder="Description", required)
+                .form-group
+                    label Event date
+                    input(id="eventDate" class="form-control" type="date" name="eventDate" placeholder="Event date (format: mm/dd/yyyy)", required)
+                .form-group
+                    label Category:
+                    select.form-control(name="category")
+                        each category in categories
+                            option(value=category) #{category}
+                .form-group
+                    label Initiative:
+                    select.form-control(name="initiative")
+                        each initiative in initiatives
+                            option(value=initiative._id) #{initiative.name} - Season #{initiative.season}
+                .form-group
+                    label Event type:
+                    select.form-control(name="eventType")
+                        option(value="public") Public event
+                        option(value="initiative-based") Initiative-based event
+                        option(value="initiative-and-season-based") Initiative-and-season-based event
+                br
+                input(id="latitude" class="form-control" type="number" name="latitude" placeholder="Latitude", required)
+                input(id="longitude" class="form-control" type="number" name="longitude" placeholder="Longitude", required)
+                input(type="submit" class="btn btn-md btn-primary btn-block" value="Create event")

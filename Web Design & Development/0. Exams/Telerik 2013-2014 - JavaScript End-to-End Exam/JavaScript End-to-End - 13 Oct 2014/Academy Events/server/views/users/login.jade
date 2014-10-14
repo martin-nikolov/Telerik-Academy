@@ -1,0 +1,11 @@
+extends ../shared/layout
+
+block main-content
+    .row
+        .col-md-3
+        .col-md-6
+            form.form-horizontal(method="post")
+                h2.form-sign-in-heading Please sign in
+                input(id="username" class="form-control" type="text" name="username" placeholder="Username", value="1234567", required)
+                input(id="password" class="form-control" type="password" name="password" placeholder="Password", value="1234567", required)
+                input(type="submit" class="btn btn-md btn-primary btn-block" value="Sign in")

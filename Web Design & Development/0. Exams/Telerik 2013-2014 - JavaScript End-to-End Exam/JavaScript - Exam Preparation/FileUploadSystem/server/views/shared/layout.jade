@@ -1,0 +1,39 @@
+doctype
+html
+    head
+        title Telerik File Upload System
+        link(rel="stylesheet" href="/lib/bootstrap-3.2.0/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/css/site.css")
+    body
+        header.nav
+        .container
+            .navbar-header
+                a.navbar-brand(href="/") File Upload
+            .navbar-collapse.collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href="/") Home
+                    if (currentUser)
+                        li
+                            a(href="/upload") Upload
+                        li
+                            a(href="/profile") #{currentUser.username}
+                        li
+                            a(href="/logout") Logout
+                    else
+                        li
+                            a(href="/register") Register
+                        li
+                            a(href="/login") Login
+
+        .container
+            if (errorMessage)
+                .alert.alert-danger #{errorMessage}
+
+            block main-content
+
+        footer
+            p.text-center
+                | &copy; Telerik Academy 2014
+
+        include scripts

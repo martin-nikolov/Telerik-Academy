@@ -1,0 +1,22 @@
+extends ../shared/layout
+
+block main-content
+    row
+        .col-md-6
+            p#event-id.hidden #{event._id}
+            p Title: #{event.title}
+            p Description: #{event.description}
+            p Location: (latitude: #{event.location.latitude}, longitude: #{event.location.longitude})
+            p Creator: #{event.creatorName}
+            p Type: #{event.type}
+            p Date: #{event.eventDate}
+            p Evaluation: (Organization: #{event.eventPoints.organization}, Venue: #{event.eventPoints.venue})
+            p Initiative: #{event.initiative.name } - Season #{event.initiative.season}
+            p
+                each user in event.joinedInUsers
+                    div #{user.username}
+            p
+                form.form-horizontal(method="post")
+                    button.btn.btn-sm.btn-primary Join in event
+            p
+                button#btn-event-leave.btn.btn-sm.btn-primary Leave event

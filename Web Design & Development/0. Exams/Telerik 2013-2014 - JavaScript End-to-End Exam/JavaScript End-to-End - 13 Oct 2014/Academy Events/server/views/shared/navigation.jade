@@ -1,0 +1,38 @@
+header.nav.navbar-inverse.navbar-fixed-top
+    .container
+        .navbar-header
+            button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbar-main")
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href="/") End-to-End
+        #navbar-main.navbar-collapse.collapse
+            ul.nav.navbar-nav
+                if (currentUser)
+                    li
+                        a(href="/events/active") Active Events
+                    li
+                        a(href="/events/past") Past Events
+                    li
+                        a(href="/events/create") Create
+                    li
+                        a(href="/events/mine-active") My Active
+                    li
+                        a(href="/events/mine-passed") My Passed
+                    li
+                        a(href="/events/mine-all") All my Events
+                    li
+                        a(href="/events/mine-joined") Joined Events
+                    li
+                        a(href="/profile") Profile
+            ul.nav.navbar-nav.navbar-right
+                if (currentUser)
+                    li
+                        a(href="/profile") Hello, #{currentUser.username}
+                    li
+                        a(href="/logout") Logout
+                else
+                    li
+                        a(href="/register") Register
+                    li
+                        a(href="/login") Login

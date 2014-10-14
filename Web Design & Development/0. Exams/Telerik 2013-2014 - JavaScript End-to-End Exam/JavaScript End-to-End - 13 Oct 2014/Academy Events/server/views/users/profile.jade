@@ -1,0 +1,34 @@
+extends ../shared/layout
+
+block main-content
+    .row
+        .col-md-3
+        .col-md-6
+            form.form-horizontal(method="post")
+                h2.form-sign-in-heading Profile
+                div.text-center
+                    img(src="#{user.profileImgUrl}")
+                    br
+                    br
+                .form-group
+                    label Profile image url:
+                    input(id="profileImgUrl" class="form-control" type="text" name="profileImgUrl" placeholder="Profile image", required, value="#{user.profileImgUrl}")
+                .form-group
+                    label Phone number:
+                    input(id="phoneNumber" class="form-control" type="text" name="phoneNumber" placeholder="Phone number (optional)", value="#{user.phoneNumber}")
+                .form-group
+                    h2 Profiles:
+                .form-group
+                    label Facebook
+                    input(id="newPhoneNumber" class="form-control" type="text" name="externalProfiles.facebook" placeholder="Facebook (optional)", value="#{user.externalProfiles.facebook}")
+                .form-group
+                    label Twitter
+                    input(id="newPhoneNumber" class="form-control" type="text" name="externalProfiles.twitter" placeholder="Twitter (optional)", value="#{user.externalProfiles.twitter}")
+                .form-group
+                    label Google+
+                    input(id="newPhoneNumber" class="form-control" type="text" name="externalProfiles.googlePlus" placeholder="Google+ (optional)", value="#{user.externalProfiles.googlePlus}")
+                .form-group
+                    label LinkedIn
+                    input(id="newPhoneNumber" class="form-control" type="text" name="externalProfiles.linkedIn" placeholder="LinkedIn (optional)", value="#{user.externalProfiles.linkedIn}")
+                .form-group
+                    input(type="submit" class="btn btn-md btn-primary btn-block" value="Update")

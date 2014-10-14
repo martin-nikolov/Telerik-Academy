@@ -1,0 +1,17 @@
+extends ../shared/layout
+block main-content
+    .row
+        .col-md-12
+            h1 All passed events
+    .row
+        each event in events
+            .col-md-6
+                p Title: #{event.title}
+                p Description: #{event.description}
+                p Location: (latitude: #{event.location.latitude}, longitude: #{event.location.longitude})
+                p Creator: #{event.creatorName}
+                p Type: #{event.type}
+                p Date: #{event.eventDate}
+                p
+                    a.btn.btn-sm.btn-info(href="/events/details/#{event._id}") See info
+                hr

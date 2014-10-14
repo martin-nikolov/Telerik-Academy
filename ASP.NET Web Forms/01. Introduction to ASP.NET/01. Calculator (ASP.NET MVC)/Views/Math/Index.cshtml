@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Calculator";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Calculator</h2>
+            <form id="calculatorForm" method="post">
+                <div class="row">
+                    <div class="form-group">
+                        <input type="text" name="firstNumber" value="@ViewBag.firstNumber" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="secondNumber" value="@ViewBag.secondNumber" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Calculate" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    Result: <span>@ViewBag.Sum</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

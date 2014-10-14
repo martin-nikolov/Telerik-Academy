@@ -280,7 +280,7 @@
 * [Online Desktop Chat Client](https://github.com/flextry/Telerik-Academy/tree/master/Databases/14.%20MongoDB%20and%20using%20MongoDB%20with%20.NET) - Sept, 2014 (Course - Databases) - `WPF + async, MongoDb `
 * [RockBands - RESTful WebAPI](https://github.com/flextry/RockBands-RestAPI) ([Demo](http://rockbands.apphb.com/)) - Sept, 2014 - `ASP.NET WebAPI, MSSQL, AngularJS`
 * [TicTacToe - RESTful WebAPI](https://github.com/flextry/Tic-Tac-Toe-RestAPI) ([Demo](http://tic-tac-toe-game.apphb.com/)) - Sept, 2014 - `ASP.NET WebAPI, MSSQL, AngularJS`
-* [RateMyX - MEAN Stack Application](https://github.com/flextry/RateMyX) ([Demo](http://ratemyx.herokuapp.com/)) - Oct, 2014 (Course - JS End-to-End)
+* [RateMyX](https://github.com/flextry/RateMyX) ([Demo](http://ratemyx.herokuapp.com/)) - Oct, 2014 (Course - JS End-to-End) - `MEAN Stack Application + Everlive`
 
 ## Other Simple & Interesting Tasks
 * [Windows 8 Calculator](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/2.%20CSS%20Styling/02.%20CSS%20-%20Presentation/04.%20Windows%20Calculator) ([Demo](http://nikolov.cloudvps.bg/Windows%208%20Calculator/)) - `HTML / CSS`

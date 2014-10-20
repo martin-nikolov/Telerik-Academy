@@ -1,0 +1,63 @@
+﻿body
+{
+    font-size: 1.5em;
+}
+
+#header
+{
+    background: #EEEEEE;
+    text-align: center;
+}
+
+#sidebar
+{
+    float: left;
+    width: 300px;
+    background: #DDFFDD;
+}
+
+#sidebar .sidebar-title
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+#main-content
+{
+    float: left;
+    left: 160px;
+    padding: 10px;
+}
+
+#main-content img.profile-img
+{
+    float: left
+}
+
+ul.friends-list li {
+    list-style-type: none;
+    float: left;
+    margin-right: 25px;
+}
+
+ul.friends-list span {
+    display: block;
+    text-align: center;
+}
+
+#main-content ul
+{
+    display: inline-block;
+}
+
+#main-content h1
+{
+    color: green;
+}
+
+#footer
+{
+    clear: both;
+    text-align: center;
+    background: #EEEEEE;
+}

@@ -1,0 +1,144 @@
+﻿header
+{
+    display: block;
+    text-align: center;
+    background-color: #afccd3;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+header .home-link
+{
+    float: left;
+}
+
+header .home-link:hover
+{
+    float: left;
+    height: 24px;
+}
+
+header .home-link a
+{
+    text-decoration: none;
+}
+
+header#users-area
+{
+    background-color: #ffaa00;
+}
+
+header#admin-area
+{
+    background-color: #ff8769;
+}
+
+aside
+{
+    display: block;
+    margin-bottom: 10px;
+}
+
+aside.users-sidebar
+{
+    float: left;
+    background-color: #ffee77; 
+    width: 100px;
+}
+
+aside.admin-sidebar
+{
+    float: right;
+    background-color: #feddaa; 
+    width: 190px;
+}
+
+aside ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+aside ul li
+{
+    padding: 5px;
+}
+
+aside ul li:hover
+{
+    background-color: #e8a950;
+}
+    
+aside a
+{
+    text-decoration: none;
+}
+
+.content
+{
+    float: left;
+    margin-left: 10px;
+}
+
+.content:after
+{
+    clear: both;
+}
+
+#welcome-text
+{
+    font-size: 24px;
+    margin: 15px 15px 0px 15px;
+    font-weight: normal;
+}
+
+.bg-icon, .uk-icon
+{
+    display: inline-block;
+    width: 200px;
+    height: 180px;
+    border: 3px solid #ff7d00;
+    border-radius: 3px;
+    background-color: rgba(255, 106, 0, 0.40);
+    background-image: url('Images/users.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 60px;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 20px;
+    margin: 15px;
+    font-size: 18pt;
+    color: #271674;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.users-icon:hover, .administrators-icon:hover
+{
+    background-color: rgba(255, 106, 0, 0.70);
+}
+
+.bg-icon
+{
+    background-image: url('../Images/bg.jpg');
+}
+
+.uk-icon
+{
+    background-image: url('../Images/uk.jpg');
+}
+
+footer
+{
+    display: block;
+    text-align: center;
+    background-color: #afccd3;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 10px;
+    clear: both;
+}

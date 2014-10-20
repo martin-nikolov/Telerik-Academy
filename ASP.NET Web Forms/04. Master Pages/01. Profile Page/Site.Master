@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ProfilePage.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title>Profile Page</title>
+        <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <form id="mainForm" runat="server">
+            <header id="header">
+                Welcome!
+            </header>
+            <aside id="sidebar">
+                <div class="sidebar-title">Menu</div>
+                <ul>
+                    <li>
+                        <a href="~/" runat="server">Home</a>
+                    </li>
+                    <li>
+                        <a href="~/Views/Profile.aspx" runat="server">Profile</a>
+                    </li>
+                    <li>
+                        <a href="~/Views/AdditionalInfo.aspx" runat="server">Additional Information</a>
+                    </li>
+                    <li>
+                        <a href="~/Views/Friends.aspx" runat="server">Friends</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <section id="main-content">
+                <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">        
+                </asp:ContentPlaceHolder>
+            </section>
+
+            <footer id="footer">
+                Telerik Academy &copy; 2014
+            </footer>
+        </form>
+    </body>
+</html>

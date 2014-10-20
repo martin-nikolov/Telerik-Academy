@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" %>
+
+<asp:Content ContentPlaceHolderID="HeaderContentPlaceHolder" runat="server">
+    <div class="home-link"><a href="/"><img runat="server" src="~/Images/home-icon.png" /></a></div>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="PageContentPlaceHolder"
+    ID="ContentPage" runat="server">
+    <header id="users-area">Bulgaria</header>
+    <aside class="users-sidebar">
+        <ul>
+            <li><a href="Home.aspx">Home</a></li>
+            <li><a href="About.aspx">About</a></li>
+            <li><a href="Contacts.aspx">Contacts</a></li>
+        </ul>
+    </aside>
+    <div class="content"> 
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" />
+    </div>
+</asp:Content>

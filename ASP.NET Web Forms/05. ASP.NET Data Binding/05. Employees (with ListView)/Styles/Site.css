@@ -1,0 +1,39 @@
+﻿h3
+{
+    background: #c7c7c7;
+    padding: 10px;
+    border: #aaaaaa dotted 1px;
+}
+
+.employee-description
+{
+    background: #e7e7e7;
+    padding: 10px;
+    border: #aaaaaa dotted 1px;
+}
+
+.employee-description h4
+{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#DataPagerEmployee
+{
+    display: block;
+    padding-top: 25px;
+}
+
+#DataPagerEmployee *
+{
+    margin: 10px 10px 10px 0px;
+    padding: 5px 15px 5px 15px;
+    background: #eee;
+    border: #aaaaaa dotted 1px;
+}
+
+hr
+{
+    border-top: none;
+    border-bottom: #aaaaaa dotted 1px;
+}

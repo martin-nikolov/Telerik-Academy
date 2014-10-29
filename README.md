@@ -192,8 +192,9 @@
 6. [ExpressJS](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/06.%20ExpressJS) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/06.%20ExpressJS/Readme.md)) - 11.10.2014
 7. [Tools for JavaScript Development](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/07.%20Tools%20for%20JavaScript%20Development) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/07.%20Tools%20for%20JavaScript%20Development/Readme.md)) - 11.10.2014
 8. [App deployment in Cloud](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/8.%20JavaScript%20End-to-End%20Applications/08.%20App%20deployment%20in%20Cloud)
-9. [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20End-to-End%20Exam/JavaScript%20-%20Exam%20Preparation)
-10. [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20End-to-End%20Exam/JavaScript%20End-to-End%20-%2013%20Oct%202014) - 13.10.2014
+9. [Teamwork](https://github.com/Telerik-Hackathon-2014/YourFood) - 10.10.2014 
+10. [Exam Preparation](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20End-to-End%20Exam/JavaScript%20-%20Exam%20Preparation)
+11. [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20End-to-End%20Exam/JavaScript%20End-to-End%20-%2013%20Oct%202014) - 13.10.2014
 
 ## PHP Web-development
 1. [Creating an address book](https://github.com/flextry/Telerik-Academy/tree/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/PHP%20Web%20Development/01.%20Creating%20an%20address%20book/Readme.md)) - 22.09.2013

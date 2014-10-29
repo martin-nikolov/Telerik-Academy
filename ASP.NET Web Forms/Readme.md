@@ -14,4 +14,4 @@
 * [ASP.NET User Controls](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/12.%20ASP.NET%20User%20Controls) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/12.%20ASP.NET%20User%20Controls/Readme.md))
 * [ASP.NET Identity]() - ([assignment]())
 * [Teamwork](https://github.com/Team-Charlotte-Bronte/ASP-NET-Web-Forms-Teamwork-2014) - 24.10.2014
-* [Exam]() - - 29.10.2014
+* [Exam]() - 29.10.2014

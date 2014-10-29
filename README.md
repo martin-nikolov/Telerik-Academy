@@ -215,6 +215,7 @@
 * [Telerik 2013-2014 - JavaScript Applications Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20Apps%20Exam) - 1 exercise
 * [Telerik 2013-2014 - JavaScript SPA Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20SPA%20Exam) - 1 exercise
 * [Telerik 2013-2014 - JavaScript End-to-End Exam](https://github.com/flextry/Telerik-Academy/tree/master/Web%20Design%20%26%20Development/0.%20Exams/Telerik%202013-2014%20-%20JavaScript%20End-to-End%20Exam) - 2x1 exercises
+* [Telerik 2013-2014 - ASP.NET Web Forms](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20ASP.NET%20Web%20Forms) - 1x1 exercise
 
 # Software Technologies
 
@@ -261,11 +262,17 @@
 * [ASP.NET Web Forms - Intro](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/02.%20ASP.NET%20Web%20Forms%20-%20Intro) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/02.%20ASP.NET%20Web%20Forms%20-%20Intro/Readme.md)) - 14.10.2014
 * [ASP.NET Web Controls and HTML Controls](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/03.%20ASP.NET%20Web%20Controls%20and%20HTML%20Controls) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/03.%20ASP.NET%20Web%20Controls%20and%20HTML%20Controls/Readme.md)) - 20.10.2014
 * [Master Pages](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/04.%20Master%20Pages) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/04.%20Master%20Pages/Readme.md)) - 20.10.2014
-* [ASP.NET Data Binding](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/05.%20ASP.NET%20Data%20Binding) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/05.%20ASP.NET%20Data%20Binding/Readme.md))
+* [ASP.NET Data Binding](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/05.%20ASP.NET%20Data%20Binding) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/05.%20ASP.NET%20Data%20Binding/Readme.md)) - 22.10.2014
 * [ASP.NET Data Source Controls](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/06.%20ASP.NET%20Data%20Source%20Controls) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/06.%20ASP.NET%20Data%20Source%20Controls/Readme.md))
 * [ASP.NET State Management](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/07.%20ASP.NET%20State%20Management) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/07.%20ASP.NET%20State%20Management/Readme.md))
 * [File Upload in ASP.NET](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/08.%20File%20Upload%20in%20ASP.NET) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/08.%20File%20Upload%20in%20ASP.NET/Readme.md)) - 21.10.2014
 * [Site Maps and Navigation](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/09.%20Site%20Maps%20and%20Navigation) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/09.%20Site%20Maps%20and%20Navigation/Readme.md))
+* [Validation Controls](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/10.%20Validation%20Controls) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/10.%20Validation%20Controls/Readme.md))
+* [ASP.NET AJAX – Basics](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/11.%20ASP.NET%20AJAX%20%E2%80%93%20Basics) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/11.%20ASP.NET%20AJAX%20%E2%80%93%20Basics/Readme.md))
+* [ASP.NET User Controls](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/12.%20ASP.NET%20User%20Controls) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/12.%20ASP.NET%20User%20Controls/Readme.md))
+* [ASP.NET Identity](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/13.%20ASP.NET%20Identity) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/13.%20ASP.NET%20Identity/Readme.md))
+* [Teamwork](https://github.com/Team-Charlotte-Bronte/ASP-NET-Web-Forms-Teamwork-2014) - 24.10.2014
+* [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20ASP.NET%20Web%20Forms/ASP.NET%20Web%20Forms%20-%2029%20October%202014) - 29.10.2014
 
 ## Software Technologies - Exams
 1. [Telerik 2013-2014 - Databases](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20Databases) - 2x2 exercises

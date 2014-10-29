@@ -12,6 +12,6 @@
 * [Validation Controls](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/10.%20Validation%20Controls) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/10.%20Validation%20Controls/Readme.md))
 * [ASP.NET AJAX – Basics](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/11.%20ASP.NET%20AJAX%20%E2%80%93%20Basics) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/11.%20ASP.NET%20AJAX%20%E2%80%93%20Basics/Readme.md))
 * [ASP.NET User Controls](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/12.%20ASP.NET%20User%20Controls) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/12.%20ASP.NET%20User%20Controls/Readme.md))
-* [ASP.NET Identity]() - ([assignment]())
+* [ASP.NET Identity](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/13.%20ASP.NET%20Identity) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/13.%20ASP.NET%20Identity/Readme.md))
 * [Teamwork](https://github.com/Team-Charlotte-Bronte/ASP-NET-Web-Forms-Teamwork-2014) - 24.10.2014
-* [Exam]() - 29.10.2014
+* [Exam](https://github.com/flextry/Telerik-Academy/tree/master/Programming%20with%20C%23/0.%20Exams/Telerik%202013-2014%20-%20ASP.NET%20Web%20Forms/ASP.NET%20Web%20Forms%20-%2029%20October%202014) - 29.10.2014

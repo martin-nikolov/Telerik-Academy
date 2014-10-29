@@ -9,3 +9,9 @@
 * [ASP.NET State Management](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/07.%20ASP.NET%20State%20Management) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/07.%20ASP.NET%20State%20Management/Readme.md))
 * [File Upload in ASP.NET](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/08.%20File%20Upload%20in%20ASP.NET) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/08.%20File%20Upload%20in%20ASP.NET/Readme.md)) - 21.10.2014
 * [Site Maps and Navigation](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/09.%20Site%20Maps%20and%20Navigation) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/09.%20Site%20Maps%20and%20Navigation/Readme.md))
+* [Validation Controls](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/10.%20Validation%20Controls) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/10.%20Validation%20Controls/Readme.md))
+* [ASP.NET AJAX – Basics](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/11.%20ASP.NET%20AJAX%20%E2%80%93%20Basics) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/11.%20ASP.NET%20AJAX%20%E2%80%93%20Basics/Readme.md))
+* [ASP.NET User Controls](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/12.%20ASP.NET%20User%20Controls) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/12.%20ASP.NET%20User%20Controls/Readme.md))
+* [ASP.NET Identity]() - ([assignment]())
+* [Teamwork](https://github.com/Team-Charlotte-Bronte/ASP-NET-Web-Forms-Teamwork-2014) - 24.10.2014
+* [Exam]() - - 29.10.2014

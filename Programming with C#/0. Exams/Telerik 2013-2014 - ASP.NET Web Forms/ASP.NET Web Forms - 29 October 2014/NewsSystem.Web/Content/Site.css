@@ -1,0 +1,200 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body
+{
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt
+{
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"]
+{
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px)
+{
+    .jumbotron
+    {
+        margin-top: 20px;
+    }
+
+    .body-content
+    {
+        padding: 0;
+    }
+}
+
+/* additional CSS for the News Site */
+.like-control
+{
+    margin: 20px 0 0 0;
+}
+
+.like-control .like-value
+{
+    font-size: 24px;
+    text-align: center;
+    width: 40px;
+    display: inline-block;
+}	
+
+.row
+{
+    margin-top: 10px;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+/* styles for removing the background from form */
+.no-color
+{
+    background-color: white;
+    border-style: none;
+}
+
+.search-button
+{
+    padding-top: 15px;
+    float: right;
+}
+
+/*ul li
+{
+padding-bottom: 5px;
+}*/
+
+.book-title
+{
+    padding: 10px;
+    font-size: 16pt;
+    background: #EEEEEE;
+}
+
+.book-author
+{
+    font-size: 12pt;
+    font-style: italic;
+}
+
+.book-isbn
+{
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.book-description
+{
+    font-size: 10pt;
+}
+
+.search-results ul li
+{
+    margin: 5px;
+}
+
+.back-link
+{
+    padding-top: 10px;
+}
+
+.create-link
+{
+    padding-top: 10px;
+}
+
+.gridview td, th
+{
+    padding: 5px 7px 5px 7px;
+    border-style: dotted;
+    border-color: #BBB;
+}
+
+.gridview th
+{
+    background: #eee;
+}
+
+.gridview table td
+{
+    padding: 0px 5px 0px 0px;
+    border-style: none;
+}
+
+.panel
+{
+    display: inline-block;
+    padding: 5px 15px 10px 15px;
+    margin-top: 20px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: #BBB;
+    border-radius: 6px;
+}
+
+.panel h2
+{
+    font-size: 32px;
+    padding-left: 10px;
+    border-radius: 4px;
+}
+
+.panel label span
+{
+    display: inline-block;
+    width: 85px;
+}
+
+.panel label *
+{
+    margin-top: 8px;
+    width: 300px;
+}
+
+.link-button
+{
+    background: #E0E0E0;
+    padding: 3px 8px 3px 8px;
+    border-radius: 2px;
+    margin: 0px 2px 0px 2px;
+}
+
+.link-button:hover
+{
+    background: #AAA;
+    color: #EEF;
+    text-decoration: none;
+}
+
+textarea
+{
+    width: 100%;
+}
+
+.article-container
+{
+    padding-left: 110px;
+}

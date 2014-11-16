@@ -1,0 +1,23 @@
+﻿@model TicketingSystem.Web.ViewModels.Comments.PostCommentViewModel
+
+@using (Ajax.BeginForm("PostComment", "Comments",
+        new AjaxOptions
+        {
+            HttpMethod = "POST",
+            InsertionMode = InsertionMode.InsertBefore,
+            UpdateTargetId = "comments"
+        }))
+{
+    @Html.AntiForgeryToken()
+    
+    @Html.HiddenFor(m => m.TicketId)
+    @Html.EditorFor(m => m.Content)
+    
+    <div class="col-md-5">
+        <input type="submit" class="btn btn-default pull-right" value="Comment" />
+    </div>
+}
+
+<br />
+<br />
+<br />

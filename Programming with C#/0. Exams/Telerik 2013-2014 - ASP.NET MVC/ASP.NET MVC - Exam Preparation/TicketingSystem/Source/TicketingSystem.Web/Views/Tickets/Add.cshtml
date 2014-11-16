@@ -1,0 +1,45 @@
+﻿@using TicketingSystem.Web.ViewModels.Tickets
+
+@model CreateTicketViewModel
+@{
+    ViewBag.Title = "Add Ticket";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Add", "Tickets", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.EditorFor(m => m.CategoryId, new { ListItem = Model.Categories })
+    @Html.EditorFor(m => m.Title)
+    @Html.EditorFor(m => m.Description)
+    @Html.EditorFor(m => m.Priority)
+
+    <div class="row">
+        <div class="col-md-2">
+            <strong>Image</strong>
+        </div>
+        <div class="col-md-5">
+            <div class="fileinput fileinput-new" data-provides="fileinput">
+                <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+                <div>
+                    <span class="btn btn-default btn-file"> <span class="fileinput-new">Select image</span> <span class="fileinput-exists">Change</span>
+                        <input type="file" name="UploadedImage" /> </span>
+                    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-md-5 col-md-offset-2">
+            <input type="submit" value="Add ticket" class="btn btn-primary" />
+        </div>
+    </div>
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

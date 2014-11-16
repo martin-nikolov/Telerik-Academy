@@ -1,0 +1,42 @@
+﻿@model IEnumerable<TicketingSystem.Data.Models.Comment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Comments</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Author.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ticket.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ticket.Title)
+        </td>
+        <td style="word-break: break-all">
+            @Html.DisplayFor(modelItem => item.Content)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CommentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CommentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CommentId })
+        </td>
+    </tr>
+}
+
+</table>

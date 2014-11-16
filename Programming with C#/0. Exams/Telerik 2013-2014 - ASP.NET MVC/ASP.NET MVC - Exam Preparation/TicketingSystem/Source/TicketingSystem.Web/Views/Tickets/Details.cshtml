@@ -1,0 +1,54 @@
+﻿@using TicketingSystem.Web.ViewModels.Comments;
+@using TicketingSystem.Web.ViewModels.Tickets
+
+@model TicketDetailsViewModel
+@{
+    ViewBag.Title = "Ticket Details - " + Model.Title;
+}
+
+<h2>@Model.Title</h2>
+<h3>Category: @Model.CategoryName</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <div>
+            <strong>Author: </strong> @Model.AuthorName
+        </div>
+        <div>
+            <strong>Priority: </strong> @Model.Priority
+        </div>
+    </div>
+    <div class="col-md-4">
+        @if (Model.ImageId != null)
+        {
+            <img src="@Url.Action("Image", "Tickets", new { id = Model.ImageId.Value })" alt="@Model.Title" class="img-responsive" />
+        }
+    </div>
+    <div class="col-md-4" style="word-wrap: break-word">
+        @if (!string.IsNullOrEmpty(Model.Description))
+        {
+            <strong>Description: </strong> @Model.Description
+        }
+    </div>
+</div>
+
+<br />
+
+@if (User.Identity.IsAuthenticated)
+{
+    @Html.Partial("_PostCommentPartial", new PostCommentViewModel(Model.TicketId))
+}
+
+<br />
+
+<div id="comments">
+    @foreach (var comment in Model.Comments)
+    {
+        @Html.Partial("_CommentPartial", comment)
+    }
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryajax")
+    @Scripts.Render("~/bundles/jqueryval")
+}

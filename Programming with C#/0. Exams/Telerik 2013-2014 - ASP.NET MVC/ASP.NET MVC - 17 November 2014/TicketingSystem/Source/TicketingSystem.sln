@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{55AB3B43-F9DB-4CBB-8713-D6B4823BA293}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{8ABA9F56-72C4-4AC7-8394-7CCAE2342340}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{559AAC1E-7162-46B1-9AC6-B320DD9EADF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{59B919A3-F9B3-4B2A-B9D4-04C92ECC1EAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketingSystem.Data.Models", "TicketingSystem.Data.Models\TicketingSystem.Data.Models.csproj", "{1C887DE5-A706-4544-A285-563AAF5BAEB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketingSystem.Data", "TicketingSystem.Data\TicketingSystem.Data.csproj", "{C876CA49-C92B-445D-AEAF-CAEAD093A9EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketingSystem.Web", "TicketingSystem.Web\TicketingSystem.Web.csproj", "{06FDCDFC-95DB-4E35-ABA2-BAEAF858599E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketingSystem.Common", "TicketingSystem.Common\TicketingSystem.Common.csproj", "{BE315F3B-3113-4970-85AA-E215CA146254}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C887DE5-A706-4544-A285-563AAF5BAEB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C887DE5-A706-4544-A285-563AAF5BAEB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C887DE5-A706-4544-A285-563AAF5BAEB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C887DE5-A706-4544-A285-563AAF5BAEB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C876CA49-C92B-445D-AEAF-CAEAD093A9EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C876CA49-C92B-445D-AEAF-CAEAD093A9EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C876CA49-C92B-445D-AEAF-CAEAD093A9EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C876CA49-C92B-445D-AEAF-CAEAD093A9EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06FDCDFC-95DB-4E35-ABA2-BAEAF858599E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06FDCDFC-95DB-4E35-ABA2-BAEAF858599E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06FDCDFC-95DB-4E35-ABA2-BAEAF858599E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06FDCDFC-95DB-4E35-ABA2-BAEAF858599E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE315F3B-3113-4970-85AA-E215CA146254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE315F3B-3113-4970-85AA-E215CA146254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE315F3B-3113-4970-85AA-E215CA146254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE315F3B-3113-4970-85AA-E215CA146254}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C887DE5-A706-4544-A285-563AAF5BAEB6} = {55AB3B43-F9DB-4CBB-8713-D6B4823BA293}
+		{C876CA49-C92B-445D-AEAF-CAEAD093A9EE} = {55AB3B43-F9DB-4CBB-8713-D6B4823BA293}
+		{06FDCDFC-95DB-4E35-ABA2-BAEAF858599E} = {8ABA9F56-72C4-4AC7-8394-7CCAE2342340}
+		{BE315F3B-3113-4970-85AA-E215CA146254} = {559AAC1E-7162-46B1-9AC6-B320DD9EADF5}
+	EndGlobalSection
+EndGlobal

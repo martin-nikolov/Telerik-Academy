@@ -1,0 +1,12 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<h1 class="text-danger">Грешка</h1>
+<h2 class="text-danger">Възникна грешка при обработване на заявката. Моля, опитайте отново.</h2>
+
+<div class="well">
+    @Model.Exception
+</div>

@@ -1,0 +1,61 @@
+﻿@using Kendo.Mvc.UI;
+@using TicketingSystem.Web.Areas.Admin.ViewModels.Categories;
+
+@functions{
+    private const string ControllerName = "Categories";
+}
+
+@{
+    ViewBag.Title = "Categories";
+}
+
+@(Html.Kendo()
+      .Grid<CategoryViewModel>()
+      .Name("grid-categories")
+      .Columns(columns =>
+      {
+          columns.Bound(model => model.Name);
+          columns.Command(command =>
+          {
+              command.Edit();
+              command.Destroy();
+          }).Title("Options");
+      })
+      .Pageable(page =>
+      {
+          page.Refresh(true);
+          page.PreviousNext(true);
+          page.Numeric(true);
+      })
+      .Sortable(sort =>
+      {
+          sort.AllowUnsort(false);
+          sort.SortMode(GridSortMode.MultipleColumn);
+      })
+      .Groupable()
+      .ToolBar(toolbar => toolbar.Create())
+      .Filterable()
+      .Resizable(resize => resize.Columns(true))
+      .Navigatable()
+      .Selectable(select => select.Mode(GridSelectionMode.Multiple).Type(GridSelectionType.Row))
+      .DataSource(data =>
+      {
+          data.Ajax()
+              .Model(m => m.Id(b => b.CategoryId))
+              .PageSize(10)
+              .ServerOperation(true)
+              .Events(ev => ev.Error("errorAlert"))
+              .Read("Read", ControllerName)
+              .Create("Create", ControllerName)
+              .Update("Update", ControllerName)
+              .Destroy("Destroy", ControllerName);
+      }))
+
+<div id="selected">
+</div>
+
+<script>
+    function errorAlert() {
+        alert("An error ocurred");
+    }
+</script>

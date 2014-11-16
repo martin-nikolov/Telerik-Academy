@@ -1,0 +1,42 @@
+﻿@model TicketingSystem.Data.Models.Comment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Comment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Author.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ticket.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ticket.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+
+        <dd style="word-break: break-all">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CommentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

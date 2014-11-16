@@ -1,0 +1,40 @@
+﻿@model IList<TicketingSystem.Web.ViewModels.Home.TicketViewModel>
+
+@functions{
+    private const int ItemsOnRow = 3;
+}
+
+@{
+    var tickets = Model.Count / ItemsOnRow == 0 ? Model.Count : Model.Count / ItemsOnRow; 
+}
+
+@for (int i = 0; i < tickets; i++)
+{
+    <div class="row">
+    @for (int j = 0; j < ItemsOnRow; j++)
+    {
+        var currentTicket = ItemsOnRow * i + j;
+        if (currentTicket == Model.Count)
+            {
+                break;
+            }
+        
+            <div class="col-md-4">
+                <h2 style="word-wrap: break-word">@Model[currentTicket].Title</h2>
+                <div>
+                    <strong>Category: </strong> @Model[currentTicket].Category
+                </div>
+                <div>
+                    <strong>Author: </strong> @Model[currentTicket].Author
+                </div>
+                <div>
+                    @Model[currentTicket].NumberOfComments Comment(s)
+                </div>
+                <div>
+                    <br />
+                    <a href="/Tickets/Details/@Model[currentTicket].TicketId" class="btn btn-default">More Details...</a>
+                </div>
+            </div>
+        }
+    </div>
+}

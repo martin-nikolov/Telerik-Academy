@@ -1,0 +1,11 @@
+﻿@model int
+<div class="row">
+    <div class="col-md-2">
+        @Html.LabelFor(m => m)
+    </div>
+    <div class="col-md-5">
+        @Html.DropDownListFor(m => m, (IEnumerable<SelectListItem>)ViewBag.ListItem, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m, "", new { @class = "text-danger" })
+    </div>
+</div>
+<br />

@@ -1,0 +1,10 @@
+﻿@if (this.User.IsInRole(TicketingSystem.Common.GlobalConstants.AdminRoleName))
+{
+    <li>
+        Admin
+        <ul>
+            <li>@Html.ActionLink("Comments", "Index", "Comments", new { Area = "Admin" }, null)</li>
+            <li>@Html.ActionLink("Categories", "Index", "Categories", new { Area = "Admin" }, null)</li>
+        </ul>
+    </li>
+}

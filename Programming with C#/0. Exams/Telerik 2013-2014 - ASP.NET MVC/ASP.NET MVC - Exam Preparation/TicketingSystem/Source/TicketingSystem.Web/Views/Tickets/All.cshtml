@@ -1,0 +1,75 @@
+﻿@using TicketingSystem.Web.ViewModels.Tickets
+
+<div class="row">
+    @using (Html.BeginForm("All", "Tickets", FormMethod.Get))
+    {
+            <div class="col-md-4">
+                @(Html.Kendo()
+                      .DropDownList()
+                      .Name("category")
+                      .HtmlAttributes(new { style = "width: 100%" })
+                      .DataTextField("Text")
+                      .DataValueField("Value")
+                      .OptionLabel("Choose category")
+                      .DataSource(dataSource =>
+                      {
+                          dataSource.Read(read => read.Action("GetCategories", "Tickets"));
+                      }))
+            </div>
+            <div class="col-md-2">
+                <input type="submit" class="btn btn-default" value="Search" />
+            </div>
+    }
+    <br />
+    <br />
+</div>
+
+<div class="container">
+    <div class="row k-header">
+        <div class="col-md-3 text-center">
+            <h3>Title</h3>
+        </div>
+        <div class="col-md-3 text-center">
+            <h3>Category</h3>
+        </div>
+        <div class="col-md-4 text-center">
+            <h3>Author</h3>
+        </div>
+        <div class="col-md-2 text-center">
+            <h3>Priority</h3>
+        </div>
+    </div>
+</div>
+<br />
+
+@(Html.Kendo()
+      .ListView<ListTicketViewModel>()
+      .TagName("div")
+      .Name("all-tickets")
+      .Pageable()
+      .ClientTemplateId("all-tickets-template")
+      .DataSource(dataSource =>
+      {
+          dataSource
+                    .ServerOperation(true)
+                    .PageSize(5)
+                    .Read(read => read.Action("ReadTickets", "Tickets", new { category = Model }));
+      }))
+
+<script id="all-tickets-template" type="text/x-kendo-tmpl">
+    <div class="row">
+        <div class="col-md-3 text-left ticket-title">
+            <a href="/Tickets/Details/#= TicketId #">#= Title #</a>
+        </div>
+        <div class="col-md-3 text-center">
+            #= CategoryName #
+        </div>
+        <div class="col-md-2 text-center">
+            #= AuthorName #
+        </div>
+        <div class="col-md-2 text-center">
+            #= Priority #
+        </div>
+    </div>
+    <br />
+</script>

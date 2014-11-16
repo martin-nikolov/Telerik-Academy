@@ -1,0 +1,29 @@
+﻿body
+{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.body-content
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+input,
+select,
+textarea
+{
+    max-width: 280px;
+}
+
+#menu
+{
+    background-color: #222222;
+    border-color: #101010;
+}
+
+.ticket-title
+{
+    word-break: break-all;
+}

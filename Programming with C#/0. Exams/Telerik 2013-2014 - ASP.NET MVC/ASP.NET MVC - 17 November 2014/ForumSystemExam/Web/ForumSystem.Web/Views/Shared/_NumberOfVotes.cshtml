@@ -1,0 +1,17 @@
+﻿@model ForumSystem.Web.ViewModels.VoteViewModel
+
+@{
+    var PostVotes = Model.PostVotes.HasValue ? Model.PostVotes : 0;
+    @Html.HiddenFor(m => PostVotes);
+}
+
+<div class="well text-center">
+    <div>
+        <input type="submit" name="VoteValue" value="+" class="btn btn-xs btn-primary" />
+    </div>
+    <div class="row">@(Model.PostVotes != null ? Model.PostVotes : 0)</div>
+    <div class="row">votes</div>
+    <div>
+        <input type="submit" name="VoteValue" value="-" class="btn btn-xs btn-primary" />
+    </div>
+</div>

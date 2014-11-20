@@ -1,0 +1,62 @@
+﻿@using EasyPTC.Web.ViewModels;
+@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "Manage Account";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+
+<div class="row">
+    <div class="col-md-12">
+        @if (ViewBag.ImageId != null)
+        {
+            <img src="@Url.Action("Image", "Account", new { id = ViewBag.ImageId })" class="img-responsive" />
+        }
+        <br />
+        @using (Html.BeginForm("UpdateImage", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>Image</strong>
+                </div>
+                <div class="col-md-5">
+                    <input type="file" name="UploadedImage" />
+                </div>
+            </div>
+            
+            <br />
+
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" value="Update Image" class="btn btn-primary" />
+                </div>
+            </div>
+        }
+        <br /><br />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        @if (ViewBag.HasLocalPassword)
+        {
+            @Html.Partial("_ChangePasswordPartial")
+        }
+        else
+        {
+            @Html.Partial("_SetPasswordPartial")
+        }
+
+        <section id="externalLogins">
+            @Html.Action("RemoveAccountList")
+            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { Action = "LinkLogin", ReturnUrl = ViewBag.ReturnUrl })
+        </section>
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

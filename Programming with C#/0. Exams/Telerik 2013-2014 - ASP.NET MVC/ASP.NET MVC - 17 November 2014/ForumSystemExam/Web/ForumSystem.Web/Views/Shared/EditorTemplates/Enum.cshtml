@@ -1,0 +1,13 @@
+﻿@model Enum
+<div class="row">
+    <div class="col-md-2">
+        @Html.LabelFor(m => m)
+    </div>
+    <div class="col-md-5">
+        @Html.EnumDropDownListFor(m => m, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.ValidationMessageFor(m => m)
+    </div>
+</div>
+<br />

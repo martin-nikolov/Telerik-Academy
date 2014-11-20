@@ -1,0 +1,17 @@
+﻿@model ForumSystem.Web.ViewModels.VoteViewModel
+
+@using (Ajax.BeginForm("Vote", "Posts",
+    new AjaxOptions
+    {
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "votes-" + @Model.PostId
+    }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => Model.PostId)
+
+    <div class="col-md-1 vote-container" id="votes-@Model.PostId">
+        @Html.Partial("_NumberOfVotes", Model)
+    </div>
+}

@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Successful message";
+}
+
+@if (TempData["successfulMessage"] != null)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <div class="alert alert-success" role="alert">@TempData["successfulMessage"]</div>
+        </div>
+    </div>
+}

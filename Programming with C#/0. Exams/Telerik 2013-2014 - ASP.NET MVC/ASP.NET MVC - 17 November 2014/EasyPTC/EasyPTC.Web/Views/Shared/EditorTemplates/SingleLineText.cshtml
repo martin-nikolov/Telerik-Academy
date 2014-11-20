@@ -1,0 +1,8 @@
+﻿@model string
+<div class="row">
+    <div class="col-md-5">
+        @Html.TextBoxFor(m => m, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m, "", new { @class = "text-danger" })
+    </div>
+</div>
+<br />

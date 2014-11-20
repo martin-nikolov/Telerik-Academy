@@ -1,0 +1,73 @@
+﻿@functions{
+    private const string ControllerName = "TextAds";
+}
+
+@using EasyPTC.Web.Areas.Administration.ViewModels.TextAds;
+@using Kendo.Mvc.UI;
+
+@{
+    ViewBag.Title = "Text ads";
+}
+
+@(Html.Kendo()
+          .Grid<TextAdvertisementViewModel>()
+      .Name("grid-posts")
+      .Columns(columns =>
+      {
+          columns.Bound(model => model.Id);
+          columns.Bound(model => model.Name);
+          columns.Bound(model => model.Content);
+          columns.Bound(model => model.Url);
+          columns.Bound(model => model.AvailableClicks);
+          columns.Command(command =>
+          {
+              command.Edit();
+              command.Destroy();
+          }).Title("Options");
+      })
+      .Pageable(page =>
+      {
+          page.Refresh(true);
+          page.PreviousNext(true);
+          page.Numeric(true);
+      })
+      .ToolBar(tool =>
+      {
+          tool.Create();
+      })
+      .Sortable(sort =>
+      {
+          sort.AllowUnsort(false);
+          sort.SortMode(GridSortMode.MultipleColumn);
+      })
+      .Editable(edit =>
+      {
+          edit.Mode(GridEditMode.PopUp);
+      })
+      .Groupable()
+      .Filterable()
+      .Resizable(resize => resize.Columns(true))
+      .Navigatable()
+      .Selectable(select => select.Mode(GridSelectionMode.Multiple).Type(GridSelectionType.Row))
+      .DataSource(data =>
+      {
+          data.Ajax()
+              .Model(m => m.Id(b => b.Id))
+              .PageSize(5)
+              .ServerOperation(true)
+              .Events(ev => ev.Error("errorAlert"))
+              .Read("Read", ControllerName)
+              .Create("Create", ControllerName)
+              .Update("Update", ControllerName)
+              .Destroy("Destroy", ControllerName)
+              .Sort(sort => sort.Add("Id").Ascending());
+      }))
+
+<div id="selected">
+</div>
+
+<script>
+    function errorAlert() {
+        alert("An error ocurred");
+    }
+</script>

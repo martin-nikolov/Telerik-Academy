@@ -1,0 +1,9 @@
+﻿@if (User.IsInRole("Admin"))
+{
+    <li>
+        @Html.ActionLink("Text Ads", "Index", "TextAds", new { Area = "Administration" }, new { })
+    </li>
+   <li>
+       @Html.ActionLink("Banners", "Index", "Banners", new { Area = "Administration" }, new { })
+   </li>
+}

@@ -329,3 +329,9 @@
 * [Graphs Algorithms](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Graphs%20Algorithms)
 * [Sorting and Searching Algorithms](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Sorting%20and%20Searching%20Algorithms)
 * [Preparation for National Olympiad in Informatics](https://github.com/flextry/Telerik-Academy/tree/master/Algo%20Academy/Preparation%20for%20NOI)
+
+# Certificates
+- [One Year Program Graduate - Web Track 2013/2014](http://telerikacademy.com/Certificates/View/1019/406eef08)
+- [C# Developer](http://telerikacademy.com/Certificates/View/1124/e9b711db)
+- [Web Developer](http://telerikacademy.com/Certificates/View/1125/fee79b56)
+- [JavaScript Developer](http://telerikacademy.com/Certificates/View/1126/2529e609)

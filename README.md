@@ -332,6 +332,6 @@
 
 # Certificates
 - [One Year Program Graduate - Web Track 2013/2014](http://telerikacademy.com/Certificates/View/1019/406eef08)
-- [C# Developer](http://telerikacademy.com/Certificates/View/1124/e9b711db)
-- [Web Developer](http://telerikacademy.com/Certificates/View/1125/fee79b56)
-- [JavaScript Developer](http://telerikacademy.com/Certificates/View/1126/2529e609)
+- [C# Developer (2014) Track](http://telerikacademy.com/Certificates/View/1124/e9b711db)
+- [Web Developer (2014) Track](http://telerikacademy.com/Certificates/View/1125/fee79b56)
+- [JavaScript Developer (2014) Track](http://telerikacademy.com/Certificates/View/1126/2529e609)

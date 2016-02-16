@@ -13,6 +13,7 @@
 | [Algo Academy](#algo-academy)                                               | [PHP Web-development](#php-web-development)         | [Projects](#software-technologies-1)                           |
 | [Projects](#desktop)                                                        | [Projects](#web-development)                        |
 
+
 # Programming with C# 
 
 ## C# - Part I

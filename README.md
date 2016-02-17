@@ -293,7 +293,7 @@
 * [RockBands - RESTful Responsive SPA](https://github.com/flextry/RockBands) ([Demo](http://nikolov.cloudvps.bg/rockbands/)) - Aug, 2014 - `AngularJS + Cloud (Everlive)`
 
 ## Mobile
-* [Teamwork - Hybrid Mobile Application](https://github.com/fast4y/MasterChefMobile) - Sept, 2014 - `Icenium`, `Everlive`, `ASP.NET Web API`, `KendoUI Mobile`
+* [Teamwork - Hybrid Mobile Application](https://github.com/dzhenko/MasterChefMobile) - Sept, 2014 - `Icenium`, `Everlive`, `ASP.NET Web API`, `KendoUI Mobile`
 
 ## Software Technologies
 * [Teamwork - Databases](https://github.com/Team-Zealot-Databases/Databases-Teamwork-2014) - Aug - Sept, 2014 - `MSSQL, MySQL, MongoDb, SQLite, XML, PDF, JSON`

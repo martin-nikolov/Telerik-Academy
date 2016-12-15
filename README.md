@@ -335,3 +335,7 @@
 - [C# Developer (2014) Track](http://telerikacademy.com/Certificates/View/1124/e9b711db)
 - [Web Developer (2014) Track](http://telerikacademy.com/Certificates/View/1125/fee79b56)
 - [JavaScript Developer (2014) Track](http://telerikacademy.com/Certificates/View/1126/2529e609)
+
+# Microsoft Certificates
+- [MS: Programming in C#](https://drive.google.com/file/d/0BwijQ6040iyCTWZoNGV1Q1pHYVk/view)
+- [MCPS: Microsoft Certified Professional](https://drive.google.com/file/d/0BwijQ6040iyCbzJUUGh0TzM5MTA/view)

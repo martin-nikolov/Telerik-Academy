@@ -13,6 +13,21 @@
 | [Algo Academy](#algo-academy)                                               | [PHP Web-development](#php-web-development)         | [Projects](#software-technologies-1)                           |
 | [Projects](#desktop)                                                        | [Projects](#web-development)                        |
 
+# About me
+
+I was student ranked in the Top 1% in more than 12 courses.
+
+Announcements:
+- https://youtu.be/vOVIZALiySY?t=5085 at 1:24:46 (C# Part I)
+- https://youtu.be/5iFwLONVbIk?t=2281 at 38:00 (C# Part I)
+- https://youtu.be/4m8U_7kPV9Q?t=1740 at 29:00 (C# OOP)
+
+# About program
+
+An intensive and challenging one+ year training program for software developers. With over 20 in-depth courses in cutting-edge technologies, Telerik Academy helps students of almost any age and background develop programming skills and land jobs in the competitive IT industry.
+
+There I learned a large range of technologies starting from C#, HTML5, CSS3 and JavaScript to AngularJS, NodeJS, Web Services & Cloud Technologies, Databases, Hybrid Mobile Applications, ASP.NET WebForms, ASP.NET WebAPI 2.0 and ASP.NET MVC.
+
 # Programming with C# 
 
 ## C# - Part I

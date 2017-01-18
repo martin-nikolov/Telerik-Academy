@@ -28,6 +28,45 @@ An intensive and challenging one+ year training program for software developers.
 
 There I learned a large range of technologies starting from C#, HTML5, CSS3 and JavaScript to AngularJS, NodeJS, Web Services & Cloud Technologies, Databases, Hybrid Mobile Applications, ASP.NET WebForms, ASP.NET WebAPI 2.0 and ASP.NET MVC.
 
+## Programming languages / Technologies / Principles / Concepts / etc.
+- C# Fundamentals - Part 1
+- C# Fundamentals - Part 2
+- C# Object-Oriented Programing
+- Extension Methods, Lambda Expressions and LINQ
+- C# High-Quality Code
+- Design Patterns & SOLID Principles
+- Debugging & Refactoring
+- Unit Testing & Mocking
+- C# Data Structures and Algorithms
+- Linear data structures in .NET
+- Trees, graphs and other effective data structures
+- Searching and sorting algorithms
+- Recursion
+- Dynamic programming and Optimization algorithms
+- HTML5 Basics
+- CSS3 Styling
+- JavaScript (jQuery, Handlebars, Underscore.js, Require.js, etc.)
+- JavaScript UI & DOM
+- JavaScript OOP
+- JavaScript Applications & Asynchronous programming
+- HTTP Protocol & AJAX
+- JavaScript - Single-Page Applications (AngularJS)
+- JavaScript - End-to-End Applications (NodeJS)
+- JavaScript - Unit Testing (Karma, Mocha.js, Chai.js)
+- Adaptive Design and Twitter Bootstrap
+- PHP Web-development
+- Databases (MSSQL, MySQL, SQLite, Transact SQL & Stored procedures, MongoDB, Redis)
+- ADO.NET & Entity Framework (Code First, Database First, etc.)
+- Transactions in ADO.NET and Entity Framework
+- Web Services and Cloud Technologies
+- Basic WCF Programming
+- RESTful API Applications
+- Dependency Injection
+- ASP.NET Web API 2
+- ASP.NET Web Forms
+- ASP.NET MVC
+- Hybrid Mobile Applications (AngularJS & KendoUI Mobile) 
+
 # Programming with C# 
 
 ## C# - Part I

@@ -393,4 +393,5 @@ There I learned a large range of technologies starting from C#, HTML5, CSS3 and 
 # Microsoft Certificates
 - [MS: Programming in C#](https://drive.google.com/file/d/0BwijQ6040iyCTWZoNGV1Q1pHYVk)
 - [MS: Developing ASP.NET MVC Web Applications](https://drive.google.com/file/d/0BwijQ6040iyCN2VWYXJ5OWl5Vmc)
+- [MS: Programming in HTML5 with JavaScript and CSS3](https://drive.google.com/file/d/0BwijQ6040iyCRFJ3Q0NDUVNyZTg)
 - [MCPS: Microsoft Certified Professional](https://drive.google.com/file/d/0BwijQ6040iyCbzJUUGh0TzM5MTA)

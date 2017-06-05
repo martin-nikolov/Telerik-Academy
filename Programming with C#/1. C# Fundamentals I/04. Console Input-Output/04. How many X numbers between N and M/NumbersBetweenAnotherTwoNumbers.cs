@@ -1,6 +1,6 @@
 ﻿/*
 * 4. Write a program that reads two positive integer numbers and prints
-* how many numbers p exist between them such that the reminder
+* how many numbers p exist between them such that the remainder
 * of the division by 5 is 0 (inclusive). Example: p(17,25) = 2.
 */
 

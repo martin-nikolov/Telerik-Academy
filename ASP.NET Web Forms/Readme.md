@@ -1,3 +1,7 @@
+<p align="center"><a href="http://academy.telerik.com/"><img src="https://raw.github.com/flextry/Telerik-Academy/master/Programming%20with%20C%23/Codes/Other/Telerik.png" /></a></p>
+
+---
+
 # ASP.NET Web Forms
 
 1. [Introduction to ASP.NET](https://github.com/flextry/Telerik-Academy/tree/master/ASP.NET%20Web%20Forms/01.%20Introduction%20to%20ASP.NET) - ([assignment](https://github.com/flextry/Telerik-Academy/blob/master/ASP.NET%20Web%20Forms/01.%20Introduction%20to%20ASP.NET/Readme.md)) - 14.10.2014

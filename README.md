@@ -17,7 +17,7 @@
 - Top student at Telerik Software Academy ranked in the Top 1% in more than 12 courses.
 - Top 1% Worldwide and Top 1% Bulgarian C# ranked user according GitHub Open Source Community. - https://goo.gl/UwZK3s
 
-Announcements:
+### Announcements:
 - https://youtu.be/vOVIZALiySY?t=5085 at 1:24:46 (C# Part I)
 - https://youtu.be/5iFwLONVbIk?t=2281 at 38:00 (C# Part I)
 - https://youtu.be/4m8U_7kPV9Q?t=1740 at 29:00 (C# OOP)
